@@ -1,0 +1,116 @@
+baseURL = 'https://gui13go.github.io/'
+languageCode = 'en-us'
+title = 'Guilherme Viegas'
+theme = 'PaperMod'
+
+# Enable emoji in markdown
+enableEmoji = true
+
+# Pagination
+[pagination]
+  pagerSize = 10
+
+[params]
+  env = 'production'
+  title = 'Guilherme Viegas'
+  description = 'Personal blog on GNU/Linux, Systems, Security, Cloud, and Engineering.'
+  keywords = ['Blog', 'Linux', 'Security', 'Kubernetes', 'Cloud', 'DevOps']
+  author = 'Guilherme Viegas'
+
+  # Profile Mode on home page
+  [params.profileMode]
+    enabled = true
+    title = 'Guilherme Viegas'
+    subtitle = 'Computer Science, Systems, GNU/Linux, Security & Cloud Architecture'
+    imageUrl = ''
+    imageTitle = 'Guilherme Viegas'
+    imageWidth = 120
+    imageHeight = 120
+    buttons = [
+      { name = 'Posts', url = '/posts' },
+      { name = 'Tags', url = '/tags' },
+      { name = 'Search', url = '/search' }
+    ]
+
+  # Theme settings
+  defaultTheme = 'auto' # auto, dark, light
+  disableThemeToggle = false
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+
+  # Social Icons
+  [[params.socialIcons]]
+    name = 'github'
+    url = 'https://github.com/gui13go'
+
+  [[params.socialIcons]]
+    name = 'substack'
+    url = 'https://guilhermeviegas.substack.com'
+
+  # Cover image settings
+  [params.cover]
+    hidden = false
+    hiddenInList = false
+    hiddenInSingle = false
+
+  # Fuse.js Search Settings
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1_000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ['title', 'permalink', 'summary', 'content']
+
+# Main Menu
+[menu]
+  [[menu.main]]
+    identifier = 'posts'
+    name = 'Posts'
+    url = '/posts/'
+    weight = 10
+
+  [[menu.main]]
+    identifier = 'tags'
+    name = 'Tags'
+    url = '/tags/'
+    weight = 20
+
+  [[menu.main]]
+    identifier = 'categories'
+    name = 'Categories'
+    url = '/categories/'
+    weight = 30
+
+  [[menu.main]]
+    identifier = 'search'
+    name = 'Search'
+    url = '/search/'
+    weight = 40
+
+# Outputs for Fast Search JSON
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+
+# Taxonomies
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+# Markup / Syntax Highlighting
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    style = 'dracula'
+  [markup.goldmark.renderer]
+    unsafe = true
