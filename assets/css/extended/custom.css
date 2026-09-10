@@ -147,13 +147,14 @@ pre {
   -webkit-text-fill-color: transparent;
 }
 
-.hero-chinese-name {
-  font-weight: 500;
+.chinese-accent {
+  display: inline-block;
+  font-weight: 700;
   font-size: 0.9em;
-  opacity: 0.88;
-  color: var(--secondary);
-  letter-spacing: 0.04em;
-  white-space: nowrap;
+  letter-spacing: 0.06em;
+  margin: 0 0.15em;
+  filter: brightness(1.12);
+  vertical-align: 0.04em;
 }
 
 .hero-subtitle {
