@@ -1,4 +1,4 @@
 ---
 title: "Blogs"
-description: "Technical articles, guides, systems research, and spatial analytics."
+description: "A collection of my blog posts and technical notes over the years."
 ---

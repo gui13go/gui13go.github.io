@@ -167,4 +167,4 @@ During LLM inference, **every single token generated requires a full forward pas
 
 By increasing your swap file size and tuning swappiness, you transform system behavior under heavy load: instead of hard-freezing and requiring a reboot, your system gracefully pages out idle processes, keeping your active datasets, IDE, and LLMs responsive.
 
-Thanks for reading! Subscribe for free to receive new posts and support my work.
+Thanks for reading! Happy coding!

@@ -32,7 +32,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-code, kbd, samp, pre {
+code,
+kbd,
+samp,
+pre {
   font-family: var(--code-font);
 }
 
@@ -76,7 +79,8 @@ code, kbd, samp, pre {
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-#menu li a:hover, #menu li a.active {
+#menu li a:hover,
+#menu li a.active {
   background: var(--tertiary);
   color: var(--primary);
   transform: translateY(-1px);
@@ -141,6 +145,15 @@ code, kbd, samp, pre {
   background: var(--theme-accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.hero-chinese-name {
+  font-weight: 500;
+  font-size: 0.9em;
+  opacity: 0.88;
+  color: var(--secondary);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
 }
 
 .hero-subtitle {
@@ -289,6 +302,7 @@ code, kbd, samp, pre {
   .featured-card {
     flex-direction: row;
   }
+
   .card-cover-link {
     width: 42%;
     flex-shrink: 0;
@@ -417,7 +431,7 @@ code, kbd, samp, pre {
 }
 
 /* ==========================================================================
-   Post List Page (Blogs / Posts tab) Enhancements
+   Post List Page (Blogs tab) Enhancements
    ========================================================================== */
 .post-entry {
   border-radius: var(--theme-card-radius);
@@ -475,7 +489,8 @@ code, kbd, samp, pre {
   letter-spacing: -0.005em;
 }
 
-.post-content h2, .post-content h3 {
+.post-content h2,
+.post-content h3 {
   letter-spacing: -0.025em;
   margin-top: 2.2em;
   margin-bottom: 0.8em;
