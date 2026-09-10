@@ -3,34 +3,22 @@ languageCode = 'en-us'
 title = 'Guilherme Viegas'
 theme = 'PaperMod'
 
-# Enable emoji in markdown
 enableEmoji = true
 
-# Pagination
 [pagination]
   pagerSize = 10
 
 [params]
   env = 'production'
   title = 'Guilherme Viegas'
-  description = 'Personal blog on GNU/Linux, Systems, Security, Cloud, and Engineering.'
-  keywords = ['Blog', 'Linux', 'Security', 'Kubernetes', 'Cloud', 'DevOps']
+  description = 'Personal technical blog on GNU/Linux, Systems Engineering, Security, Virtualization, and Cloud Architecture.'
+  keywords = ['Blog', 'Linux', 'Security', 'Kubernetes', 'Cloud', 'DevOps', 'Systems']
   author = 'Guilherme Viegas'
 
-  # Profile Mode on home page
   [params.profileMode]
     enabled = true
     title = 'Guilherme Viegas'
-    subtitle = 'Computer Science, Systems, GNU/Linux, Security & Cloud Architecture'
-    imageUrl = ''
-    imageTitle = 'Guilherme Viegas'
-    imageWidth = 120
-    imageHeight = 120
-    buttons = [
-      { name = 'Posts', url = '/posts' },
-      { name = 'Tags', url = '/tags' },
-      { name = 'Search', url = '/search' }
-    ]
+    subtitle = 'Systems Engineer & Researcher'
 
   # Theme settings
   defaultTheme = 'auto' # auto, dark, light
@@ -43,7 +31,7 @@ enableEmoji = true
   ShowWordCount = true
   ShowRssButtonInSectionTermList = true
   UseHugoToc = true
-  disableSpecial1stPost = false
+  disableSpecial1stPost = true
 
   # Social Icons
   [[params.socialIcons]]
@@ -60,7 +48,7 @@ enableEmoji = true
     hiddenInList = false
     hiddenInSingle = false
 
-  # Fuse.js Search Settings
+  # Fast Search
   [params.fuseOpts]
     isCaseSensitive = false
     shouldSort = true
@@ -70,11 +58,11 @@ enableEmoji = true
     minMatchCharLength = 0
     keys = ['title', 'permalink', 'summary', 'content']
 
-# Main Menu
+# Main Menu with "Blogs" tab
 [menu]
   [[menu.main]]
-    identifier = 'posts'
-    name = 'Posts'
+    identifier = 'blogs'
+    name = 'Blogs'
     url = '/posts/'
     weight = 10
 
@@ -96,16 +84,13 @@ enableEmoji = true
     url = '/search/'
     weight = 40
 
-# Outputs for Fast Search JSON
 [outputs]
   home = ['HTML', 'RSS', 'JSON']
 
-# Taxonomies
 [taxonomies]
   category = 'categories'
   tag = 'tags'
 
-# Markup / Syntax Highlighting
 [markup]
   [markup.highlight]
     codeFences = true

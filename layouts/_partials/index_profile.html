@@ -1,0 +1,81 @@
+<div class="home-hero">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+        <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Systems Engineer & GNU/Linux Researcher</span>
+        </div>
+        <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Guilherme Viegas</span>
+        </h1>
+        <p class="hero-subtitle">
+            Exploring low-level systems, virtualization, GNU/Linux kernels, cybersecurity architectures, and cloud infrastructure.
+        </p>
+
+        <div class="hero-cta-group">
+            <a href="/posts/" class="hero-btn primary">
+                <span>Explore Blogs & Articles</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="/search/" class="hero-btn secondary">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                <span>Search Topics</span>
+            </a>
+        </div>
+
+        {{- partial "social_icons.html" -}}
+    </div>
+</div>
+
+<!-- Featured / Recent Posts Section on Home Page -->
+<div class="home-posts-section">
+    <div class="section-header">
+        <div class="section-title-wrap">
+            <h2 class="section-heading">Featured & Recent Writing</h2>
+            <p class="section-desc">Deep dives into virtualization, bare-metal configurations, and operating systems.</p>
+        </div>
+        <a href="/posts/" class="section-all-link">
+            <span>View all posts</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+    </div>
+
+    <div class="home-posts-grid">
+        {{- range (first 3 (where site.RegularPages "Type" "in" (slice "posts" "post"))) }}
+        <article class="featured-card">
+            {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
+            {{- if and .Params.cover.image (not $isHidden) }}
+            <a href="{{ .Permalink }}" class="card-cover-link">
+                <div class="card-cover-wrapper">
+                    <img src="{{ .Params.cover.image | relURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" class="card-cover-img" />
+                    <div class="card-cover-gradient"></div>
+                </div>
+            </a>
+            {{- end }}
+            <div class="card-body">
+                <div class="card-meta">
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
+                    <span class="meta-dot">·</span>
+                    <span>{{ .ReadingTime }} min read</span>
+                </div>
+                <h3 class="card-title">
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h3>
+                {{- if .Description }}
+                <p class="card-summary">{{ .Description }}</p>
+                {{- end }}
+                <div class="card-footer">
+                    <div class="card-tags">
+                        {{- range (first 3 .Params.tags) }}
+                        <a href="/tags/{{ . | urlize }}/" class="tag-pill">#{{ . }}</a>
+                        {{- end }}
+                    </div>
+                    <a href="{{ .Permalink }}" class="read-more-link" aria-label="Read {{ .Title }}">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </article>
+        {{- end }}
+    </div>
+</div>
