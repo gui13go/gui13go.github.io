@@ -10,6 +10,7 @@ cover:
   alt: "The Neutrality of Money in the COVID-19 Era"
   caption: "Macroeconomic Equilibrium Dynamics & Expansionary Monetary Policy"
   relative: false
+math: true
 canonicalURL: "https://medium.com/@guilhermeviegas/neutralidade-da-moeda-na-era-covid19-uma-an%C3%A1lise-animada-atrav%C3%A9s-do-r-b79cc0f3ee98"
 ---
 
