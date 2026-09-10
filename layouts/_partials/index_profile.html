@@ -13,11 +13,11 @@
         </p>
 
         <div class="hero-cta-group">
-            <a href="/posts/" class="hero-btn primary">
+            <a href="{{ "/posts/" | absURL }}" class="hero-btn primary">
                 <span>Explore Blogs & Articles</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="/search/" class="hero-btn secondary">
+            <a href="{{ "/search/" | absURL }}" class="hero-btn secondary">
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
                 <span>Search Topics</span>
             </a>
@@ -34,7 +34,7 @@
             <h2 class="section-heading">Featured & Recent Writing</h2>
             <p class="section-desc">Deep dives into virtualization, bare-metal configurations, and operating systems.</p>
         </div>
-        <a href="/posts/" class="section-all-link">
+        <a href="{{ "/posts/" | absURL }}" class="section-all-link">
             <span>View all posts</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -47,7 +47,7 @@
             {{- if and .Params.cover.image (not $isHidden) }}
             <a href="{{ .Permalink }}" class="card-cover-link">
                 <div class="card-cover-wrapper">
-                    <img src="{{ .Params.cover.image | relURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" class="card-cover-img" />
+                    <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" class="card-cover-img" />
                     <div class="card-cover-gradient"></div>
                 </div>
             </a>
@@ -67,7 +67,7 @@
                 <div class="card-footer">
                     <div class="card-tags">
                         {{- range (first 3 .Params.tags) }}
-                        <a href="/tags/{{ . | urlize }}/" class="tag-pill">#{{ . }}</a>
+                        <a href="{{ printf "/tags/%s/" (. | urlize) | absURL }}" class="tag-pill">#{{ . }}</a>
                         {{- end }}
                     </div>
                     <a href="{{ .Permalink }}" class="read-more-link" aria-label="Read {{ .Title }}">
