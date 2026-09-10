@@ -13,7 +13,7 @@
         </p>
 
         <div class="hero-cta-group">
-            <a href="{{ "/posts/" | absURL }}" class="hero-btn primary">
+            <a href="{{ "/blogs/" | absURL }}" class="hero-btn primary">
                 <span>Explore Blogs & Articles</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -34,14 +34,14 @@
             <h2 class="section-heading">Featured & Recent Writing</h2>
             <p class="section-desc">Deep dives into virtualization, bare-metal configurations, and operating systems.</p>
         </div>
-        <a href="{{ "/posts/" | absURL }}" class="section-all-link">
-            <span>View all posts</span>
+        <a href="{{ "/blogs/" | absURL }}" class="section-all-link">
+            <span>View all blogs</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
     </div>
 
     <div class="home-posts-grid">
-        {{- range (first 3 (where site.RegularPages "Type" "in" (slice "posts" "post"))) }}
+        {{- range (first 3 (where site.RegularPages "Type" "in" (slice "blogs" "blog" "posts" "post"))) }}
         <article class="featured-card">
             {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
             {{- if and .Params.cover.image (not $isHidden) }}

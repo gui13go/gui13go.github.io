@@ -6,12 +6,12 @@ Covering GNU/Linux kernel, virtualization, low-level systems, cybersecurity arch
 
 ---
 
-## 🚀 Quick Commands for Managing Posts
+## 🚀 Quick Commands for Managing Blogs
 
-### 1. Create a New Post
+### 1. Create a New Blog
 To scaffold a new blog post with pre-configured frontmatter, run:
 ```bash
-hugo new content posts/my-new-post.md
+hugo new content blogs/my-new-post.md
 ```
 
 ### 2. Preview Locally

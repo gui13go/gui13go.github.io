@@ -3,7 +3,7 @@ title: "Geographic Normalization: What Is It and What Are Its Implications in Sp
 date: 2021-03-18T14:44:43Z
 draft: false
 description: "Why traditional administrative polygons distort spatial analysis, how geographic normalization using regular hexagonal tessellations eliminates area bias, and its application in enterprise geospatial AI."
-tags: ["GIS", "Spatial Analysis", "Data Science", "Hexagons", "Geospatial", "AI", "H3", "Aquarela"]
+tags: ["GIS", "Spatial Analysis", "Data Science", "Hexagons", "Geospatial", "AI", "H3"]
 categories: ["Data Science", "Geospatial", "Analytics"]
 cover:
   image: "https://gui13go.github.io/images/geographic-normalization-cover.jpg"

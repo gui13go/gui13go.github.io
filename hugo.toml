@@ -58,12 +58,14 @@ enableEmoji = true
     minMatchCharLength = 0
     keys = ['title', 'permalink', 'summary', 'content']
 
+  mainSections = ['blogs']
+
 # Main Menu with "Blogs" tab
 [menu]
   [[menu.main]]
     identifier = 'blogs'
     name = 'Blogs'
-    url = '/posts/'
+    url = '/blogs/'
     weight = 10
 
   [[menu.main]]
