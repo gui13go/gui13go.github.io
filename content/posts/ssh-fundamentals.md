@@ -260,12 +260,31 @@ ssh-audit <target-IP>
 
 ---
 
-## Summary & Best Practices
+## Summary of SSH Tools
+
+| Tool | Purpose | Key Usage / Examples |
+| :--- | :--- | :--- |
+| `ssh` | Remote login | `-p` (port), `-J` (jump), `-L` (tunnel), `-v` (debug) |
+| `ssh-keygen` | Key generation | `-t ed25519`, `-C` (label) |
+| `ssh-copy-id` | Deploy public keys | `ssh-copy-id user@host` |
+| `ssh-agent` | Passphrase manager | `eval "$(ssh-agent -s)"`, `ssh-add` |
+| `scp` | File transfer | `-r` (recursive), `-P` (custom port) |
+| `rsync` | Efficient file sync | `rsync -avz` (archive/compress/verbose) |
+| `ssh-audit` | Security scanning | `ssh-audit <target-IP>` |
+| `Tailscale` | Mesh networking | `up` (start), `status` (nodes), `ip -4` (get IP) |
+| `SSH Config` | Shortcuts | `Host`, `HostName`, `User`, `IdentityFile` |
+
+---
+
+## Security Best Practices
 
 - **Use Key Passphrases:** Always protect your private keys with a passphrase.
-- **Audit Access:** Regularly audit server configs and open ports.
+- **Audit Access:** Use tools like Teleport for auditing and controlling infrastructure access.
 - **Avoid Cleartext:** Never use Telnet for remote administration, as it lacks encryption.
+
+---
 
 ## Conclusion
 
 Mastering SSH is an essential skill for system administrators and developers alike. By moving beyond basic password authentication to public-key authentication, configuring connection shortcuts, and adopting best practices, you establish a secure, reliable foundation for managing remote infrastructure safely and efficiently.
+
