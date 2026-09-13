@@ -122,7 +122,7 @@ To move around the filesystem effectively from the command line, use these funda
 - `tree`: Displays a visual depth-indented directory tree structure.
 
 **Absolute vs. Relative Paths:**
-- **Absolute Path:** Specifies a location from the root directory (`/`). It always begins with a forward slash (e.g., `cd /var/log/syslog`).
+- **Absolute Path:** Specifies a location from the root directory (`/`). It always begins with a forward slash (e.g., `cd /home/username/Documents/notes/`).
 - **Relative Path:** Specifies a location relative to your current directory without starting from / (e.g., `cd Documents/notes` or `cd ..`). Additionally, the tilde symbol (`~`) can be used as a shortcut to reference your home directory (e.g., `~/Documents/notes`).
 
 ## 5. File & Directory Operations
