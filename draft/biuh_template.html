@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MentorPi · 基于树莓派5的ROS2机器人</title>
+<style>
+/* ============================================================
+   配色方案(提取自 Slides_Template.pdf):
+   深海军蓝 #003e60 | 青色 #0098be | 绿色 #058e67
+   浅冰蓝 #bbdfe6 | 白 #ffffff | 灰 #7f7f7f / #9f9f9f
+   ============================================================ */
+:root{
+  --navy:#003e60;
+  --navy-2:#002b45;
+  --navy-3:#0a4d6e;
+  --cyan:#0098be;
+  --green:#058e67;
+  --ice:#bbdfe6;
+  --ice-2:#dceef4;
+  --ice-3:#eef6f9;
+  --white:#ffffff;
+  --ink:#33475b;
+  --gray:#7f8c99;
+  --line:#e1edf2;
+  --amber:#d97a1f;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC","Segoe UI",Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%;overflow:hidden}
+body{
+  background:radial-gradient(1200px 700px at 70% -10%, #0d4a6b 0%, #062c42 45%, #041e30 100%);
+  font-family:var(--font);
+  user-select:none;
+  overscroll-behavior:none;
+}
+
+/* ---------------- 16:9 舞台 ---------------- */
+#stage{
+  position:absolute;left:50%;top:50%;
+  width:1280px;height:720px;
+  transform:translate(-50%,-50%);
+  transform-origin:center center;
+  background:#fff;
+  overflow:hidden;
+  box-shadow:0 30px 80px rgba(0,0,0,.45);
+}
+
+/* ---------------- 幻灯片通用 ---------------- */
+.slide{
+  position:absolute;inset:0;
+  opacity:0;visibility:hidden;pointer-events:none;
+  transform:scale(.975);
+  transition:opacity .48s ease, transform .48s ease, visibility 0s linear .48s;
+  background:#fff;
+  display:flex;flex-direction:column;
+  padding:54px 72px 58px;
+}
+.slide.active{
+  opacity:1;visibility:visible;pointer-events:auto;
+  transform:none;z-index:2;
+  transition:opacity .5s ease .04s, transform .55s cubic-bezier(.22,.61,.36,1) .04s;
+}
+.slide.out-l{transform:translateX(-64px) scale(.975)}
+.slide.out-r{transform:translateX(64px) scale(.975)}
+
+/* ---------------- 分层入场动画 ---------------- */
+.a{opacity:0}
+.slide.active .a{
+  animation:rise .65s cubic-bezier(.22,.61,.36,1) both;
+  animation-delay:calc(130ms + var(--d,0)*95ms);
+}
+.slide.active .aL{animation-name:riseL}
+.slide.active .aR{animation-name:riseR}
+.slide.active .aPop{animation-name:pop}
+@keyframes rise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes riseL{from{opacity:0;transform:translateX(-38px)}to{opacity:1;transform:none}}
+@keyframes riseR{from{opacity:0;transform:translateX(38px)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
+
+/* ---------------- 内容页头部 ---------------- */
+.s-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
+.s-tag{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:14px;font-weight:700;letter-spacing:2px;color:var(--cyan);
+  margin-bottom:10px;
+}
+.s-tag i{width:12px;height:12px;border-radius:3px;background:linear-gradient(135deg,var(--cyan),var(--green));display:inline-block}
+.s-head h2{font-size:38px;font-weight:800;color:var(--navy);letter-spacing:1px;line-height:1.15}
+.s-en{
+  color:var(--gray);font-weight:700;font-size:13px;letter-spacing:3.5px;
+  text-transform:uppercase;white-space:nowrap;padding-bottom:7px;
+}
+.s-rule{height:4px;width:84px;border-radius:2px;background:linear-gradient(90deg,var(--cyan),var(--green));margin-top:16px}
+.s-body{flex:1;margin-top:30px;display:flex;flex-direction:column;min-height:0}
+
+/* ---------------- 内容页脚(模板同款装饰条) ---------------- */
+.s-foot{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:18px;margin-top:20px;border-top:1px solid var(--line);
+}
+.fbar{display:flex;align-items:center;gap:7px}
+.fbar i{height:10px;border-radius:5px;display:block}
+.fbar i.dot{width:10px !important;border-radius:50%}
+.pgno{font-size:13px;font-weight:800;color:var(--navy);letter-spacing:2px}
+.pgno b{color:var(--cyan)}
+
+/* ---------------- 深色页(封面/目录/章节/结尾) ---------------- */
+.slide.dark{
+  background:linear-gradient(155deg,#01486f 0%, var(--navy) 46%, var(--navy-2) 100%);
+  color:#fff;
+}
+.dark .s-tag{color:var(--ice)}
+.dark .s-head h2{color:#fff}
+
+/* 封面底部彩色条(模板同款) */
+.cover-bars{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:flex-end;gap:10px;padding:0 26px;height:170px;overflow:hidden}
+.cover-bars i{
+  flex:1;border-radius:5px 5px 0 0;transform-origin:bottom;transform:scaleY(0);
+  min-height:12px;
+}
+.slide.active .cover-bars i{animation:barUp .85s cubic-bezier(.22,.61,.36,1) both;animation-delay:calc(.3s + var(--d)*45ms)}
+@keyframes barUp{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+
+/* 封面 */
+.cover-tag{display:inline-flex;align-items:center;gap:10px;font-size:15px;letter-spacing:4px;font-weight:700;color:var(--ice);text-transform:uppercase}
+.cover-tag .pill{background:rgba(0,152,190,.28);border:1px solid rgba(187,223,230,.4);padding:7px 16px;border-radius:999px;letter-spacing:3px}
+.cover-title{font-size:118px;font-weight:900;letter-spacing:2px;line-height:1.02;margin-top:44px;
+  background:linear-gradient(100deg,#fff 20%, var(--ice) 60%, #7fc4d6 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.cover-sub{font-size:30px;font-weight:600;color:#fff;margin-top:22px;letter-spacing:2px}
+.cover-desc{font-size:17px;color:var(--ice);margin-top:18px;line-height:1.8}
+.cover-chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.chip{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.09);border:1px solid rgba(187,223,230,.35);
+  color:#eaf6fa;font-size:15px;font-weight:600;padding:10px 18px;border-radius:999px;letter-spacing:.5px;
+}
+.chip b{color:#fff}
+.cover-meta{position:absolute;left:72px;bottom:190px;display:flex;gap:14px}
+.meta-card{
+  background:rgba(255,255,255,.08);border:1px solid rgba(187,223,230,.3);
+  border-radius:12px;padding:14px 20px;font-size:15px;color:#dff0f6;backdrop-filter:blur(3px);
+}
+.meta-card b{display:block;font-size:17px;color:#fff;margin-bottom:3px;letter-spacing:1px}
+
+/* 目录页 */
+.toc-wrap{flex:1;display:flex;min-height:0}
+.toc-grid{flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:10px 40px;padding:26px 60px 20px 10px}
+.toc-item{display:flex;align-items:center;gap:20px;border-bottom:1px solid rgba(187,223,230,.25);padding-bottom:26px}
+.toc-num{font-size:46px;font-weight:900;color:#fff;line-height:1;min-width:56px}
+.toc-badge{width:22px;height:22px;flex:none;margin-top:-26px}
+.toc-badge.sq{border-radius:5px;background:var(--cyan)}
+.toc-badge.ci{border-radius:50%;background:var(--green)}
+.toc-item h3{font-size:24px;font-weight:800;color:#fff;letter-spacing:2px}
+.toc-item p{font-size:14px;color:var(--ice);letter-spacing:3px;margin-top:6px;text-transform:uppercase}
+.toc-side{
+  writing-mode:vertical-rl;display:flex;align-items:center;justify-content:center;
+  font-size:104px;font-weight:900;letter-spacing:14px;color:rgba(187,223,230,.32);
+  border-left:1px solid rgba(187,223,230,.2);
+}
+
+/* 章节分隔页 */
+.sec-num{font-size:150px;font-weight:900;line-height:1;color:transparent;-webkit-text-stroke:3px rgba(187,223,230,.5);letter-spacing:4px}
+.sec-title{font-size:74px;font-weight:900;color:#fff;letter-spacing:6px;margin-top:8px}
+.sec-en{font-size:20px;color:var(--ice);letter-spacing:8px;text-transform:uppercase;margin-top:16px}
+.sec-line{width:120px;height:5px;border-radius:3px;background:linear-gradient(90deg,var(--cyan),var(--green));margin:34px 0}
+.sec-desc{font-size:17px;color:#cfe6ee;line-height:1.9;max-width:640px}
+.sec-icons{display:flex;gap:16px;margin-top:34px}
+.sec-ic{width:64px;height:64px;border-radius:16px;background:rgba(255,255,255,.08);border:1px solid rgba(187,223,230,.3);display:flex;align-items:center;justify-content:center;font-size:30px}
+.sec-side{position:absolute;right:56px;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;font-size:64px;font-weight:900;letter-spacing:12px;color:rgba(187,223,230,.25)}
+
+/* 结尾页 */
+.end-emoji{font-size:84px}
+.end-title{font-size:88px;font-weight:900;color:#fff;letter-spacing:8px;margin-top:18px}
+.end-sub{font-size:22px;color:var(--ice);letter-spacing:6px;margin-top:22px}
+
+/* ---------------- 卡片组件 ---------------- */
+.grid{display:grid;gap:18px;flex:1;min-height:0}
+.card{
+  background:#fff;border:1px solid var(--line);border-top:4px solid var(--cyan);
+  border-radius:14px;padding:20px 22px;
+  box-shadow:0 8px 22px rgba(0,62,96,.07);
+  display:flex;flex-direction:column;gap:10px;min-height:0;
+}
+.card.g{border-top-color:var(--green)}
+.card.n{border-top-color:var(--navy)}
+.card.amber{border-top-color:var(--amber)}
+.c-top{display:flex;align-items:center;gap:12px}
+.ic{
+  width:46px;height:46px;flex:none;border-radius:12px;font-size:24px;
+  background:var(--ice-3);display:flex;align-items:center;justify-content:center;
+}
+.card.g .ic{background:#e2f3ec}
+.card.n .ic{background:#e6eff5}
+.card.amber .ic{background:#fbeedd}
+.c-top h3{font-size:19px;font-weight:800;color:var(--navy);letter-spacing:.5px}
+.c-top h3 small{display:block;font-size:11px;color:var(--gray);font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-top:2px}
+.card p{font-size:15.5px;line-height:1.75;color:var(--ink)}
+.card p b{color:var(--navy)}
+.card .hl{color:var(--cyan);font-weight:800}
+.card .hlg{color:var(--green);font-weight:800}
+.mini{
+  display:inline-flex;align-items:center;gap:8px;background:var(--ice-3);
+  border:1px solid var(--line);border-radius:8px;padding:7px 12px;
+  font-size:14px;color:var(--ink);font-weight:600;line-height:1.5;
+}
+.mini b{color:var(--navy)}
+.minis{display:flex;flex-wrap:wrap;gap:10px}
+.warn{
+  display:flex;gap:10px;align-items:flex-start;margin-top:auto;
+  background:#fdf3e7;border:1px solid #f4d9b8;border-radius:10px;
+  padding:11px 14px;font-size:14px;color:#8a5213;line-height:1.65;font-weight:600;
+}
+.ok{
+  display:flex;gap:10px;align-items:flex-start;margin-top:auto;
+  background:#e9f6f1;border:1px solid #bfe6d8;border-radius:10px;
+  padding:11px 14px;font-size:14px;color:#0a6b4d;line-height:1.65;font-weight:600;
+}
+
+/* 大横幅提示条 */
+.banner{
+  display:flex;align-items:center;gap:16px;
+  background:linear-gradient(100deg,var(--navy) 0%, var(--navy-3) 100%);
+  border-radius:14px;padding:18px 26px;color:#fff;margin-bottom:20px;
+  box-shadow:0 10px 24px rgba(0,62,96,.25);
+}
+.banner .b-ic{font-size:34px}
+.banner h3{font-size:21px;font-weight:800;letter-spacing:1px}
+.banner h3 em{font-style:normal;color:var(--ice)}
+.banner p{font-size:14.5px;color:#cfe6ee;margin-top:4px;line-height:1.6}
+.banner.light{background:var(--ice-3);border:1px solid var(--line);box-shadow:none}
+.banner.light h3{color:var(--navy)}
+.banner.light h3 em{color:var(--cyan)}
+.banner.light p{color:var(--gray)}
+
+/* 配件清单 */
+.acc-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:1fr;gap:14px;flex:1}
+.acc{
+  display:flex;align-items:center;gap:12px;
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:12px 14px;box-shadow:0 5px 14px rgba(0,62,96,.05);
+  transition:transform .25s;
+}
+.acc .ai{width:40px;height:40px;flex:none;border-radius:10px;background:var(--ice-3);display:flex;align-items:center;justify-content:center;font-size:21px}
+.acc span{font-size:14.5px;font-weight:700;color:var(--navy);line-height:1.4}
+.acc:nth-child(even){background:#fafcfd}
+
+/* 双栏(文字+图片) */
+.cols{display:grid;grid-template-columns:5fr 7fr;gap:34px;flex:1;min-height:0}
+.cols.rev{grid-template-columns:7fr 5fr}
+.info-stack{display:flex;flex-direction:column;gap:16px;min-height:0}
+.lead{font-size:16.5px;line-height:1.9;color:var(--ink)}
+.lead b{color:var(--navy)}
+.lead .hl{color:var(--cyan);font-weight:800}
+.fact{
+  background:var(--ice-3);border:1px solid var(--line);border-left:5px solid var(--cyan);
+  border-radius:12px;padding:15px 18px;
+}
+.fact.g{border-left-color:var(--green)}
+.fact h4{font-size:15px;font-weight:800;color:var(--navy);letter-spacing:1px;margin-bottom:6px;display:flex;gap:8px;align-items:center}
+.fact p{font-size:14.5px;color:var(--ink);line-height:1.7}
+.img-card{
+  border-radius:16px;padding:14px;display:flex;flex-direction:column;justify-content:center;
+  box-shadow:0 12px 30px rgba(0,62,96,.14);border:1px solid var(--line);
+}
+.img-card.light{background:#edf1f4}
+.img-card.darkimg{background:#101418}
+.img-card img{width:100%;height:100%;object-fit:contain;border-radius:10px;display:block}
+.img-cap{text-align:center;font-size:13.5px;color:var(--gray);margin-top:11px;letter-spacing:1px}
+.img-card.darkimg .img-cap{color:#9fb2bd}
+
+/* 规格表 */
+.spec-table{width:100%;border-collapse:collapse;font-size:15.5px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 8px 22px rgba(0,62,96,.08)}
+.spec-table th{background:var(--navy);color:#fff;text-align:left;padding:12px 20px;font-size:15px;letter-spacing:2px;font-weight:800}
+.spec-table th:last-child{letter-spacing:1px}
+.spec-table td{padding:9.5px 20px;border-bottom:1px solid var(--line);color:var(--ink);line-height:1.5}
+.spec-table tr:nth-child(even) td{background:#f4fafc}
+.spec-table tr:last-child td{border-bottom:none}
+.spec-table td:first-child{color:var(--navy);font-weight:800;width:190px;white-space:nowrap}
+.spec-table td b{color:var(--cyan)}
+.concl{font-size:14px;color:var(--gray);line-height:1.8;margin-top:16px;border-left:4px solid var(--ice);padding-left:14px}
+.concl b{color:var(--navy)}
+
+/* 驱动模式列表 */
+.mode-list{display:flex;flex-direction:column;gap:14px;flex:1;justify-content:center}
+.mode{
+  display:flex;align-items:center;gap:18px;
+  background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:15px 22px;box-shadow:0 6px 16px rgba(0,62,96,.06);
+}
+.mode .m-ic{
+  width:56px;height:56px;flex:none;border-radius:14px;font-size:27px;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--ice-3),#fff);border:1px solid var(--line);
+}
+.mode h3{font-size:18px;font-weight:800;color:var(--navy);letter-spacing:.5px;min-width:150px}
+.mode p{font-size:15px;color:var(--ink);line-height:1.6}
+.mode p b{color:var(--cyan)}
+.mode:last-child{background:linear-gradient(100deg,var(--navy),var(--navy-3));border:none}
+.mode:last-child h3{color:#fff}
+.mode:last-child p{color:#cfe6ee}
+.mode:last-child p b{color:var(--ice)}
+.mode:last-child .m-ic{background:rgba(255,255,255,.12);border-color:rgba(187,223,230,.3)}
+
+/* 原理步骤 */
+.step{display:flex;gap:16px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:0 6px 16px rgba(0,62,96,.06)}
+.step .s-no{
+  width:44px;height:44px;flex:none;border-radius:50%;
+  background:linear-gradient(135deg,var(--cyan),var(--green));
+  color:#fff;font-size:20px;font-weight:900;display:flex;align-items:center;justify-content:center;
+}
+.step h4{font-size:17px;font-weight:800;color:var(--navy);margin-bottom:5px}
+.step p{font-size:14.5px;color:var(--ink);line-height:1.7}
+.step p b{color:var(--cyan)}
+
+/* 优劣势 */
+.pros{display:grid;grid-template-columns:1fr 1.35fr;gap:26px;flex:1;min-height:0}
+.pro-col{display:flex;flex-direction:column;gap:14px;min-height:0}
+.pro-col h3{font-size:22px;font-weight:900;letter-spacing:2px;display:flex;align-items:center;gap:10px}
+.pro-col.good h3{color:var(--green)}
+.pro-col.bad h3{color:var(--amber)}
+.pro-item{
+  background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 18px;
+  font-size:15.5px;color:var(--ink);line-height:1.7;display:flex;gap:12px;
+  box-shadow:0 5px 14px rgba(0,62,96,.05);flex:1;align-items:center;
+}
+.pro-item .pi{font-size:22px;flex:none}
+.pro-item b{color:var(--navy)}
+
+/* ---------------- 视口固定控件 ---------------- */
+#progress{position:fixed;left:0;top:0;height:4px;width:0;z-index:99;
+  background:linear-gradient(90deg,var(--cyan),var(--green));transition:width .45s cubic-bezier(.22,.61,.36,1)}
+.ctrl{position:fixed;right:28px;bottom:24px;display:flex;align-items:center;gap:14px;z-index:99}
+.ctrl .pg{
+  color:#d7ecf3;font-size:13px;font-weight:700;letter-spacing:2px;
+  background:rgba(0,43,69,.55);padding:11px 16px;border-radius:999px;
+  border:1px solid rgba(187,223,230,.25);backdrop-filter:blur(4px);
+}
+.ctrl .pg b{color:#fff;font-size:15px}
+.ctrl button{
+  width:48px;height:48px;border-radius:50%;border:none;cursor:pointer;
+  background:#fff;color:var(--navy);font-size:24px;line-height:1;
+  box-shadow:0 8px 20px rgba(0,0,0,.3);
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .2s, background .2s, color .2s;
+}
+.ctrl button:hover{background:var(--cyan);color:#fff;transform:translateY(-3px)}
+.ctrl button:active{transform:scale(.92)}
+.ctrl button:disabled{opacity:.35;cursor:default;transform:none;background:#fff;color:var(--navy)}
+.hint{
+  position:fixed;left:28px;bottom:32px;z-index:99;
+  font-size:12px;color:rgba(187,223,230,.55);letter-spacing:1.5px;
+}
+@media (max-width:900px){.hint{display:none}}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+<div id="stage">
+
+  <!-- ================= 01 封面 ================= -->
+  <section class="slide dark active">
+    <div class="cover-tag a" style="--d:0"><span class="pill">🤖 ROS2 ROBOT · 树莓派 5</span></div>
+    <h1 class="cover-title a" style="--d:1">MentorPi</h1>
+    <div class="cover-sub a" style="--d:2">基于树莓派 5 开发的 ROS2 机器人</div>
+    <div class="cover-desc a" style="--d:3">搭载 TOF 激光雷达与 3D 深度相机等高性能硬件，面向智能应用的新一代机器人教学与开发平台</div>
+    <div class="cover-chips a" style="--d:4">
+      <span class="chip">🗺️ <b>建图导航</b></span>
+      <span class="chip">🧭 <b>路径规划</b></span>
+      <span class="chip">👁️ <b>图像识别</b></span>
+      <span class="chip">🎯 <b>视觉追踪</b></span>
+      <span class="chip">🗣️ <b>人机交互</b></span>
+    </div>
+    <div class="cover-meta a" style="--d:5">
+      <div class="meta-card">🛞 <b>MentorPi-M1</b>麦轮全向底盘</div>
+      <div class="meta-card">🚗 <b>MentorPi-A1</b>阿克曼转向底盘</div>
+    </div>
+    <div class="cover-bars" data-bars></div>
+  </section>
+
+  <!-- ================= 02 目录 ================= -->
+  <section class="slide dark">
+    <div class="s-head a" style="--d:0">
+      <div>
+        <div class="s-tag"><i></i>MentorPi · 课程幻灯片</div>
+        <h2>目录</h2>
+      </div>
+    </div>
+    <div class="toc-wrap">
+      <div class="toc-grid">
+        <div class="toc-item aL a" style="--d:1">
+          <span class="toc-num">01</span><span class="toc-badge sq"></span>
+          <div><h3>产品简介</h3><p>Product Overview</p></div>
+        </div>
+        <div class="toc-item aR a" style="--d:2">
+          <span class="toc-num">02</span><span class="toc-badge ci"></span>
+          <div><h3>配件清单</h3><p>Accessories</p></div>
+        </div>
+        <div class="toc-item aL a" style="--d:3">
+          <span class="toc-num">03</span><span class="toc-badge sq"></span>
+          <div><h3>树莓派 5</h3><p>Raspberry Pi 5</p></div>
+        </div>
+        <div class="toc-item aR a" style="--d:4">
+          <span class="toc-num">04</span><span class="toc-badge ci"></span>
+          <div><h3>麦克纳姆轮</h3><p>Mecanum Wheel</p></div>
+        </div>
+      </div>
+      <div class="toc-side a" style="--d:5">CONTENTS</div>
+    </div>
+    <div class="s-foot" style="border-top-color:rgba(187,223,230,.2)">
+      <div class="fbar" data-fbar></div><div class="pgno" style="color:var(--ice)"><b>02</b> / 19</div>
+    </div>
+  </section>
+
+  <!-- ================= 03 产品简介 ================= -->
+  <section class="slide">
+    <header class="s-head a" style="--d:0">
+      <div>
+        <div class="s-tag"><i></i>01 · 产品简介</div>
+        <h2>MentorPi 机器人平台</h2>
+      </div>
+      <span class="s-en">Product Overview</span>
+    </header>
+    <div class="s-rule a" style="--d:1"></div>
+    <div class="s-body">
+      <div class="banner a" style="--d:2">
+        <span class="b-ic">🤖</span>
+        <div>
+          <h3>MentorPi 是一款<em>基于树莓派 5 开发</em>的 ROS2 机器人</h3>
+          <p>高性能硬件 + 全功能 ROS2 软件栈，开箱即用的智能机器人教学与开发平台</p>
+        </div>
+      </div>
+      <div class="grid" style="grid-template-columns:1fr 1fr">
+        <div class="card a aPop" style="--d:3">
+          <div class="c-top"><span class="ic">🛞</span><h3>MentorPi-M1<small>Mecanum Chassis</small></h3></div>
+          <p>配备<b>麦轮（全向轮）底盘</b>，可实现横向平移、原地旋转等 360° 全向移动。</p>
+        </div>
+        <div class="card g a aPop" style="--d:4">
+          <div class="c-top"><span class="ic">🚗</span><h3>MentorPi-A1<small>Ackermann Chassis</small></h3></div>
+          <p>配备<b>阿克曼转向底盘</b>，模拟真实车辆转向结构，适合车式运动学教学。</p>
+        </div>
+      </div>
+      <div class="banner light a" style="--d:5;margin-top:18px">
+        <span class="b-ic">📡</span>
+        <div>
+          <h3>高性能硬件加持 · <em>五大智能应用</em></h3>
+          <p>搭载 <b>TOF 激光雷达</b> 与 <b>3D 深度相机</b> 等高性能硬件，能实现：🗺️ 建图导航 · 🧭 路径规划 · 👁️ 图像识别 · 🎯 视觉追踪 · 🗣️ 人机交互 等智能应用</p>
+        </div>
+      </div>
+    </div>
+    <div class="s-foot"><div class="fbar" data-fbar></div><div class="pgno"><b>03</b> / 19</div></div>
+  </section>
+
+  <!-- ================= 04 配件清单 ================= -->
+  <section class="slide">
+    <header class="s-head a" style="--d:0">
+      <div>
+        <div class="s-tag"><i></i>02 · 配件清单</div>
+        <h2>MentorPi（深度相机版）</h2>
+      </div>
+      <span class="s-en">Accessories List</span>
+    </header>
+    <div class="s-rule a" style="--d:1"></div>
+    <div class="s-body">
+      <div class="acc-grid">
+        <div class="acc a aPop" style="--d:1"><span class="ai">🤖</span><span>MentorPi 机器人</span></div>
+        <div class="acc a aPop" style="--d:1"><span class="ai">🔩</span><span>底盘支架</span></div>
+        <div class="acc a aPop" style="--d:2"><span class="ai">🔌</span><span>8.4V 2A 充电器<br>(DC5.5*2.5 公头)</span></div>
+        <div class="acc a aPop" style="--d:2"><span class="ai">🍓</span><span>树莓派 5</span></div>
+        <div class="acc a aPop" style="--d:2"><span class="ai">⚡️</span><span>树莓派供电线</span></div>
+        <div class="acc a aPop" style="--d:3"><span class="ai">💾</span><span>64G 内存卡</span></div>
+        <div class="acc a aPop" style="--d:3"><span class="ai">🌀</span><span>散热风扇</span></div>
+        <div class="acc a aPop" style="--d:3"><span class="ai">🎮</span><span>RRC Lite 控制器<br>+ 数据线</span></div>
+        <div class="acc a aPop" style="--d:4"><span class="ai">🔋</span><span>电池线</span></div>
+        <div class="acc a aPop" style="--d:4"><span class="ai">📡</span><span>雷达 + 4PIN 线</span></div>
+        <div class="acc a aPop" style="--d:5"><span class="ai">🔗</span><span>雷达数据线</span></div>
+        <div class="acc a aPop" style="--d:5"><span class="ai">📷</span><span>深度相机 + 数据线</span></div>
+        <div class="acc a aPop" style="--d:5"><span class="ai">🕹️</span><span>无线手柄 + 接收器</span></div>
+        <div class="acc a aPop" style="--d:6"><span class="ai">⚽</span><span>EVA 球</span></div>
+        <div class="acc a aPop" style="--d:6"><span class="ai">💳</span><span>读卡器</span></div>
+        <div class="acc a aPop" style="--d:6"><span class="ai">📦</span><span>配件包</span></div>
+      </div>
+    </div>
+    <div class="s-foot"><div class="fbar" data-fbar></div><div class="pgno"><b>04</b> / 19</div></div>
+  </section>
+
+  <!-- ================= 05 章节:树莓派5 ================= -->
+  <section class="slide dark">
+    <div class="sec-side a" style="--d:4">RASPBERRY PI 5</div>
+    <div class="s-head" style="margin-top:30px">
+      <div class="s-tag a" style="--d:0"><i></i>CHAPTER 03</div>
+    </div>
+    <div class="sec-num aL a" style="--d:1">03</div>
+    <div class="sec-title a" style="--d:2">树莓派 5</div>
+    <div class="sec-en a" style="--d:3">Raspberry Pi 5</div>
+    <div class="sec-line a" style="--d:4"></div>
+    <div class="sec-desc a" style="--d:5">
+      新一代单板计算机 · 性能、架构与扩展性的代际跨越<br>
+      高性能计算 / 物联网 / 媒体服务器 / 机器人 / 教育开发 的理想平台
+    </div>
+    <div class="sec-icons a" style="--d:6">
+      <div class="sec-ic">🚀</div><div class="sec-ic">💾</div><div class="sec-ic">🔌</div><div class="sec-ic">⚡️</div><div class="sec-ic">🤖</div>
+    </div>
+    <div class="cover-bars" data-bars data-dim="1"></div>
+  </section>
+
+  <!-- ================= 06 树莓派5 概览 ================= -->
+  <section class="slide">
+    <header class="s-head a" style="--d:0">
+      <div>
+        <div class="s-tag"><i></i>03 · 树莓派 5</div>
+        <h2>新一代单板计算机</h2>
+      </div>
+      <span class="s-en">Raspberry Pi 5 Overview</span>
+    </header>
+    <div class="s-rule a" style="--d:1"></div>
+    <div class="s-body">
+      <div class="cols">
+        <div class="info-stack">
+          <p class="lead a aL" style="--d:2">
+            树莓派 5 是树莓派基金会于 <b>2023 年 9 月发布</b>、同年 <b>10 月底正式发货</b>的新一代单板计算机，在性能、架构和扩展性上实现了<b>代际跨越</b>。
+          </p>
+          <div class="fact a aL" style="--d:3">
+            <h4>🏆 主力机型</h4>
+            <p>作为当前（<b>2026 年</b>）的主力机型，被官方确认在<b>未来两三年内</b>仍将保持核心地位。</p>
+          </div>
+          <div class="fact g a aL" style="--d:4">
+            <h4>📌 核心亮点</h4>
+            <p>性能 · 架构 · 扩展性 三大维度全面升级，自研 I/O 控制器首次登场。</p>
+          </div>
+          <div class="minis a aL" style="--d:5">
+            <span class="mini">🚀 性能飞跃</span>
+            <span class="mini">🧩 架构革新</span>
+            <span class="mini">🔧 扩展性强</span>
+          </div>
+        </div>
+        <div class="img-card light a aR" style="--d:3">
+          <img src="pi5-labelled.jpg" alt="树莓派5 板载元件标注图">
+          <div class="img-cap">🍓 树莓派 5 板载元件标注图（BCM2712 / RP1 / 双 HDMI / 双 MIPI 等）</div>
+        </div>
+      </div>
+    </div>
+    <div class="s-foot"><div class="fbar" data-fbar></div><div class="pgno"><b>06</b> / 19</div></div>
+  </section>
+
+  <!-- ================= 07 核心性能与架构 ================= -->
+  <section class="slide">
+    <header class="s-head a" style="--d:0">
+      <div>
+        <div class="s-tag"><i></i>03 · 树莓派 5</div>
+        <h2>核心性能与架构</h2>
+      </div>
+      <span class="s-en">Performance &amp; Architecture</span>
+    </header>
+    <div class="s-rule a" style="--d:1"></div>
+    <div class="s-body">
+      <div class="banner a" style="--d:2">
+        <span class="b-ic">🚀</span>
+        <div>
+          <h3>计算能力实现<em>质的飞跃</em> —— CPU 性能较前代树莓派 4 提升 <em>2 ~ 3 倍</em></h3>
+        </div>
+      </div>
+      <div class="grid" style="grid-template-columns:1fr 1fr 1fr">
+        <div class="card a aPop" style="--d:3">
+          <div class="c-top"><span class="ic">🧠</span><h3>处理器<small>SoC</small></h3></div>
+          <p>博通 <b>BCM2712</b> · <span class="hl">16 纳米</span>工艺<br>
+          四核 <b>Arm Cortex-A76</b> @ <span class="hl">2.4GHz</span><br>
+          每核 512KB 二级缓存 · 共享 2MB 三级缓存<br>
+          支持<b>加密扩展</b></p>
+        </div>
+        <div class="card g a aPop" style="--d:4">
+          <div class="c-top"><span class="ic">🎮</span><h3>图形处理器<small>GPU</small></h3></div>
+          <p>板载 <b>VideoCore VII</b> @ <span class="hlg">800MHz</span><br>
+          支持 <b>OpenGL ES 3.1</b> / <b>Vulkan 1.2</b><br>
+          <span class="hlg">4K@60Hz HEVC</span> 视频解码</p>
+        </div>
+        <div class="card n a aPop" style="--d:5">
+          <div class="c-top"><span class="ic">🔌</span><h3>RP1 I/O 控制器<small>自研南桥</small></h3></div>
+          <p>首次采用基金会<b>自研 RP1</b>，通过 <b>PCIe</b> 链路与主 SoC 通信<br>
+          统一负责 GPIO / USB / 以太网 / 摄像头显示接口<br>
+          <b>I/O 带宽显著提升</b>，降低外设并发时的资源冲突与响应延迟</p>
+        </div>
+      </div>
+    </div>
+    <div class="s-foot"><div class="fbar" data-fbar></div><div class="pgno"><b>07</b> / 19</div></div>
+  </section>
+
+  <!-- ================= 08 内存与存储 ================= -->
+  <section class="slide">
+    <header class="s-head a" style="--d:0">
+      <div>
+        <div class="s-tag"><i></i>03 · 树莓派 5</div>
+        <h2>内存与存储</h2>
+      </div>
+      <span class="s-en">Memory &amp; Storage</span>
+    </header>
+    <div class="s-rule a" style="--d:1"></div>
+    <div class="s-body">
+      <div class="grid" style="grid-template-columns:1fr 1fr">
+        <div class="card a aL" style="--d:2">
+          <div class="c-top"><span class="ic">💾</span><h3>内存<small>LPDDR4X-4267 SDRAM</small></h3></div>
+          <div class="minis" style="margin-top:2px">
+            <span class="mini"><b>1GB</b></span>
+            <span class="mini"><b>2GB</b></span>
+            <span class="mini"><b>4GB</b></span>
+            <span class="mini" style="background:var(--ice);border-color:var(--ice)"><b>8GB</b></span>
+            <span class="mini" style="background:#e2f3ec;border-color:#bfe6d8"><b>16GB</b> 🆕</span>
+          </div>
+          <p>提供 <b>5 种容量版本</b>，满足从入门学习到高性能计算的不同需求。</p>
+          <div class="ok">📅 版本更新：<b>16GB 版本</b>于 2025 年 1 月推出 · <b>1GB 版本</b>于 2025 年 12 月推出</div>
+        </div>
+        <div class="card g a aR" style="--d:3">
+          <div class="c-top"><span class="ic">💿</span><h3>存储<small>MicroSD + NVMe</small></h3></div>
+          <div class="minis" style="margin-top:2px">
+            <span class="mini">📶 MicroSD 卡插槽</span>
+            <span class="mini">⚡️ 支持高速 <b>SDR104</b> 模式</span>
+          </div>
+          <p>首次引入 <b>PCIe 2.0 x1</b> 接口，可通过官方 <b>M.2 HAT</b> 等适配器连接 <span class="hlg">NVMe SSD</span>。</p>
+          <div class="ok">🚀 读写速度<b>远超 SD 卡</b>，系统与应用加载体验大幅提升</div>
+        </div>
+      </div>
+    </div>
+    <div class="s-foot"><div class="fbar" data-fbar></div><div class="pgno"><b>08</b> / 19</div></div>
+  </section>
+
+  <!-- ================= 09 连接与接口 ================= -->
+  <section class="slide">
+    <header class="s-head a" style="--d:0">
+      <div>
+        <div class="s-tag"><i></i>03 · 树莓派 5</div>
+        <h2>连接与接口</h2>
+      </div>
+      <span class="s-en">Connectivity &amp; Interfaces</span>
+    </header>
+    <div class="s-rule a" style="--d:1"></div>
+    <div class="s-body">
+      <p class="lead a" style="--d:2;margin-bottom:16px">接口配置更加<b>丰富和现代化</b>：</p>
+      <div class="grid" style="grid-template-columns:1fr 1fr 1fr">
+        <div class="card a aPop" style="--d:2">
+          <div class="c-top"><span class="ic">🖥️</span><h3>视频输出</h3></div>
+          <p><b>双 HDMI</b> 端口，均支持 <span class="hl">4K@60Hz HDR</span>，可同时驱动两个 4K 显示器</p>
+        </div>
+        <div class="card g a aPop" style="--d:3">
+          <div class="c-top"><span class="ic">🔗</span><h3>USB 接口</h3></div>
+          <p><b>双 USB 3.0</b>（支持同步 5Gbps 操作）+ <b>双 USB 2.0</b></p>
+        </div>
+        <div class="card n a aPop" style="--d:4">
+          <div class="c-top"><span class="ic">📡</span><h3>网络</h3></div>
+          <p><b>千兆以太网</b>（支持 <span class="hl">PoE+</span>，需额外 PoE+ HAT）· 双频 <b>802.11ac Wi-Fi</b> · <b>蓝牙 5.0/BLE</b></p>
+        </div>
+        <div class="card g a aPop" style="--d:5">
+          <div class="c-top"><span class="ic">📸</span><h3>摄像头 / 显示</h3></div>
+          <p><b>双 4 通道 MIPI</b> CSI/DSI 收发器，支持灵活配置为<b>双摄像头、双显示屏</b>或一摄一屏</p>
+        </div>
+        <div class="card a aPop" style="--d:6">
+          <div class="c-top"><span class="ic">⚙️</span><h3>其他</h3></div>
+          <p>标准 <b>40 针 GPIO</b> 接头 · <b>板载电源按钮</b> · 实时时钟 <b>RTC</b>（需外部电池供电）· 4 针 JST <b>PWM 风扇</b>接口</p>
+        </div>
+        <div class="card amber a aPop" style="--d:7">
+          <div class="c-top"><span class="ic">🔊</span><h3>音频</h3></div>
+          <p><b>移除了 3.5mm 复合音频接口</b>，音频仅能通过 <span class="hl">HDMI</span> 或 <span class="hl">蓝牙</span> 输出</p>
+        </div>
+      </div>
+    </div>
+    <div class="s-foot"><div class="fbar" data-fbar></div><div class="pgno"><b>09</b> / 19</div></div>
+  </section>
+
+  <!-- ================= 10 电源与散热 ================= -->
+  <section class="slide">
+    <header class="s-head a" style="--d:0">
+      <div>
+        <div class="s-tag"><i></i>03 · 树莓派 5</div>
+        <h2>电源与散热</h2>
+      </div>
+      <span class="s-en">Power &amp; Cooling</span>
+    </header>
+    <div class="s-rule a" style="--d:1"></div>
+    <div class="s-body">
+      <div class="banner a" style="--d:2">
+        <span class="b-ic">🔥</span>
+        <div>
+          <h3>性能大幅提升，对<em>供电与散热</em>提出了更高要求</h3>
+        </div>
+      </div>
+      <div class="grid" style="grid-template-columns:1fr 1fr">
+        <div class="card a aL" style="--d:3">
+          <div class="c-top"><span class="ic">⚡️</span><h3>电源<small>Power Supply</small></h3></div>
+          <div class="minis" style="margin-top:2px">
+            <span class="mini" style="background:var(--ice);border-color:var(--ice)"><b>27W USB-C PD</b></span>
+            <span class="mini"><b>5V / 5A</b></span>
+          </div>
+          <p>官方<b>强烈推荐使用 27W USB-C PD 电源</b>（5V/5A），为高负载提供充足稳定的能量。</p>
+          <div class="warn">⚠️ 使用<b>非官方</b>或<b>功率不足</b>的电源，可能导致：无法启动 · USB 设备掉线 · 系统不稳定</div>
+        </div>
+        <div class="card g a aR" style="--d:4">
+          <div class="c-top"><span class="ic">❄️</span><h3>散热<small>Cooling</small></h3></div>
+          <p>高负载下<b>发热量显著增加</b>，<span class="hlg">主动散热几乎是必需的</span>。</p>
+          <div class="minis">
+            <span class="mini">🌀 官方 <b>Active Cooler</b> 主动散热器</span>
+            <span class="mini">📦 集成风扇的外壳</span>
+          </div>
+          <div class="ok">🌡️ 支持 <b>PWM 调速</b> 与 <b>自动温控</b>，按需智能调节风扇转速</div>
+        </div>
+      </div>
+    </div>
+    <div class="s-foot"><div class="fbar" data-fbar></div><div class="pgno"><b>10</b> / 19</div></div>
+  </section>
+
+  <!-- ================= 11 AI 能力与注意事项 ================= -->
+  <section class="slide">
+    <header class="s-head a" style="--d:0">
+      <div>
+        <div class="s-tag"><i></i>03 · 树莓派 5</div>
+        <h2>AI 能力与注意事项</h2>
+      </div>
+      <span class="s-en">AI Capabilities</span>
+    </header>
+    <div class="s-rule a" style="--d:1"></div>
+    <div class="s-body">
+      <div class="grid" style="grid-template-columns:1fr 1fr 1fr">
+        <div class="card n a aPop" style="--d:2">
+          <div class="c-top"><span class="ic">🤖</span><h3>无原生 NPU</h3></div>
+          <p>树莓派 5 <b>没有</b>集成原生的<b>神经网络处理单元（NPU）</b>。</p>
+          <div class="warn">⚠️ 边缘 AI 推理无法依赖板载专用 AI 硬件</div>
+        </div>
+        <div class="card g a aPop" style="--d:3">
+          <div class="c-top"><span class="ic">📈</span><h3>AI 扩展</h3></div>
+          <p>如需进行边缘 AI 推理，需额外购买 <b>AI HAT</b>（如 <span class="hlg">Hailo-10H</span>）。</p>
+          <div class="ok">💪 可获得 <b>40 TOPS</b> 的边缘 AI 算力</div>
+        </div>
+        <div class="card amber a aPop" style="--d:4">
+          <div class="c-top"><span class="ic">⏱️</span><h3>性能参考</h3></div>
+          <p>未加装 AI HAT 时，仅靠 CPU/GPU 进行 AI 推理<b>性能有限</b>。</p>
+          <div class="warn">📉 实测运行 <b>YOLOv12s</b> 模型仅约 <b>2 FPS</b>，不适合高帧率边缘 AI 应用</div>
+        </div>
+      </div>
+      <div class="banner light a" style="--d:5;margin-top:20px">
+        <span class="b-ic">💡</span>
+        <div>
+          <h3>选型建议 · <em>高帧率视觉场景请搭配 AI HAT</em></h3>
+          <p>纯 CPU/GPU 方案适合轻量任务；实时视觉、目标检测等高负载推理请为 MentorPi 加装 AI HAT。</p>
+        </div>
+      </div>
+    </div>
+    <div class="s-foot"><div class="fbar" data-fbar></div><div class="pgno"><b>11</b> / 19</div></div>
+  </section>
+
+  <!-- ================= 12 核心规格速览 ================= -->
+  <section class="slide">
+    <header class="s-head a" style="--d:0">
+      <div>
+        <div class="s-tag"><i></i>03 · 树莓派 5</div>
+        <h2>核心规格速览</h2>
+      </div>
+      <span class="s-en">Specs at a Glance</span>
+    </header>
+    <div class="s-rule a" style="--d:1"></div>
+    <div class="s-body">
+      <table class="spec-table a" style="--d:2">
+        <thead><tr><th>📊 特性</th><th>规格参数</th></tr></thead>
+        <tbody>
+          <tr><td>🧠 处理器</td><td>博通 <b>BCM2712</b>，四核 Arm Cortex-A76 @ 2.4GHz</td></tr>
+          <tr><td>🎮 图形处理器</td><td>VideoCore VII @ 800MHz</td></tr>
+          <tr><td>💾 内存</td><td>1GB / 2GB / 4GB / 8GB / 16GB <b>LPDDR4X-4267</b></td></tr>
+          <tr><td>🖥️ 视频输出</td><td>双 HDMI（4K@60Hz HDR）</td></tr>
+          <tr><td>🔗 USB 接口</td><td>2 × USB 3.0，2 × USB 2.0</td></tr>
+          <tr><td>📡 网络</td><td>千兆以太网，双频 802.11ac Wi-Fi，蓝牙 5.0/BLE</td></tr>
+          <tr><td>💿 存储</td><td>MicroSD（SDR104），PCIe 2.0 x1（需 HAT 转接 NVMe）</td></tr>
+          <tr><td>⚡️ 电源</td><td>5V/5A USB-C PD（推荐 <b>27W</b>）</td></tr>
+        </tbody>
+      </table>
+      <p class="concl a" style="--d:3">
+        🍓 树莓派 5 凭借其<b>强大的性能、自研的 I/O 架构和丰富的扩展接口</b>，已成为高性能计算、物联网、媒体服务器、机器人及教育开发等领域的理想平台。
+        但在选购和使用时，务必注意其<b>更高的电源和散热要求</b>，并明确其 <b>AI 能力需要额外硬件支持</b>。
+      </p>
+    </div>
+    <div class="s-foot"><div class="fbar" data-fbar></div><div class="pgno"><b>12</b> / 19</div></div>
+  </section>
+
+  <!-- ================= 13 章节:麦克纳姆轮 ================= -->
+  <section class="slide dark">
+    <div class="sec-side a" style="--d:4">MECANUM WHEEL</div>
+    <div class="s-head" style="margin-top:30px">
+      <div class="s-tag a" style="--d:0"><i></i>CHAPTER 04</div>
+    </div>
+    <div class="sec-num aL a" style="--d:1">04</div>
+    <div class="sec-title a" style="--d:2">麦克纳姆轮</div>
+    <div class="sec-en a" style="--d:3">Mecanum Wheel</div>
+    <div class="sec-line a" style="--d:4"></div>
+    <div class="sec-desc a" style="--d:5">
+      打破传统轮式底盘物理限制的全向移动轮体<br>
+      1973 年由瑞典工程师本特·伊隆（Bengt Ilon）发明
+    </div>
+    <div class="sec-icons a" style="--d:6">
+      <div class="sec-ic">⚙️</div><div class="sec-ic">🔄</div><div class="sec-ic">📐</div><div class="sec-ic">📦</div><div class="sec-ic">🎮</div>
+    </div>
+    <div class="cover-bars" data-bars data-dim="1"></div>
+  </section>
+
+  <!-- ================= 14 麦克纳姆轮 概览 ================= -->
+  <section class="slide">
+    <header class="s-head a" style="--d:0">
+      <div>
+        <div class="s-tag"><i></i>04 · 麦克纳姆轮</div>
+        <h2>全向移动轮体</h2>
+      </div>
+      <span class="s-en">Mecanum Wheel Overview</span>
+    </header>
+    <div class="s-rule a" style="--d:1"></div>
+    <div class="s-body">
+      <div class="cols">
+        <div class="info-stack">
+          <div class="fact a aL" style="--d:2">
+            <h4>🇸🇪 发明背景</h4>
+            <p>由瑞典工程师 <b>本特·伊隆（Bengt Ilon）</b>于 <b>1973 年</b>发明的一种<b>全向移动轮体</b>。</p>
+          </div>
+          <div class="banner a aL" style="--d:3">
+            <span class="b-ic">💥</span>
+            <div>
+              <h3>打破<em>物理限制</em></h3>
+              <p>打破传统轮式底盘只能<b>前后行进</b>或<b>原地转向</b>的限制</p>
+            </div>
+          </div>
+          <div class="fact g a aL" style="--d:4">
+            <h4>🧭 全向移动</h4>
+            <p>使设备能够在平面上<b>向任意方向移动</b>，无需传统转向机构。</p>
+          </div>
+          <div class="minis a aL" style="--d:5">
+            <span class="mini">↕️ 前后</span>
+            <span class="mini">↔️ 横移</span>
+            <span class="mini">🔄 旋转</span>
+            <span class="mini">↗️ 斜向</span>
+            <span class="mini">🎯 任意组合</span>
+          </div>
+        </div>
+        <div class="img-card darkimg a aR" style="--d:3">
+          <img src="麦克纳姆轮.jpg" alt="麦克纳姆轮结构：辊子与轮毂">
+          <div class="img-cap">⚙️ 麦克纳姆轮结构 —— 斜向辊子（辊子）与轮毂</div>
+        </div>
+      </div>
+    </div>
+    <div class="s-foot"><div class="fbar" data-fbar></div><div class="pgno"><b>14</b> / 19</div></div>
+  </section>
+
+  <!-- ================= 15 核心结构与运动原理 ================= -->
+  <section class="slide">
+    <header class="s-head a" style="--d:0">
+      <div>
+        <div class="s-tag"><i></i>04 · 麦克纳姆轮</div>
+        <h2>核心结构与运动原理</h2>
+      </div>
+      <span class="s-en">Structure &amp; Principle</span>
+    </header>
+    <div class="s-rule a" style="--d:1"></div>
+    <div class="s-body">
+      <div class="cols">
+        <div class="info-stack">
+          <div class="card a aL" style="--d:2;flex:1">
+            <div class="c-top"><span class="ic">🏗️</span><h3>核心结构</h3></div>
+            <p>由<b>轮毂</b>和沿轮缘圆周<b>均匀分布的斜向辊子</b>（小轮）组成：</p>
+            <div class="minis">
+              <span class="mini">📐 辊子轴线与轮毂轴线呈 <b>45°</b> 夹角</span>
+              <span class="mini">🔄 可绕自身轴线<b>自由转动</b></span>
+              <span class="mini">⭕ 包络面形成<b>圆柱面</b></span>
+            </div>
+            <div class="ok">✅ 确保轮子能<b>连续平稳地</b>与地面接触</div>
+          </div>
+        </div>
+        <div class="info-stack">
+          <div class="banner light a aR" style="--d:3">
+            <span class="b-ic">📐</span>
+            <div><h3>运动原理 · <em>力的分解与矢量合成</em></h3></div>
+          </div>
+          <div class="step a aR" style="--d:4">
+            <span class="s-no">1</span>
+            <div>
+              <h4>🧮 力的分解</h4>
+              <p>当主轮毂旋转时，斜向辊子与地面接触产生的摩擦力被分解为<b>纵向</b>（沿主轮切线方向）和<b>横向</b>（沿辊子轴线方向）两个分力。</p>
+            </div>
+          </div>
+          <div class="step a aR" style="--d:5">
+            <span class="s-no">2</span>
+            <div>
+              <h4>➕ 矢量合成</h4>
+              <p>全向平台通常配备 <b>4 个麦克纳姆轮</b>，采用<b>“O-长方形”</b>等布局（左前与右后为同一种轮，右前与左后为另一种轮）。独立控制四轮<b>旋转方向与转速</b>，使各轮力矢量<b>叠加或抵消</b>，决定车体最终运动状态。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="s-foot"><div class="fbar" data-fbar></div><div class="pgno"><b>15</b> / 19</div></div>
+  </section>
+
+  <!-- ================= 16 驱动模式 ================= -->
+  <section class="slide">
+    <header class="s-head a" style="--d:0">
+      <div>
+        <div class="s-tag"><i></i>04 · 麦克纳姆轮</div>
+        <h2>五大驱动模式</h2>
+      </div>
+      <span class="s-en">Drive Modes</span>
+    </header>
+    <div class="s-rule a" style="--d:1"></div>
+    <div class="s-body">
+      <p class="lead a" style="--d:2;margin-bottom:14px">通过<b>四个独立驱动电机</b>的协同控制，实现以下运动模式：</p>
+      <div class="mode-list">
+        <div class="mode a aL" style="--d:2">
+          <span class="m-ic">⬆️</span>
+          <h3>前行 / 后退</h3>
+          <p>四个轮子<b>同向旋转</b>，横向力相互抵消，保留纵向力</p>
+        </div>
+        <div class="mode a aL" style="--d:3">
+          <span class="m-ic">↔️</span>
+          <h3>横向平移</h3>
+          <p>同一侧两个轮子与另一侧轮子<b>反向旋转</b>，纵向力抵消，保留横向力</p>
+        </div>
+        <div class="mode a aL" style="--d:4">
+          <span class="m-ic">🔄</span>
+          <h3>原地旋转</h3>
+          <p>左右两侧轮子分别<b>反向旋转</b>，横向力抵消，产生转动力矩</p>
+        </div>
+        <div class="mode a aL" style="--d:5">
+          <span class="m-ic">↗️</span>
+          <h3>斜向移动</h3>
+          <p>四个轮子按<b>特定的不同转速和转向组合</b>运动</p>
+        </div>
+        <div class="mode a aL" style="--d:6">
+          <span class="m-ic">🎯</span>
+          <h3>任意组合运动</h3>
+          <p>上述运动的<b>任意组合</b>，实现真正的 <b>360° 全向移动</b>，无需传统转向机构</p>
+        </div>
+      </div>
+    </div>
+    <div class="s-foot"><div class="fbar" data-fbar></div><div class="pgno"><b>16</b> / 19</div></div>
+  </section>
+
+  <!-- ================= 17 应用场景 ================= -->
+  <section class="slide">
+    <header class="s-head a" style="--d:0">
+      <div>
+        <div class="s-tag"><i></i>04 · 麦克纳姆轮</div>
+        <h2>应用场景</h2>
+      </div>
+      <span class="s-en">Applications</span>
+    </header>
+    <div class="s-rule a" style="--d:1"></div>
+    <div class="s-body">
+      <div class="banner light a" style="--d:2">
+        <span class="b-ic">📍</span>
+        <div>
+          <h3>适用环境 · <em>室内平整硬质地面 · 狭窄空间 · 高精度定位场景</em></h3>
+        </div>
+      </div>
+      <div class="grid" style="grid-template-columns:1fr 1fr 1fr">
+        <div class="card a aPop" style="--d:3">
+          <div class="c-top"><span class="ic">📦</span><h3>智能物流仓储</h3></div>
+          <p>如 <b>AGV 小车</b>、<b>全方位叉车</b>，在狭窄通道中灵活搬运，提升空间利用率</p>
+        </div>
+        <div class="card g a aPop" style="--d:4">
+          <div class="c-top"><span class="ic">🏭</span><h3>智能制造</h3></div>
+          <p>用于<b>车身转运、精密装配</b>等，缩短换位时间，提升产线柔性</p>
+        </div>
+        <div class="card n a aPop" style="--d:5">
+          <div class="c-top"><span class="ic">🏥</span><h3>医疗特种服务</h3></div>
+          <p>如<b>医用转运车、排爆机器人</b>，在病房或复杂环境中实现平稳横移，降低碰撞风险</p>
+        </div>
+        <div class="card g a aPop" style="--d:6">
+          <div class="c-top"><span class="ic">🎓</span><h3>教育与科研</h3></div>
+          <p>作为<b>机器人学实验平台</b>，直观演示全向运动原理，用于运动学教学与控制算法验证</p>
+        </div>
+        <div class="card a aPop" style="--d:7">
+          <div class="c-top"><span class="ic">🎮</span><h3>娱乐竞技</h3></div>
+          <p>如<b>大疆机甲大师 S1</b>，利用高动态机动性在比赛中实现快速变向与全向竞技</p>
+        </div>
+      </div>
+    </div>
+    <div class="s-foot"><div class="fbar" data-fbar></div><div class="pgno"><b>17</b> / 19</div></div>
+  </section>
+
+  <!-- ================= 18 技术特点与局限性 ================= -->
+  <section class="slide">
+    <header class="s-head a" style="--d:0">
+      <div>
+        <div class="s-tag"><i></i>04 · 麦克纳姆轮</div>
+        <h2>技术特点与局限性</h2>
+      </div>
+      <span class="s-en">Pros &amp; Limitations</span>
+    </header>
+    <div class="s-rule a" style="--d:1"></div>
+    <div class="s-body">
+      <div class="pros">
+        <div class="pro-col good">
+          <h3 class="a" style="--d:2">✅ 优势</h3>
+          <div class="pro-item a aL" style="--d:3"><span class="pi">🎛️</span><span><b>运动控制简单</b>，四电机协同即可实现复杂运动</span></div>
+          <div class="pro-item a aL" style="--d:4"><span class="pi">🌀</span><span><b>机动性极强</b>，零转弯半径，原地即可完成转向</span></div>
+          <div class="pro-item a aL" style="--d:5"><span class="pi">🐍</span><span>能在<b>拥挤环境</b>中灵活运动，通行能力突出</span></div>
+        </div>
+        <div class="pro-col bad">
+          <h3 class="a" style="--d:3">⚠️ 局限性</h3>
+          <div class="pro-item a aR" style="--d:4"><span class="pi">🛣️</span><span>对<b>地面平整度要求高</b>；粗糙、松软或凹凸地面易出现辊子卡滞、打滑及效率损耗</span></div>
+          <div class="pro-item a aR" style="--d:5"><span class="pi">🏋️</span><span><b>横向承载能力</b>低于纵向，重载时辊子易磨损</span></div>
+          <div class="pro-item a aR" style="--d:6"><span class="pi">🔋</span><span><b>滚动阻力</b>高于普通轮胎，能效比相对较低</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="s-foot"><div class="fbar" data-fbar></div><div class="pgno"><b>18</b> / 19</div></div>
+  </section>
+
+  <!-- ================= 19 结尾 ================= -->
+  <section class="slide dark">
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center">
+      <div class="end-emoji a aPop" style="--d:0">🤖</div>
+      <div class="end-title a" style="--d:1">感谢观看</div>
+      <div class="end-sub a" style="--d:2">THANKS · Q &amp; A 欢迎提问</div>
+      <div class="cover-chips a" style="--d:3;margin-top:40px">
+        <span class="chip">🍓 <b>树莓派 5</b></span>
+        <span class="chip">🤖 <b>ROS2</b></span>
+        <span class="chip">🛞 <b>麦克纳姆轮</b></span>
+        <span class="chip">📡 <b>TOF 激光雷达</b></span>
+        <span class="chip">📷 <b>3D 深度相机</b></span>
+      </div>
+    </div>
+    <div class="cover-bars" data-bars></div>
+  </section>
+
+</div>
+
+<!-- 视口固定控件 -->
+<div class="hint">⌨️ ← → 键盘 · 🖱️ 滚轮 · 👆 滑动翻页</div>
+<div class="ctrl">
+  <span class="pg"><b id="pgNow">01</b> / <span id="pgTotal">19</span></span>
+  <button id="btnPrev" aria-label="上一页">‹</button>
+  <button id="btnNext" aria-label="下一页">›</button>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var stage = document.getElementById('stage');
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var total = slides.length;
+  var cur = 0;
+  var busy = false;
+  var prog = document.getElementById('progress');
+  var pgNow = document.getElementById('pgNow');
+  document.getElementById('pgTotal').textContent = String(total).padStart(2,'0');
+  var btnPrev = document.getElementById('btnPrev');
+  var btnNext = document.getElementById('btnNext');
+
+  /* ---------- 16:9 自适应缩放 ---------- */
+  function fit(){
+    var s = Math.min(window.innerWidth/1280, window.innerHeight/720);
+    stage.style.transform = 'translate(-50%,-50%) scale(' + s + ')';
+  }
+  window.addEventListener('resize', fit);
+  window.addEventListener('orientationchange', fit);
+  fit();
+
+  /* ---------- 模板同款装饰元素生成 ---------- */
+  var fPat = [[26,'#003e60'],[16,'#0098be'],[10,'#058e67',1],[22,'#003e60'],[14,'#0098be'],
+              [10,'#058e67',1],[26,'#003e60'],[12,'#0098be'],[10,'#058e67',1],[20,'#003e60'],
+              [16,'#0098be'],[10,'#058e67',1],[24,'#003e60'],[14,'#0098be']];
+  document.querySelectorAll('[data-fbar]').forEach(function(el){
+    fPat.forEach(function(p){
+      var i = document.createElement('i');
+      if (p[2]) { i.className = 'dot'; i.style.background = p[1]; }
+      else { i.style.width = p[0]+'px'; i.style.background = p[1]; }
+      el.appendChild(i);
+    });
+  });
+
+  var cols = ['#ffffff','#bbdfe6','#0098be','#058e67','#eaf4f7'];
+  var hs = [96,148,70,150,112,64,132,104,84,152,120,92,140,72,116,132,88,124];
+  document.querySelectorAll('[data-bars]').forEach(function(el){
+    var dim = el.getAttribute('data-dim') === '1';
+    var pal = dim ? ['rgba(255,255,255,.85)','rgba(187,223,230,.55)','rgba(0,152,190,.75)','rgba(5,142,103,.75)','rgba(234,244,247,.4)'] : cols;
+    hs.forEach(function(h, idx){
+      var b = document.createElement('i');
+      b.style.height = h + 'px';
+      b.style.background = pal[idx % 5];
+      if (idx % 4 === 1) { b.style.borderRadius = '50% 50% 4px 4px'; b.style.width = Math.min(h, 58) + 'px'; }
+      b.style.setProperty('--d', idx);
+      el.appendChild(b);
+    });
+  });
+
+  /* ---------- 翻页核心 ---------- */
+  function updateUI(){
+    prog.style.width = ((cur+1)/total*100) + '%';
+    pgNow.textContent = String(cur+1).padStart(2,'0');
+    btnPrev.disabled = (cur === 0);
+    btnNext.disabled = (cur === total-1);
+  }
+  function go(n){
+    n = Math.max(0, Math.min(total-1, n));
+    if (n === cur || busy) return;
+    busy = true;
+    var dir = n > cur ? 1 : -1;
+    var old = slides[cur], nw = slides[n];
+    old.classList.remove('active');
+    old.classList.add(dir > 0 ? 'out-l' : 'out-r');
+    setTimeout(function(){ old.classList.remove('out-l','out-r'); }, 520);
+    nw.classList.add('active');
+    cur = n;
+    updateUI();
+    setTimeout(function(){ busy = false; }, 480);
+  }
+  var next = function(){ go(cur+1); };
+  var prev = function(){ go(cur-1); };
+
+  /* ---------- 键盘 ---------- */
+  window.addEventListener('keydown', function(e){
+    switch(e.key){
+      case 'ArrowRight': case 'ArrowDown': case 'PageDown': case ' ':
+        e.preventDefault(); next(); break;
+      case 'ArrowLeft': case 'ArrowUp': case 'PageUp':
+        e.preventDefault(); prev(); break;
+      case 'Home': e.preventDefault(); go(0); break;
+      case 'End': e.preventDefault(); go(total-1); break;
+    }
+  });
+
+  /* ---------- 滚轮(带节流防抖) ---------- */
+  var wheelLock = 0;
+  window.addEventListener('wheel', function(e){
+    e.preventDefault();
+    var now = Date.now();
+    if (now - wheelLock < 720) return;
+    if (Math.abs(e.deltaY) < 20) return;
+    wheelLock = now;
+    (e.deltaY > 0 ? next : prev)();
+  }, {passive:false});
+
+  /* ---------- 触控滑动 ---------- */
+  var tx = 0, ty = 0;
+  window.addEventListener('touchstart', function(e){
+    tx = e.touches[0].clientX; ty = e.touches[0].clientY;
+  }, {passive:true});
+  window.addEventListener('touchend', function(e){
+    var dx = e.changedTouches[0].clientX - tx;
+    var dy = e.changedTouches[0].clientY - ty;
+    if (Math.abs(dx) > 56 && Math.abs(dx) > Math.abs(dy)) (dx < 0 ? next : prev)();
+    else if (Math.abs(dy) > 70 && Math.abs(dy) > Math.abs(dx)) (dy < 0 ? next : prev)();
+  }, {passive:true});
+
+  /* ---------- 按钮 ---------- */
+  btnPrev.addEventListener('click', prev);
+  btnNext.addEventListener('click', next);
+
+  updateUI();
+})();
+</script>
+</body>
+</html>

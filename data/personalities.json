@@ -1,0 +1,5795 @@
+{
+  "id": "personalities",
+  "title": "Personalities",
+  "path": "/gallery/personalities",
+  "availability": "available",
+  "tags": [
+    {
+      "title": "People",
+      "color": "#F97316"
+    },
+    {
+      "title": "History",
+      "color": "#EF4444"
+    }
+  ],
+  "excerpt": "The personalities who have shaped my thinking.",
+  "image": "https://www.guilhermeviegas.dev/images/personalities.webp",
+  "text1": "A collection of influential thinkers, philosophers, economists, and revolutionaries.",
+  "personalities": [
+    {
+      "name": "Thomas Piketty",
+      "dates": "1971-Present",
+      "summary": "A French economist known for his work on wealth and income inequality. Piketty argues that the rate of return on capital (r) historically exceeds the rate of economic growth (g), leading to increasing concentration of wealth.",
+      "keywords": [
+        {
+          "title": "Inequality",
+          "color": "#00693F"
+        },
+        {
+          "title": "Wealth Distribution",
+          "color": "#D6A817"
+        },
+        {
+          "title": "Capital",
+          "color": "#235948"
+        },
+        {
+          "title": "r > g",
+          "color": "#55F057"
+        }
+      ],
+      "works": [
+        "Capital in the Twenty-First Century (2013)",
+        "Capital and Ideology (2019)"
+      ],
+      "image": "/images/personalities/thomas_piketty_portrait_1769475747404.png",
+      "quotes": [
+        {
+          "text": "The main driver of inequality is the tendency of returns on capital to exceed the rate of economic growth.",
+          "author": "Thomas Piketty",
+          "origin": "Capital in the Twenty-First Century",
+          "year": "2013"
+        }
+      ]
+    },
+    {
+      "name": "Amartya Sen",
+      "dates": "1933-Present",
+      "summary": "An Indian economist and philosopher. Sen's work focuses on welfare economics, social choice theory, and development. He introduced the 'capability approach', defining development as the expansion of human freedom and capabilities.",
+      "keywords": [
+        {
+          "title": "Welfare Economics",
+          "color": "#BE484A"
+        },
+        {
+          "title": "Capability Approach",
+          "color": "#F339B0"
+        },
+        {
+          "title": "Development",
+          "color": "#03451B"
+        },
+        {
+          "title": "Social Choice",
+          "color": "#0905B4"
+        }
+      ],
+      "works": [
+        "Development as Freedom (1999)",
+        "The Idea of Justice (2009)"
+      ],
+      "image": "/images/personalities/amartya_sen_portrait_1769475996782.png"
+    },
+    {
+      "name": "Noam Chomsky",
+      "dates": "1928-Present",
+      "summary": "An American linguist and political activist. Chomsky revolutionized linguistics with transformational grammar and is a prominent critic of US foreign policy, capitalism, and mass media (Manufacturing Consent).",
+      "keywords": [
+        {
+          "title": "Linguistics",
+          "color": "#F59E0B"
+        },
+        {
+          "title": "Anarcho-Syndicalism",
+          "color": "#631BC1"
+        },
+        {
+          "title": "Media Criticism",
+          "color": "#E67A13"
+        },
+        {
+          "title": "Anti-Imperialism",
+          "color": "#48527D"
+        }
+      ],
+      "works": [
+        "Manufacturing Consent (1988)",
+        "Syntactic Structures (1957)"
+      ],
+      "image": "/images/personalities/noam_chomsky_portrait_1769566241773.png"
+    },
+    {
+      "name": "Slavoj Žižek",
+      "dates": "1949-Present",
+      "summary": "A Slovenian philosopher and cultural critic. Žižek combines Lacanian psychoanalysis, Hegelian philosophy, and Marxism to critique ideology, pop culture, and global capitalism.",
+      "keywords": [
+        {
+          "title": "Psychoanalysis",
+          "color": "#058110"
+        },
+        {
+          "title": "Ideology",
+          "color": "#CD5E5A"
+        },
+        {
+          "title": "Hegelianism",
+          "color": "#839EBE"
+        },
+        {
+          "title": "Cultural Criticism",
+          "color": "#FB60F1"
+        }
+      ],
+      "works": [
+        "The Sublime Object of Ideology (1989)",
+        "Less Than Nothing (2012)"
+      ],
+      "image": "/images/personalities/slavoj_zizek_portrait_1769566257509.png",
+      "quotes": [
+        {
+          "text": "We are not dreamers. We are the awakening of a consciousness that is becoming aware of the nightmare.",
+          "author": "Slavoj Žižek",
+          "origin": "Occupying Wall Street speech",
+          "year": "2011"
+        },
+        {
+          "text": "The light at the end of the tunnel is just the light of an oncoming train.",
+          "author": "Slavoj Žižek",
+          "origin": "Various",
+          "year": ""
+        }
+      ]
+    },
+    {
+      "name": "David Harvey",
+      "dates": "1935-Present",
+      "summary": "A British Marxist geographer. Harvey is a leading theorist of spatiality and urbanization under capitalism. He developed the concept of the 'spatial fix' and analyzes neoliberalism and the right to the city.",
+      "keywords": [
+        {
+          "title": "Marxist Geography",
+          "color": "#3F5A8C"
+        },
+        {
+          "title": "Right to the City",
+          "color": "#062BBB"
+        },
+        {
+          "title": "Neoliberalism",
+          "color": "#53993E"
+        },
+        {
+          "title": "Spatial Fix",
+          "color": "#33C2B9"
+        }
+      ],
+      "works": [
+        "Social Justice and the City (1973)",
+        "The Condition of Postmodernity (1989)"
+      ],
+      "image": "/images/personalities/david_harvey_portrait_1769566273036.png",
+      "quotes": [
+        {
+          "text": "The freedom of the market is not the freedom of the people.",
+          "author": "David Harvey",
+          "origin": "A Brief History of Neoliberalism",
+          "year": "2005"
+        }
+      ]
+    },
+    {
+      "name": "Judith Butler",
+      "dates": "1956-Present",
+      "summary": "An American philosopher and gender theorist. Butler is a key figure in queer theory and third-wave feminism. She is best known for her theory of gender performativity, arguing that gender is a social construct created through repeated actions.",
+      "keywords": [
+        {
+          "title": "Gender Performativity",
+          "color": "#792CCC"
+        },
+        {
+          "title": "Queer Theory",
+          "color": "#020E57"
+        },
+        {
+          "title": "Feminism",
+          "color": "#631E90"
+        },
+        {
+          "title": "Post-Structuralism",
+          "color": "#59EC19"
+        }
+      ],
+      "works": [
+        "Gender Trouble (1990)",
+        "Bodies That Matter (1993)"
+      ],
+      "image": "/images/personalities/judith_butler_portrait_1769618672140.png"
+    },
+    {
+      "name": "Peter Singer",
+      "dates": "1946-Present",
+      "summary": "An Australian moral philosopher. Singer is a leading utilitarian and advocate for animal rights and effective altruism.",
+      "keywords": [
+        {
+          "title": "Utilitarianism",
+          "color": "#0C91AB"
+        },
+        {
+          "title": "Animal Rights",
+          "color": "#46047B"
+        },
+        {
+          "title": "Effective Altruism",
+          "color": "#5F29F0"
+        },
+        {
+          "title": "Bioethics",
+          "color": "#C0B148"
+        }
+      ],
+      "works": [
+        "Animal Liberation (1975)",
+        "Practical Ethics (1979)"
+      ],
+      "image": "/images/personalities/peter_singer_portrait_1769807037821.png"
+    },
+    {
+      "name": "Michael Parenti",
+      "dates": "1933-Present",
+      "summary": "An American political scientist and cultural critic known for his Marxist analysis of U.S. imperialism, media bias, and class power. Parenti challenges mainstream narratives, arguing that the state and media serve the interests of the wealthy elite.",
+      "keywords": [
+        {
+          "title": "Marxism",
+          "color": "#448349"
+        },
+        {
+          "title": "Imperialism",
+          "color": "#803C48"
+        },
+        {
+          "title": "Media Criticism",
+          "color": "#E67A13"
+        },
+        {
+          "title": "Class Struggle",
+          "color": "#6826A5"
+        }
+      ],
+      "works": [
+        "Democracy for the Few (1974)",
+        "Inventing Reality (1986)",
+        "Blackshirts and Reds (1997)",
+        "Against Empire (1995)"
+      ],
+      "image": "/images/personalities/michael_parenti_portrait_1769849623015.png"
+    },
+    {
+      "name": "José Mujica",
+      "dates": "1935-Present",
+      "summary": "Former President of Uruguay. Known as the 'world's poorest president' for his humble lifestyle and progressive policies.",
+      "keywords": [
+        {
+          "title": "Politics",
+          "color": "#B91C1C"
+        },
+        {
+          "title": "Humility",
+          "color": "#8843CB"
+        },
+        {
+          "title": "Socialism",
+          "color": "#DC2626"
+        },
+        {
+          "title": "Uruguay",
+          "color": "#9B76FE"
+        }
+      ],
+      "works": [],
+      "image": "/images/personalities/jose_mujica_portrait_1769882702224.png"
+    },
+    {
+      "name": "Kirill Yeskov",
+      "dates": "1956-Present",
+      "summary": "Russian paleontologist and writer. Author of 'The Last Ringbearer', a retelling of Lord of the Rings from the perspective of Mordor.",
+      "keywords": [
+        {
+          "title": "Literature",
+          "color": "#D2B171"
+        },
+        {
+          "title": "Paleontology",
+          "color": "#F7F699"
+        },
+        {
+          "title": "Revisionism",
+          "color": "#0AB6A8"
+        },
+        {
+          "title": "Fantasy",
+          "color": "#BE9706"
+        }
+      ],
+      "works": [
+        "The Last Ringbearer (1999)"
+      ],
+      "image": "/images/personalities/kirill_yeskov_portrait_1769882718828.png"
+    },
+    {
+      "name": "Byung-Chul Han",
+      "dates": "1959-Present",
+      "summary": "South Korean-German philosopher. Famous for 'The Burnout Society', arguing we have moved to an 'achievement society' where we exploit ourselves.",
+      "keywords": [
+        {
+          "title": "Philosophy",
+          "color": "#60A5FA"
+        },
+        {
+          "title": "Society",
+          "color": "#059669"
+        },
+        {
+          "title": "Burnout",
+          "color": "#7C6EFF"
+        },
+        {
+          "title": "Technology",
+          "color": "#B9612C"
+        }
+      ],
+      "works": [
+        "The Burnout Society (2010)",
+        "Psychopolitics (2017)"
+      ],
+      "image": "/images/personalities/byung_chul_han_portrait_1769931146865.png"
+    },
+    {
+      "name": "José Álvaro Moisés",
+      "dates": "1945-Present",
+      "summary": "A Brazilian political scientist and one of the founders of the Workers' Party (PT). He is a prominent intellectual figure who contributed to the democratic transition in Brazil and the formation of modern Brazilian progressive politics.",
+      "keywords": [
+        {
+          "title": "Political Science",
+          "color": "#E63946"
+        },
+        {
+          "title": "Democracy",
+          "color": "#457B9D"
+        },
+        {
+          "title": "Marxism",
+          "color": "#1D3557"
+        }
+      ],
+      "works": [
+        "A Invenção do PT",
+        "Cidadania e Participação"
+      ],
+      "image": "/images/personalities/jose_alvaro_moises_portrait.png"
+    },
+    {
+      "name": "Emmanuel Todd",
+      "dates": "1951-Present",
+      "summary": "A French historian, anthropologist, demographer, and sociologist. He is known for his research on family structures and their influence on ideologies and political systems across long historical periods.",
+      "keywords": [
+        {
+          "title": "Demography",
+          "color": "#8338EC"
+        },
+        {
+          "title": "Anthropology",
+          "color": "#3A86FF"
+        },
+        {
+          "title": "Sociology",
+          "color": "#FF006E"
+        }
+      ],
+      "works": [
+        "The Final Fall",
+        "The Illusion of Economic Fallacy"
+      ],
+      "image": "/images/personalities/emmanuel_todd_portrait.png"
+    },
+    {
+      "name": "Antonio Negri",
+      "dates": "1933-2023",
+      "summary": "Italian Marxist sociologist. Co-authored Empire, arguing that sovereignty has evolved into a decentralized global network of capital.",
+      "keywords": [
+        {
+          "title": "Marxism",
+          "color": "#448349"
+        },
+        {
+          "title": "Globalization",
+          "color": "#A72341"
+        },
+        {
+          "title": "Empire",
+          "color": "#F2E6B4"
+        },
+        {
+          "title": "Multitude",
+          "color": "#902F5B"
+        }
+      ],
+      "works": [
+        "Empire (2000)",
+        "Multitude (2004)"
+      ],
+      "image": "/images/personalities/antonio_negri_portrait_1769931135177.png"
+    },
+    {
+      "name": "Mark Fisher",
+      "dates": "1968-2017",
+      "summary": "Cultural theorist. Author of Capitalist Realism, exploring the pervasive sense that 'there is no alternative' to capitalism.",
+      "keywords": [
+        {
+          "title": "Cultural Theory",
+          "color": "#BE52C3"
+        },
+        {
+          "title": "Capitalism",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Depression",
+          "color": "#6FC086"
+        },
+        {
+          "title": "Hauntology",
+          "color": "#ADF6A2"
+        }
+      ],
+      "works": [
+        "Capitalist Realism (2009)",
+        "Ghosts of My Life (2014)"
+      ],
+      "image": "/images/personalities/mark_fisher_portrait_1769931159492.png"
+    },
+    {
+      "name": "Fidel Castro",
+      "dates": "1926-2016",
+      "summary": "Cuban revolutionary and politician. He led the Cuban Revolution and served as the leader of Cuba, establishing the first communist state in the Western Hemisphere.",
+      "keywords": [
+        {
+          "title": "Revolution",
+          "color": "#16DB69"
+        },
+        {
+          "title": "Cuba",
+          "color": "#203851"
+        },
+        {
+          "title": "Socialism",
+          "color": "#DC2626"
+        },
+        {
+          "title": "Anti-Imperialism",
+          "color": "#48527D"
+        }
+      ],
+      "works": [
+        "History Will Absolve Me (1953)"
+      ],
+      "image": "/images/personalities/fidel_castro_portrait_1770001395754.png"
+    },
+    {
+      "name": "Muhammad Ali",
+      "dates": "1942-2016",
+      "summary": "An American professional boxer and activist globally recognized as one of the greatest sports figures of the 20th century. Beyond the ring, Ali was a prominent figure in the civil rights movement and a masterful speaker.",
+      "keywords": [
+        {
+          "title": "Boxing",
+          "color": "#3D405B"
+        },
+        {
+          "title": "Activism",
+          "color": "#81B29A"
+        },
+        {
+          "title": "Civil Rights",
+          "color": "#E07A5F"
+        }
+      ],
+      "works": [
+        "The Greatest: My Own Story"
+      ],
+      "image": "/images/personalities/muhammad_ali_portrait.png"
+    },
+    {
+      "name": "Lee Kuan Yew",
+      "dates": "1923-2015",
+      "summary": "The founding father of modern Singapore, Lee Kuan Yew transformed the city-state from a developing nation into a first-world global hub. His pragmatic and often authoritarian leadership style prioritized economic growth, social stability, and meritocracy.",
+      "keywords": [
+        {
+          "title": "Singapore",
+          "color": "#C78304"
+        },
+        {
+          "title": "Governance",
+          "color": "#6EE202"
+        },
+        {
+          "title": "Development",
+          "color": "#03451B"
+        },
+        {
+          "title": "Asian Values",
+          "color": "#B7F81E"
+        },
+        {
+          "title": "Meritocracy",
+          "color": "#FD635E"
+        }
+      ],
+      "works": [
+        "The Singapore Story (1998)",
+        "From Third World to First (2000)",
+        "One Man's View of the World (2013)"
+      ],
+      "image": "/images/personalities/lee_kuan_yew_portrait_1769849639170.png"
+    },
+    {
+      "name": "Eduardo Galeano",
+      "dates": "1940-2015",
+      "summary": "Uruguayan journalist and writer. Author of Open Veins of Latin America, a classic on anti-imperialism.",
+      "keywords": [
+        {
+          "title": "Anti-Imperialism",
+          "color": "#48527D"
+        },
+        {
+          "title": "History",
+          "color": "#EF4444"
+        },
+        {
+          "title": "Journalism",
+          "color": "#06B6D4"
+        },
+        {
+          "title": "Latin America",
+          "color": "#BD40B2"
+        }
+      ],
+      "works": [
+        "Open Veins of Latin America (1971)",
+        "Memory of Fire (1982)"
+      ],
+      "image": "/images/personalities/eduardo_galeano_portrait_1769849855058.png"
+    },
+    {
+      "name": "John Nash",
+      "dates": "1928-2015",
+      "summary": "Mathematician. His work on non-cooperative games (Nash Equilibrium) governs modern economics, evolutionary biology, and AI strategy.",
+      "keywords": [
+        {
+          "title": "Game Theory",
+          "color": "#4308D3"
+        },
+        {
+          "title": "Mathematics",
+          "color": "#7CFDB6"
+        },
+        {
+          "title": "Economics",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Equilibrium",
+          "color": "#9982B4"
+        }
+      ],
+      "works": [
+        "Equilibrium Points in N-person Games (1950)"
+      ],
+      "image": "/images/personalities/john_nash_portrait_1769930943026.png"
+    },
+    {
+      "name": "Gabriel García Márquez",
+      "dates": "1927-2014",
+      "summary": "Colombian writer. Pioneer of Magical Realism and a Nobel laureate.",
+      "keywords": [
+        {
+          "title": "Magical Realism",
+          "color": "#88445D"
+        },
+        {
+          "title": "Literature",
+          "color": "#D2B171"
+        },
+        {
+          "title": "Macondo",
+          "color": "#6D1C59"
+        },
+        {
+          "title": "Nobel Prize",
+          "color": "#E88CDA"
+        }
+      ],
+      "works": [
+        "One Hundred Years of Solitude (1967)",
+        "Love in the Time of Cholera (1985)"
+      ],
+      "image": "/images/personalities/gabriel_garcia_marquez_portrait_1769849809008.png"
+    },
+    {
+      "name": "Vo Nguyen Giap",
+      "dates": "1911-2013",
+      "summary": "'The Red Napoleon.' The military mastermind who defeated both the French and the Americans in Vietnam using asymmetric warfare.",
+      "keywords": [
+        {
+          "title": "Strategy",
+          "color": "#1E40AF"
+        },
+        {
+          "title": "Warfare",
+          "color": "#3A86F6"
+        },
+        {
+          "title": "Vietnam",
+          "color": "#4A6B18"
+        },
+        {
+          "title": "Anti-Imperialism",
+          "color": "#48527D"
+        }
+      ],
+      "works": [
+        "People's War, People's Army (1961)"
+      ],
+      "image": "/images/personalities/vo_nguyen_giap_portrait_1769962300810.png"
+    },
+    {
+      "name": "Nelson Mandela",
+      "dates": "1918-2013",
+      "summary": "South African anti-apartheid revolutionary and political leader. He served as President of South Africa and is a global symbol of resistance and reconciliation.",
+      "keywords": [
+        {
+          "title": "Anti-Apartheid",
+          "color": "#0E5001"
+        },
+        {
+          "title": "Human Rights",
+          "color": "#059669"
+        },
+        {
+          "title": "Peace",
+          "color": "#96BA4E"
+        },
+        {
+          "title": "Leadership",
+          "color": "#E44EE5"
+        }
+      ],
+      "works": [
+        "Long Walk to Freedom (1994)"
+      ],
+      "image": "/images/personalities/nelson_mandela_portrait_1770001411199.png"
+    },
+    {
+      "name": "Oscar Niemeyer",
+      "dates": "1907-2012",
+      "summary": "A key figure in modern architecture, known for his curves and the design of Brasília.",
+      "keywords": [
+        {
+          "title": "Modernism",
+          "color": "#FA84E4"
+        },
+        {
+          "title": "Architecture",
+          "color": "#7C3AED"
+        },
+        {
+          "title": "Brasília",
+          "color": "#DBF619"
+        },
+        {
+          "title": "Curves",
+          "color": "#FB0984"
+        }
+      ],
+      "works": [
+        "Brasília Cathedral",
+        "National Congress of Brazil"
+      ],
+      "image": "/images/personalities/oscar_niemeyer_portrait_1769849710778.png"
+    },
+    {
+      "name": "Elinor Ostrom",
+      "dates": "1933-2012",
+      "summary": "The first woman to win the Nobel in Economics. She debunked the 'Tragedy of the Commons,' proving that local communities can successfully manage shared resources.",
+      "keywords": [
+        {
+          "title": "Economics",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Commons",
+          "color": "#DEABC8"
+        },
+        {
+          "title": "Governance",
+          "color": "#6EE202"
+        },
+        {
+          "title": "Sustainability",
+          "color": "#5101C7"
+        }
+      ],
+      "works": [
+        "Governing the Commons (1990)"
+      ],
+      "image": "/images/personalities/elinor_ostrom_portrait_1769930956067.png"
+    },
+    {
+      "name": "Philippa Foot",
+      "dates": "1920-2010",
+      "summary": "A British philosopher. Foot was a founder of contemporary virtue ethics. She is famous for devising the 'Trolley Problem' thought experiment.",
+      "keywords": [
+        {
+          "title": "Virtue Ethics",
+          "color": "#369D5B"
+        },
+        {
+          "title": "Moral Philosophy",
+          "color": "#23A5B6"
+        },
+        {
+          "title": "Trolley Problem",
+          "color": "#3CB4A4"
+        },
+        {
+          "title": "Naturalism",
+          "color": "#A1FFDA"
+        }
+      ],
+      "works": [
+        "Virtues and Vices (1978)",
+        "Natural Goodness (2001)"
+      ],
+      "image": "/images/personalities/philippa_foot_portrait_1769807021311.png"
+    },
+    {
+      "name": "Paul Samuelson",
+      "dates": "1915-2009",
+      "summary": "An American economist and Nobel laureate. Samuelson is considered the father of modern neo-Keynesian economics. He formalized economic theory using mathematics and wrote the influential textbook 'Economics'.",
+      "keywords": [
+        {
+          "title": "Neoclassical Synthesis",
+          "color": "#2AD2D9"
+        },
+        {
+          "title": "Mathematical Economics",
+          "color": "#48C026"
+        },
+        {
+          "title": "Welfare Economics",
+          "color": "#BE484A"
+        },
+        {
+          "title": "Public Goods",
+          "color": "#218EDF"
+        }
+      ],
+      "works": [
+        "Foundations of Economic Analysis (1947)",
+        "Economics (1948)"
+      ],
+      "image": "/images/personalities/paul_samuelson_portrait_1769585284610.png"
+    },
+    {
+      "name": "Jean Baudrillard",
+      "dates": "1929-2007",
+      "summary": "A French sociologist and philosopher. Baudrillard is known for his analysis of media, contemporary culture, and technological communication. He introduced the concepts of hyperreality and simulacra.",
+      "keywords": [
+        {
+          "title": "Postmodernism",
+          "color": "#84B044"
+        },
+        {
+          "title": "Hyperreality",
+          "color": "#DFB684"
+        },
+        {
+          "title": "Simulacra",
+          "color": "#59245F"
+        },
+        {
+          "title": "Symbolic Exchange",
+          "color": "#4FBDD1"
+        }
+      ],
+      "works": [
+        "Simulacra and Simulation (1981)",
+        "The Consumer Society (1970)"
+      ],
+      "image": "/images/personalities/jean_baudrillard_portrait_1769665302236.png"
+    },
+    {
+      "name": "Milton Friedman",
+      "dates": "1912-2006",
+      "summary": "An American economist and a leading figure of the Chicago School. Friedman championed free-market capitalism, monetarism, and deregulation. He argued that inflation is always a monetary phenomenon and advocated for limited government.",
+      "keywords": [
+        {
+          "title": "Monetarism",
+          "color": "#D84AF7"
+        },
+        {
+          "title": "Free Market",
+          "color": "#CCA870"
+        },
+        {
+          "title": "Chicago School",
+          "color": "#A1082A"
+        },
+        {
+          "title": "Libertarianism",
+          "color": "#17C4C0"
+        }
+      ],
+      "works": [
+        "Capitalism and Freedom (1962)",
+        "A Monetary History of the United States (1963)"
+      ],
+      "image": "/images/personalities/milton_friedman_portrait_1769434276944.png"
+    },
+    {
+      "name": "Peter Drucker",
+      "dates": "1909-2005",
+      "summary": "Austrian-American consultant and educator. The father of modern management education.",
+      "keywords": [
+        {
+          "title": "Management",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Business",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Efficiency",
+          "color": "#1CE289"
+        },
+        {
+          "title": "Leadership",
+          "color": "#E44EE5"
+        }
+      ],
+      "works": [
+        "The Effective Executive (1966)",
+        "Management: Tasks, Responsibilities, Practices (1973)"
+      ],
+      "image": "/images/personalities/peter_drucker_portrait_1769882732451.png"
+    },
+    {
+      "name": "Jacques Derrida",
+      "dates": "1930-2004",
+      "summary": "A French philosopher. Derrida developed deconstruction, a method of critical analysis that challenges the stability of meaning in texts and binary oppositions.",
+      "keywords": [
+        {
+          "title": "Deconstruction",
+          "color": "#A32FF2"
+        },
+        {
+          "title": "Post-Structuralism",
+          "color": "#59EC19"
+        },
+        {
+          "title": "Différance",
+          "color": "#1471DD"
+        },
+        {
+          "title": "Textuality",
+          "color": "#2964DB"
+        }
+      ],
+      "works": [
+        "Of Grammatology (1967)",
+        "Writing and Difference (1967)"
+      ],
+      "image": "/images/personalities/jacques_derrida_portrait_1769636813096.png"
+    },
+    {
+      "name": "Celso Furtado",
+      "dates": "1920-2004",
+      "summary": "One of the most important figures in structuralist economics and dependency theory, heavily influencing Latin American economic thought.",
+      "keywords": [
+        {
+          "title": "Structuralism",
+          "color": "#2CBE66"
+        },
+        {
+          "title": "Dependency Theory",
+          "color": "#91D35A"
+        },
+        {
+          "title": "Development Economics",
+          "color": "#1C6239"
+        },
+        {
+          "title": "Latin America",
+          "color": "#BD40B2"
+        }
+      ],
+      "works": [
+        "The Economic Growth of Brazil (1959)",
+        "Development and Underdevelopment (1961)"
+      ],
+      "image": "/images/personalities/celso_furtado_portrait_1769849669823.png",
+      "quotes": [
+        {
+          "text": "Development is a social process, not just an economic one.",
+          "author": "Celso Furtado",
+          "origin": "Development and Underdevelopment",
+          "year": "1961"
+        }
+      ]
+    },
+    {
+      "name": "John Rawls",
+      "dates": "1921-2002",
+      "summary": "An American political philosopher. Rawls revived the social contract tradition with his theory of 'justice as fairness', using the thought experiment of the 'veil of ignorance' to determine just principles for society.",
+      "keywords": [
+        {
+          "title": "Justice as Fairness",
+          "color": "#A6A728"
+        },
+        {
+          "title": "Veil of Ignorance",
+          "color": "#C9F2C7"
+        },
+        {
+          "title": "Liberalism",
+          "color": "#F9B9E6"
+        },
+        {
+          "title": "Distributive Justice",
+          "color": "#278D53"
+        }
+      ],
+      "works": [
+        "A Theory of Justice (1971)",
+        "Political Liberalism (1993)"
+      ],
+      "image": "/images/personalities/john_rawls_portrait_1769566737909.png"
+    },
+    {
+      "name": "Robert Nozick",
+      "dates": "1938-2002",
+      "summary": "An American philosopher. Nozick was a leading libertarian thinker who argued for a minimal state limited to protection against force and theft. He critiqued patterned theories of justice in favor of entitlement theory.",
+      "keywords": [
+        {
+          "title": "Libertarianism",
+          "color": "#17C4C0"
+        },
+        {
+          "title": "Entitlement Theory",
+          "color": "#143378"
+        },
+        {
+          "title": "Minimal State",
+          "color": "#A32912"
+        },
+        {
+          "title": "Rights",
+          "color": "#059669"
+        }
+      ],
+      "works": [
+        "Anarchy, State, and Utopia (1974)"
+      ],
+      "image": "/images/personalities/robert_nozick_portrait_1769566755889.png"
+    },
+    {
+      "name": "Pierre Bourdieu",
+      "dates": "1930-2002",
+      "summary": "French sociologist and public intellectual. Bourdieu's work was primarily concerned with the dynamics of power in society, introducing concepts such as cultural, social, and symbolic capital.",
+      "keywords": [
+        {
+          "title": "Sociology",
+          "color": "#572C02"
+        },
+        {
+          "title": "Cultural Capital",
+          "color": "#68774A"
+        },
+        {
+          "title": "Habitus",
+          "color": "#DD3AF2"
+        },
+        {
+          "title": "Symbolic Violence",
+          "color": "#7A9649"
+        }
+      ],
+      "works": [
+        "Distinction (1979)"
+      ],
+      "image": "/images/personalities/pierre_bourdieu_portrait_1769962593841.png",
+      "quotes": [
+        {
+          "text": "Taste classifies, and it classifies the classifier.",
+          "author": "Pierre Bourdieu",
+          "origin": "Distinction",
+          "year": "1979"
+        }
+      ]
+    },
+    {
+      "name": "Milton Santos",
+      "dates": "1926-2001",
+      "summary": "A major intellectual in geography, known for his work on globalization and the 'used territory'.",
+      "keywords": [
+        {
+          "title": "Critical Geography",
+          "color": "#8C343B"
+        },
+        {
+          "title": "Globalization",
+          "color": "#A72341"
+        },
+        {
+          "title": "Used Territory",
+          "color": "#721B77"
+        },
+        {
+          "title": "Urbanization",
+          "color": "#CAEBF2"
+        }
+      ],
+      "works": [
+        "The Nature of Space (1996)",
+        "Toward an Other Globalization (2001)"
+      ],
+      "image": "/images/personalities/milton_santos_portrait_1769849766760.png",
+      "quotes": [
+        {
+          "text": "Space is an accumulation of unequal times.",
+          "author": "Milton Santos",
+          "origin": "The Nature of Space",
+          "year": "1996"
+        }
+      ]
+    },
+    {
+      "name": "Herbert Simon",
+      "dates": "1916-2001",
+      "summary": "A giant in AI, psychology, and economics. He introduced Bounded Rationality and 'Satisficing'.",
+      "keywords": [
+        {
+          "title": "AI",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Economics",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Psychology",
+          "color": "#EC4899"
+        },
+        {
+          "title": "Bounded Rationality",
+          "color": "#9C7F7D"
+        }
+      ],
+      "works": [
+        "Administrative Behavior (1947)",
+        "The Sciences of the Artificial (1969)"
+      ],
+      "image": "/images/personalities/herbert_simon_portrait_1769931003629.png"
+    },
+    {
+      "name": "Claude Shannon",
+      "dates": "1916-2001",
+      "summary": "American mathematician and electrical engineer, known as the 'father of information theory'. He demonstrated that electrical applications of boolean algebra could construct any logical numerical relationship.",
+      "keywords": [
+        {
+          "title": "Information Theory",
+          "color": "#EAFE99"
+        },
+        {
+          "title": "Communication",
+          "color": "#10B981"
+        },
+        {
+          "title": "Mathematics",
+          "color": "#7CFDB6"
+        },
+        {
+          "title": "Cryptography",
+          "color": "#10590C"
+        }
+      ],
+      "works": [
+        "A Mathematical Theory of Communication (1948)"
+      ],
+      "image": "/images/personalities/claude_shannon_portrait_1769962506678.png"
+    },
+    {
+      "name": "Iris Murdoch",
+      "dates": "1919-1999",
+      "summary": "An Irish and British novelist and philosopher. Murdoch wrote on moral philosophy, emphasizing the importance of attention to the Good and the reality of other people.",
+      "keywords": [
+        {
+          "title": "Moral Philosophy",
+          "color": "#23A5B6"
+        },
+        {
+          "title": "Platonism",
+          "color": "#E00455"
+        },
+        {
+          "title": "Virtue Ethics",
+          "color": "#369D5B"
+        },
+        {
+          "title": "The Good",
+          "color": "#A9274C"
+        }
+      ],
+      "works": [
+        "The Sovereignty of Good (1970)",
+        "The Sea, the Sea (1978)"
+      ],
+      "image": "/images/personalities/iris_murdoch_portrait_1769807007118.png"
+    },
+    {
+      "name": "Wassily Leontief",
+      "dates": "1905-1999",
+      "summary": "Economist. Developed Input-Output analysis, a quantitative economic model that represents the interdependencies between different branches of a national economy.",
+      "keywords": [
+        {
+          "title": "Economics",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Input-Output",
+          "color": "#4BF4A4"
+        },
+        {
+          "title": "Planning",
+          "color": "#60A5FA"
+        },
+        {
+          "title": "Complexity",
+          "color": "#7C3AED"
+        }
+      ],
+      "works": [
+        "Input-Output Economics (1966)"
+      ],
+      "image": "/images/personalities/wassily_leontief_portrait_1769930991237.png"
+    },
+    {
+      "name": "Viktor Frankl",
+      "dates": "1905-1997",
+      "summary": "An Austrian neurologist and psychiatrist. A Holocaust survivor, Frankl founded logotherapy, which posits that the primary human drive is not pleasure but the pursuit of what we find meaningful.",
+      "keywords": [
+        {
+          "title": "Logotherapy",
+          "color": "#77A83E"
+        },
+        {
+          "title": "Existentialism",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Meaning",
+          "color": "#23C9DD"
+        },
+        {
+          "title": "Psychology",
+          "color": "#EC4899"
+        }
+      ],
+      "works": [
+        "Man's Search for Meaning (1946)"
+      ],
+      "image": "/images/personalities/viktor_frankl_portrait_1769665400270.png"
+    },
+    {
+      "name": "Paulo Freire",
+      "dates": "1921-1997",
+      "summary": "Educator and philosopher. A foundational figure in critical pedagogy, advocating for education as a practice of freedom.",
+      "keywords": [
+        {
+          "title": "Critical Pedagogy",
+          "color": "#E9376D"
+        },
+        {
+          "title": "Education",
+          "color": "#2563EB"
+        },
+        {
+          "title": "Philosophy",
+          "color": "#60A5FA"
+        },
+        {
+          "title": "Liberation",
+          "color": "#FD5C63"
+        }
+      ],
+      "works": [
+        "Pedagogy of the Oppressed (1968)"
+      ],
+      "image": "/images/personalities/paulo_freire_portrait_1769849694951.png",
+      "quotes": [
+        {
+          "text": "When education is not liberating, the dream of the oppressed is to become the oppressor.",
+          "author": "Paulo Freire",
+          "origin": "Pedagogy of the Oppressed",
+          "year": "1968"
+        }
+      ]
+    },
+    {
+      "name": "Darci Ribeiro",
+      "dates": "1922-1997",
+      "summary": "Brazilian anthropologist and politician. His work focuses on the formation of the Brazilian people and indigenous cultures.",
+      "keywords": [
+        {
+          "title": "Anthropology",
+          "color": "#FB8F32"
+        },
+        {
+          "title": "Brazil",
+          "color": "#059669"
+        },
+        {
+          "title": "Education",
+          "color": "#2563EB"
+        },
+        {
+          "title": "Indigenous Peoples",
+          "color": "#0D438B"
+        }
+      ],
+      "works": [
+        "The Brazilian People (1995)"
+      ],
+      "image": "/images/personalities/darci_ribeiro_portrait_1769882689468.png"
+    },
+    {
+      "name": "Carl Sagan",
+      "dates": "1934-1996",
+      "summary": "American astronomer and science communicator. He popularized science with 'Cosmos' and advocated for skeptical inquiry.",
+      "keywords": [
+        {
+          "title": "Astronomy",
+          "color": "#0E7490"
+        },
+        {
+          "title": "Cosmos",
+          "color": "#A6D04A"
+        },
+        {
+          "title": "Science Communication",
+          "color": "#381EDA"
+        },
+        {
+          "title": "Skepticism",
+          "color": "#E31818"
+        }
+      ],
+      "works": [
+        "Cosmos (1980)",
+        "The Demon-Haunted World (1995)"
+      ],
+      "image": "/images/personalities/carl_sagan_portrait_1769882662893.png"
+    },
+    {
+      "name": "Hyman Minsky",
+      "dates": "1919-1996",
+      "summary": "An American economist best known for his research on financial crises and his 'Financial Instability Hypothesis,' which proposes that financial fragility is a natural byproduct of early prosperity in a capitalist economy.",
+      "keywords": [
+        {
+          "title": "Economics",
+          "color": "#118AB2"
+        },
+        {
+          "title": "Financial Instability",
+          "color": "#EF476F"
+        },
+        {
+          "title": "Macroeconomics",
+          "color": "#06D6A0"
+        }
+      ],
+      "works": [
+        "Stabilizing an Unstable Economy",
+        "Can 'It' Happen Again?"
+      ],
+      "image": "/images/personalities/hyman_minsky_portrait.png"
+    },
+    {
+      "name": "Murray Rothbard",
+      "dates": "1926-1995",
+      "summary": "An American economist and political theorist. Rothbard combined Austrian economics with individualist anarchism to found anarcho-capitalism. He argued for a stateless society based on private property and free markets.",
+      "keywords": [
+        {
+          "title": "Anarcho-Capitalism",
+          "color": "#D047FC"
+        },
+        {
+          "title": "Austrian School",
+          "color": "#2201BB"
+        },
+        {
+          "title": "Libertarianism",
+          "color": "#17C4C0"
+        },
+        {
+          "title": "Non-Aggression Principle",
+          "color": "#B6A6B0"
+        }
+      ],
+      "works": [
+        "Man, Economy, and State (1962)",
+        "For a New Liberty (1973)"
+      ],
+      "image": "/images/personalities/murray_rothbard_portrait_1769476214897.png"
+    },
+    {
+      "name": "Emil Cioran",
+      "dates": "1911-1995",
+      "summary": "A Romanian philosopher and essayist. Cioran is known for his pervasive pessimism and his writings on suffering, decay, and nihilism.",
+      "keywords": [
+        {
+          "title": "Pessimism",
+          "color": "#DE1ACA"
+        },
+        {
+          "title": "Nihilism",
+          "color": "#7C4EB3"
+        },
+        {
+          "title": "Suffering",
+          "color": "#A81A93"
+        },
+        {
+          "title": "Despair",
+          "color": "#0A25CC"
+        }
+      ],
+      "works": [
+        "On the Heights of Despair (1934)",
+        "The Trouble with Being Born (1973)"
+      ],
+      "image": "/images/personalities/emil_cioran_portrait_1769636866969.png"
+    },
+    {
+      "name": "Gilles Deleuze",
+      "dates": "1925-1995",
+      "summary": "A French philosopher. Deleuze wrote on philosophy, literature, film, and fine art. His work explores concepts like difference, repetition, and the rhizome.",
+      "keywords": [
+        {
+          "title": "Post-Structuralism",
+          "color": "#59EC19"
+        },
+        {
+          "title": "Rhizome",
+          "color": "#37C2E0"
+        },
+        {
+          "title": "Difference",
+          "color": "#D6915D"
+        },
+        {
+          "title": "Schizoanalysis",
+          "color": "#289F42"
+        }
+      ],
+      "works": [
+        "Anti-Oedipus (1972)",
+        "Difference and Repetition (1968)"
+      ],
+      "image": "/images/personalities/gilles_deleuze_portrait_1769665286510.png"
+    },
+    {
+      "name": "Florestan Fernandes",
+      "dates": "1920-1995",
+      "summary": "Brazilian sociologist and politician. One of the founders of critical sociology in Brazil, focused on race relations and underdevelopment.",
+      "keywords": [
+        {
+          "title": "Sociology",
+          "color": "#572C02"
+        },
+        {
+          "title": "Brazil",
+          "color": "#059669"
+        },
+        {
+          "title": "Race Relations",
+          "color": "#C90F68"
+        },
+        {
+          "title": "Marxism",
+          "color": "#448349"
+        }
+      ],
+      "works": [
+        "The Integration of the Negro in the Class Society (1964)"
+      ],
+      "image": "/images/personalities/florestan_fernandes_portrait_1770001503305.png",
+      "quotes": [
+        {
+          "text": "A nation that does not know its own history is a nation condemned to repeat it.",
+          "author": "Florestan Fernandes",
+          "origin": "Reflections on Brazil",
+          "year": ""
+        }
+      ]
+    },
+    {
+      "name": "Lélia Gonzalez",
+      "dates": "1935-1994",
+      "summary": "Anthropologist and politician. A major figure in Black feminism, she coined 'Amefricanidade' to describe the unique cultural synthesis of the Americas.",
+      "keywords": [
+        {
+          "title": "Feminism",
+          "color": "#631E90"
+        },
+        {
+          "title": "Anthropology",
+          "color": "#FB8F32"
+        },
+        {
+          "title": "Amefricanidade",
+          "color": "#11C8BB"
+        },
+        {
+          "title": "Civil Rights",
+          "color": "#E308E4"
+        }
+      ],
+      "works": [
+        "Lugar de Negro (1982)"
+      ],
+      "image": "/images/personalities/lelia_gonzalez_portrait_1769931053927.png",
+      "quotes": [
+        {
+          "text": "We must decolonize our minds to understand our reality.",
+          "author": "Lélia Gonzalez",
+          "origin": "Racism and Sexism in Brazilian Culture",
+          "year": "1984"
+        }
+      ]
+    },
+    {
+      "name": "Guy Debord",
+      "dates": "1931-1994",
+      "summary": "French Marxist theorist, founding member of the Situationist International. He is best known for his concept of the 'Spectacle' as a social relation among people mediated by images.",
+      "keywords": [
+        {
+          "title": "Situationism",
+          "color": "#1569E5"
+        },
+        {
+          "title": "The Spectacle",
+          "color": "#9AFF85"
+        },
+        {
+          "title": "Marxism",
+          "color": "#448349"
+        },
+        {
+          "title": "Critical Theory",
+          "color": "#95E086"
+        }
+      ],
+      "works": [
+        "The Society of the Spectacle (1967)"
+      ],
+      "image": "/images/personalities/guy_debord_portrait_1769962609752.png"
+    },
+    {
+      "name": "Friedrich Hayek",
+      "dates": "1899-1992",
+      "summary": "An Austrian-British economist and philosopher. Hayek was a leading proponent of classical liberalism and a critic of socialism. He argued that central planning leads to totalitarianism and emphasized the importance of the price mechanism in coordinating economic activity.",
+      "keywords": [
+        {
+          "title": "Austrian School",
+          "color": "#2201BB"
+        },
+        {
+          "title": "Classical Liberalism",
+          "color": "#4345C9"
+        },
+        {
+          "title": "Spontaneous Order",
+          "color": "#6CB89B"
+        },
+        {
+          "title": "Price Signal",
+          "color": "#2A119F"
+        }
+      ],
+      "works": [
+        "The Road to Serfdom (1944)",
+        "The Constitution of Liberty (1960)"
+      ],
+      "image": "/images/personalities/fa_hayek_portrait_1769434289623.png"
+    },
+    {
+      "name": "Samuel Beckett",
+      "dates": "1906-1989",
+      "summary": "An Irish novelist and playwright. Beckett is a key figure in the Theatre of the Absurd. His works are minimalist and explore themes of human existence and despair.",
+      "keywords": [
+        {
+          "title": "Absurdism",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Minimalism",
+          "color": "#64748B"
+        },
+        {
+          "title": "Existentialism",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Theatre",
+          "color": "#C09177"
+        }
+      ],
+      "works": [
+        "Waiting for Godot (1953)",
+        "Endgame (1957)"
+      ],
+      "image": "/images/personalities/samuel_beckett_portrait_1769636852678.png"
+    },
+    {
+      "name": "Chico Mendes",
+      "dates": "1944-1988",
+      "summary": "Rubber tapper and environmental activist. He united labor rights with environmental preservation in the Amazon.",
+      "keywords": [
+        {
+          "title": "Environment",
+          "color": "#65A30D"
+        },
+        {
+          "title": "Activism",
+          "color": "#265704"
+        },
+        {
+          "title": "Amazon",
+          "color": "#18F224"
+        },
+        {
+          "title": "Labor Rights",
+          "color": "#211407"
+        }
+      ],
+      "works": [],
+      "image": "/images/personalities/chico_mendes_portrait_1769931067715.png"
+    },
+    {
+      "name": "Richard Feynman",
+      "dates": "1918-1988",
+      "summary": "American theoretical physicist known for his path integral formulation of quantum mechanics and particle physics. A brilliant communicator of science.",
+      "keywords": [
+        {
+          "title": "Physics",
+          "color": "#0891B2"
+        },
+        {
+          "title": "Quantum Mechanics",
+          "color": "#6ED26A"
+        },
+        {
+          "title": "Science Communication",
+          "color": "#381EDA"
+        },
+        {
+          "title": "Nanotechnology",
+          "color": "#9EFAE0"
+        }
+      ],
+      "works": [
+        "The Feynman Lectures on Physics (1964)"
+      ],
+      "image": "/images/personalities/richard_feynman_portrait_1769962492001.png"
+    },
+    {
+      "name": "Simone de Beauvoir",
+      "dates": "1908-1986",
+      "summary": "A French existentialist philosopher and feminist. Beauvoir's 'The Second Sex' is a foundational text of modern feminism, analyzing the oppression of women and the social construction of gender ('One is not born, but rather becomes, a woman').",
+      "keywords": [
+        {
+          "title": "Feminism",
+          "color": "#631E90"
+        },
+        {
+          "title": "Existentialism",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Gender",
+          "color": "#EADEE1"
+        },
+        {
+          "title": "Ethics",
+          "color": "#10B981"
+        }
+      ],
+      "works": [
+        "The Second Sex (1949)",
+        "The Ethics of Ambiguity (1947)"
+      ],
+      "image": "/images/personalities/simone_de_beauvoir_portrait_1769587003706.png"
+    },
+    {
+      "name": "Jorge Luis Borges",
+      "dates": "1899-1986",
+      "summary": "An Argentine short-story writer, essayist, and poet. Borges's work explores themes of infinity, labyrinths, mirrors, and the nature of reality and fiction.",
+      "keywords": [
+        {
+          "title": "Magical Realism",
+          "color": "#88445D"
+        },
+        {
+          "title": "Labyrinths",
+          "color": "#44AFB4"
+        },
+        {
+          "title": "Infinity",
+          "color": "#2CCE48"
+        },
+        {
+          "title": "Metafiction",
+          "color": "#A9914F"
+        }
+      ],
+      "works": [
+        "Ficciones (1944)",
+        "The Aleph (1949)"
+      ],
+      "image": "/images/personalities/jorge_luis_borges_portrait_1769807165998.png"
+    },
+    {
+      "name": "Michel Foucault",
+      "dates": "1926-1984",
+      "summary": "A French philosopher and historian. Foucault explored the relationship between power, knowledge, and social institutions. His studies on madness, prisons, and sexuality analyzed how power is exercised and how it shapes the subject.",
+      "keywords": [
+        {
+          "title": "Post-structuralism",
+          "color": "#BABC39"
+        },
+        {
+          "title": "Power/Knowledge",
+          "color": "#E0CBB4"
+        },
+        {
+          "title": "Biopolitics",
+          "color": "#624849"
+        },
+        {
+          "title": "Discourse Analysis",
+          "color": "#034F33"
+        }
+      ],
+      "works": [
+        "Discipline and Punish (1975)",
+        "The History of Sexuality (1976)"
+      ],
+      "image": "/images/personalities/michel_foucault_portrait_1769475726049.png",
+      "quotes": [
+        {
+          "text": "Where there is power, there is resistance.",
+          "author": "Michel Foucault",
+          "origin": "The History of Sexuality",
+          "year": "1976"
+        }
+      ]
+    },
+    {
+      "name": "Joan Robinson",
+      "dates": "1903-1983",
+      "summary": "A British economist. Robinson was a key figure in the Cambridge School and Post-Keynesian economics. She developed the theory of imperfect competition and made significant contributions to growth theory.",
+      "keywords": [
+        {
+          "title": "Post-Keynesianism",
+          "color": "#CB9F97"
+        },
+        {
+          "title": "Imperfect Competition",
+          "color": "#6B4248"
+        },
+        {
+          "title": "Cambridge Capital Controversy",
+          "color": "#700A9A"
+        },
+        {
+          "title": "Growth Theory",
+          "color": "#43B15E"
+        }
+      ],
+      "works": [
+        "The Economics of Imperfect Competition (1933)",
+        "The Accumulation of Capital (1956)"
+      ],
+      "image": "/images/personalities/joan_robinson_portrait_1769585556187.png"
+    },
+    {
+      "name": "Piero Sraffa",
+      "dates": "1898-1983",
+      "summary": "An Italian economist. Sraffa's work laid the foundation for Neo-Ricardian economics. He critiqued neoclassical value theory and revived the classical approach to production and distribution.",
+      "keywords": [
+        {
+          "title": "Neo-Ricardianism",
+          "color": "#2AA949"
+        },
+        {
+          "title": "Production",
+          "color": "#4ECCD9"
+        },
+        {
+          "title": "Value Theory",
+          "color": "#7612B4"
+        },
+        {
+          "title": "Cambridge School",
+          "color": "#EDDCBC"
+        }
+      ],
+      "works": [
+        "Production of Commodities by Means of Commodities (1960)"
+      ],
+      "image": "/images/personalities/piero_sraffa_portrait_1769585900061.png"
+    },
+    {
+      "name": "Ayn Rand",
+      "dates": "1905-1982",
+      "summary": "A Russian-American writer and philosopher. Rand developed Objectivism, a philosophy emphasizing reason, rational self-interest, and laissez-faire capitalism. She celebrated the individual creator and rejected altruism.",
+      "keywords": [
+        {
+          "title": "Objectivism",
+          "color": "#D71437"
+        },
+        {
+          "title": "Rational Egoism",
+          "color": "#979C88"
+        },
+        {
+          "title": "Laissez-Faire",
+          "color": "#1FB95D"
+        },
+        {
+          "title": "Individualism",
+          "color": "#2D732A"
+        }
+      ],
+      "works": [
+        "Atlas Shrugged (1957)",
+        "The Fountainhead (1943)"
+      ],
+      "image": "/images/personalities/ayn_rand_portrait_1769587063608.png"
+    },
+    {
+      "name": "Jean-Paul Sartre",
+      "dates": "1905-1980",
+      "summary": "A French philosopher and writer. Sartre was a leading figure in 20th-century existentialism and Marxism. He argued that 'existence precedes essence' and emphasized radical human freedom and responsibility.",
+      "keywords": [
+        {
+          "title": "Existentialism",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Phenomenology",
+          "color": "#059669"
+        },
+        {
+          "title": "Freedom",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Marxism",
+          "color": "#448349"
+        }
+      ],
+      "works": [
+        "Being and Nothingness (1943)",
+        "Existentialism Is a Humanism (1946)"
+      ],
+      "image": "/images/personalities/jean_paul_sartre_better_portrait_1770002302749.png"
+    },
+    {
+      "name": "Roland Barthes",
+      "dates": "1915-1980",
+      "summary": "A French literary theorist and semiotician. Barthes explored how society creates meaning through signs and symbols. He is famous for the essay 'The Death of the Author'.",
+      "keywords": [
+        {
+          "title": "Semiology",
+          "color": "#89BBD6"
+        },
+        {
+          "title": "Structuralism",
+          "color": "#2CBE66"
+        },
+        {
+          "title": "Post-Structuralism",
+          "color": "#59EC19"
+        },
+        {
+          "title": "Myth",
+          "color": "#24D540"
+        }
+      ],
+      "works": [
+        "Mythologies (1957)",
+        "The Death of the Author (1967)"
+      ],
+      "image": "/images/personalities/roland_barthes_portrait_1769665318679.png"
+    },
+    {
+      "name": "Erich Fromm",
+      "dates": "1900-1980",
+      "summary": "A German social psychologist and philosopher. Fromm combined psychoanalysis and humanistic philosophy. He explored the tension between freedom and belonging.",
+      "keywords": [
+        {
+          "title": "Critical Theory",
+          "color": "#95E086"
+        },
+        {
+          "title": "Humanism",
+          "color": "#187056"
+        },
+        {
+          "title": "Psychoanalysis",
+          "color": "#058110"
+        },
+        {
+          "title": "Freedom",
+          "color": "#3B82F6"
+        }
+      ],
+      "works": [
+        "Escape from Freedom (1941)",
+        "The Art of Loving (1956)"
+      ],
+      "image": "/images/personalities/erich_fromm_portrait_1769665383616.png"
+    },
+    {
+      "name": "Herbert Marcuse",
+      "dates": "1898-1979",
+      "summary": "A German-American philosopher and sociologist of the Frankfurt School. Marcuse critiqued advanced industrial society, arguing it creates 'one-dimensional man' and suppresses dissent through consumerism.",
+      "keywords": [
+        {
+          "title": "Critical Theory",
+          "color": "#95E086"
+        },
+        {
+          "title": "Frankfurt School",
+          "color": "#6DAA91"
+        },
+        {
+          "title": "One-Dimensional Man",
+          "color": "#77A304"
+        },
+        {
+          "title": "New Left",
+          "color": "#68C2C7"
+        }
+      ],
+      "works": [
+        "One-Dimensional Man (1964)",
+        "Eros and Civilization (1955)"
+      ],
+      "image": "/images/personalities/herbert_marcuse_portrait_1769566776488.png"
+    },
+    {
+      "name": "Clarice Lispector",
+      "dates": "1920-1977",
+      "summary": "Her introspective, existentialist style draws strong comparisons to Kafka and Woolf.",
+      "keywords": [
+        {
+          "title": "Existentialism",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Modernism",
+          "color": "#FA84E4"
+        },
+        {
+          "title": "Stream of Consciousness",
+          "color": "#5A1DC4"
+        },
+        {
+          "title": "Introspection",
+          "color": "#975F9B"
+        }
+      ],
+      "works": [
+        "The Hour of the Star (1977)",
+        "Near to the Wild Heart (1943)"
+      ],
+      "image": "/images/personalities/clarice_lispector_portrait_1769849726722.png"
+    },
+    {
+      "name": "Carolina Maria de Jesus",
+      "dates": "1914-1977",
+      "summary": "Her diary 'Child of the Dark' (Quarto de Despejo) is a raw, powerful sociological document of poverty from the favelas of São Paulo.",
+      "keywords": [
+        {
+          "title": "Literature",
+          "color": "#D2B171"
+        },
+        {
+          "title": "Poverty",
+          "color": "#0AEAA9"
+        },
+        {
+          "title": "Sociology",
+          "color": "#572C02"
+        },
+        {
+          "title": "Diary",
+          "color": "#EF73A3"
+        }
+      ],
+      "works": [
+        "Child of the Dark (1960)"
+      ],
+      "image": "/images/personalities/carolina_maria_de_jesus_portrait_1769931083560.png"
+    },
+    {
+      "name": "Mao Zedong",
+      "dates": "1893-1976",
+      "summary": "A Chinese communist revolutionary and founding father of the People's Republic of China. Mao adapted Marxism-Leninism to agrarian China, emphasizing peasant revolution, guerrilla warfare, and continuous revolution.",
+      "keywords": [
+        {
+          "title": "Maoism",
+          "color": "#F01D68"
+        },
+        {
+          "title": "Peasant Revolution",
+          "color": "#F36009"
+        },
+        {
+          "title": "Guerrilla Warfare",
+          "color": "#16BBC5"
+        },
+        {
+          "title": "Cultural Revolution",
+          "color": "#55E627"
+        }
+      ],
+      "works": [
+        "Little Red Book (1964)",
+        "On Guerrilla Warfare (1937)"
+      ],
+      "image": "/images/personalities/mao_zedong_portrait_1769566656195.png",
+      "quotes": [
+        {
+          "text": "A revolution is not a dinner party, or writing an essay, or painting a picture, or doing embroidery.",
+          "author": "Mao Zedong",
+          "origin": "Report on an Investigation of the Peasant Movement in Hunan",
+          "year": "1927"
+        }
+      ]
+    },
+    {
+      "name": "Martin Heidegger",
+      "dates": "1889-1976",
+      "summary": "A German philosopher. Heidegger is a major figure in phenomenology and existentialism. His work focuses on the question of Being (Dasein) and our relationship to the world.",
+      "keywords": [
+        {
+          "title": "Phenomenology",
+          "color": "#059669"
+        },
+        {
+          "title": "Existentialism",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Ontology",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Dasein",
+          "color": "#964114"
+        }
+      ],
+      "works": [
+        "Being and Time (1927)"
+      ],
+      "image": "/images/personalities/martin_heidegger_portrait_1769636755263.png"
+    },
+    {
+      "name": "Hannah Arendt",
+      "dates": "1906-1975",
+      "summary": "A German-American political theorist. Arendt analyzed the nature of power, authority, and totalitarianism. She explored the 'banality of evil' and the importance of public political action.",
+      "keywords": [
+        {
+          "title": "Totalitarianism",
+          "color": "#04BE2D"
+        },
+        {
+          "title": "Banality of Evil",
+          "color": "#FB1051"
+        },
+        {
+          "title": "Political Action",
+          "color": "#02F0F9"
+        },
+        {
+          "title": "Public Sphere",
+          "color": "#956164"
+        }
+      ],
+      "works": [
+        "The Origins of Totalitarianism (1951)",
+        "The Human Condition (1958)",
+        "Eichmann in Jerusalem (1963)"
+      ],
+      "image": "/images/personalities/hannah_arendt_portrait_1769476756144.png"
+    },
+    {
+      "name": "Ludwig von Mises",
+      "dates": "1881-1973",
+      "summary": "An Austrian School economist. Mises was a staunch defender of laissez-faire capitalism and a critic of socialism. He argued that socialist calculation is impossible due to the lack of market prices.",
+      "keywords": [
+        {
+          "title": "Austrian School",
+          "color": "#2201BB"
+        },
+        {
+          "title": "Praxeology",
+          "color": "#52FC78"
+        },
+        {
+          "title": "Economic Calculation Problem",
+          "color": "#98D77D"
+        },
+        {
+          "title": "Liberalism",
+          "color": "#F9B9E6"
+        }
+      ],
+      "works": [
+        "Human Action (1949)",
+        "Socialism (1922)"
+      ],
+      "image": "/images/personalities/ludwig_von_mises_portrait_1769476190127.png"
+    },
+    {
+      "name": "Max Horkheimer",
+      "dates": "1895-1973",
+      "summary": "A German philosopher and sociologist. Horkheimer was a leading figure of the Frankfurt School. He developed critical theory to analyze and critique society and culture.",
+      "keywords": [
+        {
+          "title": "Critical Theory",
+          "color": "#95E086"
+        },
+        {
+          "title": "Frankfurt School",
+          "color": "#6DAA91"
+        },
+        {
+          "title": "Social Philosophy",
+          "color": "#810604"
+        },
+        {
+          "title": "Reason",
+          "color": "#AA7E64"
+        }
+      ],
+      "works": [
+        "Dialectic of Enlightenment (1944)",
+        "Eclipse of Reason (1947)"
+      ],
+      "image": "/images/personalities/max_horkheimer_portrait_1769665334979.png"
+    },
+    {
+      "name": "Alan Watts",
+      "dates": "1915-1973",
+      "summary": "A British writer and speaker. Watts interpreted and popularized Eastern philosophy (Zen Buddhism, Taoism, Hinduism) for a Western audience.",
+      "keywords": [
+        {
+          "title": "Eastern Philosophy",
+          "color": "#96350D"
+        },
+        {
+          "title": "Zen",
+          "color": "#015E83"
+        },
+        {
+          "title": "Spirituality",
+          "color": "#1E809F"
+        },
+        {
+          "title": "Consciousness",
+          "color": "#6927CD"
+        }
+      ],
+      "works": [
+        "The Way of Zen (1957)",
+        "The Book: On the Taboo Against Knowing Who You Are (1966)"
+      ],
+      "image": "/images/personalities/alan_watts_portrait_1769849607339.png"
+    },
+    {
+      "name": "Salvador Allende",
+      "dates": "1908-1973",
+      "summary": "Chilean physician and politician, the first Marxist to be elected president in a liberal democracy in Latin America.",
+      "keywords": [
+        {
+          "title": "Socialism",
+          "color": "#DC2626"
+        },
+        {
+          "title": "Democracy",
+          "color": "#1DB9A5"
+        },
+        {
+          "title": "Marxism",
+          "color": "#448349"
+        },
+        {
+          "title": "Chile",
+          "color": "#E104FD"
+        }
+      ],
+      "works": [],
+      "image": "/images/personalities/salvador_allende_portrait_1769849822851.png"
+    },
+    {
+      "name": "Pablo Neruda",
+      "dates": "1904-1973",
+      "summary": "Chilean poet-diplomat and politician. A Nobel laureate, his poetry ranges from erotically charged love poems to surrealist poems and political manifestos.",
+      "keywords": [
+        {
+          "title": "Poetry",
+          "color": "#CF8DD5"
+        },
+        {
+          "title": "Surrealism",
+          "color": "#D946EF"
+        },
+        {
+          "title": "Politics",
+          "color": "#B91C1C"
+        },
+        {
+          "title": "Latin America",
+          "color": "#BD40B2"
+        }
+      ],
+      "works": [
+        "Twenty Love Poems and a Song of Despair (1924)"
+      ],
+      "image": "/images/personalities/pablo_neruda_portrait_1770001488767.png"
+    },
+    {
+      "name": "Bruce Lee",
+      "dates": "1940-1973",
+      "summary": "An iconic martial artist, actor, and philosopher. Lee founded Jeet Kune Do, a hybrid martial arts philosophy emphasizing personal expression and formlessness. His profound thoughts on adaptability ('Be water, my friend') transcend combat and apply to life itself.",
+      "keywords": [
+        {
+          "title": "Philosophy",
+          "color": "#F4A261"
+        },
+        {
+          "title": "Jeet Kune Do",
+          "color": "#E76F51"
+        },
+        {
+          "title": "Adaptability",
+          "color": "#2A9D8F"
+        }
+      ],
+      "works": [
+        "Tao of Jeet Kune Do",
+        "Striking Thoughts"
+      ],
+      "image": "/images/personalities/bruce_lee_portrait.png"
+    },
+    {
+      "name": "Bertrand Russell",
+      "dates": "1872-1970",
+      "summary": "A British philosopher, logician, and mathematician. Russell was a founder of analytic philosophy. He wrote extensively on logic, epistemology, and social issues.",
+      "keywords": [
+        {
+          "title": "Analytic Philosophy",
+          "color": "#43BAE4"
+        },
+        {
+          "title": "Logic",
+          "color": "#6366F1"
+        },
+        {
+          "title": "Pacifism",
+          "color": "#81D914"
+        },
+        {
+          "title": "Epistemology",
+          "color": "#F9F23D"
+        }
+      ],
+      "works": [
+        "The Problems of Philosophy (1912)",
+        "Principia Mathematica (1910)"
+      ],
+      "image": "/images/personalities/bertrand_russell_portrait_1769636799198.png"
+    },
+    {
+      "name": "Theodor Adorno",
+      "dates": "1903-1969",
+      "summary": "A German philosopher and sociologist of the Frankfurt School. Adorno is known for his critique of the 'culture industry', arguing that popular culture pacifies the masses and preserves the status quo.",
+      "keywords": [
+        {
+          "title": "Critical Theory",
+          "color": "#95E086"
+        },
+        {
+          "title": "Culture Industry",
+          "color": "#62F850"
+        },
+        {
+          "title": "Negative Dialectics",
+          "color": "#94437E"
+        },
+        {
+          "title": "Aesthetics",
+          "color": "#5D1E07"
+        }
+      ],
+      "works": [
+        "Dialectic of Enlightenment (1944)",
+        "Negative Dialectics (1966)"
+      ],
+      "image": "/images/personalities/theodor_adorno_portrait_1769566791494.png"
+    },
+    {
+      "name": "Ho Chi Minh",
+      "dates": "1890-1969",
+      "summary": "Vietnamese revolutionary and politician. He served as Prime Minister and President of North Vietnam, leading the independence movement against French colonial rule.",
+      "keywords": [
+        {
+          "title": "Anti-Imperialism",
+          "color": "#48527D"
+        },
+        {
+          "title": "Revolution",
+          "color": "#16DB69"
+        },
+        {
+          "title": "Vietnam",
+          "color": "#4A6B18"
+        },
+        {
+          "title": "Communism",
+          "color": "#DC2626"
+        }
+      ],
+      "works": [
+        "Prison Diary"
+      ],
+      "image": "/images/personalities/ho_chi_minh_portrait_1769962683979.png"
+    },
+    {
+      "name": "Che Guevara",
+      "dates": "1928-1967",
+      "summary": "Marxist revolutionary, physician, and author. A major historical figure of the Cuban Revolution.",
+      "keywords": [
+        {
+          "title": "Revolution",
+          "color": "#16DB69"
+        },
+        {
+          "title": "Marxism",
+          "color": "#448349"
+        },
+        {
+          "title": "Guerrilla Warfare",
+          "color": "#16BBC5"
+        },
+        {
+          "title": "Anti-Imperialism",
+          "color": "#48527D"
+        }
+      ],
+      "works": [
+        "The Motorcycle Diaries",
+        "Guerrilla Warfare (1961)"
+      ],
+      "image": "/images/personalities/che_guevara_portrait_1769849794671.png"
+    },
+    {
+      "name": "J. Robert Oppenheimer",
+      "dates": "1904-1967",
+      "summary": "Theoretical physicist and director of the Manhattan Project. Known as the 'father of the atomic bomb'.",
+      "keywords": [
+        {
+          "title": "Physics",
+          "color": "#0891B2"
+        },
+        {
+          "title": "Atomic Bomb",
+          "color": "#259377"
+        },
+        {
+          "title": "Manhattan Project",
+          "color": "#ADDBB9"
+        },
+        {
+          "title": "Science/Ethics",
+          "color": "#1E40AB"
+        }
+      ],
+      "works": [],
+      "image": "/images/personalities/j_robert_oppenheimer_portrait_1769882746617.png"
+    },
+    {
+      "name": "Malcolm X",
+      "dates": "1925-1965",
+      "summary": "Human rights activist. A powerful voice for Black empowerment who provides a counterpoint to MLK.",
+      "keywords": [
+        {
+          "title": "Civil Rights",
+          "color": "#E308E4"
+        },
+        {
+          "title": "Black Empowerment",
+          "color": "#8A615A"
+        },
+        {
+          "title": "Activism",
+          "color": "#265704"
+        },
+        {
+          "title": "Pan-Africanism",
+          "color": "#95763F"
+        }
+      ],
+      "works": [
+        "The Autobiography of Malcolm X (1965)"
+      ],
+      "image": "/images/personalities/malcolm_x_portrait_1769882635134.png"
+    },
+    {
+      "name": "Karl Polanyi",
+      "dates": "1886-1964",
+      "summary": "An Austro-Hungarian economic historian. Polanyi argued that the self-regulating market is a historical anomaly and that economic systems must be embedded in social relations. He critiqued the commodification of land, labor, and money.",
+      "keywords": [
+        {
+          "title": "Embeddedness",
+          "color": "#51A401"
+        },
+        {
+          "title": "Double Movement",
+          "color": "#053C1E"
+        },
+        {
+          "title": "Market Economy",
+          "color": "#7C9E5A"
+        },
+        {
+          "title": "Substantivism",
+          "color": "#68BA30"
+        }
+      ],
+      "works": [
+        "The Great Transformation (1944)"
+      ],
+      "image": "/images/personalities/karl_polanyi_portrait_1769476723910.png",
+      "quotes": [
+        {
+          "text": "To allow the market mechanism to be sole director of the fate of human beings and their natural environment... would result in the demolition of society.",
+          "author": "Karl Polanyi",
+          "origin": "The Great Transformation",
+          "year": "1944"
+        }
+      ]
+    },
+    {
+      "name": "William Edward Burghardt Du Bois",
+      "dates": "1868-1963",
+      "summary": "An American sociologist, historian, and civil rights activist. Du Bois was a founder of the NAACP and a pioneer in the study of race relations. He introduced the concept of 'double consciousness' experienced by African Americans.",
+      "keywords": [
+        {
+          "title": "Civil Rights",
+          "color": "#E308E4"
+        },
+        {
+          "title": "Sociology",
+          "color": "#572C02"
+        },
+        {
+          "title": "Double Consciousness",
+          "color": "#CD89DE"
+        },
+        {
+          "title": "Pan-Africanism",
+          "color": "#95763F"
+        }
+      ],
+      "works": [
+        "The Souls of Black Folk (1903)",
+        "Black Reconstruction in America (1935)"
+      ],
+      "image": "/images/personalities/web_du_bois_portrait_1769566698742.png"
+    },
+    {
+      "name": "Aldous Huxley",
+      "dates": "1894-1963",
+      "summary": "An English writer and philosopher. Huxley is best known for his dystopian novel 'Brave New World', which anticipates developments in reproductive technology and psychological manipulation.",
+      "keywords": [
+        {
+          "title": "Dystopia",
+          "color": "#76098F"
+        },
+        {
+          "title": "Satire",
+          "color": "#2F76D6"
+        },
+        {
+          "title": "Psychology",
+          "color": "#EC4899"
+        },
+        {
+          "title": "Mysticism",
+          "color": "#589C1C"
+        }
+      ],
+      "works": [
+        "Brave New World (1932)",
+        "The Doors of Perception (1954)"
+      ],
+      "image": "/images/personalities/aldous_huxley_portrait_1769807584638.png"
+    },
+    {
+      "name": "Hermann Hesse",
+      "dates": "1877-1962",
+      "summary": "A German-Swiss poet and novelist. Hesse's works explore the individual's search for authenticity, self-knowledge, and spirituality.",
+      "keywords": [
+        {
+          "title": "Spirituality",
+          "color": "#1E809F"
+        },
+        {
+          "title": "Self-Discovery",
+          "color": "#A855F7"
+        },
+        {
+          "title": "Eastern Philosophy",
+          "color": "#96350D"
+        },
+        {
+          "title": "Bildungsroman",
+          "color": "#31D699"
+        }
+      ],
+      "works": [
+        "Siddhartha (1922)",
+        "Steppenwolf (1927)"
+      ],
+      "image": "/images/personalities/hermann_hesse_portrait_1769636838958.png"
+    },
+    {
+      "name": "Frantz Fanon",
+      "dates": "1925-1961",
+      "summary": "A French West Indian psychiatrist and political philosopher. Fanon's works are foundational to post-colonial studies, analyzing the psychopathology of colonization and the necessity of decolonization.",
+      "keywords": [
+        {
+          "title": "Post-Colonialism",
+          "color": "#CB0421"
+        },
+        {
+          "title": "Decolonization",
+          "color": "#0B7B46"
+        },
+        {
+          "title": "Psychopathology",
+          "color": "#F0D9EB"
+        },
+        {
+          "title": "National Liberation",
+          "color": "#97B371"
+        }
+      ],
+      "works": [
+        "The Wretched of the Earth (1961)",
+        "Black Skin, White Masks (1952)"
+      ],
+      "image": "/images/personalities/frantz_fanon_portrait_1769566715860.png"
+    },
+    {
+      "name": "Carl Jung",
+      "dates": "1875-1961",
+      "summary": "A Swiss psychiatrist and psychoanalyst. Jung founded analytical psychology. He introduced concepts like the collective unconscious, archetypes, and the process of individuation.",
+      "keywords": [
+        {
+          "title": "Analytical Psychology",
+          "color": "#BDC771"
+        },
+        {
+          "title": "Collective Unconscious",
+          "color": "#57F06B"
+        },
+        {
+          "title": "Archetypes",
+          "color": "#B0632A"
+        },
+        {
+          "title": "Individuation",
+          "color": "#3115A7"
+        }
+      ],
+      "works": [
+        "Psychological Types (1921)",
+        "The Red Book"
+      ],
+      "image": "/images/personalities/carl_jung_portrait_1769636725180.png"
+    },
+    {
+      "name": "Maurice Merleau-Ponty",
+      "dates": "1908-1961",
+      "summary": "A French phenomenological philosopher. Merleau-Ponty emphasized the role of the body in human experience and perception.",
+      "keywords": [
+        {
+          "title": "Phenomenology",
+          "color": "#059669"
+        },
+        {
+          "title": "Perception",
+          "color": "#FC1CC5"
+        },
+        {
+          "title": "Embodiment",
+          "color": "#94F6B8"
+        },
+        {
+          "title": "Existentialism",
+          "color": "#8B5CF6"
+        }
+      ],
+      "works": [
+        "Phenomenology of Perception (1945)"
+      ],
+      "image": "/images/personalities/maurice_merleau_ponty_portrait_1769665270362.png"
+    },
+    {
+      "name": "Albert Camus",
+      "dates": "1913-1960",
+      "summary": "A French philosopher and author. Camus is associated with absurdism. He argued that life is inherently meaningless, but we must revolt against this absurdity and create our own meaning.",
+      "keywords": [
+        {
+          "title": "Absurdism",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Existentialism",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Revolt",
+          "color": "#B3FAD4"
+        },
+        {
+          "title": "Freedom",
+          "color": "#3B82F6"
+        }
+      ],
+      "works": [
+        "The Stranger (1942)",
+        "The Myth of Sisyphus (1942)"
+      ],
+      "image": "/images/personalities/albert_camus_portrait_1769618836639.png"
+    },
+    {
+      "name": "John von Neumann",
+      "dates": "1903-1957",
+      "summary": "Hungarian-American mathematician, physicist, computer scientist, engineer, and polymath. Key figure in game theory, cellular automata, and the Manhattan Project.",
+      "keywords": [
+        {
+          "title": "Game Theory",
+          "color": "#4308D3"
+        },
+        {
+          "title": "Computing",
+          "color": "#589314"
+        },
+        {
+          "title": "Physics",
+          "color": "#0891B2"
+        },
+        {
+          "title": "Mathematics",
+          "color": "#7CFDB6"
+        }
+      ],
+      "works": [
+        "Theory of Games and Economic Behavior (1944)"
+      ],
+      "image": "/images/personalities/john_von_neumann_portrait_1769962450681.png"
+    },
+    {
+      "name": "Albert Einstein",
+      "dates": "1879-1955",
+      "summary": "Theoretical physicist. Developed the theory of relativity, one of the two pillars of modern physics.",
+      "keywords": [
+        {
+          "title": "Physics",
+          "color": "#0891B2"
+        },
+        {
+          "title": "Relativity",
+          "color": "#B27175"
+        },
+        {
+          "title": "Science",
+          "color": "#06B6D4"
+        },
+        {
+          "title": "E=mc²",
+          "color": "#E9B644"
+        }
+      ],
+      "works": [
+        "Relativity: The Special and the General Theory (1916)"
+      ],
+      "image": "/images/personalities/albert_einstein_portrait_1769882549239.png"
+    },
+    {
+      "name": "Frida Kahlo",
+      "dates": "1907-1954",
+      "summary": "Mexican painter known for her portraits and works inspired by the nature and artifacts of Mexico.",
+      "keywords": [
+        {
+          "title": "Art",
+          "color": "#DB2777"
+        },
+        {
+          "title": "Surrealism",
+          "color": "#D946EF"
+        },
+        {
+          "title": "Feminism",
+          "color": "#631E90"
+        },
+        {
+          "title": "Mexican Culture",
+          "color": "#AA9AF5"
+        }
+      ],
+      "works": [
+        "The Two Fridas (1939)",
+        "Self-Portrait with Thorn Necklace and Hummingbird (1940)"
+      ],
+      "image": "/images/personalities/frida_kahlo_portrait_1769882514945.png"
+    },
+    {
+      "name": "Alan Turing",
+      "dates": "1912-1954",
+      "summary": "Mathematician and computer scientist. The father of theoretical computer science and artificial intelligence.",
+      "keywords": [
+        {
+          "title": "Computer Science",
+          "color": "#08465F"
+        },
+        {
+          "title": "Artificial Intelligence",
+          "color": "#83B0E5"
+        },
+        {
+          "title": "Cryptography",
+          "color": "#10590C"
+        },
+        {
+          "title": "Mathematics",
+          "color": "#7CFDB6"
+        }
+      ],
+      "works": [
+        "Computing Machinery and Intelligence (1950)"
+      ],
+      "image": "/images/personalities/alan_turing_portrait_1769882603197.png"
+    },
+    {
+      "name": "John Dewey",
+      "dates": "1859-1952",
+      "summary": "An American philosopher and educator. Dewey was a pragmatist and a proponent of progressive education. He believed that philosophy should address real-world social problems.",
+      "keywords": [
+        {
+          "title": "Pragmatism",
+          "color": "#EE16EB"
+        },
+        {
+          "title": "Education",
+          "color": "#2563EB"
+        },
+        {
+          "title": "Democracy",
+          "color": "#1DB9A5"
+        },
+        {
+          "title": "Instrumentalism",
+          "color": "#0444D1"
+        }
+      ],
+      "works": [
+        "Democracy and Education (1916)",
+        "Experience and Nature (1925)"
+      ],
+      "image": "/images/personalities/john_dewey_portrait_1769665254683.png"
+    },
+    {
+      "name": "Ludwig Wittgenstein",
+      "dates": "1889-1951",
+      "summary": "An Austrian-British philosopher. Wittgenstein worked in logic, the philosophy of mathematics, and the philosophy of language. He argued that philosophical problems arise from misunderstandings of language.",
+      "keywords": [
+        {
+          "title": "Analytic Philosophy",
+          "color": "#43BAE4"
+        },
+        {
+          "title": "Language Games",
+          "color": "#74D3F9"
+        },
+        {
+          "title": "Logic",
+          "color": "#6366F1"
+        },
+        {
+          "title": "Tractatus",
+          "color": "#772145"
+        }
+      ],
+      "works": [
+        "Tractatus Logico-Philosophicus (1921)",
+        "Philosophical Investigations (1953)"
+      ],
+      "image": "/images/personalities/ludwig_wittgenstein_portrait_1769636740633.png"
+    },
+    {
+      "name": "Joseph Schumpeter",
+      "dates": "1883-1950",
+      "summary": "An Austrian political economist. Schumpeter popularized the term 'creative destruction' to describe how innovation constantly revolutionizes the economic structure, destroying the old to create the new.",
+      "keywords": [
+        {
+          "title": "Creative Destruction",
+          "color": "#B45DC1"
+        },
+        {
+          "title": "Innovation",
+          "color": "#F59E0B"
+        },
+        {
+          "title": "Business Cycles",
+          "color": "#BE98AD"
+        },
+        {
+          "title": "Entrepreneurship",
+          "color": "#034F75"
+        }
+      ],
+      "works": [
+        "Capitalism, Socialism and Democracy (1942)",
+        "Theory of Economic Development (1911)"
+      ],
+      "image": "/images/personalities/joseph_schumpeter_portrait_1769475974781.png"
+    },
+    {
+      "name": "George Orwell",
+      "dates": "1903-1950",
+      "summary": "An English novelist and critic. Orwell is famous for his critique of totalitarianism, surveillance, and the corruption of language.",
+      "keywords": [
+        {
+          "title": "Totalitarianism",
+          "color": "#04BE2D"
+        },
+        {
+          "title": "Dystopia",
+          "color": "#76098F"
+        },
+        {
+          "title": "Political Satire",
+          "color": "#9DFD79"
+        },
+        {
+          "title": "Surveillance",
+          "color": "#0DEAB9"
+        }
+      ],
+      "works": [
+        "1984 (1949)",
+        "Animal Farm (1945)"
+      ],
+      "image": "/images/personalities/george_orwell_portrait_1769807179240.png"
+    },
+    {
+      "name": "Irving Fisher",
+      "dates": "1867-1947",
+      "summary": "An American economist. Fisher made major contributions to monetary theory, including the equation of exchange and the theory of interest. He is also known for his debt-deflation theory of depressions.",
+      "keywords": [
+        {
+          "title": "Monetarism",
+          "color": "#D84AF7"
+        },
+        {
+          "title": "Quantity Theory of Money",
+          "color": "#BD205D"
+        },
+        {
+          "title": "Fisher Equation",
+          "color": "#001C07"
+        },
+        {
+          "title": "Debt-Deflation",
+          "color": "#BEB994"
+        }
+      ],
+      "works": [
+        "The Purchasing Power of Money (1911)",
+        "The Theory of Interest (1930)"
+      ],
+      "image": "/images/personalities/irving_fisher_portrait_1769585095327.png"
+    },
+    {
+      "name": "John Maynard Keynes",
+      "dates": "1883-1946",
+      "summary": "A British economist whose ideas revolutionized macroeconomics. Keynes argued that aggregate demand determines the overall level of economic activity and that government intervention is necessary to mitigate business cycles and unemployment.",
+      "keywords": [
+        {
+          "title": "Keynesian Economics",
+          "color": "#8141D7"
+        },
+        {
+          "title": "Macroeconomics",
+          "color": "#DC2626"
+        },
+        {
+          "title": "Aggregate Demand",
+          "color": "#40600C"
+        },
+        {
+          "title": "Fiscal Policy",
+          "color": "#EC4899"
+        }
+      ],
+      "works": [
+        "The General Theory of Employment, Interest and Money (1936)"
+      ],
+      "image": "/images/personalities/john_maynard_keynes_portrait_1769434186252.png",
+      "quotes": [
+        {
+          "text": "The Market Can Remain Irrational Longer Than You Can Remain Solvent",
+          "author": "John Maynard Keynes",
+          "origin": "Attributed",
+          "year": ""
+        }
+      ]
+    },
+    {
+      "name": "Mário de Andrade",
+      "dates": "1893-1945",
+      "summary": "Polymath and poet. The central figure of Brazilian Modernism and author of Macunaíma, exploring the 'cannibalistic' nature of Brazilian culture.",
+      "keywords": [
+        {
+          "title": "Modernism",
+          "color": "#FA84E4"
+        },
+        {
+          "title": "Literature",
+          "color": "#D2B171"
+        },
+        {
+          "title": "Brazil",
+          "color": "#059669"
+        },
+        {
+          "title": "Culture",
+          "color": "#EC4899"
+        }
+      ],
+      "works": [
+        "Macunaíma (1928)",
+        "Paulicéia Desvairada (1922)"
+      ],
+      "image": "/images/personalities/mario_de_andrade_portrait_1769931018775.png"
+    },
+    {
+      "name": "Nikola Tesla",
+      "dates": "1856-1943",
+      "summary": "Futurist and inventor. Known for his contributions to the design of the modern alternating current (AC) electricity supply system.",
+      "keywords": [
+        {
+          "title": "Invention",
+          "color": "#02224E"
+        },
+        {
+          "title": "Electricity",
+          "color": "#859A51"
+        },
+        {
+          "title": "Alternating Current",
+          "color": "#E838D0"
+        },
+        {
+          "title": "Futurism",
+          "color": "#63AA81"
+        }
+      ],
+      "works": [],
+      "image": "/images/personalities/nikola_tesla_portrait_1769882531009.png"
+    },
+    {
+      "name": "Virginia Woolf",
+      "dates": "1882-1941",
+      "summary": "Writer. A major modernist and pioneer in the use of stream of consciousness.",
+      "keywords": [
+        {
+          "title": "Modernism",
+          "color": "#FA84E4"
+        },
+        {
+          "title": "Stream of Consciousness",
+          "color": "#5A1DC4"
+        },
+        {
+          "title": "Feminism",
+          "color": "#631E90"
+        },
+        {
+          "title": "Literature",
+          "color": "#D2B171"
+        }
+      ],
+      "works": [
+        "Mrs Dalloway (1925)",
+        "To the Lighthouse (1927)",
+        "A Room of One's Own (1929)"
+      ],
+      "image": "/images/personalities/virginia_woolf_portrait_1769882649613.png"
+    },
+    {
+      "name": "James Joyce",
+      "dates": "1882-1941",
+      "summary": "Irish novelist and poet. He contributed to the modernist avant-garde and is regarded as one of the most influential and important authors of the 20th century.",
+      "keywords": [
+        {
+          "title": "Modernism",
+          "color": "#FA84E4"
+        },
+        {
+          "title": "Literature",
+          "color": "#D2B171"
+        },
+        {
+          "title": "Stream of Consciousness",
+          "color": "#5A1DC4"
+        },
+        {
+          "title": "Ireland",
+          "color": "#F13427"
+        }
+      ],
+      "works": [
+        "Ulysses (1922)",
+        "Dubliners (1914)"
+      ],
+      "image": "/images/personalities/james_joyce_portrait_1770001471479.png"
+    },
+    {
+      "name": "Leon Trotsky",
+      "dates": "1879-1940",
+      "summary": "A Russian revolutionary and Marxist theorist. Trotsky played a key role in the Bolshevik Revolution and founded the Red Army. He developed the theory of permanent revolution and was a major critic of Stalinism.",
+      "keywords": [
+        {
+          "title": "Trotskyism",
+          "color": "#E19685"
+        },
+        {
+          "title": "Permanent Revolution",
+          "color": "#9BFA3B"
+        },
+        {
+          "title": "Bolshevism",
+          "color": "#455A7E"
+        },
+        {
+          "title": "Red Army",
+          "color": "#7C940C"
+        }
+      ],
+      "works": [
+        "The Permanent Revolution (1930)",
+        "The Revolution Betrayed (1937)"
+      ],
+      "image": "/images/personalities/leon_trotsky_portrait_1769434333716.png",
+      "quotes": [
+        {
+          "text": "Life is not an easy matter... You cannot live through it without falling into frustration and cynicism unless you have before you a great idea which raises you above personal misery, above weakness, above all kinds of perfidy and baseness.",
+          "author": "Leon Trotsky",
+          "origin": "Diary in Exile",
+          "year": "1935"
+        }
+      ]
+    },
+    {
+      "name": "Emma Goldman",
+      "dates": "1869-1940",
+      "summary": "An anarchist political activist and writer. Goldman was a fiery advocate for free speech, birth control, women's rights, and labor unions. She played a pivotal role in the development of anarchist philosophy in North America.",
+      "keywords": [
+        {
+          "title": "Anarchism",
+          "color": "#8A5780"
+        },
+        {
+          "title": "Feminism",
+          "color": "#631E90"
+        },
+        {
+          "title": "Free Speech",
+          "color": "#D71D16"
+        },
+        {
+          "title": "Direct Action",
+          "color": "#56DE4D"
+        }
+      ],
+      "works": [
+        "Anarchism and Other Essays (1910)",
+        "Living My Life (1931)"
+      ],
+      "image": "/images/personalities/emma_goldman_portrait_1769566680455.png"
+    },
+    {
+      "name": "Walter Benjamin",
+      "dates": "1892-1940",
+      "summary": "A German Jewish philosopher and cultural critic. Benjamin combined German idealism, Romanticism, and historical materialism. He is known for his essays on art, technology, and history.",
+      "keywords": [
+        {
+          "title": "Critical Theory",
+          "color": "#95E086"
+        },
+        {
+          "title": "Aesthetics",
+          "color": "#5D1E07"
+        },
+        {
+          "title": "Historical Materialism",
+          "color": "#0D0BA6"
+        },
+        {
+          "title": "Flâneur",
+          "color": "#E3E150"
+        }
+      ],
+      "works": [
+        "The Work of Art in the Age of Mechanical Reproduction (1935)",
+        "Theses on the Philosophy of History (1940)"
+      ],
+      "image": "/images/personalities/walter_benjamin_portrait_1769586102546.png"
+    },
+    {
+      "name": "Sigmund Freud",
+      "dates": "1856-1939",
+      "summary": "An Austrian neurologist and the founder of psychoanalysis. Freud developed theories about the unconscious mind, repression, and the structure of the psyche (id, ego, superego).",
+      "keywords": [
+        {
+          "title": "Psychoanalysis",
+          "color": "#058110"
+        },
+        {
+          "title": "Unconscious",
+          "color": "#669DFD"
+        },
+        {
+          "title": "Id/Ego/Superego",
+          "color": "#AE3308"
+        },
+        {
+          "title": "Dreams",
+          "color": "#7F64F0"
+        }
+      ],
+      "works": [
+        "The Interpretation of Dreams (1899)",
+        "Civilization and Its Discontents (1930)"
+      ],
+      "image": "/images/personalities/sigmund_freud_portrait_1769618987974.png"
+    },
+    {
+      "name": "Antonio Gramsci",
+      "dates": "1891-1937",
+      "summary": "An Italian Marxist philosopher and politician. Gramsci is best known for his theory of cultural hegemony, which describes how the state and ruling capitalist class use cultural institutions to maintain power in capitalist societies.",
+      "keywords": [
+        {
+          "title": "Cultural Hegemony",
+          "color": "#0E4A66"
+        },
+        {
+          "title": "Marxism",
+          "color": "#448349"
+        },
+        {
+          "title": "Subaltern",
+          "color": "#EA7138"
+        },
+        {
+          "title": "Organic Intellectual",
+          "color": "#087935"
+        }
+      ],
+      "works": [
+        "Prison Notebooks (1929-1935)"
+      ],
+      "image": "/images/personalities/antonio_gramsci_portrait_1769475706429.png"
+    },
+    {
+      "name": "Marie Curie",
+      "dates": "1867-1934",
+      "summary": "Physicist and chemist. Pioneer in radioactivity and the first person to win two Nobel Prizes.",
+      "keywords": [
+        {
+          "title": "Radioactivity",
+          "color": "#B50BEA"
+        },
+        {
+          "title": "Physics",
+          "color": "#0891B2"
+        },
+        {
+          "title": "Chemistry",
+          "color": "#369084"
+        },
+        {
+          "title": "Nobel Prize",
+          "color": "#E88CDA"
+        }
+      ],
+      "works": [],
+      "image": "/images/personalities/marie_curie_portrait_1769882579054.png"
+    },
+    {
+      "name": "Nestor Makhno",
+      "dates": "1888-1934",
+      "summary": "Ukrainian Anarchist revolutionary. Legendarily led the Black Army during the Russian Civil War to establish a stateless society.",
+      "keywords": [
+        {
+          "title": "Anarchism",
+          "color": "#8A5780"
+        },
+        {
+          "title": "Revolution",
+          "color": "#16DB69"
+        },
+        {
+          "title": "Ukraine",
+          "color": "#7C5E5B"
+        },
+        {
+          "title": "Warfare",
+          "color": "#3A86F6"
+        }
+      ],
+      "works": [],
+      "image": "/images/personalities/nestor_makhno_portrait_1769962403947.png"
+    },
+    {
+      "name": "Santos Dumont",
+      "dates": "1873-1932",
+      "summary": "Aviator and inventor. A heavy contender for the title of 'Father of Aviation'.",
+      "keywords": [
+        {
+          "title": "Aviation",
+          "color": "#05C8C1"
+        },
+        {
+          "title": "Invention",
+          "color": "#02224E"
+        },
+        {
+          "title": "14-bis",
+          "color": "#902E62"
+        },
+        {
+          "title": "Engineering",
+          "color": "#0F766E"
+        }
+      ],
+      "works": [
+        "14-bis (Aircraft)",
+        "Demoiselle (Aircraft)"
+      ],
+      "image": "/images/personalities/santos_dumont_portrait_1769849741461.png"
+    },
+    {
+      "name": "Khalil Gibran",
+      "dates": "1883-1931",
+      "summary": "A Lebanese-American writer, poet, and visual artist. Gibran is best known for 'The Prophet', a collection of poetic essays on life's big questions.",
+      "keywords": [
+        {
+          "title": "Poetry",
+          "color": "#CF8DD5"
+        },
+        {
+          "title": "Mysticism",
+          "color": "#589C1C"
+        },
+        {
+          "title": "Philosophy",
+          "color": "#60A5FA"
+        },
+        {
+          "title": "Spirituality",
+          "color": "#1E809F"
+        }
+      ],
+      "works": [
+        "The Prophet (1923)"
+      ],
+      "image": "/images/personalities/khalil_gibran_portrait_1769807152266.png"
+    },
+    {
+      "name": "Thomas Edison",
+      "dates": "1847-1931",
+      "summary": "American inventor and businessman. Developed the phonograph, the motion picture camera, and the electric light bulb.",
+      "keywords": [
+        {
+          "title": "Invention",
+          "color": "#02224E"
+        },
+        {
+          "title": "Business",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Electricity",
+          "color": "#859A51"
+        },
+        {
+          "title": "Phonograph",
+          "color": "#9B0AF6"
+        }
+      ],
+      "works": [],
+      "image": "/images/personalities/thomas_edison_portrait_1769882774829.png"
+    },
+    {
+      "name": "Thorstein Veblen",
+      "dates": "1857-1929",
+      "summary": "An American economist and sociologist. Veblen was a critic of capitalism and introduced the concept of 'conspicuous consumption' to describe spending designed to display social status rather than meet needs.",
+      "keywords": [
+        {
+          "title": "Institutional Economics",
+          "color": "#2B3EE1"
+        },
+        {
+          "title": "Conspicuous Consumption",
+          "color": "#8C00AC"
+        },
+        {
+          "title": "Leisure Class",
+          "color": "#A7337D"
+        },
+        {
+          "title": "Sociology",
+          "color": "#572C02"
+        }
+      ],
+      "works": [
+        "The Theory of the Leisure Class (1899)"
+      ],
+      "image": "/images/personalities/thorstein_veblen_portrait_1769476691843.png"
+    },
+    {
+      "name": "Roald Amundsen",
+      "dates": "1872-1928",
+      "summary": "Norwegian explorer. The first person to reach the South Pole and the first to traverse the Northwest Passage.",
+      "keywords": [
+        {
+          "title": "Exploration",
+          "color": "#0EA5E9"
+        },
+        {
+          "title": "South Pole",
+          "color": "#19266B"
+        },
+        {
+          "title": "Adventure",
+          "color": "#1316F0"
+        },
+        {
+          "title": "Norway",
+          "color": "#6BCE9E"
+        }
+      ],
+      "works": [
+        "The South Pole (1912)"
+      ],
+      "image": "/images/personalities/roald_amundsen_portrait_1769930897356.png"
+    },
+    {
+      "name": "Vladimir Lenin",
+      "dates": "1870-1924",
+      "summary": "A Russian revolutionary and political theorist, Lenin led the Bolshevik Revolution and founded the Soviet Union. He adapted Marxism to the conditions of Russia, developing the theory of the vanguard party and imperialism as the highest stage of capitalism.",
+      "keywords": [
+        {
+          "title": "Leninism",
+          "color": "#5F0469"
+        },
+        {
+          "title": "Bolshevism",
+          "color": "#455A7E"
+        },
+        {
+          "title": "Revolution",
+          "color": "#16DB69"
+        },
+        {
+          "title": "Imperialism",
+          "color": "#803C48"
+        },
+        {
+          "title": "Vanguard Party",
+          "color": "#644EA8"
+        }
+      ],
+      "works": [
+        "What Is to Be Done? (1902)",
+        "Imperialism, the Highest Stage of Capitalism (1917)",
+        "The State and Revolution (1917)"
+      ],
+      "image": "/images/personalities/vladimir_lenin_portrait_1769434228506.png",
+      "quotes": [
+        {
+          "text": "There are decades where nothing happens; and there are weeks where decades happen.",
+          "author": "Vladimir Lenin",
+          "origin": "Attributed",
+          "year": ""
+        }
+      ]
+    },
+    {
+      "name": "Franz Kafka",
+      "dates": "1883-1924",
+      "summary": "A German-speaking Bohemian novelist. Kafka's work explores themes of alienation, existential anxiety, and absurd bureaucracy. His stories often feature surreal and nightmarish scenarios.",
+      "keywords": [
+        {
+          "title": "Existentialism",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Absurdism",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Alienation",
+          "color": "#F7A4AE"
+        },
+        {
+          "title": "Bureaucracy",
+          "color": "#62C16E"
+        }
+      ],
+      "works": [
+        "The Metamorphosis (1915)",
+        "The Trial (1925)"
+      ],
+      "image": "/images/personalities/franz_kafka_portrait_1769618733170.png"
+    },
+    {
+      "name": "Peter Kropotkin",
+      "dates": "1842-1921",
+      "summary": "A Russian anarchist and geographer. Kropotkin advocated for anarcho-communism and argued that mutual aid and cooperation are primary factors in evolution, countering Social Darwinist views of competition.",
+      "keywords": [
+        {
+          "title": "Anarcho-Communism",
+          "color": "#D625BD"
+        },
+        {
+          "title": "Mutual Aid",
+          "color": "#26B730"
+        },
+        {
+          "title": "Evolution",
+          "color": "#02BF5B"
+        },
+        {
+          "title": "Geography",
+          "color": "#DC975C"
+        }
+      ],
+      "works": [
+        "The Conquest of Bread (1892)",
+        "Mutual Aid: A Factor of Evolution (1902)"
+      ],
+      "image": "/images/personalities/peter_kropotkin_portrait_1769476044764.png"
+    },
+    {
+      "name": "Princesa Isabel",
+      "dates": "1846-1921",
+      "summary": "The Princess Imperial of Brazil who famously signed the Lei Áurea (Golden Law) in 1888, which definitively abolished slavery in Brazil. Her actions cemented her legacy as a key humanitarian figure in Brazilian history.",
+      "keywords": [
+        {
+          "title": "Abolitionism",
+          "color": "#FFCA3A"
+        },
+        {
+          "title": "Brazilian History",
+          "color": "#8AC926"
+        },
+        {
+          "title": "Monarchy",
+          "color": "#1982C4"
+        }
+      ],
+      "works": [
+        "Signed the Lei Áurea"
+      ],
+      "image": "/images/personalities/princesa_isabel_portrait.png"
+    },
+    {
+      "name": "Max Weber",
+      "dates": "1864-1920",
+      "summary": "A German sociologist and political economist. Weber is a founder of modern sociology, known for his analysis of the rationalization of society, the Protestant work ethic, and the definition of the state as holding a monopoly on violence.",
+      "keywords": [
+        {
+          "title": "Sociology",
+          "color": "#572C02"
+        },
+        {
+          "title": "Rationalization",
+          "color": "#5D1356"
+        },
+        {
+          "title": "Bureaucracy",
+          "color": "#62C16E"
+        },
+        {
+          "title": "Protestant Ethic",
+          "color": "#8DBB1B"
+        }
+      ],
+      "works": [
+        "The Protestant Ethic and the Spirit of Capitalism (1905)",
+        "Economy and Society (1922)"
+      ],
+      "image": "/images/personalities/max_weber_portrait_1769434353448.png"
+    },
+    {
+      "name": "Rosa Luxemburg",
+      "dates": "1871-1919",
+      "summary": "A Polish-German revolutionary socialist and Marxist philosopher. Luxemburg was a staunch critic of both the Social Democratic Party of Germany and the Bolsheviks. She emphasized the importance of mass strikes and spontaneity in revolution.",
+      "keywords": [
+        {
+          "title": "Revolutionary Socialism",
+          "color": "#B64155"
+        },
+        {
+          "title": "Mass Strike",
+          "color": "#845A5E"
+        },
+        {
+          "title": "Anti-War",
+          "color": "#E96DFD"
+        },
+        {
+          "title": "Marxism",
+          "color": "#448349"
+        }
+      ],
+      "works": [
+        "The Accumulation of Capital (1913)",
+        "Reform or Revolution (1900)"
+      ],
+      "image": "/images/personalities/rosa_luxemburg_portrait_1769434305021.png",
+      "quotes": [
+        {
+          "text": "Freedom is always and exclusively freedom for the one who thinks differently.",
+          "author": "Rosa Luxemburg",
+          "origin": "The Russian Revolution",
+          "year": "1918"
+        }
+      ]
+    },
+    {
+      "name": "Robert Falcon Scott",
+      "dates": "1868-1912",
+      "summary": "British Royal Navy officer and explorer. Led two expeditions to the Antarctic regions, dying on the return from the South Pole.",
+      "keywords": [
+        {
+          "title": "Exploration",
+          "color": "#0EA5E9"
+        },
+        {
+          "title": "Antarctica",
+          "color": "#84133E"
+        },
+        {
+          "title": "Tragedy",
+          "color": "#9B29F6"
+        },
+        {
+          "title": "British Empire",
+          "color": "#168071"
+        }
+      ],
+      "works": [
+        "The Voyage of the Discovery (1905)"
+      ],
+      "image": "/images/personalities/robert_falcon_scott_portrait_1769930930534.png"
+    },
+    {
+      "name": "Leo Tolstoy",
+      "dates": "1828-1910",
+      "summary": "A Russian writer and philosopher. Tolstoy is considered one of the greatest authors of all time. His later works focus on Christian anarchism and non-violent resistance.",
+      "keywords": [
+        {
+          "title": "Realism",
+          "color": "#A20A05"
+        },
+        {
+          "title": "Christian Anarchism",
+          "color": "#6F0479"
+        },
+        {
+          "title": "Non-Violence",
+          "color": "#7ECDDB"
+        },
+        {
+          "title": "Pacifism",
+          "color": "#81D914"
+        }
+      ],
+      "works": [
+        "War and Peace (1869)",
+        "Anna Karenina (1877)"
+      ],
+      "image": "/images/personalities/leo_tolstoy_portrait_1769636825857.png"
+    },
+    {
+      "name": "William James",
+      "dates": "1842-1910",
+      "summary": "An American philosopher and psychologist. James is a leading figure in pragmatism. He argued that the truth of an idea is determined by its practical consequences.",
+      "keywords": [
+        {
+          "title": "Pragmatism",
+          "color": "#EE16EB"
+        },
+        {
+          "title": "Psychology",
+          "color": "#EC4899"
+        },
+        {
+          "title": "Radical Empiricism",
+          "color": "#62BB9E"
+        },
+        {
+          "title": "Truth",
+          "color": "#D54E4B"
+        }
+      ],
+      "works": [
+        "Pragmatism (1907)",
+        "The Principles of Psychology (1890)"
+      ],
+      "image": "/images/personalities/william_james_portrait_1769665239722.png"
+    },
+    {
+      "name": "Machado de Assis",
+      "dates": "1839-1908",
+      "summary": "Widely regarded as the greatest writer of Brazilian literature. His realism and psychological depth rival Dostoevsky.",
+      "keywords": [
+        {
+          "title": "Realism",
+          "color": "#A20A05"
+        },
+        {
+          "title": "Brazilian Literature",
+          "color": "#935C07"
+        },
+        {
+          "title": "Psychology",
+          "color": "#EC4899"
+        },
+        {
+          "title": "Irony",
+          "color": "#3A3491"
+        }
+      ],
+      "works": [
+        "Dom Casmurro (1899)",
+        "The Posthumous Memoirs of Brás Cubas (1881)"
+      ],
+      "image": "/images/personalities/machado_de_assis_portrait_1769849654898.png"
+    },
+    {
+      "name": "Friedrich Nietzsche",
+      "dates": "1844-1900",
+      "summary": "A German philosopher. Nietzsche challenged the foundations of Christianity and traditional morality. He introduced concepts like the 'Übermensch', the 'will to power', and 'eternal recurrence'.",
+      "keywords": [
+        {
+          "title": "Existentialism",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Nihilism",
+          "color": "#7C4EB3"
+        },
+        {
+          "title": "Will to Power",
+          "color": "#7BBF6E"
+        },
+        {
+          "title": "Übermensch",
+          "color": "#700A75"
+        }
+      ],
+      "works": [
+        "Thus Spoke Zarathustra (1883)",
+        "Beyond Good and Evil (1886)"
+      ],
+      "image": "/images/personalities/friedrich_nietzsche_portrait_1769618698096.png"
+    },
+    {
+      "name": "Oscar Wilde",
+      "dates": "1854-1900",
+      "summary": "An Irish poet and playwright. Wilde is known for his wit, his flamboyant style, and his advocacy of aestheticism ('art for art's sake').",
+      "keywords": [
+        {
+          "title": "Aestheticism",
+          "color": "#8DA117"
+        },
+        {
+          "title": "Wit",
+          "color": "#0153C2"
+        },
+        {
+          "title": "Satire",
+          "color": "#2F76D6"
+        },
+        {
+          "title": "Drama",
+          "color": "#F38A47"
+        }
+      ],
+      "works": [
+        "The Picture of Dorian Gray (1890)",
+        "The Importance of Being Earnest (1895)"
+      ],
+      "image": "/images/personalities/oscar_wilde_portrait_1769807598440.png"
+    },
+    {
+      "name": "Henry George",
+      "dates": "1839-1897",
+      "summary": "An American political economist. George advocated for a 'single tax' on land values, arguing that while people own what they create, nature belongs to all. His ideas sparked the Georgist movement.",
+      "keywords": [
+        {
+          "title": "Georgism",
+          "color": "#29A19D"
+        },
+        {
+          "title": "Land Value Tax",
+          "color": "#0CBC67"
+        },
+        {
+          "title": "Political Economy",
+          "color": "#AFEBDB"
+        },
+        {
+          "title": "Inequality",
+          "color": "#00693F"
+        }
+      ],
+      "works": [
+        "Progress and Poverty (1879)"
+      ],
+      "image": "/images/personalities/henry_george_portrait_1769567108168.png"
+    },
+    {
+      "name": "Friedrich Engels",
+      "dates": "1820-1895",
+      "summary": "A German philosopher and revolutionary socialist, Engels was Karl Marx's closest collaborator. He co-authored key Marxist texts and supported Marx financially. His own work on the condition of the working class and the origins of family and private property is foundational to socialist theory.",
+      "keywords": [
+        {
+          "title": "Marxism",
+          "color": "#448349"
+        },
+        {
+          "title": "Socialism",
+          "color": "#DC2626"
+        },
+        {
+          "title": "Working Class",
+          "color": "#0A3F89"
+        },
+        {
+          "title": "Dialectics",
+          "color": "#0972D3"
+        }
+      ],
+      "works": [
+        "The Condition of the Working Class in England (1845)",
+        "The Origin of the Family, Private Property and the State (1884)"
+      ],
+      "image": "/images/personalities/friedrich_engels_portrait_1769434102289.png",
+      "quotes": [
+        {
+          "text": "Freedom is the recognition of necessity.",
+          "author": "Friedrich Engels",
+          "origin": "Anti-Dühring",
+          "year": "1877"
+        }
+      ]
+    },
+    {
+      "name": "Walt Whitman",
+      "dates": "1819-1892",
+      "summary": "An American poet, essayist, and journalist. Whitman is among the most influential poets in the American canon, often called the father of free verse. His expansive vision embraced individualism, democracy, and the beauty of the human spirit.",
+      "keywords": [
+        {
+          "title": "Poetry",
+          "color": "#9C6644"
+        },
+        {
+          "title": "Trancendentalism",
+          "color": "#7F4F24"
+        },
+        {
+          "title": "Individualism",
+          "color": "#DDB892"
+        }
+      ],
+      "works": [
+        "Leaves of Grass",
+        "Democratic Vistas"
+      ],
+      "image": "/images/personalities/walt_whitman_portrait.png"
+    },
+    {
+      "name": "Karl Marx",
+      "dates": "1818-1883",
+      "summary": "A German philosopher, economist, and revolutionary socialist. Marx's analysis of history as a series of class struggles and his critique of capitalism have had a profound influence on global politics and intellectual thought. He predicted that capitalism would inevitably self-destruct and be replaced by communism.",
+      "keywords": [
+        {
+          "title": "Marxism",
+          "color": "#448349"
+        },
+        {
+          "title": "Historical Materialism",
+          "color": "#0D0BA6"
+        },
+        {
+          "title": "Class Struggle",
+          "color": "#6826A5"
+        },
+        {
+          "title": "Communism",
+          "color": "#DC2626"
+        },
+        {
+          "title": "Surplus Value",
+          "color": "#5E717B"
+        }
+      ],
+      "works": [
+        "Das Kapital (1867)",
+        "The Communist Manifesto (1848)"
+      ],
+      "image": "/images/personalities/karl_marx_portrait_1769434088178.png",
+      "quotes": [
+        {
+          "text": "History repeats itself, first as tragedy, second as farce.",
+          "author": "Karl Marx",
+          "origin": "The Eighteenth Brumaire of Louis Napoleon",
+          "year": "1852"
+        },
+        {
+          "text": "The philosophers have only interpreted the world, in various ways; the point is to change it.",
+          "author": "Karl Marx",
+          "origin": "Theses on Feuerbach",
+          "year": "1845"
+        }
+      ]
+    },
+    {
+      "name": "Ralph Waldo Emerson",
+      "dates": "1803-1882",
+      "summary": "An American essayist and philosopher. Emerson led the Transcendentalist movement. He championed individualism, self-reliance, and the connection between the soul and nature.",
+      "keywords": [
+        {
+          "title": "Transcendentalism",
+          "color": "#74D28D"
+        },
+        {
+          "title": "Individualism",
+          "color": "#2D732A"
+        },
+        {
+          "title": "Nature",
+          "color": "#84CC16"
+        },
+        {
+          "title": "Self-Reliance",
+          "color": "#8DE1A0"
+        }
+      ],
+      "works": [
+        "Nature (1836)",
+        "Self-Reliance (1841)"
+      ],
+      "image": "/images/personalities/ralph_waldo_emerson_portrait_1769665223267.png"
+    },
+    {
+      "name": "Charles Darwin",
+      "dates": "1809-1882",
+      "summary": "Naturalist, geologist and biologist. His theory of evolution by natural selection is the unifying theory of the life sciences.",
+      "keywords": [
+        {
+          "title": "Evolution",
+          "color": "#02BF5B"
+        },
+        {
+          "title": "Biology",
+          "color": "#A3E635"
+        },
+        {
+          "title": "Natural Selection",
+          "color": "#4CAE15"
+        },
+        {
+          "title": "Science",
+          "color": "#06B6D4"
+        }
+      ],
+      "works": [
+        "On the Origin of Species (1859)",
+        "The Descent of Man (1871)"
+      ],
+      "image": "/images/personalities/charles_darwin_portrait_1769882565474.png"
+    },
+    {
+      "name": "Fyodor Dostoevsky",
+      "dates": "1821-1881",
+      "summary": "A Russian novelist and philosopher. Dostoevsky's works explore human psychology, morality, and faith in the context of 19th-century Russia. He is a forerunner of existentialism.",
+      "keywords": [
+        {
+          "title": "Existentialism",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Psychology",
+          "color": "#EC4899"
+        },
+        {
+          "title": "Morality",
+          "color": "#A03FB3"
+        },
+        {
+          "title": "Faith",
+          "color": "#081DE2"
+        }
+      ],
+      "works": [
+        "Crime and Punishment (1866)",
+        "The Brothers Karamazov (1880)"
+      ],
+      "image": "/images/personalities/fyodor_dostoevsky_portrait_1769618859069.png"
+    },
+    {
+      "name": "Mikhail Bakunin",
+      "dates": "1814-1876",
+      "summary": "A Russian revolutionary anarchist. Bakunin was a leading figure in collectivist anarchism and a major opponent of Marx in the First International. He argued against all forms of state authority and hierarchy.",
+      "keywords": [
+        {
+          "title": "Anarchism",
+          "color": "#8A5780"
+        },
+        {
+          "title": "Collectivism",
+          "color": "#52FD6C"
+        },
+        {
+          "title": "Anti-Statism",
+          "color": "#721244"
+        },
+        {
+          "title": "Revolution",
+          "color": "#16DB69"
+        }
+      ],
+      "works": [
+        "God and the State (1882)",
+        "Statism and Anarchy (1873)"
+      ],
+      "image": "/images/personalities/mikhail_bakunin_portrait_1769476019658.png"
+    },
+    {
+      "name": "John Stuart Mill",
+      "dates": "1806-1873",
+      "summary": "A British philosopher and political economist, Mill was a leading proponent of utilitarianism and liberty. He argued for individual freedom, women's rights, and the harm principle. His economic work synthesized classical theory with a focus on social justice.",
+      "keywords": [
+        {
+          "title": "Utilitarianism",
+          "color": "#0C91AB"
+        },
+        {
+          "title": "Liberalism",
+          "color": "#F9B9E6"
+        },
+        {
+          "title": "Liberty",
+          "color": "#1B13D7"
+        },
+        {
+          "title": "Political Economy",
+          "color": "#AFEBDB"
+        }
+      ],
+      "works": [
+        "On Liberty (1859)",
+        "Utilitarianism (1863)",
+        "Principles of Political Economy (1848)"
+      ],
+      "image": "/images/personalities/john_stuart_mill_portrait_1769434145285.png"
+    },
+    {
+      "name": "Pierre-Joseph Proudhon",
+      "dates": "1809-1865",
+      "summary": "A French politician and the first person to declare himself an anarchist. Proudhon is famous for the assertion 'Property is theft!', referring to property derived from unearned income, while supporting possession based on labor.",
+      "keywords": [
+        {
+          "title": "Mutualism",
+          "color": "#0257CF"
+        },
+        {
+          "title": "Anarchism",
+          "color": "#8A5780"
+        },
+        {
+          "title": "Property",
+          "color": "#A841F5"
+        },
+        {
+          "title": "Federalism",
+          "color": "#F1B0E6"
+        }
+      ],
+      "works": [
+        "What Is Property? (1840)",
+        "The Philosophy of Poverty (1846)"
+      ],
+      "image": "/images/personalities/pierre_joseph_proudhon_portrait_1769476069216.png"
+    },
+    {
+      "name": "Henry David Thoreau",
+      "dates": "1817-1862",
+      "summary": "An American naturalist, essayist, and philosopher. Thoreau is a central figure in Transcendentalism, known for his reflections on simple living in nature and his advocacy for civil disobedience against unjust governments.",
+      "keywords": [
+        {
+          "title": "Transcendentalism",
+          "color": "#74D28D"
+        },
+        {
+          "title": "Civil Disobedience",
+          "color": "#5288C1"
+        },
+        {
+          "title": "Nature",
+          "color": "#84CC16"
+        },
+        {
+          "title": "Simple Living",
+          "color": "#05A8D7"
+        }
+      ],
+      "works": [
+        "Walden (1854)",
+        "Civil Disobedience (1849)"
+      ],
+      "image": "/images/personalities/henry_david_thoreau_portrait_1769618564657.png"
+    },
+    {
+      "name": "Arthur Schopenhauer",
+      "dates": "1788-1860",
+      "summary": "A German philosopher. Schopenhauer is known for his pessimism and his metaphysical theory of the 'Will' as the fundamental reality. He influenced Nietzsche, Freud, and Wittgenstein.",
+      "keywords": [
+        {
+          "title": "Pessimism",
+          "color": "#DE1ACA"
+        },
+        {
+          "title": "Will",
+          "color": "#2923F2"
+        },
+        {
+          "title": "Metaphysics",
+          "color": "#289882"
+        },
+        {
+          "title": "Aesthetics",
+          "color": "#5D1E07"
+        }
+      ],
+      "works": [
+        "The World as Will and Representation (1818)"
+      ],
+      "image": "/images/personalities/arthur_schopenhauer_portrait_1769618748285.png"
+    },
+    {
+      "name": "Alexis de Tocqueville",
+      "dates": "1805-1859",
+      "summary": "A French diplomat and historian. Tocqueville is best known for his analysis of American democracy, exploring the tension between liberty and equality and the role of civil society in preventing tyranny.",
+      "keywords": [
+        {
+          "title": "Democracy",
+          "color": "#1DB9A5"
+        },
+        {
+          "title": "Liberty",
+          "color": "#1B13D7"
+        },
+        {
+          "title": "Equality",
+          "color": "#81D91A"
+        },
+        {
+          "title": "Civil Society",
+          "color": "#69413B"
+        }
+      ],
+      "works": [
+        "Democracy in America (1835)",
+        "The Old Regime and the Revolution (1856)"
+      ],
+      "image": "/images/personalities/alexis_de_tocqueville_portrait_1769476661788.png"
+    },
+    {
+      "name": "Alexander von Humboldt",
+      "dates": "1769-1859",
+      "summary": "Naturalist and explorer. His holistic view of the interconnectedness of the natural world laid the groundwork for modern ecology.",
+      "keywords": [
+        {
+          "title": "Ecology",
+          "color": "#4CB4A6"
+        },
+        {
+          "title": "Geography",
+          "color": "#DC975C"
+        },
+        {
+          "title": "Nature",
+          "color": "#84CC16"
+        },
+        {
+          "title": "Exploration",
+          "color": "#0EA5E9"
+        }
+      ],
+      "works": [
+        "Cosmos (1845)",
+        "Views of Nature (1808)"
+      ],
+      "image": "/images/personalities/alexander_von_humboldt_portrait_1769931173154.png"
+    },
+    {
+      "name": "Søren Kierkegaard",
+      "dates": "1813-1855",
+      "summary": "A Danish philosopher and theologian. Kierkegaard is considered the father of existentialism. He focused on the individual's subjective experience, faith, and the 'leap of faith'.",
+      "keywords": [
+        {
+          "title": "Existentialism",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Faith",
+          "color": "#081DE2"
+        },
+        {
+          "title": "Subjectivity",
+          "color": "#623AD5"
+        },
+        {
+          "title": "Angst",
+          "color": "#C7899B"
+        }
+      ],
+      "works": [
+        "Fear and Trembling (1843)",
+        "Either/Or (1843)"
+      ],
+      "image": "/images/personalities/soren_kierkegaard_portrait_1769618784852.png"
+    },
+    {
+      "name": "Victor Hugo",
+      "dates": "1802-1855",
+      "summary": "French poet, novelist, and dramatist of the Romantic movement. His works touch upon political and social issues and the artistic trend of his time.",
+      "keywords": [
+        {
+          "title": "Romanticism",
+          "color": "#646D52"
+        },
+        {
+          "title": "Literature",
+          "color": "#D2B171"
+        },
+        {
+          "title": "Social Justice",
+          "color": "#CFC46C"
+        },
+        {
+          "title": "Politics",
+          "color": "#B91C1C"
+        }
+      ],
+      "works": [
+        "Les Misérables (1862)",
+        "The Hunchback of Notre-Dame (1831)"
+      ],
+      "image": "/images/personalities/victor_hugo_portrait_1770001456234.png"
+    },
+    {
+      "name": "Ada Lovelace",
+      "dates": "1815-1852",
+      "summary": "Mathematician. Often cited as the first computer programmer, she realized that computers could process not just numbers, but symbols.",
+      "keywords": [
+        {
+          "title": "Computer Science",
+          "color": "#08465F"
+        },
+        {
+          "title": "Mathematics",
+          "color": "#7CFDB6"
+        },
+        {
+          "title": "Programming",
+          "color": "#B108B9"
+        },
+        {
+          "title": "Visionary",
+          "color": "#41D560"
+        }
+      ],
+      "works": [
+        "Notes on the Analytical Engine (1843)"
+      ],
+      "image": "/images/personalities/ada_lovelace_portrait_1769931246036.png"
+    },
+    {
+      "name": "Thomas Malthus",
+      "dates": "1766-1834",
+      "summary": "An English cleric and scholar, Malthus is famous for his theory that population growth tends to outpace food production, leading to inevitable checks like famine and disease. His work sparked debate on demography and resource limits.",
+      "keywords": [
+        {
+          "title": "Demography",
+          "color": "#C2410C"
+        },
+        {
+          "title": "Population Growth",
+          "color": "#DEA1FA"
+        },
+        {
+          "title": "Malthusian Trap",
+          "color": "#3CFE21"
+        },
+        {
+          "title": "Political Economy",
+          "color": "#AFEBDB"
+        }
+      ],
+      "works": [
+        "An Essay on the Principle of Population (1798)"
+      ],
+      "image": "/images/personalities/thomas_malthus_portrait_1769434170894.png"
+    },
+    {
+      "name": "Jeremy Bentham",
+      "dates": "1748-1832",
+      "summary": "An English philosopher and social reformer. Bentham is the founder of modern utilitarianism, the ethical theory that the best action is the one that produces the 'greatest happiness for the greatest number'.",
+      "keywords": [
+        {
+          "title": "Utilitarianism",
+          "color": "#0C91AB"
+        },
+        {
+          "title": "Legal Positivism",
+          "color": "#6E751E"
+        },
+        {
+          "title": "Panopticon",
+          "color": "#290A8F"
+        },
+        {
+          "title": "Reform",
+          "color": "#ACB597"
+        }
+      ],
+      "works": [
+        "An Introduction to the Principles of Morals and Legislation (1789)"
+      ],
+      "image": "/images/personalities/jeremy_bentham_portrait_1769566287876.png"
+    },
+    {
+      "name": "Johann Wolfgang von Goethe",
+      "dates": "1749-1832",
+      "summary": "A German writer and statesman. Goethe is a literary giant whose works span poetry, drama, literature, and science. His masterpiece 'Faust' explores the human pact with knowledge and power.",
+      "keywords": [
+        {
+          "title": "Romanticism",
+          "color": "#646D52"
+        },
+        {
+          "title": "Weimar Classicism",
+          "color": "#1576CE"
+        },
+        {
+          "title": "Literature",
+          "color": "#D2B171"
+        },
+        {
+          "title": "Science",
+          "color": "#06B6D4"
+        }
+      ],
+      "works": [
+        "Faust",
+        "The Sorrows of Young Werther (1774)"
+      ],
+      "image": "/images/personalities/goethe_portrait_1769807625965.png"
+    },
+    {
+      "name": "Georg Wilhelm Friedrich Hegel",
+      "dates": "1770-1831",
+      "summary": "A German philosopher and a major figure in German Idealism. Hegel developed a dialectical method that emphasizes the progress of history and the development of the Absolute Spirit. His work deeply influenced Marxism and continental philosophy.",
+      "keywords": [
+        {
+          "title": "German Idealism",
+          "color": "#238968"
+        },
+        {
+          "title": "Dialectics",
+          "color": "#0972D3"
+        },
+        {
+          "title": "Absolute Spirit",
+          "color": "#2A46BA"
+        },
+        {
+          "title": "Master-Slave Dialectic",
+          "color": "#60712C"
+        }
+      ],
+      "works": [
+        "Phenomenology of Spirit (1807)",
+        "Elements of the Philosophy of Right (1820)"
+      ],
+      "image": "/images/personalities/gwf_hegel_portrait_1769434211862.png"
+    },
+    {
+      "name": "Carl von Clausewitz",
+      "dates": "1780-1831",
+      "summary": "Prussian general and military theorist. His treatise 'On War' is a fundamental work on the philosophy and strategy of military action.",
+      "keywords": [
+        {
+          "title": "Military Theory",
+          "color": "#7E5B58"
+        },
+        {
+          "title": "Strategy",
+          "color": "#1E40AF"
+        },
+        {
+          "title": "War",
+          "color": "#0152C8"
+        },
+        {
+          "title": "Philosophy",
+          "color": "#60A5FA"
+        }
+      ],
+      "works": [
+        "On War (1832)"
+      ],
+      "image": "/images/personalities/carl_von_clausewitz_portrait_1770001441405.png"
+    },
+    {
+      "name": "Simón Bolívar",
+      "dates": "1783-1830",
+      "summary": "'The Liberator'. Political and military leader who led the independence of current Colombia, Venezuela, Ecuador, Peru, and Bolivia from the Spanish Empire.",
+      "keywords": [
+        {
+          "title": "Independence",
+          "color": "#5BCA3C"
+        },
+        {
+          "title": "Latin America",
+          "color": "#BD40B2"
+        },
+        {
+          "title": "Anti-Colonialism",
+          "color": "#A01BE3"
+        },
+        {
+          "title": "Revolution",
+          "color": "#16DB69"
+        }
+      ],
+      "works": [
+        "Cartagena Manifesto (1812)",
+        "Letter from Jamaica (1815)"
+      ],
+      "image": "/images/personalities/simon_bolivar_portrait_1769849780270.png"
+    },
+    {
+      "name": "William Blake",
+      "dates": "1757-1827",
+      "summary": "An English poet, painter, and printmaker. Blake was a seminal figure of the Romantic Age. His visionary art and poetry explored the conflict between imagination and reason.",
+      "keywords": [
+        {
+          "title": "Romanticism",
+          "color": "#646D52"
+        },
+        {
+          "title": "Visionary Art",
+          "color": "#A7B383"
+        },
+        {
+          "title": "Poetry",
+          "color": "#CF8DD5"
+        },
+        {
+          "title": "Mythology",
+          "color": "#1D6964"
+        }
+      ],
+      "works": [
+        "Songs of Innocence and of Experience (1794)",
+        "The Marriage of Heaven and Hell (1790)"
+      ],
+      "image": "/images/personalities/william_blake_portrait_1769807612761.png"
+    },
+    {
+      "name": "David Ricardo",
+      "dates": "1772-1823",
+      "summary": "A British political economist, Ricardo is best known for his theory of comparative advantage, which argues that free trade benefits all parties. He also developed the labor theory of value and the iron law of wages, significantly influencing classical economics.",
+      "keywords": [
+        {
+          "title": "Classical Economics",
+          "color": "#924ABB"
+        },
+        {
+          "title": "Comparative Advantage",
+          "color": "#CF41D0"
+        },
+        {
+          "title": "Labor Theory of Value",
+          "color": "#E5EE73"
+        },
+        {
+          "title": "Rent Theory",
+          "color": "#B28BAC"
+        }
+      ],
+      "works": [
+        "On the Principles of Political Economy and Taxation (1817)"
+      ],
+      "image": "/images/personalities/david_ricardo_portrait_1769434127709.png"
+    },
+    {
+      "name": "Napoleon Bonaparte",
+      "dates": "1769-1821",
+      "summary": "French military and political leader who rose to prominence during the French Revolution. As Emperor, he revolutionized military organization and training, and the Napoleonic Code influenced legal systems worldwide.",
+      "keywords": [
+        {
+          "title": "Military Strategy",
+          "color": "#A8E126"
+        },
+        {
+          "title": "Law",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Empire",
+          "color": "#F2E6B4"
+        },
+        {
+          "title": "Leadership",
+          "color": "#E44EE5"
+        }
+      ],
+      "works": [
+        "The Napoleonic Code"
+      ],
+      "image": "/images/personalities/napoleon_bonaparte_portrait_1770001426143.png"
+    },
+    {
+      "name": "Thomas Paine",
+      "dates": "1737-1809",
+      "summary": "An English-American political activist and revolutionary. Paine's pamphlet 'Common Sense' was instrumental in inspiring American independence. He championed human rights, reason, and secularism.",
+      "keywords": [
+        {
+          "title": "Revolution",
+          "color": "#16DB69"
+        },
+        {
+          "title": "Human Rights",
+          "color": "#059669"
+        },
+        {
+          "title": "Common Sense",
+          "color": "#FC6939"
+        },
+        {
+          "title": "Republicanism",
+          "color": "#C73C3A"
+        }
+      ],
+      "works": [
+        "Common Sense (1776)",
+        "Rights of Man (1791)",
+        "The Age of Reason (1794)"
+      ],
+      "image": "/images/personalities/thomas_paine_portrait_1769618546559.png"
+    },
+    {
+      "name": "Immanuel Kant",
+      "dates": "1724-1804",
+      "summary": "A German philosopher who synthesized rationalism and empiricism. Kant's critical philosophy explored the limits of human knowledge and established a deontological ethics based on the Categorical Imperative.",
+      "keywords": [
+        {
+          "title": "Transcendental Idealism",
+          "color": "#33EAD8"
+        },
+        {
+          "title": "Categorical Imperative",
+          "color": "#44F62C"
+        },
+        {
+          "title": "Epistemology",
+          "color": "#F9F23D"
+        },
+        {
+          "title": "Ethics",
+          "color": "#10B981"
+        }
+      ],
+      "works": [
+        "Critique of Pure Reason (1781)",
+        "Groundwork of the Metaphysics of Morals (1785)"
+      ],
+      "image": "/images/personalities/immanuel_kant_portrait_1769566304204.png"
+    },
+    {
+      "name": "Toussaint Louverture",
+      "dates": "1743-1803",
+      "summary": "Haitian general and the most prominent leader of the Haitian Revolution. He fought against the French, then for them, and then against them again for the cause of Haitian independence.",
+      "keywords": [
+        {
+          "title": "Revolution",
+          "color": "#16DB69"
+        },
+        {
+          "title": "Anti-Slavery",
+          "color": "#CC26F3"
+        },
+        {
+          "title": "Haiti",
+          "color": "#244CE5"
+        },
+        {
+          "title": "Military Strategy",
+          "color": "#A8E126"
+        }
+      ],
+      "works": [],
+      "image": "/images/personalities/toussaint_louverture_portrait_1769962670008.png"
+    },
+    {
+      "name": "Edmund Burke",
+      "dates": "1729-1797",
+      "summary": "An Irish statesman and philosopher. Burke is regarded as the founder of modern conservatism. He criticized the French Revolution, arguing for gradual reform, tradition, and the complexity of social institutions.",
+      "keywords": [
+        {
+          "title": "Conservatism",
+          "color": "#3A6DF8"
+        },
+        {
+          "title": "Tradition",
+          "color": "#99705C"
+        },
+        {
+          "title": "Counter-Revolution",
+          "color": "#5E57FA"
+        },
+        {
+          "title": "Prudence",
+          "color": "#3C2A7C"
+        }
+      ],
+      "works": [
+        "Reflections on the Revolution in France (1790)"
+      ],
+      "image": "/images/personalities/edmund_burke_portrait_1769476294340.png"
+    },
+    {
+      "name": "Mary Wollstonecraft",
+      "dates": "1759-1797",
+      "summary": "English writer, philosopher, and advocate of women's rights. She argued that women are not naturally inferior to men, but appear to be only because they lack education.",
+      "keywords": [
+        {
+          "title": "Feminism",
+          "color": "#631E90"
+        },
+        {
+          "title": "Philosophy",
+          "color": "#60A5FA"
+        },
+        {
+          "title": "Women's Rights",
+          "color": "#DCC94D"
+        },
+        {
+          "title": "Education",
+          "color": "#2563EB"
+        }
+      ],
+      "works": [
+        "A Vindication of the Rights of Woman (1792)"
+      ],
+      "image": "/images/personalities/mary_wollstonecraft_portrait_1769962625698.png"
+    },
+    {
+      "name": "Adam Smith",
+      "dates": "1723-1790",
+      "summary": "A Scottish economist and philosopher, Smith is often regarded as the 'Father of Economics'. He introduced the concept of the 'invisible hand', arguing that individuals pursuing their own self-interest unintentionally promote the social good. His work laid the foundations for classical free-market economic theory.",
+      "keywords": [
+        {
+          "title": "Classical Economics",
+          "color": "#924ABB"
+        },
+        {
+          "title": "Invisible Hand",
+          "color": "#DCF542"
+        },
+        {
+          "title": "Free Market",
+          "color": "#CCA870"
+        },
+        {
+          "title": "Division of Labor",
+          "color": "#62167A"
+        }
+      ],
+      "works": [
+        "The Wealth of Nations (1776)",
+        "The Theory of Moral Sentiments (1759)"
+      ],
+      "image": "/images/personalities/adam_smith_portrait_1769434071229.png"
+    },
+    {
+      "name": "Jean-Jacques Rousseau",
+      "dates": "1712-1778",
+      "summary": "A Genevan philosopher whose political philosophy influenced the Enlightenment and the French Revolution. Rousseau argued that civilization corrupts human nature and advocated for a social contract based on the 'general will' of the people.",
+      "keywords": [
+        {
+          "title": "Social Contract",
+          "color": "#170065"
+        },
+        {
+          "title": "General Will",
+          "color": "#C7B04A"
+        },
+        {
+          "title": "Enlightenment",
+          "color": "#3101B4"
+        },
+        {
+          "title": "Education",
+          "color": "#2563EB"
+        }
+      ],
+      "works": [
+        "The Social Contract (1762)",
+        "Emile, or On Education (1762)",
+        "Discourse on Inequality (1755)"
+      ],
+      "image": "/images/personalities/jean_jacques_rousseau_portrait_1769434244116.png"
+    },
+    {
+      "name": "Voltaire",
+      "dates": "1694-1778",
+      "summary": "A French Enlightenment writer and philosopher. Voltaire was a prolific advocate for civil liberties, including freedom of speech, freedom of religion, and separation of church and state. He used satire to criticize intolerance.",
+      "keywords": [
+        {
+          "title": "Enlightenment",
+          "color": "#3101B4"
+        },
+        {
+          "title": "Civil Liberties",
+          "color": "#F52CA8"
+        },
+        {
+          "title": "Satire",
+          "color": "#2F76D6"
+        },
+        {
+          "title": "Deism",
+          "color": "#EDC042"
+        }
+      ],
+      "works": [
+        "Candide (1759)",
+        "Letters on the English (1733)"
+      ],
+      "image": "/images/personalities/voltaire_portrait_1769618513699.png"
+    },
+    {
+      "name": "Jean-Jacques Rousseau",
+      "dates": "1712-1778",
+      "summary": "A Genevan philosopher and writer. Rousseau's political philosophy influenced the Enlightenment and the French Revolution. He argued that civilization corrupts human goodness.",
+      "keywords": [
+        {
+          "title": "Social Contract",
+          "color": "#170065"
+        },
+        {
+          "title": "General Will",
+          "color": "#C7B04A"
+        },
+        {
+          "title": "Education",
+          "color": "#2563EB"
+        },
+        {
+          "title": "Romanticism",
+          "color": "#646D52"
+        }
+      ],
+      "works": [
+        "The Social Contract (1762)",
+        "Emile (1762)"
+      ],
+      "image": "/images/personalities/jean_jacques_rousseau_portrait_1769434244116.png"
+    },
+    {
+      "name": "David Hume",
+      "dates": "1711-1776",
+      "summary": "A Scottish Enlightenment philosopher, historian, and economist. Hume is known for his radical empiricism, skepticism, and naturalism. He argued that human knowledge is grounded in experience and habit rather than reason.",
+      "keywords": [
+        {
+          "title": "Empiricism",
+          "color": "#5F63F8"
+        },
+        {
+          "title": "Skepticism",
+          "color": "#E31818"
+        },
+        {
+          "title": "Naturalism",
+          "color": "#A1FFDA"
+        },
+        {
+          "title": "Induction",
+          "color": "#847F21"
+        }
+      ],
+      "works": [
+        "A Treatise of Human Nature (1739)",
+        "An Enquiry Concerning Human Understanding (1748)"
+      ],
+      "image": "/images/personalities/david_hume_portrait_1769618629637.png"
+    },
+    {
+      "name": "Montesquieu",
+      "dates": "1689-1755",
+      "summary": "A French Enlightenment philosopher. Montesquieu is best known for his theory of the separation of powers (executive, legislative, judicial), which became a cornerstone of modern democratic constitutions.",
+      "keywords": [
+        {
+          "title": "Separation of Powers",
+          "color": "#B2CA5D"
+        },
+        {
+          "title": "Enlightenment",
+          "color": "#3101B4"
+        },
+        {
+          "title": "Political Theory",
+          "color": "#AEBFA8"
+        },
+        {
+          "title": "Law",
+          "color": "#8B5CF6"
+        }
+      ],
+      "works": [
+        "The Spirit of the Laws (1748)",
+        "Persian Letters (1721)"
+      ],
+      "image": "/images/personalities/montesquieu_portrait_1769587343498.png"
+    },
+    {
+      "name": "George Berkeley",
+      "dates": "1685-1753",
+      "summary": "An Irish philosopher. Berkeley is known for subjective idealism (immaterialism), arguing that material things do not exist independently of perception ('to be is to be perceived').",
+      "keywords": [
+        {
+          "title": "Idealism",
+          "color": "#08002E"
+        },
+        {
+          "title": "Empiricism",
+          "color": "#5F63F8"
+        },
+        {
+          "title": "Immaterialism",
+          "color": "#4A1238"
+        },
+        {
+          "title": "Perception",
+          "color": "#FC1CC5"
+        }
+      ],
+      "works": [
+        "A Treatise Concerning the Principles of Human Knowledge (1710)"
+      ],
+      "image": "/images/personalities/george_berkeley_portrait_1769665207908.png"
+    },
+    {
+      "name": "Isaac Newton",
+      "dates": "1643-1727",
+      "summary": "English mathematician, physicist, astronomer, theologian, and author. A key figure in the scientific revolution, he formulated the laws of motion and universal gravitation.",
+      "keywords": [
+        {
+          "title": "Physics",
+          "color": "#0891B2"
+        },
+        {
+          "title": "Calculus",
+          "color": "#207F6A"
+        },
+        {
+          "title": "Gravity",
+          "color": "#F10A2E"
+        },
+        {
+          "title": "Scientific Revolution",
+          "color": "#2E77A0"
+        }
+      ],
+      "works": [
+        "Philosophiæ Naturalis Principia Mathematica (1687)"
+      ],
+      "image": "/images/personalities/isaac_newton_portrait_1769962435841.png"
+    },
+    {
+      "name": "Gottfried Wilhelm Leibniz",
+      "dates": "1646-1716",
+      "summary": "A German polymath and philosopher. Leibniz developed calculus independently of Newton. In philosophy, he is known for his theory of monads and his optimism ('best of all possible worlds').",
+      "keywords": [
+        {
+          "title": "Rationalism",
+          "color": "#853075"
+        },
+        {
+          "title": "Monadology",
+          "color": "#B477F5"
+        },
+        {
+          "title": "Optimism",
+          "color": "#23B62C"
+        },
+        {
+          "title": "Calculus",
+          "color": "#207F6A"
+        }
+      ],
+      "works": [
+        "Monadology (1714)",
+        "Theodicy (1710)"
+      ],
+      "image": "/images/personalities/gottfried_leibniz_portrait_1769665368689.png"
+    },
+    {
+      "name": "John Locke",
+      "dates": "1632-1704",
+      "summary": "An English philosopher and physician, known as the 'Father of Liberalism'. Locke's theories on natural rights (life, liberty, property) and the social contract heavily influenced modern democracy and the American Revolution.",
+      "keywords": [
+        {
+          "title": "Liberalism",
+          "color": "#F9B9E6"
+        },
+        {
+          "title": "Natural Rights",
+          "color": "#8BB9EE"
+        },
+        {
+          "title": "Social Contract",
+          "color": "#170065"
+        },
+        {
+          "title": "Empiricism",
+          "color": "#5F63F8"
+        }
+      ],
+      "works": [
+        "Two Treatises of Government (1689)",
+        "An Essay Concerning Human Understanding (1689)"
+      ],
+      "image": "/images/personalities/john_locke_portrait_1769476241258.png"
+    },
+    {
+      "name": "Zumbi dos Palmares",
+      "dates": "1655-1695",
+      "summary": "The last leader of the Quilombo dos Palmares, a symbol of resistance against slavery and colonial oppression.",
+      "keywords": [
+        {
+          "title": "Resistance",
+          "color": "#E93459"
+        },
+        {
+          "title": "Anti-Slavery",
+          "color": "#CC26F3"
+        },
+        {
+          "title": "Quilombo",
+          "color": "#CB2592"
+        },
+        {
+          "title": "Freedom",
+          "color": "#3B82F6"
+        }
+      ],
+      "works": [],
+      "image": "/images/personalities/zumbi_dos_palmares_portrait_1769849753990.png"
+    },
+    {
+      "name": "Thomas Hobbes",
+      "dates": "1588-1679",
+      "summary": "An English philosopher best known for his political philosophy. Hobbes argued that the natural state of humanity is a 'war of all against all' and that a strong central authority (Leviathan) is necessary to maintain order.",
+      "keywords": [
+        {
+          "title": "Social Contract",
+          "color": "#170065"
+        },
+        {
+          "title": "Leviathan",
+          "color": "#0106F6"
+        },
+        {
+          "title": "Realism",
+          "color": "#A20A05"
+        },
+        {
+          "title": "Sovereignty",
+          "color": "#37DAB7"
+        }
+      ],
+      "works": [
+        "Leviathan (1651)"
+      ],
+      "image": "/images/personalities/thomas_hobbes_portrait_1769476266565.png"
+    },
+    {
+      "name": "Baruch Spinoza",
+      "dates": "1632-1677",
+      "summary": "A Dutch philosopher of Portuguese Sephardic Jewish origin. Spinoza is one of the great rationalists of 17th-century philosophy. He argued for a monistic substance (God or Nature) and determinism, laying the groundwork for the Enlightenment.",
+      "keywords": [
+        {
+          "title": "Rationalism",
+          "color": "#853075"
+        },
+        {
+          "title": "Pantheism",
+          "color": "#7D5D2F"
+        },
+        {
+          "title": "Ethics",
+          "color": "#10B981"
+        },
+        {
+          "title": "Determinism",
+          "color": "#13F8D1"
+        }
+      ],
+      "works": [
+        "Ethics (1677)",
+        "Theologico-Political Treatise (1670)"
+      ],
+      "image": "/images/personalities/baruch_spinoza_portrait_1769618595178.png"
+    },
+    {
+      "name": "Blaise Pascal",
+      "dates": "1623-1662",
+      "summary": "A French mathematician, physicist, and philosopher. Pascal is known for 'Pascal's Wager' and his 'Pensées', which explore faith, reason, and the human condition.",
+      "keywords": [
+        {
+          "title": "Theology",
+          "color": "#1338F3"
+        },
+        {
+          "title": "Apologetics",
+          "color": "#3A60C6"
+        },
+        {
+          "title": "Mathematics",
+          "color": "#7CFDB6"
+        },
+        {
+          "title": "Existentialism",
+          "color": "#8B5CF6"
+        }
+      ],
+      "works": [
+        "Pensées (1670)"
+      ],
+      "image": "/images/personalities/blaise_pascal_portrait_1769636784327.png"
+    },
+    {
+      "name": "René Descartes",
+      "dates": "1596-1650",
+      "summary": "A French philosopher and mathematician. Descartes is the father of modern philosophy. He is known for his method of doubt and the famous statement 'Cogito, ergo sum' (I think, therefore I am).",
+      "keywords": [
+        {
+          "title": "Rationalism",
+          "color": "#853075"
+        },
+        {
+          "title": "Dualism",
+          "color": "#585667"
+        },
+        {
+          "title": "Epistemology",
+          "color": "#F9F23D"
+        },
+        {
+          "title": "Method of Doubt",
+          "color": "#5CCFB2"
+        }
+      ],
+      "works": [
+        "Meditations on First Philosophy (1641)",
+        "Discourse on the Method (1637)"
+      ],
+      "image": "/images/personalities/rene_descartes_portrait_1769618912494.png"
+    },
+    {
+      "name": "Miyamoto Musashi",
+      "dates": "1584-1645",
+      "summary": "A Japanese swordsman, philosopher, and strategist. Musashi is renowned for his unique double-bladed swordsmanship and his record of undefeated duels. He wrote 'The Book of Five Rings'.",
+      "keywords": [
+        {
+          "title": "Martial Arts",
+          "color": "#9299D2"
+        },
+        {
+          "title": "Strategy",
+          "color": "#1E40AF"
+        },
+        {
+          "title": "Bushido",
+          "color": "#87B3AC"
+        },
+        {
+          "title": "Philosophy",
+          "color": "#60A5FA"
+        }
+      ],
+      "works": [
+        "The Book of Five Rings"
+      ],
+      "image": "/images/personalities/miyamoto_musashi_portrait_1769807754554.png"
+    },
+    {
+      "name": "Galileo Galilei",
+      "dates": "1564-1642",
+      "summary": "Astronomer and physicist. Championed the heliocentric model, fundamentally shifting humanity's place in the cosmos.",
+      "keywords": [
+        {
+          "title": "Astronomy",
+          "color": "#0E7490"
+        },
+        {
+          "title": "Physics",
+          "color": "#0891B2"
+        },
+        {
+          "title": "Science",
+          "color": "#06B6D4"
+        },
+        {
+          "title": "Heliocentrism",
+          "color": "#6DE3CE"
+        }
+      ],
+      "works": [
+        "Dialogue Concerning the Two Chief World Systems (1632)"
+      ],
+      "image": "/images/personalities/galileo_galilei_portrait_1769962287364.png"
+    },
+    {
+      "name": "Johannes Kepler",
+      "dates": "1571-1630",
+      "summary": "German astronomer, mathematician, and astrologer. A key figure in the 17th-century scientific revolution, best known for his laws of planetary motion.",
+      "keywords": [
+        {
+          "title": "Astronomy",
+          "color": "#0E7490"
+        },
+        {
+          "title": "Planetary Motion",
+          "color": "#6E2C46"
+        },
+        {
+          "title": "Mathematics",
+          "color": "#7CFDB6"
+        },
+        {
+          "title": "Scientific Revolution",
+          "color": "#2E77A0"
+        }
+      ],
+      "works": [
+        "Astronomia nova (1609)"
+      ],
+      "image": "/images/personalities/johannes_kepler_portrait_1769962521363.png"
+    },
+    {
+      "name": "Francis Bacon",
+      "dates": "1561-1626",
+      "summary": "An English philosopher and statesman. Bacon is considered the father of the scientific method. He argued for empirical observation and induction in scientific inquiry.",
+      "keywords": [
+        {
+          "title": "Empiricism",
+          "color": "#5F63F8"
+        },
+        {
+          "title": "Scientific Method",
+          "color": "#EF0CB8"
+        },
+        {
+          "title": "Induction",
+          "color": "#847F21"
+        },
+        {
+          "title": "Natural Philosophy",
+          "color": "#50F408"
+        }
+      ],
+      "works": [
+        "Novum Organum (1620)",
+        "The Advancement of Learning (1605)"
+      ],
+      "image": "/images/personalities/francis_bacon_portrait_1769636952712.png"
+    },
+    {
+      "name": "Queen Elizabeth I",
+      "dates": "1533-1603",
+      "summary": "Queen of England and Ireland. Her reign is known as the Elizabethan Era, a golden age of drama and exploration.",
+      "keywords": [
+        {
+          "title": "Monarchy",
+          "color": "#CF7F77"
+        },
+        {
+          "title": "England",
+          "color": "#A113A9"
+        },
+        {
+          "title": "Golden Age",
+          "color": "#6FB168"
+        },
+        {
+          "title": "Politics",
+          "color": "#B91C1C"
+        }
+      ],
+      "works": [],
+      "image": "/images/personalities/queen_elizabeth_i_portrait_1769930864660.png"
+    },
+    {
+      "name": "Giordano Bruno",
+      "dates": "1548-1600",
+      "summary": "Cosmic martyr. Burned at the stake for proposing an infinite universe with infinite worlds.",
+      "keywords": [
+        {
+          "title": "Cosmology",
+          "color": "#47527E"
+        },
+        {
+          "title": "Philosophy",
+          "color": "#60A5FA"
+        },
+        {
+          "title": "Heresy",
+          "color": "#A18E76"
+        },
+        {
+          "title": "Infinity",
+          "color": "#2CCE48"
+        }
+      ],
+      "works": [
+        "On the Infinite, Universe and Worlds (1584)"
+      ],
+      "image": "/images/personalities/giordano_bruno_better_portrait_1770002100879.png"
+    },
+    {
+      "name": "Michel de Montaigne",
+      "dates": "1533-1592",
+      "summary": "A French philosopher and writer. Montaigne is known for popularizing the essay as a literary genre. His 'Essays' explore human nature, skepticism, and the self.",
+      "keywords": [
+        {
+          "title": "Skepticism",
+          "color": "#E31818"
+        },
+        {
+          "title": "Humanism",
+          "color": "#187056"
+        },
+        {
+          "title": "Essays",
+          "color": "#48B3B6"
+        },
+        {
+          "title": "Self-Reflection",
+          "color": "#47D54C"
+        }
+      ],
+      "works": [
+        "Essays (1580)"
+      ],
+      "image": "/images/personalities/michel_de_montaigne_portrait_1769636769747.png"
+    },
+    {
+      "name": "Mary, Queen of Scots",
+      "dates": "1542-1587",
+      "summary": "Queen of Scotland. Her tragic life and rivalry with Elizabeth I have made her a romantic historical figure.",
+      "keywords": [
+        {
+          "title": "Monarchy",
+          "color": "#CF7F77"
+        },
+        {
+          "title": "Scotland",
+          "color": "#099BC0"
+        },
+        {
+          "title": "Rivalry",
+          "color": "#986531"
+        },
+        {
+          "title": "Tragedy",
+          "color": "#9B29F6"
+        }
+      ],
+      "works": [],
+      "image": "/images/personalities/mary_queen_of_scots_portrait_1769930878172.png"
+    },
+    {
+      "name": "Niccolò Machiavelli",
+      "dates": "1469-1527",
+      "summary": "An Italian Renaissance diplomat and philosopher. Machiavelli is the father of modern political science. In 'The Prince', he argued that rulers must be pragmatic and sometimes ruthless to maintain power and stability.",
+      "keywords": [
+        {
+          "title": "Realpolitik",
+          "color": "#6F1FDC"
+        },
+        {
+          "title": "Political Science",
+          "color": "#EE8001"
+        },
+        {
+          "title": "Power",
+          "color": "#9B98E5"
+        },
+        {
+          "title": "Republicanism",
+          "color": "#C73C3A"
+        }
+      ],
+      "works": [
+        "The Prince (1532)",
+        "Discourses on Livy (1531)"
+      ],
+      "image": "/images/personalities/niccolo_machiavelli_portrait_1769566814010.png"
+    },
+    {
+      "name": "Leonardo da Vinci",
+      "dates": "1452-1519",
+      "summary": "The ultimate 'Renaissance Man'—painter, engineer, scientist, theorist.",
+      "keywords": [
+        {
+          "title": "Renaissance",
+          "color": "#228352"
+        },
+        {
+          "title": "Art",
+          "color": "#DB2777"
+        },
+        {
+          "title": "Invention",
+          "color": "#02224E"
+        },
+        {
+          "title": "Science",
+          "color": "#06B6D4"
+        }
+      ],
+      "works": [
+        "Mona Lisa",
+        "The Last Supper",
+        "Vitruvian Man"
+      ],
+      "image": "/images/personalities/leonardo_da_vinci_portrait_1769882620741.png"
+    },
+    {
+      "name": "Dante Alighieri",
+      "dates": "1265-1321",
+      "summary": "An Italian poet. Dante's 'Divine Comedy' is widely considered the most important poem of the Middle Ages and the greatest literary work in the Italian language.",
+      "keywords": [
+        {
+          "title": "Epic Poetry",
+          "color": "#828330"
+        },
+        {
+          "title": "Theology",
+          "color": "#1338F3"
+        },
+        {
+          "title": "Allegory",
+          "color": "#588E33"
+        },
+        {
+          "title": "Afterlife",
+          "color": "#3D86B8"
+        }
+      ],
+      "works": [
+        "The Divine Comedy"
+      ],
+      "image": "/images/personalities/dante_alighieri_portrait_1769807641773.png"
+    },
+    {
+      "name": "Thomas Aquinas",
+      "dates": "1225-1274",
+      "summary": "An Italian Dominican friar and philosopher. Aquinas synthesized Aristotelian philosophy with Christian theology. He is a central figure in Scholasticism.",
+      "keywords": [
+        {
+          "title": "Scholasticism",
+          "color": "#7492BC"
+        },
+        {
+          "title": "Natural Law",
+          "color": "#7C38EB"
+        },
+        {
+          "title": "Theology",
+          "color": "#1338F3"
+        },
+        {
+          "title": "Metaphysics",
+          "color": "#289882"
+        }
+      ],
+      "works": [
+        "Summa Theologica (1265-1274)"
+      ],
+      "image": "/images/personalities/thomas_aquinas_portrait_1769636926298.png"
+    },
+    {
+      "name": "Rumi",
+      "dates": "1207-1273",
+      "summary": "A 13th-century Persian poet, jurist, and Sufi mystic. Rumi's poetry expresses the longing of the soul for union with the divine and transcends religious boundaries.",
+      "keywords": [
+        {
+          "title": "Sufism",
+          "color": "#42EFDF"
+        },
+        {
+          "title": "Mysticism",
+          "color": "#589C1C"
+        },
+        {
+          "title": "Poetry",
+          "color": "#CF8DD5"
+        },
+        {
+          "title": "Divine Love",
+          "color": "#F38B43"
+        }
+      ],
+      "works": [
+        "Masnavi",
+        "Divan-e Shams-e Tabrizi"
+      ],
+      "image": "/images/personalities/rumi_portrait_1769807136444.png"
+    },
+    {
+      "name": "St. Augustine",
+      "dates": "354-430",
+      "summary": "A theologian and philosopher. Augustine's writings influenced the development of Western Christianity and philosophy. He explored themes of original sin, grace, and time.",
+      "keywords": [
+        {
+          "title": "Theology",
+          "color": "#1338F3"
+        },
+        {
+          "title": "Original Sin",
+          "color": "#225E09"
+        },
+        {
+          "title": "Grace",
+          "color": "#1DCF98"
+        },
+        {
+          "title": "Neoplatonism",
+          "color": "#A0D9FD"
+        }
+      ],
+      "works": [
+        "Confessions (397)",
+        "The City of God (426)"
+      ],
+      "image": "/images/personalities/st_augustine_portrait_1769636939359.png"
+    },
+    {
+      "name": "Marcus Aurelius",
+      "dates": "121-180",
+      "summary": "Roman Emperor and Stoic philosopher. Marcus Aurelius's 'Meditations' is a classic text of Stoic philosophy, emphasizing reason, duty, and acceptance of fate.",
+      "keywords": [
+        {
+          "title": "Stoicism",
+          "color": "#B48FDB"
+        },
+        {
+          "title": "Ethics",
+          "color": "#10B981"
+        },
+        {
+          "title": "Duty",
+          "color": "#20AEF6"
+        },
+        {
+          "title": "Reason",
+          "color": "#AA7E64"
+        }
+      ],
+      "works": [
+        "Meditations"
+      ],
+      "image": "/images/personalities/marcus_aurelius_portrait_1769618936112.png"
+    },
+    {
+      "name": "Epictetus",
+      "dates": "50-135",
+      "summary": "Greek Stoic philosopher. He taught that philosophy is a way of life and not just a theoretical discipline. Born a slave, he focused on moral freedom.",
+      "keywords": [
+        {
+          "title": "Stoicism",
+          "color": "#B48FDB"
+        },
+        {
+          "title": "Ethics",
+          "color": "#10B981"
+        },
+        {
+          "title": "Freedom",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Resilience",
+          "color": "#3B82F6"
+        }
+      ],
+      "works": [
+        "Discourses",
+        "Enchiridion"
+      ],
+      "image": "/images/personalities/epictetus_portrait_1769962579857.png"
+    },
+    {
+      "name": "Seneca",
+      "dates": "4 BC-65 AD",
+      "summary": "A Roman Stoic philosopher and statesman. Seneca wrote extensively on ethics and the art of living. He emphasized the importance of reason and self-control in overcoming emotions.",
+      "keywords": [
+        {
+          "title": "Stoicism",
+          "color": "#B48FDB"
+        },
+        {
+          "title": "Ethics",
+          "color": "#10B981"
+        },
+        {
+          "title": "Letters",
+          "color": "#4BF8ED"
+        },
+        {
+          "title": "Philosophy",
+          "color": "#60A5FA"
+        }
+      ],
+      "works": [
+        "Letters from a Stoic",
+        "On the Shortness of Life"
+      ],
+      "image": "/images/personalities/seneca_portrait_1769618968032.png"
+    },
+    {
+      "name": "Saint John the Baptist",
+      "dates": "c. 1st Century BC - c. 28-36 AD",
+      "summary": "An itinerant preacher in the early 1st century AD. Revered as a major religious figure across several traditions, he is known for baptizing Jesus and his fervent message of repentance and asceticism.",
+      "keywords": [
+        {
+          "title": "Theology",
+          "color": "#B08968"
+        },
+        {
+          "title": "Asceticism",
+          "color": "#7F5539"
+        },
+        {
+          "title": "Prophet",
+          "color": "#9C6644"
+        }
+      ],
+      "works": [
+        "Teachings preserved in the New Testament"
+      ],
+      "image": "/images/personalities/saint_john_the_baptist_portrait.png"
+    },
+    {
+      "name": "Saint John the Baptist",
+      "dates": "1st Century BC - 30 AD",
+      "summary": "Religious figure and itinerant preacher. Jewish prophet who baptized Jesus.",
+      "keywords": [
+        {
+          "title": "Religion",
+          "color": "#7C3AED"
+        },
+        {
+          "title": "Christianity",
+          "color": "#5E29B5"
+        },
+        {
+          "title": "Prophecy",
+          "color": "#A96C36"
+        },
+        {
+          "title": "Baptism",
+          "color": "#41F700"
+        }
+      ],
+      "works": [],
+      "image": "/images/personalities/john_the_baptist_portrait_1769882760918.png"
+    },
+    {
+      "name": "Laozi",
+      "dates": "6th Century BC",
+      "summary": "A semi-legendary ancient Chinese philosopher. Laozi is the founder of Taoism. He taught about the Tao (the Way), wu-wei (non-action), and living in harmony with nature.",
+      "keywords": [
+        {
+          "title": "Taoism",
+          "color": "#E209C1"
+        },
+        {
+          "title": "Tao",
+          "color": "#014782"
+        },
+        {
+          "title": "Wu-Wei",
+          "color": "#FC23EC"
+        },
+        {
+          "title": "Nature",
+          "color": "#84CC16"
+        }
+      ],
+      "works": [
+        "Tao Te Ching"
+      ],
+      "image": "/images/personalities/laozi_portrait_1769807064163.png"
+    },
+    {
+      "name": "Spartacus",
+      "dates": "111-71 BC",
+      "summary": "The gladiator who led the most famous slave revolt against the Roman Republic, becoming a symbol of resistance.",
+      "keywords": [
+        {
+          "title": "Resistance",
+          "color": "#E93459"
+        },
+        {
+          "title": "Freedom",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Rome",
+          "color": "#26F4B5"
+        },
+        {
+          "title": "Slave Revolt",
+          "color": "#C5255D"
+        }
+      ],
+      "works": [],
+      "image": "/images/personalities/spartacus_portrait_1769962422317.png"
+    },
+    {
+      "name": "Zeno of Citium",
+      "dates": "334-262 BC",
+      "summary": "A Greek philosopher and the founder of Stoicism. Zeno taught that virtue, the highest good, is based on knowledge and living in harmony with reason and nature.",
+      "keywords": [
+        {
+          "title": "Stoicism",
+          "color": "#B48FDB"
+        },
+        {
+          "title": "Virtue Ethics",
+          "color": "#369D5B"
+        },
+        {
+          "title": "Logic",
+          "color": "#6366F1"
+        },
+        {
+          "title": "Physics",
+          "color": "#0891B2"
+        }
+      ],
+      "works": [
+        "Republic (Lost)"
+      ],
+      "image": "/images/personalities/zeno_of_citium_portrait_1769636908250.png"
+    },
+    {
+      "name": "Epicurus",
+      "dates": "341-270 BC",
+      "summary": "A Greek philosopher. Epicurus founded Epicureanism, which teaches that the goal of life is to seek modest pleasures and avoid pain and fear.",
+      "keywords": [
+        {
+          "title": "Epicureanism",
+          "color": "#D9F6F3"
+        },
+        {
+          "title": "Hedonism",
+          "color": "#1E67BD"
+        },
+        {
+          "title": "Atomism",
+          "color": "#B68972"
+        },
+        {
+          "title": "Ethics",
+          "color": "#10B981"
+        }
+      ],
+      "works": [
+        "Letters",
+        "Principal Doctrines"
+      ],
+      "image": "/images/personalities/epicurus_portrait_1769636896387.png"
+    },
+    {
+      "name": "Aristotle",
+      "dates": "384-322 BC",
+      "summary": "A Greek philosopher and polymath, student of Plato. Aristotle made fundamental contributions to logic, metaphysics, ethics, and biology. He emphasized empirical observation and the 'golden mean' in ethics.",
+      "keywords": [
+        {
+          "title": "Logic",
+          "color": "#6366F1"
+        },
+        {
+          "title": "Metaphysics",
+          "color": "#289882"
+        },
+        {
+          "title": "Virtue Ethics",
+          "color": "#369D5B"
+        },
+        {
+          "title": "Empiricism",
+          "color": "#5F63F8"
+        }
+      ],
+      "works": [
+        "Nicomachean Ethics",
+        "Politics",
+        "Metaphysics"
+      ],
+      "image": "/images/personalities/aristotle_portrait_1769567086207.png"
+    },
+    {
+      "name": "Diogenes",
+      "dates": "412-323 BC",
+      "summary": "Greek philosopher and one of the founders of Cynic philosophy. He criticized Plato and made a virtue of poverty.",
+      "keywords": [
+        {
+          "title": "Cynicism",
+          "color": "#6C1191"
+        },
+        {
+          "title": "Asceticism",
+          "color": "#35B669"
+        },
+        {
+          "title": "Philosophy",
+          "color": "#60A5FA"
+        },
+        {
+          "title": "Ethics",
+          "color": "#10B981"
+        }
+      ],
+      "works": [],
+      "image": "/images/personalities/diogenes_portrait_1769962535712.png"
+    },
+    {
+      "name": "Plato",
+      "dates": "428-348 BC",
+      "summary": "An Athenian philosopher and founder of the Academy. Plato explored justice, beauty, and equality. His theory of Forms suggests that the physical world is not the real world, but a shadow of eternal truths.",
+      "keywords": [
+        {
+          "title": "Platonism",
+          "color": "#E00455"
+        },
+        {
+          "title": "Theory of Forms",
+          "color": "#F4BD41"
+        },
+        {
+          "title": "Idealism",
+          "color": "#08002E"
+        },
+        {
+          "title": "Justice",
+          "color": "#1D4ED8"
+        }
+      ],
+      "works": [
+        "The Republic",
+        "The Symposium",
+        "Apology"
+      ],
+      "image": "/images/personalities/plato_portrait_1769566835540.png"
+    },
+    {
+      "name": "Socrates",
+      "dates": "470-399 BC",
+      "summary": "A Classical Greek philosopher. Socrates is credited as one of the founders of Western philosophy. He is known for the Socratic method of questioning and his focus on ethics and virtue.",
+      "keywords": [
+        {
+          "title": "Ethics",
+          "color": "#10B981"
+        },
+        {
+          "title": "Socratic Method",
+          "color": "#60A5FA"
+        },
+        {
+          "title": "Virtue",
+          "color": "#BDFDA5"
+        },
+        {
+          "title": "Epistemology",
+          "color": "#F9F23D"
+        }
+      ],
+      "works": [
+        "Apology (by Plato)",
+        "Crito (by Plato)"
+      ],
+      "image": "/images/personalities/socrates_portrait_1769618890029.png"
+    },
+    {
+      "name": "Heraclitus",
+      "dates": "535-475 BC",
+      "summary": "A Pre-Socratic Greek philosopher. Heraclitus is famous for his doctrine of change being central to the universe ('No man ever steps in the same river twice').",
+      "keywords": [
+        {
+          "title": "Metaphysics",
+          "color": "#289882"
+        },
+        {
+          "title": "Flux",
+          "color": "#217609"
+        },
+        {
+          "title": "Logos",
+          "color": "#630008"
+        },
+        {
+          "title": "Unity of Opposites",
+          "color": "#82922E"
+        }
+      ],
+      "works": [
+        "Fragments"
+      ],
+      "image": "/images/personalities/heraclitus_portrait_1769636881960.png"
+    },
+    {
+      "name": "Confucius",
+      "dates": "551-479 BCE",
+      "summary": "A Chinese philosopher and politician whose teachings profoundly influenced East Asian life and thought. Confucianism emphasizes personal and governmental morality, correctness of social relationships, justice, and sincerity.",
+      "keywords": [
+        {
+          "title": "Confucianism",
+          "color": "#6D597A"
+        },
+        {
+          "title": "Ethics",
+          "color": "#B56576"
+        },
+        {
+          "title": "Harmony",
+          "color": "#E56B6F"
+        }
+      ],
+      "works": [
+        "The Analects"
+      ],
+      "image": "/images/personalities/confucius_portrait_1769807051733.png"
+    },
+    {
+      "name": "Siddhartha Gautama",
+      "dates": "563-483 BC",
+      "summary": "The Buddha, a spiritual teacher from ancient India who founded Buddhism. He taught the Four Noble Truths and the Eightfold Path to end suffering (dukkha) and achieve Nirvana.",
+      "keywords": [
+        {
+          "title": "Buddhism",
+          "color": "#9D51CE"
+        },
+        {
+          "title": "Enlightenment",
+          "color": "#3101B4"
+        },
+        {
+          "title": "Nirvana",
+          "color": "#D07C15"
+        },
+        {
+          "title": "Four Noble Truths",
+          "color": "#D6AF28"
+        }
+      ],
+      "works": [
+        "Sutras (Oral Tradition)"
+      ],
+      "image": "/images/personalities/siddhartha_gautama_portrait_1769807122224.png"
+    },
+    {
+      "name": "Sun Tzu",
+      "dates": "544-496 BC",
+      "summary": "A Chinese general, military strategist, and philosopher. Sun Tzu is traditionally credited as the author of 'The Art of War', a classic treatise on military strategy.",
+      "keywords": [
+        {
+          "title": "Strategy",
+          "color": "#1E40AF"
+        },
+        {
+          "title": "Military Philosophy",
+          "color": "#1E3C64"
+        },
+        {
+          "title": "Warfare",
+          "color": "#3A86F6"
+        },
+        {
+          "title": "Leadership",
+          "color": "#E44EE5"
+        }
+      ],
+      "works": [
+        "The Art of War"
+      ],
+      "image": "/images/personalities/sun_tzu_portrait_1769807740314.png"
+    }
+  ]
+}

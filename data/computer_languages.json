@@ -1,0 +1,1919 @@
+{
+  "id": "computer-languages",
+  "title": "Computer Languages",
+  "path": "/gallery/computer-languages",
+  "availability": "available",
+  "tags": [
+    {
+      "title": "Tech",
+      "color": "#2563EB"
+    },
+    {
+      "title": "Coding",
+      "color": "#22C55E"
+    },
+    {
+      "title": "Programming",
+      "color": "#B108B9"
+    },
+    {
+      "title": "Development",
+      "color": "#03451B"
+    },
+    {
+      "title": "History",
+      "color": "#EF4444"
+    },
+    {
+      "title": "Syntax",
+      "color": "#7F1803"
+    },
+    {
+      "title": "Logic",
+      "color": "#6366F1"
+    }
+  ],
+  "excerpt": "A journey through the logic of machines. Explore the evolution of syntax and the paradigms that power our digital world—from low-level assembly to modern abstractions.",
+  "image": "/images/code.webp",
+  "text1": "Explore the world of computer languages, from low-level systems to markup languages.",
+  "computer_languages": [
+    {
+      "name": "Arcade",
+      "description": "Arcade is a portable, lightweight expression language written for use with the ArcGIS system. It is used to perform visualization, labeling, and popup calculations.",
+      "usage": [
+        "ArcGIS Mapping",
+        "Labeling",
+        "Data Visualization"
+      ],
+      "how_used": "Writing scripts inside ArcGIS Pro or Online to format labels or calculate field values dynamically.",
+      "syntax": "JavaScript-like, simple.",
+      "semantics": "Secure, portable, specialized for GIS features.",
+      "data_types": "Text, Number, Date, Feature, Geometry.",
+      "control_structures": "if/else, for loops.",
+      "abstraction": "High-level (Scripting).",
+      "compiled_or_interpreted": "Interpreted",
+      "typing": "Dynamically Typed",
+      "paradigm": [
+        "Scripting",
+        "Functional"
+      ],
+      "main_libraries": [
+        "Geometry Functions",
+        "Text Functions"
+      ],
+      "creator": "Esri",
+      "year_of_creation": "2016",
+      "popularity": "High (in Esri ecosystem)",
+      "keywords": [
+        {
+          "title": "Esri",
+          "color": "#211B85"
+        },
+        {
+          "title": "ArcGIS",
+          "color": "#5F8C3F"
+        },
+        {
+          "title": "Scripting",
+          "color": "#582F17"
+        },
+        {
+          "title": "Maps",
+          "color": "#34D399"
+        }
+      ]
+    },
+    {
+      "name": "Terraform",
+      "description": "Terraform is an open-source infrastructure as code software tool that provides a consistent CLI workflow to manage hundreds of cloud services.",
+      "usage": [
+        "Infrastructure as Code",
+        "Cloud Provisioning",
+        "DevOps"
+      ],
+      "how_used": "Defining and provisioning data center infrastructure using a declarative configuration language (HCL).",
+      "syntax": "HCL (HashiCorp Configuration Language), declarative, block-based.",
+      "semantics": "Declarative - desired state configuration.",
+      "data_types": "Strings, Numbers, Bools, Lists, Maps, Objects.",
+      "control_structures": "for_each, count, dynamic blocks (limited).",
+      "abstraction": "High-level (Infrastructure).",
+      "compiled_or_interpreted": "Interpreted / Applied by CLI",
+      "typing": "Statically Typed",
+      "paradigm": [
+        "Declarative",
+        "Infrastructure as Code"
+      ],
+      "main_libraries": [
+        "AWS Provider",
+        "Azure Provider",
+        "Google Provider",
+        "Kubernetes Provider"
+      ],
+      "creator": "HashiCorp",
+      "year_of_creation": "2014",
+      "popularity": "Very High (in DevOps)",
+      "keywords": [
+        {
+          "title": "IaC",
+          "color": "#011E0B"
+        },
+        {
+          "title": "Cloud",
+          "color": "#0EA5E9"
+        },
+        {
+          "title": "DevOps",
+          "color": "#06B6D4"
+        },
+        {
+          "title": "HCL",
+          "color": "#0116B1"
+        }
+      ]
+    },
+    {
+      "name": "Swift",
+      "description": "Swift is a powerful and intuitive programming language for iOS, iPadOS, macOS, tvOS, and watchOS. Writing Swift code is interactive and fun, the syntax is concise yet expressive.",
+      "usage": [
+        "iOS Development",
+        "macOS Development",
+        "Server-side Swift"
+      ],
+      "how_used": "The primary language for building apps in the Apple ecosystem.",
+      "syntax": "Clean, concise, no semicolons needed, expressive.",
+      "semantics": "Value types (structs) and reference types (classes), ARC for memory management.",
+      "data_types": "Int, Double, Float, Bool, String, Array, Set, Dictionary, Tuples, Optionals.",
+      "control_structures": "if/else, switch, for-in, while, repeat-while, guard.",
+      "abstraction": "High-level.",
+      "compiled_or_interpreted": "Compiled",
+      "typing": "Statically Typed",
+      "paradigm": [
+        "Protocol-oriented",
+        "Object-Oriented",
+        "Functional",
+        "Imperative"
+      ],
+      "main_libraries": [
+        "SwiftUI",
+        "UIKit",
+        "Foundation",
+        "Combine",
+        "Vapor"
+      ],
+      "creator": "Chris Lattner (Apple)",
+      "year_of_creation": "2014",
+      "popularity": "High",
+      "keywords": [
+        {
+          "title": "Apple",
+          "color": "#C8933A"
+        },
+        {
+          "title": "iOS",
+          "color": "#01940D"
+        },
+        {
+          "title": "Safe",
+          "color": "#2733AD"
+        },
+        {
+          "title": "Fast",
+          "color": "#214C7C"
+        }
+      ]
+    },
+    {
+      "name": "SQLX",
+      "description": "SQLX is not a language but a modern SQL toolkit for Go and Rust, providing type-safe, compile-time checked SQL queries and async support.",
+      "usage": [
+        "Backend Development",
+        "Database Access"
+      ],
+      "how_used": "Writing known, safe SQL interactions in Rust or Go, avoiding full ORMs.",
+      "syntax": "SQL embedded in Rust/Go code.",
+      "semantics": "Async execution, compile-time verification.",
+      "data_types": "Maps native language types to SQL types.",
+      "control_structures": "Host language (Rust/Go) structures.",
+      "abstraction": "Low/Medium (SQL wrapper).",
+      "compiled_or_interpreted": "Compiled (part of Rust/Go binary)",
+      "typing": "Statically Typed (Strong)",
+      "paradigm": [
+        "Asynchronous",
+        "Declarative (embedded)"
+      ],
+      "main_libraries": [
+        "Drivers for Postgres, MySQL, SQLite"
+      ],
+      "creator": "Jmoiron (Go) / LaunchBadge (Rust)",
+      "year_of_creation": "2013",
+      "popularity": "High (in Go/Rust ecosystems)",
+      "keywords": [
+        {
+          "title": "Rust",
+          "color": "#270C04"
+        },
+        {
+          "title": "Go",
+          "color": "#000908"
+        },
+        {
+          "title": "SQL",
+          "color": "#CC2927"
+        },
+        {
+          "title": "Async",
+          "color": "#CA125C"
+        }
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "description": "TypeScript is a free and open-source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language.",
+      "usage": [
+        "Web Development",
+        "Large Scale JS Applications"
+      ],
+      "how_used": "Used in large frontend projects (React/Angular) and backend (Node.js) to add type safety.",
+      "syntax": "JavaScript syntax + Type annotations.",
+      "semantics": "Same as JavaScript, but with compile-time type checking.",
+      "data_types": "All JS types + interfaces, enums, tuples, generics, any, unknown, never.",
+      "control_structures": "Same as JavaScript.",
+      "abstraction": "High-level.",
+      "compiled_or_interpreted": "Transpiled to JavaScript",
+      "typing": "Statically Typed",
+      "paradigm": [
+        "Object-Oriented",
+        "Functional",
+        "Imperative"
+      ],
+      "main_libraries": [
+        "All JavaScript Libraries",
+        "TypeDefinitions"
+      ],
+      "creator": "Anders Hejlsberg",
+      "year_of_creation": "2012",
+      "popularity": "Very High",
+      "keywords": [
+        {
+          "title": "Types",
+          "color": "#D86859"
+        },
+        {
+          "title": "Microsoft",
+          "color": "#D450CE"
+        },
+        {
+          "title": "JavaScript Superset",
+          "color": "#380C3A"
+        },
+        {
+          "title": "Scalable",
+          "color": "#B00A75"
+        }
+      ]
+    },
+    {
+      "name": "Ansible",
+      "description": "Ansible is an open-source software provisioning, configuration management, and application-deployment tool enabling infrastructure as code.",
+      "usage": [
+        "Configuration Management",
+        "Application Deployment",
+        "Automation"
+      ],
+      "how_used": "Automating server configuration and deployment tasks via SSH.",
+      "syntax": "YAML (with Jinja2 templating).",
+      "semantics": "Procedural/Declarative mix, executes tasks sequentially.",
+      "data_types": "Standard YAML types (Strings, Lists, Dictionaries).",
+      "control_structures": "when, loop, block/rescue.",
+      "abstraction": "High-level.",
+      "compiled_or_interpreted": "Interpreted",
+      "typing": "Dynamically Typed",
+      "paradigm": [
+        "Procedural",
+        "Imperative",
+        "Automation"
+      ],
+      "main_libraries": [
+        "Built-in Modules (apt, yum, service, copy, etc.)"
+      ],
+      "creator": "Michael DeHaan",
+      "year_of_creation": "2012",
+      "popularity": "Very High (in DevOps)",
+      "keywords": [
+        {
+          "title": "Automation",
+          "color": "#10B981"
+        },
+        {
+          "title": "YAML",
+          "color": "#2972A7"
+        },
+        {
+          "title": "DevOps",
+          "color": "#06B6D4"
+        },
+        {
+          "title": "Config Management",
+          "color": "#B02BE1"
+        }
+      ]
+    },
+    {
+      "name": "Julia",
+      "description": "Julia is a high-level, high-performance, dynamic programming language. It is well suited for numerical analysis and computational science.",
+      "usage": [
+        "Scientific Computing",
+        "Data Science",
+        "Machine Learning"
+      ],
+      "how_used": "Performance-critical scientific computing.",
+      "syntax": "Matlab-like, clean, extensive support for math notation.",
+      "semantics": "Multiple dispatch, dynamic type system, composable.",
+      "data_types": "Integers, Floats, Strings, Arrays, Tuples, Dictionaries, Structs.",
+      "control_structures": "if/else, for, while, try/catch.",
+      "abstraction": "High-level.",
+      "compiled_or_interpreted": "Just-In-Time (JIT) Compiled (LLVM)",
+      "typing": "Dynamically Typed",
+      "paradigm": [
+        "Multiple Dispatch",
+        "Functional",
+        "Imperative"
+      ],
+      "main_libraries": [
+        "DataFrames.jl",
+        "Flux.jl",
+        "DifferentialEquations.jl"
+      ],
+      "creator": "Jeff Bezanson et al.",
+      "year_of_creation": "2012",
+      "popularity": "Growing",
+      "keywords": [
+        {
+          "title": "Fast",
+          "color": "#214C7C"
+        },
+        {
+          "title": "Science",
+          "color": "#06B6D4"
+        },
+        {
+          "title": "Math",
+          "color": "#0284C7"
+        },
+        {
+          "title": "Performance",
+          "color": "#EAB308"
+        }
+      ]
+    },
+    {
+      "name": "Kotlin",
+      "description": "Kotlin is a cross-platform, statically typed, general-purpose programming language with type inference. It is designed to interoperate fully with Java.",
+      "usage": [
+        "Android Development",
+        "Server-side Development",
+        "Multiplatform Mobile"
+      ],
+      "how_used": "Google's preferred language for Android development. Also used for backend services.",
+      "syntax": "Concise, expressive, semicolon-free, null-safety built-in.",
+      "semantics": "Interop with Java, null safety, coroutines for concurrency.",
+      "data_types": "Numbers, Booleans, Characters, Strings, Arrays, Classes.",
+      "control_structures": "if/else, when (switch on steroids), for, while.",
+      "abstraction": "High-level.",
+      "compiled_or_interpreted": "Compiled to Bytecode (JVM), JS, or Native",
+      "typing": "Statically Typed",
+      "paradigm": [
+        "Object-Oriented",
+        "Functional",
+        "Imperative"
+      ],
+      "main_libraries": [
+        "Ktor",
+        "Spring Boot",
+        "Jetpack Compose",
+        "Coroutines"
+      ],
+      "creator": "JetBrains",
+      "year_of_creation": "2011",
+      "popularity": "High",
+      "keywords": [
+        {
+          "title": "Android",
+          "color": "#E0CE4F"
+        },
+        {
+          "title": "JVM",
+          "color": "#012081"
+        },
+        {
+          "title": "Concise",
+          "color": "#E8219A"
+        },
+        {
+          "title": "Safe",
+          "color": "#2733AD"
+        }
+      ]
+    },
+    {
+      "name": "Dart",
+      "description": "Dart is a client-optimized language for fast apps on any platform. It is developed by Google and is used to build mobile, desktop, server, and web applications.",
+      "usage": [
+        "Cross-platform Mobile Apps (Flutter)",
+        "Web Apps"
+      ],
+      "how_used": "Primary language for the Flutter framework.",
+      "syntax": "C-style, familiar to Java/JS developers.",
+      "semantics": "Object-oriented, mixins, isolates for concurrency.",
+      "data_types": "Numbers, Strings, Booleans, Lists, Sets, Maps, Runes, Symbols.",
+      "control_structures": "if/else, switch, for, while, do/while, try/catch.",
+      "abstraction": "High-level.",
+      "compiled_or_interpreted": "Compiled (AOT for mobile, JIT for dev) / Transpiled to JS",
+      "typing": "Statically Typed",
+      "paradigm": [
+        "Object-Oriented",
+        "Functional",
+        "Imperative",
+        "Reflective"
+      ],
+      "main_libraries": [
+        "Flutter",
+        "AngularDart"
+      ],
+      "creator": "Lars Bak, Kasper Lund",
+      "year_of_creation": "2011",
+      "popularity": "High (due to Flutter)",
+      "keywords": [
+        {
+          "title": "Flutter",
+          "color": "#E6CFFC"
+        },
+        {
+          "title": "Mobile",
+          "color": "#10B981"
+        },
+        {
+          "title": "UI",
+          "color": "#000A94"
+        },
+        {
+          "title": "Google",
+          "color": "#0EA5E9"
+        }
+      ]
+    },
+    {
+      "name": "Rust",
+      "description": "Rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency. It enforces memory safety without garbage collection.",
+      "usage": [
+        "Systems Programming",
+        "WebAssembly",
+        "CLI Tools",
+        "Game Engines"
+      ],
+      "how_used": "Writing operating systems (Linux kernel components), high-performance tools, and secure applications.",
+      "syntax": "C-like, but with distinct features like lifetimes and ownership.",
+      "semantics": "Ownership & Borrowing, affine types.",
+      "data_types": "Integers, Floats, Booleans, Characters, Tuples, Arrays, Structs, Enums.",
+      "control_structures": "if/else, match, for, while, loop.",
+      "abstraction": "Medium-High (Zero-cost abstractions).",
+      "compiled_or_interpreted": "Compiled",
+      "typing": "Statically Typed",
+      "paradigm": [
+        "Multi-paradigm",
+        "Concurrent",
+        "Functional",
+        "Imperative"
+      ],
+      "main_libraries": [
+        "Serde",
+        "Tokio",
+        "Rocket",
+        "Rayon"
+      ],
+      "creator": "Graydon Hoare",
+      "year_of_creation": "2010",
+      "popularity": "Growing Fast",
+      "keywords": [
+        {
+          "title": "Safety",
+          "color": "#290AF2"
+        },
+        {
+          "title": "Performance",
+          "color": "#EAB308"
+        },
+        {
+          "title": "Ownership",
+          "color": "#8D5B4F"
+        },
+        {
+          "title": "Systems",
+          "color": "#AA6C04"
+        }
+      ]
+    },
+    {
+      "name": "Go",
+      "description": "Go is a statically typed, compiled programming language designed at Google. It is syntactically similar to C, but with memory safety, garbage collection, structural typing, and CSP-style concurrency.",
+      "usage": [
+        "Cloud Services",
+        "Microservices",
+        "Networking",
+        "DevOps Tools"
+      ],
+      "how_used": "Building high-performance servers, CLI tools (Docker, Kubernetes).",
+      "syntax": "C-like but simplified, no parentheses in control flow.",
+      "semantics": "Pass-by-value, pointers, interfaces.",
+      "data_types": "Integers, Floats, Strings, Booleans, Structs, Slices, Maps, Channels.",
+      "control_structures": "if/else, switch, for, select.",
+      "abstraction": "Medium-High.",
+      "compiled_or_interpreted": "Compiled",
+      "typing": "Statically Typed",
+      "paradigm": [
+        "Concurrent",
+        "Imperative",
+        "Structured"
+      ],
+      "main_libraries": [
+        "Standard Library",
+        "Gin",
+        "Gorm",
+        "Cobra"
+      ],
+      "creator": "Robert Griesemer, Rob Pike, Ken Thompson",
+      "year_of_creation": "2009",
+      "popularity": "High",
+      "keywords": [
+        {
+          "title": "Concurrency",
+          "color": "#667773"
+        },
+        {
+          "title": "Simple",
+          "color": "#F59E0B"
+        },
+        {
+          "title": "Google",
+          "color": "#0EA5E9"
+        },
+        {
+          "title": "Fast",
+          "color": "#214C7C"
+        }
+      ]
+    },
+    {
+      "name": "Scratch",
+      "description": "Scratch is a block-based visual programming language and website targeted primarily at children.",
+      "usage": [
+        "Education",
+        "Introductory Programming"
+      ],
+      "how_used": "Teaching kids how to think logically and program.",
+      "syntax": "Visual blocks (drag and drop).",
+      "semantics": "Event-driven, sprites.",
+      "data_types": "Numbers, Strings, Booleans, Lists.",
+      "control_structures": "If, Repeat, Forever.",
+      "abstraction": "Visual.",
+      "compiled_or_interpreted": "Interpreted",
+      "typing": "Dynamically Typed",
+      "paradigm": [
+        "Event-driven",
+        "Block-based",
+        "Object-Oriented"
+      ],
+      "main_libraries": [
+        "Standard Blocks"
+      ],
+      "creator": "MIT Media Lab",
+      "year_of_creation": "2007",
+      "popularity": "High (Education)",
+      "keywords": [
+        {
+          "title": "Kids",
+          "color": "#23AE8D"
+        },
+        {
+          "title": "Education",
+          "color": "#2563EB"
+        },
+        {
+          "title": "Visual",
+          "color": "#EC4899"
+        },
+        {
+          "title": "Blocks",
+          "color": "#C5B9A6"
+        }
+      ]
+    },
+    {
+      "name": "Markdown",
+      "description": "Markdown is a lightweight markup language for creating formatted text using a plain-text editor.",
+      "usage": [
+        "Documentation",
+        "README files",
+        "Static Sites",
+        "Note-taking"
+      ],
+      "how_used": "Widely used for technical documentation, GitHub READMEs, and blogging.",
+      "syntax": "Uses special characters like #, *, -, [], [].",
+      "semantics": "Mapped to HTML elements.",
+      "data_types": "Text, Lists, Images, Links, Tables.",
+      "control_structures": "N/A",
+      "abstraction": "High-level (Markup).",
+      "compiled_or_interpreted": "Parsed to HTML",
+      "typing": "N/A",
+      "paradigm": [
+        "Markup",
+        "Declarative"
+      ],
+      "main_libraries": [
+        "Marked",
+        "Remark",
+        "Pandoc"
+      ],
+      "creator": "John Gruber",
+      "year_of_creation": "2004",
+      "popularity": "Extremely High",
+      "keywords": [
+        {
+          "title": "Markup",
+          "color": "#F18248"
+        },
+        {
+          "title": "Documentation",
+          "color": "#3D129A"
+        },
+        {
+          "title": "Simple",
+          "color": "#F59E0B"
+        },
+        {
+          "title": "Web",
+          "color": "#3B82F6"
+        }
+      ]
+    },
+    {
+      "name": "Scala",
+      "description": "Scala is a strong statically typed general-purpose programming language which supports both object-oriented programming and functional programming.",
+      "usage": [
+        "Big Data (Spark)",
+        "Backend Services",
+        "Distributed Systems"
+      ],
+      "how_used": "Building scalable backend systems and big data processing pipelines (Apache Spark).",
+      "syntax": "Concise, expressive, supports operator overloading.",
+      "semantics": "Integrates OOP and Functional programming, runs on JVM.",
+      "data_types": "All Java types + functional types, Option, Future, Tuple.",
+      "control_structures": "if/else, match (pattern matching), for (comprehensions), while.",
+      "abstraction": "High-level.",
+      "compiled_or_interpreted": "Compiled to Bytecode (JVM)",
+      "typing": "Statically Typed",
+      "paradigm": [
+        "Functional",
+        "Object-Oriented",
+        "Imperative"
+      ],
+      "main_libraries": [
+        "Akka",
+        "Play Framework",
+        "Apache Spark",
+        "Cats"
+      ],
+      "creator": "Martin Odersky",
+      "year_of_creation": "2004",
+      "popularity": "Moderate",
+      "keywords": [
+        {
+          "title": "JVM",
+          "color": "#012081"
+        },
+        {
+          "title": "Functional",
+          "color": "#13C623"
+        },
+        {
+          "title": "Big Data",
+          "color": "#225B0A"
+        },
+        {
+          "title": "Scalable",
+          "color": "#B00A75"
+        }
+      ]
+    },
+    {
+      "name": "PostGIS",
+      "description": "PostGIS is a spatial database extender for PostgreSQL object-relational database. It adds support for geographic objects allowing location queries to be run in SQL.",
+      "usage": [
+        "GIS",
+        "Spatial Analysis",
+        "Mapping",
+        "Database"
+      ],
+      "how_used": "Storing and querying geospatial data (points, lines, polygons) within a relational database.",
+      "syntax": "Standard SQL + Spatial Functions (ST_Intersects, ST_Buffer).",
+      "semantics": "Spatial relations, geometric operations.",
+      "data_types": "GEOMETRY, GEOGRAPHY, RASTER, TOPOLOGY.",
+      "control_structures": "SQL standard.",
+      "abstraction": "High-level (Spatial).",
+      "compiled_or_interpreted": "Interpreted (DB Extension)",
+      "typing": "Statically Typed (Schema)",
+      "paradigm": [
+        "Declarative",
+        "Spatial"
+      ],
+      "main_libraries": [
+        "GEOS",
+        "GDAL",
+        "PROJ"
+      ],
+      "creator": "Refractions Research",
+      "year_of_creation": "2001",
+      "popularity": "Standard for Open Source GIS",
+      "keywords": [
+        {
+          "title": "GIS",
+          "color": "#059669"
+        },
+        {
+          "title": "Spatial",
+          "color": "#5134E4"
+        },
+        {
+          "title": "SQL",
+          "color": "#CC2927"
+        },
+        {
+          "title": "Maps",
+          "color": "#34D399"
+        }
+      ]
+    },
+    {
+      "name": "C#",
+      "description": "C# is a modern, object-oriented, and type-safe programming language. It enables developers to build many types of secure and robust applications that run in the .NET ecosystem.",
+      "usage": [
+        "Enterprise Applications",
+        "Game Development (Unity)",
+        "Web Development",
+        "Mobile Apps"
+      ],
+      "how_used": "Widely used for Windows desktop apps, backend services with ASP.NET Core, and game development with Unity.",
+      "syntax": "C-style, similar to Java but with more syntactic sugar.",
+      "semantics": "Pass-by-value (mostly), garbage collected, rich type system.",
+      "data_types": "Integers, Floats, Decimals, Booleans, Strings, Structs, Classes, Records.",
+      "control_structures": "if/else, switch, for, foreach, while, do/while, try/catch/finally.",
+      "abstraction": "High-level.",
+      "compiled_or_interpreted": "Compiled to IL, JIT compiled by CLR",
+      "typing": "Statically Typed",
+      "paradigm": [
+        "Object-Oriented",
+        "Component-oriented",
+        "Functional",
+        "Imperative"
+      ],
+      "main_libraries": [
+        ".NET Core",
+        "Entity Framework",
+        "Newtonsoft.Json",
+        "ASP.NET"
+      ],
+      "creator": "Anders Hejlsberg",
+      "year_of_creation": "2000",
+      "popularity": "Very High",
+      "keywords": [
+        {
+          "title": "Microsoft",
+          "color": "#D450CE"
+        },
+        {
+          "title": ".NET",
+          "color": "#16168F"
+        },
+        {
+          "title": "Enterprise",
+          "color": "#F90F81"
+        },
+        {
+          "title": "Games",
+          "color": "#1642A1"
+        }
+      ]
+    },
+    {
+      "name": "GDAL",
+      "description": "The Geospatial Data Abstraction Library (GDAL) is a translator library for raster and vector geospatial data formats.",
+      "usage": [
+        "GIS Data Conversion",
+        "Raster Processing",
+        "Vector Manipulation"
+      ],
+      "how_used": "Command line tools or via bindings (Python) to read/write GIS formats.",
+      "syntax": "API-based (C++, Python) or CLI commands.",
+      "semantics": "Data abstraction, format translation.",
+      "data_types": "Datasets, Bands, Features, Geometries.",
+      "control_structures": "Host language structures.",
+      "abstraction": "Low-level (Data Access).",
+      "compiled_or_interpreted": "Compiled (C++)",
+      "typing": "Statically Typed (C++)",
+      "paradigm": [
+        "Object-Oriented",
+        "Procedural"
+      ],
+      "main_libraries": [
+        "OGR",
+        "PROJ"
+      ],
+      "creator": "Frank Warmerdam",
+      "year_of_creation": "1998",
+      "popularity": "Ubiquitous in GIS",
+      "keywords": [
+        {
+          "title": "GIS",
+          "color": "#059669"
+        },
+        {
+          "title": "Raster",
+          "color": "#7A519D"
+        },
+        {
+          "title": "Vector",
+          "color": "#7ECD63"
+        },
+        {
+          "title": "Conversion",
+          "color": "#9B2136"
+        }
+      ]
+    },
+    {
+      "name": "CSS",
+      "description": "Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.",
+      "usage": [
+        "Web Design",
+        "User Interfaces",
+        "Animations"
+      ],
+      "how_used": "Styles HTML elements (colors, layout, fonts, etc.).",
+      "syntax": "Rule-based (selector { property: value; }).",
+      "semantics": "Defines visual presentation and responsive design.",
+      "data_types": "Colors, Units, Selectors, Flexbox, Grid.",
+      "control_structures": "Media Queries, Selectors.",
+      "abstraction": "High-level (Styling).",
+      "compiled_or_interpreted": "Parsed by Browser",
+      "typing": "N/A",
+      "paradigm": [
+        "Declarative",
+        "Style Sheet"
+      ],
+      "main_libraries": [
+        "Tailwind CSS",
+        "Sass",
+        "Bootstrap"
+      ],
+      "creator": "Håkon Wium Lie",
+      "year_of_creation": "1996",
+      "popularity": "Extremely High",
+      "keywords": [
+        {
+          "title": "Design",
+          "color": "#BE185D"
+        },
+        {
+          "title": "Web",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Style",
+          "color": "#C82D91"
+        },
+        {
+          "title": "Layout",
+          "color": "#3FE74A"
+        }
+      ]
+    },
+    {
+      "name": "JavaScript",
+      "description": "JavaScript is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.",
+      "usage": [
+        "Web Development (Frontend & Backend)",
+        "Mobile App Development",
+        "Game Development"
+      ],
+      "how_used": "Runs in browsers for interactive UI, and on servers via Node.js.",
+      "syntax": "C-style syntax, curly braces for blocks.",
+      "semantics": "Dynamic, weak typing. Event-driven.",
+      "data_types": "Number, String, Boolean, Object, Symbol, Null, Undefined.",
+      "control_structures": "if/else, switch, for, while, do/while, try/catch.",
+      "abstraction": "High-level.",
+      "compiled_or_interpreted": "Just-In-Time Compiled (often called Interpreted)",
+      "typing": "Dynamically Typed",
+      "paradigm": [
+        "Event-driven",
+        "Functional",
+        "Imperative"
+      ],
+      "main_libraries": [
+        "React",
+        "Vue",
+        "Angular",
+        "Express",
+        "Lodash"
+      ],
+      "creator": "Brendan Eich",
+      "year_of_creation": "1995",
+      "popularity": "Extremely High",
+      "keywords": [
+        {
+          "title": "Web",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Frontend",
+          "color": "#C6F232"
+        },
+        {
+          "title": "Interactive",
+          "color": "#EC4899"
+        },
+        {
+          "title": "Async",
+          "color": "#CA125C"
+        }
+      ]
+    },
+    {
+      "name": "Java",
+      "description": "Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.",
+      "usage": [
+        "Enterprise Applications",
+        "Android Apps",
+        "Big Data",
+        "Banking"
+      ],
+      "how_used": "Backend services, large-scale systems, Android mobile apps.",
+      "syntax": "C-style, verbose, strict class structure.",
+      "semantics": "Pass-by-value, memory safety via JVM.",
+      "data_types": "Primitive types (int, boolean, etc.) and Reference types (Classes).",
+      "control_structures": "if/else, switch, for, while, do/while, try/catch/finally.",
+      "abstraction": "High-level.",
+      "compiled_or_interpreted": "Compiled to Bytecode, Interpreted by JVM",
+      "typing": "Statically Typed",
+      "paradigm": [
+        "Object-Oriented",
+        "Imperative",
+        "Concurrent"
+      ],
+      "main_libraries": [
+        "Spring",
+        "Hibernate",
+        "Apache Commons",
+        "JUnit"
+      ],
+      "creator": "James Gosling",
+      "year_of_creation": "1995",
+      "popularity": "Very High",
+      "keywords": [
+        {
+          "title": "OOP",
+          "color": "#013270"
+        },
+        {
+          "title": "Enterprise",
+          "color": "#F90F81"
+        },
+        {
+          "title": "Robust",
+          "color": "#37E5D1"
+        },
+        {
+          "title": "JVM",
+          "color": "#012081"
+        }
+      ]
+    },
+    {
+      "name": "Ruby",
+      "description": "Ruby is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.",
+      "usage": [
+        "Web Development",
+        "Scripting",
+        "Prototyping"
+      ],
+      "how_used": "Mainly used for web development with the Ruby on Rails framework.",
+      "syntax": "English-like, elegant, very flexible, optional parentheses.",
+      "semantics": "Everything is an object, dynamic dispatch, blocks/procs/lambdas.",
+      "data_types": "Numbers, Strings, Symbols, Arrays, Hashes, Ranges.",
+      "control_structures": "if/unless/else, case, while/until, for, iterators.",
+      "abstraction": "Very High-level.",
+      "compiled_or_interpreted": "Interpreted",
+      "typing": "Dynamically Typed",
+      "paradigm": [
+        "Object-Oriented",
+        "Functional",
+        "Imperative"
+      ],
+      "main_libraries": [
+        "Ruby on Rails",
+        "Sinatra",
+        "RSpec",
+        "Devise"
+      ],
+      "creator": "Yukihiro Matsumoto (Matz)",
+      "year_of_creation": "1995",
+      "popularity": "Moderate",
+      "keywords": [
+        {
+          "title": "Rails",
+          "color": "#B13701"
+        },
+        {
+          "title": "Web",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Elegant",
+          "color": "#18ED9E"
+        },
+        {
+          "title": "Productivity",
+          "color": "#F59E0B"
+        }
+      ]
+    },
+    {
+      "name": "PHP",
+      "description": "PHP is a popular general-purpose scripting language that is especially suited to web development. It was originally created by Danish-Canadian programmer Rasmus Lerdorf.",
+      "usage": [
+        "Web Development (Backend)",
+        "CMS (WordPress, Drupal)",
+        "E-commerce"
+      ],
+      "how_used": "Powers a significant portion of the web (WordPress, etc.). Server-side scripting.",
+      "syntax": "C-like, embedded in HTML, '$' prefix for variables.",
+      "semantics": "Request-response lifecycle, loose typing (historically), improving type system.",
+      "data_types": "String, Integer, Float, Boolean, Array, Object, NULL, Resource.",
+      "control_structures": "if/else, switch/match, while, do/while, for, foreach.",
+      "abstraction": "High-level.",
+      "compiled_or_interpreted": "Interpreted",
+      "typing": "Dynamically Typed (with optional typing)",
+      "paradigm": [
+        "Imperative",
+        "Functional",
+        "Object-Oriented",
+        "Procedural"
+      ],
+      "main_libraries": [
+        "Laravel",
+        "Symfony",
+        "WordPress",
+        "Composer"
+      ],
+      "creator": "Rasmus Lerdorf",
+      "year_of_creation": "1994",
+      "popularity": "Very High",
+      "keywords": [
+        {
+          "title": "Web",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Backend",
+          "color": "#869E74"
+        },
+        {
+          "title": "Easy Deployment",
+          "color": "#030DA3"
+        },
+        {
+          "title": "CMS",
+          "color": "#010529"
+        }
+      ]
+    },
+    {
+      "name": "HTML",
+      "description": "HyperText Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser.",
+      "usage": [
+        "Web Development",
+        "Email Templates",
+        "Web Applications"
+      ],
+      "how_used": "Structures the content of every webpage on the internet.",
+      "syntax": "Tag-based (<tag>content</tag>).",
+      "semantics": "Defines the meaning and structure of web content.",
+      "data_types": "Elements, Attributes, Entities.",
+      "control_structures": "N/A",
+      "abstraction": "High-level (Markup).",
+      "compiled_or_interpreted": "Parsed by Browser",
+      "typing": "N/A",
+      "paradigm": [
+        "Markup",
+        "Declarative"
+      ],
+      "main_libraries": [
+        "Standard HTML5"
+      ],
+      "creator": "Tim Berners-Lee",
+      "year_of_creation": "1993",
+      "popularity": "Extremely High",
+      "keywords": [
+        {
+          "title": "Web",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Structure",
+          "color": "#0F4D53"
+        },
+        {
+          "title": "Frontend",
+          "color": "#C6F232"
+        },
+        {
+          "title": "Standard",
+          "color": "#1782DD"
+        }
+      ]
+    },
+    {
+      "name": "R",
+      "description": "R is a programming language and free software environment for statistical computing and graphics supported by the R Core Team and the R Foundation for Statistical Computing.",
+      "usage": [
+        "Statistical Analysis",
+        "Data Visualization",
+        "Bioinformatics",
+        "Machine Learning"
+      ],
+      "how_used": "Data analysis, creating complex statistical models and visualizations.",
+      "syntax": "Functional-style, unique assignment operator (<-), 1-based indexing.",
+      "semantics": "Lazy evaluation, vectorized operations, pass-by-value.",
+      "data_types": "Vectors, Lists, Matrices, Arrays, Factors, Data Frames.",
+      "control_structures": "if/else, for, while, repeat.",
+      "abstraction": "High-level.",
+      "compiled_or_interpreted": "Interpreted",
+      "typing": "Dynamically Typed",
+      "paradigm": [
+        "Functional",
+        "Procedural",
+        "Reflective",
+        "Imperative"
+      ],
+      "main_libraries": [
+        "dplyr",
+        "ggplot2",
+        "Shiny",
+        "tidyr",
+        "caret"
+      ],
+      "creator": "Ross Ihaka, Robert Gentleman",
+      "year_of_creation": "1993",
+      "popularity": "Moderate (High in Data Science)",
+      "keywords": [
+        {
+          "title": "Statistics",
+          "color": "#0369A1"
+        },
+        {
+          "title": "Data",
+          "color": "#10B981"
+        },
+        {
+          "title": "Analysis",
+          "color": "#0EA5E9"
+        },
+        {
+          "title": "Plots",
+          "color": "#9A1F92"
+        }
+      ]
+    },
+    {
+      "name": "Lua",
+      "description": "Lua is a lightweight, high-level, multi-paradigm programming language designed primarily for embedded use in applications.",
+      "usage": [
+        "Game Development (Roblox, WoW)",
+        "Embedded Systems",
+        "Scripting"
+      ],
+      "how_used": "Embedded as a scripting engine in larger applications (games like WoW, tools like Redis).",
+      "syntax": "Simple, clean, keyword-based (begin/end).",
+      "semantics": "Fast, portable, extensible, prototype-based inheritance.",
+      "data_types": "Nil, Boolean, Number, String, Userdata, Function, Thread, Table.",
+      "control_structures": "if/then/else, while, repeat/until, for.",
+      "abstraction": "High-level.",
+      "compiled_or_interpreted": "Interpreted (Bytecode)",
+      "typing": "Dynamically Typed",
+      "paradigm": [
+        "Multi-paradigm",
+        "Scripting",
+        "Procedural",
+        "Functional"
+      ],
+      "main_libraries": [
+        "LÖVE",
+        "Corona SDK",
+        "Torch (historic)"
+      ],
+      "creator": "Roberto Ierusalimschy",
+      "year_of_creation": "1993",
+      "popularity": "Moderate (High in Games)",
+      "keywords": [
+        {
+          "title": "Embedded",
+          "color": "#475569"
+        },
+        {
+          "title": "Scripting",
+          "color": "#582F17"
+        },
+        {
+          "title": "Games",
+          "color": "#1642A1"
+        },
+        {
+          "title": "Lightweight",
+          "color": "#2B76EE"
+        }
+      ]
+    },
+    {
+      "name": "Python",
+      "description": "Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.",
+      "usage": [
+        "Web Development",
+        "Data Science",
+        "Artificial Intelligence",
+        "Scientific Computing",
+        "Automation"
+      ],
+      "how_used": "Used for backend web development (Django/Flask), data analysis (Pandas), ML (PyTorch/TensorFlow), and scripting.",
+      "syntax": "Clean, readable, uses indentation for blocks.",
+      "semantics": "Dynamic, strong typing (mostly). Evaluation is strict.",
+      "data_types": "Integers, Floats, Strings, Lists, Tuples, Dictionaries, Sets.",
+      "control_structures": "if/elif/else, for, while, try/except.",
+      "abstraction": "High-level.",
+      "compiled_or_interpreted": "Interpreted",
+      "typing": "Dynamically Typed",
+      "paradigm": [
+        "Object-Oriented",
+        "Procedural",
+        "Functional"
+      ],
+      "main_libraries": [
+        "NumPy",
+        "Pandas",
+        "Requests",
+        "Django",
+        "FastAPI"
+      ],
+      "creator": "Guido van Rossum",
+      "year_of_creation": "1991",
+      "popularity": "Extremely High",
+      "keywords": [
+        {
+          "title": "Simple",
+          "color": "#F59E0B"
+        },
+        {
+          "title": "Readable",
+          "color": "#2A9810"
+        },
+        {
+          "title": "Versatile",
+          "color": "#24EB3F"
+        },
+        {
+          "title": "AI",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Data",
+          "color": "#10B981"
+        }
+      ]
+    },
+    {
+      "name": "Haskell",
+      "description": "Haskell is a general-purpose, statically typed, purely functional programming language with type inference and lazy evaluation.",
+      "usage": [
+        "Academic Research",
+        "Fintech",
+        "High-assurance Systems"
+      ],
+      "how_used": "Robust systems, teaching functional programming.",
+      "syntax": "Mathematical, concise, significant indentation.",
+      "semantics": "Purely functional, lazy evaluation, monads.",
+      "data_types": "Int, Float, Bool, Lists, Tuples, Custom Types.",
+      "control_structures": "if/then/else, case/of, recursion.",
+      "abstraction": "Very High-level.",
+      "compiled_or_interpreted": "Compiled",
+      "typing": "Statically Typed (Strong)",
+      "paradigm": [
+        "Purely Functional"
+      ],
+      "main_libraries": [
+        "Pandoc",
+        "Lens",
+        "Yesod"
+      ],
+      "creator": "Haskell Committee",
+      "year_of_creation": "1990",
+      "popularity": "Niche",
+      "keywords": [
+        {
+          "title": "Functional",
+          "color": "#13C623"
+        },
+        {
+          "title": "Pure",
+          "color": "#262318"
+        },
+        {
+          "title": "Academic",
+          "color": "#6C2127"
+        },
+        {
+          "title": "Lazy",
+          "color": "#240794"
+        }
+      ]
+    },
+    {
+      "name": "Shell (Bash)",
+      "description": "Unix shell is a command-line interpreter or shell that provides a command line user interface for Unix-like operating systems. Bash is the most common default shell.",
+      "usage": [
+        "System Administration",
+        "DevOps",
+        "Automation Scripts"
+      ],
+      "how_used": "Automating OS tasks, deployment scripts, file manipulation.",
+      "syntax": "Command-based, pipes (|), redirection (>).",
+      "semantics": "Process execution, streams (stdin/stdout/stderr).",
+      "data_types": "Strings (mostly), Integers, Arrays.",
+      "control_structures": "if/fi, case/esac, for/done, while/done.",
+      "abstraction": "High-level (Command glue).",
+      "compiled_or_interpreted": "Interpreted",
+      "typing": "Untyped (everything is a string)",
+      "paradigm": [
+        "Imperative",
+        "Scripting"
+      ],
+      "main_libraries": [
+        "GNU Coreutils",
+        "awk",
+        "sed",
+        "grep",
+        "curl"
+      ],
+      "creator": "Brian Fox",
+      "year_of_creation": "1989",
+      "popularity": "High",
+      "keywords": [
+        {
+          "title": "Automation",
+          "color": "#10B981"
+        },
+        {
+          "title": "Linux",
+          "color": "#6060D4"
+        },
+        {
+          "title": "DevOps",
+          "color": "#06B6D4"
+        },
+        {
+          "title": "Scripting",
+          "color": "#582F17"
+        }
+      ]
+    },
+    {
+      "name": "Perl",
+      "description": "Perl is a family of high-level, general-purpose, interpreted, dynamic programming languages. 'Perl 5' is the one in common use.",
+      "usage": [
+        "System Administration",
+        "Text Processing",
+        "Legacy Web"
+      ],
+      "how_used": "Text manipulation, One-liners, Legacy systems.",
+      "syntax": "C-like but flexible, heavy use of sigils ($, @, %).",
+      "semantics": "TMTOWTDI, powerful regex.",
+      "data_types": "Scalars, Arrays, Hashes.",
+      "control_structures": "if/unless, while/until, for/foreach.",
+      "abstraction": "High-level.",
+      "compiled_or_interpreted": "Interpreted",
+      "typing": "Dynamically Typed",
+      "paradigm": [
+        "Multi-paradigm",
+        "Functional",
+        "Imperative"
+      ],
+      "main_libraries": [
+        "CPAN",
+        "Mojolicious",
+        "Catalyst"
+      ],
+      "creator": "Larry Wall",
+      "year_of_creation": "1987",
+      "popularity": "Declining",
+      "keywords": [
+        {
+          "title": "Scripting",
+          "color": "#582F17"
+        },
+        {
+          "title": "Text",
+          "color": "#27B94D"
+        },
+        {
+          "title": "Regex",
+          "color": "#B30027"
+        },
+        {
+          "title": "Legacy",
+          "color": "#6FDFE9"
+        }
+      ]
+    },
+    {
+      "name": "C++",
+      "description": "C++ is a high-level, general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language.",
+      "usage": [
+        "Game Development",
+        "System/Software",
+        "Drivers",
+        "Client-Server"
+      ],
+      "how_used": "Performance-critical applications, game engines (Unreal), OS kernels.",
+      "syntax": "C-style, complex, manual memory management options.",
+      "semantics": "Value semantics, pointers, references, RAII.",
+      "data_types": "Integers, Floats, Characters, Booleans, Void, User-defined.",
+      "control_structures": "if/else, switch, for, while, do/while.",
+      "abstraction": "Multi-level (Low to High).",
+      "compiled_or_interpreted": "Compiled",
+      "typing": "Statically Typed",
+      "paradigm": [
+        "Procedural",
+        "Functional",
+        "Object-Oriented",
+        "Generic"
+      ],
+      "main_libraries": [
+        "STL",
+        "Boost",
+        "Qt",
+        "OpenCV"
+      ],
+      "creator": "Bjarne Stroustrup",
+      "year_of_creation": "1985",
+      "popularity": "High",
+      "keywords": [
+        {
+          "title": "Performance",
+          "color": "#EAB308"
+        },
+        {
+          "title": "Systems",
+          "color": "#AA6C04"
+        },
+        {
+          "title": "Games",
+          "color": "#1642A1"
+        },
+        {
+          "title": "Complex",
+          "color": "#DFFC90"
+        }
+      ]
+    },
+    {
+      "name": "MATLAB",
+      "description": "MATLAB is a proprietary multi-paradigm programming language and numeric computing environment developed by MathWorks.",
+      "usage": [
+        "Engineering",
+        "Linear Algebra",
+        "Signal Processing",
+        "Control Systems"
+      ],
+      "how_used": "Solving engineering and mathematical problems, simulations.",
+      "syntax": "Matrix-oriented, script-like.",
+      "semantics": "Everything is a matrix.",
+      "data_types": "Doubles, Complex Numbers, Characters, Strings, Cells, Structs.",
+      "control_structures": "if/else, switch, for, while, try/catch.",
+      "abstraction": "High-level.",
+      "compiled_or_interpreted": "Interpreted",
+      "typing": "Dynamically Typed",
+      "paradigm": [
+        "Multi-paradigm",
+        "Functional",
+        "Imperative",
+        "Procedural"
+      ],
+      "main_libraries": [
+        "Simulink",
+        "Optimization Toolbox",
+        "Signal Processing Toolbox"
+      ],
+      "creator": "Cleve Moler",
+      "year_of_creation": "1984",
+      "popularity": "High (Engineering/Academia)",
+      "keywords": [
+        {
+          "title": "Math",
+          "color": "#0284C7"
+        },
+        {
+          "title": "Engineering",
+          "color": "#0F766E"
+        },
+        {
+          "title": "Simulation",
+          "color": "#F87171"
+        },
+        {
+          "title": "Matrix",
+          "color": "#F283E1"
+        }
+      ]
+    },
+    {
+      "name": "PROJ",
+      "description": "PROJ is a generic coordinate transformation software that transforms geospatial coordinates from one coordinate reference system (CRS) to another.",
+      "usage": [
+        "Map Projections",
+        "Coordinate Transformation",
+        "Geodesy"
+      ],
+      "how_used": "Underlying engine for GIS software (GDAL, PostGIS, QGIS) to handle map projections.",
+      "syntax": "PROJ Strings (+proj=merc ...), WKT (Well Known Text).",
+      "semantics": "Mathematical transformations of coordinates.",
+      "data_types": "Coordinates, CRS definitions.",
+      "control_structures": "N/A (Transformation pipelines).",
+      "abstraction": "Low-level (Math/Geodesy).",
+      "compiled_or_interpreted": "Compiled (C++)",
+      "typing": "Statically Typed",
+      "paradigm": [
+        "Mathematical",
+        "Transformation"
+      ],
+      "main_libraries": [
+        "libproj"
+      ],
+      "creator": "Gerald Evenden",
+      "year_of_creation": "1980s",
+      "popularity": "Essential Infrastructure",
+      "keywords": [
+        {
+          "title": "Projections",
+          "color": "#6E27E4"
+        },
+        {
+          "title": "Coordinates",
+          "color": "#FCE1DB"
+        },
+        {
+          "title": "GPS",
+          "color": "#01148A"
+        },
+        {
+          "title": "Mapping",
+          "color": "#24B0AE"
+        }
+      ]
+    },
+    {
+      "name": "SQL",
+      "description": "Structured Query Language (SQL) is a domain-specific language used in programming and designed for managing data held in a relational database management system (RDBMS).",
+      "usage": [
+        "Database Management",
+        "Data Analysis",
+        "Backend Development"
+      ],
+      "how_used": "Querying, updating, and managing relational databases.",
+      "syntax": "English-like, declarative (SELECT * FROM ...).",
+      "semantics": "Declarative - you specify WHAT you want, not HOW to get it.",
+      "data_types": "CHAR, VARCHAR, INT, FLOAT, DATE, TIMESTAMP, BLOB, JSON.",
+      "control_structures": "Generally none (declarative), but extensions like PL/SQL have them.",
+      "abstraction": "High-level (Declarative).",
+      "compiled_or_interpreted": "Interpreted by DB Engine",
+      "typing": "Statically Typed (Schema-based)",
+      "paradigm": [
+        "Declarative",
+        "Set-based"
+      ],
+      "main_libraries": [
+        "PostgreSQL",
+        "MySQL",
+        "SQLite",
+        "Oracle",
+        "SQL Server"
+      ],
+      "creator": "Donald D. Chamberlin, Raymond F. Boyce",
+      "year_of_creation": "1974",
+      "popularity": "Extremely High",
+      "keywords": [
+        {
+          "title": "Database",
+          "color": "#334155"
+        },
+        {
+          "title": "Data",
+          "color": "#10B981"
+        },
+        {
+          "title": "Query",
+          "color": "#AC28A8"
+        },
+        {
+          "title": "Declarative",
+          "color": "#811E2A"
+        }
+      ]
+    },
+    {
+      "name": "C",
+      "description": "C is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion, with a static type system.",
+      "usage": [
+        "Operating Systems",
+        "Embedded Systems",
+        "Drivers",
+        "Kernels"
+      ],
+      "how_used": "The foundation of modern computing. Used for writing OS kernels (Linux, Windows) and embedded software.",
+      "syntax": "Minimalist, uses pointers, curly braces.",
+      "semantics": "Direct memory manipulation, manual memory management.",
+      "data_types": "char, int, float, double, void, arrays, pointers, structs, unions.",
+      "control_structures": "if/else, switch, while, do/while, for, goto.",
+      "abstraction": "Low-level.",
+      "compiled_or_interpreted": "Compiled",
+      "typing": "Statically Typed",
+      "paradigm": [
+        "Imperative",
+        "Procedural",
+        "Structured"
+      ],
+      "main_libraries": [
+        "Standard C Library (libc)",
+        "POSIX"
+      ],
+      "creator": "Dennis Ritchie",
+      "year_of_creation": "1972",
+      "popularity": "High",
+      "keywords": [
+        {
+          "title": "Low-level",
+          "color": "#E4A3AB"
+        },
+        {
+          "title": "Fast",
+          "color": "#214C7C"
+        },
+        {
+          "title": "OS",
+          "color": "#0009E4"
+        },
+        {
+          "title": "Embedded",
+          "color": "#475569"
+        }
+      ]
+    },
+    {
+      "name": "Prolog",
+      "description": "Prolog is a logic programming language associated with artificial intelligence and computational linguistics.",
+      "usage": [
+        "AI",
+        "Natural Language Processing",
+        "Expert Systems"
+      ],
+      "how_used": "Logic puzzles, theorem proving.",
+      "syntax": "Facts and Rules (head :- body).",
+      "semantics": "Logical inference, unification, backtracking.",
+      "data_types": "Atoms, Numbers, Variables, Compound Terms.",
+      "control_structures": "Recursion, Backtracking (implicit).",
+      "abstraction": "Declarative (Logic).",
+      "compiled_or_interpreted": "Interpreted / Compiled (WAM)",
+      "typing": "Untyped / Dynamic",
+      "paradigm": [
+        "Logic",
+        "Declarative"
+      ],
+      "main_libraries": [
+        "SWI-Prolog Libraries"
+      ],
+      "creator": "Alain Colmerauer, Robert Kowalski",
+      "year_of_creation": "1972",
+      "popularity": "Niche",
+      "keywords": [
+        {
+          "title": "Logic",
+          "color": "#6366F1"
+        },
+        {
+          "title": "AI",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Facts",
+          "color": "#080767"
+        },
+        {
+          "title": "Rules",
+          "color": "#BA58D7"
+        }
+      ]
+    },
+    {
+      "name": "COBOL",
+      "description": "COBOL (Common Business-Oriented Language) is a compiled English-like computer programming language designed for business use.",
+      "usage": [
+        "Banking",
+        "Insurance",
+        "Government Systems"
+      ],
+      "how_used": "Mainframe transaction processing.",
+      "syntax": "Verbose, English-like (ADD X TO Y GIVING Z).",
+      "semantics": "Decimal arithmetic focus, record-based I/O.",
+      "data_types": "Pictures (PIC 999), Alphanumeric.",
+      "control_structures": "IF, PERFORM, EVALUATE.",
+      "abstraction": "High-level (Business).",
+      "compiled_or_interpreted": "Compiled",
+      "typing": "Statically Typed",
+      "paradigm": [
+        "Imperative",
+        "Procedural",
+        "Object-Oriented (modern)"
+      ],
+      "main_libraries": [
+        "CICS",
+        "JCL"
+      ],
+      "creator": "CODASYL (Grace Hopper)",
+      "year_of_creation": "1959",
+      "popularity": "Niche (Legacy)",
+      "keywords": [
+        {
+          "title": "Business",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Legacy",
+          "color": "#6FDFE9"
+        },
+        {
+          "title": "Mainframe",
+          "color": "#DD6F34"
+        },
+        {
+          "title": "Verbose",
+          "color": "#261162"
+        }
+      ]
+    },
+    {
+      "name": "Lisp",
+      "description": "Lisp (List Processing) is a family of programming languages with a long history and a distinctive, fully parenthesized prefix notation.",
+      "usage": [
+        "AI Research",
+        "Emacs (Elisp)",
+        "AutoCAD (AutoLISP)"
+      ],
+      "how_used": "Symbolic reasoning, macro systems, editor scripting.",
+      "syntax": "S-expressions, lots of parentheses.",
+      "semantics": "Code is data (homoiconicity), macros.",
+      "data_types": "Atoms, Lists, Symbols.",
+      "control_structures": "cond, if, recursion.",
+      "abstraction": "Very High-level.",
+      "compiled_or_interpreted": "Interpreted / Compiled",
+      "typing": "Dynamically Typed",
+      "paradigm": [
+        "Functional",
+        "Metaprogramming"
+      ],
+      "main_libraries": [
+        "Common Lisp Object System (CLOS)"
+      ],
+      "creator": "John McCarthy",
+      "year_of_creation": "1958",
+      "popularity": "Niche",
+      "keywords": [
+        {
+          "title": "AI",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Parentheses",
+          "color": "#64ABBA"
+        },
+        {
+          "title": "Macros",
+          "color": "#EACA47"
+        },
+        {
+          "title": "Functional",
+          "color": "#13C623"
+        }
+      ]
+    },
+    {
+      "name": "Fortran",
+      "description": "Fortran (Formula Translation) is a general-purpose, compiled imperative programming language that is especially suited to numeric computation and scientific computing.",
+      "usage": [
+        "High-performance Computing",
+        "Physics Simulations",
+        "Weather Forecasting"
+      ],
+      "how_used": "Legacy scientific codebases, supercomputing.",
+      "syntax": "Mathematical, rigid column format (historically).",
+      "semantics": "Fast numerical processing, array slicing.",
+      "data_types": "Integer, Real, Complex, Logical.",
+      "control_structures": "IF, DO, SELECT CASE.",
+      "abstraction": "High-level (for its time).",
+      "compiled_or_interpreted": "Compiled",
+      "typing": "Statically Typed",
+      "paradigm": [
+        "Imperative",
+        "Procedural",
+        "Object-Oriented (modern)"
+      ],
+      "main_libraries": [
+        "LAPACK",
+        "BLAS",
+        "MPI"
+      ],
+      "creator": "John Backus (IBM)",
+      "year_of_creation": "1957",
+      "popularity": "Niche (Scientific)",
+      "keywords": [
+        {
+          "title": "Science",
+          "color": "#06B6D4"
+        },
+        {
+          "title": "Math",
+          "color": "#0284C7"
+        },
+        {
+          "title": "HPC",
+          "color": "#01183B"
+        },
+        {
+          "title": "Legacy",
+          "color": "#6FDFE9"
+        }
+      ]
+    },
+    {
+      "name": "Assembly",
+      "description": "Assembly language is any low-level programming language in which there is a very strong correspondence between the instruction in the language and the architecture's machine code instructions.",
+      "usage": [
+        "OS Kernels",
+        "Drivers",
+        "Embedded Systems",
+        "Reverse Engineering"
+      ],
+      "how_used": "Writing bootloaders, optimizing critical code paths.",
+      "syntax": "Mnemonics (MOV, ADD, JMP), registers.",
+      "semantics": "Direct hardware control.",
+      "data_types": "Bits, Bytes, Words.",
+      "control_structures": "Jumps, Branches, Calls.",
+      "abstraction": "Very Low-level.",
+      "compiled_or_interpreted": "Assembled to Machine Code",
+      "typing": "Untyped",
+      "paradigm": [
+        "Imperative",
+        "Unstructured"
+      ],
+      "main_libraries": [
+        "None (OS Syscalls)"
+      ],
+      "creator": "Various (Kathleen Booth)",
+      "year_of_creation": "1949",
+      "popularity": "Low (Specialized)",
+      "keywords": [
+        {
+          "title": "Low-level",
+          "color": "#E4A3AB"
+        },
+        {
+          "title": "Hardware",
+          "color": "#F59E0B"
+        },
+        {
+          "title": "Fast",
+          "color": "#214C7C"
+        },
+        {
+          "title": "Machine Code",
+          "color": "#CFB666"
+        }
+      ]
+    }
+  ]
+}

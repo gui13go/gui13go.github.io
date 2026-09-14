@@ -1,0 +1,56 @@
+{
+  "id": "jokes",
+  "title": "Jokes",
+  "path": "/gallery/jokes",
+  "availability": "available",
+  "tags": [
+    {
+      "title": "Humor",
+      "color": "#F59E0B"
+    },
+    {
+      "title": "Science",
+      "color": "#3B82F6"
+    },
+    {
+      "title": "Philosophy",
+      "color": "#8B5CF6"
+    },
+    {
+      "title": "History",
+      "color": "#10B981"
+    }
+  ],
+  "excerpt": "A collection of curated jests for the discerning intellect. Where wit meets wisdom, and every punchline has a pedigree.",
+  "image": "/images/jokes_main.png",
+  "jokes": [
+    {
+      "name": "The Existential Crisis of Descartes",
+      "content": "René Descartes walks into a bar. The bartender asks, 'Would you like a drink?' Descartes replies, 'I think not,' and promptly disappears.",
+      "history": "This joke is a play on Descartes' famous philosophical proposition, 'Cogito, ergo sum' (I think, therefore I am). In his Meditations on First Philosophy, Descartes sought to find an indubitable foundation for knowledge, concluding that the very act of doubting one's existence serves as proof of the reality of one's mind. The joke inverts this logic: if thinking is the basis of existence, then the cessation of thought should logically result in non-existence.",
+      "discipline": "Philosophy",
+      "image": "/images/jokes/descartes.png"
+    },
+    {
+      "name": "Heisenberg’s Speeding Ticket",
+      "content": "Werner Heisenberg is speeding down the highway when a cop pulls him over. The officer asks, 'Do you have any idea how fast you were going?' Heisenberg replies, 'No, but I know exactly where I am!' The cop, now annoyed, says, 'You were doing 90 miles an hour!' Heisenberg throws up his hands and yells, 'Great! Now I’m lost!'",
+      "history": "Illustrates the Heisenberg Uncertainty Principle, formulated in 1927. It states that the more precisely the position of some particle is determined, the less precisely its momentum (velocity) can be predicted, and vice versa. In the joke, being told his exact velocity makes his position (knowing where he is) completely uncertain.",
+      "discipline": "Quantum Physics",
+      "image": "/images/jokes/heisenberg.png"
+    },
+    {
+      "name": "Pavlov’s Reflex",
+      "content": "Ivan Pavlov is sitting at a bar enjoying a pint. Suddenly, the bell on the door rings. Pavlov jumps up and screams, 'Oh no! I forgot to feed the dogs!'",
+      "history": "Ivan Pavlov was a Russian physiologist known for classical conditioning. His experiments involved ringing a bell every time he fed his dogs. Eventually, the dogs began to salivate at the sound of the bell even when no food was present. The joke suggests Pavlov himself became conditioned to the bell.",
+      "discipline": "Psychology",
+      "image": "/images/jokes/pavlov.png"
+    },
+    {
+      "name": "Schrödinger’s Cat",
+      "content": "A police officer pulls over Erwin Schrödinger and asks to see what's in the trunk. The officer looks inside and says, 'Sir, did you know there's a dead cat in here?' Schrödinger sighs and says, 'Well, I do now!'",
+      "history": "Schrödinger's Cat is a thought experiment from 1935 intended to illustrate the perceived absurdity of the Copenhagen interpretation of quantum mechanics. A cat in a box is simultaneously alive and dead until observed. The act of looking into the trunk 'collapses the wave function' and forces a single reality.",
+      "discipline": "Quantum Mechanics",
+      "image": "/images/jokes/schrodinger.png"
+    }
+  ]
+}

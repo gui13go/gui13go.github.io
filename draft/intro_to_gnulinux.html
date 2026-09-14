@@ -1,0 +1,5000 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction to GNU/Linux · Course Presentation · Guilherme Viegas</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    /* ============================================================
+   Color Palette & Design Tokens:
+   Deep Navy #003e60 | Dark Navy #002338 | Midnight #001726
+   Cyan #0098be | Electric Sky #38bdf8 | Forest Green #058e67
+   Ice Blue #bbdfe6 | Soft Ice #f0f7fa | White #ffffff
+   Dark Slate #172a3a | Amber #d97a1f | Crimson #f43f5e
+   ============================================================ */
+    :root {
+      --navy: #003e60;
+      --navy-2: #002338;
+      --navy-3: #07486c;
+      --cyan: #0098be;
+      --cyan-bright: #38bdf8;
+      --green: #058e67;
+      --green-bright: #10b981;
+      --ice: #bbdfe6;
+      --ice-2: #dbeef3;
+      --ice-3: #f1f8fa;
+      --white: #ffffff;
+      --ink: #142738;
+      --gray: #64788a;
+      --line: #dfeaf0;
+      --amber: #d97a1f;
+      --red: #e11d48;
+      --purple: #7c3aed;
+      --code-bg: #041826;
+      --code-border: rgba(187, 223, 230, .2);
+      --font: "Plus Jakarta Sans", "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --head-font: "Outfit", "Plus Jakarta Sans", sans-serif;
+      --mono: "JetBrains Mono", "Fira Code", Consolas, Menlo, monospace;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden
+    }
+
+    body {
+      background: radial-gradient(1300px 750px at 70% -10%, #0d4a6b 0%, #05293d 45%, #021624 100%);
+      font-family: var(--font);
+      user-select: none;
+      overscroll-behavior: none;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ---------------- 16:9 Stage Container ---------------- */
+    #stage {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 1280px;
+      height: 720px;
+      transform: translate(-50%, -50%);
+      transform-origin: center center;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 35px 90px rgba(0, 0, 0, .55), 0 0 0 1px rgba(255, 255, 255, .05);
+    }
+
+    /* ---------------- Slide Common ---------------- */
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: scale(.975);
+      transition: opacity .48s ease, transform .48s ease, visibility 0s linear .48s;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      padding: 42px 64px 44px;
+    }
+
+    .slide.active {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: none;
+      z-index: 2;
+      transition: opacity .5s ease .04s, transform .55s cubic-bezier(.22, .61, .36, 1) .04s;
+    }
+
+    .slide.out-l {
+      transform: translateX(-64px) scale(.975)
+    }
+
+    .slide.out-r {
+      transform: translateX(64px) scale(.975)
+    }
+
+    /* ---------------- Entrance Animations ---------------- */
+    .a {
+      opacity: 0
+    }
+
+    .slide.active .a {
+      animation: rise .65s cubic-bezier(.22, .61, .36, 1) both;
+      animation-delay: calc(110ms + var(--d, 0)*85ms);
+    }
+
+    .slide.active .aL {
+      animation-name: riseL
+    }
+
+    .slide.active .aR {
+      animation-name: riseR
+    }
+
+    .slide.active .aPop {
+      animation-name: pop
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(24px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    @keyframes riseL {
+      from {
+        opacity: 0;
+        transform: translateX(-32px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    @keyframes riseR {
+      from {
+        opacity: 0;
+        transform: translateX(32px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    @keyframes pop {
+      from {
+        opacity: 0;
+        transform: scale(.9)
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1)
+      }
+    }
+
+    /* ---------------- Slide Header ---------------- */
+    .s-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px
+    }
+
+    .s-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--cyan);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .s-tag i {
+      width: 11px;
+      height: 11px;
+      border-radius: 3px;
+      background: linear-gradient(135deg, var(--cyan), var(--green));
+      display: inline-block
+    }
+
+    .s-head h2 {
+      font-family: var(--head-font);
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: .3px;
+      line-height: 1.15
+    }
+
+    .s-en {
+      color: var(--gray);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      padding-bottom: 5px;
+    }
+
+    .s-rule {
+      height: 4px;
+      width: 72px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--cyan), var(--green));
+      margin-top: 10px
+    }
+
+    .s-body {
+      flex: 1;
+      margin-top: 18px;
+      display: flex;
+      flex-direction: column;
+      min-height: 0
+    }
+
+    /* ---------------- Slide Footer ---------------- */
+    .s-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 10px;
+      margin-top: 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    .fbar {
+      display: flex;
+      align-items: center;
+      gap: 7px
+    }
+
+    .fbar i {
+      height: 9px;
+      border-radius: 4px;
+      display: block
+    }
+
+    .fbar i.dot {
+      width: 9px !important;
+      border-radius: 50%
+    }
+
+    .pgno {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: 2px
+    }
+
+    .pgno b {
+      color: var(--cyan)
+    }
+
+    /* ---------------- Dark Slides ---------------- */
+    .slide.dark {
+      background: linear-gradient(155deg, #02486f 0%, var(--navy) 48%, var(--navy-2) 100%);
+      color: #fff;
+    }
+
+    .dark .s-tag {
+      color: var(--ice)
+    }
+
+    .dark .s-head h2 {
+      color: #fff
+    }
+
+    /* Decorative Vertical Bars */
+    .cover-bars {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+      padding: 0 26px;
+      height: 160px;
+      overflow: hidden;
+      pointer-events: none
+    }
+
+    .cover-bars i {
+      flex: 1;
+      border-radius: 5px 5px 0 0;
+      transform-origin: bottom;
+      transform: scaleY(0);
+      min-height: 12px;
+    }
+
+    .slide.active .cover-bars i {
+      animation: barUp .85s cubic-bezier(.22, .61, .36, 1) both;
+      animation-delay: calc(.28s + var(--d)*38ms)
+    }
+
+    @keyframes barUp {
+      from {
+        transform: scaleY(0)
+      }
+
+      to {
+        transform: scaleY(1)
+      }
+    }
+
+    /* Cover details */
+    .cover-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13.5px;
+      letter-spacing: 3.5px;
+      font-weight: 700;
+      color: var(--ice);
+      text-transform: uppercase
+    }
+
+    .cover-tag .pill {
+      background: rgba(0, 152, 190, .3);
+      border: 1px solid rgba(187, 223, 230, .45);
+      padding: 6px 16px;
+      border-radius: 999px;
+      letter-spacing: 2.5px
+    }
+
+    .cover-title {
+      font-family: var(--head-font);
+      font-size: 104px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      line-height: 1;
+      margin-top: 30px;
+      background: linear-gradient(100deg, #fff 25%, var(--ice) 65%, #76c5db 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .cover-sub {
+      font-family: var(--head-font);
+      font-size: 26px;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 16px;
+      letter-spacing: .8px
+    }
+
+    .cover-desc {
+      font-size: 15.5px;
+      color: var(--ice);
+      margin-top: 14px;
+      line-height: 1.75;
+      max-width: 980px
+    }
+
+    .cover-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, .09);
+      border: 1px solid rgba(187, 223, 230, .35);
+      color: #eaf6fa;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 999px;
+      letter-spacing: .4px;
+    }
+
+    .chip b {
+      color: #fff
+    }
+
+    .cover-meta {
+      position: absolute;
+      left: 64px;
+      bottom: 178px;
+      display: flex;
+      gap: 14px
+    }
+
+    .meta-card {
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(187, 223, 230, .3);
+      border-radius: 12px;
+      padding: 12px 18px;
+      font-size: 13.5px;
+      color: #dff0f6;
+      backdrop-filter: blur(4px);
+    }
+
+    .meta-card b {
+      display: block;
+      font-size: 15.5px;
+      color: #fff;
+      margin-bottom: 2px;
+      letter-spacing: .3px
+    }
+
+    /* Agenda / TOC Layout */
+    .toc-wrap {
+      flex: 1;
+      display: flex;
+      min-height: 0
+    }
+
+    .toc-grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding: 20px 20px 10px 0
+    }
+
+    .toc-item {
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(187, 223, 230, .25);
+      border-radius: 12px;
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: all .2s;
+    }
+
+    .toc-item:hover {
+      background: rgba(255, 255, 255, .1);
+      border-color: var(--cyan)
+    }
+
+    .toc-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between
+    }
+
+    .toc-num {
+      font-family: var(--head-font);
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--cyan);
+      line-height: 1
+    }
+
+    .toc-badge {
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      background: var(--green)
+    }
+
+    .toc-badge.sq {
+      background: var(--cyan)
+    }
+
+    .toc-badge.ci {
+      border-radius: 50%;
+      background: var(--amber)
+    }
+
+    .toc-badge.purple {
+      border-radius: 50%;
+      background: var(--purple)
+    }
+
+    .toc-item h3 {
+      font-family: var(--head-font);
+      font-size: 18px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: .3px
+    }
+
+    .toc-item p {
+      font-size: 12.5px;
+      color: var(--ice);
+      letter-spacing: 1px;
+      line-height: 1.45;
+      text-transform: uppercase
+    }
+
+    .toc-side {
+      writing-mode: vertical-rl;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--head-font);
+      font-size: 88px;
+      font-weight: 900;
+      letter-spacing: 12px;
+      color: rgba(187, 223, 230, .25);
+      border-left: 1px solid rgba(187, 223, 230, .2);
+      padding-left: 14px;
+    }
+
+    /* Chapter Divider */
+    .sec-num {
+      font-family: var(--head-font);
+      font-size: 132px;
+      font-weight: 900;
+      line-height: 1;
+      color: transparent;
+      -webkit-text-stroke: 3px rgba(187, 223, 230, .5);
+      letter-spacing: 4px
+    }
+
+    .sec-title {
+      font-family: var(--head-font);
+      font-size: 62px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 1.5px;
+      margin-top: 4px
+    }
+
+    .sec-en {
+      font-size: 16.5px;
+      color: var(--ice);
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-top: 10px
+    }
+
+    .sec-line {
+      width: 100px;
+      height: 5px;
+      border-radius: 3px;
+      background: linear-gradient(90deg, var(--cyan), var(--green));
+      margin: 22px 0
+    }
+
+    .sec-desc {
+      font-size: 16px;
+      color: #cfe6ee;
+      line-height: 1.8;
+      max-width: 780px
+    }
+
+    .sec-icons {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px
+    }
+
+    .sec-ic {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(187, 223, 230, .3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px
+    }
+
+    .sec-side {
+      position: absolute;
+      right: 52px;
+      top: 50%;
+      transform: translateY(-50%);
+      writing-mode: vertical-rl;
+      font-family: var(--head-font);
+      font-size: 54px;
+      font-weight: 900;
+      letter-spacing: 10px;
+      color: rgba(187, 223, 230, .2)
+    }
+
+    /* Ending Slide */
+    .end-emoji {
+      font-size: 74px
+    }
+
+    .end-title {
+      font-family: var(--head-font);
+      font-size: 76px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 3px;
+      margin-top: 12px
+    }
+
+    .end-sub {
+      font-size: 18px;
+      color: var(--ice);
+      letter-spacing: 4px;
+      margin-top: 14px;
+      text-transform: uppercase
+    }
+
+    /* ---------------- Card Components ---------------- */
+    .grid {
+      display: grid;
+      gap: 14px;
+      flex: 1;
+      min-height: 0
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--cyan);
+      border-radius: 12px;
+      padding: 15px 18px;
+      box-shadow: 0 6px 18px rgba(0, 62, 96, .06);
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      min-height: 0;
+    }
+
+    .card.g {
+      border-top-color: var(--green)
+    }
+
+    .card.n {
+      border-top-color: var(--navy)
+    }
+
+    .card.amber {
+      border-top-color: var(--amber)
+    }
+
+    .card.purple {
+      border-top-color: var(--purple)
+    }
+
+    .card.red {
+      border-top-color: var(--red)
+    }
+
+    .c-top {
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .ic {
+      width: 38px;
+      height: 38px;
+      flex: none;
+      border-radius: 10px;
+      font-size: 20px;
+      background: var(--ice-3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card.g .ic {
+      background: #e2f3ec
+    }
+
+    .card.n .ic {
+      background: #e6eff5
+    }
+
+    .card.amber .ic {
+      background: #fbeedd
+    }
+
+    .card.purple .ic {
+      background: #f3e8ff
+    }
+
+    .card.red .ic {
+      background: #fee2e2
+    }
+
+    .c-top h3 {
+      font-family: var(--head-font);
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: .2px
+    }
+
+    .c-top h3 small {
+      display: block;
+      font-size: 10.5px;
+      color: var(--gray);
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: 2px;
+      font-family: var(--font)
+    }
+
+    .card p {
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: var(--ink)
+    }
+
+    .card p b {
+      color: var(--navy)
+    }
+
+    .card .hl {
+      color: var(--cyan);
+      font-weight: 800
+    }
+
+    .card .hlg {
+      color: var(--green);
+      font-weight: 800
+    }
+
+    .card ul {
+      padding-left: 17px;
+      font-size: 13px;
+      color: var(--ink);
+      line-height: 1.6
+    }
+
+    .card ul li {
+      margin-bottom: 3px
+    }
+
+    .card ul li b {
+      color: var(--navy)
+    }
+
+    .mini {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--ice-3);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 4px 9px;
+      font-size: 12px;
+      color: var(--ink);
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .mini b {
+      color: var(--navy)
+    }
+
+    .minis {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px
+    }
+
+    /* Friendly Analogy & Tip Badges */
+    .analogy {
+      display: flex;
+      gap: 9px;
+      align-items: flex-start;
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      border-left: 4px solid #0284c7;
+      border-radius: 8px;
+      padding: 9px 12px;
+      font-size: 12.5px;
+      color: #0369a1;
+      line-height: 1.55;
+      margin-top: auto;
+    }
+
+    .analogy b {
+      color: #075985
+    }
+
+    .warn {
+      display: flex;
+      gap: 9px;
+      align-items: flex-start;
+      margin-top: auto;
+      background: #fef3e7;
+      border: 1px solid #f6dbbb;
+      border-left: 4px solid var(--amber);
+      border-radius: 8px;
+      padding: 9px 12px;
+      font-size: 12.5px;
+      color: #854d0e;
+      line-height: 1.55;
+      font-weight: 600;
+    }
+
+    .ok {
+      display: flex;
+      gap: 9px;
+      align-items: flex-start;
+      margin-top: auto;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      border-left: 4px solid var(--green);
+      border-radius: 8px;
+      padding: 9px 12px;
+      font-size: 12.5px;
+      color: #065f46;
+      line-height: 1.55;
+      font-weight: 600;
+    }
+
+    /* ---------------- Distro Grid & Logos ---------------- */
+    .distro-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .distro-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      padding: 9px 13px;
+      box-shadow: 0 4px 14px rgba(0, 62, 96, .05);
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      min-height: 0;
+      position: relative;
+      border-top: 3.5px solid var(--cyan);
+    }
+
+    .distro-card.ubuntu {
+      border-top-color: #E95420
+    }
+
+    .distro-card.debian {
+      border-top-color: #D70A53
+    }
+
+    .distro-card.fedora {
+      border-top-color: #51A2DA
+    }
+
+    .distro-card.kali {
+      border-top-color: #557C94
+    }
+
+    .distro-card.arch {
+      border-top-color: #1793D1
+    }
+
+    .distro-card.omarchy {
+      border-top-color: #9ECE6A
+    }
+
+    .distro-head {
+      display: flex;
+      align-items: center;
+      gap: 9px
+    }
+
+    .distro-logo {
+      width: 34px;
+      height: 34px;
+      flex: none;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--ice-3);
+      padding: 4px;
+    }
+
+    .distro-logo svg {
+      width: 100%;
+      height: 100%;
+      display: block
+    }
+
+    .distro-title-wrap {
+      flex: 1;
+      min-width: 0
+    }
+
+    .distro-title {
+      font-family: var(--head-font);
+      font-size: 14.5px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.15;
+    }
+
+    .distro-sub {
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--gray);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 2px;
+      font-family: var(--font);
+    }
+
+    .distro-desc {
+      font-size: 11px;
+      color: var(--ink);
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    .distro-desc b {
+      color: var(--navy)
+    }
+
+    .distro-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4px;
+      margin-top: auto;
+      padding-top: 4px;
+      border-top: 1px dashed var(--line);
+      font-size: 9.5px;
+    }
+
+    .distro-pkg {
+      font-family: var(--mono);
+      font-size: 9.5px;
+      font-weight: 700;
+      color: var(--navy-3);
+      background: var(--ice-3);
+      padding: 1.5px 5px;
+      border-radius: 4px;
+      border: 1px solid var(--line);
+    }
+
+    .distro-tag {
+      font-size: 9.5px;
+      font-weight: 700;
+      color: var(--cyan)
+    }
+
+    /* ---------------- Reference List Components ---------------- */
+    .ref-item {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      padding: 7px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .ref-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0
+    }
+
+    .ref-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: var(--head-font);
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .ref-desc {
+      font-size: 11.5px;
+      color: var(--ink);
+      line-height: 1.45;
+    }
+
+    .ref-desc b {
+      color: var(--navy)
+    }
+
+    .ref-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--cyan);
+      text-decoration: none;
+      margin-top: 2px;
+      transition: color .15s ease;
+    }
+
+    .ref-link:hover {
+      color: var(--cyan-bright);
+      text-decoration: underline
+    }
+
+    /* ---------------- Banner Blocks ---------------- */
+    .banner {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: linear-gradient(100deg, var(--navy) 0%, var(--navy-3) 100%);
+      border-radius: 12px;
+      padding: 13px 18px;
+      color: #fff;
+      margin-bottom: 12px;
+      box-shadow: 0 8px 20px rgba(0, 62, 96, .18);
+    }
+
+    .banner .b-ic {
+      font-size: 26px
+    }
+
+    .banner h3 {
+      font-family: var(--head-font);
+      font-size: 17.5px;
+      font-weight: 800;
+      letter-spacing: .3px
+    }
+
+    .banner h3 em {
+      font-style: normal;
+      color: var(--ice)
+    }
+
+    .banner p {
+      font-size: 13px;
+      color: #cfe6ee;
+      margin-top: 3px;
+      line-height: 1.5
+    }
+
+    .banner.light {
+      background: var(--ice-3);
+      border: 1px solid var(--line);
+      box-shadow: none
+    }
+
+    .banner.light h3 {
+      color: var(--navy)
+    }
+
+    .banner.light h3 em {
+      color: var(--cyan)
+    }
+
+    .banner.light p {
+      color: var(--gray)
+    }
+
+    /* ---------------- Column Layouts ---------------- */
+    .cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      flex: 1;
+      min-height: 0
+    }
+
+    .cols.wide-l {
+      grid-template-columns: 1.2fr 1fr
+    }
+
+    .cols.wide-r {
+      grid-template-columns: 1fr 1.2fr
+    }
+
+    .info-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-height: 0
+    }
+
+    .lead {
+      font-size: 14.5px;
+      line-height: 1.7;
+      color: var(--ink)
+    }
+
+    .lead b {
+      color: var(--navy)
+    }
+
+    .lead .hl {
+      color: var(--cyan);
+      font-weight: 800
+    }
+
+    .fact {
+      background: var(--ice-3);
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--cyan);
+      border-radius: 9px;
+      padding: 10px 14px;
+    }
+
+    .fact.g {
+      border-left-color: var(--green)
+    }
+
+    .fact.amber {
+      border-left-color: var(--amber)
+    }
+
+    .fact.purple {
+      border-left-color: var(--purple)
+    }
+
+    .fact h4 {
+      font-family: var(--head-font);
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: .2px;
+      margin-bottom: 3px;
+      display: flex;
+      gap: 7px;
+      align-items: center
+    }
+
+    .fact p {
+      font-size: 12.5px;
+      color: var(--ink);
+      line-height: 1.55
+    }
+
+    /* ---------------- Timeline Cards ---------------- */
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      flex: 1
+    }
+
+    .time-step {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--cyan);
+      border-radius: 10px;
+      padding: 14px;
+      box-shadow: 0 4px 12px rgba(0, 62, 96, .05);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .time-year {
+      font-family: var(--mono);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--cyan)
+    }
+
+    .time-title {
+      font-family: var(--head-font);
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--navy)
+    }
+
+    .time-desc {
+      font-size: 12.5px;
+      color: var(--ink);
+      line-height: 1.55
+    }
+
+    /* ---------------- Tables ---------------- */
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 62, 96, .07)
+    }
+
+    .spec-table th {
+      background: var(--navy);
+      color: #fff;
+      text-align: left;
+      padding: 9px 14px;
+      font-size: 12.5px;
+      letter-spacing: 1.5px;
+      font-weight: 800;
+      text-transform: uppercase
+    }
+
+    .spec-table td {
+      padding: 7.5px 14px;
+      border-bottom: 1px solid var(--line);
+      color: var(--ink);
+      line-height: 1.4
+    }
+
+    .spec-table tr:nth-child(even) td {
+      background: #f6fafc
+    }
+
+    .spec-table tr:last-child td {
+      border-bottom: none
+    }
+
+    .spec-table td:first-child {
+      color: var(--navy);
+      font-weight: 800;
+      white-space: nowrap;
+      font-family: var(--mono);
+      font-size: 12px
+    }
+
+    .spec-table td b {
+      color: var(--cyan)
+    }
+
+    .spec-table code {
+      font-family: var(--mono);
+      background: var(--ice-3);
+      padding: 2px 5px;
+      border-radius: 4px;
+      border: 1px solid var(--line);
+      font-size: 11.5px;
+      color: var(--navy-3)
+    }
+
+
+    .spec-table.compact th {
+      padding: 6.5px 12px;
+      font-size: 11.5px;
+    }
+
+    .spec-table.compact td {
+      padding: 4.5px 12px;
+      font-size: 11.5px;
+      line-height: 1.35;
+    }
+
+    .spec-table.compact td:first-child {
+      font-size: 11.5px;
+    }
+
+    /* ---------------- Terminal / Code Box ---------------- */
+    .term-box {
+      background: var(--code-bg);
+      border: 1px solid var(--code-border);
+      border-radius: 10px;
+      padding: 11px 15px;
+      font-family: var(--mono);
+      font-size: 12.5px;
+      line-height: 1.55;
+      color: var(--ice);
+      box-shadow: 0 6px 18px rgba(0, 25, 40, .28);
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      position: relative;
+    }
+
+    .term-box.sm {
+      font-size: 11.5px;
+      padding: 8px 12px;
+      line-height: 1.5
+    }
+
+    .term-head {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid rgba(187, 223, 230, .12);
+    }
+
+    .term-head .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block
+    }
+
+    .term-head .dot.r {
+      background: #ef4444
+    }
+
+    .term-head .dot.y {
+      background: #f59e0b
+    }
+
+    .term-head .dot.g {
+      background: #10b981
+    }
+
+    .term-head .title {
+      margin-left: 5px;
+      font-size: 10.5px;
+      color: var(--gray);
+      letter-spacing: 1px;
+      font-family: var(--font);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .term-code {
+      font-family: var(--mono);
+      white-space: pre;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .prm {
+      color: var(--cyan);
+      font-weight: 700;
+      user-select: none
+    }
+
+    .cmd {
+      color: #5ce1e6;
+      font-weight: 700
+    }
+
+    .arg {
+      color: #eaf4f7
+    }
+
+    .flg {
+      color: #fbbf24;
+      font-weight: 600
+    }
+
+    .str {
+      color: #6ee7b7
+    }
+
+    .cmt {
+      color: #768b9c;
+      font-style: italic
+    }
+
+    .out {
+      color: #9bb2c2
+    }
+
+    /* ---------------- Interactive Permission Calculator Widget ---------------- */
+    .perm-widget {
+      background: linear-gradient(135deg, var(--navy-2) 0%, var(--navy) 100%);
+      border: 1px solid rgba(187, 223, 230, .35);
+      border-radius: 12px;
+      padding: 14px 18px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .perm-calc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px
+    }
+
+    .perm-role-box {
+      background: rgba(255, 255, 255, .07);
+      border: 1px solid rgba(187, 223, 230, .25);
+      border-radius: 8px;
+      padding: 9px 11px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .perm-role-title {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: var(--ice);
+      letter-spacing: 1.5px;
+      text-transform: uppercase
+    }
+
+    .perm-checks {
+      display: flex;
+      gap: 7px
+    }
+
+    .perm-chk {
+      flex: 1;
+      background: rgba(0, 0, 0, .25);
+      border: 1px solid rgba(187, 223, 230, .2);
+      border-radius: 6px;
+      padding: 5px 0;
+      text-align: center;
+      cursor: pointer;
+      font-family: var(--mono);
+      font-size: 11.5px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, .45);
+      transition: all .15s;
+    }
+
+    .perm-chk.on {
+      background: var(--cyan);
+      color: #fff;
+      border-color: var(--cyan-bright);
+      box-shadow: 0 0 10px rgba(0, 152, 190, .5)
+    }
+
+    .perm-res-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(0, 0, 0, .35);
+      border: 1px solid rgba(187, 223, 230, .2);
+      border-radius: 8px;
+      padding: 9px 14px;
+      font-family: var(--mono);
+    }
+
+    .perm-mode {
+      font-size: 18px;
+      font-weight: 800;
+      color: #5ce1e6;
+      letter-spacing: 2px
+    }
+
+    .perm-sym {
+      font-size: 15px;
+      color: #a7f3d0;
+      letter-spacing: 2px
+    }
+
+    .perm-presets {
+      display: flex;
+      gap: 7px;
+      align-items: center
+    }
+
+    .perm-pre-btn {
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(187, 223, 230, .25);
+      color: var(--ice);
+      border-radius: 5px;
+      padding: 4px 8px;
+      font-size: 10.5px;
+      font-family: var(--font);
+      cursor: pointer;
+      font-weight: 700;
+      transition: all .2s;
+    }
+
+    .perm-pre-btn:hover {
+      background: var(--green);
+      color: #fff
+    }
+
+    /* ---------------- Architecture Layer Stack ---------------- */
+    .arch-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      flex: 1
+    }
+
+    .arch-layer {
+      border-radius: 9px;
+      padding: 9px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid var(--line);
+      box-shadow: 0 3px 8px rgba(0, 62, 96, .04);
+    }
+
+    .arch-layer.l1 {
+      background: #f8fafc;
+      border-left: 6px solid #3b82f6
+    }
+
+    .arch-layer.l2 {
+      background: #f0fdf4;
+      border-left: 6px solid #10b981
+    }
+
+    .arch-layer.l3 {
+      background: #ecfeff;
+      border-left: 6px solid #06b6d4
+    }
+
+    .arch-layer.l4 {
+      background: #fffbeb;
+      border-left: 6px solid #f59e0b
+    }
+
+    .arch-layer.l5 {
+      background: #041a29;
+      border-left: 6px solid #6366f1;
+      color: #fff
+    }
+
+    .arch-layer h4 {
+      font-family: var(--head-font);
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--navy)
+    }
+
+    .arch-layer.l5 h4 {
+      color: #fff
+    }
+
+    .arch-layer span {
+      font-size: 11.5px;
+      color: var(--gray)
+    }
+
+    .arch-layer.l5 span {
+      color: var(--ice)
+    }
+
+    /* ---------------- Stream Pipe Flow Visualization ---------------- */
+    .pipe-flow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--ice-3);
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      padding: 12px 18px;
+      justify-content: space-between;
+    }
+
+    .pipe-node {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 12px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 62, 96, .05);
+      flex: 1;
+    }
+
+    .pipe-node b {
+      display: block;
+      font-size: 13.5px;
+      color: var(--navy);
+      font-family: var(--head-font)
+    }
+
+    .pipe-node span {
+      font-size: 11px;
+      color: var(--gray);
+      font-family: var(--mono)
+    }
+
+    .pipe-arrow {
+      font-size: 18px;
+      color: var(--cyan);
+      font-weight: 900
+    }
+
+
+    /* ---------------- References Slide (Slide 35) ---------------- */
+    .ref-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 9px;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .ref-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 9px 15px;
+      box-shadow: 0 4px 12px rgba(0, 62, 96, .05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ref-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+    }
+
+    .ref-card.c-guides::before {
+      background: var(--cyan);
+    }
+
+    .ref-card.c-books::before {
+      background: var(--green);
+    }
+
+    .ref-card.c-games::before {
+      background: var(--amber);
+    }
+
+    .ref-card.c-maps::before {
+      background: var(--purple);
+    }
+
+    .ref-card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+
+    .ref-card-head .rch-title {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .ref-card-head .rch-icon {
+      font-size: 16px;
+    }
+
+    .ref-card-head h3 {
+      font-family: var(--head-font);
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .ref-card-head small {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--gray);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .ref-card-items {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      flex: 1;
+      justify-content: space-around;
+    }
+
+    .ref-tile {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 7px;
+      padding: 5px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      transition: border-color .15s ease, box-shadow .15s ease;
+    }
+
+    .ref-tile:hover {
+      border-color: rgba(0, 152, 190, .4);
+      box-shadow: 0 2px 8px rgba(0, 62, 96, .05);
+    }
+
+    .ref-tile-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .ref-tile-name {
+      font-family: var(--head-font);
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .ref-badge {
+      font-size: 9px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 1px 6px;
+      border-radius: 4px;
+      background: var(--ice-2);
+      color: var(--navy);
+      border: 1px solid var(--line);
+    }
+
+    .ref-tile-desc {
+      font-size: 10.5px;
+      line-height: 1.35;
+      color: #334155;
+    }
+
+    .ref-tile-desc b {
+      color: var(--navy);
+    }
+
+    .ref-tile-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: var(--mono);
+      font-size: 9.5px;
+      font-weight: 700;
+      color: var(--cyan);
+      text-decoration: none;
+      margin-top: 1px;
+    }
+
+    .ref-tile-link:hover {
+      text-decoration: underline;
+      color: var(--cyan-bright);
+    }
+
+    /* ---------------- Composable Pipeline Visual Step Cards ---------------- */
+    .pipe-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr 1fr;
+      gap: 11px;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .pipe-step-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px 13px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 12px rgba(0, 62, 96, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pipe-step-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3.5px;
+    }
+
+    .pipe-step-card.c-grep::before {
+      background: #0098be;
+    }
+
+    .pipe-step-card.c-awk::before {
+      background: #6366f1;
+    }
+
+    .pipe-step-card.c-sort1::before {
+      background: #ec4899;
+    }
+
+    .pipe-step-card.c-uniq::before {
+      background: #f59e0b;
+    }
+
+    .pipe-step-card.c-sort2::before {
+      background: #058e67;
+    }
+
+    .pipe-step-card.c-head::before {
+      background: #3b82f6;
+    }
+
+    .psc-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+
+    .psc-step-tag {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .psc-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--ice-3);
+      color: var(--navy);
+      font-size: 10.5px;
+      font-weight: 800;
+      font-family: var(--head-font);
+    }
+
+    .psc-cmd {
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .psc-badge {
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: var(--ice-2);
+      border: 1px solid var(--line);
+    }
+
+    .psc-desc {
+      font-size: 11px;
+      line-height: 1.35;
+      color: var(--navy);
+      margin: 0 0 5px 0;
+    }
+
+    .psc-flags {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 5px 8px;
+      font-size: 10.5px;
+      line-height: 1.35;
+      color: #334155;
+      margin-bottom: 5px;
+    }
+
+    .psc-flags b {
+      color: var(--navy);
+      font-family: var(--mono);
+    }
+
+    .psc-flags em {
+      color: #d97706;
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    .psc-stream {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #0b1723;
+      border-radius: 5px;
+      padding: 4px 8px;
+      font-family: var(--mono);
+      font-size: 9.5px;
+      color: #94a3b8;
+    }
+
+    .psc-stream-lbl {
+      color: var(--cyan);
+      font-weight: 800;
+      font-size: 9px;
+      flex-shrink: 0;
+    }
+
+    .psc-stream-val {
+      color: #e2e8f0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+
+    /* ---------------- Fixed Controls, Timer & Modal ---------------- */
+    #progress {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 4px;
+      width: 0;
+      z-index: 99;
+      background: linear-gradient(90deg, var(--cyan), var(--green));
+      transition: width .45s cubic-bezier(.22, .61, .36, 1)
+    }
+
+    .ctrl {
+      position: fixed;
+      right: 26px;
+      bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      z-index: 99
+    }
+
+    .ctrl-chip {
+      color: #d7ecf3;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      background: rgba(0, 35, 56, .75);
+      padding: 8px 13px;
+      border-radius: 999px;
+      border: 1px solid rgba(187, 223, 230, .25);
+      backdrop-filter: blur(5px);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .ctrl-chip b {
+      color: #fff;
+      font-size: 13.5px
+    }
+
+    .ctrl button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      background: #fff;
+      color: var(--navy);
+      font-size: 19px;
+      line-height: 1;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, .32);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform .2s, background .2s, color .2s;
+    }
+
+    .ctrl button:hover {
+      background: var(--cyan);
+      color: #fff;
+      transform: translateY(-2px)
+    }
+
+    .ctrl button:active {
+      transform: scale(.92)
+    }
+
+    .ctrl button:disabled {
+      opacity: .35;
+      cursor: default;
+      transform: none;
+      background: #fff;
+      color: var(--navy)
+    }
+
+    .hint {
+      position: fixed;
+      left: 26px;
+      bottom: 26px;
+      z-index: 99;
+      font-size: 11px;
+      color: rgba(187, 223, 230, .75);
+      letter-spacing: 1.2px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hint kbd {
+      background: rgba(255, 255, 255, .15);
+      border: 1px solid rgba(255, 255, 255, .3);
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-family: var(--mono);
+      font-size: 10px;
+      color: #fff;
+    }
+
+    @media (max-width:960px) {
+      .hint {
+        display: none
+      }
+    }
+
+    /* Slide Overview Modal */
+    #overviewModal {
+      position: fixed;
+      inset: 0;
+      background: rgba(1, 18, 30, .88);
+      backdrop-filter: blur(10px);
+      z-index: 999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    #overviewModal.show {
+      display: flex
+    }
+
+    .om-card {
+      background: var(--navy-2);
+      border: 1px solid rgba(187, 223, 230, .3);
+      border-radius: 18px;
+      width: 1120px;
+      max-height: 86vh;
+      padding: 28px 32px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, .7);
+    }
+
+    .om-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(187, 223, 230, .2)
+    }
+
+    .om-head h3 {
+      font-family: var(--head-font);
+      font-size: 22px;
+      color: #fff;
+      letter-spacing: .8px
+    }
+
+    .om-close {
+      background: rgba(255, 255, 255, .1);
+      border: none;
+      color: #fff;
+      font-size: 22px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      cursor: pointer
+    }
+
+    .om-close:hover {
+      background: var(--cyan)
+    }
+
+    .om-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      overflow-y: auto;
+      padding-right: 6px
+    }
+
+    .om-grid::-webkit-scrollbar {
+      width: 6px
+    }
+
+    .om-grid::-webkit-scrollbar-thumb {
+      background: rgba(187, 223, 230, .3);
+      border-radius: 3px
+    }
+
+    .om-item {
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(187, 223, 230, .2);
+      border-radius: 10px;
+      padding: 11px 13px;
+      cursor: pointer;
+      transition: all .2s;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .om-item:hover,
+    .om-item.active {
+      background: rgba(0, 152, 190, .25);
+      border-color: var(--cyan);
+      transform: translateY(-2px);
+    }
+
+    .om-item-num {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--cyan)
+    }
+
+    .om-item-title {
+      font-family: var(--head-font);
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.25
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="progress"></div>
+  <div id="stage">
+
+    <!-- ================= 01 COVER ================= -->
+    <section class="slide dark active">
+      <div class="cover-tag a" style="--d:0"><span class="pill">🐧 OPERATING SYSTEMS &amp; SYSTEMS ARCHITECTURE</span>
+      </div>
+      <h1 class="cover-title a" style="--d:1">GNU/Linux</h1>
+      <div class="cover-sub a" style="--d:2">Introduction to Architecture, Filesystem Hierarchy &amp; Essential CLI
+        Mastery</div>
+      <div class="cover-desc a" style="--d:3">A beginner-friendly yet technically thorough engineering presentation.
+        Discover how Unix inspired the free software movement, how the Linux kernel was born, and master everyday
+        navigation, permissions, and terminal pipelines.</div>
+      <div class="cover-chips a" style="--d:4">
+        <span class="chip">📜 <b>Unix &amp; Free Software</b></span>
+        <span class="chip">🐧 <b>Kernel &amp; Shell</b></span>
+        <span class="chip">📁 <b>Filesystem Hierarchy (FHS)</b></span>
+        <span class="chip">⚡ <b>Command Line Mastery</b></span>
+        <span class="chip">🔒 <b>Permissions &amp; Security</b></span>
+        <span class="chip">🔄 <b>Streams &amp; Pipelines</b></span>
+        <span class="chip">🔍 <b>System Diagnostics</b></span>
+      </div>
+      <div class="cover-meta a" style="--d:5">
+        <div class="meta-card">👨‍🏫 <b>Guilherme Viegas</b>Course Lecturer</div>
+        <div class="meta-card">🎯 <b>Designed For Beginners</b>Zero prior Linux experience assumed!</div>
+      </div>
+      <div class="cover-bars" data-bars></div>
+    </section>
+
+    <!-- ================= 02 AGENDA ================= -->
+    <section class="slide dark">
+      <div class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>Course Presentation · Guilherme Viegas</div>
+          <h2>Curriculum &amp; Course Agenda</h2>
+        </div>
+      </div>
+      <div class="toc-wrap">
+        <div class="toc-grid">
+          <div class="toc-item aL a" style="--d:1">
+            <div class="toc-top"><span class="toc-num">00</span><span class="toc-badge purple"></span></div>
+            <h3>History &amp; Origins</h3>
+            <p>Unix, Richard Stallman &amp; Linus Torvalds</p>
+          </div>
+          <div class="toc-item aR a" style="--d:2">
+            <div class="toc-top"><span class="toc-num">01</span><span class="toc-badge sq"></span></div>
+            <h3>Architecture &amp; Foundations</h3>
+            <p>Kernel, User Space &amp; "Everything is a File"</p>
+          </div>
+          <div class="toc-item aL a" style="--d:3">
+            <div class="toc-top"><span class="toc-num">02</span><span class="toc-badge"></span></div>
+            <h3>The Filesystem Hierarchy</h3>
+            <p>FHS Layout, System Files &amp; /proc, /dev</p>
+          </div>
+          <div class="toc-item aR a" style="--d:4">
+            <div class="toc-top"><span class="toc-num">03</span><span class="toc-badge ci"></span></div>
+            <h3>Navigation &amp; Operations</h3>
+            <p>Paths, Directory Actions &amp; Search Engines</p>
+          </div>
+          <div class="toc-item aL a" style="--d:5">
+            <div class="toc-top"><span class="toc-num">04</span><span class="toc-badge sq"></span></div>
+            <h3>Permissions &amp; Automation</h3>
+            <p>4-2-1 Octal, apt, Pipes &amp; Bash Scripting</p>
+          </div>
+          <div class="toc-item aR a" style="--d:6">
+            <div class="toc-top"><span class="toc-num">05</span><span class="toc-badge ci"></span></div>
+            <h3>Hardware &amp; System Diagnostics</h3>
+            <p>Knowing Your Machine: OS, RAM, Storage &amp; IP</p>
+          </div>
+        </div>
+        <div class="toc-side a" style="--d:6">AGENDA</div>
+      </div>
+      <div class="s-foot" style="border-top-color:rgba(187,223,230,.2)">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno" style="color:var(--ice)"><b>02</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 03 SECTION 0 DIVIDER ================= -->
+    <section class="slide dark">
+      <div class="sec-side a" style="--d:4">HISTORY</div>
+      <div class="s-head" style="margin-top:30px">
+        <div class="s-tag a" style="--d:0"><i></i>PART 00</div>
+      </div>
+      <div class="sec-num aL a" style="--d:1">00</div>
+      <div class="sec-title a" style="--d:2">History &amp; Origins</div>
+      <div class="sec-en a" style="--d:3">From Bell Labs &amp; GNU to Linus Torvalds</div>
+      <div class="sec-line a" style="--d:4"></div>
+      <div class="sec-desc a" style="--d:5">
+        Why does GNU/Linux exist? The revolutionary journey from proprietary Unix mainframes in the 1970s to Richard
+        Stallman’s Free Software movement, Linus Torvalds’ hobby kernel in 1991, and why it runs the entire modern world
+        today.
+      </div>
+      <div class="sec-icons a" style="--d:6">
+        <div class="sec-ic">📜</div>
+        <div class="sec-ic">💡</div>
+        <div class="sec-ic">🐧</div>
+        <div class="sec-ic">🌍</div>
+        <div class="sec-ic">🚀</div>
+      </div>
+      <div class="cover-bars" data-bars data-dim="1"></div>
+    </section>
+
+    <!-- ================= 04 THE BIRTH OF UNIX & THE GNU PROJECT ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>00 · History</div>
+          <h2>Unix &amp; The Birth of The GNU Project (1983)</h2>
+        </div>
+        <span class="s-en">The Free Software Vision</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <div class="cols wide-l">
+          <div class="info-stack">
+            <div class="banner a aL" style="--d:2">
+              <span class="b-ic">📜</span>
+              <div>
+                <h3>1969–1970s: The Unix Revolution · <em>AT&amp;T Bell Labs</em></h3>
+                <p>Ken Thompson and Dennis Ritchie created Unix: elegant, multi-tasking, and modular. However, Unix soon
+                  became closed-source, proprietary, and heavily locked behind corporate licenses.</p>
+              </div>
+            </div>
+            <div class="card purple a aL" style="--d:3">
+              <div class="c-top"><span class="ic">💡</span>
+                <h3>1983: Richard Stallman &amp; The GNU Project</h3>
+              </div>
+              <p>At MIT, <b>Richard Stallman (RMS)</b> believed software should be free for all humanity to learn and
+                collaborate. He launched the <b>GNU Project</b> (a recursive acronym: <em>"GNU's Not Unix!"</em>) to
+                build an entirely free, open-source Unix-compatible operating system.</p>
+              <div class="minis" style="margin-top:6px">
+                <span class="mini">Freedom 0: Run</span>
+                <span class="mini">Freedom 1: Study code</span>
+                <span class="mini">Freedom 2: Redistribute</span>
+                <span class="mini">Freedom 3: Modify &amp; Improve</span>
+              </div>
+            </div>
+          </div>
+          <div class="info-stack">
+            <div class="card n a aR" style="--d:2">
+              <div class="c-top"><span class="ic">🧰</span>
+                <h3>What GNU Built (The Userland)</h3>
+              </div>
+              <p>By the early 1990s, the GNU Project had built almost the complete operating system:</p>
+              <ul>
+                <li><b>GCC:</b> The GNU C Compiler (compiles software)</li>
+                <li><b>Bash:</b> The Bourne Again Shell (user terminal)</li>
+                <li><b>Coreutils:</b> Essential commands (<code>ls</code>, <code>cp</code>, <code>rm</code>)</li>
+                <li><b>Emacs:</b> The legendary extensible text editor</li>
+              </ul>
+            </div>
+            <div class="warn a aR" style="--d:4">
+              <span>🧩 <b>The Missing Piece:</b> GNU had built the steering wheel, engine parts, and seats, but was
+                missing a working, stable <b>Kernel</b> (the GNU Hurd kernel project was delayed).</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>04</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 05 LINUS TORVALDS & THE MARRIAGE ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>00 · History</div>
+          <h2>Linus Torvalds &amp; The Birth of Linux (1991)</h2>
+        </div>
+        <span class="s-en">The Missing Kernel</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <div class="cols wide-r">
+          <div class="info-stack">
+            <div class="term-box a aL" style="--d:2">
+              <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span
+                  class="dot g"></span><span class="title">Usenet Post · comp.os.minix · August 25, 1991</span></div>
+              <div class="term-code"><span class="cmt">From: Linus Benedict Torvalds
+                  (torvalds@kruuna.helsinki.fi)</span>
+                <span class="cmd">Subject: What would you like to see most in minix?</span>
+
+                <span class="str">"Hello everybody out there using minix -</span>
+                <span class="str">I'''m doing a (free) operating system (just a hobby,</span>
+                <span class="str">won'''t be big and professional like gnu) for 386(486) AT clones.</span>
+                <span class="str">This has been brewing since April, and is starting to get ready...</span>
+                <span class="str">Any suggestions are welcome, but I won'''t promise I'''ll implement them :-)"</span>
+              </div>
+            </div>
+            <div class="analogy a aL" style="--d:3">
+              <span>💡 <b>Why "GNU/Linux"?</b> The Linux Kernel alone is just an engine; it cannot interact with humans
+                without a shell and userland tools. Combining GNU tools + Linux Kernel created the complete operating
+                system!</span>
+            </div>
+          </div>
+          <div class="info-stack">
+            <div class="card g a aR" style="--d:2">
+              <div class="c-top"><span class="ic">🤝</span>
+                <h3>The Marriage of GNU and Linux</h3>
+              </div>
+              <p>Linus released his kernel under GNU's <b>GPL (General Public License)</b>. Developers worldwide
+                realized that combining Linus's kernel with GNU's software tools formed a complete, fully functioning,
+                100% free operating system!</p>
+            </div>
+            <div class="timeline a aR" style="--d:3;grid-template-columns:1fr 1fr;gap:10px">
+              <div class="time-step">
+                <div class="time-year">1991</div>
+                <div class="time-title">Linux Kernel</div>
+                <div class="time-desc">Linus writes the initial kernel on an Intel 386 PC.</div>
+              </div>
+              <div class="time-step">
+                <div class="time-year">1993</div>
+                <div class="time-title">Debian Born</div>
+                <div class="time-desc">Ian Murdock creates Debian to package GNU/Linux.</div>
+              </div>
+            </div>
+            <div class="ok a aR" style="--d:4">
+              <span>🚀 <b>Open Source Triumph:</b> Thousands of volunteer programmers around the world joined to fix
+                bugs, write drivers, and refine the system, creating a software revolution.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>05</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 06 WHY GNU/LINUX RULES THE WORLD ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>00 · History</div>
+          <h2>What is a Distribution? Major Distros &amp; Ecosystems</h2>
+        </div>
+        <span class="s-en">The Linux Family Tree</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <div class="banner light a" style="--d:2;margin-bottom:8px;padding:9px 14px">
+          <span class="b-ic">🐧</span>
+          <div>
+            <h3>What is a Linux Distribution ("Distro")?</h3>
+            <p>A "Distro" is a complete operating system built from the <b>Linux Kernel</b> + <b>GNU Coreutils</b> + a
+              <b>Package Manager</b> (<code>apt</code>, <code>dnf</code>, <code>pacman</code>) + Desktop &amp; Default
+              Configurations. Each distro tailors the environment to specific goals!
+            </p>
+          </div>
+        </div>
+
+        <div class="distro-grid">
+          <!-- Ubuntu -->
+          <div class="distro-card ubuntu a aPop" style="--d:3">
+            <div class="distro-head">
+              <div class="distro-logo" style="background:#fff3ed"><svg viewBox="0 0 24 24" width="22" height="22"
+                  fill="#E95420" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M17.61.455a3.41 3.41 0 0 0-3.41 3.41 3.41 3.41 0 0 0 3.41 3.41 3.41 3.41 0 0 0 3.41-3.41 3.41 3.41 0 0 0-3.41-3.41zM12.92.8C8.923.777 5.137 2.941 3.148 6.451a4.5 4.5 0 0 1 .26-.007 4.92 4.92 0 0 1 2.585.737A8.316 8.316 0 0 1 12.688 3.6 4.944 4.944 0 0 1 13.723.834 11.008 11.008 0 0 0 12.92.8zm9.226 4.994a4.915 4.915 0 0 1-1.918 2.246 8.36 8.36 0 0 1-.273 8.303 4.89 4.89 0 0 1 1.632 2.54 11.156 11.156 0 0 0 .559-13.089zM3.41 7.932A3.41 3.41 0 0 0 0 11.342a3.41 3.41 0 0 0 3.41 3.409 3.41 3.41 0 0 0 3.41-3.41 3.41 3.41 0 0 0-3.41-3.41zm2.027 7.866a4.908 4.908 0 0 1-2.915.358 11.1 11.1 0 0 0 7.991 6.698 11.234 11.234 0 0 0 2.422.249 4.879 4.879 0 0 1-.999-2.85 8.484 8.484 0 0 1-.836-.136 8.304 8.304 0 0 1-5.663-4.32zm11.405.928a3.41 3.41 0 0 0-3.41 3.41 3.41 3.41 0 0 0 3.41 3.41 3.41 3.41 0 0 0 3.41-3.41 3.41 3.41 0 0 0-3.41-3.41z" />
+                </svg></div>
+              <div class="distro-title-wrap">
+                <div class="distro-title">Ubuntu</div>
+                <div class="distro-sub">Debian Family · Canonical</div>
+              </div>
+            </div>
+            <div class="distro-desc">
+              The world's most popular distro. Beginner-friendly desktop experience and the undisputed default for cloud
+              servers, AI/ML, and Docker containers.
+            </div>
+            <div class="distro-meta">
+              <span class="distro-pkg">apt / snap</span>
+              <span class="distro-tag" style="color:#E95420">Cloud &amp; Beginners</span>
+            </div>
+          </div>
+
+          <!-- Debian -->
+          <div class="distro-card debian a aPop" style="--d:4">
+            <div class="distro-head">
+              <div class="distro-logo" style="background:#fdf2f4"><svg viewBox="0 0 24 24" width="22" height="22"
+                  fill="#D70A53" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M13.88 12.685c-.4 0 .08.2.601.28.14-.1.27-.22.39-.33a3.001 3.001 0 01-.99.05m2.14-.53c.23-.33.4-.69.47-1.06-.06.27-.2.5-.33.73-.75.47-.07-.27 0-.56-.8 1.01-.11.6-.14.89m.781-2.05c.05-.721-.14-.501-.2-.221.07.04.13.5.2.22M12.38.31c.2.04.45.07.42.12.23-.05.28-.1-.43-.12m.43.12l-.15.03.14-.01V.43m6.633 9.944c.02.64-.2.95-.38 1.5l-.35.181c-.28.54.03.35-.17.78-.44.39-1.34 1.22-1.62 1.301-.201 0 .14-.25.19-.34-.591.4-.481.6-1.371.85l-.03-.06c-2.221 1.04-5.303-1.02-5.253-3.842-.03.17-.07.13-.12.2a3.551 3.552 0 012.001-3.501 3.361 3.362 0 013.732.48 3.341 3.342 0 00-2.721-1.3c-1.18.01-2.281.76-2.651 1.57-.6.38-.67 1.47-.93 1.661-.361 2.601.66 3.722 2.38 5.042.27.19.08.21.12.35a4.702 4.702 0 01-1.53-1.16c.23.33.47.66.8.91-.55-.18-1.27-1.3-1.48-1.35.93 1.66 3.78 2.921 5.261 2.3a6.203 6.203 0 01-2.33-.28c-.33-.16-.77-.51-.7-.57a5.802 5.803 0 005.902-.84c.44-.35.93-.94 1.07-.95-.2.32.04.16-.12.44.44-.72-.2-.3.46-1.24l.24.33c-.09-.6.74-1.321.66-2.262.19-.3.2.3 0 .97.29-.74.08-.85.15-1.46.08.2.18.42.23.63-.18-.7.2-1.2.28-1.6-.09-.05-.28.3-.32-.53 0-.37.1-.2.14-.28-.08-.05-.26-.32-.38-.861.08-.13.22.33.34.34-.08-.42-.2-.75-.2-1.08-.34-.68-.12.1-.4-.3-.34-1.091.3-.25.34-.74.54.77.84 1.96.981 2.46-.1-.6-.28-1.2-.49-1.76.16.07-.26-1.241.21-.37A7.823 7.824 0 0017.702 1.6c.18.17.42.39.33.42-.75-.45-.62-.48-.73-.67-.61-.25-.65.02-1.06 0C15.082.73 14.862.8 13.8.4l.05.23c-.77-.25-.9.1-1.73 0-.05-.04.27-.14.53-.18-.741.1-.701-.14-1.431.03.17-.13.36-.21.55-.32-.6.04-1.44.35-1.18.07C9.6.68 7.847 1.3 6.867 2.22L6.838 2c-.45.54-1.96 1.611-2.08 2.311l-.131.03c-.23.4-.38.85-.57 1.261-.3.52-.45.2-.4.28-.6 1.22-.9 2.251-1.16 3.102.18.27 0 1.65.07 2.76-.3 5.463 3.84 10.776 8.363 12.006.67.23 1.65.23 2.49.25-.99-.28-1.12-.15-2.08-.49-.7-.32-.85-.7-1.34-1.13l.2.35c-.971-.34-.57-.42-1.361-.67l.21-.27c-.31-.03-.83-.53-.97-.81l-.34.01c-.41-.501-.63-.871-.61-1.161l-.111.2c-.13-.21-1.52-1.901-.8-1.511-.13-.12-.31-.2-.5-.55l.14-.17c-.35-.44-.64-1.02-.62-1.2.2.24.32.3.45.33-.88-2.172-.93-.12-1.601-2.202l.15-.02c-.1-.16-.18-.34-.26-.51l.06-.6c-.63-.74-.18-3.102-.09-4.402.07-.54.53-1.1.88-1.981l-.21-.04c.4-.71 2.341-2.872 3.241-2.761.43-.55-.09 0-.18-.14.96-.991 1.26-.7 1.901-.88.7-.401-.6.16-.27-.151 1.2-.3.85-.7 2.421-.85.16.1-.39.14-.52.26 1-.49 3.151-.37 4.562.27 1.63.77 3.461 3.011 3.531 5.132l.08.02c-.04.85.13 1.821-.17 2.711l.2-.42M9.54 13.236l-.05.28c.26.35.47.73.8 1.01-.24-.47-.42-.66-.75-1.3m.62-.02c-.14-.15-.22-.34-.31-.52.08.32.26.6.43.88l-.12-.36m10.945-2.382l-.07.15c-.1.76-.34 1.511-.69 2.212.4-.73.65-1.541.75-2.362M12.45.12c.27-.1.66-.05.95-.12-.37.03-.74.05-1.1.1l.15.02M3.006 5.142c.07.57-.43.8.11.42.3-.66-.11-.18-.1-.42m-.64 2.661c.12-.39.15-.62.2-.84-.35.44-.17.53-.2.83" />
+                </svg></div>
+              <div class="distro-title-wrap">
+                <div class="distro-title">Debian</div>
+                <div class="distro-sub">The Universal OS · Community</div>
+              </div>
+            </div>
+            <div class="distro-desc">
+              The bedrock ancestor of Ubuntu &amp; Kali. Known for rock-solid stability, zero corporate control, and a
+              strict commitment to 100% Free Software.
+            </div>
+            <div class="distro-meta">
+              <span class="distro-pkg">apt (dpkg)</span>
+              <span class="distro-tag" style="color:#D70A53">Production Servers</span>
+            </div>
+          </div>
+
+          <!-- Fedora -->
+          <div class="distro-card fedora a aPop" style="--d:5">
+            <div class="distro-head">
+              <div class="distro-logo" style="background:#edf5fc"><svg viewBox="0 0 24 24" width="22" height="22"
+                  fill="#51A2DA" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.001 0C5.376 0 .008 5.369.004 11.992H.002v9.287h.002A2.726 2.726 0 0 0 2.73 24h9.275c6.626-.004 11.993-5.372 11.993-11.997C23.998 5.375 18.628 0 12 0zm2.431 4.94c2.015 0 3.917 1.543 3.917 3.671 0 .197.001.395-.03.619a1.002 1.002 0 0 1-1.137.893 1.002 1.002 0 0 1-.842-1.175 2.61 2.61 0 0 0 .013-.337c0-1.207-.987-1.672-1.92-1.672-.934 0-1.775.784-1.777 1.672.016 1.027 0 2.046 0 3.07l1.732-.012c1.352-.028 1.368 2.009.016 1.998l-1.748.013c-.004.826.006.677.002 1.093 0 0 .015 1.01-.016 1.776-.209 2.25-2.124 4.046-4.424 4.046-2.438 0-4.448-1.993-4.448-4.437.073-2.515 2.078-4.492 4.603-4.469l1.409-.01v1.996l-1.409.013h-.007c-1.388.04-2.577.984-2.6 2.47a2.438 2.438 0 0 0 2.452 2.439c1.356 0 2.441-.987 2.441-2.437l-.001-7.557c0-.14.005-.252.02-.407.23-1.848 1.883-3.256 3.754-3.256z" />
+                </svg></div>
+              <div class="distro-title-wrap">
+                <div class="distro-title">Fedora</div>
+                <div class="distro-sub">Red Hat Family · Upstream RHEL</div>
+              </div>
+            </div>
+            <div class="distro-desc">
+              The cutting-edge innovation workstation sponsored by Red Hat. Always ships the newest kernels, latest
+              GNOME desktop, Wayland, and modern developer tools.
+            </div>
+            <div class="distro-meta">
+              <span class="distro-pkg">dnf (rpm)</span>
+              <span class="distro-tag" style="color:#51A2DA">Modern Workstations</span>
+            </div>
+          </div>
+
+          <!-- Kali Linux -->
+          <div class="distro-card kali a aPop" style="--d:6">
+            <div class="distro-head">
+              <div class="distro-logo" style="background:#f1f5f9"><svg viewBox="0 0 24 24" width="22" height="22"
+                  fill="#557C94" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.778 5.943s-1.97-.13-5.327.92c-3.42 1.07-5.36 2.587-5.36 2.587s5.098-2.847 10.852-3.008zm7.351 3.095l.257-.017s-1.468-1.78-4.278-2.648c1.58.642 2.954 1.493 4.021 2.665zm.42.74c.039-.068.166.217.263.337.004.024.01.039-.045.027-.005-.025-.013-.032-.013-.032s-.135-.08-.177-.137c-.041-.057-.049-.157-.028-.195zm3.448 8.479s.312-3.578-5.31-4.403a18.277 18.277 0 0 0-2.524-.187c-4.506.06-4.67-5.197-1.275-5.462 1.407-.116 3.087.643 4.73 1.408-.007.204.002.385.136.552.134.168.648.35.813.445.164.094.691.43 1.014.85.07-.131.654-.512.654-.512s-.14.003-.465-.119c-.326-.122-.713-.49-.722-.511-.01-.022-.015-.055.06-.07.059-.049-.072-.207-.13-.265-.058-.058-.445-.716-.454-.73-.009-.016-.012-.031-.04-.05-.085-.027-.46.04-.46.04s-.575-.283-.774-.893c.003.107-.099.224 0 .469-.3-.127-.558-.344-.762-.88-.12.305 0 .499 0 .499s-.707-.198-.82-.85c-.124.293 0 .469 0 .469s-1.153-.602-3.069-.61c-1.283-.118-1.55-2.374-1.43-2.754 0 0-1.85-.975-5.493-1.406-3.642-.43-6.628-.065-6.628-.065s6.45-.31 11.617 1.783c.176.785.704 2.094.989 2.723-.815.563-1.733 1.092-1.876 2.97-.143 1.878 1.472 3.53 3.474 3.58 1.9.102 3.214.116 4.806.942 1.52.84 2.766 3.4 2.89 5.703.132-1.709-.509-5.383-3.5-6.498 4.181.732 4.549 3.832 4.549 3.832zM12.68 5.663l-.15-.485s-2.484-.441-5.822-.204C3.37 5.211 0 6.38 0 6.38s6.896-1.735 12.68-.717Z" />
+                </svg></div>
+              <div class="distro-title-wrap">
+                <div class="distro-title">Kali Linux</div>
+                <div class="distro-sub">Debian-Based · Offensive Security</div>
+              </div>
+            </div>
+            <div class="distro-desc">
+              The industry standard for ethical hacking, penetration testing, and digital forensics. Comes pre-loaded
+              with over 600+ specialized security tools.
+            </div>
+            <div class="distro-meta">
+              <span class="distro-pkg">apt</span>
+              <span class="distro-tag" style="color:#557C94">Cybersecurity &amp; PenTest</span>
+            </div>
+          </div>
+
+          <!-- Arch Linux -->
+          <div class="distro-card arch a aPop" style="--d:7">
+            <div class="distro-head">
+              <div class="distro-logo" style="background:#eaf4fb"><svg viewBox="0 0 24 24" width="22" height="22"
+                  fill="#1793D1" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M11.39.605C10.376 3.092 9.764 4.72 8.635 7.132c.693.734 1.543 1.589 2.923 2.554-1.484-.61-2.496-1.224-3.252-1.86C6.86 10.842 4.596 15.138 0 23.395c3.612-2.085 6.412-3.37 9.021-3.862a6.61 6.61 0 01-.171-1.547l.003-.115c.058-2.315 1.261-4.095 2.687-3.973 1.426.12 2.534 2.096 2.478 4.409a6.52 6.52 0 01-.146 1.243c2.58.505 5.352 1.787 8.914 3.844-.702-1.293-1.33-2.459-1.929-3.57-.943-.73-1.926-1.682-3.933-2.713 1.38.359 2.367.772 3.137 1.234-6.09-11.334-6.582-12.84-8.67-17.74zM22.898 21.36v-.623h-.234v-.084h.562v.084h-.234v.623h.331v-.707h.142l.167.5.034.107a2.26 2.26 0 01.038-.114l.17-.493H24v.707h-.091v-.593l-.206.593h-.084l-.205-.602v.602h-.091" />
+                </svg></div>
+              <div class="distro-title-wrap">
+                <div class="distro-title">Arch Linux</div>
+                <div class="distro-sub">Independent · Rolling Release</div>
+              </div>
+            </div>
+            <div class="distro-desc">
+              Built on the "Keep It Simple, Stupid" (KISS) principle. A DIY rolling release where you build your OS from
+              scratch with the Arch User Repository (AUR).
+            </div>
+            <div class="distro-meta">
+              <span class="distro-pkg">pacman + AUR</span>
+              <span class="distro-tag" style="color:#1793D1">DIY &amp; Power Users</span>
+            </div>
+          </div>
+
+          <!-- Omarchy -->
+          <div class="distro-card omarchy a aPop" style="--d:8">
+            <div class="distro-head">
+              <div class="distro-logo" style="background:#f4fbf0"><svg viewBox="0 0 1200 1200" width="22" height="22"
+                  fill="#9ECE6A" xmlns="http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd"
+                    d="m1200 1200h-480v-80h400v-1040h-479.996v160h-400v720h720v-720h-80v-80h159.996v880h-400v160h-640v-1200h1200zm-1120-80h480v-80h-400l.004-400h-80.004zm0-560h80.004v-400h400v-80h-480.004z"
+                    fill="#9ece6a" fill-rule="evenodd" />
+                </svg></div>
+              <div class="distro-title-wrap">
+                <div class="distro-title">Omarchy</div>
+                <div class="distro-sub">Arch-Based · By DHH (Basecamp)</div>
+              </div>
+            </div>
+            <div class="distro-desc">
+              A beautiful, modern, fun &amp; opinionated Linux distribution by David Heinemeier Hansson (DHH). Crafted
+              for an agentic, hyper-productive developer workflow.
+            </div>
+            <div class="distro-meta">
+              <span class="distro-pkg">pacman / omakub</span>
+              <span class="distro-tag" style="color:#9ECE6A">Agentic &amp; Modern Dev</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ok a" style="--d:9;margin-top:6px;padding:6px 12px;font-size:11px">
+          <span>💡 <b>Choosing Your Distro:</b> For beginners, <b>Ubuntu</b> or <b>Fedora</b> offer the best
+            out-of-the-box driver support and documentation. As your skills advance, explore <b>Debian</b> for
+            rock-solid servers, <b>Arch</b> for DIY control, or <b>Omarchy</b> for modern developer tooling!</span>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>06</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 07 GLOBAL UBIQUITY & INSTALLATION ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>00 · History &amp; Ecosystem</div>
+          <h2>Where Linux Runs &amp; How to Get Started</h2>
+        </div>
+        <span class="s-en">Global Ubiquity &amp; Installation Methods</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <!-- Top Row: Where Linux Runs -->
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+          <span
+            style="font-family:var(--head-font);font-size:12px;font-weight:800;color:var(--cyan);letter-spacing:1.5px;text-transform:uppercase">🌍
+            1. Where Linux Runs Today · Universal Dominance</span>
+          <span style="font-size:11px;color:var(--gray)">Powering 90%+ of the internet and scientific computing</span>
+        </div>
+        <div class="grid" style="grid-template-columns:repeat(4,1fr);gap:11px;flex:none;margin-bottom:12px">
+          <div class="card a aPop" style="--d:2;padding:10px 14px">
+            <div class="c-top"><span class="ic">☁️</span>
+              <h3>Cloud &amp; Servers</h3>
+            </div>
+            <p style="font-size:11.5px;line-height:1.45">Powers over <b>90%+ of cloud workloads</b> across AWS, GCP,
+              Azure, Docker containers, and web servers.</p>
+          </div>
+          <div class="card g a aPop" style="--d:3;padding:10px 14px">
+            <div class="c-top"><span class="ic">⚡</span>
+              <h3>Supercomputers</h3>
+            </div>
+            <p style="font-size:11.5px;line-height:1.45"><b>100% of the world's Top 500 supercomputers</b> run Linux due
+              to its extreme performance and modular kernel.</p>
+          </div>
+          <div class="card amber a aPop" style="--d:4;padding:10px 14px">
+            <div class="c-top"><span class="ic">📱</span>
+              <h3>Smart Devices</h3>
+            </div>
+            <p style="font-size:11.5px;line-height:1.45">Over <b>3 billion Android phones</b> run on the Linux kernel,
+              along with smart TVs, Wi-Fi routers, and Tesla cars.</p>
+          </div>
+          <div class="card purple a aPop" style="--d:5;padding:10px 14px">
+            <div class="c-top"><span class="ic">🛰️</span>
+              <h3>Outer Space</h3>
+            </div>
+            <p style="font-size:11.5px;line-height:1.45">NASA's Mars rover <em>Perseverance</em> and the
+              <em>Ingenuity</em> helicopter both navigate Mars running customized Linux!
+            </p>
+          </div>
+        </div>
+
+        <!-- Bottom Row: How to Install Linux -->
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+          <span
+            style="font-family:var(--head-font);font-size:12px;font-weight:800;color:var(--green);letter-spacing:1.5px;text-transform:uppercase">🛠️
+            2. How to Experience &amp; Install Linux · Choosing Your Path</span>
+          <span style="font-size:11px;color:var(--gray)">From zero-risk sandboxes to dedicated bare metal</span>
+        </div>
+        <div class="grid" style="grid-template-columns:repeat(4,1fr);gap:11px;flex:1">
+          <div class="card a aPop" style="--d:6;padding:10px 14px">
+            <div class="c-top"><span class="ic">🧪</span>
+              <h3>1. Live USB Boot<small>Zero Risk · Try First</small></h3>
+            </div>
+            <p style="font-size:11.5px;line-height:1.45">Flash an ISO via <b>BalenaEtcher</b> or <b>Ventoy</b>. Boots in
+              RAM directly from USB. Test hardware without touching your internal drive!</p>
+            <div
+              style="margin-top:auto;padding-top:4px;border-top:1px dashed var(--line);font-size:10px;font-weight:700;color:var(--cyan)">
+              🛡️ Leaves PC 100% Untouched
+            </div>
+          </div>
+          <div class="card g a aPop" style="--d:7;padding:10px 14px">
+            <div class="c-top"><span class="ic">💻</span>
+              <h3>2. Virtual Machine / WSL<small>Safe Sandbox Inside OS</small></h3>
+            </div>
+            <p style="font-size:11.5px;line-height:1.45">Run inside Windows via <b>WSL2</b> or <b>VirtualBox</b>, or
+              macOS via <b>UTM</b>. Excellent for university coursework and daily coding.</p>
+            <div
+              style="margin-top:auto;padding-top:4px;border-top:1px dashed var(--line);font-size:10px;font-weight:700;color:var(--green)">
+              📦 Isolated Learning Sandbox
+            </div>
+          </div>
+          <div class="card amber a aPop" style="--d:8;padding:10px 14px">
+            <div class="c-top"><span class="ic">🔀</span>
+              <h3>3. Dual-Booting<small>Side-by-Side Performance</small></h3>
+            </div>
+            <p style="font-size:11.5px;line-height:1.45">Partition your disk to keep Windows and Linux together. The
+              <b>GRUB bootloader</b> lets you choose your OS at startup with full native GPU speed.
+            </p>
+            <div
+              style="margin-top:auto;padding-top:4px;border-top:1px dashed var(--line);font-size:10px;font-weight:700;color:var(--amber)">
+              ⚡ Native Hardware Performance
+            </div>
+          </div>
+          <div class="card purple a aPop" style="--d:9;padding:10px 14px">
+            <div class="c-top"><span class="ic">🚀</span>
+              <h3>4. Dedicated Install<small>Full Bare-Metal Freedom</small></h3>
+            </div>
+            <p style="font-size:11.5px;line-height:1.45">Wipe the drive and give 100% of your machine to Linux. Delivers
+              the fastest boot times, best battery life, and complete data privacy.</p>
+            <div
+              style="margin-top:auto;padding-top:4px;border-top:1px dashed var(--line);font-size:10px;font-weight:700;color:var(--purple)">
+              👑 Complete System Ownership
+            </div>
+          </div>
+        </div>
+
+        <div class="analogy a" style="--d:10;margin-top:8px;padding:6px 12px;font-size:11.5px">
+          <span>💡 <b>Beginner Recommendation:</b> Start with a <b>Live USB</b> or <b>WSL2 / VirtualBox</b> to practice
+            safely. Once comfortable, set up a <b>Dual-Boot</b> or dedicated install for daily engineering work!</span>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>07</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 08 SECTION 1 DIVIDER ================= -->
+    <section class="slide dark">
+      <div class="sec-side a" style="--d:4">ARCHITECTURE</div>
+      <div class="s-head" style="margin-top:30px">
+        <div class="s-tag a" style="--d:0"><i></i>PART 01</div>
+      </div>
+      <div class="sec-num aL a" style="--d:1">01</div>
+      <div class="sec-title a" style="--d:2">Architecture &amp; Foundations</div>
+      <div class="sec-en a" style="--d:3">Kernel, User Space &amp; The Unix Philosophy</div>
+      <div class="sec-line a" style="--d:4"></div>
+      <div class="sec-desc a" style="--d:5">
+        Understanding the boundary between hardware privileges and user processes.<br>
+        How the Linux kernel abstracts physical compute, why User Space crashes never destabilize the OS, and how the
+        unified "Everything is a File" model simplifies computing.
+      </div>
+      <div class="sec-icons a" style="--d:6">
+        <div class="sec-ic">🐧</div>
+        <div class="sec-ic">⚙️</div>
+        <div class="sec-ic">💻</div>
+        <div class="sec-ic">🛡️</div>
+        <div class="sec-ic">🔌</div>
+      </div>
+      <div class="cover-bars" data-bars data-dim="1"></div>
+    </section>
+
+    <!-- ================= 09 THE GNU/LINUX ARCHITECTURE ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>01 · Architecture</div>
+          <h2>The Operating System Stack &amp; Syscalls</h2>
+        </div>
+        <span class="s-en">Privilege Separation</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <div class="cols wide-l">
+          <div class="info-stack">
+            <div class="banner a aL" style="--d:2">
+              <span class="b-ic">🛡️</span>
+              <div>
+                <h3>Strict Privilege Isolation · <em>Ring 0 vs. Ring 3</em></h3>
+                <p>Hardware operations are restricted to the kernel to prevent application bugs from corrupting physical
+                  memory.</p>
+              </div>
+            </div>
+            <div class="grid" style="grid-template-columns:1fr 1fr">
+              <div class="card a aL" style="--d:3">
+                <div class="c-top"><span class="ic">🧠</span>
+                  <h3>The Linux Kernel<small>Ring 0 · Privileged</small></h3>
+                </div>
+                <p>Directly manages physical hardware:</p>
+                <ul>
+                  <li>CPU scheduling &amp; thread preemption</li>
+                  <li>Virtual memory management &amp; paging</li>
+                  <li>Hardware device drivers &amp; network queues</li>
+                </ul>
+              </div>
+              <div class="card g a aL" style="--d:4">
+                <div class="c-top"><span class="ic">📦</span>
+                  <h3>User Space<small>Ring 3 · Unprivileged</small></h3>
+                </div>
+                <p>Where applications execute safely:</p>
+                <ul>
+                  <li>User processes (Web servers, Python, Node.js)</li>
+                  <li>System daemons (<code>systemd</code>, <code>sshd</code>, <code>cron</code>)</li>
+                  <li>Standard C runtime library (<b>glibc</b>)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="analogy a aL" style="--d:5">
+              <span>🚗 <b>Car Analogy:</b> The <b>Kernel</b> is the engine, transmission, and brakes beneath the hood.
+                <b>User Space</b> is the steering wheel and dashboard where you sit. A broken radio in user space won't
+                cause the engine to explode!</span>
+            </div>
+          </div>
+          <div class="arch-stack a aR" style="--d:3">
+            <div class="arch-layer l1">
+              <div>
+                <h4>User Applications</h4><span>Browsers, Python scripts, databases, CLI tools</span>
+              </div>
+              <span class="mini">User Space</span>
+            </div>
+            <div class="arch-layer l2">
+              <div>
+                <h4>The Shell (Bash / Zsh)</h4><span>Command interpreter &amp; environment manager</span>
+              </div>
+              <span class="mini">Interpreter</span>
+            </div>
+            <div class="arch-layer l3">
+              <div>
+                <h4>C Standard Library (glibc)</h4><span>Wraps POSIX system calls (fork, exec, open, read, write)</span>
+              </div>
+              <span class="mini">API Layer</span>
+            </div>
+            <div class="arch-layer l4">
+              <div>
+                <h4>System Call Interface (Syscalls)</h4><span>Hardware-enforced transition boundary into Ring 0</span>
+              </div>
+              <span class="mini" style="background:#fef3c7;border-color:#fde68a">Boundary</span>
+            </div>
+            <div class="arch-layer l5">
+              <div>
+                <h4>The Linux Kernel &amp; Hardware</h4><span>Process Scheduler, Virtual Memory, VFS, CPU, RAM,
+                  Disks</span>
+              </div>
+              <span class="mini" style="background:#1e3a5f;border-color:var(--cyan);color:#fff">Ring 0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>09</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 10 EVERYTHING IS A FILE ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>01 · Architecture</div>
+          <h2>The Core Philosophy: "Everything is a File"</h2>
+        </div>
+        <span class="s-en">Unified Abstraction</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <div class="banner light a" style="--d:2">
+          <span class="b-ic">🌐</span>
+          <div>
+            <h3>A Universal Interface · <em>Everything is Accessible via File Descriptors</em></h3>
+            <p>Instead of needing different APIs for disks, screens, network cards, and memory, Linux unifies everything
+              into one universal, easy-to-read file paradigm.</p>
+          </div>
+        </div>
+        <div class="grid" style="grid-template-columns:1fr 1fr">
+          <div class="card a aL" style="--d:3">
+            <div class="c-top"><span class="ic">📄</span>
+              <h3>1. Regular Files &amp; Folders</h3>
+            </div>
+            <p>Text files, code, and configurations stored on persistent disk blocks.</p>
+            <div class="minis">
+              <span class="mini"><code>/etc/hosts</code></span>
+              <span class="mini"><code>/var/log/syslog</code></span>
+              <span class="mini"><code>~/.bashrc</code></span>
+            </div>
+          </div>
+          <div class="card g a aR" style="--d:4">
+            <div class="c-top"><span class="ic">💽</span>
+              <h3>2. Hardware Devices (<code>/dev</code>)</h3>
+            </div>
+            <p>Hard disks, keyboards, and USB ports represented as files. Reading from them reads hardware signals!</p>
+            <div class="minis">
+              <span class="mini"><code>/dev/sda</code> (Disk)</span>
+              <span class="mini"><code>/dev/null</code> (Trash can)</span>
+              <span class="mini"><code>/dev/urandom</code></span>
+            </div>
+          </div>
+          <div class="card n a aL" style="--d:5">
+            <div class="c-top"><span class="ic">⚡</span>
+              <h3>3. Kernel Virtual State (<code>/proc</code>)</h3>
+            </div>
+            <p>Files created in memory on-the-fly by the kernel. Read them with <code>cat</code> to inspect CPU and RAM
+              state live!</p>
+            <div class="minis">
+              <span class="mini"><code>/proc/cpuinfo</code></span>
+              <span class="mini"><code>/proc/meminfo</code></span>
+              <span class="mini"><code>/proc/loadavg</code></span>
+            </div>
+          </div>
+          <div class="card amber a aR" style="--d:6">
+            <div class="c-top"><span class="ic">🔀</span>
+              <h3>4. Pipes &amp; Network Sockets</h3>
+            </div>
+            <p>Programs send data to each other and across the internet using standard <code>read()</code> and
+              <code>write()</code> file operations.
+            </p>
+            <div class="minis">
+              <span class="mini">Standard Streams (0, 1, 2)</span>
+              <span class="mini">UNIX Domain Sockets</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>10</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 11 TERMINAL VS SHELL & ERGONOMICS ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>01 · Architecture</div>
+          <h2>Terminal vs. Shell &amp; CLI Ergonomics</h2>
+        </div>
+        <span class="s-en">Command Line Mechanics</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <div class="cols wide-l">
+          <div class="info-stack">
+            <div class="card a aL" style="--d:2">
+              <div class="c-top"><span class="ic">🖥️</span>
+                <h3>Terminal Emulator vs. Shell Interpreter</h3>
+              </div>
+              <p><b>The Terminal:</b> The window (GNOME Terminal, Kitty) that captures keystrokes and draws characters.
+              </p>
+              <p><b>The Shell:</b> The smart program (Bash, Zsh) that interprets the commands you type, checks syntax,
+                and executes programs.</p>
+            </div>
+            <div class="analogy a aL" style="--d:3">
+              <span>📞 <b>Telephone Analogy:</b> The <b>Terminal</b> is the physical telephone handset (microphone &amp;
+                speaker). The <b>Shell</b> is the helpful human operator on the other end listening to your request and
+                making connections.</span>
+            </div>
+          </div>
+          <div class="info-stack">
+            <div class="card n a aR" style="--d:2">
+              <div class="c-top"><span class="ic">⚡</span>
+                <h3>Essential Beginner Muscle Memory</h3>
+              </div>
+              <ul>
+                <li><b>Tab Completion:</b> Never type full names! Press <kbd>Tab</kbd> to auto-complete file names and
+                  avoid typos.</li>
+                <li><b>History:</b> Press <kbd>↑</kbd> and <kbd>↓</kbd> to recall previous commands, or <kbd>Ctrl +
+                    R</kbd> to search history.</li>
+                <li><b>Manuals:</b> Run <code>man &lt;command&gt;</code> to read the official manual (press <kbd>q</kbd>
+                  to quit).</li>
+              </ul>
+            </div>
+            <div class="card amber a aR" style="--d:3">
+              <div class="c-top"><span class="ic">🛑</span>
+                <h3>Emergency Escape Hatches</h3>
+              </div>
+              <div class="minis" style="margin-bottom:4px">
+                <span class="mini"><code>Ctrl + C</code> ➔ <b>SIGINT</b>: Stop runaway program immediately</span>
+                <span class="mini"><code>Ctrl + Z</code> ➔ <b>SIGTSTP</b>: Pause task to background</span>
+              </div>
+              <p style="font-size:12.5px;color:var(--ink)">Stuck in a command? Don't panic: hit <code>Ctrl + C</code>!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>11</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 12 SECTION 2 DIVIDER ================= -->
+    <section class="slide dark">
+      <div class="sec-side a" style="--d:4">FILESYSTEM</div>
+      <div class="s-head" style="margin-top:30px">
+        <div class="s-tag a" style="--d:0"><i></i>PART 02</div>
+      </div>
+      <div class="sec-num aL a" style="--d:1">02</div>
+      <div class="sec-title a" style="--d:2">The Filesystem Hierarchy</div>
+      <div class="sec-en a" style="--d:3">FHS Inverted Tree, System Files &amp; Virtual Devices</div>
+      <div class="sec-line a" style="--d:4"></div>
+      <div class="sec-desc a" style="--d:5">
+        No drive letters. One single root directory (<code>/</code>).<br>
+        How the Filesystem Hierarchy Standard (FHS) organizes software, user directories, configurations, and runtime
+        monitoring across all Linux distributions.
+      </div>
+      <div class="sec-icons a" style="--d:6">
+        <div class="sec-ic">🌲</div>
+        <div class="sec-ic">📁</div>
+        <div class="sec-ic">⚙️</div>
+        <div class="sec-ic">📦</div>
+        <div class="sec-ic">🔍</div>
+      </div>
+      <div class="cover-bars" data-bars data-dim="1"></div>
+    </section>
+
+    <!-- ================= 13 THE FHS BREAKDOWN ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>02 · Filesystem</div>
+          <h2>Filesystem Hierarchy Standard (FHS)</h2>
+        </div>
+        <span class="s-en">The Inverted Tree Structure</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <div class="grid" style="grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr">
+          <div class="card a aPop" style="--d:2">
+            <div class="c-top"><span class="ic">🌱</span>
+              <h3>/ &amp; /root<small>Root Directories</small></h3>
+            </div>
+            <p><code>/</code> is the single ancestor of the entire system. <code>/root</code> is the isolated home
+              directory for the superuser.</p>
+          </div>
+          <div class="card g a aPop" style="--d:3">
+            <div class="c-top"><span class="ic">⚙️</span>
+              <h3>/etc<small>Configuration</small></h3>
+            </div>
+            <p>System-wide, host-specific plain text configuration files (networking, daemon configs, user definitions).
+            </p>
+          </div>
+          <div class="card n a aPop" style="--d:4">
+            <div class="c-top"><span class="ic">🚀</span>
+              <h3>/bin &amp; /sbin<small>System Executables</small></h3>
+            </div>
+            <p><code>/bin</code> holds essential user binaries (<code>ls</code>, <code>cp</code>). <code>/sbin</code>
+              holds system administrator binaries (<code>fdisk</code>, <code>ip</code>).</p>
+          </div>
+          <div class="card n a aPop" style="--d:5">
+            <div class="c-top"><span class="ic">🏠</span>
+              <h3>/home &amp; /usr<small>Users &amp; Programs</small></h3>
+            </div>
+            <p><code>/home/username</code> stores user personal data. <code>/usr</code> contains user software,
+              libraries, and shareable resources.</p>
+          </div>
+          <div class="card g a aPop" style="--d:6">
+            <div class="c-top"><span class="ic">📊</span>
+              <h3>/var &amp; /tmp<small>Variable &amp; Ephemeral</small></h3>
+            </div>
+            <p><code>/var</code> stores changing data like persistent logs (<code>/var/log</code>) and spools.
+              <code>/tmp</code> holds temporary files wiped on reboot.
+            </p>
+          </div>
+          <div class="card amber a aPop" style="--d:7">
+            <div class="c-top"><span class="ic">🔌</span>
+              <h3>/boot &amp; /lib<small>Bootloader &amp; Libraries</small></h3>
+            </div>
+            <p><code>/boot</code> contains the Linux kernel (<code>vmlinuz</code>) and GRUB. <code>/lib</code> holds
+              shared C libraries (<code>libc.so</code>) and kernel modules.</p>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>13</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 14 ESSENTIAL SYSTEM CONFIGURATION FILES ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>02 · Filesystem</div>
+          <h2>Essential System Configuration Files</h2>
+        </div>
+        <span class="s-en">Critical System Files</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <table class="spec-table compact a" style="--d:2">
+          <thead>
+            <tr>
+              <th style="width:230px">File Path</th>
+              <th style="width:165px">Domain</th>
+              <th>Description &amp; Operational Significance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>/etc/passwd</td>
+              <td>User Accounts</td>
+              <td>Defines local user accounts, UIDs, GIDs, home paths, and default login shells.</td>
+            </tr>
+            <tr>
+              <td>/etc/shadow</td>
+              <td>Security Hashes</td>
+              <td>Stores salted cryptographic password hashes. Restricted strictly to root (<code>mode 640</code>).</td>
+            </tr>
+            <tr>
+              <td>/etc/group</td>
+              <td>User Groups</td>
+              <td>Defines local system groups and secondary memberships (e.g., adding users to <code>sudo</code>,
+                <code>docker</code>).
+              </td>
+            </tr>
+            <tr>
+              <td>/etc/sudoers</td>
+              <td>Privilege Rules</td>
+              <td>Controls administrative privilege delegation for <code>sudo</code>. Safely edited via
+                <code>visudo</code>.
+              </td>
+            </tr>
+            <tr>
+              <td>/etc/fstab</td>
+              <td>Storage Mounts</td>
+              <td>Filesystem table defining disk partitions, UUIDs, mount points, and automated boot options.</td>
+            </tr>
+            <tr>
+              <td>/etc/hosts</td>
+              <td>Static DNS</td>
+              <td>Static table mapping IP addresses to hostnames prior to external DNS queries.</td>
+            </tr>
+            <tr>
+              <td>/etc/resolv.conf</td>
+              <td>DNS Resolution</td>
+              <td>Configures upstream DNS nameservers (e.g., <code>nameserver 1.1.1.1</code>) used for domain name
+                lookups.</td>
+            </tr>
+            <tr>
+              <td>/etc/os-release</td>
+              <td>Distro Metadata</td>
+              <td>Standard OS identification file (distro name, version ID, codename) checked via
+                <code>cat /etc/os-release</code>.
+              </td>
+            </tr>
+            <tr>
+              <td>/etc/crontab</td>
+              <td>Task Scheduling</td>
+              <td>System-wide automated job table defining periodic commands executed by the <code>cron</code> daemon.
+              </td>
+            </tr>
+            <tr>
+              <td>~/.bashrc</td>
+              <td>User Environment</td>
+              <td>Executed for interactive bash shells. Configures personal aliases, prompt style, and custom
+                <code>PATH</code>.
+              </td>
+            </tr>
+            <tr>
+              <td>~/.ssh/authorized_keys</td>
+              <td>SSH Remote Auth</td>
+              <td>Stores authorized public SSH keys enabling secure, passwordless remote server logins.</td>
+            </tr>
+            <tr>
+              <td>/var/log/syslog</td>
+              <td>Audit Trail</td>
+              <td>Central operating system log file recording general system activity, services, and kernel events.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="fact a" style="--d:3;margin-top:8px;padding:8px 12px">
+          <h4 style="font-size:12.5px;margin-bottom:2px">🔒 Security Best Practice: visudo</h4>
+          <p style="font-size:11.5px;line-height:1.4">Never edit <code>/etc/sudoers</code> directly with a standard text
+            editor. Always use
+            <code>sudo visudo</code>, which locks the file against concurrent write collisions and performs strict
+            syntax checks prior to saving.
+          </p>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>14</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 15 VIRTUAL FILESYSTEMS: PROC & DEV ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>02 · Filesystem</div>
+          <h2>Virtual Filesystems: /proc &amp; /dev</h2>
+        </div>
+        <span class="s-en">Kernel State &amp; Devices</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <div class="cols">
+          <div class="info-stack">
+            <div class="card n a aL" style="--d:2">
+              <div class="c-top"><span class="ic">🧠</span>
+                <h3>/proc · Virtual Kernel State</h3>
+              </div>
+              <p><code>/proc</code> does not exist on disk! It is a pseudo-filesystem generated dynamically by the Linux
+                kernel in RAM.</p>
+              <ul>
+                <li><code>/proc/cpuinfo</code> ➔ CPU architecture, cores, and clock frequencies</li>
+                <li><code>/proc/meminfo</code> ➔ Real-time physical RAM and swap telemetry</li>
+                <li><code>/proc/loadavg</code> ➔ 1, 5, and 15 minute system load averages</li>
+                <li><code>/proc/[PID]/</code> ➔ Metrics and file descriptors for any running process</li>
+              </ul>
+            </div>
+            <div class="term-box sm a aL" style="--d:3">
+              <div class="term-code"><span class="prm">guigo@linux:~$</span> <span class="cmd">cat</span> <span
+                  class="arg">/proc/loadavg</span>
+                <span class="out">0.24 0.18 0.12 1/482 18920</span>
+              </div>
+            </div>
+          </div>
+          <div class="info-stack">
+            <div class="card amber a aR" style="--d:2">
+              <div class="c-top"><span class="ic">🔌</span>
+                <h3>/dev · Hardware &amp; Pseudo-Devices</h3>
+              </div>
+              <p>Represents physical hardware components and special kernel character/block streams:</p>
+              <ul>
+                <li><code>/dev/sda</code>, <code>/dev/nvme0n1</code> ➔ Physical storage disk blocks</li>
+                <li><code>/dev/null</code> ➔ Discards all data written to it (black hole sink)</li>
+                <li><code>/dev/zero</code> ➔ Provides an endless stream of null bytes</li>
+                <li><code>/dev/urandom</code> ➔ Fast, non-blocking cryptographic random data</li>
+              </ul>
+            </div>
+            <div class="term-box sm a aR" style="--d:3">
+              <div class="term-code"><span class="cmt"># Benchmarking or generating empty file with zero bytes:</span>
+                <span class="cmd">dd</span> <span class="flg">if=</span><span class="arg">/dev/zero</span> <span
+                  class="flg">of=</span><span class="arg">swapfile</span> <span class="flg">bs=</span><span
+                  class="arg">1M</span> <span class="flg">count=</span><span class="arg">1024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>15</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 16 SECTION 3 DIVIDER ================= -->
+    <section class="slide dark">
+      <div class="sec-side a" style="--d:4">NAVIGATION</div>
+      <div class="s-head" style="margin-top:30px">
+        <div class="s-tag a" style="--d:0"><i></i>PART 03</div>
+      </div>
+      <div class="sec-num aL a" style="--d:1">03</div>
+      <div class="sec-title a" style="--d:2">Navigation &amp; Operations</div>
+      <div class="sec-en a" style="--d:3">Traversal, Atomic Actions &amp; Search Engines</div>
+      <div class="sec-line a" style="--d:4"></div>
+      <div class="sec-desc a" style="--d:5">
+        Traversing the tree with confidence and precision.<br>
+        Understanding working coordinates, atomic directory manipulation, non-interactive file inspection, and real-time
+        filesystem search engines.
+      </div>
+      <div class="sec-icons a" style="--d:6">
+        <div class="sec-ic">🧭</div>
+        <div class="sec-ic">📂</div>
+        <div class="sec-ic">⚡</div>
+        <div class="sec-ic">✂️</div>
+        <div class="sec-ic">🔎</div>
+      </div>
+      <div class="cover-bars" data-bars data-dim="1"></div>
+    </section>
+
+    <!-- ================= 17 TRAVERSAL & WORKING COORDINATES ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>03 · Navigation</div>
+          <h2>Working Location &amp; Filesystem Traversal</h2>
+        </div>
+        <span class="s-en">Coordinates &amp; Paths</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <div class="cols">
+          <div class="info-stack">
+            <div class="card a aL" style="--d:2">
+              <div class="c-top"><span class="ic">🧭</span>
+                <h3>Context &amp; Traversal Commands</h3>
+              </div>
+              <p><b><code>pwd</code> (Print Working Directory):</b> Always confirm your current filesystem context
+                before running destructive commands.</p>
+              <p><b><code>cd</code> Navigation Shortcuts:</b></p>
+              <div class="minis">
+                <span class="mini"><code>cd /etc/nginx</code> ➔ Absolute jump</span>
+                <span class="mini"><code>cd ..</code> ➔ Move up to parent</span>
+                <span class="mini"><code>cd ~</code> ➔ Return to home dir</span>
+                <span class="mini"><code>cd -</code> ➔ Toggle previous dir</span>
+              </div>
+            </div>
+            <div class="card g a aL" style="--d:3">
+              <div class="c-top"><span class="ic">📋</span>
+                <h3>Inspecting Contents: <code>ls -lah</code></h3>
+              </div>
+              <ul>
+                <li><code>-l</code>: Long listing format (permissions, links, owner, size, timestamp)</li>
+                <li><code>-a</code>: Reveals hidden dotfiles (e.g., <code>.bashrc</code>, <code>.git/</code>)</li>
+                <li><code>-h</code>: Formats raw byte counts into human-readable units (K, M, G)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="info-stack">
+            <div class="card n a aR" style="--d:2">
+              <div class="c-top"><span class="ic">🗺️</span>
+                <h3>Absolute vs. Relative Paths</h3>
+              </div>
+              <p><b>Absolute Path:</b> Originates unambiguously from root (<code>/</code>). Resolves identically
+                regardless of current location:<br>
+                <code style="font-size:12px">cd /home/guigo/projects/src/</code>
+              </p>
+              <p style="margin-top:4px"><b>Relative Path:</b> Evaluates relative to where your shell currently sits:<br>
+                <code style="font-size:12px">cd ../projects/src/</code>
+              </p>
+            </div>
+            <div class="term-box a aR" style="--d:3">
+              <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span
+                  class="dot g"></span><span class="title">Visual Tree Navigation</span></div>
+              <div class="term-code"><span class="prm">guigo@linux:~$</span> <span class="cmd">tree</span> <span
+                  class="flg">-L 2</span> <span class="arg">~/projects</span>
+                <span class="out">projects/
+                  ├── backend/
+                  │ ├── app.py
+                  │ └── requirements.txt
+                  └── docs/
+                  └── architecture.md</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>17</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 18 FILE & DIRECTORY MANIPULATION ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>03 · Navigation</div>
+          <h2>File &amp; Directory Operations</h2>
+        </div>
+        <span class="s-en">Creating, Copying &amp; Removing</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <div class="grid" style="grid-template-columns:1fr 1fr">
+          <div class="card a aL" style="--d:2">
+            <div class="c-top"><span class="ic">📁</span>
+              <h3><code>mkdir -p</code> · Directory Trees</h3>
+            </div>
+            <p>Creates nested directory paths in a single command without failing if intermediate parent folders do not
+              exist yet.</p>
+            <div class="term-box sm">
+              <div class="term-code"><span class="cmd">mkdir</span> <span class="flg">-p</span> <span
+                  class="arg">projects/python/app/src</span></div>
+            </div>
+          </div>
+          <div class="card g a aR" style="--d:3">
+            <div class="c-top"><span class="ic">📄</span>
+              <h3><code>touch</code> · File Instantiation</h3>
+            </div>
+            <p>Creates an empty file instantly or updates access and modification timestamps without altering existing
+              file data.</p>
+            <div class="term-box sm">
+              <div class="term-code"><span class="cmd">touch</span> <span class="arg">config.env</span></div>
+            </div>
+          </div>
+          <div class="card n a aL" style="--d:4">
+            <div class="c-top"><span class="ic">📑</span>
+              <h3><code>cp -r</code> · Recursive Copying</h3>
+            </div>
+            <p>Duplicates files or directory hierarchies. Always pass <code>-r</code> when copying directories
+              recursively.</p>
+            <div class="term-box sm">
+              <div class="term-code"><span class="cmd">cp</span> <span class="flg">-r</span> <span
+                  class="arg">/var/www/html /backup/html_bak</span></div>
+            </div>
+          </div>
+          <div class="card a aR" style="--d:5">
+            <div class="c-top"><span class="ic">🚚</span>
+              <h3><code>mv</code> · Atomic Move &amp; Rename</h3>
+            </div>
+            <p>Relocates or renames files in an atomic filesystem metadata update without duplicating physical disk
+              blocks.</p>
+            <div class="term-box sm">
+              <div class="term-code"><span class="cmd">mv</span> <span class="arg">draft.txt published.md</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="warn a" style="--d:6;margin-top:10px">
+          <span>⚠️ <b>Destructive Deletion Warning:</b> The CLI has NO Recycle Bin or Trash. Running
+            <code>rm -rf &lt;path&gt;</code> permanently and immediately destroys files. Always double-check target
+            paths and variable expansions before pressing Enter!</span>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>18</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 19 VIEWING, PAGING & LIVE MONITORING ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>03 · Navigation</div>
+          <h2>Viewing, Paging &amp; Real-Time Monitoring</h2>
+        </div>
+        <span class="s-en">Inspection Utilities</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <div class="cols wide-l">
+          <div class="info-stack">
+            <div class="card a aL" style="--d:2">
+              <div class="c-top"><span class="ic">📜</span>
+                <h3>Pagers vs. Direct Output</h3>
+              </div>
+              <p><b><code>cat /etc/hosts</code>:</b> Dumps entire file into the terminal stream. Best for short files or
+                piping.</p>
+              <p><b><code>less /var/log/syslog</code>:</b> Memory-efficient interactive pager. Does not load gigabyte
+                files into RAM.</p>
+              <div class="minis" style="margin-top:4px">
+                <span class="mini"><code>j</code> / <code>k</code> ➔ Scroll line</span>
+                <span class="mini"><code>d</code> / <code>u</code> ➔ Half page</span>
+                <span class="mini"><code>/pattern</code> ➔ Search</span>
+                <span class="mini"><code>q</code> ➔ Exit</span>
+              </div>
+            </div>
+            <div class="card g a aL" style="--d:3">
+              <div class="c-top"><span class="ic">⏱️</span>
+                <h3>Boundaries &amp; Live Monitoring</h3>
+              </div>
+              <p><b><code>head -n 20</code>:</b> Inspects the top 20 lines (headers, schemas).</p>
+              <p><b><code>tail -f &lt;log&gt;</code>:</b> Streams appended log entries in real time. Indispensable for
+                live production debugging!</p>
+            </div>
+          </div>
+          <div class="info-stack">
+            <div class="card n a aR" style="--d:2">
+              <div class="c-top"><span class="ic">✏️</span>
+                <h3>In-Terminal Text Editors</h3>
+              </div>
+              <p>When configuration updates require manual interactive editing:</p>
+              <ul>
+                <li><b><code>nano</code>:</b> Beginner-friendly editor showing keyboard shortcuts at the bottom of the
+                  screen (exit with <code>Ctrl + X</code>).</li>
+                <li><b><code>vim</code>:</b> Powerful modal editor built for speed and keyboard efficiency (insert mode:
+                  <code>i</code>, write &amp; quit: <code>:wq</code>).
+                </li>
+              </ul>
+            </div>
+            <div class="term-box a aR" style="--d:3">
+              <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span
+                  class="dot g"></span><span class="title">Live Log Following</span></div>
+              <div class="term-code"><span class="cmt"># Follow application access log live</span>
+                <span class="prm">guigo@linux:~$</span> <span class="cmd">tail</span> <span class="flg">-f</span> <span
+                  class="arg">/var/log/nginx/access.log</span>
+                <span class="out">192.168.1.50 - - [14/Sep/2026:00:15:02] "GET /api HTTP/1.1" 200
+                  192.168.1.55 - - [14/Sep/2026:00:15:04] "POST /login HTTP/1.1" 200</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>19</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 20 SEARCHING THE FILESYSTEM ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>03 · Navigation</div>
+          <h2>Searching the Filesystem: find vs. locate</h2>
+        </div>
+        <span class="s-en">Discovery Utilities</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <div class="cols">
+          <div class="info-stack">
+            <div class="card a aL" style="--d:2">
+              <div class="c-top"><span class="ic">🔍</span>
+                <h3><code>find</code> · Real-Time Traversal</h3>
+              </div>
+              <p>Crawls directory trees live to match files based on names, modification times, sizes, or types:</p>
+              <div class="term-box sm" style="margin-top:6px">
+                <div class="term-code"><span class="cmt"># Find .log files larger than 50MB modified in 24h:</span>
+                  <span class="cmd">find</span> <span class="arg">/var/log</span> <span class="flg">-type f -name</span>
+                  <span class="str">"*.log"</span> <span class="flg">-size</span> <span class="arg">+50M</span> <span
+                    class="flg">-mtime</span> <span class="arg">-1</span>
+
+                  <span class="cmt"># Find and delete temp files safely:</span>
+                  <span class="cmd">find</span> <span class="arg">/tmp</span> <span class="flg">-type f -name</span>
+                  <span class="str">"*.tmp"</span> <span class="flg">-delete</span>
+                </div>
+              </div>
+              <div class="fact g" style="margin-top:8px">
+                <h4>🎯 Precision Search</h4>
+                <p>Because <code>find</code> queries filesystem metadata live, results are 100% up-to-date.</p>
+              </div>
+            </div>
+          </div>
+          <div class="info-stack">
+            <div class="card n a aR" style="--d:2">
+              <div class="c-top"><span class="ic">⚡</span>
+                <h3><code>locate</code> · Indexed Database Lookup</h3>
+              </div>
+              <p>Queries a pre-indexed system database for near-instant path lookups across massive multi-terabyte
+                drives:</p>
+              <div class="term-box sm" style="margin-top:6px">
+                <div class="term-code"><span class="cmt"># Near-instant path search:</span>
+                  <span class="cmd">locate</span> <span class="arg">nginx.conf</span>
+
+                  <span class="cmt"># If file was just created, update database manually:</span>
+                  <span class="cmd">sudo updatedb</span>
+                </div>
+              </div>
+              <div class="fact amber" style="margin-top:8px">
+                <h4>⏱️ Speed vs. Freshness</h4>
+                <p><code>locate</code> is orders of magnitude faster than <code>find</code>, but depends on the
+                  cron-scheduled <code>updatedb</code> cache.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>20</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 21 SECTION 4 DIVIDER ================= -->
+    <section class="slide dark">
+      <div class="sec-side a" style="--d:4">SECURITY</div>
+      <div class="s-head" style="margin-top:30px">
+        <div class="s-tag a" style="--d:0"><i></i>PART 04</div>
+      </div>
+      <div class="sec-num aL a" style="--d:1">04</div>
+      <div class="sec-title a" style="--d:2">Permissions, Streams &amp; Scripts</div>
+      <div class="sec-en a" style="--d:3">Access Control, Unix Pipelines &amp; Bash Automation</div>
+      <div class="sec-line a" style="--d:4"></div>
+      <div class="sec-desc a" style="--d:5">
+        Unlocking the true power of GNU/Linux: granular multi-tier access security,<br>
+        standard I/O stream redirection, process signal lifecycles, and production-grade Bash automation.
+      </div>
+      <div class="sec-icons a" style="--d:6">
+        <div class="sec-ic">🔒</div>
+        <div class="sec-ic">🔢</div>
+        <div class="sec-ic">🔀</div>
+        <div class="sec-ic">⚡</div>
+        <div class="sec-ic">📜</div>
+      </div>
+      <div class="cover-bars" data-bars data-dim="1"></div>
+    </section>
+
+    <!-- ================= 22 PERMISSIONS & INTERACTIVE CALCULATOR ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>04 · Permissions</div>
+          <h2>Permissions &amp; The 4-2-1 Octal System</h2>
+        </div>
+        <span class="s-en">Interactive Access Control</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <div class="cols wide-l">
+          <div class="info-stack">
+            <!-- Interactive Permission Bit Calculator -->
+            <div class="perm-widget a aL" style="--d:2">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <span style="font-size:12px;font-weight:800;letter-spacing:1px;color:var(--ice)">INTERACTIVE PERMISSION
+                  CALCULATOR</span>
+                <div class="perm-presets">
+                  <button class="perm-pre-btn" onclick="setPerm(7,5,5)">755 (Apps)</button>
+                  <button class="perm-pre-btn" onclick="setPerm(6,4,4)">644 (Files)</button>
+                  <button class="perm-pre-btn" onclick="setPerm(6,0,0)">600 (Keys)</button>
+                </div>
+              </div>
+              <div class="perm-calc-grid">
+                <div class="perm-role-box">
+                  <span class="perm-role-title">Owner (u)</span>
+                  <div class="perm-checks">
+                    <div class="perm-chk on" id="u_r" onclick="togglePerm('u_r')">r (4)</div>
+                    <div class="perm-chk on" id="u_w" onclick="togglePerm('u_w')">w (2)</div>
+                    <div class="perm-chk on" id="u_x" onclick="togglePerm('u_x')">x (1)</div>
+                  </div>
+                </div>
+                <div class="perm-role-box">
+                  <span class="perm-role-title">Group (g)</span>
+                  <div class="perm-checks">
+                    <div class="perm-chk on" id="g_r" onclick="togglePerm('g_r')">r (4)</div>
+                    <div class="perm-chk" id="g_w" onclick="togglePerm('g_w')">w (2)</div>
+                    <div class="perm-chk on" id="g_x" onclick="togglePerm('g_x')">x (1)</div>
+                  </div>
+                </div>
+                <div class="perm-role-box">
+                  <span class="perm-role-title">Others (o)</span>
+                  <div class="perm-checks">
+                    <div class="perm-chk on" id="o_r" onclick="togglePerm('o_r')">r (4)</div>
+                    <div class="perm-chk" id="o_w" onclick="togglePerm('o_w')">w (2)</div>
+                    <div class="perm-chk on" id="o_x" onclick="togglePerm('o_x')">x (1)</div>
+                  </div>
+                </div>
+              </div>
+              <div class="perm-res-bar">
+                <div>Command: <span class="perm-mode" id="permCmd">chmod 755 file.sh</span></div>
+                <div class="perm-sym" id="permSym">-rwxr-xr-x</div>
+              </div>
+            </div>
+            <div class="card n a aL" style="--d:3">
+              <div class="c-top"><span class="ic">🔧</span>
+                <h3>Access Management Commands</h3>
+              </div>
+              <p><b><code>chmod 755 script.sh</code></b> ➔ Owner: 7, Group: 5, Others: 5</p>
+              <p><b><code>chmod 600 ~/.ssh/id_rsa</code></b> ➔ Read/Write restricted to owner only</p>
+              <p><b><code>sudo chown -R guigo:www-data /var/www</code></b> ➔ Update owner and group</p>
+            </div>
+          </div>
+          <div class="info-stack">
+            <table class="spec-table a aR" style="--d:2">
+              <thead>
+                <tr>
+                  <th style="width:65px">Val</th>
+                  <th>Perm</th>
+                  <th>Sym</th>
+                  <th>File vs. Directory Operational Effect</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4</td>
+                  <td>Read</td>
+                  <td><code>r</code></td>
+                  <td>View file contents / List directory names</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Write</td>
+                  <td><code>w</code></td>
+                  <td>Modify file / Add or delete files in directory</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Execute</td>
+                  <td><code>x</code></td>
+                  <td>Run binary / <b>Traverse directory via cd</b></td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Full</td>
+                  <td><code>rwx</code></td>
+                  <td>Read + Write + Execute (4 + 2 + 1)</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Read/Write</td>
+                  <td><code>rw-</code></td>
+                  <td>Read + Write (4 + 2)</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Read/Exec</td>
+                  <td><code>r-x</code></td>
+                  <td>Read + Execute (4 + 1)</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="ok a aR" style="--d:4">
+              <span>💡 <b>Directory Execute Bit:</b> For directories, <code>x</code> is mandatory to enter with
+                <code>cd</code>. Read (<code>r</code>) only lists file names; without <code>x</code>, files inside
+                cannot be accessed!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>22</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 23 PACKAGE MANAGEMENT & SUDO ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>04 · Software</div>
+          <h2>Software Package Management &amp; sudo</h2>
+        </div>
+        <span class="s-en">apt &amp; Least Privilege</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <div class="cols wide-l">
+          <div class="info-stack">
+            <div class="banner a aL" style="--d:2">
+              <span class="b-ic">📦</span>
+              <div>
+                <h3>The <code>apt</code> Lifecycle · <em>Debian &amp; Ubuntu Repositories</em></h3>
+                <p>Package managers automatically resolve dependencies, verify cryptographic signatures, and install
+                  updates.</p>
+              </div>
+            </div>
+            <div class="term-box a aL" style="--d:3">
+              <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span
+                  class="dot g"></span><span class="title">Standard apt Workflow</span></div>
+              <div class="term-code"><span class="cmt"># 1. Refresh local repository metadata mirrors</span>
+                <span class="cmd">sudo apt</span> <span class="arg">update</span>
+
+                <span class="cmt"># 2. Upgrade all installed packages to latest security releases</span>
+                <span class="cmd">sudo apt</span> <span class="arg">upgrade</span> <span class="flg">-y</span>
+
+                <span class="cmt"># 3. Install packages and dependencies</span>
+                <span class="cmd">sudo apt</span> <span class="arg">install</span> <span class="flg">-y</span> <span
+                  class="arg">curl htop git build-essential</span>
+
+                <span class="cmt"># 4. Remove obsolete orphaned dependencies</span>
+                <span class="cmd">sudo apt</span> <span class="arg">autoremove</span> <span class="flg">-y</span>
+              </div>
+            </div>
+          </div>
+          <div class="info-stack">
+            <div class="card n a aR" style="--d:2">
+              <div class="c-top"><span class="ic">🛡️</span>
+                <h3>Understanding sudo &amp; Least Privilege</h3>
+              </div>
+              <p><b><code>sudo</code> (SuperUser DO):</b> Runs commands with temporary administrative permissions.</p>
+              <ul>
+                <li><b>Avoid Root Shells:</b> Never run as permanent root (<code>sudo -i</code>). Executing commands
+                  with <code>sudo</code> minimizes the risk of accidental system damage.</li>
+                <li><b>Audit Logging:</b> Every <code>sudo</code> execution is recorded with timestamps in
+                  <code>/var/log/auth.log</code> for auditing.
+                </li>
+              </ul>
+            </div>
+            <div class="card g a aR" style="--d:3">
+              <div class="c-top"><span class="ic">🔄</span>
+                <h3>Other Linux Distributions</h3>
+              </div>
+              <p>While commands differ, core package principles remain identical:</p>
+              <div class="minis" style="margin-top:4px">
+                <span class="mini"><b>Ubuntu/Debian:</b> <code>apt</code></span>
+                <span class="mini"><b>RHEL/Fedora:</b> <code>dnf</code></span>
+                <span class="mini"><b>Arch Linux:</b> <code>pacman</code></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>23</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 24 STREAMS & REDIRECTION ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>04 · Streams</div>
+          <h2>Standard I/O Streams &amp; Redirection</h2>
+        </div>
+        <span class="s-en">stdin · stdout · stderr</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <div class="grid" style="grid-template-columns:1fr 1fr 1fr">
+          <div class="card a aPop" style="--d:2">
+            <div class="c-top"><span class="ic">⌨️</span>
+              <h3>stdin<small>Descriptor 0</small></h3>
+            </div>
+            <p>Standard input channel. Defaults to keyboard keystrokes or data piped from another command.</p>
+          </div>
+          <div class="card g a aPop" style="--d:3">
+            <div class="c-top"><span class="ic">📤</span>
+              <h3>stdout<small>Descriptor 1</small></h3>
+            </div>
+            <p>Standard output channel. Emits successful program results into the terminal or files.</p>
+          </div>
+          <div class="card amber a aPop" style="--d:4">
+            <div class="c-top"><span class="ic">⚠️</span>
+              <h3>stderr<small>Descriptor 2</small></h3>
+            </div>
+            <p>Standard error channel. Emits diagnostics and errors, safely separated from payload data.</p>
+          </div>
+        </div>
+        <div class="term-box a" style="--d:5;margin-top:12px">
+          <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span
+              class="title">Stream Redirection Reference</span></div>
+          <div class="term-code"><span class="cmt"># 1. Overwrite stdout to a file (creates or replaces)</span>
+            <span class="cmd">echo</span> <span class="str">"System Initialized"</span> <span class="flg">&gt;</span>
+            <span class="arg">deploy.log</span>
+
+            <span class="cmt"># 2. Append stdout to an existing file</span>
+            <span class="cmd">echo</span> <span class="str">"Worker thread active"</span> <span
+              class="flg">&gt;&gt;</span> <span class="arg">deploy.log</span>
+
+            <span class="cmt"># 3. Redirect stderr only to error log</span>
+            <span class="cmd">find</span> <span class="arg">/root</span> <span class="flg">-name</span> <span
+              class="str">"*.conf"</span> <span class="flg">2&gt;</span> <span class="arg">errors.log</span>
+
+            <span class="cmt"># 4. Discard error output into the null device black hole</span>
+            <span class="cmd">find</span> <span class="arg">/root</span> <span class="flg">-name</span> <span
+              class="str">"*.conf"</span> <span class="flg">2&gt;</span> <span class="arg">/dev/null</span>
+
+            <span class="cmt"># 5. Merge stdout and stderr into a single log</span>
+            <span class="cmd">./build_app.sh</span> <span class="flg">&gt;</span> <span class="arg">build.log</span>
+            <span class="flg">2&gt;&amp;1</span>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>24</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 25 PIPELINES & UNIX PHILOSOPHY ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>04 · Streams</div>
+          <h2>The Unix Philosophy &amp; Composable Pipelines</h2>
+        </div>
+        <span class="s-en">Pipes &amp; Text Filters</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <!-- Hero Command Bar -->
+        <div class="term-box a" style="--d:2;margin-bottom:10px">
+          <div class="term-head">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="title">Production Telemetry Pipeline: Top 5 Offending IPs Generating 404 Errors</span>
+            <span style="margin-left:auto;font-size:10px;color:var(--cyan);font-weight:700;letter-spacing:0.5px">6
+              STAGES · STDOUT [1] ➔ STDIN [0] PIPES</span>
+          </div>
+          <div class="term-code"><span class="cmd">grep</span> <span class="str">" 404 "</span> <span
+              class="arg">/var/log/nginx/access.log</span> <span class="flg">|</span> <span class="cmd">awk</span> <span
+              class="str">'{print $1}'</span> <span class="flg">|</span> <span class="cmd">sort</span> <span
+              class="flg">|</span> <span class="cmd">uniq</span> <span class="flg">-c</span> <span class="flg">|</span>
+            <span class="cmd">sort</span> <span class="flg">-nr</span> <span class="flg">|</span> <span
+              class="cmd">head</span> <span class="flg">-n 5</span>
+          </div>
+        </div>
+
+        <!-- 6 Step Pipeline Process Cards -->
+        <div class="pipe-steps-grid">
+          <!-- Step 1: grep -->
+          <div class="pipe-step-card c-grep a aPop" style="--d:3">
+            <div class="psc-top">
+              <div class="psc-step-tag">
+                <span class="psc-num">1</span>
+                <span class="psc-cmd">grep</span>
+              </div>
+              <span class="psc-badge" style="color:#0098be;border-color:rgba(0,152,190,.3)">Filter Errors</span>
+            </div>
+            <p class="psc-desc">Scans access log and filters lines by pattern match.</p>
+            <div class="psc-flags">
+              <b>" 404 "</b> Space-padded: matches HTTP 404 status codes only, ignoring port numbers
+              (<code>:4040</code>) or byte counts.
+            </div>
+            <div class="psc-stream">
+              <span class="psc-stream-lbl">STDOUT [1] ➔</span>
+              <span class="psc-stream-val">192.168.1.50 - [..] "GET /admin" 404 182</span>
+            </div>
+          </div>
+
+          <!-- Step 2: awk -->
+          <div class="pipe-step-card c-awk a aPop" style="--d:4">
+            <div class="psc-top">
+              <div class="psc-step-tag">
+                <span class="psc-num">2</span>
+                <span class="psc-cmd">awk</span>
+              </div>
+              <span class="psc-badge" style="color:#6366f1;border-color:rgba(99,102,241,.3)">Extract Column</span>
+            </div>
+            <p class="psc-desc">Positional text parser: splits incoming lines by whitespace.</p>
+            <div class="psc-flags">
+              <b>'{print $1}'</b> Prints Field 1 (remote client IP), discarding timestamps, HTTP verbs, paths, and
+              user-agents.
+            </div>
+            <div class="psc-stream">
+              <span class="psc-stream-lbl">STDOUT [1] ➔</span>
+              <span class="psc-stream-val">192.168.1.50 (isolated bare IP stream)</span>
+            </div>
+          </div>
+
+          <!-- Step 3: sort -->
+          <div class="pipe-step-card c-sort1 a aPop" style="--d:5">
+            <div class="psc-top">
+              <div class="psc-step-tag">
+                <span class="psc-num">3</span>
+                <span class="psc-cmd">sort</span>
+              </div>
+              <span class="psc-badge" style="color:#ec4899;border-color:rgba(236,72,153,.3)">Group Adjacent</span>
+            </div>
+            <p class="psc-desc">Alphabetically orders IP stream to group duplicates.</p>
+            <div class="psc-flags">
+              <b>(default)</b> <em>Vital prerequisite:</em> <code>uniq</code> only detects <em>adjacent</em> duplicates!
+              Scattered duplicates are missed if unsorted.
+            </div>
+            <div class="psc-stream">
+              <span class="psc-stream-lbl">STDOUT [1] ➔</span>
+              <span class="psc-stream-val">192.168.1.50 · 192.168.1.50 (clustered)</span>
+            </div>
+          </div>
+
+          <!-- Step 4: uniq -c -->
+          <div class="pipe-step-card c-uniq a aPop" style="--d:6">
+            <div class="psc-top">
+              <div class="psc-step-tag">
+                <span class="psc-num">4</span>
+                <span class="psc-cmd">uniq</span>
+              </div>
+              <span class="psc-badge" style="color:#f59e0b;border-color:rgba(245,158,11,.3)">Count Frequency</span>
+            </div>
+            <p class="psc-desc">Collapses repeated adjacent lines into unique occurrences.</p>
+            <div class="psc-flags">
+              <b>-c (--count)</b> Prefixes each unique line with its repetition count, creating a
+              <code>[count] [ip]</code> histogram table.
+            </div>
+            <div class="psc-stream">
+              <span class="psc-stream-lbl">STDOUT [1] ➔</span>
+              <span class="psc-stream-val">1420 192.168.1.50 &nbsp;|&nbsp; 831 10.0.0.15</span>
+            </div>
+          </div>
+
+          <!-- Step 5: sort -nr -->
+          <div class="pipe-step-card c-sort2 a aPop" style="--d:7">
+            <div class="psc-top">
+              <div class="psc-step-tag">
+                <span class="psc-num">5</span>
+                <span class="psc-cmd">sort</span>
+              </div>
+              <span class="psc-badge" style="color:#058e67;border-color:rgba(5,142,103,.3)">Rank Descending</span>
+            </div>
+            <p class="psc-desc">Reorders statistical counts from worst offender to lowest.</p>
+            <div class="psc-flags">
+              <b>-n</b> Numeric (evaluates <code>100 &gt; 20</code>, not ASCII); <b>-r</b> Reverse order (descending:
+              highest hits at top).
+            </div>
+            <div class="psc-stream">
+              <span class="psc-stream-lbl">STDOUT [1] ➔</span>
+              <span class="psc-stream-val">1420 192.168.1.50 (Rank #1) · 831 ...</span>
+            </div>
+          </div>
+
+          <!-- Step 6: head -n 5 -->
+          <div class="pipe-step-card c-head a aPop" style="--d:8">
+            <div class="psc-top">
+              <div class="psc-step-tag">
+                <span class="psc-num">6</span>
+                <span class="psc-cmd">head</span>
+              </div>
+              <span class="psc-badge" style="color:#3b82f6;border-color:rgba(59,130,246,.3)">Slice Top 5</span>
+            </div>
+            <p class="psc-desc">Extracts head portion of stream and terminates pipe.</p>
+            <div class="psc-flags">
+              <b>-n 5</b> Restricts output to top 5 lines, discarding the rest of the stream for immediate security or
+              firewall action.
+            </div>
+            <div class="psc-stream">
+              <span class="psc-stream-lbl">TERMINAL ➔</span>
+              <span class="psc-stream-val" style="color:#6ee7b7">Final Top 5 culprit IP leaderboard</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>25</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 26 PROCESS MANAGEMENT & SIGNALS ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>04 · Systems</div>
+          <h2>System &amp; Process Management</h2>
+        </div>
+        <span class="s-en">Monitoring &amp; Signals</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <div class="cols">
+          <div class="info-stack">
+            <div class="card a aL" style="--d:2">
+              <div class="c-top"><span class="ic">📸</span>
+                <h3>Inspecting Workloads: <code>ps aux</code></h3>
+              </div>
+              <p>Captures a point-in-time snapshot of active processes:</p>
+              <ul>
+                <li><code>a</code>: Shows processes across all users</li>
+                <li><code>u</code>: Formats with user attribution, %CPU, and %MEM</li>
+                <li><code>x</code>: Includes background daemons not attached to a TTY</li>
+              </ul>
+            </div>
+            <div class="card g a aL" style="--d:3">
+              <div class="c-top"><span class="ic">📈</span>
+                <h3>Real-Time Monitors: <code>top</code> &amp; <code>htop</code></h3>
+              </div>
+              <p><b><code>top</code>:</b> Built-in monitor displaying CPU load, 1/5/15 min load averages, RAM/swap
+                usage.</p>
+              <p><b><code>htop</code>:</b> Enhanced interactive manager with colored core meters, tree views, and
+                search.</p>
+            </div>
+          </div>
+          <div class="info-stack">
+            <div class="card amber a aR" style="--d:2">
+              <div class="c-top"><span class="ic">🛑</span>
+                <h3>Controlling Processes &amp; Signals</h3>
+              </div>
+              <p><b>1. Locate PID:</b> <code>pgrep -l nginx</code></p>
+              <p><b>2. Graceful Shutdown (Default):</b> <code>kill &lt;PID&gt;</code><br>
+                Sends <b>SIGTERM (Signal 15)</b>. Allows the application to save state, close sockets, and remove lock
+                files.</p>
+              <p style="margin-top:6px"><b>3. Forceful Termination:</b> <code>kill -9 &lt;PID&gt;</code><br>
+                Sends <b>SIGKILL (Signal 9)</b>. Handled directly by kernel; bypasses application cleanups. Use only if
+                completely frozen!</p>
+            </div>
+            <div class="card n a aR" style="--d:3">
+              <div class="c-top"><span class="ic">🔄</span>
+                <h3>Job Control Mechanics</h3>
+              </div>
+              <p>Launch in background: <code>python3 server.py &amp;</code></p>
+              <p>List background tasks: <code>jobs</code></p>
+              <p>Bring to foreground: <code>fg %1</code> | Resume in background: <code>bg %1</code></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>26</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 27 REMOTE ADMIN & BASH SCRIPTING ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>04 · Automation</div>
+          <h2>Remote Administration &amp; Shell Scripting</h2>
+        </div>
+        <span class="s-en">SSH &amp; Bash Automation</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <div class="cols wide-l">
+          <div class="info-stack">
+            <div class="card a aL" style="--d:2">
+              <div class="c-top"><span class="ic">🔐</span>
+                <h3>Remote Administration: <code>ssh</code></h3>
+              </div>
+              <p>The industry-standard encrypted shell protocol:</p>
+              <div class="term-box sm" style="margin-top:6px">
+                <div class="term-code"><span class="cmt"># Standard connection</span>
+                  <span class="cmd">ssh</span> <span class="arg">guigo@remote-server.com</span>
+
+                  <span class="cmt"># Connect via non-standard port and private key</span>
+                  <span class="cmd">ssh</span> <span class="flg">-i</span> <span class="arg">~/.ssh/id_ed25519</span>
+                  <span class="flg">-p</span> <span class="arg">2222</span> <span
+                    class="arg">guigo@remote-server.com</span>
+                </div>
+              </div>
+            </div>
+            <div class="card g a aL" style="--d:3">
+              <div class="c-top"><span class="ic">📦</span>
+                <h3>Archiving &amp; Compression: <code>tar</code></h3>
+              </div>
+              <p>Package directory trees into compressed <code>.tar.gz</code>:</p>
+              <div class="term-box sm" style="margin-top:6px">
+                <div class="term-code"><span class="cmt"># Create compressed archive: c=create, v=verbose, z=gzip,
+                    f=file</span>
+                  <span class="cmd">tar</span> <span class="flg">-cvzf</span> <span
+                    class="arg">site_backup.tar.gz</span> <span class="arg">/var/www/html</span>
+
+                  <span class="cmt"># Extract archive to destination folder (-C)</span>
+                  <span class="cmd">tar</span> <span class="flg">-xvzf</span> <span
+                    class="arg">site_backup.tar.gz</span> <span class="flg">-C</span> <span
+                    class="arg">/opt/restore</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info-stack">
+            <div class="term-box a aR" style="--d:2;flex:1">
+              <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span
+                  class="dot g"></span><span class="title">Production Bash Script: backup.sh</span></div>
+              <div class="term-code"><span class="cmt">#!/bin/bash</span>
+                <span class="cmt"># Strict mode: fail on error, unset vars, or pipe break</span>
+                <span class="cmd">set</span> <span class="flg">-euo pipefail</span>
+
+                <span class="arg">BACKUP_SRC</span>=<span class="str">"/var/www/html"</span>
+                <span class="arg">BACKUP_DEST</span>=<span class="str">"/backup"</span>
+                <span class="arg">DATE</span>=<span class="str">$(date +%Y%m%d_%H%M%S)</span>
+                <span class="arg">ARCHIVE</span>=<span class="str">"web_backup_${DATE}.tar.gz"</span>
+
+                <span class="cmd">echo</span> <span class="str">"=== [$(date)] Starting System Backup ==="</span>
+                <span class="cmd">mkdir</span> <span class="flg">-p</span> <span class="str">"${BACKUP_DEST}"</span>
+                <span class="cmd">tar</span> <span class="flg">-cvzf</span> <span
+                  class="str">"${BACKUP_DEST}/${ARCHIVE}"</span> <span class="str">"${BACKUP_SRC}"</span>
+                <span class="cmd">echo</span> <span class="str">"=== Backup saved: ${BACKUP_DEST}/${ARCHIVE} ==="</span>
+              </div>
+            </div>
+            <div class="ok a aR" style="--d:4">
+              <span>🚀 <b>Deploying:</b> Run <code>chmod +x backup.sh</code> to grant execution rights, then execute
+                <code>./backup.sh</code> or schedule via <code>crontab -e</code>.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>27</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 28 SECTION 05 DIVIDER ================= -->
+    <section class="slide dark">
+      <div class="sec-side a" style="--d:4">DIAGNOSTICS</div>
+      <div class="s-head" style="margin-top:30px">
+        <div class="s-tag a" style="--d:0"><i></i>PART 05</div>
+      </div>
+      <div class="sec-num aL a" style="--d:1">05</div>
+      <div class="sec-title a" style="--d:2">Hardware &amp; System Diagnostics</div>
+      <div class="sec-en a" style="--d:3">Knowing Your Machine: OS, RAM, Storage &amp; IP</div>
+      <div class="sec-line a" style="--d:4"></div>
+      <div class="sec-desc a" style="--d:5">
+        Peel back operating system abstractions to speak directly to physical silicon and network interfaces. Discover
+        the vital commands to inspect your CPU, diagnose memory pressure, audit storage topologies, inspect IP
+        addressing, and monitor system health in real-time.
+      </div>
+      <div class="sec-icons a" style="--d:6">
+        <div class="sec-ic">🖥️</div>
+        <div class="sec-ic">⚙️</div>
+        <div class="sec-ic">🧠</div>
+        <div class="sec-ic">💾</div>
+        <div class="sec-ic">🌐</div>
+      </div>
+      <div class="cover-bars" data-bars data-dim="1"></div>
+    </section>
+
+    <!-- ================= 29 OS & MACHINE IDENTITY ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>05 · Diagnostics</div>
+          <h2>Machine &amp; Operating System Identity</h2>
+        </div>
+        <span class="s-en">Host &amp; Kernel Telemetry</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <div class="banner light a" style="--d:2">
+          <span class="b-ic">🖥️</span>
+          <div>
+            <h3>Know What You Are Running · <em>Hostnames, Distros &amp; Kernels</em></h3>
+            <p>Every diagnostic begins by identifying the host environment: the distribution release, architecture,
+              running kernel, and active uptime.</p>
+          </div>
+        </div>
+        <div class="cols wide-l">
+          <div class="info-stack">
+            <div class="card a aL" style="--d:3">
+              <div class="c-top"><span class="ic">🆔</span>
+                <h3>Host &amp; Distribution Identification</h3>
+              </div>
+              <p>Every Linux distribution exposes standardized metadata files:</p>
+              <ul>
+                <li><code>cat /etc/os-release</code> · Official distribution name, version, and codename (Ubuntu,
+                  Debian, Fedora, Arch).</li>
+                <li><code>hostnamectl</code> · Modern unified systemd status: chassis, OS, kernel, and machine
+                  architecture.</li>
+                <li><code>whoami</code> &amp; <code>id</code> · Current user login name, UID, and group memberships.
+                </li>
+              </ul>
+            </div>
+            <div class="analogy a aL" style="--d:4">
+              <span>🛂 <b>Passport Analogy:</b> Just like an international passport, <code>uname -a</code> and
+                <code>/etc/os-release</code> prove who the machine is, which country (distro) issued it, and what
+                language (kernel ABI) it speaks!</span>
+            </div>
+          </div>
+          <div class="info-stack">
+            <div class="term-box a aR" style="--d:3">
+              <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span
+                  class="dot g"></span><span class="title">Terminal: Hostname, Kernel &amp; Uptime</span></div>
+              <div class="term-code"><span class="cmt"># Check system kernel release &amp; architecture</span>
+                <span class="prm">$</span> <span class="cmd">uname</span> <span class="flg">-a</span>
+                <span class="out">Linux srv01 6.1.0-21-amd64 #1 SMP x86_64 GNU/Linux</span>
+
+                <span class="cmt"># Print kernel release only (-r is vital for drivers)</span>
+                <span class="prm">$</span> <span class="cmd">uname</span> <span class="flg">-r</span>
+                <span class="out">6.1.0-21-amd64</span>
+
+                <span class="cmt"># How long has this machine been running?</span>
+                <span class="prm">$</span> <span class="cmd">uptime</span> <span class="flg">-p</span>
+                <span class="out">up 14 days, 3 hours, 22 minutes</span>
+
+                <span class="cmt"># System load average (1, 5, 15 minute averages)</span>
+                <span class="prm">$</span> <span class="cmd">uptime</span>
+                <span class="out"> 14:22:05 up 14 days, load average: 0.12, 0.08, 0.05</span>
+              </div>
+            </div>
+            <div class="ok a aR" style="--d:4">
+              <span>💡 <b>Why Kernel Version Matters:</b> Compiling hardware drivers (like NVIDIA or Wi-Fi) requires the
+                exact matching headers: <code>linux-headers-$(uname -r)</code>.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>29</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 30 CPU ARCHITECTURE & TELEMETRY ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>05 · Diagnostics</div>
+          <h2>CPU Architecture &amp; Processor Telemetry</h2>
+        </div>
+        <span class="s-en">Compute Topologies</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <div class="banner light a" style="--d:2">
+          <span class="b-ic">⚡</span>
+          <div>
+            <h3>The Computational Core · <em>Sockets, Cores &amp; Hyper-Threading</em></h3>
+            <p>CPUs execute all instructions. Probing the processor reveals core hierarchies, clock speeds, cache tiers,
+              and virtualization flags.</p>
+          </div>
+        </div>
+        <div class="cols wide-l">
+          <div class="info-stack">
+            <div class="card a aL" style="--d:3">
+              <div class="c-top"><span class="ic">🧠</span>
+                <h3>CPU Topology Breakdown (<code>lscpu</code>)</h3>
+              </div>
+              <p>Understanding processor geometry:</p>
+              <ul>
+                <li><b>Architecture:</b> <code>x86_64</code> (Intel/AMD 64-bit) vs <code>aarch64</code> (ARM64).</li>
+                <li><b>Socket(s):</b> Physical CPU chips seated on the motherboard.</li>
+                <li><b>Core(s) per socket:</b> Physical silicon computation engines.</li>
+                <li><b>Thread(s) per core:</b> SMT / Hyper-Threading (if 2, each physical core handles 2 logical
+                  execution streams).</li>
+              </ul>
+            </div>
+            <div class="card g a aL" style="--d:4">
+              <div class="c-top"><span class="ic">🛡️</span>
+                <h3>Virtualization Support (VT-x / AMD-V)</h3>
+              </div>
+              <p>Can this machine run Docker or Virtual Machines at hardware speed?</p>
+              <div class="minis" style="margin-top:4px">
+                <span class="mini"><code>grep -E "vmx|svm" /proc/cpuinfo</code></span>
+                <span class="mini"><b>vmx:</b> Intel VT-x</span>
+                <span class="mini"><b>svm:</b> AMD-V</span>
+              </div>
+            </div>
+          </div>
+          <div class="info-stack">
+            <div class="term-box a aR" style="--d:3">
+              <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span
+                  class="dot g"></span><span class="title">Terminal: lscpu Overview</span></div>
+              <div class="term-code"><span class="prm">$</span> <span class="cmd">lscpu</span>
+                <span class="out">Architecture: x86_64
+                  CPU(s): 16
+                  Thread(s) per core: 2
+                  Core(s) per socket: 8
+                  Socket(s): 1
+                  Vendor ID: AuthenticAMD
+                  Model name: AMD Ryzen 7 7800X3D 8-Core
+                  CPU max MHz: 5050.0000
+                  Virtualization: AMD-V</span>
+
+                <span class="cmt"># Watch live CPU clock scaling across all cores</span>
+                <span class="prm">$</span> <span class="cmd">watch</span> <span class="flg">-n 1</span> <span
+                  class="str">"grep '''cpu MHz''' /proc/cpuinfo"</span>
+              </div>
+            </div>
+            <div class="fact a aR" style="--d:4">
+              <h4>🏎️ Cache Hierarchy (L1 / L2 / L3)</h4>
+              <p>L1 is ultra-fast per-core memory (~1ns), L2 is medium (~3ns), L3 is shared across all cores (~12ns).
+                High L3 cache prevents costly trips to physical RAM.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>30</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 31 RAM & THE GOLDEN RULE ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>05 · Diagnostics</div>
+          <h2>Memory (RAM): The "Available vs. Free" Golden Rule</h2>
+        </div>
+        <span class="s-en">Memory Telemetry</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <div class="banner light a" style="--d:2">
+          <span class="b-ic">🧠</span>
+          <div>
+            <h3>Demystifying Linux Memory · <em>"Unused RAM is Wasted RAM!"</em></h3>
+            <p>Beginners panic when they see near-zero "free" memory. Don't worry — Linux aggressively uses spare RAM
+              for lightning-fast disk caching!</p>
+          </div>
+        </div>
+        <div class="cols wide-l">
+          <div class="info-stack">
+            <div class="card a aL" style="--d:3">
+              <div class="c-top"><span class="ic">📊</span>
+                <h3>The Columns of <code>free -h</code></h3>
+              </div>
+              <ul>
+                <li><b>total:</b> Total installed physical RAM minus kernel reserved space.</li>
+                <li><b>used:</b> Memory actively allocated by your running applications.</li>
+                <li><b>free:</b> Completely untouched, idle RAM (wasted potential!).</li>
+                <li><b>buff/cache:</b> Disk blocks cached in RAM to make file access instant.</li>
+                <li><b>available:</b> <span class="hlg">The metric that matters!</span> RAM immediately reclaimable for
+                  new applications without swapping.</li>
+              </ul>
+            </div>
+            <div class="ok a aL" style="--d:4">
+              <span>🌟 <b>The Golden Rule:</b> Always monitor <b><code>available</code></b>, NEVER
+                <b><code>free</code></b>! If <code>available</code> is healthy, your system has plenty of breathing
+                room. The kernel evicts cache in nanoseconds when needed.</span>
+            </div>
+          </div>
+          <div class="info-stack">
+            <div class="term-box a aR" style="--d:3">
+              <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span
+                  class="dot g"></span><span class="title">Terminal: free -h Output</span></div>
+              <div class="term-code"><span class="prm">$</span> <span class="cmd">free</span> <span
+                  class="flg">-h</span>
+                <span class="out"> total used free shared buff/cache available
+                  Mem: 31Gi 8.2Gi 1.1Gi 420Mi 22Gi <span style="color:#10b981;font-weight:700">22Gi</span>
+                  Swap: 4.0Gi 0B 4.0Gi</span>
+
+                <span class="cmt"># Monitor live memory pressure &amp; swap-in/out</span>
+                <span class="prm">$</span> <span class="cmd">vmstat</span> <span class="flg">1</span>
+                <span class="out">procs -----------memory---------- ---swap--
+                  r b swpd free buff cache si so
+                  0 0 0 1153200 452100 226830 0 0</span>
+              </div>
+            </div>
+            <div class="card a aR" style="--d:4">
+              <div class="c-top"><span class="ic">🔍</span>
+                <h3>Physical DIMMs: <code>sudo dmidecode -t memory</code></h3>
+              </div>
+              <p>Inspect physical motherboard slots, DDR4/DDR5 generation, clock speed (e.g. 5600 MT/s), and
+                manufacturer without opening the computer chassis.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>31</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 32 STORAGE & BLOCK DEVICES ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>05 · Diagnostics</div>
+          <h2>Storage &amp; Block Devices: Disks, Partitions &amp; Usage</h2>
+        </div>
+        <span class="s-en">Block Devices &amp; Space Triage</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <div class="banner light a" style="--d:2">
+          <span class="b-ic">💾</span>
+          <div>
+            <h3>Physical Drives to Filesystems · <em>NVMe, SATA &amp; Disk Space Triage</em></h3>
+            <p>Linux organizes storage into block devices (<code>/dev/sd*</code>, <code>/dev/nvme*</code>), partitions,
+              and mount points. Learn how to map drives and locate disk hogs.</p>
+          </div>
+        </div>
+        <div class="cols wide-l">
+          <div class="info-stack">
+            <div class="card a aL" style="--d:3">
+              <div class="c-top"><span class="ic">🗄️</span>
+                <h3>1. Block Hierarchy: <code>lsblk -f</code></h3>
+              </div>
+              <p>Displays all storage devices, partition schemes, and filesystems:</p>
+              <ul>
+                <li><code>nvme0n1</code> · NVMe SSD (bus 0, namespace 1)</li>
+                <li>&nbsp;&nbsp;├─ <code>nvme0n1p1</code> · EFI System Partition (<code>/boot/efi</code>)</li>
+                <li>&nbsp;&nbsp;└─ <code>nvme0n1p2</code> · Linux Root Filesystem (<code>/</code>, ext4)</li>
+                <li><code>sda</code> · SATA Hard Drive or connected USB flash drive</li>
+              </ul>
+            </div>
+            <div class="card g a aL" style="--d:4">
+              <div class="c-top"><span class="ic">⚖️</span>
+                <h3>2. <code>df</code> vs. <code>du</code>: Knowing the Difference</h3>
+              </div>
+              <ul>
+                <li><b><code>df -h</code> (Disk Free):</b> Filesystem level. Answers: <em>"How full is my disk partition
+                    right now?"</em></li>
+                <li><b><code>du -sh *</code> (Disk Usage):</b> Directory level. Answers: <em>"Which specific folder is
+                    eating all my storage?"</em></li>
+              </ul>
+            </div>
+          </div>
+          <div class="info-stack">
+            <div class="term-box a aR" style="--d:3">
+              <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span
+                  class="dot g"></span><span class="title">Terminal: df -h &amp; Space Triage Recipe</span></div>
+              <div class="term-code"><span class="prm">$</span> <span class="cmd">df</span> <span class="flg">-h</span>
+                <span class="arg">/</span>
+                <span class="out">Filesystem Size Used Avail Use% Mounted on
+                  /dev/nvme0n1p2 468G 120G 325G 27% /</span>
+
+                <span class="cmt"># Find the top 5 largest directory hogs in /var</span>
+                <span class="prm">$</span> <span class="cmd">sudo du</span> <span class="flg">-h --max-depth=1</span>
+                <span class="arg">/var</span> <span class="prm">|</span> <span class="cmd">sort</span> <span
+                  class="flg">-hr</span> <span class="prm">|</span> <span class="cmd">head</span> <span class="flg">-n
+                  5</span>
+                <span class="out">14G /var/lib/docker
+                  4.2G /var/log
+                  1.8G /var/cache
+                  620M /var/lib
+                  120M /var/backups</span>
+              </div>
+            </div>
+            <div class="fact a aR" style="--d:4">
+              <h4>🛡️ Drive Health Telemetry: smartctl</h4>
+              <p>Run <code>sudo smartctl -H /dev/nvme0n1</code> to audit drive health, wear level percentage, and
+                reallocated bad sectors before hardware failure occurs!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>32</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 33 NETWORKING & IP ADDRESSING ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>05 · Diagnostics</div>
+          <h2>Network Interfaces, IP Addressing &amp; Sockets</h2>
+        </div>
+        <span class="s-en">The Network Stack</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <div class="banner light a" style="--d:2">
+          <span class="b-ic">🌐</span>
+          <div>
+            <h3>Connecting to the World · <em>Interfaces, IP Addresses &amp; Open Ports</em></h3>
+            <p>Discover which network cards are active, determine your local and public IP addresses, inspect default
+              gateways, and see which background services are listening.</p>
+          </div>
+        </div>
+        <div class="cols wide-l">
+          <div class="info-stack">
+            <div class="card a aL" style="--d:3">
+              <div class="c-top"><span class="ic">🔌</span>
+                <h3>Network Interface Anatomy (<code>ip a</code>)</h3>
+              </div>
+              <ul>
+                <li><b><code>lo</code> (Loopback):</b> <code>127.0.0.1</code> · Internal virtual interface used for the
+                  machine to talk to local services.</li>
+                <li><b><code>eth0</code> / <code>enp3s0</code>:</b> Wired Ethernet network interface.</li>
+                <li><b><code>wlan0</code> / <code>wlp2s0</code>:</b> Wireless Wi-Fi adapter.</li>
+                <li><b><code>inet</code>:</b> IPv4 address assigned to the card (e.g. <code>192.168.1.105/24</code>).
+                </li>
+              </ul>
+            </div>
+            <div class="analogy a aL" style="--d:4">
+              <span>📬 <b>Apartment Analogy:</b> Your <b>Private IP</b> (<code>192.168.1.15</code>) is your apartment
+                door number; your <b>Public IP</b> (<code>203.0.113.42</code>) is the building's street address; <b>Port
+                  numbers</b> (<code>:80</code>, <code>:22</code>) are specific mailboxes!</span>
+            </div>
+          </div>
+          <div class="info-stack">
+            <div class="term-box a aR" style="--d:3">
+              <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span
+                  class="dot g"></span><span class="title">Terminal: IP, Gateway &amp; Listening Sockets</span></div>
+              <div class="term-code"><span class="cmt"># View brief status of network interfaces</span>
+                <span class="prm">$</span> <span class="cmd">ip</span> <span class="flg">-br a</span>
+                <span class="out">lo UNKNOWN 127.0.0.1/8 ::1/128
+                  enp3s0 UP 192.168.1.105/24 fe80::...</span>
+
+                <span class="cmt"># Check Default Gateway (Router IP)</span>
+                <span class="prm">$</span> <span class="cmd">ip</span> <span class="arg">route</span> <span
+                  class="prm">|</span> <span class="cmd">grep</span> <span class="arg">default</span>
+                <span class="out">default via 192.168.1.1 dev enp3s0 proto dhcp</span>
+
+                <span class="cmt"># What public IP does the internet see?</span>
+                <span class="prm">$</span> <span class="cmd">curl</span> <span class="flg">-s</span> <span
+                  class="arg">ifconfig.me</span>
+                <span class="out">203.0.113.42</span>
+
+                <span class="cmt"># Audit active listening ports (TCP/UDP, PIDs)</span>
+                <span class="prm">$</span> <span class="cmd">sudo ss</span> <span class="flg">-tulpn</span>
+                <span class="out">tcp LISTEN 0 128 0.0.0.0:22 users:(("sshd",pid=842))
+                  tcp LISTEN 0 511 0.0.0.0:80 users:(("nginx",pid=1120))</span>
+              </div>
+            </div>
+            <div class="ok a aR" style="--d:4">
+              <span>⚡ <b>Quick Diagnostic:</b> <code>ping -c 4 8.8.8.8</code> tests your gateway &amp; routing;
+                <code>ping -c 4 google.com</code> tests whether DNS domain resolution works!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>33</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 34 PERIPHERALS & UNIFIED TUI ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>05 · Diagnostics</div>
+          <h2>Peripherals, Thermals &amp; Unified Dashboards</h2>
+        </div>
+        <span class="s-en">Hardware Buses &amp; Monitors</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <div class="banner light a" style="--d:2">
+          <span class="b-ic">🔍</span>
+          <div>
+            <h3>Buses, Sensors &amp; Real-Time Monitoring · <em>The SysAdmin's Swiss Army Knife</em></h3>
+            <p>When hardware misbehaves, bus tools reveal whether the kernel physically recognizes the device. Modern
+              TUI monitors bring all metrics together.</p>
+          </div>
+        </div>
+        <div class="cols wide-l">
+          <div class="info-stack">
+            <div class="card a aL" style="--d:3">
+              <div class="c-top"><span class="ic">🔌</span>
+                <h3>Hardware Bus Introspection</h3>
+              </div>
+              <ul>
+                <li><b>PCIe Bus (<code>lspci</code>):</b> Lists GPUs, NVMe controllers, Wi-Fi cards, and sound devices
+                  plugged into PCIe slots.
+                  <br><code>lspci | grep -E "VGA|3D|Audio"</code>
+                </li>
+                <li><b>USB Bus (<code>lsusb</code>):</b> Lists all connected USB hubs, keyboards, webcams, and flash
+                  drives.
+                  <br><code>lsusb -tv</code> (Shows connection tree and negotiated bus speeds).
+                </li>
+              </ul>
+            </div>
+            <div class="card g a aL" style="--d:4">
+              <div class="c-top"><span class="ic">🌡️</span>
+                <h3>Thermals &amp; Fan Speeds: <code>sensors</code></h3>
+              </div>
+              <p>From the <code>lm-sensors</code> package. Read live temperatures for CPU cores, GPU hot spots, and fan
+                RPM speeds:</p>
+              <div class="minis" style="margin-top:4px">
+                <span class="mini"><code>Tctl: +48.5°C</code></span>
+                <span class="mini"><code>fan1: 1250 RPM</code></span>
+                <span class="mini"><code>GPU: +52.0°C</code></span>
+              </div>
+            </div>
+          </div>
+          <div class="info-stack">
+            <div class="card purple a aR" style="--d:3">
+              <div class="c-top"><span class="ic">📊</span>
+                <h3>The Modern Real-Time TUI: <code>btop</code> / <code>htop</code></h3>
+              </div>
+              <p>A comprehensive terminal dashboard that combines everything in real-time:</p>
+              <ul>
+                <li>Live CPU utilization graphs across all cores</li>
+                <li>RAM, cache, and swap pressure meters</li>
+                <li>Real-time disk read/write bandwidth</li>
+                <li>Live network packet graphs and process tree with kill control</li>
+              </ul>
+            </div>
+            <div class="term-box sm a aR" style="--d:4">
+              <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span
+                  class="dot g"></span><span class="title">The Instant SysAdmin Snapshot: inxi</span></div>
+              <div class="term-code"><span class="cmt"># Complete 1-page hardware &amp; OS profile</span>
+                <span class="prm">$</span> <span class="cmd">sudo inxi</span> <span class="flg">-b</span>
+                <span class="out">System: Host: srv01 Kernel: 6.1.0-21-amd64 arch: x86_64
+                  Machine: Type: Desktop Mobo: ASUS ROG STRIX B650E-F BIOS: 2413
+                  CPU: 8-Core: AMD Ryzen 7 7800X3D speed: 4200 MHz
+                  Graphics: Device: NVIDIA AD104 [GeForce RTX 4070 Ti] driver: nvidia 550.78
+                  Network: Device: Intel I225-V 2.5GbE driver: igc
+                  Drives: Local Storage: total: 1.82 TiB used: 120 GiB (6.4%)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>34</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 35 REFERENCES & RESOURCES ================= -->
+    <section class="slide">
+      <header class="s-head a" style="--d:0">
+        <div>
+          <div class="s-tag"><i></i>References &amp; Further Learning</div>
+          <h2>Recommended Resources &amp; References</h2>
+        </div>
+        <span class="s-en">Curated Knowledge</span>
+      </header>
+      <div class="s-rule a" style="--d:1"></div>
+      <div class="s-body">
+        <!-- Learning Journey Banner -->
+        <div class="banner light a" style="--d:2;margin-bottom:8px;padding:8px 16px;border-radius:10px">
+          <span class="b-ic" style="font-size:22px">📚</span>
+          <div>
+            <h3 style="font-size:14.5px">Continue Your Learning Journey · <em
+                style="color:var(--navy);font-weight:600">Curated Reading, Sandboxes &amp; Roadmaps</em></h3>
+            <p style="font-size:11px;margin-top:2px;line-height:1.35">Mastering GNU/Linux is a continuous hands-on
+              journey. Explore these foundational guides, books, wargames, and roadmaps.</p>
+          </div>
+        </div>
+
+        <!-- 2x2 References Grid -->
+        <div class="ref-grid">
+          <!-- Card 1: Course Companion Guides -->
+          <div class="ref-card c-guides a aL" style="--d:3">
+            <div class="ref-card-head">
+              <div class="rch-title">
+                <span class="rch-icon">📖</span>
+                <h3>Course Companion Guides</h3>
+              </div>
+              <small>By Guilherme Viegas</small>
+            </div>
+            <div class="ref-card-items">
+              <div class="ref-tile">
+                <div class="ref-tile-top">
+                  <span class="ref-tile-name">The Linux Command Line Roadmap</span>
+                  <span class="ref-badge">Article</span>
+                </div>
+                <div class="ref-tile-desc">Foundational roadmap and progressive command mastery for developers and
+                  engineers.</div>
+                <a class="ref-tile-link" href="https://gui13go.github.io/blogs/the-linux-command-line-roadmap/"
+                  target="_blank" rel="noopener noreferrer">🔗
+                  gui13go.github.io/blogs/the-linux-command-line-roadmap/</a>
+              </div>
+              <div class="ref-tile">
+                <div class="ref-tile-top">
+                  <span class="ref-tile-name">Navigating GNU/Linux</span>
+                  <span class="ref-badge">Article</span>
+                </div>
+                <div class="ref-tile-desc">Detailed exploration of the Filesystem Hierarchy Standard, path syntax, and
+                  essential directories.</div>
+                <a class="ref-tile-link" href="https://gui13go.github.io/blogs/navigating-gnulinux/" target="_blank"
+                  rel="noopener noreferrer">🔗 gui13go.github.io/blogs/navigating-gnulinux/</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Essential Books -->
+          <div class="ref-card c-books a aR" style="--d:3">
+            <div class="ref-card-head">
+              <div class="rch-title">
+                <span class="rch-icon">📚</span>
+                <h3>Essential Books</h3>
+              </div>
+              <small>Foundational In-Depth Reading</small>
+            </div>
+            <div class="ref-card-items">
+              <div class="ref-tile">
+                <div class="ref-tile-top">
+                  <span class="ref-tile-name">The Linux Command Line</span>
+                  <span class="ref-badge">Book</span>
+                </div>
+                <div class="ref-tile-desc"><b>William Shotts (No Starch Press)</b> · The classic, beginner-friendly
+                  bible covering shell navigation, core utilities, and scripting.</div>
+                <span class="ref-tile-link" style="color:#64748b">📖 Comprehensive reference for shell &amp; bash
+                  fundamentals</span>
+              </div>
+              <div class="ref-tile">
+                <div class="ref-tile-top">
+                  <span class="ref-tile-name">Practical Linux Security Cookbook</span>
+                  <span class="ref-badge">Book</span>
+                </div>
+                <div class="ref-tile-desc"><b>Tajinder Kalsi (Packt)</b> · Hands-on recipes for user permissions, SSH
+                  hardening, sudo policies, and server defense.</div>
+                <span class="ref-tile-link" style="color:#64748b">🛡️ Production security, auditing, and server
+                  hardening</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Interactive Practice & Wargames -->
+          <div class="ref-card c-games a aL" style="--d:4">
+            <div class="ref-card-head">
+              <div class="rch-title">
+                <span class="rch-icon">⚔️</span>
+                <h3>Interactive Practice &amp; Wargames</h3>
+              </div>
+              <small>Hands-On Terminal Challenges</small>
+            </div>
+            <div class="ref-card-items">
+              <div class="ref-tile">
+                <div class="ref-tile-top">
+                  <span class="ref-tile-name">OverTheWire: Bandit</span>
+                  <span class="ref-badge">Wargame</span>
+                </div>
+                <div class="ref-tile-desc">Gamified SSH challenges teaching file permissions, hidden files, pipes, and
+                  text filtering level-by-level.</div>
+                <a class="ref-tile-link" href="https://overthewire.org/wargames/bandit/" target="_blank"
+                  rel="noopener noreferrer">🔗 overthewire.org/wargames/bandit/</a>
+              </div>
+              <div class="ref-tile">
+                <div class="ref-tile-top">
+                  <span class="ref-tile-name">SadServers</span>
+                  <span class="ref-badge">Live Sandbox</span>
+                </div>
+                <div class="ref-tile-desc">"Like LeetCode for Linux" — diagnose and repair broken production servers
+                  inside real browser VMs.</div>
+                <a class="ref-tile-link" href="https://sadservers.com/" target="_blank" rel="noopener noreferrer">🔗
+                  sadservers.com</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Visual Roadmaps & References -->
+          <div class="ref-card c-maps a aR" style="--d:4">
+            <div class="ref-card-head">
+              <div class="rch-title">
+                <span class="rch-icon">🗺️</span>
+                <h3>Visual Roadmaps &amp; References</h3>
+              </div>
+              <small>Continuous Skill Progression</small>
+            </div>
+            <div class="ref-card-items">
+              <div class="ref-tile">
+                <div class="ref-tile-top">
+                  <span class="ref-tile-name">Linux Developer Roadmap</span>
+                  <span class="ref-badge">Roadmap</span>
+                </div>
+                <div class="ref-tile-desc">Community-curated interactive visual guide mapping operating system concepts,
+                  DevOps workflows, and sysadmin skills.</div>
+                <a class="ref-tile-link" href="https://roadmap.sh/linux" target="_blank" rel="noopener noreferrer">🔗
+                  roadmap.sh/linux</a>
+              </div>
+              <div class="ref-tile">
+                <div class="ref-tile-top">
+                  <span class="ref-tile-name">Linux Man Pages &amp; TLDR</span>
+                  <span class="ref-badge">Reference</span>
+                </div>
+                <div class="ref-tile-desc">Official POSIX manual pages at <code>man7.org</code> and concise
+                  community-driven cheatsheets at <code>tldr.sh</code>.</div>
+                <div style="display:flex;gap:12px">
+                  <a class="ref-tile-link" href="https://man7.org/linux/man-pages/" target="_blank"
+                    rel="noopener noreferrer">🔗 man7.org</a>
+                  <a class="ref-tile-link" href="https://tldr.sh/" target="_blank" rel="noopener noreferrer">🔗
+                    tldr.sh</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s-foot">
+        <div class="fbar" data-fbar></div>
+        <div class="pgno"><b>35</b> / 36</div>
+      </div>
+    </section>
+
+    <!-- ================= 36 CONCLUSION & DISCUSSION ================= -->
+    <section class="slide dark">
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center">
+        <div class="end-emoji a aPop" style="--d:0">🐧</div>
+        <div class="end-title a" style="--d:1">Master the Terminal</div>
+        <div class="end-sub a" style="--d:2">Thank You · Q &amp; A · Open Discussion</div>
+        <div class="cover-chips a" style="--d:3;margin-top:28px">
+          <span class="chip">📜 <b>Unix &amp; GNU Roots</b></span>
+          <span class="chip">🐧 <b>Everything is a File</b></span>
+          <span class="chip">📁 <b>FHS Standards</b></span>
+          <span class="chip">🔒 <b>4-2-1 Octal Permissions</b></span>
+          <span class="chip">🔀 <b>Pipes &amp; Redirection</b></span>
+          <span class="chip">📜 <b>Bash Automation</b></span>
+          <span class="chip">🖥️ <b>Hardware Diagnostics</b></span>
+        </div>
+        <div class="cover-meta a" style="--d:4;position:static;margin-top:26px">
+          <div class="meta-card" style="text-align:center">
+            👨‍🏫 <b>Guilherme Viegas</b>
+            <span>Course Lecture</span>
+          </div>
+        </div>
+      </div>
+      <div class="cover-bars" data-bars></div>
+    </section>
+
+  </div>
+
+  <!-- Fixed Viewport Controls -->
+  <div class="hint">
+    <span>⌨️ <kbd>←</kbd> <kbd>→</kbd> Navigate</span>
+    <span><kbd>Space</kbd> Next</span>
+    <span><kbd>O</kbd> Overview</span>
+    <span><kbd>F</kbd> Fullscreen</span>
+    <span><kbd>T</kbd> Timer</span>
+  </div>
+
+  <div class="ctrl">
+    <div class="ctrl-chip" title="Click to reset lecture timer" onclick="resetTimer()" style="cursor:pointer">
+      ⏱️ <span id="timerDisplay">00:00</span>
+    </div>
+    <button id="btnOverview" title="Slide Overview (O / Esc)" aria-label="Slide Overview">⊞</button>
+    <button id="btnFullscreen" title="Toggle Fullscreen (F)" aria-label="Toggle Fullscreen">⛶</button>
+    <span class="ctrl-chip"><b id="pgNow">01</b> / <span id="pgTotal">36</span></span>
+    <button id="btnPrev" title="Previous Slide (←)" aria-label="Previous Slide">‹</button>
+    <button id="btnNext" title="Next Slide (→ / Space)" aria-label="Next Slide">›</button>
+  </div>
+
+  <!-- Slide Overview Modal -->
+  <div id="overviewModal">
+    <div class="om-card">
+      <div class="om-head">
+        <h3>Course Presentation Slide Index (36 Slides)</h3>
+        <button class="om-close" onclick="toggleOverview()">✕</button>
+      </div>
+      <div class="om-grid" id="overviewGrid"></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      "use strict";
+      var stage = document.getElementById('stage');
+      var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+      var total = slides.length;
+      var cur = 0;
+      var busy = false;
+      var prog = document.getElementById('progress');
+      var pgNow = document.getElementById('pgNow');
+      document.getElementById('pgTotal').textContent = String(total).padStart(2, '0');
+      var btnPrev = document.getElementById('btnPrev');
+      var btnNext = document.getElementById('btnNext');
+      var btnOverview = document.getElementById('btnOverview');
+      var btnFullscreen = document.getElementById('btnFullscreen');
+      var overviewModal = document.getElementById('overviewModal');
+      var overviewGrid = document.getElementById('overviewGrid');
+
+      /* ---------- 16:9 Responsive Scaling ---------- */
+      function fit() {
+        var s = Math.min(window.innerWidth / 1280, window.innerHeight / 720);
+        stage.style.transform = 'translate(-50%,-50%) scale(' + s + ')';
+      }
+      window.addEventListener('resize', fit);
+      window.addEventListener('orientationchange', fit);
+      fit();
+
+      /* ---------- Slide Overview Grid Generation ---------- */
+      slides.forEach(function (s, idx) {
+        var item = document.createElement('div');
+        item.className = 'om-item' + (idx === cur ? ' active' : '');
+        var h2 = s.querySelector('h2') || s.querySelector('.cover-title') || s.querySelector('.sec-title') || s.querySelector('.end-title');
+        var title = h2 ? h2.textContent.trim() : 'Slide ' + (idx + 1);
+        item.innerHTML = '<span class="om-item-num">SLIDE ' + String(idx + 1).padStart(2, '0') + '</span><span class="om-item-title">' + title + '</span>';
+        item.addEventListener('click', function () {
+          go(idx);
+          toggleOverview();
+        });
+        overviewGrid.appendChild(item);
+      });
+
+      window.toggleOverview = function () {
+        var show = overviewModal.classList.toggle('show');
+        if (show) {
+          var items = overviewGrid.querySelectorAll('.om-item');
+          items.forEach(function (el, i) {
+            if (i === cur) el.classList.add('active');
+            else el.classList.remove('active');
+          });
+        }
+      };
+      btnOverview.addEventListener('click', toggleOverview);
+
+      /* ---------- Fullscreen Toggle ---------- */
+      function toggleFullscreen() {
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen().catch(function () { });
+        } else {
+          if (document.exitFullscreen) document.exitFullscreen();
+        }
+      }
+      btnFullscreen.addEventListener('click', toggleFullscreen);
+
+      /* ---------- Lecture Timer ---------- */
+      var startTime = Date.now();
+      var timerEl = document.getElementById('timerDisplay');
+      setInterval(function () {
+        var elapsed = Math.floor((Date.now() - startTime) / 1000);
+        var mins = Math.floor(elapsed / 60);
+        var secs = elapsed % 60;
+        timerEl.textContent = String(mins).padStart(2, '0') + ':' + String(secs).padStart(2, '0');
+      }, 1000);
+      window.resetTimer = function () {
+        startTime = Date.now();
+        timerEl.textContent = "00:00";
+      };
+
+      /* ---------- Decorative Footer Bars Pattern ---------- */
+      var fPat = [[26, '#003e60'], [16, '#0098be'], [10, '#058e67', 1], [22, '#003e60'], [14, '#0098be'],
+      [10, '#058e67', 1], [26, '#003e60'], [12, '#0098be'], [10, '#058e67', 1], [20, '#003e60'],
+      [16, '#0098be'], [10, '#058e67', 1], [24, '#003e60'], [14, '#0098be']];
+      document.querySelectorAll('[data-fbar]').forEach(function (el) {
+        fPat.forEach(function (p) {
+          var i = document.createElement('i');
+          if (p[2]) { i.className = 'dot'; i.style.background = p[1]; }
+          else { i.style.width = p[0] + 'px'; i.style.background = p[1]; }
+          el.appendChild(i);
+        });
+      });
+
+      /* ---------- Cover & Chapter Decorative Vertical Bars ---------- */
+      var cols = ['#ffffff', '#bbdfe6', '#0098be', '#058e67', '#eaf4f7'];
+      var hs = [96, 148, 70, 150, 112, 64, 132, 104, 84, 152, 120, 92, 140, 72, 116, 132, 88, 124];
+      document.querySelectorAll('[data-bars]').forEach(function (el) {
+        var dim = el.getAttribute('data-dim') === '1';
+        var pal = dim ? ['rgba(255,255,255,.85)', 'rgba(187,223,230,.55)', 'rgba(0,152,190,.75)', 'rgba(5,142,103,.75)', 'rgba(234,244,247,.4)'] : cols;
+        hs.forEach(function (h, idx) {
+          var b = document.createElement('i');
+          b.style.height = h + 'px';
+          b.style.background = pal[idx % 5];
+          if (idx % 4 === 1) { b.style.borderRadius = '50% 50% 4px 4px'; b.style.width = Math.min(h, 56) + 'px'; }
+          b.style.setProperty('--d', idx);
+          el.appendChild(b);
+        });
+      });
+
+      /* ---------- Page Transition Core ---------- */
+      function updateUI() {
+        prog.style.width = ((cur + 1) / total * 100) + '%';
+        pgNow.textContent = String(cur + 1).padStart(2, '0');
+        btnPrev.disabled = (cur === 0);
+        btnNext.disabled = (cur === total - 1);
+      }
+      function go(n) {
+        n = Math.max(0, Math.min(total - 1, n));
+        if (n === cur || busy) return;
+        busy = true;
+        var dir = n > cur ? 1 : -1;
+        var old = slides[cur], nw = slides[n];
+        old.classList.remove('active');
+        old.classList.add(dir > 0 ? 'out-l' : 'out-r');
+        setTimeout(function () { old.classList.remove('out-l', 'out-r'); }, 520);
+        nw.classList.add('active');
+        cur = n;
+        updateUI();
+        setTimeout(function () { busy = false; }, 480);
+      }
+      var next = function () { go(cur + 1); };
+      var prev = function () { go(cur - 1); };
+
+      /* ---------- Keyboard Controls ---------- */
+      window.addEventListener('keydown', function (e) {
+        if (overviewModal.classList.contains('show')) {
+          if (e.key === 'Escape' || e.key === 'o' || e.key === 'O') {
+            e.preventDefault(); toggleOverview();
+          }
+          return;
+        }
+        switch (e.key) {
+          case 'ArrowRight': case 'ArrowDown': case 'PageDown': case ' ':
+            e.preventDefault(); next(); break;
+          case 'ArrowLeft': case 'ArrowUp': case 'PageUp':
+            e.preventDefault(); prev(); break;
+          case 'Home': e.preventDefault(); go(0); break;
+          case 'End': e.preventDefault(); go(total - 1); break;
+          case 'f': case 'F': e.preventDefault(); toggleFullscreen(); break;
+          case 'o': case 'O': e.preventDefault(); toggleOverview(); break;
+          case 't': case 'T': e.preventDefault(); resetTimer(); break;
+        }
+      });
+
+      /* ---------- Mouse Wheel Navigation (Throttled) ---------- */
+      var wheelLock = 0;
+      window.addEventListener('wheel', function (e) {
+        if (overviewModal.classList.contains('show')) return;
+        e.preventDefault();
+        var now = Date.now();
+        if (now - wheelLock < 720) return;
+        if (Math.abs(e.deltaY) < 20) return;
+        wheelLock = now;
+        (e.deltaY > 0 ? next : prev)();
+      }, { passive: false });
+
+      /* ---------- Touch Gestures (Swipe) ---------- */
+      var tx = 0, ty = 0;
+      window.addEventListener('touchstart', function (e) {
+        tx = e.touches[0].clientX; ty = e.touches[0].clientY;
+      }, { passive: true });
+      window.addEventListener('touchend', function (e) {
+        if (overviewModal.classList.contains('show')) return;
+        var dx = e.changedTouches[0].clientX - tx;
+        var dy = e.changedTouches[0].clientY - ty;
+        if (Math.abs(dx) > 56 && Math.abs(dx) > Math.abs(dy)) (dx < 0 ? next : prev)();
+        else if (Math.abs(dy) > 70 && Math.abs(dy) > Math.abs(dx)) (dy < 0 ? next : prev)();
+      }, { passive: true });
+
+      /* ---------- Control Buttons ---------- */
+      btnPrev.addEventListener('click', prev);
+      btnNext.addEventListener('click', next);
+
+      updateUI();
+    })();
+
+    /* ---------- Interactive Permission Calculator Logic ---------- */
+    (function () {
+      var bits = {
+        u_r: true, u_w: true, u_x: true,
+        g_r: true, g_w: false, g_x: true,
+        o_r: true, o_w: false, o_x: true
+      };
+
+      function updatePermUI() {
+        var u = (bits.u_r ? 4 : 0) + (bits.u_w ? 2 : 0) + (bits.u_x ? 1 : 0);
+        var g = (bits.g_r ? 4 : 0) + (bits.g_w ? 2 : 0) + (bits.g_x ? 1 : 0);
+        var o = (bits.o_r ? 4 : 0) + (bits.o_w ? 2 : 0) + (bits.o_x ? 1 : 0);
+
+        var sym = '-' +
+          (bits.u_r ? 'r' : '-') + (bits.u_w ? 'w' : '-') + (bits.u_x ? 'x' : '-') +
+          (bits.g_r ? 'r' : '-') + (bits.g_w ? 'w' : '-') + (bits.g_x ? 'x' : '-') +
+          (bits.o_r ? 'r' : '-') + (bits.o_w ? 'w' : '-') + (bits.o_x ? 'x' : '-');
+
+        document.getElementById('permCmd').textContent = 'chmod ' + u + g + o + ' file.sh';
+        document.getElementById('permSym').textContent = sym;
+
+        Object.keys(bits).forEach(function (k) {
+          var el = document.getElementById(k);
+          if (el) {
+            if (bits[k]) el.classList.add('on');
+            else el.classList.remove('on');
+          }
+        });
+      }
+
+      window.togglePerm = function (id) {
+        if (bits[id] !== undefined) {
+          bits[id] = !bits[id];
+          updatePermUI();
+        }
+      };
+
+      window.setPerm = function (u, g, o) {
+        bits.u_r = !!(u & 4); bits.u_w = !!(u & 2); bits.u_x = !!(u & 1);
+        bits.g_r = !!(g & 4); bits.g_w = !!(g & 2); bits.g_x = !!(g & 1);
+        bits.o_r = !!(o & 4); bits.o_w = !!(o & 2); bits.o_x = !!(o & 1);
+        updatePermUI();
+      };
+
+      updatePermUI();
+    })();
+  </script>
+</body>
+
+</html>

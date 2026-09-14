@@ -1,0 +1,177 @@
+{{- define "main" }}
+<div class="gallery-page-container">
+  <header class="gallery-header">
+    <div class="gallery-breadcrumbs">
+      <a href="{{ site.BaseURL }}">Home</a> <span>/</span> <a href="/gallery/">Gallery</a> <span>/</span> <span>{{ .Title }}</span>
+    </div>
+    <h1 class="gallery-title">{{ .Title }}</h1>
+    {{- with .Description }}
+    <p class="gallery-subtitle">{{ . }}</p>
+    {{- end }}
+    
+    {{ partial "gallery_nav.html" (dict "CurrentSection" "computer-languages") }}
+  </header>
+
+  <!-- Filter / Search Controls -->
+  <div class="gallery-toolbar">
+    <div class="gallery-search-box">
+      <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="langSearch" placeholder="Search languages by name, creator, year, typing, paradigm, or usage..." autocomplete="off">
+      <button type="button" id="clearLangSearch" class="clear-search-btn" style="display:none;" aria-label="Clear search">&times;</button>
+    </div>
+    <div class="gallery-count-badge">
+      Showing <span id="visibleCount">{{ len site.Data.computer_languages.computer_languages }}</span> of {{ len site.Data.computer_languages.computer_languages }} languages
+    </div>
+  </div>
+
+  <!-- Languages Grid -->
+  <div class="languages-grid" id="languagesGrid">
+    {{- range site.Data.computer_languages.computer_languages }}
+    <article class="language-card"
+             data-name="{{ .name | lower }}"
+             data-creator="{{ .creator | lower }}"
+             data-year="{{ .year_of_creation | lower }}"
+             data-typing="{{ .typing | lower }}"
+             data-compiled="{{ .compiled_or_interpreted | lower }}"
+             data-paradigm="{{ range .paradigm }}{{ . | lower }} {{ end }}"
+             data-usage="{{ range .usage }}{{ . | lower }} {{ end }}"
+             data-description="{{ .description | lower }}">
+      
+      <div class="language-card-header">
+        <div class="language-title-group">
+          <h2 class="language-name">{{ .name }}</h2>
+          <span class="language-creator">by {{ .creator }}</span>
+        </div>
+        <div class="language-badges">
+          {{- with .year_of_creation }}
+          <span class="language-year-badge">{{ . }}</span>
+          {{- end }}
+          {{- with .compiled_or_interpreted }}
+          <span class="language-type-badge">{{ . }}</span>
+          {{- end }}
+        </div>
+      </div>
+
+      <div class="language-card-body">
+        <p class="language-desc">{{ .description }}</p>
+
+        <div class="language-specs-grid">
+          <div class="language-spec-item">
+            <span class="spec-label">Typing:</span>
+            <span class="spec-value">{{ .typing }}</span>
+          </div>
+          <div class="language-spec-item">
+            <span class="spec-label">Level:</span>
+            <span class="spec-value">{{ .abstraction }}</span>
+          </div>
+          {{- with .popularity }}
+          <div class="language-spec-item">
+            <span class="spec-label">Popularity:</span>
+            <span class="spec-value">{{ . }}</span>
+          </div>
+          {{- end }}
+        </div>
+
+        {{- with .paradigm }}
+        <div class="language-meta-row">
+          <span class="meta-label">Paradigms:</span>
+          <div class="meta-pills">
+            {{- range . }}
+            <span class="meta-pill">{{ . }}</span>
+            {{- end }}
+          </div>
+        </div>
+        {{- end }}
+
+        {{- with .usage }}
+        <div class="language-meta-row">
+          <span class="meta-label">Primary Usage:</span>
+          <div class="meta-pills">
+            {{- range . }}
+            <span class="meta-pill usage-pill">{{ . }}</span>
+            {{- end }}
+          </div>
+        </div>
+        {{- end }}
+
+        {{- with .main_libraries }}
+        <div class="language-meta-row">
+          <span class="meta-label">Ecosystem / Libs:</span>
+          <div class="meta-pills">
+            {{- range . }}
+            <span class="meta-pill code-pill">{{ . }}</span>
+            {{- end }}
+          </div>
+        </div>
+        {{- end }}
+
+        {{- with .keywords }}
+        <div class="language-tags">
+          {{- range . }}
+          <span class="language-tag">#{{ .title }}</span>
+          {{- end }}
+        </div>
+        {{- end }}
+      </div>
+    </article>
+    {{- end }}
+  </div>
+
+  <div id="noResultsMsg" class="gallery-empty-state" style="display: none;">
+    <p>No computer languages matched your search query.</p>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('langSearch');
+  const clearBtn = document.getElementById('clearLangSearch');
+  const cards = document.querySelectorAll('.language-card');
+  const visibleCount = document.getElementById('visibleCount');
+  const noResultsMsg = document.getElementById('noResultsMsg');
+
+  function filterCards() {
+    const q = searchInput.value.trim().toLowerCase();
+    clearBtn.style.display = q.length > 0 ? 'block' : 'none';
+    let count = 0;
+
+    cards.forEach(card => {
+      const name = card.dataset.name || '';
+      const creator = card.dataset.creator || '';
+      const year = card.dataset.year || '';
+      const typing = card.dataset.typing || '';
+      const compiled = card.dataset.compiled || '';
+      const paradigm = card.dataset.paradigm || '';
+      const usage = card.dataset.usage || '';
+      const description = card.dataset.description || '';
+      
+      const match = !q || name.includes(q) || creator.includes(q) || year.includes(q) || typing.includes(q) || compiled.includes(q) || paradigm.includes(q) || usage.includes(q) || description.includes(q);
+      if (match) {
+        card.style.display = '';
+        count++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (visibleCount) visibleCount.textContent = count;
+    if (noResultsMsg) noResultsMsg.style.display = count === 0 ? 'block' : 'none';
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', filterCards);
+  }
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', function() {
+      searchInput.value = '';
+      filterCards();
+      searchInput.focus();
+    });
+  }
+});
+</script>
+{{- end }}

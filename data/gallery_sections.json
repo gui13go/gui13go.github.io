@@ -1,0 +1,105 @@
+{
+  "title": "Gallery",
+  "subtitle": "A curated collection of remarkable personalities, inspiring quotes, and timeless artworks.",
+  "sections": [
+    {
+      "id": "personalities",
+      "dataFile": "personalities",
+      "itemsKey": "personalities",
+      "title": "Personalities",
+      "url": "/gallery/personalities/",
+      "navLabel": "Personalities",
+      "countUnit": "entries",
+      "description": "The thinkers, scientists, philosophers, and writers who have shaped critical thinking.",
+      "icon": "users"
+    },
+    {
+      "id": "quotes",
+      "dataFile": "quotes",
+      "itemsKey": "quotes",
+      "title": "Quotes",
+      "url": "/gallery/quotes/",
+      "navLabel": "Quotes",
+      "countUnit": "quotes",
+      "description": "Curated words of wisdom and provocative perspectives across history and philosophy.",
+      "icon": "quote"
+    },
+    {
+      "id": "arts",
+      "dataFile": "arts",
+      "itemsKey": "arts",
+      "title": "Arts",
+      "url": "/gallery/arts/",
+      "navLabel": "Arts",
+      "countUnit": "artworks",
+      "description": "Masterpieces of human creativity and visual art that have stood the test of time.",
+      "icon": "image"
+    },
+    {
+      "id": "books",
+      "dataFile": "books",
+      "itemsKey": "books",
+      "title": "Books",
+      "url": "/gallery/books/",
+      "navLabel": "Books",
+      "countUnit": "books",
+      "description": "Influential books across engineering, philosophy, economics, history, and computing.",
+      "icon": "book"
+    },
+    {
+      "id": "computer-languages",
+      "dataFile": "computer_languages",
+      "itemsKey": "computer_languages",
+      "title": "Computer Languages",
+      "url": "/gallery/computer-languages/",
+      "navLabel": "Languages",
+      "countUnit": "languages",
+      "description": "Programming languages, typing systems, design paradigms, and their historical evolution.",
+      "icon": "code"
+    },
+    {
+      "id": "operating-systems",
+      "dataFile": "operating_systems",
+      "itemsKey": "operating_systems",
+      "title": "Operating Systems",
+      "url": "/gallery/operating-systems/",
+      "navLabel": "Operating Systems",
+      "countUnit": "operating systems",
+      "description": "Kernel designs, Unix systems, Linux distributions, and desktop/mobile environments.",
+      "icon": "monitor"
+    },
+    {
+      "id": "network-protocols",
+      "dataFile": "network_protocols",
+      "itemsKey": "protocols",
+      "title": "Network Protocols",
+      "url": "/gallery/network-protocols/",
+      "navLabel": "Protocols",
+      "countUnit": "protocols",
+      "description": "The foundational networking protocols that power the global Internet infrastructure.",
+      "icon": "globe"
+    },
+    {
+      "id": "facts",
+      "dataFile": "facts",
+      "itemsKey": "interesting_facts",
+      "title": "Facts",
+      "url": "/gallery/facts/",
+      "navLabel": "Facts",
+      "countUnit": "facts",
+      "description": "Surprising and fascinating trivia across technology, science, linguistics, and history.",
+      "icon": "info"
+    },
+    {
+      "id": "jokes",
+      "dataFile": "jokes",
+      "itemsKey": "jokes",
+      "title": "Jokes",
+      "url": "/gallery/jokes/",
+      "navLabel": "Jokes",
+      "countUnit": "jokes",
+      "description": "Witty, intellectual jokes and humor from philosophy, quantum physics, and computer science.",
+      "icon": "smile"
+    }
+  ]
+}

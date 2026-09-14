@@ -69,6 +69,12 @@ enableEmoji = true
     weight = 10
 
   [[menu.main]]
+    identifier = 'gallery'
+    name = 'Gallery'
+    url = '/gallery/'
+    weight = 15
+
+  [[menu.main]]
     identifier = 'tags'
     name = 'Tags'
     url = '/tags/'
@@ -101,3 +107,12 @@ enableEmoji = true
     style = 'dracula'
   [markup.goldmark.renderer]
     unsafe = true
+
+[module]
+  [[module.mounts]]
+    source = 'static'
+    target = 'static'
+
+  [[module.mounts]]
+    source = 'assets/images'
+    target = 'static/images'

@@ -1,0 +1,1205 @@
+{
+  "id": "network-protocols",
+  "title": "Network Protocols",
+  "path": "/gallery/network-protocols",
+  "availability": "available",
+  "tags": [
+    {
+      "title": "Networking",
+      "color": "#50C314"
+    },
+    {
+      "title": "Internet",
+      "color": "#DA2B61"
+    },
+    {
+      "title": "Communication",
+      "color": "#10B981"
+    },
+    {
+      "title": "Protocols",
+      "color": "#B964BB"
+    },
+    {
+      "title": "Tech",
+      "color": "#2563EB"
+    },
+    {
+      "title": "Infrastructure",
+      "color": "#7C3AED"
+    },
+    {
+      "title": "Connectivity",
+      "color": "#6EBDD7"
+    }
+  ],
+  "excerpt": "A deep dive into the language of the web. Explore the fundamental network protocols that define how data travels across the global internet infrastructure.",
+  "image": "/images/network_protocols_header.png",
+  "protocols": [
+    {
+      "name": "WPA3",
+      "year_of_creation": "2018",
+      "creators": "Wi-Fi Alliance",
+      "summary": "Wi-Fi Protected Access 3 (WPA3) is the next generation of Wi-Fi security. It adds new features to simplify Wi-Fi security, enable more robust authentication, and deliver increased cryptographic strength for highly sensitive data markets.",
+      "keywords": [
+        {
+          "title": "Security",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Wireless",
+          "color": "#3EEBBE"
+        },
+        {
+          "title": "Encryption",
+          "color": "#9333EA"
+        },
+        {
+          "title": "Security Layer",
+          "color": "#6ACC71"
+        }
+      ],
+      "use_cases": [
+        "Public Wi-Fi Protection: Enhanced data privacy in open networks (like airports or cafes) through individualized data encryption which protects traffic even if the network isn't password-protected.",
+        "Brute-Force Attack Resistance: The SAE (Simultaneous Authentication of Equals) protocol provides much better protection against offline dictionary attacks compared to WPA2."
+      ],
+      "image": "/images/network_protocols/protocol_wpa3.png"
+    },
+    {
+      "name": "QUIC",
+      "year_of_creation": "2012",
+      "creators": "Jim Roskind (Google)",
+      "summary": "Quick UDP Internet Connections (QUIC) is a general-purpose transport layer network protocol initially designed by Google. It was designed to provide security equivalent to TLS/SSL, along with reduced connection and transport latency, and bandwidth estimation in each direction to avoid congestion.",
+      "keywords": [
+        {
+          "title": "Transport Layer",
+          "color": "#D7E55A"
+        },
+        {
+          "title": "UDP-based",
+          "color": "#D83287"
+        },
+        {
+          "title": "Low Latency",
+          "color": "#2437F2"
+        },
+        {
+          "title": "Web",
+          "color": "#3B82F6"
+        }
+      ],
+      "use_cases": [
+        "High-Speed Web Browsing: Used by modern browsers to speed up connections to services, significantly reducing the time it takes to establish a secure connection compared to TCP+TLS.",
+        "Stream Multiplexing: Eliminating 'head-of-line blocking' by allowing multiple data streams to arrive independently, which is particularly beneficial on lossy or unstable mobile networks."
+      ],
+      "image": "/images/network_protocols/protocol_quic.png"
+    },
+    {
+      "name": "DCCP",
+      "year_of_creation": "2006",
+      "creators": "IETF",
+      "summary": "The Datagram Congestion Control Protocol (DCCP) is a message-oriented transport layer protocol. It is designed to provide unreliable packet flows with easily configured congestion control mechanisms, useful for streaming media.",
+      "keywords": [
+        {
+          "title": "Transport Layer",
+          "color": "#D7E55A"
+        },
+        {
+          "title": "Congestion Control",
+          "color": "#C89664"
+        },
+        {
+          "title": "Datagram",
+          "color": "#85F921"
+        },
+        {
+          "title": "Streaming",
+          "color": "#A23842"
+        },
+        {
+          "title": "Real-time",
+          "color": "#DC2626"
+        }
+      ],
+      "use_cases": [
+        "Streaming Media with Congestion Control: Designed for applications like internet radio or game streaming that want the timeline of UDP but are 'network good citizens' that react to congestion signals (ECN) to avoid collapsing the network."
+      ],
+      "image": "/images/network_protocols/protocol_dccp_congestion_1768706606252.png"
+    },
+    {
+      "name": "WPA2",
+      "year_of_creation": "2004",
+      "creators": "Wi-Fi Alliance",
+      "summary": "Wi-Fi Protected Access 2 (WPA2) is a security protocol and certification program developed by the Wi-Fi Alliance to secure wireless computer networks. It significantly improved upon its predecessors by introducing the Counter Mode with Cipher Block Chaining Message Authentication Code Protocol (CCMP) based on AES.",
+      "keywords": [
+        {
+          "title": "Security",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Wireless",
+          "color": "#3EEBBE"
+        },
+        {
+          "title": "Encryption",
+          "color": "#9333EA"
+        },
+        {
+          "title": "Security Layer",
+          "color": "#6ACC71"
+        }
+      ],
+      "use_cases": [
+        "Home Wi-Fi Security: The industry standard for decades in securing home wireless routers, preventing unauthorized neighbors or attackers from eavesdropping on traffic.",
+        "Enterprise Mobility: Providing secure, encrypted wireless access for corporate laptops and mobile devices in an office environment."
+      ],
+      "image": "/images/network_protocols/protocol_wpa2.png"
+    },
+    {
+      "name": "IGMPv3",
+      "year_of_creation": "2002",
+      "creators": "Cain, Deering, et al.",
+      "summary": "Version 3 of the Internet Group Management Protocol (IGMP) adds support for source-specific multicast, allowing a receiver to explicitly signal interest in traffic from a specific source address, improving bandwidth utilization and security.",
+      "keywords": [
+        {
+          "title": "Multicast",
+          "color": "#882BD8"
+        },
+        {
+          "title": "Source Filtering",
+          "color": "#2943A5"
+        },
+        {
+          "title": "Network Layer",
+          "color": "#EBA89F"
+        },
+        {
+          "title": "Streaming",
+          "color": "#A23842"
+        }
+      ],
+      "use_cases": [
+        "Source-Specific Multicast (SSM): Allows a client to subscribe to a specific multicast channel from a *specific* source IP. This is crucial for modern IPTV networks to prevent unauthorized streams and optimize routing."
+      ],
+      "image": "/images/network_protocols/protocol_igmpv3_source_filter_1768706534138.png"
+    },
+    {
+      "name": "SFTP",
+      "year_of_creation": "2001",
+      "creators": "IETF (Secsh Working Group)",
+      "summary": "SSH File Transfer Protocol (SFTP) is a secure network protocol that provides file access, file transfer, and file management over any reliable data stream. It was designed by the IETF as an extension of SSH to provide secure file transfer capability. Unlike the legacy FTP protocol, SFTP encrypts both commands and data, preventing passwords and sensitive information from being transmitted in the clear over the network.",
+      "keywords": [
+        {
+          "title": "File Transfer",
+          "color": "#E6A20F"
+        },
+        {
+          "title": "Security",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Encryption",
+          "color": "#9333EA"
+        },
+        {
+          "title": "SSH",
+          "color": "#0141E8"
+        },
+        {
+          "title": "Application Layer",
+          "color": "#7B0241"
+        }
+      ],
+      "use_cases": [
+        "Secure Content Deployment: Replacing legacy FTP for uploading sensitive web assets, configuration files, and code to production servers without risking credential theft.",
+        "Automated Data Backups: Facilitating secure, scriptable transfers of database dumps and log files between servers over public networks using SSH key authentication."
+      ],
+      "image": "/images/network_protocols/protocol_sftp.png"
+    },
+    {
+      "name": "TLS/SSL",
+      "year_of_creation": "1999",
+      "creators": "IETF / Netscape",
+      "summary": "Transport Layer Security (TLS), the successor to Secure Sockets Layer (SSL), is a cryptographic protocol designed to provide communications security over a computer network. It is widely known for securing web traffic (HTTPs).",
+      "keywords": [
+        {
+          "title": "Security",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Encryption",
+          "color": "#9333EA"
+        },
+        {
+          "title": "Transport/Application",
+          "color": "#90DB2A"
+        },
+        {
+          "title": "Web",
+          "color": "#3B82F6"
+        }
+      ],
+      "use_cases": [
+        "Securing Web Traffic: It is the 'S' in HTTPS. It encrypts the connection between your browser and the web server, ensuring no one can spy on your data.",
+        "Email Security: Used to encrypt connections between mail servers (STARTTLS) to prevent emails from being read in transit."
+      ],
+      "image": "/images/network_protocols/protocol_tls_handshake_1768748313741.png"
+    },
+    {
+      "name": "MQTT",
+      "year_of_creation": "1999",
+      "creators": "Andy Stanford-Clark (IBM), Arlen Nipper (Arcom)",
+      "summary": "Message Queuing Telemetry Transport (MQTT) is a lightweight, publish-subscribe network protocol that transports messages between devices. It is specifically designed for constrained devices and low-bandwidth, high-latency or unreliable networks.",
+      "keywords": [
+        {
+          "title": "IoT",
+          "color": "#06B6D4"
+        },
+        {
+          "title": "Publish-Subscribe",
+          "color": "#CDF5CC"
+        },
+        {
+          "title": "Application Layer",
+          "color": "#7B0241"
+        },
+        {
+          "title": "Messaging",
+          "color": "#9D56E4"
+        }
+      ],
+      "use_cases": [
+        "Smart Home Automation: Efficiently communicating state changes and commands between low-power sensors (like door sensors or thermometers) and a central home automation hub.",
+        "Industrial Remote Monitoring: Transmitting critical telemetry data from remote field equipment over expensive or unstable satellite and cellular links."
+      ],
+      "image": "/images/network_protocols/protocol_mqtt.png"
+    },
+    {
+      "name": "RDP",
+      "year_of_creation": "1998",
+      "creators": "Microsoft",
+      "summary": "Remote Desktop Protocol (RDP) is a proprietary protocol developed by Microsoft which provides a user with a graphical interface to connect to another computer over a network connection. The user employs RDP client software for this purpose, while the other computer must run RDP server software.",
+      "keywords": [
+        {
+          "title": "Remote Access",
+          "color": "#73867E"
+        },
+        {
+          "title": "GUI",
+          "color": "#01151B"
+        },
+        {
+          "title": "Application Layer",
+          "color": "#7B0241"
+        },
+        {
+          "title": "Windows",
+          "color": "#A83A63"
+        }
+      ],
+      "use_cases": [
+        "Remote Work: Allowing employees to securely log into and control their office workstations from home as if they were sitting right in front of them.",
+        "System Administration: Enabling IT professionals to troubleshoot and manage servers or user computers remotely without needing physical access."
+      ],
+      "image": "/images/network_protocols/protocol_rdp.png"
+    },
+    {
+      "name": "LDAPS",
+      "year_of_creation": "1997",
+      "creators": "IETF",
+      "summary": "Lightweight Directory Access Protocol over SSL/TLS (LDAPS) is a secure version of LDAP. It provides the same directory access services but adds a layer of encryption and authentication through SSL/TLS, ensuring that sensitive credentials and directory data are protected while in transit.",
+      "keywords": [
+        {
+          "title": "Directory Service",
+          "color": "#2B9BC2"
+        },
+        {
+          "title": "Authentication",
+          "color": "#EEAE98"
+        },
+        {
+          "title": "Security",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Encryption",
+          "color": "#9333EA"
+        },
+        {
+          "title": "Application Layer",
+          "color": "#7B0241"
+        }
+      ],
+      "use_cases": [
+        "Secure Corporate Authentication: Protecting user passwords and sensitive identity data when authenticating against Active Directory or other LDAP servers over untrusted networks.",
+        "Compliance and Data Privacy: Meeting regulatory requirements (like GDPR or HIPAA) by ensuring all person-identifiable information (PII) stored in directories is encrypted during transmission."
+      ],
+      "image": "/images/network_protocols/protocol_ldaps.png"
+    },
+    {
+      "name": "RSVP",
+      "year_of_creation": "1997",
+      "creators": "L. Zhang et al.",
+      "summary": "The Resource Reservation Protocol (RSVP) is a transport layer protocol designed to reserve resources across a network for an integrated services Internet. It signals the network to reserve bandwidth for specific data flows.",
+      "keywords": [
+        {
+          "title": "QoS",
+          "color": "#013DD5"
+        },
+        {
+          "title": "Reservation",
+          "color": "#3EEBAC"
+        },
+        {
+          "title": "Transport Layer",
+          "color": "#D7E55A"
+        },
+        {
+          "title": "Traffic Engineering",
+          "color": "#C0F930"
+        },
+        {
+          "title": "Infrastructure",
+          "color": "#7C3AED"
+        }
+      ],
+      "use_cases": [
+        "Quality of Service (QoS) Guarantees: Used in enterprise networks to reserve a specific amount of bandwidth for a critical video conference or executive call, ensuring it doesn't degrade even if the rest of the network is busy.",
+        "MPLS Traffic Engineering: Often paired with MPLS to create dedicated paths through a service provider's network for specific customer traffic classes."
+      ],
+      "image": "/images/network_protocols/protocol_rsvp_vip_lane_1768706621179.png"
+    },
+    {
+      "name": "SIP",
+      "year_of_creation": "1996",
+      "creators": "Mark Handley, Henning Schulzrinne",
+      "summary": "The Session Initiation Protocol (SIP) is a signaling protocol used for initiating, maintaining, and terminating real-time sessions that include voice, video and messaging applications.",
+      "keywords": [
+        {
+          "title": "VoIP",
+          "color": "#28C1C0"
+        },
+        {
+          "title": "Signaling",
+          "color": "#6BE81A"
+        },
+        {
+          "title": "Application Layer",
+          "color": "#7B0241"
+        },
+        {
+          "title": "Communication",
+          "color": "#10B981"
+        },
+        {
+          "title": "Real-time",
+          "color": "#DC2626"
+        }
+      ],
+      "use_cases": [
+        "Voice over IP (VoIP) Setup: Defines the messages that are sent between endpoints to set up, terminate, and manage a phone call or video conferencing session.",
+        "Instant Messaging Presence: Often used in unified communication suites to handle user presence (online/offline/away) and instant messaging sessions."
+      ],
+      "image": "/images/network_protocols/protocol_sip_voip_1768703628087.png"
+    },
+    {
+      "name": "RTP",
+      "year_of_creation": "1996",
+      "creators": "Audio-Video Transport Working Group",
+      "summary": "The Real-time Transport Protocol (RTP) is a network protocol for delivering audio and video over IP networks. It is used extensively in communication and entertainment systems that involve streaming media.",
+      "keywords": [
+        {
+          "title": "Streaming",
+          "color": "#A23842"
+        },
+        {
+          "title": "VoIP",
+          "color": "#28C1C0"
+        },
+        {
+          "title": "Application Layer",
+          "color": "#7B0241"
+        },
+        {
+          "title": "Communication",
+          "color": "#10B981"
+        },
+        {
+          "title": "Real-time",
+          "color": "#DC2626"
+        }
+      ],
+      "use_cases": [
+        "Media Transport: Carries the actual audio and video streams for calls set up by SIP. It includes timestamps and sequence numbers to help the receiver sync sound and video and handle jitter.",
+        "WebRTC: Used internally in browser-based real-time communication for transmitting media data directly between peers."
+      ],
+      "image": "/images/network_protocols/protocol_rtp_stream_1768706489024.png"
+    },
+    {
+      "name": "IPsec",
+      "year_of_creation": "1995",
+      "creators": "IETF IPsec Working Group",
+      "summary": "Internet Protocol Security (IPsec) is a secure network protocol suite that authenticates and encrypts packets of data to provide secure encrypted communication between two computers over an Internet Protocol network.",
+      "keywords": [
+        {
+          "title": "Security",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Encryption",
+          "color": "#9333EA"
+        },
+        {
+          "title": "Network Layer",
+          "color": "#EBA89F"
+        },
+        {
+          "title": "VPN",
+          "color": "#014CD4"
+        },
+        {
+          "title": "Infrastructure",
+          "color": "#7C3AED"
+        }
+      ],
+      "use_cases": [
+        "Virtual Private Networks (VPNs): The industry standard for creating secure, encrypted tunnels between a remote worker and the corporate office, or between two office locations (Site-to-Site).",
+        "Securing IP Traffic: Can be used to encrypt all IP traffic between two critical servers (e.g., a web server and a database server) within an internal network."
+      ],
+      "image": "/images/network_protocols/protocol_ipsec_tunnel_1768706648486.png"
+    },
+    {
+      "name": "SSH",
+      "year_of_creation": "1995",
+      "creators": "Tatu Ylönen",
+      "summary": "Secure Shell (SSH) is a cryptographic network protocol for operating network services securely over an unsecured network. Its most notable applications are remote login and command-line execution.",
+      "keywords": [
+        {
+          "title": "Security",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Remote Access",
+          "color": "#73867E"
+        },
+        {
+          "title": "Application Layer",
+          "color": "#7B0241"
+        },
+        {
+          "title": "Management",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Encrypted",
+          "color": "#A259A4"
+        }
+      ],
+      "use_cases": [
+        "Remote Server Administration: The standard tool for system administrators to securely log into and manage remote Linux servers and cloud infrastructure.",
+        "Secure File Transfer (SFTP): Uses the SSH channel to transfer files securely between computers, ensuring both authentication and data encryption."
+      ],
+      "image": "/images/network_protocols/protocol_ssh_terminal_1768748252044.png"
+    },
+    {
+      "name": "HTTPS",
+      "year_of_creation": "1994",
+      "creators": "Netscape Communications",
+      "summary": "Hypertext Transfer Protocol Secure (HTTPS) is an extension of the Hypertext Transfer Protocol (HTTP). It is used for secure communication over a computer network, and is widely used on the Internet. In HTTPS, the communication protocol is encrypted using Transport Layer Security (TLS) or, formerly, Secure Sockets Layer (SSL).",
+      "keywords": [
+        {
+          "title": "Security",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Encryption",
+          "color": "#9333EA"
+        },
+        {
+          "title": "Web",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Application Layer",
+          "color": "#7B0241"
+        },
+        {
+          "title": "Internet",
+          "color": "#DA2B61"
+        }
+      ],
+      "use_cases": [
+        "E-Commerce Transactions: Encrypts credit card numbers and personal information during checkout processes, preventing interception by man-in-the-middle attacks.",
+        "Secure Authentication: Protects user credentials (usernames and passwords) during login procedures on banking sites, email providers, and social media platforms."
+      ],
+      "image": "/images/network_protocols/protocol_https_secure_1768703539245.png"
+    },
+    {
+      "name": "DHCP",
+      "year_of_creation": "1993",
+      "creators": "Ralph Droms",
+      "summary": "Dynamic Host Configuration Protocol (DHCP) is a client/server protocol that automatically provides an Internet Protocol (IP) host with its IP address and other related configuration information such as the subnet mask and default gateway.",
+      "keywords": [
+        {
+          "title": "Infrastructure",
+          "color": "#7C3AED"
+        },
+        {
+          "title": "Management",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Application Layer",
+          "color": "#7B0241"
+        }
+      ],
+      "use_cases": [
+        "Automatic IP Assignment: When you connect your phone or laptop to Wi-Fi, DHCP assigns it a unique IP address automatically, so you don't have to configure it manually.",
+        "Network Management: Allows network administrators to centrally manage and automate the assignment of IP configurations, preventing address conflicts."
+      ],
+      "image": "/images/network_protocols/protocol_dhcp_assign_1768748236994.png"
+    },
+    {
+      "name": "LDAP",
+      "year_of_creation": "1993",
+      "creators": "Tim Howes, Steve Kille, Wengyik Yeong",
+      "summary": "Lightweight Directory Access Protocol (LDAP) is an open, vendor-neutral, industry standard application protocol for accessing and maintaining distributed directory information services over an IP network. It is commonly used as a central repository for user authentication and organizational information.",
+      "keywords": [
+        {
+          "title": "Directory Service",
+          "color": "#2B9BC2"
+        },
+        {
+          "title": "Authentication",
+          "color": "#EEAE98"
+        },
+        {
+          "title": "Application Layer",
+          "color": "#7B0241"
+        },
+        {
+          "title": "Infrastructure",
+          "color": "#7C3AED"
+        }
+      ],
+      "use_cases": [
+        "Centralized Authentication: Implementing Single Sign-On (SSO) systems where users authenticate against a central directory (like Active Directory) to access various enterprise applications.",
+        "Organizational Address Books: Providing a searchable database for contact information, roles, and permissions within a large corporation or institution."
+      ],
+      "image": "/images/network_protocols/protocol_ldap.png"
+    },
+    {
+      "name": "EIGRP",
+      "year_of_creation": "1993",
+      "creators": "Cisco Systems",
+      "summary": "Enhanced Interior Gateway Routing Protocol (EIGRP) is an advanced distance-vector routing protocol developed by Cisco. It automates routing decisions and configuration, supporting rapid convergence and partial updates.",
+      "keywords": [
+        {
+          "title": "Routing",
+          "color": "#0EA5E9"
+        },
+        {
+          "title": "Cisco",
+          "color": "#E19DD9"
+        },
+        {
+          "title": "Network Layer",
+          "color": "#EBA89F"
+        },
+        {
+          "title": "Infrastructure",
+          "color": "#7C3AED"
+        }
+      ],
+      "use_cases": [
+        "Cisco Enterprise Core: Widely used in large all-Cisco enterprise networks because it is easy to configure and converges (re-routes) extremely fast if a link fails.",
+        "Hybrid Routing: Combines the best of distance-vector and link-state protocols, making it efficient for networks with complex topologies."
+      ],
+      "image": "/images/network_protocols/protocol_eigrp_convergence_1768748205355.png"
+    },
+    {
+      "name": "RIPv2",
+      "year_of_creation": "1993",
+      "creators": "G. Malkin",
+      "summary": "RIPv2 is an enhancement of RIPv1 that includes the ability to carry subnet information, validating the protocol for Classless Inter-Domain Routing (CIDR). It also adds support for multicast updates and authentication.",
+      "keywords": [
+        {
+          "title": "Routing",
+          "color": "#0EA5E9"
+        },
+        {
+          "title": "CIDR",
+          "color": "#1F8F74"
+        },
+        {
+          "title": "Application Layer",
+          "color": "#7B0241"
+        }
+      ],
+      "use_cases": [
+        "Small Business LANs: Improved over v1 by supporting VLSM (Variable Length Subnet Masks) and authentication, making it usable for small to medium-sized business networks that don't need the complexity of OSPF."
+      ],
+      "image": "/images/network_protocols/protocol_ripv2_subnets_1768706591008.png"
+    },
+    {
+      "name": "HTTP",
+      "year_of_creation": "1989",
+      "creators": "Tim Berners-Lee",
+      "summary": "The Hypertext Transfer Protocol (HTTP) is an application layer protocol for distributed, collaborative, hypermedia information systems. HTTP is the foundation of data communication for the World Wide Web, where hypertext documents include hyperlinks to other resources that the user can easily access.",
+      "keywords": [
+        {
+          "title": "Web",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Hypertext",
+          "color": "#3D8D79"
+        },
+        {
+          "title": "Application Layer",
+          "color": "#7B0241"
+        },
+        {
+          "title": "Internet",
+          "color": "#DA2B61"
+        }
+      ],
+      "use_cases": [
+        "Web Page Retrieval: The primary protocol for fetching HTML documents and assets from web servers to browsers.",
+        "RESTful APIs: The standard for communication between modern web services and microservices, using methods like GET, POST, PUT, and DELETE to manipulate data resources."
+      ],
+      "image": "/images/network_protocols/protocol_http_web_1768703525404.png"
+    },
+    {
+      "name": "BGP",
+      "year_of_creation": "1989",
+      "creators": "Kirk Lougheed, Yakov Rekhter",
+      "summary": "Border Gateway Protocol (BGP) is the standardized exterior gateway protocol designed to exchange routing and reachability information among autonomous systems (AS) on the Internet. It is the protocol that makes the internet work.",
+      "keywords": [
+        {
+          "title": "Routing",
+          "color": "#0EA5E9"
+        },
+        {
+          "title": "Internet Core",
+          "color": "#31DD1E"
+        },
+        {
+          "title": "Application Layer",
+          "color": "#7B0241"
+        },
+        {
+          "title": "Infrastructure",
+          "color": "#7C3AED"
+        }
+      ],
+      "use_cases": [
+        "Internet Routing: BGP allows different Internet Service Providers (ISPs) to share routing information, determining the most efficient path for your data to travel across the globe.",
+        "Enterprise Multihoming: Large companies use BGP to connect to multiple ISPs simultaneously for redundancy. If one connection fails, BGP automatically reroutes traffic through the other."
+      ],
+      "image": "/images/network_protocols/protocol_bgp_global_1768748266636.png"
+    },
+    {
+      "name": "OSPF",
+      "year_of_creation": "1989",
+      "creators": "John Moy",
+      "summary": "Open Shortest Path First (OSPF) is a link-state routing protocol for Internet Protocol (IP) networks. It uses a link state routing algorithm and falls into the group of interior gateway protocols, operating within a single autonomous system.",
+      "keywords": [
+        {
+          "title": "Routing",
+          "color": "#0EA5E9"
+        },
+        {
+          "title": "Link-State",
+          "color": "#6D10FE"
+        },
+        {
+          "title": "Network Layer",
+          "color": "#EBA89F"
+        },
+        {
+          "title": "Infrastructure",
+          "color": "#7C3AED"
+        }
+      ],
+      "use_cases": [
+        "Large Enterprise & ISP Networks: The standard Interior Gateway Protocol (IGP) for large, multi-vendor networks. It divides the network into 'Areas' to scale efficiently to thousands of routers.",
+        "Data Center Routing: Used within modern data center fabrics to distribute reachability information between spine and leaf switches."
+      ],
+      "image": "/images/network_protocols/protocol_ospf_map_1768748221760.png"
+    },
+    {
+      "name": "IGMPv1",
+      "year_of_creation": "1989",
+      "creators": "Steve Deering",
+      "summary": "The Internet Group Management Protocol (IGMP) is a communications protocol used by hosts and adjacent routers on IPv4 networks to establish multicast group memberships. Version 1 is the original specification.",
+      "keywords": [
+        {
+          "title": "Multicast",
+          "color": "#882BD8"
+        },
+        {
+          "title": "Group Management",
+          "color": "#0D44C4"
+        },
+        {
+          "title": "Network Layer",
+          "color": "#EBA89F"
+        },
+        {
+          "title": "Streaming",
+          "color": "#A23842"
+        }
+      ],
+      "use_cases": [
+        "Legacy Multicast: Used in older networks to allow hosts to join multicast groups (like a video stream). It had no mechanism for a host to explicitly leave a group, relying on timeouts."
+      ],
+      "image": "/images/network_protocols/protocol_igmpv1_multicast_1768706519100.png"
+    },
+    {
+      "name": "SNMP",
+      "year_of_creation": "1988",
+      "creators": "IETF",
+      "summary": "Simple Network Management Protocol (SNMP) is an Internet Standard protocol for collecting and organizing information about managed devices on IP networks and for modifying that information to change device behavior.",
+      "keywords": [
+        {
+          "title": "Management",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Monitoring",
+          "color": "#22C55E"
+        },
+        {
+          "title": "Application Layer",
+          "color": "#7B0241"
+        },
+        {
+          "title": "Infrastructure",
+          "color": "#7C3AED"
+        }
+      ],
+      "use_cases": [
+        "Network Monitoring: Used by NMS (Network Management Systems) to poll routers, switches, and servers for CPU usage, bandwidth utilization, and error rates.",
+        "Alerting: Devices can send 'SNMP Traps' to a central server to immediately notify administrators of critical events like a power failure or link down."
+      ],
+      "image": "/images/network_protocols/protocol_snmp_dashboard_1768748298182.png"
+    },
+    {
+      "name": "RIPv1",
+      "year_of_creation": "1988",
+      "creators": "C. Hedrick",
+      "summary": "The Routing Information Protocol (RIP) is one of the oldest distance-vector routing protocols. It employs the hop count as a routing metric. RIPv1 broadcasts the entire routing table to neighbors periodically.",
+      "keywords": [
+        {
+          "title": "Routing",
+          "color": "#0EA5E9"
+        },
+        {
+          "title": "Distance-Vector",
+          "color": "#15F61B"
+        },
+        {
+          "title": "Application Layer",
+          "color": "#7B0241"
+        },
+        {
+          "title": "Legacy",
+          "color": "#6FDFE9"
+        }
+      ],
+      "use_cases": [
+        "Small/Simple Networks: Sometimes used in very small, static networks where the simplicity of configuration outweighs the inefficiency of broadcasting the entire routing table.",
+        "Education: Frequently used in networking labs to teach the basics of distance-vector routing algorithms."
+      ],
+      "image": "/images/network_protocols/protocol_ripv1_hops_1768706576776.png"
+    },
+    {
+      "name": "IMAP",
+      "year_of_creation": "1986",
+      "creators": "Mark Crispin",
+      "summary": "Internet Message Access Protocol (IMAP) is an Internet standard protocol used by email clients to retrieve email messages from a mail server over a TCP/IP connection. IMAP was designed with the goal of permitting complete management of an email box by multiple email clients, therefore clients generally leave messages on the server until the user explicitly deletes them.",
+      "keywords": [
+        {
+          "title": "Email",
+          "color": "#FF5B7C"
+        },
+        {
+          "title": "Retrieving",
+          "color": "#081A19"
+        },
+        {
+          "title": "Application Layer",
+          "color": "#7B0241"
+        },
+        {
+          "title": "Communication",
+          "color": "#10B981"
+        }
+      ],
+      "use_cases": [
+        "Multi-Device Email Synchronization: Allows users to manage their inbox from multiple devices (phone, laptop, tablet). Read status, folder organization, and sent messages are synced in real-time on the server."
+      ],
+      "image": "/images/network_protocols/protocol_imap_sync_1768703580823.png"
+    },
+    {
+      "name": "NTP",
+      "year_of_creation": "1985",
+      "creators": "David L. Mills",
+      "summary": "Network Time Protocol (NTP) is a networking protocol for clock synchronization between computer systems over packet-switched, variable-latency data networks. It is one of the oldest Internet protocols in use.",
+      "keywords": [
+        {
+          "title": "Synchronization",
+          "color": "#2CAA40"
+        },
+        {
+          "title": "Infrastructure",
+          "color": "#7C3AED"
+        },
+        {
+          "title": "Application Layer",
+          "color": "#7B0241"
+        },
+        {
+          "title": "Management",
+          "color": "#3B82F6"
+        }
+      ],
+      "use_cases": [
+        "Log Correlation: Ensures that logs on different servers have the exact same timestamp, which is critical for debugging issues that span multiple systems.",
+        "Security Protocols: Many security mechanisms (like Kerberos or TLS certificates) rely on accurate time to prevent replay attacks and validate expiration dates."
+      ],
+      "image": "/images/network_protocols/protocol_ntp_sync_1768748282696.png"
+    },
+    {
+      "name": "POP3",
+      "year_of_creation": "1984",
+      "creators": "Mark Crispin",
+      "summary": "Post Office Protocol 3 (POP3) is an application-layer Internet standard protocol used by e-mail clients to retrieve e-mail from a mail server. POP3 has been largely superseded by IMAP, but it remains in use. Ideally, POP3 is used when you want to download emails to a single computer and remove them from the server.",
+      "keywords": [
+        {
+          "title": "Email",
+          "color": "#FF5B7C"
+        },
+        {
+          "title": "Retrieving",
+          "color": "#081A19"
+        },
+        {
+          "title": "Application Layer",
+          "color": "#7B0241"
+        },
+        {
+          "title": "Communication",
+          "color": "#10B981"
+        }
+      ],
+      "use_cases": [
+        "Offline Email Access: Ideal for users who access email from a single device and want to download messages for offline reading, often removing them from the server to save space."
+      ],
+      "image": "/images/network_protocols/protocol_pop3_download_1768706471017.png"
+    },
+    {
+      "name": "DNS",
+      "year_of_creation": "1983",
+      "creators": "Paul Mockapetris",
+      "summary": "The Domain Name System (DNS) is a hierarchical and decentralized naming system for computers, services, or other resources connected to the Internet or a private network. It associates various information with domain names assigned to each of the participating entities.",
+      "keywords": [
+        {
+          "title": "Naming",
+          "color": "#A40CA8"
+        },
+        {
+          "title": "Infrastructure",
+          "color": "#7C3AED"
+        },
+        {
+          "title": "Application Layer",
+          "color": "#7B0241"
+        },
+        {
+          "title": "Web",
+          "color": "#3B82F6"
+        }
+      ],
+      "use_cases": [
+        "User-Friendly Browsing: Translates human-readable domain names (like www.google.com) into machine-readable IP addresses required for network routing.",
+        "Load Balancing: Can be configured to return different IP addresses for the same domain, distributing traffic across multiple servers."
+      ],
+      "image": "/images/network_protocols/protocol_dns_lookup_1768703613265.png"
+    },
+    {
+      "name": "SMB",
+      "year_of_creation": "1983",
+      "creators": "Barry Feigenbaum (IBM)",
+      "summary": "Server Message Block (SMB) is a network file sharing protocol that allows applications on a computer to read and write to files and request services from server programs in a computer network. It is widely used in Windows environments for sharing files, printers, and serial ports.",
+      "keywords": [
+        {
+          "title": "File Sharing",
+          "color": "#2B3238"
+        },
+        {
+          "title": "Windows",
+          "color": "#A83A63"
+        },
+        {
+          "title": "Application Layer",
+          "color": "#7B0241"
+        },
+        {
+          "title": "Infrastructure",
+          "color": "#7C3AED"
+        }
+      ],
+      "use_cases": [
+        "Network File Access: Mapping network drives in Windows environments, allowing multiple users to access and edit documents on a central file server.",
+        "Printer Sharing: Enabling multiple workstations across a local office network to send print jobs to a shared network printer."
+      ],
+      "image": "/images/network_protocols/protocol_smb.png"
+    },
+    {
+      "name": "ARP",
+      "year_of_creation": "1982",
+      "creators": "David C. Plummer",
+      "summary": "The Address Resolution Protocol (ARP) is a communication protocol used for discovering the link layer address, such as a MAC address, associated with a given internet layer address, typically an IPv4 address. This mapping is a critical function in the Internet Protocol suite.",
+      "keywords": [
+        {
+          "title": "Address Resolution",
+          "color": "#488C98"
+        },
+        {
+          "title": "Link Layer",
+          "color": "#D321AB"
+        },
+        {
+          "title": "Network Layer",
+          "color": "#EBA89F"
+        },
+        {
+          "title": "Infrastructure",
+          "color": "#7C3AED"
+        }
+      ],
+      "use_cases": [
+        "Local Network Communication: Essential for mapping Layer 3 IP addresses to Layer 2 MAC addresses, enabling devices on the same LAN (like your laptop and router) to send frames to each other."
+      ],
+      "image": "/images/network_protocols/protocol_arp_mac_ip_1768703595979.png"
+    },
+    {
+      "name": "SMTP",
+      "year_of_creation": "1982",
+      "creators": "Jonathan B. Postel",
+      "summary": "Simple Mail Transfer Protocol (SMTP) is an internet standard communication protocol for electronic mail transmission. Mail servers and other message transfer agents use SMTP to send and receive mail messages. User-level email clients use SMTP only for sending messages to a mail server for relaying.",
+      "keywords": [
+        {
+          "title": "Email",
+          "color": "#FF5B7C"
+        },
+        {
+          "title": "Sending",
+          "color": "#3BD33A"
+        },
+        {
+          "title": "Application Layer",
+          "color": "#7B0241"
+        },
+        {
+          "title": "Communication",
+          "color": "#10B981"
+        }
+      ],
+      "use_cases": [
+        "Sending Emails: The standard protocol used by mail clients (like Outlook or Apple Mail) to send messages to a mail server.",
+        "Server-to-Server Relay: Used by mail servers (MTA) to forward email traffic across the internet to the recipient's destination server."
+      ],
+      "image": "/images/network_protocols/protocol_smtp_mail_1768703566935.png"
+    },
+    {
+      "name": "EGP",
+      "year_of_creation": "1982",
+      "creators": "Eric C. Rosen",
+      "summary": "The Exterior Gateway Protocol (EGP) is a now-obsolete routing protocol that was used to exchange routing information between autonomous systems in the early Internet. It was the predecessor to BGP.",
+      "keywords": [
+        {
+          "title": "Routing",
+          "color": "#0EA5E9"
+        },
+        {
+          "title": "Exterior Gateway",
+          "color": "#AE72E2"
+        },
+        {
+          "title": "Network Layer",
+          "color": "#EBA89F"
+        },
+        {
+          "title": "Legacy",
+          "color": "#6FDFE9"
+        }
+      ],
+      "use_cases": [
+        "Historical Routing: Previously used to convey reachability information between different autonomous systems. It has been completely replaced by BGP because EGP could not handle loops or complex topologies efficiently."
+      ],
+      "image": "/images/network_protocols/protocol_egp_bridge_1768706561265.png"
+    },
+    {
+      "name": "ICMP",
+      "year_of_creation": "1981",
+      "creators": "David Mills",
+      "summary": "The Internet Control Message Protocol (ICMP) is a supporting protocol in the Internet protocol suite. It is used by network devices, including routers, to send error messages and operational information indicating success or failure when communicating with another IP address.",
+      "keywords": [
+        {
+          "title": "Diagnostics",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Error Reporting",
+          "color": "#AFA9D6"
+        },
+        {
+          "title": "Network Layer",
+          "color": "#EBA89F"
+        },
+        {
+          "title": "Infrastructure",
+          "color": "#7C3AED"
+        },
+        {
+          "title": "Management",
+          "color": "#3B82F6"
+        }
+      ],
+      "use_cases": [
+        "Network Diagnostics (Ping/Traceroute): Used by administrators to test reachability (Ping) and map the path packets take through the internet (Traceroute).",
+        "Router Error Reporting: When a router drops a packet (e.g., typically because the destination is unreachable or the TTL expired), it uses ICMP to inform the sender of the failure."
+      ],
+      "image": "/images/network_protocols/protocol_icmp_diagnostics_1768706503413.png"
+    },
+    {
+      "name": "UDP",
+      "year_of_creation": "1980",
+      "creators": "David P. Reed",
+      "summary": "User Datagram Protocol (UDP) is one of the core members of the Internet protocol suite. It uses a simple connectionless communication model with a minimum of protocol mechanism. UDP provides checksums for data integrity, and port numbers for addressing different functions at the source and destination of the datagram.",
+      "keywords": [
+        {
+          "title": "Connectionless",
+          "color": "#074D97"
+        },
+        {
+          "title": "Fast",
+          "color": "#214C7C"
+        },
+        {
+          "title": "Transport Layer",
+          "color": "#D7E55A"
+        },
+        {
+          "title": "Real-time",
+          "color": "#DC2626"
+        },
+        {
+          "title": "Streaming",
+          "color": "#A23842"
+        }
+      ],
+      "use_cases": [
+        "Real-Time Video Streaming & VoIP: Applications like Zoom or Skype prioritize speed over perfect accuracy. UDP sends packets without waiting for acknowledgments, minimizing latency. A few lost pixels or a millisecond of audio dropout is preferable to the lag caused by TCP retransmissions.",
+        "Online Gaming: Fast-paced multiplayer games use UDP to update player positions and actions in real-time. The overhead of TCP handshakes and error correction would introduce unacceptable input lag.",
+        "DNS Queries: Domain Name System lookups typically use UDP because they are small, single request-response transactions where the overhead of establishing a TCP connection would slow down web browsing significantly."
+      ],
+      "image": "/images/network_protocols/protocol_udp_fast_1768703510997.png"
+    },
+    {
+      "name": "TCP",
+      "year_of_creation": "1974",
+      "creators": "Vint Cerf, Bob Kahn",
+      "summary": "Transmission Control Protocol (TCP) is one of the main protocols of the Internet protocol suite. It provides reliable, ordered, and error-checked delivery of a stream of bytes between applications running on hosts communicating via an IP network. Major internet applications such as the World Wide Web, email, remote administration, and file transfer rely on TCP.",
+      "keywords": [
+        {
+          "title": "Reliable",
+          "color": "#365C6A"
+        },
+        {
+          "title": "Connection-oriented",
+          "color": "#ED5D93"
+        },
+        {
+          "title": "Transport Layer",
+          "color": "#D7E55A"
+        },
+        {
+          "title": "Infrastructure",
+          "color": "#7C3AED"
+        }
+      ],
+      "use_cases": [
+        "Reliable Web Browsing (HTTP/HTTPS): TCP is the backbone of the World Wide Web. When you load a webpage, TCP ensures that all HTML, CSS, and JavaScript files are received exactly as sent. If packets are lost due to congestion, TCP retransmits them, ensuring the page renders correctly without corruption.",
+        "Email Delivery (SMTP, IMAP, POP3): Email systems require guaranteed delivery. TCP establishes a connection between mail servers and clients, ensuring that your message structure and attachments remain intact during transit.",
+        "Secure Shell (SSH) & File Transfers (FTP): For administrative tasks and file management where data integrity is critical, TCP provides the necessary error checking and ordered delivery to prevent corrupted files or commands."
+      ],
+      "image": "/images/network_protocols/protocol_tcp_abstract_1768703498669.png"
+    },
+    {
+      "name": "FTP",
+      "year_of_creation": "1971",
+      "creators": "Abhay Bhushan",
+      "summary": "The File Transfer Protocol (FTP) is a standard network protocol used for the transfer of computer files between a client and server on a computer network. FTP is built on a client-server model architecture using separate control and data connections between the client and the server.",
+      "keywords": [
+        {
+          "title": "File Transfer",
+          "color": "#E6A20F"
+        },
+        {
+          "title": "Client-Server",
+          "color": "#52F785"
+        },
+        {
+          "title": "Application Layer",
+          "color": "#7B0241"
+        },
+        {
+          "title": "Data",
+          "color": "#10B981"
+        }
+      ],
+      "use_cases": [
+        "Website Maintenance: Traditionally used by web developers to upload HTML and script files to a web server.",
+        "Legacy Data Archives: Still widely used in academic and industrial settings for accessing public repositories of large datasets or software distributions."
+      ],
+      "image": "/images/network_protocols/protocol_ftp_transfer_1768703553224.png"
+    },
+    {
+      "name": "Telnet",
+      "year_of_creation": "1969",
+      "creators": "Postel, Reynolds",
+      "summary": "Telnet is an application layer protocol used to provide a bidirectional interactive text-oriented communication facility using a virtual terminal connection. It was the standard for remote access before SSH, but because it sends all data (including passwords) in plain text, it is now considered insecure for use over public networks.",
+      "keywords": [
+        {
+          "title": "Remote Access",
+          "color": "#73867E"
+        },
+        {
+          "title": "Command Line",
+          "color": "#DB5FE9"
+        },
+        {
+          "title": "Application Layer",
+          "color": "#7B0241"
+        },
+        {
+          "title": "Legacy",
+          "color": "#6FDFE9"
+        },
+        {
+          "title": "Unencrypted",
+          "color": "#AE2F2B"
+        }
+      ],
+      "use_cases": [
+        "Configuring Legacy Hardware: Accessing older network switches or industrial equipment that does not support newer, secure protocols like SSH.",
+        "Service Debugging: Testing connectivity to specific ports on a server (e.g., 'telnet example.com 80') to manually verify if a service is responding."
+      ],
+      "image": "/images/network_protocols/protocol_telnet.png"
+    }
+  ]
+}

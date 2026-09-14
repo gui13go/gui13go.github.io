@@ -1,0 +1,810 @@
+{
+  "id": "books",
+  "title": "Books",
+  "path": "/gallery/books",
+  "availability": "available",
+  "tags": [
+    {
+      "title": "Read",
+      "color": "#3B82F6"
+    },
+    {
+      "title": "Inspiration",
+      "color": "#A855F7"
+    }
+  ],
+  "excerpt": "A collection of books that have influenced my thinking and career.",
+  "image": "/images/books/books.png",
+  "placeholder": "/images/book_placeholder.webp",
+  "description": "My favorite books covering technology, philosophy, and more.",
+  "books": [
+    {
+      "title": "AI-Driven Cybersecurity and Threat Intelligence",
+      "authors": "Iqbal H. Sarker",
+      "year": "2024",
+      "summary": "Covers AI and ML approaches for automated cybersecurity and threat intelligence.",
+      "keywords": [
+        {
+          "title": "AI",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Cybersecurity",
+          "color": "#9333EA"
+        },
+        {
+          "title": "Threat Intelligence",
+          "color": "#BC9705"
+        },
+        {
+          "title": "Machine Learning",
+          "color": "#5A9717"
+        }
+      ],
+      "image": "/images/books/ai_cybersecurity.jpg",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/ai_cybersecurity.pdf"
+    },
+    {
+      "title": "Nexus: A Brief History of Information Networks from the Stone Age to AI",
+      "authors": "Yuval Noah Harari",
+      "year": "2024",
+      "summary": "Explores the history of information networks and their influence on human societies, from the Stone Age to AI.",
+      "keywords": [
+        {
+          "title": "History",
+          "color": "#EF4444"
+        },
+        {
+          "title": "Information",
+          "color": "#C01D0C"
+        },
+        {
+          "title": "AI",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Society",
+          "color": "#059669"
+        }
+      ],
+      "image": "/images/books/nexus.png",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/nexus.pdf"
+    },
+    {
+      "title": "Cloud Penetration Testing for Red Teamers",
+      "authors": "Kim Crawley",
+      "year": "2023",
+      "summary": "A guide to effectively pentesting AWS, Azure, and GCP applications.",
+      "keywords": [
+        {
+          "title": "Cloud Security",
+          "color": "#89D50B"
+        },
+        {
+          "title": "Penetration Testing",
+          "color": "#DC2626"
+        },
+        {
+          "title": "Red Teaming",
+          "color": "#8ACF96"
+        },
+        {
+          "title": "AWS",
+          "color": "#FF9900"
+        },
+        {
+          "title": "Azure",
+          "color": "#0078D4"
+        },
+        {
+          "title": "GCP",
+          "color": "#4285F4"
+        }
+      ],
+      "image": "/images/books/cloud_pentest.jpg",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/cloud_pentest.pdf"
+    },
+    {
+      "title": "The Coming Wave",
+      "authors": "Mustafa Suleyman",
+      "year": "2023",
+      "summary": "Discusses the risks and opportunities presented by AI and other emerging technologies.",
+      "keywords": [
+        {
+          "title": "AI",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Technology",
+          "color": "#B9612C"
+        },
+        {
+          "title": "Future",
+          "color": "#7C3AED"
+        },
+        {
+          "title": "Society",
+          "color": "#059669"
+        }
+      ],
+      "image": "/images/books/the_coming_wave.png",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_coming_wave.pdf"
+    },
+    {
+      "title": "Hacking in the Humanities",
+      "authors": "Aaron Mauro",
+      "year": "2022",
+      "summary": "Explores the intersection of cybersecurity, speculative fiction, and the digital humanities.",
+      "keywords": [
+        {
+          "title": "Digital Humanities",
+          "color": "#860C07"
+        },
+        {
+          "title": "Cybersecurity",
+          "color": "#9333EA"
+        },
+        {
+          "title": "Speculative Fiction",
+          "color": "#125B27"
+        }
+      ],
+      "image": "/images/books/hacking_humanities.jpg",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/hacking_humanities.pdf"
+    },
+    {
+      "title": "Cyberjutsu: Cybersecurity for the Modern Ninja",
+      "authors": "Ben McCarty",
+      "year": "2021",
+      "summary": "Applies ancient ninja techniques to modern cybersecurity challenges.",
+      "keywords": [
+        {
+          "title": "Cybersecurity",
+          "color": "#9333EA"
+        },
+        {
+          "title": "Ninja",
+          "color": "#7C8E6A"
+        },
+        {
+          "title": "History",
+          "color": "#EF4444"
+        },
+        {
+          "title": "Strategy",
+          "color": "#1E40AF"
+        }
+      ],
+      "image": "/images/books/cyberjutsu.jpg",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/cyberjutsu.pdf"
+    },
+    {
+      "title": "Web Security for Developers",
+      "authors": "Malcolm McDonald",
+      "year": "2020",
+      "summary": "A practical guide to web security threats and how to defend against them.",
+      "keywords": [
+        {
+          "title": "Web Security",
+          "color": "#B1C2CC"
+        },
+        {
+          "title": "Cybersecurity",
+          "color": "#9333EA"
+        },
+        {
+          "title": "Development",
+          "color": "#03451B"
+        }
+      ],
+      "image": "/images/books/web_security_for_developers.jpeg",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/web_security.pdf"
+    },
+    {
+      "title": "Practical Statistics for Data Scientists",
+      "authors": "Peter Bruce, Andrew Bruce, Peter Gedeck",
+      "year": "2020",
+      "summary": "A comprehensive guide to applying statistical methods to data science problems.",
+      "keywords": [
+        {
+          "title": "Data Science",
+          "color": "#10B981"
+        },
+        {
+          "title": "Statistics",
+          "color": "#0369A1"
+        },
+        {
+          "title": "Machine Learning",
+          "color": "#5A9717"
+        },
+        {
+          "title": "Python",
+          "color": "#3776AB"
+        },
+        {
+          "title": "R",
+          "color": "#0EA5E9"
+        }
+      ],
+      "image": "/images/books/practical_statistics_for_data_scientists.png",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/practical_statistics_for_data_scientists.pdf"
+    },
+    {
+      "title": "The Art of Statistics",
+      "authors": "David Spiegelhalter",
+      "year": "2020",
+      "summary": "A guide to statistical thinking, showing how to apply statistical reasoning to real-world problems.",
+      "keywords": [
+        {
+          "title": "Statistics",
+          "color": "#0369A1"
+        },
+        {
+          "title": "Data Literacy",
+          "color": "#1E7849"
+        },
+        {
+          "title": "Reasoning",
+          "color": "#8BCEFE"
+        }
+      ],
+      "image": "/images/books/the_art_of_statistics.png",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_art_of_statistics.pdf"
+    },
+    {
+      "title": "The Site Reliability Workbook",
+      "authors": "Betsy Beyer et al.",
+      "year": "2018",
+      "summary": "Practical ways to implement Site Reliability Engineering (SRE) principles.",
+      "keywords": [
+        {
+          "title": "SRE",
+          "color": "#0141C6"
+        },
+        {
+          "title": "DevOps",
+          "color": "#06B6D4"
+        },
+        {
+          "title": "Reliability",
+          "color": "#E6D41A"
+        },
+        {
+          "title": "Google",
+          "color": "#0EA5E9"
+        }
+      ],
+      "image": "/images/books/sre_workbook.jpg",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/sre_workbook.pdf"
+    },
+    {
+      "title": "Life 3.0",
+      "authors": "Max Tegmark",
+      "year": "2017",
+      "summary": "Explores the potential impact of artificial intelligence on the future of life on Earth and beyond.",
+      "keywords": [
+        {
+          "title": "AI",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Future",
+          "color": "#7C3AED"
+        },
+        {
+          "title": "Technology",
+          "color": "#B9612C"
+        },
+        {
+          "title": "Philosophy",
+          "color": "#60A5FA"
+        }
+      ],
+      "image": "/images/books/life_3_0.png",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/life_3_0.pdf"
+    },
+    {
+      "title": "The Art of Data Science",
+      "authors": "Roger D. Peng, Elizabeth Matsui",
+      "year": "2016",
+      "summary": "A guide to the process of data analysis for practitioners and managers.",
+      "keywords": [
+        {
+          "title": "Data Science",
+          "color": "#10B981"
+        },
+        {
+          "title": "Analysis",
+          "color": "#0EA5E9"
+        },
+        {
+          "title": "Statistics",
+          "color": "#0369A1"
+        }
+      ],
+      "image": "/images/books/the_art_of_data_science.png",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_art_of_data_science.pdf"
+    },
+    {
+      "title": "Weapons of Math Destruction",
+      "authors": "Cathy O'Neil",
+      "year": "2016",
+      "summary": "Examines how big data algorithms can reinforce inequality and harm society.",
+      "keywords": [
+        {
+          "title": "Data Science",
+          "color": "#10B981"
+        },
+        {
+          "title": "Ethics",
+          "color": "#10B981"
+        },
+        {
+          "title": "Algorithms",
+          "color": "#77B604"
+        },
+        {
+          "title": "Society",
+          "color": "#059669"
+        }
+      ],
+      "image": "/images/books/weapons_of_math_destruction.png",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/weapons_of_math_destruction.pdf"
+    },
+    {
+      "title": "Naked Statistics",
+      "authors": "Charles Wheelan",
+      "year": "2014",
+      "summary": "Demystifies statistics for the general reader, focusing on the intuition behind statistical analysis.",
+      "keywords": [
+        {
+          "title": "Statistics",
+          "color": "#0369A1"
+        },
+        {
+          "title": "Data Analysis",
+          "color": "#0EA5E9"
+        },
+        {
+          "title": "Intuition",
+          "color": "#3CC037"
+        }
+      ],
+      "image": "/images/books/naked_statistics.png",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/naked_statistics.pdf"
+    },
+    {
+      "title": "The Functional Art",
+      "authors": "Alberto Cairo",
+      "year": "2012",
+      "summary": "A practical introduction to understanding and utilizing information graphics and data visualization.",
+      "keywords": [
+        {
+          "title": "Data Visualization",
+          "color": "#57F32E"
+        },
+        {
+          "title": "Design",
+          "color": "#BE185D"
+        },
+        {
+          "title": "Infographics",
+          "color": "#DCD559"
+        }
+      ],
+      "image": "/images/books/the_functional_art.png",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_functional_art.pdf"
+    },
+    {
+      "title": "Thinking, Fast and Slow",
+      "authors": "Daniel Kahneman",
+      "year": "2011",
+      "summary": "Explores the two systems that drive the way we think: System 1 (fast and intuitive) and System 2 (slow and deliberative).",
+      "keywords": [
+        {
+          "title": "Psychology",
+          "color": "#EC4899"
+        },
+        {
+          "title": "Behavioral Economics",
+          "color": "#A890BB"
+        },
+        {
+          "title": "Decision Making",
+          "color": "#8B5CF6"
+        }
+      ],
+      "image": "/images/books/thinking_fast_and_slow.png",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/thinking_fast_and_slow.pdf"
+    },
+    {
+      "title": "Sapiens: A Brief History of Humankind",
+      "authors": "Yuval Noah Harari",
+      "year": "2011",
+      "summary": "A survey of the history of humankind from the Stone Age to the 21st century.",
+      "keywords": [
+        {
+          "title": "History",
+          "color": "#EF4444"
+        },
+        {
+          "title": "Anthropology",
+          "color": "#FB8F32"
+        },
+        {
+          "title": "Science",
+          "color": "#06B6D4"
+        }
+      ],
+      "image": "/images/books/sapiens.png",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/sapiens.pdf"
+    },
+    {
+      "title": "Justice: What's the Right Thing to Do?",
+      "authors": "Michael Sandel",
+      "year": "2009",
+      "summary": "Explores the role of justice in society and individual lives through philosophical concepts and contemporary dilemmas.",
+      "keywords": [
+        {
+          "title": "Philosophy",
+          "color": "#60A5FA"
+        },
+        {
+          "title": "Justice",
+          "color": "#1D4ED8"
+        },
+        {
+          "title": "Ethics",
+          "color": "#10B981"
+        },
+        {
+          "title": "Politics",
+          "color": "#B91C1C"
+        }
+      ],
+      "image": "/images/books/justice.png",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/justice.pdf"
+    },
+    {
+      "title": "Kicking Away the Ladder",
+      "authors": "Ha-Joon Chang",
+      "year": "2002",
+      "summary": "Examines how developed countries often pressure developing nations to adopt policies different from those they used during their own growth.",
+      "keywords": [
+        {
+          "title": "Economics",
+          "color": "#3B82F6"
+        },
+        {
+          "title": "Development",
+          "color": "#03451B"
+        },
+        {
+          "title": "History",
+          "color": "#EF4444"
+        },
+        {
+          "title": "Politics",
+          "color": "#B91C1C"
+        }
+      ],
+      "image": "/images/books/kicking_away_the_ladder.png",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/kicking_away_the_ladder.pdf"
+    },
+    {
+      "title": "The Sublime Object of Ideology",
+      "authors": "Slavoj Žižek",
+      "year": "1989",
+      "summary": "A psychoanalytic interpretation of ideology, drawing on Hegel, Marx, and Lacan.",
+      "keywords": [
+        {
+          "title": "Philosophy",
+          "color": "#60A5FA"
+        },
+        {
+          "title": "Ideology",
+          "color": "#CD5E5A"
+        },
+        {
+          "title": "Psychoanalysis",
+          "color": "#058110"
+        },
+        {
+          "title": "Marxism",
+          "color": "#448349"
+        }
+      ],
+      "image": "/images/books/sublime_object_ideology.jpg",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/sublime_object_ideology.pdf"
+    },
+    {
+      "title": "The Alchemist",
+      "authors": "Paulo Coelho",
+      "year": "1988",
+      "summary": "A fable about following one's dreams and listening to one's heart. ",
+      "keywords": [
+        {
+          "title": "Fiction",
+          "color": "#CA76F4"
+        },
+        {
+          "title": "Philosophy",
+          "color": "#60A5FA"
+        },
+        {
+          "title": "Adventure",
+          "color": "#1316F0"
+        }
+      ],
+      "image": "/images/books/the_alchemist.png",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_alchemist.pdf"
+    },
+    {
+      "title": "Atlas Shrugged",
+      "authors": "Ayn Rand",
+      "year": "1957",
+      "summary": "A dystopian novel exploring the role of the mind in man's existence and the morality of rational self-interest.",
+      "keywords": [
+        {
+          "title": "Philosophy",
+          "color": "#60A5FA"
+        },
+        {
+          "title": "Objectivism",
+          "color": "#D71437"
+        },
+        {
+          "title": "Fiction",
+          "color": "#CA76F4"
+        },
+        {
+          "title": "Dystopia",
+          "color": "#76098F"
+        }
+      ],
+      "image": "/images/books/atlas_shrugged.jpg",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/atlas_shrugged.pdf"
+    },
+    {
+      "title": "How to Lie with Statistics",
+      "authors": "Darrell Huff",
+      "year": "1954",
+      "summary": "An introduction to statistics for the general reader, outlining the misuse of statistics and errors in their interpretation.",
+      "keywords": [
+        {
+          "title": "Statistics",
+          "color": "#0369A1"
+        },
+        {
+          "title": "Data Literacy",
+          "color": "#1E7849"
+        },
+        {
+          "title": "Critical Thinking",
+          "color": "#61C511"
+        }
+      ],
+      "image": "/images/books/how_to_lie_with_statistics.png",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/how_to_lie_with_statistics.pdf"
+    },
+    {
+      "title": "1984",
+      "authors": "George Orwell",
+      "year": "1949",
+      "summary": "A dystopian novel about totalitarianism, mass surveillance, and repressive regimentation.",
+      "keywords": [
+        {
+          "title": "Fiction",
+          "color": "#CA76F4"
+        },
+        {
+          "title": "Dystopia",
+          "color": "#76098F"
+        },
+        {
+          "title": "Politics",
+          "color": "#B91C1C"
+        },
+        {
+          "title": "Totalitarianism",
+          "color": "#04BE2D"
+        }
+      ],
+      "image": "/images/books/1984.png",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/1984.pdf"
+    },
+    {
+      "title": "Man's Search for Meaning",
+      "authors": "Viktor Frankl",
+      "year": "1946",
+      "summary": "Chronicles Frankl's experiences in Nazi concentration camps and introduces his psychotherapeutic method, logotherapy.",
+      "keywords": [
+        {
+          "title": "Psychology",
+          "color": "#EC4899"
+        },
+        {
+          "title": "Philosophy",
+          "color": "#60A5FA"
+        },
+        {
+          "title": "Holocaust",
+          "color": "#0D8DCE"
+        },
+        {
+          "title": "Meaning",
+          "color": "#23C9DD"
+        }
+      ],
+      "image": "/images/books/man_s_search_for_meaning.png",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/man_s_search_for_meaning.pdf"
+    },
+    {
+      "title": "Animal Farm",
+      "authors": "George Orwell",
+      "year": "1945",
+      "summary": "A political satire and allegorical novella about a group of farm animals who rebel against their human farmer.",
+      "keywords": [
+        {
+          "title": "Fiction",
+          "color": "#CA76F4"
+        },
+        {
+          "title": "Satire",
+          "color": "#2F76D6"
+        },
+        {
+          "title": "Politics",
+          "color": "#B91C1C"
+        },
+        {
+          "title": "Allegory",
+          "color": "#588E33"
+        }
+      ],
+      "image": "/images/books/animal_farm.jpg",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/animal_farm.pdf"
+    },
+    {
+      "title": "The Myth of Sisyphus",
+      "authors": "Albert Camus",
+      "year": "1942",
+      "summary": "A philosophical essay introducing the philosophy of the absurd and the human need for meaning.",
+      "keywords": [
+        {
+          "title": "Philosophy",
+          "color": "#60A5FA"
+        },
+        {
+          "title": "Absurdism",
+          "color": "#8B5CF6"
+        },
+        {
+          "title": "Existentialism",
+          "color": "#8B5CF6"
+        }
+      ],
+      "image": "/images/books/the_myth_of_sisyphus.png",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_myth_of_sisyphus.pdf"
+    },
+    {
+      "title": "The Great Gatsby",
+      "authors": "F. Scott Fitzgerald",
+      "year": "1925",
+      "summary": "A novel set in the Jazz Age that explores themes of wealth, class, and the American Dream.",
+      "keywords": [
+        {
+          "title": "Fiction",
+          "color": "#CA76F4"
+        },
+        {
+          "title": "Classic",
+          "color": "#19D072"
+        },
+        {
+          "title": "American Dream",
+          "color": "#6C4403"
+        }
+      ],
+      "image": "/images/books/the_great_gatsby.png",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_great_gatsby.pdf"
+    },
+    {
+      "title": "The Crowd: A Study of the Popular Mind",
+      "authors": "Gustave Le Bon",
+      "year": "1895",
+      "summary": "A seminal work on crowd psychology and the behavior of the popular mind.",
+      "keywords": [
+        {
+          "title": "Psychology",
+          "color": "#EC4899"
+        },
+        {
+          "title": "Sociology",
+          "color": "#572C02"
+        },
+        {
+          "title": "Crowd Behavior",
+          "color": "#E19CA5"
+        }
+      ],
+      "image": "/images/books/the_crowd.jpg",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_crowd.pdf"
+    },
+    {
+      "title": "Beyond Good and Evil",
+      "authors": "Friedrich Nietzsche",
+      "year": "1886",
+      "summary": "A critique of traditional morality, philosophy, religion, and science.",
+      "keywords": [
+        {
+          "title": "Philosophy",
+          "color": "#60A5FA"
+        },
+        {
+          "title": "Morality",
+          "color": "#A03FB3"
+        },
+        {
+          "title": "Ethics",
+          "color": "#10B981"
+        }
+      ],
+      "image": "/images/books/beyond_good_and_evil.png",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/beyond_good_and_evil.pdf"
+    },
+    {
+      "title": "Critique of Pure Reason",
+      "authors": "Immanuel Kant",
+      "year": "1781",
+      "summary": "A seminal work in philosophy that seeks to define the limits and scope of metaphysics.",
+      "keywords": [
+        {
+          "title": "Philosophy",
+          "color": "#60A5FA"
+        },
+        {
+          "title": "Metaphysics",
+          "color": "#289882"
+        },
+        {
+          "title": "Epistemology",
+          "color": "#F9F23D"
+        },
+        {
+          "title": "Reason",
+          "color": "#AA7E64"
+        }
+      ],
+      "image": "/images/books/critique_of_pure_reason.png",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/critique_of_pure_reason.pdf"
+    },
+    {
+      "title": "The Republic",
+      "authors": "Plato",
+      "year": "375 BC",
+      "summary": "A Socratic dialogue concerning justice, the ideal city-state, and the just man.",
+      "keywords": [
+        {
+          "title": "Philosophy",
+          "color": "#60A5FA"
+        },
+        {
+          "title": "Politics",
+          "color": "#B91C1C"
+        },
+        {
+          "title": "Justice",
+          "color": "#1D4ED8"
+        },
+        {
+          "title": "Classics",
+          "color": "#203E41"
+        }
+      ],
+      "image": "/images/books/the_republic.png",
+      "pdf": "https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_republic.pdf"
+    }
+  ]
+}

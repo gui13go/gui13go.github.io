@@ -1,0 +1,6 @@
+<nav class="gallery-nav-pills" aria-label="Gallery Sections">
+  {{- $current := .CurrentSection }}
+  {{- range site.Data.gallery_sections.sections }}
+  <a href="{{ .url }}" class="gallery-pill{{ if eq $current .id }} active{{ end }}">{{ .navLabel }}</a>
+  {{- end }}
+</nav>

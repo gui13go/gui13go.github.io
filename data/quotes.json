@@ -1,0 +1,257 @@
+{
+  "id": "quotes",
+  "title": "Quotes",
+  "path": "/gallery/quotes",
+  "availability": "available",
+  "tags": [
+    {
+      "title": "Wisdom",
+      "color": "#F59E0B"
+    },
+    {
+      "title": "Life",
+      "color": "#22C55E"
+    },
+    {
+      "title": "Philosophy",
+      "color": "#60A5FA"
+    },
+    {
+      "title": "Motivation",
+      "color": "#F59E0B"
+    },
+    {
+      "title": "Thought",
+      "color": "#5661F9"
+    },
+    {
+      "title": "Inspiration",
+      "color": "#A855F7"
+    },
+    {
+      "title": "Ethics",
+      "color": "#10B981"
+    }
+  ],
+  "excerpt": "Dive into a curated collection of inspiring and thought-provoking quotes. This section offers wisdom and insights from various sources to uplift and motivate.",
+  "image": "/images/quotes.webp",
+  "text1": "Dive into a curated collection of inspiring and thought-provoking quotes.",
+  "quotes": [
+    {
+      "text": "Corruption is a tool of the elite to maintain power.",
+      "author": "Jessé Souza",
+      "origin": "The Elite of Backwardness",
+      "year": "2017"
+    },
+    {
+      "text": "Capitalism is dying from an overdose of itself.",
+      "author": "Wolfgang Streeck",
+      "origin": "How Will Capitalism End?",
+      "year": "2016"
+    },
+    {
+      "text": "Fear is the primary political affect of our time.",
+      "author": "Vladimir Safatle",
+      "origin": "The Circuit of Affects",
+      "year": "2015"
+    },
+    {
+      "text": "The main driver of inequality is the tendency of returns on capital to exceed the rate of economic growth.",
+      "author": "Thomas Piketty",
+      "origin": "Capital in the Twenty-First Century",
+      "year": "2013"
+    },
+    {
+      "text": "We are not dreamers. We are the awakening of a consciousness that is becoming aware of the nightmare.",
+      "author": "Slavoj Žižek",
+      "origin": "Occupying Wall Street speech",
+      "year": "2011"
+    },
+    {
+      "text": "The freedom of the market is not the freedom of the people.",
+      "author": "David Harvey",
+      "origin": "A Brief History of Neoliberalism",
+      "year": "2005"
+    },
+    {
+      "text": "Capitalism is a system that is irrational in its very nature.",
+      "author": "Samir Amin",
+      "origin": "The Liberal Virus",
+      "year": "2004"
+    },
+    {
+      "text": "The most important thing to know is that we are in a structural crisis of the world-system.",
+      "author": "Immanuel Wallerstein",
+      "origin": "World-Systems Analysis: An Introduction",
+      "year": "2004"
+    },
+    {
+      "text": "Globalization is not a process, it is a totality.",
+      "author": "Octavio Ianni",
+      "origin": "The Era of Globalism",
+      "year": "1996"
+    },
+    {
+      "text": "Space is an accumulation of unequal times.",
+      "author": "Milton Santos",
+      "origin": "The Nature of Space",
+      "year": "1996"
+    },
+    {
+      "text": "Democracy is the invention of the new.",
+      "author": "Marilena Chaui",
+      "origin": "Invitation to Philosophy",
+      "year": "1994"
+    },
+    {
+      "text": "Land is not a commodity, it is life.",
+      "author": "Ariovaldo Umbelino de Oliveira",
+      "origin": "The Geography of Struggles in the Countryside",
+      "year": "1991"
+    },
+    {
+      "text": "We must decolonize our minds to understand our reality.",
+      "author": "Lélia Gonzalez",
+      "origin": "Racism and Sexism in Brazilian Culture",
+      "year": "1984"
+    },
+    {
+      "text": "Citizenship in Brazil is a concession, not a right.",
+      "author": "Wanderley Guilherme dos Santos",
+      "origin": "Cidadania e Justiça",
+      "year": "1979"
+    },
+    {
+      "text": "Taste classifies, and it classifies the classifier.",
+      "author": "Pierre Bourdieu",
+      "origin": "Distinction",
+      "year": "1979"
+    },
+    {
+      "text": "Racism is the mask of exploitation.",
+      "author": "Abdias do Nascimento",
+      "origin": "The Genocide of the Black Brazilian",
+      "year": "1978"
+    },
+    {
+      "text": "Where there is power, there is resistance.",
+      "author": "Michel Foucault",
+      "origin": "The History of Sexuality",
+      "year": "1976"
+    },
+    {
+      "text": "Underdevelopment is not a stage of development, but a structural condition of dependency.",
+      "author": "Ruy Mauro Marini",
+      "origin": "Dialectics of Dependency",
+      "year": "1973"
+    },
+    {
+      "text": "Investment is the engine of growth, but distribution is the engine of justice.",
+      "author": "Maria da Conceição Tavares",
+      "origin": "Accumulation and Industrialization in Brazil",
+      "year": "1972"
+    },
+    {
+      "text": "When education is not liberating, the dream of the oppressed is to become the oppressor.",
+      "author": "Paulo Freire",
+      "origin": "Pedagogy of the Oppressed",
+      "year": "1968"
+    },
+    {
+      "text": "Development is a social process, not just an economic one.",
+      "author": "Celso Furtado",
+      "origin": "Development and Underdevelopment",
+      "year": "1961"
+    },
+    {
+      "text": "The slave was not a passive victim; the quilombo was the negation of the system.",
+      "author": "Clóvis Moura",
+      "origin": "Rebellions of the Senzala",
+      "year": "1959"
+    },
+    {
+      "text": "The state is the property of the elite.",
+      "author": "Raymundo Faoro",
+      "origin": "The Owners of Power",
+      "year": "1958"
+    },
+    {
+      "text": "The crisis is the moment of truth.",
+      "author": "Ignácio Rangel",
+      "origin": "Brazilian Dualities",
+      "year": "1957"
+    },
+    {
+      "text": "To allow the market mechanism to be sole director of the fate of human beings and their natural environment... would result in the demolition of society.",
+      "author": "Karl Polanyi",
+      "origin": "The Great Transformation",
+      "year": "1944"
+    },
+    {
+      "text": "We are a country in formation, where the past is not yet over.",
+      "author": "Caio Prado Júnior",
+      "origin": "The Formation of Contemporary Brazil",
+      "year": "1942"
+    },
+    {
+      "text": "Life is not an easy matter... You cannot live through it without falling into frustration and cynicism unless you have before you a great idea which raises you above personal misery, above weakness, above all kinds of perfidy and baseness.",
+      "author": "Leon Trotsky",
+      "origin": "Diary in Exile",
+      "year": "1935"
+    },
+    {
+      "text": "A revolution is not a dinner party, or writing an essay, or painting a picture, or doing embroidery.",
+      "author": "Mao Zedong",
+      "origin": "Report on an Investigation of the Peasant Movement in Hunan",
+      "year": "1927"
+    },
+    {
+      "text": "Freedom is always and exclusively freedom for the one who thinks differently.",
+      "author": "Rosa Luxemburg",
+      "origin": "The Russian Revolution",
+      "year": "1918"
+    },
+    {
+      "text": "Freedom is the recognition of necessity.",
+      "author": "Friedrich Engels",
+      "origin": "Anti-Dühring",
+      "year": "1877"
+    },
+    {
+      "text": "History repeats itself, first as tragedy, second as farce.",
+      "author": "Karl Marx",
+      "origin": "The Eighteenth Brumaire of Louis Napoleon",
+      "year": "1852"
+    },
+    {
+      "text": "The philosophers have only interpreted the world, in various ways; the point is to change it.",
+      "author": "Karl Marx",
+      "origin": "Theses on Feuerbach",
+      "year": "1845"
+    },
+    {
+      "text": "The Market Can Remain Irrational Longer Than You Can Remain Solvent",
+      "author": "John Maynard Keynes",
+      "origin": "Attributed",
+      "year": ""
+    },
+    {
+      "text": "The light at the end of the tunnel is just the light of an oncoming train.",
+      "author": "Slavoj Žižek",
+      "origin": "Various",
+      "year": ""
+    },
+    {
+      "text": "A nation that does not know its own history is a nation condemned to repeat it.",
+      "author": "Florestan Fernandes",
+      "origin": "Reflections on Brazil",
+      "year": ""
+    },
+    {
+      "text": "There are decades where nothing happens; and there are weeks where decades happen.",
+      "author": "Vladimir Lenin",
+      "origin": "Attributed",
+      "year": ""
+    }
+  ]
+}

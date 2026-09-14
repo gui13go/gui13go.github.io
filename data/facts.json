@@ -1,0 +1,84 @@
+{
+  "id": "facts",
+  "title": "Facts",
+  "path": "/gallery/facts",
+  "availability": "available",
+  "tags": [
+    {
+      "title": "Knowledge",
+      "color": "#3B82F6"
+    },
+    {
+      "title": "History",
+      "color": "#10B981"
+    },
+    {
+      "title": "Technology",
+      "color": "#8B5CF6"
+    },
+    {
+      "title": "Science",
+      "color": "#F59E0B"
+    }
+  ],
+  "excerpt": "A curated cabinet of curiosities. Explore the fascinating, the obscure, and the surprisingly true facts that shape our understanding of the world.",
+  "image": "/images/interesting_facts_main.png",
+  "interesting_facts": [
+    {
+      "name": "The Origins of Airflow",
+      "content": "Airbnb developed the first version of Apache Airflow.",
+      "details": "Originally created by Maxime Beauchemin at Airbnb in 2014, Airflow was designed to manage the company's increasingly complex data pipelines. It was open-sourced in 2015 and became a top-level project at the Apache Software Foundation in 2019. It is now the industry standard for programmatic workflow orchestration.",
+      "category": "Technology",
+      "image": "/images/facts/airflow_airbnb.png",
+      "year": "2014"
+    },
+    {
+      "name": "Google's Gift to the Cloud",
+      "content": "Kubernetes was created by Google.",
+      "details": "Based on Google's internal container orchestrator, 'Borg', Kubernetes (often called K8s) was released as an open-source project in 2014. Google donated it to the Cloud Native Computing Foundation (CNCF) as a seed project. Today, it powers the infrastructure of almost every major tech company in the world.",
+      "category": "Technology",
+      "image": "/images/facts/kubernetes_google.png",
+      "year": "2014"
+    },
+    {
+      "name": "Coffee-Monitoring Webcam",
+      "content": "The first webcam was created to monitor a coffee pot.",
+      "details": "In 1991, researchers at the University of Cambridge's Computer Laboratory set up a camera pointed at the Trojan Room coffee pot. They wanted to see if the pot was full before making the trip to the breakroom. The camera provided a 128x128 grayscale image that was eventually broadcast to the web in 1993.",
+      "category": "Technology",
+      "image": "/images/facts/first_webcam_coffee.png",
+      "year": "1991"
+    },
+    {
+      "name": "The First 'Bug'",
+      "content": "The first computer bug was an actual moth.",
+      "details": "On September 9, 1947, engineers working on the Harvard Mark II computer found a moth stuck in a relay, which was causing the machine to malfunction. They taped the moth into their logbook with the note: 'First actual case of bug being found.' While the term 'bug' had been used for mechanical flaws before, this popularized it in computing.",
+      "category": "Computing History",
+      "image": "/images/facts/first_bug_moth.png",
+      "year": "1947"
+    },
+    {
+      "name": "The First Programmer",
+      "content": "Ada Lovelace is considered the first computer programmer.",
+      "details": "The daughter of Lord Byron, Ada Lovelace was a brilliant mathematician who worked with Charles Babbage on his 'Analytical Engine'. In 1843, she wrote an algorithm for the machine to calculate Bernoulli numbers, recognizing that the engine could do more than just pure calculation—it could manipulate any symbols according to rules.",
+      "category": "Mathematics & History",
+      "image": "/images/facts/ada_lovelace.png",
+      "year": "1843"
+    },
+    {
+      "name": "Confoederatio Helvetica",
+      "content": "The real name of Switzerland is Confoederatio Helvetica.",
+      "details": "Often abbreviated as 'CH', this Latin name translates to 'Helvetic Confederation'. It was chosen to avoid favoring any of the country's four official languages (German, French, Italian, and Romansh). The name refers to the Helvetii, a Celtic tribe that inhabited the Swiss plateau in antiquity.",
+      "category": "History & Geography",
+      "image": "/images/facts/switzerland.png",
+      "year": "1291"
+    },
+    {
+      "name": "Bluetooth's Viking Heritage",
+      "content": "Bluetooth is named after a 10th-century Viking king.",
+      "details": "The technology is named after King Harald 'Bluetooth' Gormsson, who is famous for uniting Scandinavia—just as Bluetooth was designed to unite PC and cellular industries with a short-range wireless link. Even the Bluetooth logo is a combination of the Younger Futhark runes for his initials: ᚼ (Hagall) and ᛒ (Bjarkan).",
+      "category": "Technology",
+      "image": "/images/facts/bluetooth_viking.png",
+      "year": "958"
+    }
+  ]
+}

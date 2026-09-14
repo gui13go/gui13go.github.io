@@ -1,0 +1,963 @@
+{
+  "id": "operating-systems",
+  "title": "Operating Systems",
+  "path": "/gallery/operating-systems",
+  "availability": "available",
+  "tags": [
+    {
+      "title": "OS",
+      "color": "#0009E4"
+    },
+    {
+      "title": "System",
+      "color": "#815E4F"
+    },
+    {
+      "title": "Kernel",
+      "color": "#C0385D"
+    },
+    {
+      "title": "Linux",
+      "color": "#6060D4"
+    },
+    {
+      "title": "Architecture",
+      "color": "#7C3AED"
+    },
+    {
+      "title": "Computing",
+      "color": "#589314"
+    },
+    {
+      "title": "Interface",
+      "color": "#678D19"
+    }
+  ],
+  "excerpt": "The architecture of digital intelligence. Explore the evolution of Operating Systems, from high-performance kernels backbones to modern user-centric interfaces.",
+  "image": "/images/operating_systems_cover.png",
+  "operating_systems": [
+    {
+      "name": "macOS Sonoma",
+      "description": "Apple's operating system for Mac computers, named after the famous wine region in California. Sonoma brings interactive widgets to the desktop, stunning new screen savers that transition to wallpapers, and significant updates to Safari and Video Conferencing. Built on the XNU hybrid kernel (Darwin), it offers unmatched integration with the Apple ecosystem and a robust Unix foundation for developers.",
+      "type": "Proprietary OS",
+      "based_on": "Darwin (BSD-derivative)",
+      "use_case": "Creative Professional, Development, General",
+      "website": "https://www.apple.com/macos",
+      "details": {
+        "kernel": "XNU (Hybrid)",
+        "package_manager": "Homebrew (Third-party)",
+        "default_desktop": "Aqua",
+        "release_model": "Annual Major Release"
+      },
+      "features": [
+        "Seamless iPhone/iPad continuity",
+        "Metal graphics API",
+        "APFS file system",
+        "Strict privacy & security controls"
+      ],
+      "image": "/images/operating_systems/os_macos_sonoma.png",
+      "release_year": "2023"
+    },
+    {
+      "name": "Windows 11",
+      "description": "The latest major release of Microsoft's operating system, featuring a redesigned interface with a centered taskbar, Snap Layouts for enhanced multitasking, and native support for Android apps via the Amazon Appstore. It builds on the Windows NT kernel, offering improved security with TPM 2.0 requirements and better performance for gaming with DirectStorage and Auto HDR.",
+      "type": "Proprietary OS",
+      "based_on": "Windows NT",
+      "use_case": "General Purpose, Gaming, Enterprise",
+      "website": "https://www.microsoft.com/windows",
+      "details": {
+        "kernel": "Windows NT (Hybrid)",
+        "package_manager": "Winget / MSI",
+        "default_desktop": "Fluent Design UI",
+        "release_model": "Rolling / Feature Updates"
+      },
+      "features": [
+        "Snap Layouts for multitasking",
+        "DirectStorage for gaming",
+        "Integrated Microsoft Teams",
+        "WSL 2 (Linux Subsystem)"
+      ],
+      "image": "/images/operating_systems/os_windows_11.png",
+      "release_year": "2021"
+    },
+    {
+      "name": "Kali Linux",
+      "description": "The ultimate toolkit for security professionals, Kali Linux is a Debian-derived distribution designed for penetration testing and digital forensics. It comes pre-installed with hundreds of specialized tools for hacking, reverse engineering, and wireless security, making it the industry standard for ethical hacking and security audits.",
+      "type": "Linux Distribution",
+      "based_on": "Debian Testing",
+      "use_case": "Cyber Security & Penetration Testing",
+      "website": "https://www.kali.org",
+      "details": {
+        "kernel": "Linux",
+        "package_manager": "APT",
+        "default_desktop": "XFCE",
+        "release_model": "Rolling"
+      },
+      "features": [
+        "600+ pre-installed security tools",
+        "Security-audited kernel",
+        "Forensics mode for data recovery",
+        "ARM and mobile versions (NetHunter)"
+      ],
+      "image": "/images/operating_systems/os_kali_linux.png",
+      "release_year": "2013"
+    },
+    {
+      "name": "ChromeOS",
+      "description": "A cloud-centric OS from Google that turns the browser into the primary interface. It is highly secure, lightweight, and perfect for education and web-based workflows. ChromeOS leverages verified boot and a read-only root filesystem to provide a nearly unhackable environment. It has expanded beyond the browser to run native Android apps and even full Linux containers.",
+      "type": "Web OS",
+      "based_on": "Gentoo Linux",
+      "use_case": "Education, Web Browsing, Lightweight",
+      "website": "https://www.google.com/chromebook/chrome-os/",
+      "details": {
+        "kernel": "Linux",
+        "package_manager": "Portage (hidden) / APT (Crostini)",
+        "default_desktop": "Aura",
+        "release_model": "Rolling (6 weeks)"
+      },
+      "features": [
+        "Runs Android Apps",
+        "Runs Linux containers (Crostini)",
+        "Cloud-centric",
+        "Verified Boot security"
+      ],
+      "image": "/images/operating_systems/os_chromeos.png",
+      "release_year": "2011"
+    },
+    {
+      "name": "Manjaro",
+      "description": "A professionally made Linux based operating system that is a suitable replacement for Windows or macOS. Built on Arch Linux, Manjaro provides all the benefits of Arch combined with user-friendliness and accessibility.",
+      "type": "Linux Distribution",
+      "based_on": "Arch Linux",
+      "use_case": "Desktop Computing / Gaming",
+      "website": "https://manjaro.org/",
+      "details": {
+        "kernel": "Linux",
+        "package_manager": "Pacman / Pamac",
+        "default_desktop": "XFCE / KDE / GNOME",
+        "release_model": "Rolling"
+      },
+      "features": [
+        "User-friendly Arch experience",
+        "Easy hardware configuration",
+        "Access to the Arch User Repository (AUR)",
+        "Multiple official desktop environments"
+      ],
+      "image": "/images/operating_systems/os_manjaro.png",
+      "release_year": "2011"
+    },
+    {
+      "name": "Tails",
+      "description": "The Amnesic Incognito Live System. Designed for ultimate privacy and anonymity, Tails runs entirely from a USB stick and leaves no trace on the computer it's used on. It forces all outgoing connections through the Tor network and includes top-tier encryption tools, making it the preferred OS for whistleblowers and journalists.",
+      "type": "Linux Distribution",
+      "based_on": "Debian",
+      "use_case": "Anonymity & Privacy",
+      "website": "https://tails.boum.org",
+      "details": {
+        "kernel": "Linux",
+        "package_manager": "APT",
+        "default_desktop": "GNOME",
+        "release_model": "Fixed"
+      },
+      "features": [
+        "Amnesic (forgets everything after shutdown)",
+        "Tor Browser pre-configured with security levels",
+        "Encryption tools included (LUKS, PGP)",
+        "Windows camouflage mode"
+      ],
+      "image": "/images/operating_systems/os_tails.png",
+      "release_year": "2009"
+    },
+    {
+      "name": "Android",
+      "description": "The world's most ubiquitous mobile operating system, developed by Google and based on a modified Linux kernel. Android powers billions of devices from smartphones to TVs and car dashboards. It features a highly customizable interface with 'Material You' design, a massive app ecosystem through Google Play, and robust multitasking capabilities. As an open-source project (AOSP), it allows manufacturers to create diverse hardware experiences.",
+      "type": "Mobile OS",
+      "based_on": "Linux Kernel",
+      "use_case": "Mobile Devices, IoT, TV, Auto",
+      "website": "https://www.android.com",
+      "details": {
+        "kernel": "Linux (Modified)",
+        "package_manager": "APK / Play Store",
+        "default_desktop": "Material You",
+        "release_model": "Annual Major Release"
+      },
+      "features": [
+        "Open source ecosystem (AOSP)",
+        "Massive app ecosystem",
+        "Highly customizable UI",
+        "Intelligent battery management"
+      ],
+      "image": "/images/operating_systems/os_android.png",
+      "release_year": "2008"
+    },
+    {
+      "name": "iOS",
+      "description": "Apple's mobile operating system that powers the iPhone, known for its focus on security, fluidity, and a tightly integrated app ecosystem. Built on the Darwin foundation, iOS delivers a premium user experience with features like FaceID, iMessage, and seamless continuity across the Apple ecosystem. Its strict App Store guidelines and proactive privacy features, such as App Tracking Transparency, have set industry standards for mobile security.",
+      "type": "Mobile OS",
+      "based_on": "Darwin",
+      "use_case": "Mobile Devices (iPhone)",
+      "website": "https://www.apple.com/ios",
+      "details": {
+        "kernel": "XNU",
+        "package_manager": "App Store",
+        "default_desktop": "SpringBoard",
+        "release_model": "Annual Major Release"
+      },
+      "features": [
+        "FaceID biometric security",
+        "iMessage ecosystem",
+        "Privacy transparency features",
+        "AirDrop file sharing"
+      ],
+      "image": "/images/operating_systems/os_ios.png",
+      "release_year": "2007"
+    },
+    {
+      "name": "Minix 3",
+      "description": "A highly reliable microkernel-based operating system designed for high availability and education. Unlike monolithic kernels where a single bug can crash the whole system, Minix 3 runs most system services (like drivers) as user-space processes that can be automatically restarted if they fail. It famously served as the inspiration for Linus Torvalds when he began writing Linux.",
+      "type": "Research / Education",
+      "based_on": "Independent",
+      "use_case": "Education, High Reliability",
+      "website": "https://www.minix3.org",
+      "details": {
+        "kernel": "Microkernel",
+        "package_manager": "Pkgin",
+        "default_desktop": "Shell / X11",
+        "release_model": "Stable"
+      },
+      "features": [
+        "Self-healing drivers",
+        "Tiny kernel footprint",
+        "POSIX compliant",
+        "Inspiration for Linux (historically)"
+      ],
+      "image": "/images/operating_systems/os_minix3.png",
+      "release_year": "2005"
+    },
+    {
+      "name": "Alpine Linux",
+      "description": "A security-oriented, lightweight Linux distribution that has become the de facto standard for Docker containers. By using musl libc and busybox instead of the larger GNU tools, Alpine achieves an incredibly small footprint (~5MB for a base image). Its small size and focus on security (with stack smashing protection by default) make it ideal for modern, cloud-native deployments.",
+      "type": "Linux Distribution",
+      "based_on": "Independent",
+      "use_case": "Containers, Servers, Routers",
+      "website": "https://www.alpinelinux.org",
+      "details": {
+        "kernel": "Linux (PaX patched)",
+        "package_manager": "APK",
+        "default_desktop": "None (headless)",
+        "release_model": "Stable"
+      },
+      "features": [
+        "Extremely small footprint (~5MB)",
+        "Security-oriented (stack smashing protection)",
+        "Uses musl libc instead of glibc",
+        "Simple and functional"
+      ],
+      "image": "/images/operating_systems/os_alpine_linux.png",
+      "release_year": "2005"
+    },
+    {
+      "name": "TempleOS",
+      "description": "A fascinating piece of outsider art in OS form. Created entirely by Terry A. Davis over a decade, TempleOS is a 64-bit, non-preemptive multitasking, ring-0-only OS designed to be a digital 'temple.' Written in HolyC, it features a unique interface and built-in flight simulator, serving as a testament to one person's brilliance and perseverance.",
+      "type": "Custom OS",
+      "based_on": "Independent",
+      "use_case": "Recreational / Religious / Education",
+      "website": "https://templeos.org",
+      "details": {
+        "kernel": "Custom (Ring-0-only)",
+        "package_manager": "None (Compile from source)",
+        "default_desktop": "Custom 16-color UI",
+        "release_model": "Fixed (Final content)"
+      },
+      "features": [
+        "Everything runs in Ring 0 (Kernel Mode)",
+        "No memory protection",
+        "640x480 16-color graphics",
+        "Integrated flight simulator and oracle"
+      ],
+      "image": "/images/operating_systems/os_templeos.png",
+      "release_year": "2005"
+    },
+    {
+      "name": "Ubuntu",
+      "description": "The most popular Linux distribution for the desktop, Ubuntu is based on Debian but designed to be as user-friendly as possible. It features a stunning interface, an easy-to-use software store, and the best hardware compatibility in the Linux world. It is the perfect starting point for anyone looking to switch from Windows or macOS, offering a seamless and modern experience.",
+      "type": "Linux Distribution",
+      "based_on": "Debian",
+      "use_case": "Desktop, Server, Cloud",
+      "website": "https://ubuntu.com",
+      "details": {
+        "kernel": "Linux",
+        "package_manager": "APT / Snap",
+        "default_desktop": "GNOME (Customized)",
+        "release_model": "LTS (Every 2 years)"
+      },
+      "features": [
+        "Excellent hardware support",
+        "Large community and support",
+        "Easy installation of proprietary drivers",
+        "Snap package integration"
+      ],
+      "image": "/images/operating_systems/os_ubuntu.png",
+      "release_year": "2004"
+    },
+    {
+      "name": "NixOS",
+      "description": "A revolutionary Linux distribution built on the Nix package manager. NixOS treats the entire system configuration as a functional expression, allowing for completely reproducible builds and atomic upgrades. If a configuration change breaks something, you can instantly roll back to a previous working state. It is the ultimate OS for DevOps and users seeking absolute control over their environment.",
+      "type": "Linux Distribution",
+      "based_on": "Independent",
+      "use_case": "DevOps, Reproducible Builds",
+      "website": "https://nixos.org",
+      "details": {
+        "kernel": "Linux",
+        "package_manager": "Nix",
+        "default_desktop": "Plasma / GNOME",
+        "release_model": "Turning Tides"
+      },
+      "features": [
+        "Atomic upgrades and rollbacks",
+        "Reproducible system configuration",
+        "Declarative system management",
+        "Multi-user package management"
+      ],
+      "image": "/images/operating_systems/os_nixos.png",
+      "release_year": "2003"
+    },
+    {
+      "name": "Fedora",
+      "description": "A cutting-edge Linux distribution developed by the Fedora Project and sponsored by Red Hat. Fedora is the testing ground for new technologies that eventually make their way into RHEL. It is known for its pure, vanilla GNOME experience and for being one of the first to adopt new innovations like Wayland and PipeWire, making it a favorite for developers who want the future, today.",
+      "type": "Linux Distribution",
+      "based_on": "Independent",
+      "use_case": "Workstation, Development, Innovation",
+      "website": "https://getfedora.org",
+      "details": {
+        "kernel": "Linux",
+        "package_manager": "DNF",
+        "default_desktop": "GNOME Shell (Vanilla)",
+        "release_model": "Short-term (Semi-annual)"
+      },
+      "features": [
+        "Cutting-edge software versions",
+        "Focus on free software",
+        "SELinux security out of the box",
+        "Smooth upgrades"
+      ],
+      "image": "/images/operating_systems/os_fedora.png",
+      "release_year": "2003"
+    },
+    {
+      "name": "Arch Linux",
+      "description": "A lightweight and flexible Linux distribution that follows the K.I.S.S. (Keep It Simple, Stupid) principle. Unlike most mainstream OSes, Arch provides a minimal base system and expects the user to configure and build their environment from the ground up. Its 'rolling release' model ensures users always have the latest software, while the Arch User Repository (AUR) provides access to thousands of community-maintained packages.",
+      "type": "Linux Distribution",
+      "based_on": "Independent",
+      "use_case": "Advanced Users, Development, Customization",
+      "website": "https://archlinux.org",
+      "details": {
+        "kernel": "Linux",
+        "package_manager": "Pacman",
+        "default_desktop": "None (Console only)",
+        "release_model": "Rolling Release"
+      },
+      "features": [
+        "Rolling release (always latest software)",
+        "Arch User Repository (AUR)",
+        "Minimal base installation",
+        "Excellent documentation (Arch Wiki)"
+      ],
+      "image": "/images/operating_systems/os_arch_linux.png",
+      "release_year": "2002"
+    },
+    {
+      "name": "BlackArch Linux",
+      "description": "An Arch Linux-based penetration testing distribution for penetration testers and security researchers. It provides a massive repository of cybersecurity tools and can be installed on top of existing Arch Linux.",
+      "type": "Linux Distribution",
+      "based_on": "Arch Linux",
+      "use_case": "Security Research",
+      "website": "https://blackarch.org/",
+      "details": {
+        "kernel": "Linux",
+        "package_manager": "Pacman",
+        "default_desktop": "Fluxbox / Openbox",
+        "release_model": "Rolling"
+      },
+      "features": [
+        "Over 2800 security tools",
+        "Lightweight window managers",
+        "Compatible with Arch Linux installations",
+        "Designed for advanced users"
+      ],
+      "image": "/images/operating_systems/os_blackarch.png",
+      "release_year": "2002"
+    },
+    {
+      "name": "Haiku",
+      "description": "A community-driven, open-source project that aims to recreate the BeOS experience for modern hardware. Haiku is binary-compatible with the original BeOS and maintains its focus on personal computing with a clean, unified design and low system latency. It provides a unique alternative to mainstream OSes, proving that a fast, responsive desktop environment can still be built today.",
+      "type": "Independent OS",
+      "based_on": "BeOS",
+      "use_case": "Desktop Computing, Revival",
+      "website": "https://www.haiku-os.org",
+      "details": {
+        "kernel": "Hybrid (NewOS fork)",
+        "package_manager": "HaikuDepot",
+        "default_desktop": "Tracker",
+        "release_model": "Beta / Rolling"
+      },
+      "features": [
+        "BeOS binary compatibility",
+        "Modular architecture",
+        "Very low latency",
+        "Clean, unified design"
+      ],
+      "image": "/images/operating_systems/os_haiku.png",
+      "release_year": "2001"
+    },
+    {
+      "name": "ReactOS",
+      "description": "An ambitious open-source project to create a binary-compatible reimplementation of the Windows NT architecture (specifically Server 2003). ReactOS is not Linux; it is written from scratch to run Windows drivers and applications natively. It serves as a vital effort in digital preservation and provides a lightweight, free alternative for running legacy Windows software.",
+      "type": "Independent OS",
+      "based_on": "Windows NT Architecture",
+      "use_case": "Legacy Windows Software",
+      "website": "https://reactos.org",
+      "details": {
+        "kernel": "Hybrid (NT-like)",
+        "package_manager": "Application Manager",
+        "default_desktop": "Explorer-like",
+        "release_model": "Alpha"
+      },
+      "features": [
+        "Runs Windows drivers and apps",
+        "Reverse-engineered from NT behavior",
+        "Lightweight",
+        "Written effectively from scratch"
+      ],
+      "image": "/images/operating_systems/os_reactos.png",
+      "release_year": "1996"
+    },
+    {
+      "name": "OpenBSD",
+      "description": "Renowned for its proactive security and obsession with correct, clean code. OpenBSD's developers conduct continuous source code audits and have pioneered many security technologies used in other systems today, such as OpenSSH and LibreSSL. It is the gold standard for firewalls and secure gateway systems, with an incredible record of minimal remote holes in the default installation over decades.",
+      "type": "BSD",
+      "based_on": "Berkeley Software Distribution",
+      "use_case": "Security, Firewalls, Servers",
+      "website": "https://www.openbsd.org",
+      "details": {
+        "kernel": "Monolithic",
+        "package_manager": "Pkg_add",
+        "default_desktop": "fvwm (Window Manager)",
+        "release_model": "Semi-annual"
+      },
+      "features": [
+        "Secure by default configuration",
+        "LibreSSL (TLS implementation)",
+        "OpenSSH (Developed here)",
+        "Randomized memory layout"
+      ],
+      "image": "/images/operating_systems/os_openbsd.png",
+      "release_year": "1995"
+    },
+    {
+      "name": "Windows 95",
+      "description": "A watershed moment in computing history, Windows 95 shifted Microsoft's focus from DOS to a more advanced, 32-bit graphical environment. It introduced the iconic Start menu, Taskbar, and Windows Explorer—elements that define the Windows user experience to this day. It brought 'Plug and Play' hardware support and long filenames to the masses, forever changing how we interact with PCs.",
+      "type": "Historical OS",
+      "based_on": "MS-DOS",
+      "use_case": "Historical Consumer",
+      "website": "N/A",
+      "details": {
+        "kernel": "Monolithic (VMM)",
+        "package_manager": "InstallShield",
+        "default_desktop": "Windows Shell",
+        "release_model": "Discontinued"
+      },
+      "features": [
+        "Plug and Play support",
+        "Long filenames (VFAT)",
+        "Pre-emptive multitasking (32-bit)",
+        "Dial-up Networking"
+      ],
+      "image": "/images/operating_systems/os_windows_95.png",
+      "release_year": "1995"
+    },
+    {
+      "name": "BeOS",
+      "description": "Engineered from the ground up in the 1990s specifically for digital media and high-performance multitasking. BeOS featured a pervasive multithreading architecture where almost every system component ran in its own thread, resulting in incredible responsiveness. It used the 64-bit journaling BFS filesystem and treated file attributes like a database, a concept that still feels modern today.",
+      "type": "Historical OS",
+      "based_on": "Proprietary",
+      "use_case": "Multimedia, Historical",
+      "website": "N/A",
+      "details": {
+        "kernel": "Hybrid / Microkernel",
+        "package_manager": "SoftwareValet",
+        "default_desktop": "Tracker / Deskbar",
+        "release_model": "Discontinued"
+      },
+      "features": [
+        "Pervasive multithreading",
+        "64-bit journaling filesystem (BFS)",
+        "Database-like attributes for files",
+        "Extremely fast responsiveness"
+      ],
+      "image": "/images/operating_systems/os_beos.png",
+      "release_year": "1995"
+    },
+    {
+      "name": "Debian",
+      "description": "A pioneer in the free software movement, Debian is often called the 'Universal Operating System.' Known for its rock-solid stability and strict adherence to open-source principles, it serves as the rock-bottom foundation for numerous other distributions like Ubuntu, Linux Mint, and Kali. Debian's massive package repository and support for multiple hardware architectures make it a favorite for servers and enthusiasts alike.",
+      "type": "Linux Distribution",
+      "based_on": "Independent",
+      "use_case": "Server, Workstation, Stability",
+      "website": "https://www.debian.org",
+      "details": {
+        "kernel": "Linux",
+        "package_manager": "APT / DPKG",
+        "default_desktop": "GNOME (Default)",
+        "release_model": "Stable (Very infrequent)"
+      },
+      "features": [
+        "Rock-solid stability",
+        "Strict adherence to Free Software guidelines",
+        "Massive package repository (59,000+ packages)",
+        "Supports huge range of architectures"
+      ],
+      "image": "/images/operating_systems/os_debian.png",
+      "release_year": "1993"
+    },
+    {
+      "name": "FreeBSD",
+      "description": "An advanced operating system used to power modern servers, desktops, and embedded platforms. Derived from BSD (the version of UNIX developed at the University of California, Berkeley), it is known for its legendary stability, performance, and advanced features like the ZFS file system and Jails virtualization. It is a complete operating system (kernel and userland developed together), not just a kernel.",
+      "type": "BSD",
+      "based_on": "Berkeley Software Distribution",
+      "use_case": "Server, Networking, Storage (NAS)",
+      "website": "https://www.freebsd.org",
+      "details": {
+        "kernel": "Monolithic (FreeBSD Kernel)",
+        "package_manager": "PKG / Ports",
+        "default_desktop": "None (Console)",
+        "release_model": "Stable Release"
+      },
+      "features": [
+        "ZFS file system integration",
+        "Jails (Lightweight virtualization)",
+        "Linux Binary Compatibility",
+        "Advanced networking stack"
+      ],
+      "image": "/images/operating_systems/os_freebsd.png",
+      "release_year": "1993"
+    },
+    {
+      "name": "Slackware",
+      "description": "The oldest maintained Linux distribution, Slackware is for purists who want a system that is as 'Unix-like' as possible. It avoids automatic dependency resolution and complex configuration tools, requiring users to understand the underlying system components. It is legendary for its simplicity, stability, and its refusal to follow industry trends like systemd, staying true to its roots.",
+      "type": "Linux Distribution",
+      "based_on": "Independent",
+      "use_case": "Server, Education, Purists",
+      "website": "http://www.slackware.com",
+      "details": {
+        "kernel": "Linux",
+        "package_manager": "slackpkg",
+        "default_desktop": "KDE Plasma",
+        "release_model": "Stable"
+      },
+      "features": [
+        "No automatic dependency resolution (historically)",
+        "Text-based installer",
+        "Very little upstream patching",
+        "KISS philosophy"
+      ],
+      "image": "/images/operating_systems/os_slackware.png",
+      "release_year": "1993"
+    },
+    {
+      "name": "Solaris (Oracle)",
+      "description": "Originally developed by Sun Microsystems, Solaris is a proprietary Unix OS synonymous with enterprise-grade reliability and scalability. It introduced groundbreaking technologies like ZFS (Zettabyte File System) for data integrity, DTrace for system-wide observability, and Solaris Zones for lightweight containerization. It remains a powerhouse for large-scale databases and mission-critical enterprise applications.",
+      "type": "Unix",
+      "based_on": "System V",
+      "use_case": "Enterprise Server, Database",
+      "website": "https://www.oracle.com/solaris",
+      "details": {
+        "kernel": "Monolithic",
+        "package_manager": "IPS",
+        "default_desktop": "GNOME",
+        "release_model": "Long Term Support"
+      },
+      "features": [
+        "ZFS (Zettabyte File System)",
+        "DTrace (Dynamic Tracing)",
+        "Solaris Zones (Containerization)",
+        "Fault management"
+      ],
+      "image": "/images/operating_systems/os_solaris.png",
+      "release_year": "1992"
+    },
+    {
+      "name": "Plan 9 from Bell Labs",
+      "description": "The spiritual successor to Unix, developed by the same legendary team at Bell Labs. Plan 9 takes the 'everything is a file' philosophy to its absolute extreme using the 9P protocol. In Plan 9, resources (files, networks, devices) are represented as filesystems that can be seamlessly distributed across a network, providing a unified view of the entire computing environment.",
+      "type": "Research OS",
+      "based_on": "Unix concepts (Evolution)",
+      "use_case": "Research, Distributed Computing",
+      "website": "https://9p.io/plan9",
+      "details": {
+        "kernel": "Hybrid",
+        "package_manager": "None",
+        "default_desktop": "Rio",
+        "release_model": "Open Source"
+      },
+      "features": [
+        "9P protocol (everything is a file system)",
+        "Per-process namespaces",
+        "Unified view of the network",
+        "UTF-8 (invented for Plan 9)"
+      ],
+      "image": "/images/operating_systems/os_plan9.png",
+      "release_year": "1992"
+    },
+    {
+      "name": "AmigaOS",
+      "description": "Far ahead of its time in 1985, AmigaOS was the first mainstream operating system to feature true pre-emptive multitasking and high-performance color graphics. Built on a microkernel (Exec), it leveraged specialized custom chips to provide smooth multimedia performance that PCs and Macs wouldn't match for years. It remains a cult favorite for its efficiency and unique design.",
+      "type": "Historical OS",
+      "based_on": "TripOS",
+      "use_case": "Creative, Gaming, Historical",
+      "website": "https://www.amigaos.net",
+      "details": {
+        "kernel": "Microkernel (Exec)",
+        "package_manager": "Installer",
+        "default_desktop": "Workbench",
+        "release_model": "Legacy / Niche"
+      },
+      "features": [
+        "Pre-emptive multitasking in 256KB RAM",
+        "Custom chipset acceleration",
+        "Fast filesystem",
+        "Datatypes system"
+      ],
+      "image": "/images/operating_systems/os_amigaos.png",
+      "release_year": "1985"
+    },
+    {
+      "name": "MS-DOS",
+      "description": "The legendary command-line operating system that powered the PC revolution of the 1980s. MS-DOS (Microsoft Disk Operating System) provided the foundation for early versions of Windows and introduced millions to personal computing. While simple and single-tasking by modern standards, its legacy persists in the BIOS and low-level system utilities that still exist today.",
+      "type": "Historical OS",
+      "based_on": "86-DOS",
+      "use_case": "Historical, Legacy Business",
+      "website": "N/A",
+      "details": {
+        "kernel": "Monolithic",
+        "package_manager": "None",
+        "default_desktop": "Command Line Interface",
+        "release_model": "Discontinued"
+      },
+      "features": [
+        "FAT16 file system",
+        "Single-tasking",
+        "Batch file scripting",
+        "Direct hardware access"
+      ],
+      "image": "/images/operating_systems/os_msdos.png",
+      "release_year": "1981"
+    },
+    {
+      "name": "QNX",
+      "description": "A commercial real-time operating system (RTOS) that powers everything from car infotainment systems to medical devices and nuclear power plants. Its microkernel architecture ensures that even if a component fails, the rest of the system remains operational—a critical requirement for its many safety-critical applications. It is the silent engine behind much of our modern infrastructure.",
+      "type": "RTOS",
+      "based_on": "Microkernel",
+      "use_case": "Automotive, Industrial, Medical",
+      "website": "https://blackberry.qnx.com",
+      "details": {
+        "kernel": "Microkernel",
+        "package_manager": "Proprietary",
+        "default_desktop": "Photon microGUI (legacy)",
+        "release_model": "Commercial"
+      },
+      "features": [
+        "True microkernel architecture",
+        "Hard real-time guarantees",
+        "Fault isolation",
+        "POSIV-certified"
+      ],
+      "image": "/images/operating_systems/os_qnx.png",
+      "release_year": ""
+    },
+    {
+      "name": "VxWorks",
+      "description": "Perhaps the most famous OS beyond Earth, VxWorks is the real-time operating system that has powered every Mars Rover from Pathfinder to Perseverance. Developed by Wind River, it is designed for deterministic performance and extreme reliability in harsh environments where failure is not an option. It remains the industry leader for aerospace and defense applications.",
+      "type": "RTOS",
+      "based_on": "Monolithic / Microkernel options",
+      "use_case": "Aerospace, Defense, Robotics",
+      "website": "https://www.windriver.com/products/vxworks",
+      "details": {
+        "kernel": "Real-time Kernel",
+        "package_manager": "Proprietary",
+        "default_desktop": "None (Embedded)",
+        "release_model": "Commercial"
+      },
+      "features": [
+        "Determinism and speed",
+        "Safety critical certifications (DO-178C)",
+        "Multi-core support",
+        "Mars Rover OS"
+      ],
+      "image": "/images/operating_systems/os_vxworks.png",
+      "release_year": ""
+    },
+    {
+      "name": "Gentoo",
+      "description": "Built on the Portage package management system, Gentoo is for users who want complete control over their hardware. It compiles software from source code locally, allowing for extreme optimization tailored to specific hardware. Its legendary 'USE flags' system provides a level of dependency control that is unmatched in other distributions, letting users choose exactly which features to include in every package.",
+      "type": "Linux Distribution",
+      "based_on": "Independent",
+      "use_case": "High Performance, Customization",
+      "website": "https://www.gentoo.org",
+      "details": {
+        "kernel": "Linux (User Compiled)",
+        "package_manager": "Portage",
+        "default_desktop": "User Choice",
+        "release_model": "Rolling"
+      },
+      "features": [
+        "USE flags for granular dependency control",
+        "Optimized for specific hardware",
+        "Steep learning curve",
+        "Maximum control"
+      ],
+      "image": "/images/operating_systems/os_gentoo.png",
+      "release_year": ""
+    },
+    {
+      "name": "Red Hat Enterprise Linux (RHEL)",
+      "description": "Red Hat Enterprise Linux is the gold standard for corporate Linux environments globally. It offers a 10-year support lifecycle and military-grade security certifications, making it the preferred choice for mission-critical servers, mainframes, and cloud infrastructure. RHEL provides a stable, predictable platform for enterprise applications with extensive certification across hardware and software vendors.",
+      "type": "Linux Distribution",
+      "based_on": "Fedora",
+      "use_case": "Enterprise Server, Cloud, Mainframe",
+      "website": "https://www.redhat.com/rhel",
+      "details": {
+        "kernel": "Linux",
+        "package_manager": "DNF / RPM",
+        "default_desktop": "GNOME",
+        "release_model": "Long Term Support"
+      },
+      "features": [
+        "10-year support lifecycle",
+        "Live kernel patching (kpatch)",
+        "Military-grade security certifications",
+        "Extensive support ecosystem"
+      ],
+      "image": "/images/operating_systems/os_rhel.png",
+      "release_year": ""
+    },
+    {
+      "name": "SteamOS",
+      "description": "The gaming-focused OS that powers the Steam Deck and other gaming handhelds. Based on Arch Linux, it uses the Proton compatibility layer to run Windows games on Linux with incredible performance. It features a custom handheld interface designed for controllers, but can also switch to a full KDE Plasma desktop mode for a complete PC experience.",
+      "type": "Gaming OS",
+      "based_on": "Arch Linux (formerly Debian)",
+      "use_case": "Gaming, Handhelds",
+      "website": "https://store.steampowered.com/steamos",
+      "details": {
+        "kernel": "Linux",
+        "package_manager": "Pacman (Immutable root)",
+        "default_desktop": "KDE Plasma (Desktop Mode)",
+        "release_model": "Rolling"
+      },
+      "features": [
+        "Proton compatibility layer for Windows games",
+        "Game Mode and Desktop Mode",
+        "Immutable root for system stability",
+        "Direct hardware access for performance"
+      ],
+      "image": "/images/operating_systems/os_steamos.png",
+      "release_year": ""
+    },
+    {
+      "name": "BackBox",
+      "description": "An Ubuntu-based Linux distribution aimed at penetration testing and security assessment. It provides a minimal yet complete environment.",
+      "type": "Linux Distribution",
+      "based_on": "Ubuntu LTS",
+      "use_case": "Security Assessment",
+      "website": "https://www.backbox.org",
+      "details": {
+        "kernel": "Linux (Monolithic)",
+        "package_manager": "APT",
+        "default_desktop": "Xfce",
+        "release_model": "Standard Release"
+      },
+      "features": [
+        "Includes a curated set of the most used security analysis tools",
+        "Launchpad repository integration",
+        "Lightweight and fast",
+        "Anonymous mode"
+      ],
+      "image": "/images/operating_systems/os_backbox.png",
+      "release_year": ""
+    },
+    {
+      "name": "Whonix",
+      "description": "A security-focused OS that achieves advanced anonymity through isolation. It consists of two virtual machines: a 'Gateway' that runs Tor and a 'Workstation' that sits behind it. This setup ensures that even if the workstation is compromised, the user's real IP address is never leaked, providing a multi-layered defense against surveillance.",
+      "type": "Linux Distribution",
+      "based_on": "Debian (Kicksecure)",
+      "use_case": "Anonymity & Privacy",
+      "website": "https://www.whonix.org",
+      "details": {
+        "kernel": "Linux (Hardened)",
+        "package_manager": "APT",
+        "default_desktop": "Xfce",
+        "release_model": "Rolling"
+      },
+      "features": [
+        "Splits system into Gateway and Workstation VMs",
+        "All traffic forced through Tor",
+        "DNS leak protection",
+        "Stream isolation"
+      ],
+      "image": "/images/operating_systems/os_whonix.png",
+      "release_year": ""
+    },
+    {
+      "name": "Hannah Montana Linux",
+      "description": "A Kubuntu-based distribution themed around the Disney character Hannah Montana. It is a famous example of the flexibility of Linux theming.",
+      "type": "Linux Distribution",
+      "based_on": "Kubuntu",
+      "use_case": "Recreational / Meme",
+      "website": "http://hannahmontana.sourceforge.net/",
+      "details": {
+        "kernel": "Linux",
+        "package_manager": "APT",
+        "default_desktop": "KDE Plasma",
+        "release_model": "Discontinued"
+      },
+      "features": [
+        "Custom Hannah Montana icons and boot screen",
+        "Purple color scheme",
+        "Based on a very old version of Kubuntu"
+      ],
+      "image": "/images/operating_systems/os_hannah_montana.png",
+      "release_year": ""
+    },
+    {
+      "name": "Parrot OS",
+      "description": "A Linux distribution based on Debian with a focus on security, privacy, and development. It is designed for penetration testing, vulnerability assessment, computer forensics, and anonymous web browsing.",
+      "type": "Linux Distribution",
+      "based_on": "Debian",
+      "use_case": "Security & Penetration Testing",
+      "website": "https://parrotsec.org/",
+      "details": {
+        "kernel": "Linux",
+        "package_manager": "APT",
+        "default_desktop": "MATE / KDE",
+        "release_model": "Rolling"
+      },
+      "features": [
+        "Pre-installed security & forensics tools",
+        "Sandboxing technologies",
+        "Lightweight environment",
+        "Privacy and anonymity tools"
+      ],
+      "image": "/images/operating_systems/os_parrot.png",
+      "release_year": ""
+    },
+    {
+      "name": "DEFT Linux",
+      "description": "A Linux distribution made for computer forensics, with the purpose of running live without affecting devices attached to the computer. It comes with a vast array of forensic tools.",
+      "type": "Linux Distribution",
+      "based_on": "Ubuntu",
+      "use_case": "Digital Forensics",
+      "website": "http://www.deftlinux.net/",
+      "details": {
+        "kernel": "Linux",
+        "package_manager": "APT",
+        "default_desktop": "LXDE",
+        "release_model": "Discontinued"
+      },
+      "features": [
+        "Forensics focused",
+        "DART (Digital Advanced Response Toolkit)",
+        "Live system",
+        "Incident response tools"
+      ],
+      "image": "/images/operating_systems/os_deft.png",
+      "release_year": ""
+    },
+    {
+      "name": "Samurai Web Testing Framework OS",
+      "description": "A live Linux environment pre-configured to function as a web pen-testing environment. It contains the best of the open source and free tools that focus on testing and attacking websites.",
+      "type": "Linux Distribution",
+      "based_on": "Ubuntu",
+      "use_case": "Web Penetration Testing",
+      "website": "https://github.com/SamuraiWTF/samuraiwtf",
+      "details": {
+        "kernel": "Linux",
+        "package_manager": "APT",
+        "default_desktop": "GNOME",
+        "release_model": "Rolling updates"
+      },
+      "features": [
+        "Pre-configured web attack tools",
+        "Step-by-step pen-testing workflow",
+        "Targeted specifically at web applications",
+        "Vulnerable targets included for training"
+      ],
+      "image": "/images/operating_systems/os_samurai.png",
+      "release_year": ""
+    },
+    {
+      "name": "Cyborg Hawk Linux",
+      "description": "An Ubuntu-based Linux distribution designed for ethical hackers and penetration testers, providing a large collection of over 700 security tools.",
+      "type": "Linux Distribution",
+      "based_on": "Ubuntu",
+      "use_case": "Penetration Testing",
+      "website": "https://sourceforge.net/projects/cyborghawk1/",
+      "details": {
+        "kernel": "Linux",
+        "package_manager": "APT",
+        "default_desktop": "Custom",
+        "release_model": "Legacy"
+      },
+      "features": [
+        "700+ penetration testing tools",
+        "Hardware support",
+        "Live environment",
+        "Focus on wireless security"
+      ],
+      "image": "/images/operating_systems/os_cyborg.png",
+      "release_year": ""
+    },
+    {
+      "name": "Pop!_OS",
+      "description": "An operating system for STEM and creative professionals who use their computer as a tool to discover and create. Developed by hardware manufacturer System76, it provides a highly customized GNOME desktop.",
+      "type": "Linux Distribution",
+      "based_on": "Ubuntu",
+      "use_case": "Development, Creatives, Gaming",
+      "website": "https://pop.system76.com/",
+      "details": {
+        "kernel": "Linux",
+        "package_manager": "APT / Flatpak",
+        "default_desktop": "COSMIC (Pop Shell)",
+        "release_model": "Standard Release / LTS"
+      },
+      "features": [
+        "Auto-tiling window manager",
+        "Out-of-the-box NVIDIA support",
+        "Built-in keyboard shortcuts for workflow",
+        "System76 hardware optimization"
+      ],
+      "image": "/images/operating_systems/os_pop.png",
+      "release_year": ""
+    },
+    {
+      "name": "GrapheneOS",
+      "description": "A privacy and security focused open-source mobile operating system with Android app compatibility. Designed to prevent exploitation of zero-day vulnerabilities and to mitigate the impact of successful bugs.",
+      "type": "Mobile OS",
+      "based_on": "AOSP (Android Open Source Project)",
+      "use_case": "Secure Mobile Devices",
+      "website": "https://grapheneos.org/",
+      "details": {
+        "kernel": "Linux (Hardened)",
+        "package_manager": "F-Droid / Aurora",
+        "default_desktop": "Custom Launcher",
+        "release_model": "Rolling Updates"
+      },
+      "features": [
+        "Hardened memory allocation",
+        "Sandboxed Google Play functionality",
+        "Strict permissions and network access toggles",
+        "Verified boot security"
+      ],
+      "image": "/images/operating_systems/os_grapheneos.png",
+      "release_year": ""
+    }
+  ]
+}

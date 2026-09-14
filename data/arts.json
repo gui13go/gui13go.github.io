@@ -1,0 +1,977 @@
+{
+  "id": "arts",
+  "title": "Arts",
+  "path": "/gallery/arts",
+  "availability": "available",
+  "tags": [
+    {
+      "title": "Art",
+      "color": "#DB2777"
+    },
+    {
+      "title": "Culture",
+      "color": "#EC4899"
+    },
+    {
+      "title": "History",
+      "color": "#EF4444"
+    }
+  ],
+  "excerpt": "A curated collection of masterpieces that have stood the test of time.",
+  "image": "https://www.guilhermeviegas.dev/arts/starry_night.webp",
+  "text1": "A journey through the history of art, featuring iconic works that define movements and eras.",
+  "arts": [
+    {
+      "image": "/images/arts/black_ice_60.webp",
+      "title": "Black Ice 60",
+      "creator": "Benjamin Joel Wilkinson",
+      "year": "2025",
+      "summary": "A contemporary painting reflecting on modern themes through abstract or textural exploration."
+    },
+    {
+      "image": "/images/arts/the_summeriest_summer.webp",
+      "title": "The Summeriest Summer",
+      "creator": "Vladimir Vasilyevich Abaimov",
+      "year": "2025",
+      "summary": "A graphic work evoking the warmth and brightness of summer."
+    },
+    {
+      "image": "/images/arts/letter_for_santa.webp",
+      "title": "Letter for Santa",
+      "creator": "Catherine Yurievna Dombrovskaya",
+      "year": "2025",
+      "summary": "A charming contemporary painting capturing the innocence and magic of childhood traditions."
+    },
+    {
+      "image": "/images/arts/awakening_of_the_light.webp",
+      "title": "Awakening of the Light",
+      "creator": "Elena Babicheva / Eli Devart",
+      "year": "2025",
+      "summary": "A contemporary work exploring themes of light, hope, or spiritual awakening."
+    },
+    {
+      "image": "/images/arts/shrimp_bag.webp",
+      "title": "Shrimp Bag",
+      "creator": "Catherine Yurievna Dombrovskaya",
+      "year": "2024",
+      "summary": "A contemporary still life or whimsical scene featuring a bag of shrimps."
+    },
+    {
+      "image": "/images/arts/coronavirus_boomerang_part_2.webp",
+      "title": "Coronavirus. Boomerang. Part 2",
+      "creator": "Yana Alexandrovna Venedchuk",
+      "year": "2024",
+      "summary": "A contemporary art piece reflecting on the lingering impact and cyclical nature of the pandemic."
+    },
+    {
+      "image": "/images/arts/banana.webp",
+      "title": "Banana",
+      "creator": "Maria Viktorovna Turchanova",
+      "year": "2022",
+      "summary": "A contemporary art piece, likely a still life or pop-art interpretation of the fruit."
+    },
+    {
+      "image": "/images/arts/december_horse_and_rider.jpg",
+      "title": "December Horse and Rider",
+      "creator": "Richard Hambleton",
+      "year": "2014",
+      "summary": "A dynamic work by the 'Shadowman' street artist, capturing the energy of a horse and rider with splashed paint and expressive motion."
+    },
+    {
+      "image": "/images/arts/heart_kids.webp",
+      "title": "Heart Kids",
+      "creator": "Romero Britto",
+      "year": "c. 2000",
+      "summary": "A vibrant pop-art piece featuring Britto's signature bold patterns and colors, depicting children and hearts to convey optimism and joy."
+    },
+    {
+      "image": "/images/arts/skulls.jpg",
+      "title": "Skulls",
+      "creator": "Andy Warhol",
+      "year": "1976",
+      "summary": "A series of pop art prints depicting skulls, exploring themes of death and fame in Warhol's signature repetitive style."
+    },
+    {
+      "image": "/images/arts/marilyn_diptych.png",
+      "title": "Marilyn Diptych",
+      "creator": "Andy Warhol",
+      "year": "1962",
+      "summary": "A monumental silkscreen painting of Marilyn Monroe, produced shortly after her death, contrasting her vibrant celebrity persona with her fading mortality."
+    },
+    {
+      "image": "/images/arts/alabama.jpg",
+      "title": "Alabama",
+      "creator": "Norman Lewis",
+      "year": "1960",
+      "summary": "A powerful abstract response to the Civil Rights Movement, using stark contrasts and jagged forms to convey the tension and struggle of the era."
+    },
+    {
+      "image": "/images/arts/the_people_of_africa_will_curb_colonizers.webp",
+      "title": "The people of Africa will curb colonizers!",
+      "creator": "Kukryniksy",
+      "year": "1960",
+      "summary": "A Soviet propaganda poster by the Kukryniksy collective, supporting African independence movements against colonial powers."
+    },
+    {
+      "image": "/images/arts/white_light.jpg",
+      "title": "White Light",
+      "creator": "Jackson Pollock",
+      "year": "1954",
+      "summary": "One of Pollock's last paintings, featuring his famous drip technique but with a rare luminosity and lighter palette, suggesting a new direction in his chaotic energy."
+    },
+    {
+      "image": "/images/arts/harvest_talk.jpg",
+      "title": "Harvest Talk",
+      "creator": "Charles White",
+      "year": "1953",
+      "summary": "A powerful charcoal drawing depicting two agricultural workers, celebrating the dignity and strength of African American labor."
+    },
+    {
+      "image": "/images/arts/study_fo_ a_portrait.jpg",
+      "title": "Study for a Portrait",
+      "creator": "Francis Bacon",
+      "year": "1952",
+      "summary": "A disturbing and existential portrait by Bacon, featuring a screaming or distorted figure, reflecting post-war angst and the fragility of the human condition."
+    },
+    {
+      "image": "/images/arts/excavation.jpg",
+      "title": "Excavation",
+      "creator": "Willem de Kooning",
+      "year": "1950",
+      "summary": "One of de Kooning's largest and most complex abstract expressionist works, featuring a rhythmic surface of interlocking shapes and lines."
+    },
+    {
+      "image": "/images/arts/the_end.webp",
+      "title": "The End",
+      "creator": "Kukryniksy",
+      "year": "1948",
+      "summary": "A satirical caricature depicting the final days of Hitler in his bunker, capturing the collapse of the Nazi regime with sharp irony and historical weight."
+    },
+    {
+      "image": "/images/arts/changing_moods.jpg",
+      "title": "Changing Moods",
+      "creator": "Norman Lewis",
+      "year": "1947",
+      "summary": "An abstract expressionist work by Norman Lewis, using fluid lines and shapes to evoke the shifting rhythms of jazz music and urban life."
+    },
+    {
+      "image": "/images/arts/title_unknown_street_scene.jpg",
+      "title": "Title Unknown (Street Scene)",
+      "creator": "Norman Lewis",
+      "year": "1947",
+      "summary": "A vibrant abstraction suggesting the energy and movement of a city street, demonstrating Lewis's evolution towards Abstract Expressionism."
+    },
+    {
+      "image": "/images/arts/crianca_morta.webp",
+      "title": "Criança Morta",
+      "creator": "Candido Portinari",
+      "year": "1944",
+      "summary": "A profoundly impactful work that serves as a powerful social commentary on the harsh realities of poverty, drought, and high infant mortality in Brazil."
+    },
+    {
+      "image": "/images/arts/a_little_night_music.jpg",
+      "title": "A Little Night Music",
+      "creator": "Dorothea Tanning",
+      "year": "1943",
+      "summary": "A surrealist painting featuring a giant sunflower and young girls in a hallway, evoking a dreamlike, unsettling atmosphere."
+    },
+    {
+      "image": "/images/arts/nighthawks.jpg",
+      "title": "Nighthawks",
+      "creator": "Edward Hopper",
+      "year": "1942",
+      "summary": "An iconic painting of American modernism, depicting four people in a downtown diner late at night, conveying urban isolation and loneliness."
+    },
+    {
+      "image": "/images/arts/they_found_discrimination_in_the_north_It_was_a_different_kind.jpg",
+      "title": "They Found Discrimination in the North. It Was a Different Kind",
+      "creator": "Jacob Lawrence",
+      "year": "1940 – 1941",
+      "summary": "Panel 49 from the Migration Series, illustrating the challenges of the Great Migration with Lawrence's distinctive dynamic cubism."
+    },
+    {
+      "image": "/images/arts/the_judgment_day.jpg",
+      "title": "The Judgment Day",
+      "creator": "Aaron Douglas",
+      "year": "1939",
+      "summary": "A Harlem Renaissance masterpiece, using geometric shapes and concentric circles to depict a spiritual vision based on James Weldon Johnson's poems."
+    },
+    {
+      "image": "/images/arts/guernica.jpg",
+      "title": "Guernica",
+      "creator": "Pablo Picasso",
+      "year": "1937",
+      "summary": "A powerful anti-war statement depicting the bombing of Guernica during the Spanish Civil War, using monochromatic tones to convey suffering and chaos."
+    },
+    {
+      "image": "/images/arts/weeping_woman.jpg",
+      "title": "Weeping Woman",
+      "creator": "Pablo Picasso",
+      "year": "1937",
+      "summary": "A powerful Cubist portrait of Dora Maar, depicting universal suffering and grief, often associated with the tragedy of Guernica."
+    },
+    {
+      "image": "/images/arts/cafe.webp",
+      "title": "Café",
+      "creator": "Candido Portinari",
+      "year": "1935",
+      "summary": "A powerful neo-realist portrayal of coffee plantation workers, emphasizing their strength and the physical toll of their labor."
+    },
+    {
+      "image": "/images/arts/operarios.jpg",
+      "title": "Operários",
+      "creator": "Tarsila do Amaral",
+      "year": "1933",
+      "summary": "A socially conscious work depicting the diverse faces of the working class industrializing Brazil, highlighting the massification and anonymity of labor."
+    },
+    {
+      "image": "/images/arts/american_gothic.jpg",
+      "title": "American Gothic",
+      "creator": "Grant Wood",
+      "year": "1930",
+      "summary": "One of the most familiar images in 20th-century American art, depicting a farmer and his daughter. It is often interpreted as a satire or a glorification of rural American values."
+    },
+    {
+      "image": "/images/arts/abaporu.jpg",
+      "title": "Abaporu",
+      "creator": "Tarsila do Amaral",
+      "year": "1928",
+      "summary": "The most famous work of Brazilian modernism, its title means 'man who eats people'. The painting inspired the Anthropophagic Movement, symbolizing the digestion of foreign culture to create something uniquely Brazilian."
+    },
+    {
+      "image": "/images/arts/samba.webp",
+      "title": "Samba",
+      "creator": "Di Cavalcanti",
+      "year": "1925",
+      "summary": "A significant work of Brazilian Modernism that boldly depicts popular culture and celebrates elements of 'brasilidade', capturing the dynamism of Rio's samba scene."
+    },
+    {
+      "image": "/images/arts/o_mamoeiro.webp",
+      "title": "O Mamoeiro",
+      "creator": "Tarsila do Amaral",
+      "year": "1925",
+      "summary": "A classic of the 'Pau-Brasil' phase, capturing the Brazilian urban landscape with simplified forms and tropical colors, celebrating the everyday life of the country."
+    },
+    {
+      "image": "/images/arts/kestner_portfolio_proun_5.jpg",
+      "title": "Proun 5",
+      "creator": "El Lissitzky",
+      "year": "1923",
+      "summary": "From the Kestner Portfolio, this lithograph exemplifies Lissitzky's 'Proun' style, bridging the gap between painting and architecture with geometric abstraction."
+    },
+    {
+      "image": "/images/arts/kestner_portfolio_proun_3.jpg",
+      "title": "Proun 3",
+      "creator": "El Lissitzky",
+      "year": "1923",
+      "summary": "Another work from the Kestner Portfolio, featuring dynamic geometric compositions that explore space, balance, and the utopia of constructivism."
+    },
+    {
+      "image": "/images/arts/amigos_boemios.webp",
+      "title": "Amigos (Boêmios)",
+      "creator": "Di Cavalcanti",
+      "year": "1921",
+      "summary": "Also known as 'Boêmios', this early work captures the bohemian nightlife and urban social context of Rio de Janeiro with Di Cavalcanti's modernist touch."
+    },
+    {
+      "image": "/images/arts/fantastic_composition_vision_with_masks.jpg",
+      "title": "Fantastic Composition: Vision with Masks",
+      "creator": "Stanisław Ignacy Witkiewicz",
+      "year": "1920",
+      "summary": "An absurdist and surreal composition by Witkacy, featuring distorted faces and vivid colors, reflecting his theories on Pure Form in art."
+    },
+    {
+      "image": "/images/arts/the_cyclops.jpg",
+      "title": "The Cyclops",
+      "creator": "Odilon Redon",
+      "year": "1914",
+      "summary": "A dreamlike and colorful depiction of the mythic giant Polyphemus gazing at the sleeping Galatea, characteristic of Redon's unique Symbolist vision."
+    },
+    {
+      "image": "/images/arts/composition8.jpg",
+      "title": "Composition VIII",
+      "creator": "Georges Braque",
+      "year": "1913",
+      "summary": "A complex arrangement of geometric shapes and lines. (Note: Commonly associated with Kandinsky, but here attributed to Braque as per collection records and potentially representing a Cubist study)."
+    },
+    {
+      "image": "/images/arts/the_last_angel.jpg",
+      "title": "The Last Angel",
+      "creator": "Nicholas Roerich",
+      "year": "1912",
+      "summary": "A Symbolist work depicting a fiery angel in a stylized landscape, evoking spiritual themes and Roerich's fascination with mysticism."
+    },
+    {
+      "image": "/images/arts/death_and_the_maiden.png",
+      "title": "Death and the Maiden",
+      "creator": "Marianne Stokes",
+      "year": "1908",
+      "summary": "A poignant Symbolist work depicting the gentle but inevitable encounter between a young woman and the angel of death."
+    },
+    {
+      "image": "/images/arts/farm_garden_with_sunflowers.jpg",
+      "title": "Farm Garden with Sunflowers",
+      "creator": "Gustav Klimt",
+      "year": "1907",
+      "summary": "A lush, colorful landscape by Klimt, emphasizing pattern and decoration over depth, turning the garden into a tapestry of flowers."
+    },
+    {
+      "image": "/images/arts/the_kiss.jpg",
+      "title": "The Kiss",
+      "creator": "Gustav Klimt",
+      "year": "1907 – 1908",
+      "summary": "Klimt's most famous work from his 'Golden Phase', depicting a couple embracing in a field of wildflowers, shrouded in gold leaf."
+    },
+    {
+      "image": "/images/arts/the_old_guitarist.jpg",
+      "title": "The Old Guitarist",
+      "creator": "Pablo Picasso",
+      "year": "1903 – 1904",
+      "summary": "A famous work from Picasso's Blue Period, depicting a blind, elderly musician, expressing themes of poverty, suffering, and the solitary nature of art."
+    },
+    {
+      "image": "/images/arts/desembarque_de_pedro_alvares_cabral_em_porto_seguro.webp",
+      "title": "Desembarque de Pedro Álvares Cabral em Porto Seguro",
+      "creator": "Oscar Pereira da Silva",
+      "year": "1900",
+      "summary": "A historical canvas depicting the moment of contact between Portuguese explorers and indigenous people, becoming a standard representation of Brazil's 'discovery'."
+    },
+    {
+      "image": "/images/arts/the_plague.jpg",
+      "title": "The Plague",
+      "creator": "Arnold Böcklin",
+      "year": "1898",
+      "summary": "A terrifying personification of the plague as a skeletal figure riding a beast through a town, capturing the fear and devastation of the disease."
+    },
+    {
+      "image": "/images/arts/seaside_cemetery.jpg",
+      "title": "Seaside Cemetery",
+      "creator": "Adolf Hirémy-Hirschl",
+      "year": "1897",
+      "summary": "A melancholic and atmospheric Symbolist painting, contrasting the permanence of death with the eternal motion of the sea."
+    },
+    {
+      "image": "/images/arts/the_sleeping_gypsy.jpg",
+      "title": "The Sleeping Gypsy",
+      "creator": "Henri Rousseau",
+      "year": "1897",
+      "summary": "A surreal and poetic image of a lion pondering over a sleeping woman in the desert. Rousseau's naïve style lends the scene a dreamlike quality."
+    },
+    {
+      "image": "/images/arts/the_abduction_of_psyche.jpg",
+      "title": "The Abduction of Psyche",
+      "creator": "William-Adolphe Bouguereau",
+      "year": "1895",
+      "summary": "A classic academic painting depicting Cupid carrying Psyche to heaven, characterized by Bouguereau's technical perfection and idealized beauty."
+    },
+    {
+      "image": "/images/arts/anxiety.jpg",
+      "title": "Anxiety",
+      "creator": "Edvard Munch",
+      "year": "1894",
+      "summary": "A haunting image echoing 'The Scream', featuring a crowd of ghostly faces staring out at the viewer, set against a similarly turbulent sky."
+    },
+    {
+      "image": "/images/arts/the_day_after.jpg",
+      "title": "The Day After",
+      "creator": "Edvard Munch",
+      "year": "1894 – 1895",
+      "summary": "A somber depiction of a woman the morning after a night of excess, exploring themes of regret, exhaustion, and social realism."
+    },
+    {
+      "image": "/images/arts/the_scream.jpg",
+      "title": "The Scream",
+      "creator": "Edvard Munch",
+      "year": "1893",
+      "summary": "The iconic version of the expressionist masterpiece, capturing the raw, existential terror of nature and the human soul."
+    },
+    {
+      "image": "/images/arts/at_the_moulin_rouge.jpg",
+      "title": "At the Moulin Rouge",
+      "creator": "Henri de Toulouse-Lautrec",
+      "year": "1892 – 1895",
+      "summary": "A group portrait of the artist's friends and entertainers at the famous cabaret, capturing the artificial light and somewhat sinister atmosphere of Parisian nightlife."
+    },
+    {
+      "image": "/images/arts/ulysses_and_the_sirens.jpg",
+      "title": "Ulysses and the Sirens",
+      "creator": "John William Waterhouse",
+      "year": "1891",
+      "summary": "A Victorian interpretation of the Odyssey, showing the hero bound to the mast while seductive sirens (depicted as birds with women's heads) circle him."
+    },
+    {
+      "image": "/images/arts/dancers_in_blue.jpg",
+      "title": "Dancers in Blue",
+      "creator": "Edgar Degas",
+      "year": "1890",
+      "summary": "A beautiful pastel capturing the grace and movement of ballet dancers backstage, a favorite subject of Degas."
+    },
+    {
+      "image": "/images/arts/girl_in_white.jpg",
+      "title": "Girl in White",
+      "creator": "Vincent Van Gogh",
+      "year": "1890",
+      "summary": "A portrait painted in Auvers-sur-Oise, featuring a young peasant woman against a wheat background, known for its gentle expression."
+    },
+    {
+      "image": "/images/arts/roses.jpg",
+      "title": "Roses",
+      "creator": "Vincent Van Gogh",
+      "year": "1890",
+      "summary": "A classic Van Gogh still life, painted just before his release from the asylum, showcasing fresh, vibrant colors and vigorous brushwork."
+    },
+    {
+      "image": "/images/arts/the_bat_woman.jpg",
+      "title": "The Bat Woman",
+      "creator": "Albert Joseph Pénot",
+      "year": "1890",
+      "summary": "A striking 19th-century representation of a femme fatale or supernatural figure with bat wings, blending eroticism with the macabre."
+    },
+    {
+      "image": "/images/arts/the_drinkers.jpg",
+      "title": "The Drinkers",
+      "creator": "Vincent Van Gogh",
+      "year": "1890",
+      "summary": "A painting based on a wood engraving by Honoré Daumier, depicting the stages of ages of man through drinking, painted in Van Gogh's expressive style."
+    },
+    {
+      "image": "/images/arts/starry_night.webp",
+      "title": "Starry Night",
+      "creator": "Vincent van Gogh",
+      "year": "1889",
+      "summary": "Painted during Van Gogh's stay at the asylum in Saint-Rémy-de-Provence, this masterpiece expresses the turbulence of the artist's mind through swirling skies and a quiet village below."
+    },
+    {
+      "image": "/images/arts/wheat_field_with_cypresses.jpg",
+      "title": "Wheat Field with Cypresses",
+      "creator": "Vincent van Gogh",
+      "year": "1889",
+      "summary": "A dynamic landscape featuring Van Gogh's signature swirling brushstrokes, capturing the movement of the wind through the wheat and the imposing presence of the cypress trees."
+    },
+    {
+      "image": "/images/arts/self_portrait_1889.jpg",
+      "title": "Self-Portrait",
+      "creator": "Vincent van Gogh",
+      "year": "1889",
+      "summary": "One of Van Gogh's last self-portraits, painted with intense, rhythmic brushstrokes that seem to vibrate with the artist's psychological state."
+    },
+    {
+      "image": "/images/arts/saint_george_and_the_dragon.jpg",
+      "title": "Saint George and the Dragon",
+      "creator": "Gustave Moreau",
+      "year": "1889 – 1890",
+      "summary": "A Symbolist interpretation of the legend, marked by Moreau's intricate detail, rich jewel-like colors, and spiritual atmosphere."
+    },
+    {
+      "image": "/images/arts/self_portrait_with_bandaged_ear.jpg",
+      "title": "Self-Portrait with Bandaged Ear",
+      "creator": "Vincent Van Gogh",
+      "year": "1889",
+      "summary": "A poignant self-portrait painted after the ear-cutting incident, showing the artist in his studio with a Japanese print in the background."
+    },
+    {
+      "image": "/images/arts/sunflowers.jpg",
+      "title": "Sunflowers",
+      "creator": "Vincent Van Gogh",
+      "year": "1888",
+      "summary": "One of the most famous still lifes in art history, demonstrating Van Gogh's mastery of the color yellow and his emotional intensity."
+    },
+    {
+      "image": "/images/arts/o_grito_do_ipiranga.webp",
+      "title": "Independência ou Morte",
+      "creator": "Pedro Américo",
+      "year": "1888",
+      "summary": "The definitive heroic representation of Brazil's proclamation of independence, depicting Dom Pedro I's decisive moment on the banks of the Ipiranga."
+    },
+    {
+      "image": "/images/arts/a_crucifixion_in_the_time_of_the_romans.jpg",
+      "title": "A Crucifixion in the Time of the Romans",
+      "creator": "Vasily Vereshchagin",
+      "year": "1887",
+      "summary": "A gritty and realistic portrayal of a crucifixion, emphasizing the historical context and the indifference of the crowd, challenging traditional religious iconography."
+    },
+    {
+      "image": "/images/arts/self_portrait_1887.jpg",
+      "title": "Self-Portrait",
+      "creator": "Vincent Van Gogh",
+      "year": "1887",
+      "summary": "A self-portrait showing Van Gogh experimenting with the pointillist technique of Seurat, using dots and dashes of color."
+    },
+    {
+      "image": "/images/arts/head_of_a_skeleton_with_a_burning_cigarette.jpg",
+      "title": "Head of a Skeleton with a Burning Cigarette",
+      "creator": "Vincent Van Gogh",
+      "year": "1885 – 1886",
+      "summary": "A macabre and humorous early work, possibly painted as an academic exercise, showing a skeleton smoking."
+    },
+    {
+      "image": "/images/arts/the_meeting.jpg",
+      "title": "The Meeting",
+      "creator": "Marie Bashkirtseff",
+      "year": "1884",
+      "summary": "A charming and realist portrayal of street children in Paris, highlighting Bashkirtseff's ability to capture the nuance of social class and childhood."
+    },
+    {
+      "image": "/images/arts/bathers_at_asnieres.jpg",
+      "title": "Bathers at Asnières",
+      "creator": "Georges Seurat",
+      "year": "1884",
+      "summary": "Seurat's first large-scale painting, a monumental scene of leisure that predates pointillism but already shows his interest in color theory and formal composition."
+    },
+    {
+      "image": "/images/arts/a_sunday_on_la_grande_jatte.jpg",
+      "title": "A Sunday on La Grande Jatte",
+      "creator": "Georges Seurat",
+      "year": "1884 – 1886",
+      "summary": "The monumental manifesto of Pointillism, depicting Parisians relaxing by the Seine, constructed from millions of tiny dots of color."
+    },
+    {
+      "image": "/images/arts/the_crying_spider.jpg",
+      "title": "The Crying Spider",
+      "creator": "Odilon Redon",
+      "year": "1881",
+      "summary": "A charcoal drawing of a spider with a human face, crying. A prime example of Redon's 'noirs', exploring the strange and the subconscious."
+    },
+    {
+      "image": "/images/arts/dance_at_the_moulin_de_la_galette.jpg",
+      "title": "Dance at the Moulin de la Galette",
+      "creator": "Pierre-Auguste Renoir",
+      "year": "1876",
+      "summary": "A vibrant snapshot of Parisian life, depicting a Sunday afternoon dance in Montmartre. It is celebrated for its dappled light and fluid brushstrokes."
+    },
+    {
+      "image": "/images/arts/pieta.jpg",
+      "title": "Pieta",
+      "creator": "William-Adolphe Bouguereau",
+      "year": "1876",
+      "summary": "A moving and realistic depiction of the Virgin Mary mourning Christ, showcasing Bouguereau's academic skill and emotional depth."
+    },
+    {
+      "image": "/images/arts/nocturne_in_black_and_gold_the_falling_rocket.jpg",
+      "title": "Nocturne in Black and Gold – The Falling Rocket",
+      "creator": "James McNeill Whistler",
+      "year": "1875",
+      "summary": "A daringly abstract composition for its time, depicting fireworks over Battersea Park. It famously sparked a libel suit between Whistler and critic John Ruskin."
+    },
+    {
+      "image": "/images/arts/woman_with_a_parasol.jpg",
+      "title": "Woman with a Parasol",
+      "creator": "Claude Monet",
+      "year": "1875",
+      "summary": "A quintessential Impressionist work, capturing a fleeting moment of a stroll on a windy summer's day, emphasizing light and spontaneous brushwork."
+    },
+    {
+      "image": "/images/arts/l_absinthe.jpg",
+      "title": "L'Absinthe",
+      "creator": "Edgar Degas",
+      "year": "1875–1876",
+      "summary": "A somber depiction of two figures in a cafe, capturing the isolation and social alienation often found in modern urban life."
+    },
+    {
+      "image": "/images/arts/self_portrait_with_fiddling_death.jpg",
+      "title": "Self-Portrait with Fiddling Death",
+      "creator": "Arnold Böcklin",
+      "year": "1872",
+      "summary": "A memento mori portrait where death, playing a single-stringed violin, whispers into the artist's ear, reminding him of mortality."
+    },
+    {
+      "image": "/images/arts/batalha_do_avai.webp",
+      "title": "Batalha do Avaí",
+      "creator": "Pedro Américo",
+      "year": "1872 – 1877",
+      "summary": "A monumental and visceral depiction of the Battle of Avaí from the Paraguayan War, highlighting the chaos and suffering of conflict rather than just heroic glory."
+    },
+    {
+      "image": "/images/arts/barge_haulers_on_the_volga.jpg",
+      "title": "Barge Haulers on the Volga",
+      "creator": "Ilya Repin",
+      "year": "1870 – 1873",
+      "summary": "A masterpiece of Russian Realism, depicting the grueling labor of burlaks, highlighting social injustice and the resilience of the human spirit."
+    },
+    {
+      "image": "/images/arts/the_execution_of_emperor_maximilian.jpg",
+      "title": "The Execution of Emperor Maximilian",
+      "creator": "Édouard Manet",
+      "year": "1867",
+      "summary": "A politically charged work depicting the execution of the puppet emperor of Mexico, noted for its detached, objective observation."
+    },
+    {
+      "image": "/images/arts/stanczyk.jpg",
+      "title": "Stańczyk",
+      "creator": "Jan Matejko",
+      "year": "1862",
+      "summary": "A famous painting of the jester Stańczyk, depicted in deep thought and sorrow while a royal ball takes place in the background, symbolizing clear-sightedness amidst political ignorance."
+    },
+    {
+      "image": "/images/arts/theseus_and_the_minotaur.jpg",
+      "title": "Theseus and the Minotaur",
+      "creator": "Edward Burne-Jones",
+      "year": "1861",
+      "summary": "A Pre-Raphaelite interpretation of the classic myth, focusing on the psychological tension and the intricate labyrinth rather than just the action."
+    },
+    {
+      "image": "/images/arts/primeira_missa_do_brasil.webp",
+      "title": "Primeira missa do Brasil",
+      "creator": "Victor Meirelles",
+      "year": "1861",
+      "summary": "A monumental academic painting depicting the first Catholic Mass in Brazil, often seen as a visual birth certificate of the nation, celebrating the encounter between Portuguese and indigenous peoples."
+    },
+    {
+      "image": "/images/arts/twilight_in_the_wilderness.jpg",
+      "title": "Twilight in the Wilderness",
+      "creator": "Frederic Edwin Church",
+      "year": "1860",
+      "summary": "A stunning example of the Hudson River School, capturing the intense colors and spiritual grandeur of the American landscape at sunset."
+    },
+    {
+      "image": "/images/arts/man_riding_a_camel_in_the_desert_during_a_sand_storm.jpg",
+      "title": "Man Riding a Camel in the Desert During a Sandstorm",
+      "creator": "Augustus Osborne Lamplough",
+      "year": "1860",
+      "summary": "An atmospheric Orientalist painting capturing the harsh conditions of the desert with a moody, hazy palette."
+    },
+    {
+      "image": "/images/arts/prince_yoshitsune_learning_the_art_of_swordsmanship.png",
+      "title": "Prince Yoshitsune Learning the Art of Swordsmanship",
+      "creator": "Utagawa Kuniyoshi",
+      "year": "1858",
+      "summary": "A dynamic Ukiyo-e woodblock print depicting the legendary samurai Yoshitsune training with Tengu, showcasing Kuniyoshi's mastery of action and folklore."
+    },
+    {
+      "image": "/images/arts/bonjour_monsieur_courbet.jpg",
+      "title": "Bonjour, Monsieur Courbet",
+      "creator": "Gustave Courbet",
+      "year": "1854",
+      "summary": "A Realist masterpiece depicting the artist meeting his patron on a road, symbolizing the independence and confidence of the artist class."
+    },
+    {
+      "image": "/images/arts/fallen_angel.png",
+      "title": "Fallen Angel",
+      "creator": "Alexandre Cabanel",
+      "year": "1847",
+      "summary": "A famous example of Academic art, depicting a tearful Lucifer with a look of resentment and hurt pride, combining beauty with darker emotion."
+    },
+    {
+      "image": "/images/arts/coroacao_de_d_pedro_II.webp",
+      "title": "Coroação de D. Pedro II",
+      "creator": "Manuel de Araújo Porto-Alegre",
+      "year": "1845 – 1846",
+      "summary": "A historical painting portraying the coronation of Emperor Dom Pedro II, emphasizing the solemnity of the event and the consolidation of the Brazilian Empire."
+    },
+    {
+      "image": "/images/arts/peaceable_kingdom.jpg",
+      "title": "Peaceable Kingdom",
+      "creator": "Edward Hicks",
+      "year": "1833–1834",
+      "summary": "A folk art masterpiece depicting the prophecy of Isaiah, where animals live in harmony. Hicks painted many versions, reflecting his Quaker beliefs."
+    },
+    {
+      "image": "/images/arts/liberty_leading_the_people.jpg",
+      "title": "Liberty Leading the People",
+      "creator": "Eugène Delacroix",
+      "year": "1830",
+      "summary": "The definitive symbol of the French Revolution, depicting the personification of Liberty marching forward over the barricades, leading the people to victory."
+    },
+    {
+      "image": "/images/arts/moonrise_over_the_sea.jpg",
+      "title": "Moonrise Over the Sea",
+      "creator": "Caspar David Friedrich",
+      "year": "1822",
+      "summary": "A romantic landscape featuring three figures watching the moon rise over the sea, evoking themes of longing and the sublime."
+    },
+    {
+      "image": "/images/arts/the_barque_of_dante.jpg",
+      "title": "The Barque of Dante",
+      "creator": "Eugène Delacroix",
+      "year": "1822",
+      "summary": "Delacroix's first major success, depicting Dante and Virgil crossing the styx, filled with dramatic lighting and emotional turbulence."
+    },
+    {
+      "image": "/images/arts/saturn_devouring_one_of_his_sons.jpg",
+      "title": "Saturn Devouring one of His Sons",
+      "creator": "Francisco de Goya",
+      "year": "c. 1821–1823",
+      "summary": "One of Goya's disturbing 'Black Paintings', portraying the myth of Saturn eating his children to prevent them from overthrowing him, symbolizing the ravages of time and power."
+    },
+    {
+      "image": "/images/arts/The_wanderer_above_a_sea_of_mist.jpg",
+      "title": "The Wanderer above a Sea of Mist",
+      "creator": "Caspar David Friedrich",
+      "year": "1818",
+      "summary": "The quintessential Romantic painting, featuring a lone figure contemplating a vast, misty landscape, evoking themes of self-reflection, the sublime, and the unknown."
+    },
+    {
+      "image": "/images/arts/napoleon_crossing_the_alps.jpg",
+      "title": "Napoleon Crossing the Alps",
+      "creator": "Jacques-Louis David",
+      "year": "1812",
+      "summary": "A propaganda piece idealizing Napoleon Bonaparte's crossing of the Great St. Bernard Pass, symbolizing power, leadership, and the conquering of nature."
+    },
+    {
+      "image": "/images/arts/death_on_the_pale_horse.jpg",
+      "title": "Death on the Pale Horse",
+      "creator": "Benjamin West",
+      "year": "1796",
+      "summary": "A dramatic and apocalyptic scene depicting the Fourth Horseman of the Apocalypse, showcasing West's ability to convey terror and divine power."
+    },
+    {
+      "image": "/images/arts/self_portrait_in_the_guise_of_a_mockingbird.jpg",
+      "title": "Self-Portrait in the Guise of a Mockingbird",
+      "creator": "Joseph Ducreux",
+      "year": "1791",
+      "summary": "A highly unconventional self-portrait for its time, showing the artist mocking the viewer with a sarcastic grin, breaking the fourth wall of traditional portraiture."
+    },
+    {
+      "image": "/images/arts/oedipus_cursing_his_son_polynices.jpg",
+      "title": "Oedipus Cursing His Son Polynices",
+      "creator": "Henry Fuseli",
+      "year": "1786",
+      "summary": "A dramatic and theatrical composition typical of Fuseli, illustrating the tragic family conflict from Greek mythology with intense emotion."
+    },
+    {
+      "image": "/images/arts/horse_attacked_by_a_lion.jpg",
+      "title": "Horse Attacked by a Lion",
+      "creator": "George Stubbs",
+      "year": "1769",
+      "summary": "A dramatic and anatomically precise depiction of the sublime struggle between predator and prey, a recurring theme in Stubbs' work."
+    },
+    {
+      "image": "/images/arts/the_swing.webp",
+      "title": "The Swing",
+      "creator": "Jean-Honoré Fragonard",
+      "year": "1767",
+      "summary": "A masterpiece of the Rococo era, characterizing the frivolity and playfulness of the French aristocracy, featuring a young woman on a swing and her hidden lover."
+    },
+    {
+      "image": "/images/arts/heron_encircled_by_a_snake.jpg",
+      "title": "Heron Encircled by a Snake",
+      "creator": "Maria Sibylla Merian",
+      "year": "1700",
+      "summary": "A vivid scientific illustration from Merian's studies in Suriname, depicting the struggle between a heron and a snake with biological accuracy."
+    },
+    {
+      "image": "/images/arts/girl_with_a_pearl_earring.jpg",
+      "title": "Girl with a Pearl Earring",
+      "creator": "Johannes Vermeer",
+      "year": "1665",
+      "summary": "Often called the 'Mona Lisa of the North', this tronie (character study) is famous for the subject's luminous gaze, the exotic turban, and the masterful rendering of light."
+    },
+    {
+      "image": "/images/arts/storm_on_the_sea_of_galilee.jpg",
+      "title": "Storm on the Sea of Galilee",
+      "creator": "Rembrandt van Rijn",
+      "year": "1633",
+      "summary": "Rembrandt's only seascape, depicting the biblical story of Jesus calming the storm, showcasing the artist's dramatic use of light and shadow (chiaroscuro) to convey intense emotion."
+    },
+    {
+      "image": "/images/arts/the_anatomy_lesson_of_dr_nicolaes_tulp.jpg",
+      "title": "The Anatomy Lesson of Dr. Nicolaes Tulp",
+      "creator": "Rembrandt van Rijn",
+      "year": "1632",
+      "summary": "A group portrait of the Amsterdam Guild of Surgeons, revolutionizing the genre by creating a dynamic narrative scene rather than a static lineup."
+    },
+    {
+      "image": "/images/arts/samson_and_delilah.jpg",
+      "title": "Samson and Delilah",
+      "creator": "Anthony van Dyck",
+      "year": "c. 1628–1630",
+      "summary": "A dramatic Baroque scene capturing the moment of Samson's betrayal, characterized by rich colors, emotional intensity, and Van Dyck's refined touch."
+    },
+    {
+      "image": "/images/arts/head_of_medusa.jpg",
+      "title": "Head of Medusa",
+      "creator": "Peter Paul Rubens",
+      "year": "c. 1617–1618",
+      "summary": "A terrifying and visceral depiction of the gorgon Medusa's severed head, with snakes writhing in death, showcasing Rubens' dramatic flair and attention to horror."
+    },
+    {
+      "image": "/images/arts/the_wolf_and_fox_hunt.jpg",
+      "title": "The Wolf and Fox Hunt",
+      "creator": "Peter Paul Rubens",
+      "year": "1616",
+      "summary": "A chaotic and energetic hunting scene, displaying Rubens' ability to capture motion, violence, and the raw power of nature and animals."
+    },
+    {
+      "image": "/images/arts/the_four_continents.jpg",
+      "title": "The Four Continents",
+      "creator": "Peter Paul Rubens",
+      "year": "1615",
+      "summary": "A dynamic allegory featuring personifications of Europe, Asia, Africa, and America, highlighting Rubens' skill in composition and his energetic, fleshy style."
+    },
+    {
+      "image": "/images/arts/daniel_in_the_lions_den.jpg",
+      "title": "Daniel in the Lions' Den",
+      "creator": "Peter Paul Rubens",
+      "year": "1614 – 1616",
+      "summary": "A dramatic Baroque painting showing the prophet Daniel praying amidst realistic, threatening lions, highlighting Rubens' skill in animal anatomy."
+    },
+    {
+      "image": "/images/arts/david_with_the_head_of_goliath.jpg",
+      "title": "David with the Head of Goliath",
+      "creator": "Caravaggio",
+      "year": "1610",
+      "summary": "A dramatic and psychological interpretation of the biblical hero, where Goliath's severed head is believed to be a self-portrait of the remorseful artist."
+    },
+    {
+      "image": "/images/arts/john_the_baptist.jpg",
+      "title": "John the Baptist (John in the Wilderness)",
+      "creator": "Caravaggio",
+      "year": "1610",
+      "summary": "A brooding and introspective portrayal of the saint, marked by Caravaggio's signature use of dramatic lighting (chiaroscuro) and psychological depth."
+    },
+    {
+      "image": "/images/arts/el_salvador.jpg",
+      "title": "The Saviour of the World (El Salvador)",
+      "creator": "El Greco",
+      "year": "1610 – 1614",
+      "summary": "A devotional image of Christ, characterized by El Greco's signature elongated style and spiritual intensity."
+    },
+    {
+      "image": "/images/arts/the_fall_of_phaeton.jpg",
+      "title": "The Fall of Phaeton",
+      "creator": "Peter Paul Rubens",
+      "year": "1604 – 1605",
+      "summary": "An early Rubens masterpiece full of turbulence and energy, depicting the mythological fall of Phaeton from the sun chariot."
+    },
+    {
+      "image": "/images/arts/the_holy_trinity.jpg",
+      "title": "The Holy Trinity",
+      "creator": "El Greco",
+      "year": "1577 – 1579",
+      "summary": "One of El Greco's first major commissions in Toledo, displaying his dynamic composition, brilliant color, and Michelangelo-esque figures."
+    },
+    {
+      "image": "/images/arts/the_peasant_wedding.jpg",
+      "title": "The Peasant Wedding",
+      "creator": "Pieter Bruegel the Elder",
+      "year": "1568",
+      "summary": "A lively and detailed genre painting portraying a rustic wedding feast, celebrating various aspects of peasant life with humor and warm empathy."
+    },
+    {
+      "image": "/images/arts/christ_carrying_the_cross.jpg",
+      "title": "Christ Carrying the Cross",
+      "creator": "Titian",
+      "year": "1565",
+      "summary": "A moving depiction of the Passion, focusing on the emotional burden and physical weight of the cross, painted in Titian's late, expressive style."
+    },
+    {
+      "image": "/images/arts/christ_and_the_Woman_taken_in_adultery.jpg",
+      "title": "Christ and the Woman Taken in Adultery",
+      "creator": "Pieter Bruegel the Elder",
+      "year": "1565",
+      "summary": "A grisaille painting depicting the biblical scene, emphasizing the hypocrisy of the accusers and the quiet dignity of Christ."
+    },
+    {
+      "image": "/images/arts/the_tower_of_babel.jpg",
+      "title": "The Tower of Babel",
+      "creator": "Pieter Bruegel the Elder",
+      "year": "1563",
+      "summary": "An awe-inspiring and detailed depiction of the biblical tower, symbolizing human hubris and the confusion of tongues, set against a vast landscape."
+    },
+    {
+      "image": "/images/arts/the_triumph_of_death.jpg",
+      "title": "The Triumph of Death",
+      "creator": "Pieter Bruegel the Elder",
+      "year": "1562",
+      "summary": "A panoramic landscape of death and destruction, where an army of skeletons overwhelms the living, symbolizing the inevitability of death."
+    },
+    {
+      "image": "/images/arts/the_tribute_money.jpg",
+      "title": "The Tribute Money",
+      "creator": "Titian",
+      "year": "1560 – 1568",
+      "summary": "A late work by Titian, depicting the biblical scene with Jesus and the Pharisee. It is noted for its loose brushwork and psychological interplay."
+    },
+    {
+      "image": "/images/arts/sisyphus.jpg",
+      "title": "Sisyphus",
+      "creator": "Titian",
+      "year": "1548",
+      "summary": "A powerful depiction of the Greek myth of Sisyphus, condemned to eternally push a boulder up a hill, showcasing Titian's mastery of anatomy and movement."
+    },
+    {
+      "image": "/images/arts/virgin_and_child_with_saints_john_the_baptist_and_joseph.jpg",
+      "title": "Virgin and Child with Saints John the Baptist and Joseph",
+      "creator": "Vincenzo Catena",
+      "year": "1525",
+      "summary": "A Venetian High Renaissance painting characterized by its serene atmosphere, soft light, and harmonious colors."
+    },
+    {
+      "image": "/images/arts/school_of_athens.jpg",
+      "title": "The School of Athens",
+      "creator": "Raphael Sanzio",
+      "year": "c.1510/11",
+      "summary": "One of the most famous frescoes of the Renaissance, gathering the greatest philosophers of antiquity in an idealized architectural setting."
+    },
+    {
+      "image": "/images/arts/eva_and_adam.jpg",
+      "title": "Adam and Eve",
+      "creator": "Albrecht Dürer",
+      "year": "1507",
+      "summary": "two life-sized panels depicting the biblical couple, showcasing Dürer's mastery of human proportion and the influence of Italian Renaissance art."
+    },
+    {
+      "image": "/images/arts/saint_catherine_of_alexandria.jpg",
+      "title": "Saint Catherine of Alexandria",
+      "creator": "Raphael Sanzio",
+      "year": "1507",
+      "summary": "A graceful High Renaissance painting showing the saint looking upward in ecstasy, exemplifying Raphael's ideal of beauty and spiritual devotion."
+    },
+    {
+      "image": "/images/arts/mona_lisa_la_gioconda.jpg",
+      "title": "Mona Lisa (La Gioconda)",
+      "creator": "Leonardo da Vinci",
+      "year": "1503",
+      "summary": "Probably the most famous painting in the world, known for the subject's enigmatic expression and the mastery of sfumato, creating a soft transition between colors and tones."
+    },
+    {
+      "image": "/images/arts/the_garden_of_earthly_delights.jpg",
+      "title": "The Garden of Earthly Delights",
+      "creator": "Hieronymus Bosch",
+      "year": "1503 – 1504",
+      "summary": "A triptych detailing the history of the world from creation to hell, filled with surreal, symbolic, and often grotesque imagery warning against the perils of life's temptations."
+    },
+    {
+      "image": "/images/arts/mond_crucifixion.png",
+      "title": "Mond Crucifixion",
+      "creator": "Raphael Sanzio",
+      "year": "1502",
+      "summary": "An early work by Raphael, clearly showing the influence of his master Perugino in its symmetry, clarity, and peaceful landscape."
+    },
+    {
+      "image": "/images/arts/the_birth_of_venus.jpg",
+      "title": "The Birth of Venus",
+      "creator": "Sandro Botticelli",
+      "year": "1484",
+      "summary": "A Renaissance icon depicting the goddess Venus arriving at the shore after her birth, celebrating beauty and love with classical references and graceful composition."
+    },
+    {
+      "image": "/images/arts/martyrdom_of_saint_sebastian.jpg",
+      "title": "Martyrdom of Saint Sebastian",
+      "creator": "Andrea Mantegna",
+      "year": "1480",
+      "summary": "Mantegna's masterpiece showcases his fascination with classical antiquity, featuring a sculptural St. Sebastian amidst Roman ruins, emphasizing strength over suffering."
+    },
+    {
+      "image": "/images/arts/saint_anthony_tempted_by_a_lump_of_gold.jpg",
+      "title": "Saint Anthony Tempted by a Lump of Gold",
+      "creator": "Fra Angelico",
+      "year": "1436",
+      "summary": "A Renaissance work illustrating a scene from the life of Saint Anthony, emphasizing the rejection of worldly wealth for spiritual purity."
+    },
+    {
+      "image": "/images/arts/arnolfini_portrait.jpg",
+      "title": "Arnolfini Portrait",
+      "creator": "Jan Van Eyck",
+      "year": "1434",
+      "summary": "A seminal work of the Northern Renaissance, famous for its complex iconography, use of oil paint, and the convex mirror reflecting the artist."
+    },
+    {
+      "image": "/images/arts/crucifixion_of_st_peter_and_beheading_of_st_john_the_baptist.jpg",
+      "title": "Crucifixion of St. Peter and Beheading of St. John the Baptist",
+      "creator": "Masaccio",
+      "year": "1426",
+      "summary": "A foundational work of the Early Renaissance, demonstrating Masaccio's revolutionary use of perspective and emotional realism in depicting two martyrdoms."
+    }
+  ]
+}
