@@ -6,7 +6,7 @@ theme = 'PaperMod'
 enableEmoji = true
 
 [pagination]
-  pagerSize = 10
+  pagerSize = 1000
 
 [params]
   env = 'production'
