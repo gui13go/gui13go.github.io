@@ -91,6 +91,17 @@
       "icon": "info"
     },
     {
+      "id": "laws",
+      "dataFile": "laws",
+      "itemsKey": "laws",
+      "title": "Laws",
+      "url": "/gallery/laws/",
+      "navLabel": "Laws",
+      "countUnit": "laws",
+      "description": "Fundamental laws of nature, physics, robotics, and society that govern our universe.",
+      "icon": "scale"
+    },
+    {
       "id": "jokes",
       "dataFile": "jokes",
       "itemsKey": "jokes",

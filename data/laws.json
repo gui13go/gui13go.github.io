@@ -1,0 +1,1400 @@
+{
+  "id": "laws",
+  "title": "Laws",
+  "path": "/gallery/laws",
+  "availability": "available",
+  "tags": [
+    {
+      "title": "Science",
+      "color": "#3B82F6"
+    },
+    {
+      "title": "Physics",
+      "color": "#10B981"
+    },
+    {
+      "title": "Robotics",
+      "color": "#8B5CF6"
+    },
+    {
+      "title": "Psychology",
+      "color": "#F59E0B"
+    },
+    {
+      "title": "Society",
+      "color": "#EC4899"
+    }
+  ],
+  "excerpt": "A visual collection of fundamental laws of nature, physics, and society that govern our universe.",
+  "image": "/images/laws_header_1768069572093.png",
+  "laws": [
+    {
+      "title": "First Law of Robotics",
+      "author": "Isaac Asimov",
+      "location": "United States",
+      "year": "1942",
+      "quote": "A robot may not injure a human being or, through inaction, allow a human being to come to harm.",
+      "summary": "The First Law prioritizes human safety above all else, ensuring that artificial intelligence acts as a benevolent protector of humanity. It forms the core ethical foundation of Asimov's robotic universe.",
+      "examples": [
+        "A robot pushing a person out of the path of a speeding vehicle.",
+        "A medical robot intervening to prevent a harmful surgical error."
+      ],
+      "tags": [
+        "Robotics",
+        "Ethics",
+        "AI",
+        "Safety"
+      ],
+      "image": "/images/laws/law_robotics_first_1772658292159.png"
+    },
+    {
+      "title": "Second Law of Robotics",
+      "author": "Isaac Asimov",
+      "location": "United States",
+      "year": "1942",
+      "quote": "A robot must obey the orders given it by human beings except where such orders would conflict with the First Law.",
+      "summary": "This law establishes a hierarchy of command, prioritizing human authority while maintaining the absolute mandate of human safety above obedience. It creates complex logical dilemmas when obedience risks indirect harm.",
+      "examples": [
+        "A robot performing hazardous mining operations as instructed by its human supervisor.",
+        "A robot refusing an order to attack another person, as it violates the First Law."
+      ],
+      "tags": [
+        "Robotics",
+        "Ethics",
+        "Obedience",
+        "Logic"
+      ],
+      "image": "/images/laws/law_robotics_second_1772658306836.png"
+    },
+    {
+      "title": "Third Law of Robotics",
+      "author": "Isaac Asimov",
+      "location": "United States",
+      "year": "1942",
+      "quote": "A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.",
+      "summary": "This law ensures the preservation of valuable robotic assets, allowing for self-defense and evasion, provided it does not endanger humans or violate a direct human command. It introduces a vital but lowest-priority survival instinct.",
+      "examples": [
+        "A robot shielding itself from falling debris.",
+        "A robot sacrificing itself to save a human, overriding its own survival directive."
+      ],
+      "tags": [
+        "Robotics",
+        "Ethics",
+        "Survival",
+        "AI"
+      ],
+      "image": "/images/laws/law_robotics_third_1772658320349.png"
+    },
+    {
+      "title": "Newton's First Law",
+      "author": "Isaac Newton",
+      "location": "England",
+      "year": "1687",
+      "quote": "An object at rest stays at rest and an object in motion stays in motion with the same speed and in the same direction unless acted upon by an unbalanced force.",
+      "summary": "This law defines inertia, the tendency of objects to resist changes in their state of motion. It implies that force is not needed to keep an object moving, but to change its motion. It sets the reference frame for classical mechanics.",
+      "examples": [
+        "A hockey puck sliding on ice continues until friction stops it.",
+        "You lurch forward in a car when the brakes are applied suddenly."
+      ],
+      "tags": [
+        "Physics",
+        "Mechanics",
+        "Inertia",
+        "Motion"
+      ],
+      "image": "/images/laws/law_newton_1768069584439.png"
+    },
+    {
+      "title": "Newton's Second Law",
+      "author": "Isaac Newton",
+      "location": "England",
+      "year": "1687",
+      "quote": "F = ma",
+      "summary": "The acceleration of an object as produced by a net force is directly proportional to the magnitude of the net force, in the same direction as the net force, and inversely proportional to the mass of the object. It quantifies the effect of force on motion.",
+      "examples": [
+        "Pushing a car requires more force than pushing a bicycle to achieve the same acceleration.",
+        "A rocket needs immense force to lift its heavy mass."
+      ],
+      "tags": [
+        "Physics",
+        "Mechanics",
+        "Force",
+        "Acceleration"
+      ],
+      "image": "/images/laws/law_newton_1768069584439.png"
+    },
+    {
+      "title": "Newton's Third Law",
+      "author": "Isaac Newton",
+      "location": "England",
+      "year": "1687",
+      "quote": "For every action, there is an equal and opposite reaction.",
+      "summary": "This law states that forces always occur in pairs. If object A exerts a force on object B, then object B simultaneously exerts a force of equal magnitude and opposite direction on object A. It explains interactions between objects.",
+      "examples": [
+        "When you push a wall, the wall pushes back.",
+        "A bird flies by pushing air down, and the air pushes the bird up."
+      ],
+      "tags": [
+        "Physics",
+        "Mechanics",
+        "Action",
+        "Reaction"
+      ],
+      "image": "/images/laws/law_newton_1768069584439.png"
+    },
+    {
+      "title": "Zeroth Law of Thermodynamics",
+      "author": "Ralph H. Fowler",
+      "location": "United Kingdom",
+      "year": "1931",
+      "quote": "If two systems are each in thermal equilibrium with a third system, they are in thermal equilibrium with each other.",
+      "summary": "This law establishes the basis for temperature measurement. It implies that temperature is a fundamental property of matter. It was formulated after the first three laws but is considered more fundamental.",
+      "examples": [
+        "If thermometer A reads the same temperature as object B, and also object C, then B and C are at the same temperature.",
+        "Coffee in a cup eventually reaches room temperature."
+      ],
+      "tags": [
+        "Physics",
+        "Thermodynamics",
+        "Equilibrium",
+        "Temperature"
+      ],
+      "image": "/images/laws/law_thermo_zeroth_minimal_1768253502313.png"
+    },
+    {
+      "title": "First Law of Thermodynamics",
+      "author": "Rudolf Clausius",
+      "location": "Germany",
+      "year": "1850",
+      "quote": "Energy cannot be created or destroyed, only transformed from one form to another.",
+      "summary": "The total energy of an isolated system remains constant. It connects work and heat as forms of energy transfer. It denies the possibility of a perpetual motion machine of the first kind.",
+      "examples": [
+        "Electrical energy turns into heat and light in a lightbulb.",
+        "Chemical energy in food is converted to kinetic energy in your body."
+      ],
+      "tags": [
+        "Physics",
+        "Thermodynamics",
+        "Energy",
+        "Conservation"
+      ],
+      "image": "/images/laws/law_thermodynamics_1768069599212.png"
+    },
+    {
+      "title": "Second Law of Thermodynamics",
+      "author": "Rudolf Clausius / Sadi Carnot",
+      "location": "France / Germany",
+      "year": "1824",
+      "quote": "The entropy of an isolated system always increases over time.",
+      "summary": "Natural processes are irreversible and tend toward disorder (entropy). Heat always flows spontaneously from hotter to colder regions. It sets the direction of time and the limits of efficiency for heat engines.",
+      "examples": [
+        "Ice melts in a warm room, but water doesn't spontaneously freeze in a warm room.",
+        "A broken egg cannot spontaneously reassemble."
+      ],
+      "tags": [
+        "Physics",
+        "Thermodynamics",
+        "Entropy",
+        "Irreversibility"
+      ],
+      "image": "/images/laws/law_thermo_second_minimal_1768253515995.png"
+    },
+    {
+      "title": "Third Law of Thermodynamics",
+      "author": "Walther Nernst",
+      "location": "Germany",
+      "year": "1906",
+      "quote": "The entropy of a perfect crystal at absolute zero is exactly equal to zero.",
+      "summary": "It is impossible to reach absolute zero in a finite number of steps. As temperature approaches absolute zero, the entropy of a system approaches a constant minimum.",
+      "examples": [
+        "Superconductors display unique properties near absolute zero.",
+        "Molecular motion theoretically stops at absolute zero."
+      ],
+      "tags": [
+        "Physics",
+        "Thermodynamics",
+        "Entropy",
+        "Absolute Zero"
+      ],
+      "image": "/images/laws/law_thermo_third_minimal_1768253487185.png"
+    },
+    {
+      "title": "Say's Law",
+      "author": "Jean-Baptiste Say",
+      "location": "France",
+      "year": "1803",
+      "quote": "Supply creates its own demand.",
+      "summary": "Aggregate supply creates its own aggregate demand; production acts as the source of demand. It suggests that overproduction is impossible in the long run because producing goods generates income to buy other goods. This principle is a cornerstone of classical economics.",
+      "examples": [
+        "A baker produces bread not to keep it, but to sell it and buy other goods.",
+        "Technological advancements that increase production eventually lead to higher consumption."
+      ],
+      "tags": [
+        "Economics",
+        "Classical",
+        "Supply",
+        "Demand"
+      ],
+      "image": "/images/laws/law_factory_line_1768075425600.png"
+    },
+    {
+      "title": "Coulomb\u2019s Law",
+      "author": "Charles-Augustin de Coulomb",
+      "location": "France",
+      "year": "1785",
+      "quote": "The magnitude of the electrostatic force is directly proportional to the product of the magnitudes of charges and inversely proportional to the square of the distance between them.",
+      "summary": "It describes the force interacting between static electrically charged particles. Similar to Newton's gravity, but for electric charges (and can be repulsive). It is fundamental to electromagnetism.",
+      "examples": [
+        "Two balloons rubbed on hair repel each other.",
+        "Dust sticking to a TV screen due to static electricity."
+      ],
+      "tags": [
+        "Physics",
+        "Electromagnetism",
+        "Force",
+        "Charge"
+      ],
+      "image": "/images/laws/law_static_field_1768075367926.png"
+    },
+    {
+      "title": "Ohm\u2019s Law",
+      "author": "Georg Ohm",
+      "location": "Germany",
+      "year": "1827",
+      "quote": "V = IR",
+      "summary": "The current flowing through a conductor between two points is directly proportional to the voltage across the two points. It defines the relationship between the three fundamental electrical variables in a circuit.",
+      "examples": [
+        "Dimming a light by increasing resistance.",
+        "Using a resistor to control current in an LED circuit."
+      ],
+      "tags": [
+        "Physics",
+        "Electronics",
+        "Electricity",
+        "Circuit"
+      ],
+      "image": "/images/laws/law_circuit_simple_1768075354472.png"
+    },
+    {
+      "title": "Lenz\u2019s Law",
+      "author": "Heinrich Lenz",
+      "location": "Russia",
+      "year": "1834",
+      "quote": "The direction of the electric current induced in a conductor by a changing magnetic field is such that the magnetic field created by the induced current opposes the initial changing magnetic field.",
+      "summary": "It explains the direction of induced current. It is a qualitative law that specifies the direction of induced current but states nothing about its magnitude. It ensures the conservation of energy in electromagnetic circuits.",
+      "examples": [
+        "Regenerative braking in electric trains.",
+        "Eddy current brakes in roller coasters."
+      ],
+      "tags": [
+        "Physics",
+        "Electromagnetism",
+        "Induction",
+        "Energy"
+      ],
+      "image": "/images/laws/law_electromagnetism_1768069624128.png"
+    },
+    {
+      "title": "Faraday\u2019s Law of Induction",
+      "author": "Michael Faraday",
+      "location": "England",
+      "year": "1831",
+      "quote": "The electromotive force around a closed path is equal to the negative of the time rate of change of the magnetic flux enclosed by the path.",
+      "summary": "It describes how an electric field interacts with a magnetic circuit to produce an electromotive force (EMF). It is the fundamental operating principle of transformers, inductors, and many types of electrical motors and generators.",
+      "examples": [
+        "Electric generators producing power.",
+        "Induction cooktops heating pans."
+      ],
+      "tags": [
+        "Physics",
+        "Electromagnetism",
+        "Flux",
+        "EMF"
+      ],
+      "image": "/images/laws/law_electromagnetism_1768069624128.png"
+    },
+    {
+      "title": "Kepler\u2019s Laws of Planetary Motion",
+      "author": "Johannes Kepler",
+      "location": "Germany",
+      "year": "1609",
+      "quote": "Planets move in elliptical orbits with the Sun at one focus.",
+      "summary": "Three scientific laws describing the motion of planets around the Sun. They describe the shape of the orbit, the speed of the planet, and the relationship between distance and orbital period. They improved upon Copernican theory.",
+      "examples": [
+        "Calculating the orbit of Mars.",
+        "Determining the period of a newly discovered exoplanet."
+      ],
+      "tags": [
+        "Astronomy",
+        "Physics",
+        "Planets",
+        "Orbits"
+      ],
+      "image": "/images/laws/law_kepler_orbits_1768089742999.png"
+    },
+    {
+      "title": "Hubble\u2019s Law",
+      "author": "Edwin Hubble",
+      "location": "USA",
+      "year": "1929",
+      "quote": "v = H0 * D",
+      "summary": "Galaxies are moving away from Earth at speeds proportional to their distance. The farther they are, the faster they are moving away. This observation provided the first observational evidence for the expansion of the universe.",
+      "examples": [
+        "Estimating the age of the universe.",
+        "Measuring distances to remote galaxies."
+      ],
+      "tags": [
+        "Astronomy",
+        "Cosmology",
+        "Expansion",
+        "Universe"
+      ],
+      "image": "/images/laws/law_hubble_expansion_1768089756362.png"
+    },
+    {
+      "title": "Moore\u2019s Law",
+      "author": "Gordon Moore",
+      "location": "USA",
+      "year": "1965",
+      "quote": "The number of transistors on a microchip doubles about every two years, though the cost of computers is halved.",
+      "summary": "This observation established the cadence for the semiconductor industry, driving rapid technological progress and price reductions in electronics for decades.",
+      "examples": [
+        "Processing power of smartphones.",
+        "Memory storage density."
+      ],
+      "tags": [
+        "Computing",
+        "Hardware",
+        "Exponential Growth",
+        "Transistors"
+      ],
+      "image": "/images/laws/law_computing_chip_1768069667426.png"
+    },
+    {
+      "title": "Parkinson\u2019s Law",
+      "author": "Cyril Northcote Parkinson",
+      "location": "UK",
+      "year": "1955",
+      "quote": "Work expands so as to fill the time available for its completion.",
+      "summary": "An observation that the amount of work required is adjusted to the time available for its completion, rather than the complexity of the task itself.",
+      "examples": [
+        "Bureaucratic expansion.",
+        "Last-minute student assignments."
+      ],
+      "tags": [
+        "Management",
+        "Productivity",
+        "Efficiency",
+        "Bureaucracy"
+      ],
+      "image": "/images/laws/time1.webp"
+    },
+    {
+      "title": "Cunningham\u2019s Law",
+      "author": "Ward Cunningham",
+      "location": "USA",
+      "year": "1990s",
+      "quote": "The best way to get the right answer on the internet is not to ask a question; it's to post the wrong answer.",
+      "summary": "People are more compelled to correct a wrong answer than to helpfully answer a question. It leverages the human urge to correct others.",
+      "examples": [
+        "Posting incorrect code on StackOverflow.",
+        "Misidentifying a hobbyist detail on Reddit."
+      ],
+      "tags": [
+        "Internet",
+        "Psychology",
+        "Collaboration",
+        "Social Media"
+      ],
+      "image": "/images/laws/law_cunningham_correction_1768089771664.png"
+    },
+    {
+      "title": "Godwin\u2019s Law",
+      "author": "Mike Godwin",
+      "location": "USA",
+      "year": "1990",
+      "quote": "As an online discussion grows longer, the probability of a comparison involving Nazis or Hitler approaches 1.",
+      "summary": "An adage about Internet culture. It asserts that if an online discussion (regardless of topic or scope) goes on long enough, sooner or later someone will compare someone or something to Hitler or Nazism.",
+      "examples": [
+        "Political debates on Facebook.",
+        "Heated forum threads."
+      ],
+      "tags": [
+        "Internet",
+        "Culture",
+        "Argument",
+        "Fallacy"
+      ],
+      "image": "/images/laws/law_godwin_argument_1768089794373.png"
+    },
+    {
+      "title": "Poe\u2019s Law",
+      "author": "Nathan Poe",
+      "location": "Internet",
+      "year": "2005",
+      "quote": "Without a clear indicator of the author's intent, it is impossible to create a parody of extreme views so obviously exaggerated that it cannot be mistaken by some readers for a sincere expression of the views being parodied.",
+      "summary": "It highlights the difficulty of distinguishing between sincerity and satire in text-based communications where voice and body language are missing.",
+      "examples": [
+        "Satirical news articles taken seriously.",
+        "Sarcastic comments on social media."
+      ],
+      "tags": [
+        "Internet",
+        "Satire",
+        "Communication",
+        "Misinterpretation"
+      ],
+      "image": "/images/laws/law_poe_satire_1768089808219.png"
+    },
+    {
+      "title": "Metcalfe\u2019s Law",
+      "author": "Robert Metcalfe",
+      "location": "USA",
+      "year": "1980",
+      "quote": "The value of a telecommunications network is proportional to the square of the number of connected users of the system (n\u00b2).",
+      "summary": "Explain network effects. A single fax machine is useless, but the value of every fax machine increases with the total number of fax machines in the network.",
+      "examples": [
+        "Social media platforms (Facebook).",
+        "Telephone networks."
+      ],
+      "tags": [
+        "Networking",
+        "Value",
+        "Growth",
+        "Network Effect"
+      ],
+      "image": "/images/laws/connected3.webp"
+    },
+    {
+      "title": "Brooks's Law",
+      "author": "Fred Brooks",
+      "location": "USA",
+      "year": "1975",
+      "quote": "Adding manpower to a late software project makes it later.",
+      "summary": "This law claims that adding more people to a late project increases communication overhead and training time, delaying the project further.",
+      "examples": [
+        "Rushing software releases.",
+        "Kitchens with too many cooks."
+      ],
+      "tags": [
+        "Management",
+        "Software",
+        "Productivity",
+        "Efficiency"
+      ],
+      "image": "/images/laws/law_brooks_manpower_1768089822063.png"
+    },
+    {
+      "title": "Boyle\u2019s Law",
+      "author": "Robert Boyle",
+      "location": "Ireland",
+      "year": "1662",
+      "quote": "P1V1 = P2V2",
+      "summary": "For a fixed mass of an ideal gas kept at a fixed temperature, pressure and volume are inversely proportional. If you decrease volume, pressure increases.",
+      "examples": [
+        "Squeezing a balloon.",
+        "A syringe plunger."
+      ],
+      "tags": [
+        "Physics",
+        "Chemistry",
+        "Gas",
+        "Pressure"
+      ],
+      "image": "/images/laws/law_gas_behavior_1768075341142.png"
+    },
+    {
+      "title": "Murphy\u2019s Law",
+      "author": "Edward A. Murphy Jr.",
+      "location": "USA",
+      "year": "1949",
+      "quote": "Anything that can go wrong will go wrong.",
+      "summary": "A humorous axiom stating that if there are two or more ways to do something, and one of those ways can result in a catastrophe, then someone will do it.",
+      "examples": [
+        "Butter side down toast.",
+        "Traffic jams when late."
+      ],
+      "tags": [
+        "Probability",
+        "Pessimism",
+        "Risk",
+        "Observation"
+      ],
+      "image": "/images/laws/law_murphy_clean_1768090858460.png"
+    },
+    {
+      "title": "Charles\u2019s Law",
+      "author": "Jacques Charles",
+      "location": "France",
+      "year": "1780s",
+      "quote": "V1/T1 = V2/T2",
+      "summary": "When the pressure on a sample of a dry gas is held constant, the Kelvin temperature and the volume will be in direct proportion. Gases expand when heated.",
+      "examples": [
+        "Hot air balloons.",
+        "Car tires expanding in summer."
+      ],
+      "tags": [
+        "Physics",
+        "Chemistry",
+        "Gas",
+        "Temperature"
+      ],
+      "image": "/images/laws/law_charles_gas_1768089845444.png"
+    },
+    {
+      "title": "Avogadro\u2019s Law",
+      "author": "Amedeo Avogadro",
+      "location": "Italy",
+      "year": "1811",
+      "quote": "V/n = k",
+      "summary": "Equal volumes of all gases, at the same temperature and pressure, have the same number of molecules. It relates the volume of a gas to the amount of substance (moles).",
+      "examples": [
+        "Inflating a tire increases the number of gas molecules and volume.",
+        "Breathing in fills lungs with more air molecules."
+      ],
+      "tags": [
+        "Physics",
+        "Chemistry",
+        "Gas",
+        "Moles"
+      ],
+      "image": "/images/laws/law_avogadro_gas_1768089858170.png"
+    },
+    {
+      "title": "Law of Large Numbers",
+      "author": "Jacob Bernoulli",
+      "location": "Switzerland",
+      "year": "1713",
+      "quote": "The average of the results obtained from a large number of trials should be close to the expected value and will tend to become closer as more trials are performed.",
+      "summary": "It guarantees stable long-term results for random events. Casinos rely on this law to ensure profitability over time despite individual wins.",
+      "examples": [
+        "Coin flipping approaches 50/50 over many flips.",
+        "Insurance companies setting premiums."
+      ],
+      "tags": [
+        "Statistics",
+        "Probability",
+        "Mathematics",
+        "Average"
+      ],
+      "image": "/images/laws/law_large_numbers_1768089871799.png"
+    },
+    {
+      "title": "Benford\u2019s Law",
+      "author": "Frank Benford",
+      "location": "USA",
+      "year": "1938",
+      "quote": "In many naturally occurring collections of numbers, the leading digit is likely to be small.",
+      "summary": "Also known as the first-digit law. The number 1 appears as the leading significant digit about 30% of the time, while 9 appears less than 5% of the time. Used to detect fraud.",
+      "examples": [
+        "Accounting fraud detection.",
+        "Population statistics."
+      ],
+      "tags": [
+        "Statistics",
+        "Math",
+        "Data",
+        "Distribution"
+      ],
+      "image": "/images/laws/expensesTracker7.webp"
+    },
+    {
+      "title": "Law of Supply and Demand",
+      "author": "Alfred Marshall",
+      "location": "UK",
+      "year": "1890",
+      "quote": "The price of a good rises when demand is high and supply is low, and falls when demand is low and supply is high.",
+      "summary": "It describes the interaction between the sellers of a resource and the buyers for that resource. It defines the effect that the availability of a particular product and the desire (or demand) for that product has on price.",
+      "examples": [
+        "House prices rising in popular cities.",
+        "Clearance sales for out-of-season clothes."
+      ],
+      "tags": [
+        "Economics",
+        "Market",
+        "Price",
+        "Trade"
+      ],
+      "image": "/images/laws/law_economics_market_1768069654013.png"
+    },
+    {
+      "title": "Law of Diminishing Returns",
+      "author": "Turgot / Ricardo",
+      "location": "Europe",
+      "year": "18th Century",
+      "quote": "Adding more of one factor of production, while holding others constant, will at some point yield lower incremental per-unit returns.",
+      "summary": "It states that after some optimal level of capacity is reached, adding an additional factor of production will actually result in smaller increases in output.",
+      "examples": [
+        "Adding too many fertilizers to a field.",
+        "Too many cooks in the kitchen."
+      ],
+      "tags": [
+        "Economics",
+        "Production",
+        "Efficiency",
+        "Output"
+      ],
+      "image": "/images/laws/law_factory_line_1768075425600.png"
+    },
+    {
+      "title": "Gresham\u2019s Law",
+      "author": "Thomas Gresham",
+      "location": "England",
+      "year": "1558",
+      "quote": "Bad money drives out good.",
+      "summary": "If two forms of commodity money in circulation are accepted by law as having similar face value, the more valuable commodity will gradually disappear from circulation. People will hoard the 'good' money and spend the 'bad'.",
+      "examples": [
+        "Hoarding silver coins when paper money is introduced.",
+        "Spending depreciating currency first."
+      ],
+      "tags": [
+        "Economics",
+        "Money",
+        "Currency",
+        "Value"
+      ],
+      "image": "/images/laws/law_coin_hoard_1768075439384.png"
+    },
+    {
+      "title": "Pareto Principle (The 80/20 Law)",
+      "author": "Vilfredo Pareto",
+      "location": "Italy",
+      "year": "1896",
+      "quote": "80% of consequences come from 20% of the causes.",
+      "summary": "Also known as the 80/20 rule. It asserts that for many outcomes, roughly 80% of consequences come from 20% of causes (the 'vital few'). It is a common rule of thumb in business and economics.",
+      "examples": [
+        "80% of sales come from 20% of clients.",
+        "80% of bugs are caused by 20% of code."
+      ],
+      "tags": [
+        "Economics",
+        "Management",
+        "Efficiency",
+        "Distribution"
+      ],
+      "image": "/images/laws/law_pareto_minimal_1768253419643.png"
+    },
+    {
+      "title": "The Code of Hammurabi",
+      "author": "Hammurabi",
+      "location": "Babylon",
+      "year": "1754 BC",
+      "quote": "An eye for an eye, a tooth for a tooth.",
+      "summary": "One of the earliest and best-preserved legal codes from ancient Babylon. It established a standardized system of justice with scaled punishments based on social status and the principle of retaliation ('lex talionis').",
+      "examples": [
+        "Punishments for theft property damage.",
+        "Regulations for trade and family law."
+      ],
+      "tags": [
+        "Law",
+        "History",
+        "Babylon",
+        "Justice"
+      ],
+      "image": "/images/laws/law_ancient_tablet_1768069696843.png"
+    },
+    {
+      "title": "The Twelve Tables",
+      "author": "Decemviri",
+      "location": "Rome",
+      "year": "449 BC",
+      "quote": "The law of the Twelve Tables binds us all.",
+      "summary": "The legislation that stood at the foundation of Roman law. The Tables consolidated earlier traditions into an enduring set of laws. It is considered the starting point of the Western legal tradition.",
+      "examples": [
+        "Procedures for courts and trials.",
+        "Rights of citizens and property owners."
+      ],
+      "tags": [
+        "Law",
+        "Rome",
+        "History",
+        "Justice"
+      ],
+      "image": "/images/laws/law_twelve_tables_clean_1768090886552.png"
+    },
+    {
+      "title": "Double Jeopardy",
+      "author": "Legal Tradition",
+      "location": "Global",
+      "year": "Ancient",
+      "quote": "No person shall be subject for the same offence to be twice put in jeopardy of life or limb.",
+      "summary": "A procedural defence that prevents an accused person from being tried again on the same (or similar) charges following a valid acquittal or conviction. It protects against government overreach.",
+      "examples": [
+        "Being found innocent and then charged again for the exact same crime.",
+        "Multiple punishments for the same offense."
+      ],
+      "tags": [
+        "Law",
+        "Rights",
+        "Justice",
+        "Constitution"
+      ],
+      "image": "/images/laws/law_double_jeopardy_clean_1768090899445.png"
+    },
+    {
+      "title": "Habeas Corpus",
+      "author": "English Common Law",
+      "location": "England",
+      "year": "1100s",
+      "quote": "You shall have the body.",
+      "summary": "A recourse in law through which a person can report an unlawful detention or imprisonment to a court and request that the court order the custodian of the person, usually a prison official, to bring the prisoner to court, to determine if the detention is lawful.",
+      "examples": [
+        "Challenging unlawful arrest.",
+        "Preventing indefinite detention without trial."
+      ],
+      "tags": [
+        "Law",
+        "Rights",
+        "Freedom",
+        "Justice"
+      ],
+      "image": "/images/laws/law_court_gavel_1768069723242.png"
+    },
+    {
+      "title": "Betteridge's Law of Headlines",
+      "author": "Ian Betteridge",
+      "location": "UK",
+      "year": "2009",
+      "quote": "Any headline that ends in a question mark can be answered by the word 'no'.",
+      "summary": "An adage that states if a publisher use a question as a headline, they are likely trying to imply something sensationally false that they cannot back up with facts.",
+      "examples": [
+        "'Is this the end of the world?' (No)",
+        "'Did aliens build the pyramids?' (No)"
+      ],
+      "tags": [
+        "Journalism",
+        "Media",
+        "Headlines",
+        "Adage"
+      ],
+      "image": "/images/laws/law_betteridge_clean_1768090912881.png"
+    },
+    {
+      "title": "Stigler's Law of Eponymy",
+      "author": "Stephen Stigler",
+      "location": "USA",
+      "year": "1980",
+      "quote": "No scientific discovery is named after its original discoverer.",
+      "summary": "A law of sociology of science which states that scientific discoveries are rarely named after the person who actually discovered them. Ironically, Stigler acknowledged that Stephen Merton discovered this law.",
+      "examples": [
+        "Hubble's Law (Lemaitre derived it earlier)",
+        "Pythagorean Theorem (Known to Babylonians earlier)"
+      ],
+      "tags": [
+        "Science",
+        "Sociology",
+        "History",
+        "Naming"
+      ],
+      "image": "/images/laws/law_stigler_clean_1768090926408.png"
+    },
+    {
+      "title": "Clarke\u2019s Third Law",
+      "author": "Arthur C. Clarke",
+      "location": "uk",
+      "year": "1962",
+      "quote": "Any sufficiently advanced technology is indistinguishable from magic.",
+      "summary": "One of Arthur C. Clarke's three laws regarding the future of space and technology. It highlights the wonder and incomprehensibility of advanced future tech to primitive observers.",
+      "examples": [
+        "Showing a smartphone to someone from the Middle Ages.",
+        "Space travel appearing miraculous to ancient civilizations."
+      ],
+      "tags": [
+        "Technology",
+        "Future",
+        "Magic",
+        "Sci-Fi"
+      ],
+      "image": "/images/laws/law_scifi_magic_1768075396752.png"
+    },
+    {
+      "title": "Heisenberg Uncertainty Principle",
+      "author": "Werner Heisenberg",
+      "location": "Germany",
+      "year": "1927",
+      "quote": "The more precisely the position is determined, the less precisely the momentum is known in this instant, and vice versa.",
+      "summary": "A fundamental concept in quantum mechanics. It states that there is a limit to the precision with which certain pairs of physical properties, such as position and momentum, can be known.",
+      "examples": [
+        "Electrons in atoms don't have definite orbits.",
+        "Measuring a particle's position disturbs its momentum."
+      ],
+      "tags": [
+        "Physics",
+        "Quantum",
+        "Uncertainty",
+        "Mechanics"
+      ],
+      "image": "/images/laws/law_quantum_physics_1768069766854.png"
+    },
+    {
+      "title": "Pauli Exclusion Principle",
+      "author": "Wolfgang Pauli",
+      "location": "Austria",
+      "year": "1925",
+      "quote": "Two or more identical fermions (particles with half-integer spin) cannot occupy the same quantum state within a quantum system simultaneously.",
+      "summary": "This principle explains the structure of atoms and the stability of matter. It prevents electrons from collapsing into the nucleus and dictates the arrangement of electrons in shells.",
+      "examples": [
+        "Electron shell structure in atoms.",
+        "Stability of white dwarf stars."
+      ],
+      "tags": [
+        "Physics",
+        "Quantum",
+        "Atoms",
+        "Matter"
+      ],
+      "image": "/images/laws/law_pauli_clean_1768090939771.png"
+    },
+    {
+      "title": "Planck\u2019s Law",
+      "author": "Max Planck",
+      "location": "Germany",
+      "year": "1900",
+      "quote": "Describes the spectral density of electromagnetic radiation emitted by a black body in thermal equilibrium at a given temperature T.",
+      "summary": "The foundation of quantum mechanics. It solved the 'ultraviolet catastrophe' by proposing that energy is emitted in discrete packets (quanta) rather than continuously.",
+      "examples": [
+        "The glow of a hot iron bar.",
+        "The spectrum of the cosmic microwave background."
+      ],
+      "tags": [
+        "Physics",
+        "Quantum",
+        "Radiation",
+        "Energy"
+      ],
+      "image": "/images/laws/law_planck_clean_1768090952944.png"
+    },
+    {
+      "title": "Mass-Energy Equivalence",
+      "author": "Albert Einstein",
+      "location": "Switzerland",
+      "year": "1905",
+      "quote": "E = mc\u00b2",
+      "summary": "Energy equals mass times the speed of light squared. It implies that mass and energy are interchangeable; they are different forms of the same thing. A small amount of mass can be converted into a tremendous amount of energy.",
+      "examples": [
+        "Nuclear power generation.",
+        "The energy source of the Sun."
+      ],
+      "tags": [
+        "Physics",
+        "Relativity",
+        "Energy",
+        "Mass"
+      ],
+      "image": "/images/laws/law_mass_energy_clean_1768090980831.png"
+    },
+    {
+      "title": "Bernoulli\u2019s Principle",
+      "author": "Daniel Bernoulli",
+      "location": "Switzerland",
+      "year": "1738",
+      "quote": "An increase in the speed of a fluid occurs simultaneously with a decrease in static pressure or a decrease in the fluid's potential energy.",
+      "summary": "It explains the behavior of fluid flow. Faster moving fluids exert less pressure. It is fundamental to aerodynamics and hydrodynamics.",
+      "examples": [
+        "Airplane wings generating lift.",
+        "A carburetor mixing air and fuel."
+      ],
+      "tags": [
+        "Physics",
+        "Fluid Dynamics",
+        "Pressure",
+        "Flow"
+      ],
+      "image": "/images/laws/law_bernoulli_clean_1768090993203.png"
+    },
+    {
+      "title": "Pascal\u2019s Law",
+      "author": "Blaise Pascal",
+      "location": "France",
+      "year": "1653",
+      "quote": "A change in pressure at any point in an enclosed fluid at rest is transmitted undiminished to all points in the fluid.",
+      "summary": "The principle behind hydraulic systems. If you apply pressure to a confined fluid, that pressure is distributed equally in all directions.",
+      "examples": [
+        "Hydraulic car lifts.",
+        "Braking systems in vehicles."
+      ],
+      "tags": [
+        "Physics",
+        "Fluid Dynamics",
+        "Hydraulics",
+        "Pressure"
+      ],
+      "image": "/images/laws/law_pascal_clean_1768091006903.png"
+    },
+    {
+      "title": "Archimedes\u2019 Principle",
+      "author": "Archimedes",
+      "location": "Syracuse",
+      "year": "212 BC",
+      "quote": "The upward buoyant force that is exerted on a body immersed in a fluid, whether fully or partially, is equal to the weight of the fluid that the body displaces.",
+      "summary": "It explains why objects float or sink. If the weight of the water displaced is equal to the weight of the object, it floats.",
+      "examples": [
+        "Ships floating on water.",
+        "Hot air balloons rising (air displacement)."
+      ],
+      "tags": [
+        "Physics",
+        "Fluids",
+        "Buoyancy",
+        "Eureka"
+      ],
+      "image": "/images/laws/law_archimedes_clean_1768091019912.png"
+    },
+    {
+      "title": "Law of Segregation",
+      "author": "Gregor Mendel",
+      "location": "Austria",
+      "year": "1865",
+      "quote": "During the formation of gametes, the two alleles for a gene separate from each other, so that each gamete carries only one allele for each gene.",
+      "summary": "Mendel's First Law. It explains how traits are inherited from parents to offspring, ensuring genetic variation.",
+      "examples": [
+        "Inheritance of eye color.",
+        "Pea plant hybridization."
+      ],
+      "tags": [
+        "Biology",
+        "Genetics",
+        "Heredity",
+        "Mendel"
+      ],
+      "image": "/images/laws/law_segregation_clean_1768105907205.png"
+    },
+    {
+      "title": "Law of Independent Assortment",
+      "author": "Gregor Mendel",
+      "location": "Austria",
+      "year": "1865",
+      "quote": "Genes for different traits can segregate independently during the formation of gametes.",
+      "summary": "Mendel's Second Law. The inheritance of one trait (like color) is not dependent on the inheritance of another trait (like shape), generally speaking (barring linkage).",
+      "examples": [
+        "Seed color and seed shape.",
+        "Genetic diversity."
+      ],
+      "tags": [
+        "Biology",
+        "Genetics",
+        "Inheritance",
+        "Diversity"
+      ],
+      "image": "/images/laws/law_independent_assortment_clean_1768105921744.png"
+    },
+    {
+      "title": "Bergmann\u2019s Rule",
+      "author": "Carl Bergmann",
+      "location": "Germany",
+      "year": "1847",
+      "quote": "Populations and species of larger size are found in colder environments, while species of smaller size are found in warmer regions.",
+      "summary": "An ecogeographical rule that correlates body mass with latitude. Larger animals have a lower surface area to volume ratio, helping them retain heat in cold climates.",
+      "examples": [
+        "Polar bears are larger than tropical bears.",
+        "Emperor penguins are the largest penguins and live in Antarctica."
+      ],
+      "tags": [
+        "Biology",
+        "Ecology",
+        "Evolution",
+        "Climate"
+      ],
+      "image": "/images/laws/law_bergmann_clean_1768105936186.png"
+    },
+    {
+      "title": "Allen\u2019s Rule",
+      "author": "Joel Asaph Allen",
+      "location": "USA",
+      "year": "1877",
+      "quote": "Animals adapted to cold climates have shorter limbs and bodily appendages than animals adapted to warm climates.",
+      "summary": "Similar to Bergmann's rule but focuses on appendages (ears, tails, limbs). Shorter appendages conserve heat (cold climate), while longer ones radiate heat (warm climate).",
+      "examples": [
+        "Arctic hares have short ears; desert hares have huge ears.",
+        "Inuit populations tend to have stockier builds."
+      ],
+      "tags": [
+        "Biology",
+        "Ecology",
+        "Evolution",
+        "Adaptation"
+      ],
+      "image": "/images/laws/law_allen_clean_1768105959931.png"
+    },
+    {
+      "title": "The Square-Cube Law",
+      "author": "Galileo Galilei",
+      "location": "Italy",
+      "year": "1638",
+      "quote": "When an object undergoes a proportional increase in size, its new surface area is proportional to the square of the multiplier and its new volume is proportional to the cube of the multiplier.",
+      "summary": "This mathematical principle explains biomechanical limits. As an animal scales up, its volume (and mass) increases much faster than its surface area (and bone strength), limiting how large land animals can get.",
+      "examples": [
+        "Why King Kong couldn't physically exist (his bones would snap).",
+        "The size limits of insects (respiration via surface area)."
+      ],
+      "tags": [
+        "Physics",
+        "Biology",
+        "Math",
+        "Scaling"
+      ],
+      "image": "/images/laws/law_square_cube_clean_1768105975153.png"
+    },
+    {
+      "title": "Dollo's Law",
+      "author": "Louis Dollo",
+      "location": "Belgium",
+      "year": "1893",
+      "quote": "Evolution is irreversible.",
+      "summary": "An organism is unable to return, even partially, to a previous evolutionary stage already realized in the ranks of its ancestors. Structures once lost are not regained in the same form.",
+      "examples": [
+        "Whales cannot re-evolve onto land to potential ancestors.",
+        "Lost teeth in birds not reappearing."
+      ],
+      "tags": [
+        "Biology",
+        "Evolution",
+        "Irreversibility",
+        "Time"
+      ],
+      "image": "/images/laws/law_dollo_clean_1768105989516.png"
+    },
+    {
+      "title": "Occam\u2019s Razor",
+      "author": "William of Ockham",
+      "location": "England",
+      "year": "1300s",
+      "quote": "Entities should not be multiplied without necessity.",
+      "summary": "The Law of Parsimony. Among competing hypotheses that predict equally well, the one with the fewest assumptions should be selected. The simplest explanation is usually the correct one.",
+      "examples": [
+        "Medical diagnosis: look for one disease illustrating symptoms, not three separate ones.",
+        "Police investigations favoring the most direct suspect."
+      ],
+      "tags": [
+        "Philosophy",
+        "Logic",
+        "Problem Solving",
+        "Razor"
+      ],
+      "image": "/images/laws/law_occam_clean_1768106040716.png"
+    },
+    {
+      "title": "Hanlon\u2019s Razor",
+      "author": "Robert J. Hanlon",
+      "location": "USA",
+      "year": "1980",
+      "quote": "Never attribute to malice that which is adequately explained by stupidity.",
+      "summary": "A philosophical razor that eliminates unlikely explanations for human behavior. It suggests that negative actions are more likely caused by incompetence or neglect rather than evil intent.",
+      "examples": [
+        "A coworker deleting your file by accident.",
+        "Bad drivers cutting you off."
+      ],
+      "tags": [
+        "Philosophy",
+        "Logic",
+        "Behavior",
+        "Razor"
+      ],
+      "image": "/images/laws/law_hanlon_clean_1768106056840.png"
+    },
+    {
+      "title": "Hitchens\u2019s Razor",
+      "author": "Christopher Hitchens",
+      "location": "UK",
+      "year": "2003",
+      "quote": "What can be asserted without evidence can be dismissed without evidence.",
+      "summary": "An epistemological razor that serves as a general rule for rejecting refutable claims that have no basis in fact. The burden of proof lies with the claim-maker.",
+      "examples": [
+        "Dismissing conspiracy theories without proof.",
+        "Rejecting supernatural claims."
+      ],
+      "tags": [
+        "Philosophy",
+        "Logic",
+        "Evidence",
+        "Razor"
+      ],
+      "image": "/images/laws/law_hitchens_clean_1768106070151.png"
+    },
+    {
+      "title": "Hume\u2019s Guillotine",
+      "author": "David Hume",
+      "location": "Scotland",
+      "year": "1739",
+      "quote": "You cannot derive an 'ought' from an 'is'.",
+      "summary": "The Is-Ought Problem. It states that many writers make claims about what ought to be, based on statements about what is. Hume argued there is a significant difference between descriptive statements (about facts) and prescriptive statements (about values).",
+      "examples": [
+        "Just because we have an aggressive instinct (is) doesn't mean we should fight (ought).",
+        "Naturalistic fallacy."
+      ],
+      "tags": [
+        "Philosophy",
+        "Ethics",
+        "Logic",
+        "Values"
+      ],
+      "image": "/images/laws/law_hume_guillotine_clean_1768106094540.png"
+    },
+    {
+      "title": "Law of Non-Contradiction",
+      "author": "Aristotle",
+      "location": "Greece",
+      "year": "Ancient",
+      "quote": "Contradictory propositions cannot both be true in the same sense at the same time.",
+      "summary": "One of the three classic laws of thought. Nothing can both exist and not exist at the same time and in the same respect. It is fundamental to logic.",
+      "examples": [
+        "Something cannot be both a circle and a square.",
+        "It cannot be raining and not raining here right now."
+      ],
+      "tags": [
+        "Philosophy",
+        "Logic",
+        "Truth",
+        "Reason"
+      ],
+      "image": "/images/laws/law_non_contradiction_clean_1768106108187.png"
+    },
+    {
+      "title": "Lanchester's Laws",
+      "author": "Frederick Lanchester",
+      "location": "UK",
+      "year": "1916",
+      "quote": "In modern warfare, the power of a force is proportional to the square of its numerical strength.",
+      "summary": "Mathematical formulae for calculating the relative strengths of military forces. The Linear Law applies to ancient combat (1-on-1), while the Square Law applies to modern combat with ranged weapons.",
+      "examples": [
+        "Strategy in RTS games (StarCraft).",
+        "Military attrition calculations."
+      ],
+      "tags": [
+        "Military",
+        "Math",
+        "Strategy",
+        "Combat"
+      ],
+      "image": "/images/laws/law_lanchester_clean_1768106200002.png"
+    },
+    {
+      "title": "Rule of 3 (Survival)",
+      "author": "Survivalists",
+      "location": "Global",
+      "year": "Unknown",
+      "quote": "You can survive 3 minutes without air, 3 hours without shelter (in harsh weather conditions), 3 days without water, and 3 weeks without food.",
+      "summary": "A roughly accurate rule of thumb for human survival priorities in extreme conditions. It helps prioritize immediate needs in emergency situations.",
+      "examples": [
+        "Prioritizing shelter in harsh weather (3 hours).",
+        "Finding water before food."
+      ],
+      "tags": [
+        "Survival",
+        "Biology",
+        "Health",
+        "Rule"
+      ],
+      "image": "/images/laws/law_rule_of_3_clean_1768106213393.png"
+    },
+    {
+      "title": "The 1 in 60 Rule",
+      "author": "Aviators",
+      "location": "Global",
+      "year": "20th Century",
+      "quote": "If you are 1 degree off course, you will miss your target by 1 mile for every 60 miles you fly.",
+      "summary": "A rule of thumb used in air navigation. It approximates the trigonometry involved in navigation errors, allowing pilots to make mental calculations and corrections easily.",
+      "examples": [
+        "Correcting flight path mid-air.",
+        "Maritime navigation estimation."
+      ],
+      "tags": [
+        "Navigation",
+        "Aviation",
+        "Math",
+        "Rule"
+      ],
+      "image": "/images/laws/law_1in60_minimal_1768253474603.png"
+    },
+    {
+      "title": "Campbell\u2019s Law",
+      "author": "Donald T. Campbell",
+      "location": "USA",
+      "year": "1976",
+      "quote": "The more any quantitative social indicator is used for social decision-making, the more subject it will be to corruption pressures and the more apt it will be to distort and corrupt the social processes it is intended to monitor.",
+      "summary": "Using metrics to judge performance inevitably corrupts the metric. Similar to Goodhart's Law ('When a measure becomes a target, it ceases to be a good measure').",
+      "examples": [
+        "Teaching to the test in schools.",
+        "Gaming social media algorithms."
+      ],
+      "tags": [
+        "Sociology",
+        "Metrics",
+        "Corruption",
+        "Data"
+      ],
+      "image": "/images/laws/law_campbell_clean_1768106240106.png"
+    },
+    {
+      "title": "Sayre\u2019s Law",
+      "author": "Wallace Sayre",
+      "location": "USA",
+      "year": "1950s",
+      "quote": "In any dispute the intensity of feeling is inversely proportional to the value of the issues at stake.",
+      "summary": "Often applied to academic politics: 'Academic politics is the most vicious and bitter form of politics, because the stakes are so low.' Low stakes mean there's no cost to fighting.",
+      "examples": [
+        "Bitter arguments over office layout.",
+        "Departmental faculty meetings."
+      ],
+      "tags": [
+        "Sociology",
+        "Politics",
+        "Psychology",
+        "Conflict"
+      ],
+      "image": "/images/laws/law_sayre_clean_1768106253334.png"
+    },
+    {
+      "title": "Hofstadter's Law",
+      "author": "Douglas Hofstadter",
+      "location": "USA",
+      "year": "1979",
+      "quote": "It always takes longer than you expect, even when you take into account Hofstadter's Law.",
+      "summary": "A self-referential adage about the difficulty of accurately estimating the time it will take to complete tasks of substantial complexity. It highlights the recursive nature of delays.",
+      "examples": [
+        "Software project estimation.",
+        "Construction delays."
+      ],
+      "tags": [
+        "Management",
+        "Time",
+        "Planning",
+        "Recursion"
+      ],
+      "image": "/images/laws/law_hofstadter_clean_1768106367813.png"
+    },
+    {
+      "title": "Littlewood's Law",
+      "author": "John Littlewood",
+      "location": "UK",
+      "year": "1986",
+      "quote": "A person can expect to experience an event with odds of one in a million (a 'miracle') at the rate of about one per month.",
+      "summary": "Given the vast number of events a human experiences daily (seeing things, hearing things), statistically improbable coincidences are inevitable over time.",
+      "examples": [
+        "Dreaming of a friend and then they call.",
+        "Running into a neighbor on vacation."
+      ],
+      "tags": [
+        "Statistics",
+        "Probability",
+        "Miracles",
+        "Math"
+      ],
+      "image": "/images/laws/law_littlewood_clean_1768106382742.png"
+    },
+    {
+      "title": "Zipf\u2019s Law",
+      "author": "George Kingsley Zipf",
+      "location": "USA",
+      "year": "1935",
+      "quote": "The frequency of any word is inversely proportional to its rank in the frequency table.",
+      "summary": "The most frequent word occurs twice as often as the second most frequent word, three times as often as the third, and so on. It applies to city populations, website traffic, and more.",
+      "examples": [
+        "Word frequency in any language (the, of, and).",
+        "City sizes in a country."
+      ],
+      "tags": [
+        "Linguistics",
+        "Statistics",
+        "Data",
+        "Power Law"
+      ],
+      "image": "/images/laws/law_zipf_clean_1768106400599.png"
+    },
+    {
+      "title": "Gustafson\u2019s Law",
+      "author": "John Gustafson",
+      "location": "USA",
+      "year": "1988",
+      "quote": "Computations involving arbitrarily large data sets can be efficiently parallelized.",
+      "summary": "A counter to Amdahl's Law. It argues that as computing power increases, we solve larger problems, rather than just solving the same problems faster. Thus, parallelization scales better than Amdahl predicted.",
+      "examples": [
+        "Supercomputing simulations.",
+        "Big Data processing."
+      ],
+      "tags": [
+        "Computing",
+        "Parallelism",
+        "Scaling",
+        "Efficiency"
+      ],
+      "image": "/images/laws/law_gustafson_clean_1768106414709.png"
+    },
+    {
+      "title": "Amdahl\u2019s Law",
+      "author": "Gene Amdahl",
+      "location": "USA",
+      "year": "1967",
+      "quote": "The theoretical speedup of the execution of a task which includes a part that cannot be improved is limited by that part.",
+      "summary": "It defines the maximum improvement possible for a system when only part of the system is improved. If a program is 50% serial, even infinite parallel power will only double the speed.",
+      "examples": [
+        "Upgrading a CPU when memory is the bottleneck.",
+        "Parallel programming limits."
+      ],
+      "tags": [
+        "Computing",
+        "Performance",
+        "Optimization",
+        "Limits"
+      ],
+      "image": "/images/laws/law_amdahl_clean_1768106429390.png"
+    },
+    {
+      "title": "Linus\u2019s Law",
+      "author": "Linus Torvalds",
+      "location": "Finland",
+      "year": "1999",
+      "quote": "Given enough eyeballs, all bugs are shallow.",
+      "summary": "A claim about software development. It suggests that if there are enough people testing and reviewing code (as in open source), almost every problem will be characterized quickly and the fix will be obvious to someone.",
+      "examples": [
+        "Open source software security.",
+        "Wikipedia accuracy."
+      ],
+      "tags": [
+        "Software",
+        "Open Source",
+        "Collaboration",
+        "Quality"
+      ],
+      "image": "/images/laws/law_linus_minimal_1768253433439.png"
+    },
+    {
+      "title": "Wirth\u2019s Law",
+      "author": "Niklaus Wirth",
+      "location": "Switzerland",
+      "year": "1995",
+      "quote": "Software is getting slower more rapidly than hardware is becoming faster.",
+      "summary": "A computing adage stating that software bloat negates hardware advances. Despite 1000x faster CPUs, modern word processors don't feel 1000x faster than 1990s ones.",
+      "examples": [
+        "Electron apps vs native apps.",
+        "Boot times not improving despite SSDs."
+      ],
+      "tags": [
+        "Computing",
+        "Software",
+        "Efficiency",
+        "Bloat"
+      ],
+      "image": "/images/laws/law_wirth_minimal_1768253448936.png"
+    },
+    {
+      "title": "The Ringelmann Effect",
+      "author": "Maximilien Ringelmann",
+      "location": "France",
+      "year": "1913",
+      "quote": "Individual effort steadily drops as the group size increases.",
+      "summary": "Discovered by French agricultural engineer Maximilien Ringelmann in 1913 through rope-pulling experiments, this phenomenon shows that as group size increases, individual contribution steadily drops. While two people pull at ~93% of their individual strength, a group of eight pulls at less than 50% per person\u2014a fundamental finding that laid the groundwork for the modern psychological concept of \"social loafing\".",
+      "examples": [
+        "Tug-of-war teams exerting less force per person as more pullers join the rope.",
+        "Team members reducing individual output in large unstructured group projects."
+      ],
+      "tags": [
+        "Psychology",
+        "Social Science",
+        "Group Dynamics",
+        "Effort"
+      ],
+      "image": "/images/laws/ringelmann_effect.png"
+    }
+  ]
+}

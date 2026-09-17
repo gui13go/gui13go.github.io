@@ -1,0 +1,57 @@
+{{- /* Interactive Checkboxes / Task Lists with LocalStorage Persistence */ -}}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const taskCheckboxes = document.querySelectorAll(".post-content li > input[type='checkbox']");
+  if (!taskCheckboxes.length) return;
+
+  const pageKey = "checklist_state_" + window.location.pathname;
+  let savedState = {};
+  try {
+    savedState = JSON.parse(localStorage.getItem(pageKey) || "{}");
+  } catch (e) {
+    savedState = {};
+  }
+
+  taskCheckboxes.forEach(function (checkbox, index) {
+    // Enable the checkbox
+    checkbox.removeAttribute("disabled");
+    checkbox.style.cursor = "pointer";
+
+    const li = checkbox.closest("li");
+    if (li) {
+      li.classList.add("interactive-task-item");
+      const ul = li.closest("ul");
+      if (ul) ul.classList.add("interactive-task-list");
+
+      // Restore checked state from localStorage
+      if (savedState[index]) {
+        checkbox.checked = true;
+        li.classList.add("task-checked");
+      }
+
+      // Allow clicking the list item text to toggle the checkbox
+      li.addEventListener("click", function (event) {
+        if (event.target.tagName === "A" || event.target.tagName === "CODE" || event.target === checkbox) {
+          return;
+        }
+        checkbox.checked = !checkbox.checked;
+        checkbox.dispatchEvent(new Event("change"));
+      });
+
+      // Handle state change
+      checkbox.addEventListener("change", function () {
+        if (checkbox.checked) {
+          li.classList.add("task-checked");
+          savedState[index] = true;
+        } else {
+          li.classList.remove("task-checked");
+          delete savedState[index];
+        }
+        try {
+          localStorage.setItem(pageKey, JSON.stringify(savedState));
+        } catch (e) {}
+      });
+    }
+  });
+});
+</script>

@@ -91,7 +91,7 @@
       background: #fff;
       display: flex;
       flex-direction: column;
-      padding: 42px 64px 44px;
+      padding: 34px 56px 30px;
     }
 
     .slide.active {
@@ -238,7 +238,7 @@
 
     .s-body {
       flex: 1;
-      margin-top: 18px;
+      margin-top: 14px;
       display: flex;
       flex-direction: column;
       min-height: 0
@@ -249,8 +249,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-top: 10px;
-      margin-top: 12px;
+      padding-top: 8px;
+      margin-top: 8px;
       border-top: 1px solid var(--line);
     }
 
@@ -594,15 +594,16 @@
 
     .sec-side {
       position: absolute;
-      right: 52px;
+      right: 48px;
       top: 50%;
       transform: translateY(-50%);
       writing-mode: vertical-rl;
       font-family: var(--head-font);
-      font-size: 54px;
+      font-size: 34px;
       font-weight: 900;
-      letter-spacing: 10px;
-      color: rgba(187, 223, 230, .2)
+      letter-spacing: 4px;
+      color: rgba(187, 223, 230, .18);
+      pointer-events: none;
     }
 
     /* Ending Slide */
@@ -2146,7 +2147,7 @@
         <span class="chip">🔍 <b>System Diagnostics</b></span>
       </div>
       <div class="cover-meta a" style="--d:5">
-        <div class="meta-card">👨‍🏫 <b>Guilherme Viegas</b>Course Lecturer</div>
+        <div class="meta-card">👨‍🏫 <b>Guilherme Viegas</b>Lab Engineer</div>
         <div class="meta-card">🎯 <b>Designed For Beginners</b>Zero prior Linux experience assumed!</div>
       </div>
       <div class="cover-bars" data-bars></div>
@@ -2304,16 +2305,14 @@
             <div class="term-box a aL" style="--d:2">
               <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span
                   class="dot g"></span><span class="title">Usenet Post · comp.os.minix · August 25, 1991</span></div>
-              <div class="term-code"><span class="cmt">From: Linus Benedict Torvalds
-                  (torvalds@kruuna.helsinki.fi)</span>
-                <span class="cmd">Subject: What would you like to see most in minix?</span>
+              <div class="term-code"><span class="cmt">From: Linus Benedict Torvalds (torvalds@kruuna.helsinki.fi)</span>
+<span class="cmd">Subject: What would you like to see most in minix?</span>
 
-                <span class="str">"Hello everybody out there using minix -</span>
-                <span class="str">I'''m doing a (free) operating system (just a hobby,</span>
-                <span class="str">won'''t be big and professional like gnu) for 386(486) AT clones.</span>
-                <span class="str">This has been brewing since April, and is starting to get ready...</span>
-                <span class="str">Any suggestions are welcome, but I won'''t promise I'''ll implement them :-)"</span>
-              </div>
+<span class="str">"Hello everybody out there using minix -</span>
+<span class="str">I'm doing a (free) operating system (just a hobby,</span>
+<span class="str">won't be big and professional like gnu) for 386(486) AT clones.</span>
+<span class="str">This has been brewing since April, and is starting to get ready...</span>
+<span class="str">Any suggestions are welcome, but I won't promise I'll implement them :-)"</span></div>
             </div>
             <div class="analogy a aL" style="--d:3">
               <span>💡 <b>Why "GNU/Linux"?</b> The Linux Kernel alone is just an engine; it cannot interact with humans
@@ -3121,10 +3120,8 @@
               </ul>
             </div>
             <div class="term-box sm a aL" style="--d:3">
-              <div class="term-code"><span class="prm">guigo@linux:~$</span> <span class="cmd">cat</span> <span
-                  class="arg">/proc/loadavg</span>
-                <span class="out">0.24 0.18 0.12 1/482 18920</span>
-              </div>
+              <div class="term-code"><span class="prm">guigo@linux:~$</span> <span class="cmd">cat</span> <span class="arg">/proc/loadavg</span>
+<span class="out">0.24 0.18 0.12 1/482 18920</span></div>
             </div>
           </div>
           <div class="info-stack">
@@ -3142,10 +3139,7 @@
             </div>
             <div class="term-box sm a aR" style="--d:3">
               <div class="term-code"><span class="cmt"># Benchmarking or generating empty file with zero bytes:</span>
-                <span class="cmd">dd</span> <span class="flg">if=</span><span class="arg">/dev/zero</span> <span
-                  class="flg">of=</span><span class="arg">swapfile</span> <span class="flg">bs=</span><span
-                  class="arg">1M</span> <span class="flg">count=</span><span class="arg">1024</span>
-              </div>
+<span class="cmd">dd</span> <span class="flg">if=</span><span class="arg">/dev/zero</span> <span class="flg">of=</span><span class="arg">swapfile</span> <span class="flg">bs=</span><span class="arg">1M</span> <span class="flg">count=</span><span class="arg">1024</span></div>
             </div>
           </div>
         </div>
@@ -3235,15 +3229,13 @@
             <div class="term-box a aR" style="--d:3">
               <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span
                   class="dot g"></span><span class="title">Visual Tree Navigation</span></div>
-              <div class="term-code"><span class="prm">guigo@linux:~$</span> <span class="cmd">tree</span> <span
-                  class="flg">-L 2</span> <span class="arg">~/projects</span>
-                <span class="out">projects/
-                  ├── backend/
-                  │ ├── app.py
-                  │ └── requirements.txt
-                  └── docs/
-                  └── architecture.md</span>
-              </div>
+              <div class="term-code"><span class="prm">guigo@linux:~$</span> <span class="cmd">tree</span> <span class="flg">-L 2</span> <span class="arg">~/projects</span>
+<span class="out">projects/
+├── backend/
+│   ├── app.py
+│   └── requirements.txt
+└── docs/
+    └── architecture.md</span></div>
             </div>
           </div>
         </div>
@@ -3273,8 +3265,7 @@
             <p>Creates nested directory paths in a single command without failing if intermediate parent folders do not
               exist yet.</p>
             <div class="term-box sm">
-              <div class="term-code"><span class="cmd">mkdir</span> <span class="flg">-p</span> <span
-                  class="arg">projects/python/app/src</span></div>
+              <div class="term-code"><span class="cmd">mkdir</span> <span class="flg">-p</span> <span class="arg">projects/python/app/src</span></div>
             </div>
           </div>
           <div class="card g a aR" style="--d:3">
@@ -3294,8 +3285,7 @@
             <p>Duplicates files or directory hierarchies. Always pass <code>-r</code> when copying directories
               recursively.</p>
             <div class="term-box sm">
-              <div class="term-code"><span class="cmd">cp</span> <span class="flg">-r</span> <span
-                  class="arg">/var/www/html /backup/html_bak</span></div>
+              <div class="term-code"><span class="cmd">cp</span> <span class="flg">-r</span> <span class="arg">/var/www/html /backup/html_bak</span></div>
             </div>
           </div>
           <div class="card a aR" style="--d:5">
@@ -3376,11 +3366,9 @@
               <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span
                   class="dot g"></span><span class="title">Live Log Following</span></div>
               <div class="term-code"><span class="cmt"># Follow application access log live</span>
-                <span class="prm">guigo@linux:~$</span> <span class="cmd">tail</span> <span class="flg">-f</span> <span
-                  class="arg">/var/log/nginx/access.log</span>
-                <span class="out">192.168.1.50 - - [14/Sep/2026:00:15:02] "GET /api HTTP/1.1" 200
-                  192.168.1.55 - - [14/Sep/2026:00:15:04] "POST /login HTTP/1.1" 200</span>
-              </div>
+<span class="prm">guigo@linux:~$</span> <span class="cmd">tail</span> <span class="flg">-f</span> <span class="arg">/var/log/nginx/access.log</span>
+<span class="out">192.168.1.50 - - [14/Sep/2026:00:15:02] "GET /api HTTP/1.1" 200
+192.168.1.55 - - [14/Sep/2026:00:15:04] "POST /login HTTP/1.1" 200</span></div>
             </div>
           </div>
         </div>
@@ -3411,14 +3399,10 @@
               <p>Crawls directory trees live to match files based on names, modification times, sizes, or types:</p>
               <div class="term-box sm" style="margin-top:6px">
                 <div class="term-code"><span class="cmt"># Find .log files larger than 50MB modified in 24h:</span>
-                  <span class="cmd">find</span> <span class="arg">/var/log</span> <span class="flg">-type f -name</span>
-                  <span class="str">"*.log"</span> <span class="flg">-size</span> <span class="arg">+50M</span> <span
-                    class="flg">-mtime</span> <span class="arg">-1</span>
+<span class="cmd">find</span> <span class="arg">/var/log</span> <span class="flg">-type f -name</span> <span class="str">"*.log"</span> <span class="flg">-size</span> <span class="arg">+50M</span> <span class="flg">-mtime</span> <span class="arg">-1</span>
 
-                  <span class="cmt"># Find and delete temp files safely:</span>
-                  <span class="cmd">find</span> <span class="arg">/tmp</span> <span class="flg">-type f -name</span>
-                  <span class="str">"*.tmp"</span> <span class="flg">-delete</span>
-                </div>
+<span class="cmt"># Find and delete temp files safely:</span>
+<span class="cmd">find</span> <span class="arg">/tmp</span> <span class="flg">-type f -name</span> <span class="str">"*.tmp"</span> <span class="flg">-delete</span></div>
               </div>
               <div class="fact g" style="margin-top:8px">
                 <h4>🎯 Precision Search</h4>
@@ -3435,11 +3419,10 @@
                 drives:</p>
               <div class="term-box sm" style="margin-top:6px">
                 <div class="term-code"><span class="cmt"># Near-instant path search:</span>
-                  <span class="cmd">locate</span> <span class="arg">nginx.conf</span>
+<span class="cmd">locate</span> <span class="arg">nginx.conf</span>
 
-                  <span class="cmt"># If file was just created, update database manually:</span>
-                  <span class="cmd">sudo updatedb</span>
-                </div>
+<span class="cmt"># If file was just created, update database manually:</span>
+<span class="cmd">sudo updatedb</span></div>
               </div>
               <div class="fact amber" style="margin-top:8px">
                 <h4>⏱️ Speed vs. Freshness</h4>
@@ -3632,18 +3615,16 @@
               <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span
                   class="dot g"></span><span class="title">Standard apt Workflow</span></div>
               <div class="term-code"><span class="cmt"># 1. Refresh local repository metadata mirrors</span>
-                <span class="cmd">sudo apt</span> <span class="arg">update</span>
+<span class="cmd">sudo apt</span> <span class="arg">update</span>
 
-                <span class="cmt"># 2. Upgrade all installed packages to latest security releases</span>
-                <span class="cmd">sudo apt</span> <span class="arg">upgrade</span> <span class="flg">-y</span>
+<span class="cmt"># 2. Upgrade all installed packages to latest security releases</span>
+<span class="cmd">sudo apt</span> <span class="arg">upgrade</span> <span class="flg">-y</span>
 
-                <span class="cmt"># 3. Install packages and dependencies</span>
-                <span class="cmd">sudo apt</span> <span class="arg">install</span> <span class="flg">-y</span> <span
-                  class="arg">curl htop git build-essential</span>
+<span class="cmt"># 3. Install packages and dependencies</span>
+<span class="cmd">sudo apt</span> <span class="arg">install</span> <span class="flg">-y</span> <span class="arg">curl htop git build-essential</span>
 
-                <span class="cmt"># 4. Remove obsolete orphaned dependencies</span>
-                <span class="cmd">sudo apt</span> <span class="arg">autoremove</span> <span class="flg">-y</span>
-              </div>
+<span class="cmt"># 4. Remove obsolete orphaned dependencies</span>
+<span class="cmd">sudo apt</span> <span class="arg">autoremove</span> <span class="flg">-y</span></div>
             </div>
           </div>
           <div class="info-stack">
@@ -3715,25 +3696,19 @@
           <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span
               class="title">Stream Redirection Reference</span></div>
           <div class="term-code"><span class="cmt"># 1. Overwrite stdout to a file (creates or replaces)</span>
-            <span class="cmd">echo</span> <span class="str">"System Initialized"</span> <span class="flg">&gt;</span>
-            <span class="arg">deploy.log</span>
+<span class="cmd">echo</span> <span class="str">"System Initialized"</span> <span class="flg">&gt;</span> <span class="arg">deploy.log</span>
 
-            <span class="cmt"># 2. Append stdout to an existing file</span>
-            <span class="cmd">echo</span> <span class="str">"Worker thread active"</span> <span
-              class="flg">&gt;&gt;</span> <span class="arg">deploy.log</span>
+<span class="cmt"># 2. Append stdout to an existing file</span>
+<span class="cmd">echo</span> <span class="str">"Worker thread active"</span> <span class="flg">&gt;&gt;</span> <span class="arg">deploy.log</span>
 
-            <span class="cmt"># 3. Redirect stderr only to error log</span>
-            <span class="cmd">find</span> <span class="arg">/root</span> <span class="flg">-name</span> <span
-              class="str">"*.conf"</span> <span class="flg">2&gt;</span> <span class="arg">errors.log</span>
+<span class="cmt"># 3. Redirect stderr only to error log</span>
+<span class="cmd">find</span> <span class="arg">/root</span> <span class="flg">-name</span> <span class="str">"*.conf"</span> <span class="flg">2&gt;</span> <span class="arg">errors.log</span>
 
-            <span class="cmt"># 4. Discard error output into the null device black hole</span>
-            <span class="cmd">find</span> <span class="arg">/root</span> <span class="flg">-name</span> <span
-              class="str">"*.conf"</span> <span class="flg">2&gt;</span> <span class="arg">/dev/null</span>
+<span class="cmt"># 4. Discard error output into the null device black hole</span>
+<span class="cmd">find</span> <span class="arg">/root</span> <span class="flg">-name</span> <span class="str">"*.conf"</span> <span class="flg">2&gt;</span> <span class="arg">/dev/null</span>
 
-            <span class="cmt"># 5. Merge stdout and stderr into a single log</span>
-            <span class="cmd">./build_app.sh</span> <span class="flg">&gt;</span> <span class="arg">build.log</span>
-            <span class="flg">2&gt;&amp;1</span>
-          </div>
+<span class="cmt"># 5. Merge stdout and stderr into a single log</span>
+<span class="cmd">./build_app.sh</span> <span class="flg">&gt;</span> <span class="arg">build.log</span> <span class="flg">2&gt;&amp;1</span></div>
         </div>
       </div>
       <div class="s-foot">
@@ -3761,13 +3736,7 @@
             <span style="margin-left:auto;font-size:10px;color:var(--cyan);font-weight:700;letter-spacing:0.5px">6
               STAGES · STDOUT [1] ➔ STDIN [0] PIPES</span>
           </div>
-          <div class="term-code"><span class="cmd">grep</span> <span class="str">" 404 "</span> <span
-              class="arg">/var/log/nginx/access.log</span> <span class="flg">|</span> <span class="cmd">awk</span> <span
-              class="str">'{print $1}'</span> <span class="flg">|</span> <span class="cmd">sort</span> <span
-              class="flg">|</span> <span class="cmd">uniq</span> <span class="flg">-c</span> <span class="flg">|</span>
-            <span class="cmd">sort</span> <span class="flg">-nr</span> <span class="flg">|</span> <span
-              class="cmd">head</span> <span class="flg">-n 5</span>
-          </div>
+          <div class="term-code"><span class="cmd">grep</span> <span class="str">" 404 "</span> <span class="arg">/var/log/nginx/access.log</span> <span class="flg">|</span> <span class="cmd">awk</span> <span class="str">'{print $1}'</span> <span class="flg">|</span> <span class="cmd">sort</span> <span class="flg">|</span> <span class="cmd">uniq</span> <span class="flg">-c</span> <span class="flg">|</span> <span class="cmd">sort</span> <span class="flg">-nr</span> <span class="flg">|</span> <span class="cmd">head</span> <span class="flg">-n 5</span></div>
         </div>
 
         <!-- 6 Step Pipeline Process Cards -->
@@ -3983,13 +3952,10 @@
               <p>The industry-standard encrypted shell protocol:</p>
               <div class="term-box sm" style="margin-top:6px">
                 <div class="term-code"><span class="cmt"># Standard connection</span>
-                  <span class="cmd">ssh</span> <span class="arg">guigo@remote-server.com</span>
+<span class="cmd">ssh</span> <span class="arg">guigo@remote-server.com</span>
 
-                  <span class="cmt"># Connect via non-standard port and private key</span>
-                  <span class="cmd">ssh</span> <span class="flg">-i</span> <span class="arg">~/.ssh/id_ed25519</span>
-                  <span class="flg">-p</span> <span class="arg">2222</span> <span
-                    class="arg">guigo@remote-server.com</span>
-                </div>
+<span class="cmt"># Connect via non-standard port and private key</span>
+<span class="cmd">ssh</span> <span class="flg">-i</span> <span class="arg">~/.ssh/id_ed25519</span> <span class="flg">-p</span> <span class="arg">2222</span> <span class="arg">guigo@remote-server.com</span></div>
               </div>
             </div>
             <div class="card g a aL" style="--d:3">
@@ -3998,16 +3964,11 @@
               </div>
               <p>Package directory trees into compressed <code>.tar.gz</code>:</p>
               <div class="term-box sm" style="margin-top:6px">
-                <div class="term-code"><span class="cmt"># Create compressed archive: c=create, v=verbose, z=gzip,
-                    f=file</span>
-                  <span class="cmd">tar</span> <span class="flg">-cvzf</span> <span
-                    class="arg">site_backup.tar.gz</span> <span class="arg">/var/www/html</span>
+                <div class="term-code"><span class="cmt"># Create compressed archive: c=create, v=verbose, z=gzip, f=file</span>
+<span class="cmd">tar</span> <span class="flg">-cvzf</span> <span class="arg">site_backup.tar.gz</span> <span class="arg">/var/www/html</span>
 
-                  <span class="cmt"># Extract archive to destination folder (-C)</span>
-                  <span class="cmd">tar</span> <span class="flg">-xvzf</span> <span
-                    class="arg">site_backup.tar.gz</span> <span class="flg">-C</span> <span
-                    class="arg">/opt/restore</span>
-                </div>
+<span class="cmt"># Extract archive to destination folder (-C)</span>
+<span class="cmd">tar</span> <span class="flg">-xvzf</span> <span class="arg">site_backup.tar.gz</span> <span class="flg">-C</span> <span class="arg">/opt/restore</span></div>
               </div>
             </div>
           </div>
@@ -4016,20 +3977,18 @@
               <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span
                   class="dot g"></span><span class="title">Production Bash Script: backup.sh</span></div>
               <div class="term-code"><span class="cmt">#!/bin/bash</span>
-                <span class="cmt"># Strict mode: fail on error, unset vars, or pipe break</span>
-                <span class="cmd">set</span> <span class="flg">-euo pipefail</span>
+<span class="cmt"># Strict mode: fail on error, unset vars, or pipe break</span>
+<span class="cmd">set</span> <span class="flg">-euo pipefail</span>
 
-                <span class="arg">BACKUP_SRC</span>=<span class="str">"/var/www/html"</span>
-                <span class="arg">BACKUP_DEST</span>=<span class="str">"/backup"</span>
-                <span class="arg">DATE</span>=<span class="str">$(date +%Y%m%d_%H%M%S)</span>
-                <span class="arg">ARCHIVE</span>=<span class="str">"web_backup_${DATE}.tar.gz"</span>
+<span class="arg">BACKUP_SRC</span>=<span class="str">"/var/www/html"</span>
+<span class="arg">BACKUP_DEST</span>=<span class="str">"/backup"</span>
+<span class="arg">DATE</span>=<span class="str">$(date +%Y%m%d_%H%M%S)</span>
+<span class="arg">ARCHIVE</span>=<span class="str">"web_backup_${DATE}.tar.gz"</span>
 
-                <span class="cmd">echo</span> <span class="str">"=== [$(date)] Starting System Backup ==="</span>
-                <span class="cmd">mkdir</span> <span class="flg">-p</span> <span class="str">"${BACKUP_DEST}"</span>
-                <span class="cmd">tar</span> <span class="flg">-cvzf</span> <span
-                  class="str">"${BACKUP_DEST}/${ARCHIVE}"</span> <span class="str">"${BACKUP_SRC}"</span>
-                <span class="cmd">echo</span> <span class="str">"=== Backup saved: ${BACKUP_DEST}/${ARCHIVE} ==="</span>
-              </div>
+<span class="cmd">echo</span> <span class="str">"=== [$(date)] Starting System Backup ==="</span>
+<span class="cmd">mkdir</span> <span class="flg">-p</span> <span class="str">"${BACKUP_DEST}"</span>
+<span class="cmd">tar</span> <span class="flg">-cvzf</span> <span class="str">"${BACKUP_DEST}/${ARCHIVE}"</span> <span class="str">"${BACKUP_SRC}"</span>
+<span class="cmd">echo</span> <span class="str">"=== Backup saved: ${BACKUP_DEST}/${ARCHIVE} ==="</span></div>
             </div>
             <div class="ok a aR" style="--d:4">
               <span>🚀 <b>Deploying:</b> Run <code>chmod +x backup.sh</code> to grant execution rights, then execute
@@ -4115,21 +4074,20 @@
               <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span
                   class="dot g"></span><span class="title">Terminal: Hostname, Kernel &amp; Uptime</span></div>
               <div class="term-code"><span class="cmt"># Check system kernel release &amp; architecture</span>
-                <span class="prm">$</span> <span class="cmd">uname</span> <span class="flg">-a</span>
-                <span class="out">Linux srv01 6.1.0-21-amd64 #1 SMP x86_64 GNU/Linux</span>
+<span class="prm">$</span> <span class="cmd">uname</span> <span class="flg">-a</span>
+<span class="out">Linux srv01 6.1.0-21-amd64 #1 SMP x86_64 GNU/Linux</span>
 
-                <span class="cmt"># Print kernel release only (-r is vital for drivers)</span>
-                <span class="prm">$</span> <span class="cmd">uname</span> <span class="flg">-r</span>
-                <span class="out">6.1.0-21-amd64</span>
+<span class="cmt"># Print kernel release only (-r is vital for drivers)</span>
+<span class="prm">$</span> <span class="cmd">uname</span> <span class="flg">-r</span>
+<span class="out">6.1.0-21-amd64</span>
 
-                <span class="cmt"># How long has this machine been running?</span>
-                <span class="prm">$</span> <span class="cmd">uptime</span> <span class="flg">-p</span>
-                <span class="out">up 14 days, 3 hours, 22 minutes</span>
+<span class="cmt"># How long has this machine been running?</span>
+<span class="prm">$</span> <span class="cmd">uptime</span> <span class="flg">-p</span>
+<span class="out">up 14 days, 3 hours, 22 minutes</span>
 
-                <span class="cmt"># System load average (1, 5, 15 minute averages)</span>
-                <span class="prm">$</span> <span class="cmd">uptime</span>
-                <span class="out"> 14:22:05 up 14 days, load average: 0.12, 0.08, 0.05</span>
-              </div>
+<span class="cmt"># System load average (1, 5, 15 minute averages)</span>
+<span class="prm">$</span> <span class="cmd">uptime</span>
+<span class="out"> 14:22:05 up 14 days, load average: 0.12, 0.08, 0.05</span></div>
             </div>
             <div class="ok a aR" style="--d:4">
               <span>💡 <b>Why Kernel Version Matters:</b> Compiling hardware drivers (like NVIDIA or Wi-Fi) requires the
@@ -4195,20 +4153,18 @@
               <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span
                   class="dot g"></span><span class="title">Terminal: lscpu Overview</span></div>
               <div class="term-code"><span class="prm">$</span> <span class="cmd">lscpu</span>
-                <span class="out">Architecture: x86_64
-                  CPU(s): 16
-                  Thread(s) per core: 2
-                  Core(s) per socket: 8
-                  Socket(s): 1
-                  Vendor ID: AuthenticAMD
-                  Model name: AMD Ryzen 7 7800X3D 8-Core
-                  CPU max MHz: 5050.0000
-                  Virtualization: AMD-V</span>
+<span class="out">Architecture:          x86_64
+CPU(s):                16
+Thread(s) per core:    2
+Core(s) per socket:    8
+Socket(s):             1
+Vendor ID:             AuthenticAMD
+Model name:            AMD Ryzen 7 7800X3D 8-Core
+CPU max MHz:           5050.0000
+Virtualization:        AMD-V</span>
 
-                <span class="cmt"># Watch live CPU clock scaling across all cores</span>
-                <span class="prm">$</span> <span class="cmd">watch</span> <span class="flg">-n 1</span> <span
-                  class="str">"grep '''cpu MHz''' /proc/cpuinfo"</span>
-              </div>
+<span class="cmt"># Watch live CPU clock scaling across all cores</span>
+<span class="prm">$</span> <span class="cmd">watch</span> <span class="flg">-n 1</span> <span class="str">"grep 'cpu MHz' /proc/cpuinfo"</span></div>
             </div>
             <div class="fact a aR" style="--d:4">
               <h4>🏎️ Cache Hierarchy (L1 / L2 / L3)</h4>
@@ -4268,18 +4224,16 @@
             <div class="term-box a aR" style="--d:3">
               <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span
                   class="dot g"></span><span class="title">Terminal: free -h Output</span></div>
-              <div class="term-code"><span class="prm">$</span> <span class="cmd">free</span> <span
-                  class="flg">-h</span>
-                <span class="out"> total used free shared buff/cache available
-                  Mem: 31Gi 8.2Gi 1.1Gi 420Mi 22Gi <span style="color:#10b981;font-weight:700">22Gi</span>
-                  Swap: 4.0Gi 0B 4.0Gi</span>
+              <div class="term-code"><span class="prm">$</span> <span class="cmd">free</span> <span class="flg">-h</span>
+<span class="out">               total        used        free      shared  buff/cache   available
+Mem:            31Gi       8.2Gi       1.1Gi       420Mi        22Gi        <span style="color:#10b981;font-weight:700">22Gi</span>
+Swap:          4.0Gi          0B       4.0Gi</span>
 
-                <span class="cmt"># Monitor live memory pressure &amp; swap-in/out</span>
-                <span class="prm">$</span> <span class="cmd">vmstat</span> <span class="flg">1</span>
-                <span class="out">procs -----------memory---------- ---swap--
-                  r b swpd free buff cache si so
-                  0 0 0 1153200 452100 226830 0 0</span>
-              </div>
+<span class="cmt"># Monitor live memory pressure &amp; swap-in/out</span>
+<span class="prm">$</span> <span class="cmd">vmstat</span> <span class="flg">1</span>
+<span class="out">procs -----------memory---------- ---swap--
+ r  b   swpd   free   buff  cache   si   so
+ 0  0      0 1153200 452100 226830   0    0</span></div>
             </div>
             <div class="card a aR" style="--d:4">
               <div class="c-top"><span class="ic">🔍</span>
@@ -4346,22 +4300,17 @@
             <div class="term-box a aR" style="--d:3">
               <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span
                   class="dot g"></span><span class="title">Terminal: df -h &amp; Space Triage Recipe</span></div>
-              <div class="term-code"><span class="prm">$</span> <span class="cmd">df</span> <span class="flg">-h</span>
-                <span class="arg">/</span>
-                <span class="out">Filesystem Size Used Avail Use% Mounted on
-                  /dev/nvme0n1p2 468G 120G 325G 27% /</span>
+              <div class="term-code"><span class="prm">$</span> <span class="cmd">df</span> <span class="flg">-h</span> <span class="arg">/</span>
+<span class="out">Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  468G  120G  325G  27% /</span>
 
-                <span class="cmt"># Find the top 5 largest directory hogs in /var</span>
-                <span class="prm">$</span> <span class="cmd">sudo du</span> <span class="flg">-h --max-depth=1</span>
-                <span class="arg">/var</span> <span class="prm">|</span> <span class="cmd">sort</span> <span
-                  class="flg">-hr</span> <span class="prm">|</span> <span class="cmd">head</span> <span class="flg">-n
-                  5</span>
-                <span class="out">14G /var/lib/docker
-                  4.2G /var/log
-                  1.8G /var/cache
-                  620M /var/lib
-                  120M /var/backups</span>
-              </div>
+<span class="cmt"># Find the top 5 largest directory hogs in /var</span>
+<span class="prm">$</span> <span class="cmd">sudo du</span> <span class="flg">-h --max-depth=1</span> <span class="arg">/var</span> <span class="prm">|</span> <span class="cmd">sort</span> <span class="flg">-hr</span> <span class="prm">|</span> <span class="cmd">head</span> <span class="flg">-n 5</span>
+<span class="out">14G   /var/lib/docker
+4.2G  /var/log
+1.8G  /var/cache
+620M  /var/lib
+120M  /var/backups</span></div>
             </div>
             <div class="fact a aR" style="--d:4">
               <h4>🛡️ Drive Health Telemetry: smartctl</h4>
@@ -4422,25 +4371,22 @@
               <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span
                   class="dot g"></span><span class="title">Terminal: IP, Gateway &amp; Listening Sockets</span></div>
               <div class="term-code"><span class="cmt"># View brief status of network interfaces</span>
-                <span class="prm">$</span> <span class="cmd">ip</span> <span class="flg">-br a</span>
-                <span class="out">lo UNKNOWN 127.0.0.1/8 ::1/128
-                  enp3s0 UP 192.168.1.105/24 fe80::...</span>
+<span class="prm">$</span> <span class="cmd">ip</span> <span class="flg">-br a</span>
+<span class="out">lo     UNKNOWN  127.0.0.1/8 ::1/128
+enp3s0 UP       192.168.1.105/24 fe80::...</span>
 
-                <span class="cmt"># Check Default Gateway (Router IP)</span>
-                <span class="prm">$</span> <span class="cmd">ip</span> <span class="arg">route</span> <span
-                  class="prm">|</span> <span class="cmd">grep</span> <span class="arg">default</span>
-                <span class="out">default via 192.168.1.1 dev enp3s0 proto dhcp</span>
+<span class="cmt"># Check Default Gateway (Router IP)</span>
+<span class="prm">$</span> <span class="cmd">ip</span> <span class="arg">route</span> <span class="prm">|</span> <span class="cmd">grep</span> <span class="arg">default</span>
+<span class="out">default via 192.168.1.1 dev enp3s0 proto dhcp</span>
 
-                <span class="cmt"># What public IP does the internet see?</span>
-                <span class="prm">$</span> <span class="cmd">curl</span> <span class="flg">-s</span> <span
-                  class="arg">ifconfig.me</span>
-                <span class="out">203.0.113.42</span>
+<span class="cmt"># What public IP does the internet see?</span>
+<span class="prm">$</span> <span class="cmd">curl</span> <span class="flg">-s</span> <span class="arg">ifconfig.me</span>
+<span class="out">203.0.113.42</span>
 
-                <span class="cmt"># Audit active listening ports (TCP/UDP, PIDs)</span>
-                <span class="prm">$</span> <span class="cmd">sudo ss</span> <span class="flg">-tulpn</span>
-                <span class="out">tcp LISTEN 0 128 0.0.0.0:22 users:(("sshd",pid=842))
-                  tcp LISTEN 0 511 0.0.0.0:80 users:(("nginx",pid=1120))</span>
-              </div>
+<span class="cmt"># Audit active listening ports (TCP/UDP, PIDs)</span>
+<span class="prm">$</span> <span class="cmd">sudo ss</span> <span class="flg">-tulpn</span>
+<span class="out">tcp LISTEN 0 128 0.0.0.0:22 users:(("sshd",pid=842))
+tcp LISTEN 0 511 0.0.0.0:80 users:(("nginx",pid=1120))</span></div>
             </div>
             <div class="ok a aR" style="--d:4">
               <span>⚡ <b>Quick Diagnostic:</b> <code>ping -c 4 8.8.8.8</code> tests your gateway &amp; routing;
@@ -4521,14 +4467,13 @@
               <div class="term-head"><span class="dot r"></span><span class="dot y"></span><span
                   class="dot g"></span><span class="title">The Instant SysAdmin Snapshot: inxi</span></div>
               <div class="term-code"><span class="cmt"># Complete 1-page hardware &amp; OS profile</span>
-                <span class="prm">$</span> <span class="cmd">sudo inxi</span> <span class="flg">-b</span>
-                <span class="out">System: Host: srv01 Kernel: 6.1.0-21-amd64 arch: x86_64
-                  Machine: Type: Desktop Mobo: ASUS ROG STRIX B650E-F BIOS: 2413
-                  CPU: 8-Core: AMD Ryzen 7 7800X3D speed: 4200 MHz
-                  Graphics: Device: NVIDIA AD104 [GeForce RTX 4070 Ti] driver: nvidia 550.78
-                  Network: Device: Intel I225-V 2.5GbE driver: igc
-                  Drives: Local Storage: total: 1.82 TiB used: 120 GiB (6.4%)</span>
-              </div>
+<span class="prm">$</span> <span class="cmd">sudo inxi</span> <span class="flg">-b</span>
+<span class="out">System:   Host: srv01 Kernel: 6.1.0-21-amd64 arch: x86_64
+Machine:  Type: Desktop Mobo: ASUS ROG STRIX B650E-F BIOS: 2413
+CPU:      8-Core: AMD Ryzen 7 7800X3D speed: 4200 MHz
+Graphics: Device: NVIDIA AD104 [GeForce RTX 4070 Ti] driver: nvidia 550.78
+Network:  Device: Intel I225-V 2.5GbE driver: igc
+Drives:   Local Storage: total: 1.82 TiB used: 120 GiB (6.4%)</span></div>
             </div>
           </div>
         </div>
@@ -4725,7 +4670,7 @@
         <div class="cover-meta a" style="--d:4;position:static;margin-top:26px">
           <div class="meta-card" style="text-align:center">
             👨‍🏫 <b>Guilherme Viegas</b>
-            <span>Course Lecture</span>
+            <span>Lab Engineer</span>
           </div>
         </div>
       </div>

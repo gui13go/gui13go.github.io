@@ -1,12 +1,12 @@
 ---
 title: "Under the Hood: A Guide to Inspecting Hardware, OS, and Networks"
 date: 2026-09-13T15:30:00Z
-draft: true
+draft: false
 description: "A comprehensive deep dive into probing, diagnosing, and benchmarking your Linux system—from CPU topologies and physical RAM to NVMe storage, PCI buses, network interfaces, and modern GPU accelerators."
 tags: ["Linux", "Hardware", "CLI", "SysAdmin", "DevOps", "RAM", "Networking", "GPU", "Storage", "Benchmarking"]
 categories: ["Linux", "Systems Architecture", "Performance"]
 cover:
-  image: "/images/under_the_hood_cover.jpeg"
+  image: "/images/under_the_hood.jpeg"
   alt: "Under the Hood: A Guide to Inspecting Hardware, OS, and Networks"
   caption: "Under the Hood: Inspecting Hardware, OS, and Networks in GNU/Linux"
   relative: false
