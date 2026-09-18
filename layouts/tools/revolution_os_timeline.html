@@ -1,0 +1,239 @@
+{{- define "main" }}
+<div class="timeline-container-narrow">
+  <!-- Header -->
+  <header class="timeline-clean-header">
+    <div class="gallery-breadcrumbs">
+      <a href="{{ site.BaseURL }}">Home</a> <span>/</span> <a href="/tools/">Tools</a> <span>/</span> <span>Revolution OS Timeline</span>
+    </div>
+
+    <h1 class="timeline-hero-title">{{ site.Data.revolution_os_timeline.title }}</h1>
+    <p class="timeline-hero-subtitle">{{ site.Data.revolution_os_timeline.subtitle }}</p>
+
+    <!-- Controls Row: Search + Expand/Collapse All -->
+    <div class="timeline-controls-bar">
+      <div class="timeline-search-bar">
+        <svg class="search-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="cleanTimelineSearch" placeholder="Search by year, title, quote, or keyword..." autocomplete="off">
+        <button type="button" id="clearSearchBtn" class="clear-btn" style="display:none;" aria-label="Clear search">&times;</button>
+      </div>
+
+      <div class="timeline-actions">
+        <button type="button" id="toggleAllBtn" class="timeline-action-btn" aria-label="Expand or collapse all milestones">
+          <svg class="toggle-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
+            <polyline points="7 13 12 18 17 13"></polyline>
+            <polyline points="7 6 12 11 17 6"></polyline>
+          </svg>
+          <span id="toggleAllText">Expand All</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Vertical Chronological Timeline -->
+  <section class="timeline-spine-wrapper" aria-label="Chronological milestones">
+    <div class="timeline-line"></div>
+
+    <div class="timeline-list" id="timelineList">
+      {{- range site.Data.revolution_os_timeline.milestones }}
+      <article class="timeline-item"
+               id="milestone-{{ .id }}"
+               data-year="{{ .year }}"
+               data-search="{{ .year }} {{ .title | lower }} {{ .summary | lower }} {{ .quote | lower }}"
+               tabindex="0"
+               role="button"
+               aria-expanded="false"
+               aria-label="{{ .year }}: {{ .title }}">
+
+        <!-- Chronological Node on Spine -->
+        <div class="timeline-marker">
+          <div class="timeline-dot"></div>
+        </div>
+
+        <!-- Milestone Card -->
+        <div class="timeline-box">
+          <!-- Always Visible Header: Year & Main Title Only -->
+          <div class="timeline-box-header">
+            <span class="timeline-year-tag">{{ .year }}</span>
+            <h2 class="timeline-item-title">{{ .title }}</h2>
+            <span class="timeline-expand-icon" aria-hidden="true">+</span>
+          </div>
+
+          <!-- Opens on Hover or Click: Brief Explanation & Quote Only -->
+          <div class="timeline-box-body">
+            <div class="timeline-body-inner">
+              <p class="timeline-brief-text">{{ .summary }}</p>
+
+              {{- if .quote }}
+              <blockquote class="timeline-quote-callout">
+                <p>&ldquo;{{ .quote }}&rdquo;</p>
+                {{- with .quote_author }}
+                <cite>&mdash; {{ . }}</cite>
+                {{- end }}
+              </blockquote>
+              {{- end }}
+            </div>
+          </div>
+        </div>
+      </article>
+      {{- end }}
+    </div>
+
+    <!-- No results message -->
+    <div id="noResultsMsg" class="timeline-no-results" style="display:none;">
+      <p>No timeline milestones match your search.</p>
+      <button type="button" id="resetSearchBtn" class="reset-btn">Show All Milestones</button>
+    </div>
+
+    <!-- Companion Review Banner at Bottom -->
+    <aside class="timeline-companion-banner">
+      <div class="companion-banner-content">
+        <div class="companion-banner-text">
+          <div class="companion-banner-tag">In-Depth Reading</div>
+          <h3 class="companion-banner-title">The Complete Historical &amp; Technical Dissection</h3>
+          <p class="companion-banner-desc">Explore our 30-year chronological documentary review: the ideological clash between Stallman, Torvalds, Raymond, and Gates, copyleft mechanics, and the modern cloud hegemony.</p>
+        </div>
+        <a href="/blog/reveolution-os-review/" class="companion-banner-btn">
+          <span>Read Full Review</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </aside>
+  </section>
+</div>
+
+<!-- Interactive Search, Filter, and Toggle Script -->
+<script>
+(function () {
+  'use strict';
+
+  const searchInput = document.getElementById('cleanTimelineSearch');
+  const clearBtn = document.getElementById('clearSearchBtn');
+  const resetBtn = document.getElementById('resetSearchBtn');
+  const noResults = document.getElementById('noResultsMsg');
+  const toggleAllBtn = document.getElementById('toggleAllBtn');
+  const toggleAllText = document.getElementById('toggleAllText');
+  const items = Array.from(document.querySelectorAll('.timeline-item'));
+
+  let allExpanded = false;
+
+  function updateToggleState() {
+    const pinnedCount = items.filter(item => item.classList.contains('is-pinned')).length;
+    if (pinnedCount === items.length) {
+      allExpanded = true;
+      if (toggleAllText) toggleAllText.textContent = 'Collapse All';
+      const icon = toggleAllBtn ? toggleAllBtn.querySelector('.toggle-icon') : null;
+      if (icon) icon.style.transform = 'rotate(180deg)';
+    } else if (pinnedCount === 0) {
+      allExpanded = false;
+      if (toggleAllText) toggleAllText.textContent = 'Expand All';
+      const icon = toggleAllBtn ? toggleAllBtn.querySelector('.toggle-icon') : null;
+      if (icon) icon.style.transform = '';
+    }
+  }
+
+  // Real-Time Search & Filter
+  function filterItems() {
+    const q = (searchInput ? searchInput.value : '').toLowerCase().trim();
+    let visibleCount = 0;
+
+    items.forEach(item => {
+      const text = item.getAttribute('data-search') || '';
+      if (!q || text.includes(q)) {
+        item.style.display = '';
+        visibleCount++;
+      } else {
+        item.style.display = 'none';
+      }
+    });
+
+    if (clearBtn) {
+      clearBtn.style.display = q ? 'inline-flex' : 'none';
+    }
+    if (noResults) {
+      noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', filterItems);
+    searchInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        this.value = '';
+        filterItems();
+      }
+    });
+  }
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', function () {
+      if (searchInput) {
+        searchInput.value = '';
+        filterItems();
+        searchInput.focus();
+      }
+    });
+  }
+
+  if (resetBtn) {
+    resetBtn.addEventListener('click', function () {
+      if (searchInput) {
+        searchInput.value = '';
+        filterItems();
+      }
+    });
+  }
+
+  // Toggle All Expand / Collapse
+  if (toggleAllBtn) {
+    toggleAllBtn.addEventListener('click', function () {
+      allExpanded = !allExpanded;
+      items.forEach(item => {
+        if (allExpanded) {
+          item.classList.add('is-pinned');
+          item.setAttribute('aria-expanded', 'true');
+        } else {
+          item.classList.remove('is-pinned');
+          item.setAttribute('aria-expanded', 'false');
+        }
+      });
+      if (toggleAllText) {
+        toggleAllText.textContent = allExpanded ? 'Collapse All' : 'Expand All';
+      }
+      const icon = toggleAllBtn.querySelector('.toggle-icon');
+      if (icon) {
+        icon.style.transform = allExpanded ? 'rotate(180deg)' : '';
+      }
+    });
+  }
+
+  // Click to Pin/Lock open or toggle on desktop & mobile
+  items.forEach(item => {
+    item.addEventListener('click', function (e) {
+      if (e.target.closest('a')) return;
+      
+      const isPinned = this.classList.contains('is-pinned');
+      this.classList.toggle('is-pinned', !isPinned);
+      this.setAttribute('aria-expanded', !isPinned ? 'true' : 'false');
+      updateToggleState();
+    });
+
+    // Keyboard accessibility: Enter or Space toggles open/pinned
+    item.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const isPinned = this.classList.contains('is-pinned');
+        this.classList.toggle('is-pinned', !isPinned);
+        this.setAttribute('aria-expanded', !isPinned ? 'true' : 'false');
+        updateToggleState();
+      }
+    });
+  });
+})();
+</script>
+{{- end }}

@@ -69,6 +69,12 @@ enableEmoji = true
     weight = 10
 
   [[menu.main]]
+    identifier = 'tools'
+    name = 'Tools'
+    url = '/tools/'
+    weight = 12
+
+  [[menu.main]]
     identifier = 'gallery'
     name = 'Gallery'
     url = '/gallery/'

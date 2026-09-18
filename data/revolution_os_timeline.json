@@ -1,0 +1,283 @@
+{
+  "title": "Revolution OS: Historical Timeline",
+  "subtitle": "The evolution of Unix, GNU, Linux, and the open-source movement.",
+  "eras": [
+    {
+      "id": "1969",
+      "name": "The Genesis",
+      "years": "1969 – 1980",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "1983",
+      "name": "The GNU Crusade",
+      "years": "1983 – 1990",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "1991",
+      "name": "The Linux Kernel",
+      "years": "1991 – 1992",
+      "color": "#10b981"
+    },
+    {
+      "id": "1993",
+      "name": "Distributions & Enterprise",
+      "years": "1992 – 1996",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "1997",
+      "name": "The Open Source Schism",
+      "years": "1997 – 1998",
+      "color": "#ec4899"
+    },
+    {
+      "id": "1999",
+      "name": "Dot-Com & Resistance",
+      "years": "1998 – 2001",
+      "color": "#ef4444"
+    },
+    {
+      "id": "2007",
+      "name": "Modern Dominance",
+      "years": "2007 – 2018",
+      "color": "#06b6d4"
+    }
+  ],
+  "milestones": [
+    {
+      "id": "1969-unix-genesis",
+      "year": "1969",
+      "title": "The Genesis of Unix at Bell Labs",
+      "summary": "Following the collapse of the Multics project, Ken Thompson, Dennis Ritchie, Brian Kernighan, and Doug McIlroy at Bell Labs created Unix on a discarded DEC PDP-7 minicomputer, written originally in assembly language. It pioneered the modular Unix philosophy: write programs that do one thing and do it well, composing them over plain text streams. While its source code was widely shared in its early years across universities and research labs, it was distributed under restrictive academic and corporate licenses from AT&T, not open-source terms.",
+      "quote": ""
+    },
+    {
+      "id": "1973-c-unix-rewrite",
+      "year": "1973",
+      "title": "The C Language Unix Rewrite",
+      "summary": "Dennis Ritchie developed the C programming language, and alongside Ken Thompson, completely rewrote the Unix kernel in C (1972–1973). By decoupling the operating system from machine-specific assembly language, Unix became fundamentally portable across diverse hardware architectures, setting the technical precedent for all modern portable operating systems.",
+      "quote": ""
+    },
+    {
+      "id": "1976-gates-open-letter",
+      "year": "1976",
+      "title": "Gates' Open Letter",
+      "summary": "Bill Gates addressed the Homebrew Computer Club in his historic open letter, aggressively asserting that software must be paid for rather than freely shared, marking the beginning of software enclosure and proprietary licensing.",
+      "quote": "As the majority of hobbyists must be aware, most of you steal your software. Hardware must be paid for, but software is something to share. Who cares if the people who worked on it get paid?… Who can afford to do professional work for nothing? What hobbyist can put 3-man years into programming, finding all bugs, documenting his product and distribute for free?",
+      "quote_author": "Bill Gates (1976)"
+    },
+    {
+      "id": "1980-xerox-paper-jam",
+      "year": "1980",
+      "title": "The Xerox 9700 Paper Jam and Stallman’s Epiphany",
+      "summary": "When researchers refused to share the Xerox 9700 printer driver source code due to a Non-Disclosure Agreement (NDA), Richard Stallman had an epiphany: NDAs were acts of social betrayal that destroyed developer solidarity. He resolved to build a completely free operating system.",
+      "quote": "The refusal to share with your neighbor is an act of spiritual suicide… An NDA is an agreement to betray your fellow man.",
+      "quote_author": "Richard Stallman (1980)"
+    },
+    {
+      "id": "1981-msdos-10",
+      "year": "1981",
+      "title": "MS-DOS 1.0",
+      "summary": "Microsoft purchased 86-DOS (QDOS) from Seattle Computer Products and licensed it to IBM for the IBM Personal Computer (PC 5150) as MS-DOS 1.0. By retaining the non-exclusive right to license DOS to third-party PC clone manufacturers, Microsoft laid the foundation for the dominant proprietary PC operating system platform.",
+      "quote": ""
+    },
+    {
+      "id": "1983-rms-gnu-announcement",
+      "year": "1983",
+      "title": "Richard Stallman Started Writing GNU",
+      "summary": "On September 27, 1983, Richard Stallman posted his historic announcement to net.unix-wizards, committing to write GNU (a recursive acronym for 'GNU's Not Unix')—a complete, Unix-compatible software system given away free to everyone.",
+      "quote": "Starting this Thanksgiving I am going to write a complete Unix-compatible software system called GNU (for Gnu's Not Unix), and give it away free to everyone who can use it...",
+      "quote_author": "Richard Stallman (September 27, 1983)"
+    },
+    {
+      "id": "1984-apple-macintosh",
+      "year": "1984",
+      "title": "Apple Macintosh 128K",
+      "summary": "Apple launched the Macintosh 128K, popularizing the commercial Graphical User Interface (GUI), mouse-driven interaction, and desktop metaphor for mass consumers. The Macintosh established a proprietary computing paradigm pairing tightly controlled proprietary hardware with closed system software.",
+      "quote": ""
+    },
+    {
+      "id": "1985-gnu-manifesto-fsf",
+      "year": "1985",
+      "title": "GNU & FSF",
+      "summary": "Stallman published the GNU Manifesto and incorporated the Free Software Foundation (FSF), formally establishing THE FOUR ESSENTIAL SOFTWARE FREEDOMS: Freedom 0 (Run), Freedom 1 (Study & Modify), Freedom 2 (Redistribute), and Freedom 3 (Distribute Modified Versions).",
+      "quote": "I consider that the golden rule requires that if I like a program I must share it with other people who like it.",
+      "quote_author": "The GNU Manifesto (1985)"
+    },
+    {
+      "id": "1985-windows-10",
+      "year": "1985",
+      "title": "Windows 1.0",
+      "summary": "Microsoft released Windows 1.0, a 16-bit graphical operating environment running on top of MS-DOS. It introduced mouse navigation, tiled windows, and graphical applications like Paint and Notepad, initiating Microsoft's journey toward graphical personal computing.",
+      "quote": ""
+    },
+    {
+      "id": "1987-1990-gnu-userland-done",
+      "year": "1987-1990",
+      "title": "Userland Done",
+      "summary": "The FSF successfully completed the entire GNU userland—including GCC (C Compiler), GNU Emacs, Bash (Bourne Again Shell), and Coreutils. However, development of the Mach-based GNU Hurd microkernel stalled due to asynchronous messaging complexity, leaving a critical kernel void.",
+      "quote": ""
+    },
+    {
+      "id": "1989-gpl-masterstroke",
+      "year": "1989",
+      "title": "The Legal Masterstroke—The GNU General Public License (GPL)",
+      "summary": "Stallman recognized that releasing software into the Public Domain or under permissive terms (like the early MIT License or BSD License) had a fatal structural flaw: a proprietary vendor could take the freely contributed code, make proprietary modifications, compile it into a binary, and distribute it under a closed license without sharing the source code back. To prevent this, he invented Copyleft and released the GNU GPL.",
+      "quote": "If Software B is derived from A (where A ∈ GPL), ⟹ B MUST be distributed under GPL.",
+      "quote_author": "The Copyleft Reciprocal Principle"
+    },
+    {
+      "id": "1991-386bsd-released",
+      "year": "1991",
+      "title": "Computer Scientists William and Lynne Jolitz Released 386BSD",
+      "summary": "William and Lynne Jolitz ported Berkeley Net/2 to the Intel 386 chip, creating 386BSD—a complete, battle-tested, industrial-grade Unix operating system containing thirty years of Bell Labs and Berkeley heritage. However, the 1992 AT&T/USL lawsuit froze BSD development, opening a window of opportunity for Linux.",
+      "quote": "386BSD was a complete, battle-tested, industrial-grade Unix operating system containing thirty years of Bell Labs and Berkeley heritage.",
+      "quote_author": "Historical Analysis"
+    },
+    {
+      "id": "1991-linux-001",
+      "year": "1991",
+      "title": "Linux 0.01: Linus Torvalds Fills Kernel Void",
+      "summary": "On August 25, 1991, 21-year-old Finnish student Linus Torvalds announced a free hobby operating system for 386 clones on comp.os.minix. Because Linux was a clean-room implementation with zero AT&T code, it became the legally safe sanctuary for the worldwide hacker community.",
+      "quote": "If 386BSD had been available when I started, I probably would not have written Linux.",
+      "quote_author": "Linus Torvalds"
+    },
+    {
+      "id": "1992-gnu-linux-marriage",
+      "year": "1992",
+      "title": "The Marriage of GNU and Linux",
+      "summary": "Linus Torvalds adopted the GNU GPLv2 for Linux version 0.12 in early 1992. GNU's complete userland (compilers, shells, libraries) combined with Linus's monolithic kernel to produce a complete, fully functional, 100% free POSIX operating system.",
+      "quote": ""
+    },
+    {
+      "id": "1992-mcc-interim-linux",
+      "year": "1992",
+      "title": "MCC Interim Linux",
+      "summary": "Owen Le Blanc at the Manchester Computing Centre released MCC Interim Linux on bootable floppy disks, bundling the kernel, utilities, and a menu installer—widely recognized as the first true Linux distribution.",
+      "quote": "Widely recognized as the first true Linux distribution.",
+      "quote_author": "Computing Archive"
+    },
+    {
+      "id": "1993-debian-founded",
+      "year": "1993",
+      "title": "Debian Founded",
+      "summary": "Ian Murdock founded Debian as a non-profit, volunteer community project. Under Bruce Perens, Debian codified the Debian Social Contract and the Debian Free Software Guidelines (DFSG), establishing strict standards for software freedom and package management.",
+      "quote": ""
+    },
+    {
+      "id": "1993-redhat-founded",
+      "year": "1993",
+      "title": "Red Hat Founded",
+      "summary": "Bob Young and Marc Ewing founded Red Hat, pioneering RPM and proving the viability of open-source business through commercial enterprise packaging and enterprise support contracts: 'We don't sell software. We sell trust, support, and packaging.'",
+      "quote": "Commercial Enterprise Packaging, Enterprise Support Contracts.",
+      "quote_author": "Red Hat Enterprise Model"
+    },
+    {
+      "id": "1995-windows-95",
+      "year": "1995",
+      "title": "Windows 95",
+      "summary": "Microsoft launched Windows 95 in August 1995, marking the transition to a modern, integrated 32-bit operating system with preemptive multitasking, Plug and Play architecture, and the iconic Start menu interface, solidifying Microsoft's desktop hegemony.",
+      "quote": ""
+    },
+    {
+      "id": "1997-cathedral-and-bazaar",
+      "year": "1997",
+      "title": "Cathedral & The Bazaar",
+      "summary": "Eric S. Raymond published his landmark essay contrasting the centralized, cloistered Cathedral development model with the open, distributed Bazaar model of the Linux community, formulating Linus's Law.",
+      "quote": "Given enough eyeballs, all bugs are shallow.",
+      "quote_author": "Linus’s Law (Eric S. Raymond, 1997)"
+    },
+    {
+      "id": "1998-open-source-schism",
+      "year": "1998",
+      "title": "The Open Source Schism",
+      "summary": "Netscape liberated Navigator by releasing its source code. Shortly after in Palo Alto, leaders coined the term 'Open Source' and founded the Open Source Initiative (OSI) to appeal to corporate America, triggering a permanent philosophical divide with Richard Stallman's 'Free Software' movement.",
+      "quote": "Netscape liberates Navigator.",
+      "quote_author": "January 1998"
+    },
+    {
+      "id": "1998-halloween-documents",
+      "year": "1998",
+      "title": "The Halloween Documents",
+      "summary": "Internal Microsoft strategy memos leaked to Eric S. Raymond on Halloween revealed that Microsoft privately recognized Linux's technical superiority and the power of open-source peer review, while proposing a strategy to 'de-commoditize protocols' through proprietary extensions (Embrace, Extend, Extinguish).",
+      "quote": ""
+    },
+    {
+      "id": "1999-dotcom-wall-street-mania",
+      "year": "1999",
+      "title": "Dot-Com Wall Street Mania",
+      "summary": "Open source conquered Wall Street. Red Hat went public reaching a $3.6B market valuation, and VA Linux Systems staged the most explosive IPO in NASDAQ history with a 698% single-day gain ($30 to $239.25), proving that open-source infrastructure powered the modern internet economy.",
+      "quote": "1999: Red Hat IPO. 1999: VA Linux IPOs.",
+      "quote_author": "Wall Street Records (1999)"
+    },
+    {
+      "id": "2000-ibm-invests-linux",
+      "year": "2000",
+      "title": "January 2000: IBM Invests $1B in Linux",
+      "summary": "IBM commits $1 billion to Linux development and enterprise mainframe adoption, cementing Linux as a trusted commercial standard and accelerating open-source adoption across mission-critical enterprise infrastructure worldwide.",
+      "quote": "IBM commits $1 billion to Linux development and enterprise mainframe adoption, cementing Linux as a trusted commercial standard.",
+      "quote_author": "IBM Linux Strategy (January 2000)"
+    },
+    {
+      "id": "2001-ballmer-cancer-remark",
+      "year": "2001",
+      "title": "Steve Ballmer Says that Linux is a Cancer",
+      "summary": "Microsoft CEO Steve Ballmer attacked Linux and the GPL as an intellectual property cancer in an interview with the Chicago Sun-Times, marking the height of Microsoft's aggressive corporate campaign against open source.",
+      "quote": "Linux is a cancer that attaches itself in an intellectual property sense to everything it touches. The way the license is written, if you use any open-source software, you have to make the rest of your software open source.",
+      "quote_author": "Steve Ballmer (June 2001)"
+    },
+    {
+      "id": "2004-canonical-ubuntu",
+      "year": "2004",
+      "title": "Canonical Launches Ubuntu",
+      "summary": "Mark Shuttleworth founded Canonical and released Ubuntu 4.10 ('Warty Warthog'), bringing Debian-based Linux to mainstream desktop users with a polished user experience, predictable six-month release cadence, and free global CD distribution.",
+      "quote": ""
+    },
+    {
+      "id": "2007-gplv3-tivoization",
+      "year": "2007",
+      "title": "Stallman Designed GPLv3 to Prevent “Tivoization”",
+      "summary": "Stallman created GPLv3 with anti-tivoization provisions to prevent manufacturers (like TiVo) from running GPL software on hardware locked with cryptographic signatures that block modified user code. Linus Torvalds fiercely refused to adopt GPLv3, locking the Linux kernel onto GPLv2.",
+      "quote": ""
+    },
+    {
+      "id": "2008-android-10",
+      "year": "2008",
+      "title": "Android 1.0",
+      "summary": "Google launched Android 1.0 on the HTC Dream (T-Mobile G1), built on top of a customized Linux kernel. Android went on to become the most widely installed operating system in history, putting Linux in the pockets of billions of users globally.",
+      "quote": ""
+    },
+    {
+      "id": "2013-docker-released",
+      "year": "2013",
+      "title": "Docker Released",
+      "summary": "Solomon Hykes released Docker as open-source, turning native Linux kernel primitives (namespaces, cgroups) into an accessible developer paradigm: lightweight containers built from layered, portable images.",
+      "quote": "We’re trying to build the shipping container for software.",
+      "quote_author": "Solomon Hykes, PyCon (March 2013)"
+    },
+    {
+      "id": "2014-microsoft-loves-linux",
+      "year": "2014",
+      "title": "Microsoft Publicly Declared: “Microsoft Loves Linux.”",
+      "summary": "Under new CEO Satya Nadella, Microsoft executed an unprecedented ideological reversal, declaring 'Microsoft Loves Linux' as cloud economics dictated that Azure's survival required first-class Linux support.",
+      "quote": "Microsoft loves Linux.",
+      "quote_author": "Satya Nadella (October 2014)"
+    },
+    {
+      "id": "2016-microsoft-introduces-wsl",
+      "year": "2016",
+      "title": "Microsoft Introduced the Windows Subsystem for Linux (WSL)",
+      "summary": "Microsoft introduced the Windows Subsystem for Linux (WSL), shipping a real, custom-built Linux kernel directly inside Windows 10 and 11, turning Windows into an official runtime host for Linux developer environments.",
+      "quote": ""
+    },
+    {
+      "id": "2018-microsoft-acquires-github",
+      "year": "2018",
+      "title": "Microsoft Acquired GitHub for $7.5 Billion",
+      "summary": "Microsoft acquired GitHub—the world’s primary home for open-source code—for $7.5 billion, completing the 42-year circle from Bill Gates' 1976 letter against sharing software to owning the global citadel of open-source collaboration.",
+      "quote": ""
+    }
+  ]
+}
