@@ -3,7 +3,7 @@
 <audio id="globalTtsAudio" referrerpolicy="no-referrer" preload="none" style="display:none;"></audio>
 <div class="lang-tool-wrapper">
   <!-- Breadcrumbs & Header -->
-  <header class="lang-tool-header">
+  <header class="gallery-header lang-tool-header">
     <div class="gallery-breadcrumbs">
       <a href="{{ site.BaseURL }}">Home</a> <span>/</span> <a href="/tools/">Tools</a> <span>/</span> <span>Language
         Review</span>
@@ -11,73 +11,9 @@
 
     <div class="lang-header-row">
       <div class="lang-title-group">
-        <h1 class="lang-hero-title">Language Review</h1>
-        <!-- <p class="lang-hero-subtitle">Interactive spreadsheet for reviewing, comparing, and mastering parallel sentences -->
-        <!-- across 8 world languages.</p> -->
-      </div>
-
-      <!-- File Actions & Quick Utilities -->
-      <div class="lang-header-actions">
-        <label for="customFileInput" class="lang-btn lang-btn-outline" title="Load custom CSV, TSV, or JSON file">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-            <polyline points="17 8 12 3 7 8"></polyline>
-            <line x1="12" y1="3" x2="12" y2="15"></line>
-          </svg>
-          <span>Load File</span>
-        </label>
-        <input type="file" id="customFileInput" accept=".json,.csv,.tsv" style="display:none;" />
-
-        <button type="button" id="resetFileBtn" class="lang-btn lang-btn-ghost" title="Reset to default dataset">
-          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="1 4 1 10 7 10"></polyline>
-            <polyline points="23 20 23 14 17 14"></polyline>
-            <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
-          </svg>
-          <span>Reset Default</span>
-        </button>
-
-        <div class="lang-dropdown">
-          <button type="button" id="exportMenuBtn" class="lang-btn lang-btn-outline" aria-expanded="false"
-            aria-haspopup="true">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-              <polyline points="7 10 12 15 17 10"></polyline>
-              <line x1="12" y1="15" x2="12" y2="3"></line>
-            </svg>
-            <span>Export</span>
-            <span class="dropdown-caret">&#9662;</span>
-          </button>
-          <div class="lang-dropdown-menu" id="exportMenu">
-            <a href="#" id="exportCsvBtn" role="button">
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-                <polyline points="10 9 9 9 8 9"></polyline>
-              </svg>
-              Export Visible as CSV
-            </a>
-            <a href="#" id="exportJsonBtn" role="button">
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-              </svg>
-              Export Filtered as JSON
-            </a>
-            <a href="/data/language_review.csv" download="language_review_full.csv">
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7 10 12 15 17 10"></polyline>
-                <line x1="12" y1="15" x2="12" y2="3"></line>
-              </svg>
-              Download Full Dataset (.csv)
-            </a>
-          </div>
-        </div>
+        <h1 class="gallery-title lang-hero-title">Language Review</h1>
+        <p class="gallery-subtitle lang-hero-subtitle">Interactive multilingual spreadsheet for reviewing, comparing,
+          and mastering parallel sentences across multiple languages.</p>
       </div>
     </div>
   </header>
@@ -99,6 +35,11 @@
           Visible Languages
         </span>
         <div class="ribbon-presets">
+
+          <span class="ribbon-label" style="margin-right:8px; font-weight: 500;">NOTES IN:</span>
+          <select id="mainLanguageSelect" class="lang-select" style="min-width: 120px; margin-right: 12px;"></select>
+          <span class="dot-sep">&bull;</span>
+
           <button type="button" id="presetDefaultLangs" class="ribbon-link-btn"
             title="Default: Chinese, German, English">Default (ZH, DE, EN)</button>
           <span class="dot-sep">&bull;</span>
@@ -190,31 +131,18 @@
   </section>
 
   <!-- Spreadsheet Grid Container -->
-  <div class="lang-grid-outer" id="spreadsheetDropZone">
-    <!-- Drag & drop overlay notice -->
-    <div class="drop-zone-overlay" id="dropZoneOverlay">
-      <div class="drop-zone-content">
-        <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-          <polyline points="17 8 12 3 7 8"></polyline>
-          <line x1="12" y1="3" x2="12" y2="15"></line>
-        </svg>
-        <h3>Drop CSV, TSV, or JSON file here</h3>
-        <p>Your spreadsheet will be instantly parsed and reviewed.</p>
-      </div>
-    </div>
-
+  <div class="lang-grid-outer">
     <!-- Active Filter Notification Bar -->
     <div class="spreadsheet-subbar">
       <div class="subbar-info">
-        <span id="matchStats">Loading dataset...</span>
+        <span id="matchStats">Loading sentences...</span>
         <span class="subbar-sep">|</span>
         <span id="activeLangsSummary">Chinese, German, English</span>
       </div>
       <div class="subbar-tools">
         <span class="dataset-source-tag" id="datasetSourceTag">
           <span class="source-status-dot"></span>
-          <span id="datasetSourceText">Default File: language_review.json</span>
+          <span id="datasetSourceText">All 4 Levels (235 sentences)</span>
         </span>
       </div>
     </div>
@@ -285,7 +213,7 @@
               <line x1="12" y1="16" x2="12" y2="12"></line>
               <line x1="12" y1="8" x2="12.01" y2="8"></line>
             </svg>
-            <span>Linguistic Nuance &amp; Cross-Lingual Comparison</span>
+            <span id="modalNotesHeaderTitle">Linguistic Nuance &amp; Cross-Lingual Comparison</span>
           </div>
           <p id="modalNotesText" class="notes-body"></p>
         </div>
@@ -301,8 +229,21 @@
 </div>
 
 <!-- Embedded Dataset Fallback for instant load & offline resilience -->
+{{ $all_sentences := slice }}
+{{ $all_sentences = $all_sentences | append site.Data.language_review_basic.sentences }}
+{{ $all_sentences = $all_sentences | append site.Data.language_review_intermediate.sentences }}
+{{ $all_sentences = $all_sentences | append site.Data.language_review_advanced.sentences }}
+{{ $all_sentences = $all_sentences | append site.Data.language_review_fluent.sentences }}
+
+{{ $data := dict
+"title" site.Data.language_review_basic.title
+"subtitle" site.Data.language_review_basic.subtitle
+"languages" site.Data.language_review_basic.languages
+"levels" site.Data.language_review_basic.levels
+"sentences" $all_sentences
+}}
 <script id="embeddedCorpusData" type="application/json">
-{{ site.Data.language_review | jsonify }}
+{{ $data | jsonify }}
 </script>
 
 <!-- Interactive Spreadsheet Engine -->
@@ -333,6 +274,7 @@
       bookmarkedOnly: false,
       sortField: 'id',
       sortAsc: true,
+      mainLanguage: 'zh',
       bookmarkedIds: new Set(),
       activeModalIndex: -1,
       sourceFileName: 'language_review.json'
@@ -350,6 +292,23 @@
       try {
         localStorage.setItem('langReview_bookmarks', JSON.stringify(Array.from(state.bookmarkedIds)));
       } catch (e) { }
+    }
+
+    function getSentenceNote(item, lang) {
+      if (!item || !item.notes) return '';
+      if (typeof item.notes === 'object') {
+        return item.notes[lang] || '';
+      }
+      if (typeof item.notes === 'string') {
+        try {
+          const parsed = JSON.parse(item.notes);
+          if (parsed && typeof parsed === 'object') {
+            return parsed[lang] || '';
+          }
+        } catch (e) { }
+        return item.notes;
+      }
+      return '';
     }
 
     // DOM Elements
@@ -372,22 +331,36 @@
     const statusColumnsCount = document.getElementById('statusColumnsCount');
     const statusMasteredCount = document.getElementById('statusMasteredCount');
     const datasetSourceText = document.getElementById('datasetSourceText');
-    const customFileInput = document.getElementById('customFileInput');
-    const resetFileBtn = document.getElementById('resetFileBtn');
-    const exportMenuBtn = document.getElementById('exportMenuBtn');
-    const exportMenu = document.getElementById('exportMenu');
-    const exportCsvBtn = document.getElementById('exportCsvBtn');
-    const exportJsonBtn = document.getElementById('exportJsonBtn');
     const resetFiltersBtn = document.getElementById('resetFiltersBtn');
     const detailModal = document.getElementById('sentenceDetailModal');
     const modalCloseBtn = document.getElementById('modalCloseBtn');
     const modalPrevBtn = document.getElementById('modalPrevBtn');
     const modalNextBtn = document.getElementById('modalNextBtn');
     const modalBookmarkBtn = document.getElementById('modalBookmarkBtn');
-    const dropZone = document.getElementById('spreadsheetDropZone');
-    const dropZoneOverlay = document.getElementById('dropZoneOverlay');
 
     // Initialize Language Chips
+
+    const mainLanguageSelect = document.getElementById('mainLanguageSelect');
+    function initMainLanguageSelect() {
+      state.languages.forEach(lang => {
+        const opt = document.createElement('option');
+        opt.value = lang.code;
+        opt.textContent = `${lang.flag} ${lang.name}`;
+        if (lang.code === state.mainLanguage) opt.selected = true;
+        mainLanguageSelect.appendChild(opt);
+      });
+      mainLanguageSelect.addEventListener('change', (e) => {
+        state.mainLanguage = e.target.value;
+        const targetLang = state.languages.find(l => l.code === state.mainLanguage);
+        if (targetLang && !targetLang.visible) {
+          targetLang.visible = true;
+          renderLanguageChips();
+        }
+        sortAndFilterSentences();
+      });
+    }
+    initMainLanguageSelect();
+
     function renderLanguageChips() {
       languageChipsContainer.innerHTML = '';
       state.languages.forEach(lang => {
@@ -430,12 +403,16 @@
       state.languages.forEach(lang => {
         if (lang.visible) {
           const isSorted = state.sortField === lang.code;
+          const isMain = lang.code === state.mainLanguage;
           const sortClass = isSorted ? (state.sortAsc ? 'sorted-asc' : 'sorted-desc') : '';
+          const mainClass = isMain ? 'is-main-lang' : '';
+          const mainBadge = isMain ? `<span class="th-main-badge" title="Active Study Language">Target</span>` : '';
           langCols += `
-          <th class="col-lang sortable ${sortClass}" data-sort="${lang.code}" data-lang="${lang.code}">
+          <th class="col-lang sortable ${sortClass} ${mainClass}" data-sort="${lang.code}" data-lang="${lang.code}">
             <div class="th-lang-title">
               <span class="th-flag">${lang.flag}</span>
               <span class="th-name">${lang.name}</span>
+              ${mainBadge}
               <span class="sort-icon"></span>
             </div>
             <span class="th-sub">${lang.native}</span>
@@ -444,8 +421,9 @@
         }
       });
 
+      const currentMain = state.languages.find(l => l.code === state.mainLanguage) || { name: 'Language', flag: '' };
       const notesCol = state.showNotes ? `
-      <th class="col-notes">Linguistic Notes &amp; Nuances</th>
+      <th class="col-notes" title="Linguistic nuances for ${currentMain.name}">Notes (${currentMain.name} ${currentMain.flag})</th>
     ` : '';
 
       const actionsCol = `
@@ -513,7 +491,7 @@
           const matchJa = (item.ja || '').toLowerCase().includes(q) || (item.ja_romaji || '').toLowerCase().includes(q);
           const matchPt = (item.pt || '').toLowerCase().includes(q);
           const matchRu = (item.ru || '').toLowerCase().includes(q);
-          const matchNotes = (item.notes || '').toLowerCase().includes(q);
+          const matchNotes = getSentenceNote(item, state.mainLanguage).toLowerCase().includes(q);
           const matchCat = (item.category || '').toLowerCase().includes(q);
           const matchId = String(item.id).includes(q);
 
@@ -703,6 +681,7 @@
         // Language Cells
         state.languages.forEach(lang => {
           if (lang.visible) {
+            const isMain = lang.code === state.mainLanguage;
             const text = item[lang.code] || '';
             let romanizationHtml = '';
             if (state.showRomanization && lang.hasRomanization && item[lang.romKey]) {
@@ -710,7 +689,7 @@
             }
 
             html += `
-            <td class="cell-lang" data-lang="${lang.code}">
+            <td class="cell-lang ${isMain ? 'is-main-lang' : ''}" data-lang="${lang.code}">
               <div class="cell-text-wrap">
                 <div class="cell-sentence">${escapeHtml(text)}</div>
                 ${romanizationHtml}
@@ -736,10 +715,11 @@
 
         // Notes Cell
         if (state.showNotes) {
+          const noteText = getSentenceNote(item, state.mainLanguage);
           html += `
           <td class="cell-notes">
-            <span class="notes-snippet" title="${escapeHtml(item.notes || '')}">
-              ${escapeHtml(item.notes || '—')}
+            <span class="notes-snippet" title="${escapeHtml(noteText)}">
+              ${escapeHtml(noteText || '—')}
             </span>
           </td>
         `;
@@ -824,13 +804,51 @@
       const activeLangs = state.languages.filter(l => l.visible).map(l => l.name);
       const bookmarkedCount = state.allSentences.filter(s => state.bookmarkedIds.has(s.id)).length;
 
-      matchStats.textContent = `Showing ${showing} of ${total} sentences`;
+      const levelTotal = state.activeLevel === 'all'
+        ? total
+        : state.allSentences.filter(s => s.level === state.activeLevel).length;
+
+      if (state.activeLevel === 'all') {
+        matchStats.textContent = `Showing ${showing} of ${total} sentences`;
+      } else {
+        matchStats.textContent = `Showing ${showing} of ${levelTotal} sentences`;
+      }
+
       const levelLabel = state.activeLevel === 'all' ? 'All Levels' : (state.activeLevel.charAt(0).toUpperCase() + state.activeLevel.slice(1));
       const topicLabel = state.activeCategory === 'all' ? 'All Topics' : state.activeCategory;
       activeLangsSummary.textContent = `${levelLabel} • ${topicLabel} • ${activeLangs.join(', ')}`;
-      statusSentenceCount.textContent = `${showing} / ${total} sentences`;
+      statusSentenceCount.textContent = `${showing} / ${levelTotal} sentences`;
       statusColumnsCount.textContent = `${activeLangs.length} of 8 languages visible`;
       statusMasteredCount.textContent = `${bookmarkedCount} bookmarked`;
+
+      if (datasetSourceText) {
+        const sourceDot = document.querySelector('.source-status-dot');
+        const levelColors = {
+          all: '#10b981',
+          basic: '#10b981',
+          intermediate: '#3b82f6',
+          advanced: '#8b5cf6',
+          fluent: '#f43f5e'
+        };
+        if (sourceDot && levelColors[state.activeLevel]) {
+          sourceDot.style.background = levelColors[state.activeLevel];
+        }
+
+        if (state.activeLevel === 'all') {
+          if (showing === total) {
+            datasetSourceText.textContent = `All 4 Levels (${total} sentences)`;
+          } else {
+            datasetSourceText.textContent = `All 4 Levels (${showing} of ${total} sentences)`;
+          }
+        } else {
+          const levelName = state.activeLevel.charAt(0).toUpperCase() + state.activeLevel.slice(1);
+          if (showing === levelTotal) {
+            datasetSourceText.textContent = `${levelName} (${levelTotal} sentences)`;
+          } else {
+            datasetSourceText.textContent = `${levelName} (${showing} of ${levelTotal} sentences)`;
+          }
+        }
+      }
 
       clearSearchBtn.style.display = state.searchQuery ? 'inline-flex' : 'none';
     }
@@ -852,18 +870,46 @@
       // Primary title (English reference)
       document.getElementById('modalSentenceTitle').textContent = sentence.en || 'Sentence Breakdown';
 
+      const notesBox = document.getElementById('modalNotesBox');
+      const notesText = document.getElementById('modalNotesText');
+      const modalNotesHeaderTitle = document.getElementById('modalNotesHeaderTitle');
+
+      function updateModalNote(langCode) {
+        const langObj = state.languages.find(l => l.code === langCode) || { name: langCode, flag: '' };
+        const note = getSentenceNote(sentence, langCode);
+        if (modalNotesHeaderTitle) {
+          modalNotesHeaderTitle.textContent = `Linguistic Nuance & Grammar Note (${langObj.name} ${langObj.flag})`;
+        }
+        if (note) {
+          notesText.textContent = note;
+          notesBox.style.display = 'block';
+        } else {
+          notesText.textContent = `No special grammatical nuance note recorded for ${langObj.name} for this sentence.`;
+          notesBox.style.display = 'block';
+        }
+      }
+
       // Populate all 8 languages side by side
       const grid = document.getElementById('modalLanguagesGrid');
       grid.innerHTML = '';
 
       state.languages.forEach(lang => {
+        const isMain = lang.code === state.mainLanguage;
         const card = document.createElement('div');
-        card.className = `modal-lang-card ${lang.visible ? 'is-active-col' : ''}`;
+        card.className = `modal-lang-card ${lang.visible ? 'is-active-col' : ''} ${isMain ? 'is-main-lang' : ''}`;
+        card.setAttribute('data-lang', lang.code);
+        card.style.cursor = 'pointer';
+        card.title = `Click to view ${lang.name} nuance notes`;
+
         const text = sentence[lang.code] || '';
         let romHtml = '';
         if (lang.hasRomanization && sentence[lang.romKey]) {
           romHtml = `<div class="modal-rom-text">${escapeHtml(sentence[lang.romKey])}</div>`;
         }
+
+        const mainTag = isMain ? `<span class="th-main-badge">Target</span>` : '';
+        const hasNote = Boolean(getSentenceNote(sentence, lang.code));
+        const noteTag = hasNote ? `<span class="modal-note-badge" title="Linguistic note available for ${lang.name}">💡 Note</span>` : '';
 
         card.innerHTML = `
         <div class="modal-card-top">
@@ -871,6 +917,8 @@
             <span class="modal-card-flag">${lang.flag}</span>
             <strong>${lang.name}</strong>
             <span class="modal-native-name">(${lang.native})</span>
+            ${mainTag}
+            ${noteTag}
           </div>
           <div class="modal-card-actions">
             <button type="button" class="modal-audio-btn" data-text="${escapeHtml(text)}" data-lang="${lang.voice}" title="Play pronunciation">
@@ -885,15 +933,25 @@
         ${romHtml}
       `;
 
+        // Clicking card switches note view
+        card.addEventListener('click', (e) => {
+          if (e.target.closest('button')) return;
+          grid.querySelectorAll('.modal-lang-card').forEach(c => c.style.outline = 'none');
+          card.style.outline = '2px solid var(--theme-accent)';
+          updateModalNote(lang.code);
+        });
+
         // Audio trigger
         const audioBtn = card.querySelector('.modal-audio-btn');
-        audioBtn.addEventListener('click', () => {
+        audioBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
           playSentenceAudio(text, lang.voice, audioBtn);
         });
 
         // Copy trigger
         const copyBtn = card.querySelector('.modal-copy-btn');
-        copyBtn.addEventListener('click', () => {
+        copyBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
           navigator.clipboard.writeText(text).then(() => {
             copyBtn.textContent = '✓ Copied';
             setTimeout(() => copyBtn.textContent = '📋', 1200);
@@ -903,15 +961,13 @@
         grid.appendChild(card);
       });
 
-      // Populate Notes
-      const notesBox = document.getElementById('modalNotesBox');
-      const notesText = document.getElementById('modalNotesText');
-      if (sentence.notes) {
-        notesText.textContent = sentence.notes;
-        notesBox.style.display = 'block';
-      } else {
-        notesBox.style.display = 'none';
-      }
+      // Initially populate notes for the active study language
+      updateModalNote(state.mainLanguage);
+
+      // URL deep linking
+      try {
+        history.replaceState(null, '', `#sentence-${sentence.id}`);
+      } catch (e) { }
 
       // Modal bookmark state
       updateModalBookmarkBtn(sentence.id);
@@ -924,14 +980,28 @@
       }
     }
 
+    function closeModal() {
+      stopCurrentAudio();
+      if (typeof detailModal.close === 'function') {
+        detailModal.close();
+      } else {
+        detailModal.removeAttribute('open');
+      }
+      try {
+        if (window.location.hash.startsWith('#sentence-')) {
+          history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
+      } catch (e) { }
+    }
+
     function updateModalBookmarkBtn(sentenceId) {
       const isBookmarked = state.bookmarkedIds.has(sentenceId);
       modalBookmarkBtn.innerHTML = isBookmarked ? '★ Bookmarked' : '☆ Bookmark';
-      modalBookmarkBtn.classList.toggle('active', isBookmarked);
+      modalBookmarkBtn.classList.toggle('active-bookmark', isBookmarked);
     }
 
     modalBookmarkBtn.addEventListener('click', () => {
-      if (state.activeModalIndex < 0) return;
+      if (state.activeModalIndex === -1) return;
       const sentence = state.allSentences[state.activeModalIndex];
       if (state.bookmarkedIds.has(sentence.id)) {
         state.bookmarkedIds.delete(sentence.id);
@@ -958,22 +1028,18 @@
       }
     });
 
-    modalCloseBtn.addEventListener('click', () => {
-      stopCurrentAudio();
-      detailModal.close();
-    });
+    modalCloseBtn.addEventListener('click', closeModal);
 
     detailModal.addEventListener('click', (e) => {
       if (e.target === detailModal) {
-        stopCurrentAudio();
-        detailModal.close();
+        closeModal();
       }
     });
 
     // Preset Buttons for Languages
     document.getElementById('presetDefaultLangs').addEventListener('click', () => {
       state.languages.forEach(l => {
-        l.visible = (l.code === 'zh' || l.code === 'de' || l.code === 'en');
+        l.visible = (l.code === 'zh' || l.code === 'de' || l.code === 'en' || l.code === state.mainLanguage);
       });
       renderLanguageChips();
       renderTableHeader();
@@ -990,8 +1056,12 @@
     });
 
     document.getElementById('presetClearLangs').addEventListener('click', () => {
-      state.languages.forEach(l => l.visible = false);
-      state.languages[0].visible = true; // Keep at least one
+      state.languages.forEach(l => {
+        l.visible = (l.code === state.mainLanguage);
+      });
+      if (!state.languages.some(l => l.visible)) {
+        state.languages[0].visible = true;
+      }
       renderLanguageChips();
       renderTableHeader();
       renderTableRows();
@@ -1075,205 +1145,42 @@
       sortAndFilterSentences();
     });
 
-    // Export Dropdown
-    exportMenuBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      exportMenu.classList.toggle('show');
-    });
-
-    document.addEventListener('click', () => {
-      exportMenu.classList.remove('show');
-    });
-
-    // Export as CSV
-    exportCsvBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const visibleLangs = state.languages.filter(l => l.visible);
-      const headers = ['id', 'level', 'category', ...visibleLangs.map(l => l.code), 'notes'];
-
-      const rows = [headers.join(',')];
-      state.filteredSentences.forEach(s => {
-        const rowVals = [
-          s.id,
-          `"${(s.level || '').replace(/"/g, '""')}"`,
-          `"${(s.category || '').replace(/"/g, '""')}"`,
-          ...visibleLangs.map(l => `"${(s[l.code] || '').replace(/"/g, '""')}"`),
-          `"${(s.notes || '').replace(/"/g, '""')}"`
-        ];
-        rows.push(rowVals.join(','));
-      });
-
-      const blob = new Blob(["\uFEFF" + rows.join('\n')], { type: 'text/csv;charset=utf-8;' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `language_review_export_${new Date().toISOString().slice(0, 10)}.csv`;
-      a.click();
-      URL.revokeObjectURL(url);
-    });
-
-    // Export as JSON
-    exportJsonBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const dataStr = JSON.stringify(state.filteredSentences, null, 2);
-      const blob = new Blob([dataStr], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `language_review_export_${new Date().toISOString().slice(0, 10)}.json`;
-      a.click();
-      URL.revokeObjectURL(url);
-    });
-
-    // FILE LOADING: From Disk (Input / Drag-and-drop)
-    customFileInput.addEventListener('change', (e) => {
-      const file = e.target.files && e.target.files[0];
-      if (file) handleCustomFile(file);
-    });
-
-    // Drag & Drop Support
-    ['dragenter', 'dragover'].forEach(eventName => {
-      dropZone.addEventListener(eventName, (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        dropZoneOverlay.classList.add('drag-active');
-      }, false);
-    });
-
-    ['dragleave', 'drop'].forEach(eventName => {
-      dropZone.addEventListener(eventName, (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        dropZoneOverlay.classList.remove('drag-active');
-      }, false);
-    });
-
-    dropZone.addEventListener('drop', (e) => {
-      const dt = e.dataTransfer;
-      const file = dt && dt.files && dt.files[0];
-      if (file) handleCustomFile(file);
-    });
-
-    function handleCustomFile(file) {
-      const reader = new FileReader();
-      reader.onload = function (evt) {
-        try {
-          const content = evt.target.result;
-          let loadedData = [];
-
-          if (file.name.endsWith('.json')) {
-            const parsed = JSON.parse(content);
-            loadedData = Array.isArray(parsed) ? parsed : (parsed.sentences || []);
-          } else if (file.name.endsWith('.csv') || file.name.endsWith('.tsv')) {
-            loadedData = parseCsvSpreadsheet(content, file.name.endsWith('.tsv') ? '\t' : ',');
-          } else {
-            alert('Please upload a valid .json, .csv, or .tsv spreadsheet file.');
-            return;
-          }
-
-          if (loadedData.length === 0) {
-            alert('Could not detect any valid sentence records in this file.');
-            return;
-          }
-
-          // Apply new data
-          state.allSentences = loadedData;
-          state.sourceFileName = file.name;
-          datasetSourceText.textContent = `Custom File: ${file.name} (${loadedData.length} records)`;
-
-          populateCategories();
-          sortAndFilterSentences();
-        } catch (err) {
-          alert('Error parsing file: ' + err.message);
+    function getEmbeddedData() {
+      try {
+        const embeddedEl = document.getElementById('embeddedCorpusData');
+        if (!embeddedEl) return null;
+        let parsed = JSON.parse(embeddedEl.textContent.trim());
+        if (typeof parsed === 'string') {
+          parsed = JSON.parse(parsed);
         }
-      };
-      reader.readAsText(file);
-    }
-
-    // Simple CSV Parser
-    function parseCsvSpreadsheet(text, delimiter) {
-      const lines = text.split(/\r?\n/).filter(line => line.trim().length > 0);
-      if (lines.length < 2) return [];
-
-      const headers = parseCsvLine(lines[0], delimiter).map(h => h.trim().toLowerCase());
-      const records = [];
-
-      for (let i = 1; i < lines.length; i++) {
-        const values = parseCsvLine(lines[i], delimiter);
-        if (values.length < 2) continue;
-        const row = {};
-        headers.forEach((h, idx) => {
-          row[h] = values[idx] || '';
-        });
-        row.id = parseInt(row.id, 10) || i;
-        row.level = (row.level || 'intermediate').toLowerCase();
-        records.push(row);
+        return (parsed && parsed.sentences && parsed.sentences.length > 0) ? parsed : null;
+      } catch (e) {
+        console.warn('Could not parse embedded corpus data:', e);
+        return null;
       }
-      return records;
     }
 
-    function parseCsvLine(line, delimiter) {
-      const result = [];
-      let cur = '';
-      let inQuote = false;
-      for (let i = 0; i < line.length; i++) {
-        const c = line[i];
-        if (c === '"') {
-          if (inQuote && line[i + 1] === '"') {
-            cur += '"';
-            i++;
-          } else {
-            inQuote = !inQuote;
-          }
-        } else if (c === delimiter && !inQuote) {
-          result.push(cur);
-          cur = '';
-        } else {
-          cur += c;
+    function initCorpus() {
+      const corpus = getEmbeddedData();
+      if (corpus && corpus.sentences) {
+        state.allSentences = corpus.sentences;
+        if (datasetSourceText) {
+          datasetSourceText.textContent = `All 4 Levels (${state.allSentences.length} sentences)`;
+        }
+        populateCategories();
+        sortAndFilterSentences();
+        checkUrlHash();
+      }
+    }
+
+    function checkUrlHash() {
+      const hash = window.location.hash;
+      if (hash && hash.startsWith('#sentence-')) {
+        const id = parseInt(hash.replace('#sentence-', ''), 10);
+        if (id) {
+          setTimeout(() => openModalForSentence(id), 150);
         }
       }
-      result.push(cur);
-      return result;
-    }
-
-    // Reset to default file
-    resetFileBtn.addEventListener('click', () => {
-      loadDefaultFile();
-    });
-
-    // Load Default File from /data/language_review.json
-    function loadDefaultFile() {
-      datasetSourceText.textContent = 'Loading /data/language_review.json...';
-
-      fetch('/data/language_review.json')
-        .then(res => {
-          if (!res.ok) throw new Error('Network error loading static file');
-          return res.json();
-        })
-        .then(data => {
-          state.allSentences = data.sentences || [];
-          state.sourceFileName = 'language_review.json';
-          datasetSourceText.textContent = `Default File: language_review.json (${state.allSentences.length} sentences)`;
-          populateCategories();
-          sortAndFilterSentences();
-        })
-        .catch(err => {
-          console.warn('Fallback to embedded dataset due to:', err);
-          // Fallback to embedded Hugo data
-          try {
-            const embeddedEl = document.getElementById('embeddedCorpusData');
-            if (embeddedEl) {
-              const data = JSON.parse(embeddedEl.textContent);
-              state.allSentences = data.sentences || [];
-              state.sourceFileName = 'embedded: language_review.json';
-              datasetSourceText.textContent = `Default File: language_review.json (${state.allSentences.length} sentences)`;
-              populateCategories();
-              sortAndFilterSentences();
-            }
-          } catch (e) {
-            console.error('Failed to load embedded fallback data', e);
-          }
-        });
     }
 
     function escapeHtml(str) {
@@ -1288,7 +1195,7 @@
 
     // Boot
     renderLanguageChips();
-    loadDefaultFile();
+    initCorpus();
 
   })();
 </script>

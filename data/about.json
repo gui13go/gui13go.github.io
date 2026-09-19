@@ -1,0 +1,699 @@
+{
+  "personal": {
+    "name": "Guilherme Viegas",
+    "title": "Systems Engineer & Strategic Data Architect",
+    "tagline": "Human-in-the-loop",
+    "avatar": "/photos/guigo_saint_avatar.png",
+    "cloudBanner": "/images/cloud1.webp",
+    "location": "Hainan, China",
+    "email": "guilhermeviegas1993@gmail.com",
+    "bio": "I am a strategic data architect and systems engineer who designs and implements robust, scalable data ecosystems, translating complex information into actionable insights. My expertise spans the entire data lifecycle, from developing cloud-native infrastructure and automated pipelines to deploying advanced machine learning and geospatial models. With a foundational understanding in economics, I consistently bridge technical innovation with business objectives, empowering data-driven decisions that foster growth and efficiency."
+  },
+  "stats": [
+    {
+      "value": "8+",
+      "label": "Years Experience"
+    },
+    {
+      "value": "50+",
+      "label": "Projects Completed"
+    },
+    {
+      "value": "10+",
+      "label": "Technologies Mastered"
+    },
+    {
+      "value": "∞",
+      "label": "Cups of Cola"
+    }
+  ],
+  "toolkitCategories": [
+    "All",
+    "Languages",
+    "AI",
+    "Data",
+    "Databases",
+    "Cloud",
+    "API",
+    "Geospatial"
+  ],
+  "toolkit": [
+    {
+      "name": "Python",
+      "icon": "🐍",
+      "category": "Languages"
+    },
+    {
+      "name": "Bash",
+      "icon": "🐧",
+      "category": "Languages"
+    },
+    {
+      "name": "PowerShell",
+      "icon": "🖥️",
+      "category": "Languages"
+    },
+    {
+      "name": "R",
+      "icon": "📈",
+      "category": "Languages"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "📜",
+      "category": "Languages"
+    },
+    {
+      "name": "TypeScript",
+      "icon": "ʦ",
+      "category": "Languages"
+    },
+    {
+      "name": "Ollama",
+      "icon": "🦙",
+      "category": "AI"
+    },
+    {
+      "name": "llama.cpp",
+      "icon": "⚡",
+      "category": "AI"
+    },
+    {
+      "name": "vLLM",
+      "icon": "🚀",
+      "category": "AI"
+    },
+    {
+      "name": "SGLang",
+      "icon": "⚡",
+      "category": "AI"
+    },
+    {
+      "name": "AnythingLLM",
+      "icon": "🤖",
+      "category": "AI"
+    },
+    {
+      "name": "CrewAI",
+      "icon": "👥",
+      "category": "AI"
+    },
+    {
+      "name": "LangGraph",
+      "icon": "🕸️",
+      "category": "AI"
+    },
+    {
+      "name": "PyTorch",
+      "icon": "🔥",
+      "category": "AI"
+    },
+    {
+      "name": "TensorFlow",
+      "icon": "🧠",
+      "category": "AI"
+    },
+    {
+      "name": "Scikit-learn",
+      "icon": "🧪",
+      "category": "AI"
+    },
+    {
+      "name": "MLflow",
+      "icon": "📤",
+      "category": "AI"
+    },
+    {
+      "name": "Qdrant",
+      "icon": "🎯",
+      "category": "AI",
+      "tags": ["Databases"]
+    },
+    {
+      "name": "ChromaDB",
+      "icon": "🌈",
+      "category": "AI",
+      "tags": ["Databases"]
+    },
+    {
+      "name": "pgvector",
+      "icon": "🐘",
+      "category": "AI",
+      "tags": ["Databases"]
+    },
+    {
+      "name": "Pandas",
+      "icon": "🐼",
+      "category": "Data"
+    },
+    {
+      "name": "Jupyter",
+      "icon": "📓",
+      "category": "Data"
+    },
+    {
+      "name": "Spark",
+      "icon": "✨",
+      "category": "Data"
+    },
+    {
+      "name": "Airflow",
+      "icon": "💨",
+      "category": "Data"
+    },
+    {
+      "name": "dbt",
+      "icon": "🛠️",
+      "category": "Data"
+    },
+    {
+      "name": "SQLMesh",
+      "icon": "🧩",
+      "category": "Data"
+    },
+    {
+      "name": "Kafka",
+      "icon": "⚙️",
+      "category": "Data"
+    },
+    {
+      "name": "Dataflow",
+      "icon": "🌀",
+      "category": "Data"
+    },
+    {
+      "name": "BigQuery",
+      "icon": "🔍",
+      "category": "Data"
+    },
+    {
+      "name": "Databricks",
+      "icon": "🧱",
+      "category": "Data"
+    },
+    {
+      "name": "Snowflake",
+      "icon": "❄️",
+      "category": "Data"
+    },
+    {
+      "name": "Redshift",
+      "icon": "🎯",
+      "category": "Data"
+    },
+    {
+      "name": "Hadoop",
+      "icon": "🗄️",
+      "category": "Data"
+    },
+    {
+      "name": "Hive",
+      "icon": "🐝",
+      "category": "Data"
+    },
+    {
+      "name": "Looker",
+      "icon": "👀",
+      "category": "Data"
+    },
+    {
+      "name": "Tableau",
+      "icon": "🖼️",
+      "category": "Data"
+    },
+    {
+      "name": "Power BI",
+      "icon": "🖥️",
+      "category": "Data"
+    },
+    {
+      "name": "PostgreSQL",
+      "icon": "🐘",
+      "category": "Databases"
+    },
+    {
+      "name": "SQL",
+      "icon": "🗃️",
+      "category": "Databases"
+    },
+    {
+      "name": "SQLite",
+      "icon": "🗃️",
+      "category": "Databases"
+    },
+    {
+      "name": "Cloud SQL",
+      "icon": "💾",
+      "category": "Databases"
+    },
+    {
+      "name": "MongoDB",
+      "icon": "🍃",
+      "category": "Databases"
+    },
+    {
+      "name": "Docker",
+      "icon": "🐳",
+      "category": "Cloud"
+    },
+    {
+      "name": "Kubernetes",
+      "icon": "☸️",
+      "category": "Cloud"
+    },
+    {
+      "name": "Git",
+      "icon": "🌳",
+      "category": "Cloud"
+    },
+    {
+      "name": "GCP",
+      "icon": "☁️",
+      "category": "Cloud"
+    },
+    {
+      "name": "Azure",
+      "icon": "☁️",
+      "category": "Cloud"
+    },
+    {
+      "name": "AWS",
+      "icon": "☁️",
+      "category": "Cloud"
+    },
+    {
+      "name": "Terraform",
+      "icon": "🏗️",
+      "category": "Cloud"
+    },
+    {
+      "name": "Ansible",
+      "icon": "🤖",
+      "category": "Cloud"
+    },
+    {
+      "name": "Grafana",
+      "icon": "📊",
+      "category": "Cloud"
+    },
+    {
+      "name": "Prometheus",
+      "icon": "⏱️",
+      "category": "Cloud"
+    },
+    {
+      "name": "Jenkins",
+      "icon": "🤵",
+      "category": "Cloud"
+    },
+    {
+      "name": "GitHub Actions",
+      "icon": "🚀",
+      "category": "Cloud"
+    },
+    {
+      "name": "FastAPI",
+      "icon": "⚡",
+      "category": "API"
+    },
+    {
+      "name": "Flask",
+      "icon": "🍶",
+      "category": "API"
+    },
+    {
+      "name": "Django",
+      "icon": "🎶",
+      "category": "API"
+    },
+    {
+      "name": "Node.js",
+      "icon": "🟢",
+      "category": "API"
+    },
+    {
+      "name": "Next.js",
+      "icon": "⏭️",
+      "category": "API"
+    },
+    {
+      "name": "React",
+      "icon": "⚛️",
+      "category": "API"
+    },
+    {
+      "name": "Tailwind",
+      "icon": "🌬️",
+      "category": "API"
+    },
+    {
+      "name": "Selenium",
+      "icon": "🌐",
+      "category": "API"
+    },
+    {
+      "name": "PostGIS",
+      "icon": "🌍",
+      "category": "Geospatial",
+      "tags": ["Databases"]
+    },
+    {
+      "name": "GDAL/OGR",
+      "icon": "🌐",
+      "category": "Geospatial"
+    },
+    {
+      "name": "QGIS",
+      "icon": "🗺️",
+      "category": "Geospatial"
+    },
+    {
+      "name": "ArcGIS",
+      "icon": "🧭",
+      "category": "Geospatial"
+    },
+    {
+      "name": "OpenLayers",
+      "icon": "🛰️",
+      "category": "Geospatial"
+    }
+  ],
+  "journey": [
+    {
+      "role": "AI Engineer",
+      "company": "Wayvant",
+      "location": "Spain",
+      "period": "2025 - 2025",
+      "type": "Freelance",
+      "bullets": [
+        "Infrastructure as Code using GCP and Terraform;",
+        "IT Consultancy for Data Warehousing and Report Development;",
+        "AI Engineering with feedback loop;",
+        "Data Pipeline Development and Maintenance;"
+      ],
+      "tech": [
+        "GCP",
+        "Terraform",
+        "BQ",
+        "SQL",
+        "SQLX",
+        "Dataform",
+        "Gemini",
+        "Python",
+        "JS"
+      ]
+    },
+    {
+      "role": "Cloud Data Engineer",
+      "company": "CloudPilots",
+      "location": "Germany",
+      "period": "2024 - 2025",
+      "type": "Worker Student - Werkstudent",
+      "bullets": [
+        "Cloud Infrastructure using GCP and Terraform;",
+        "IT Consultancy for Databases and Report Development;",
+        "FinOps, Cloud Migration, ETL, and Reporting;",
+        "Data Pipeline Development and Maintenance;"
+      ],
+      "tech": [
+        "GCP",
+        "Terraform",
+        "BQ",
+        "SQL",
+        "SQLX",
+        "Dataform",
+        "BigData",
+        "JS",
+        "Python"
+      ]
+    },
+    {
+      "role": "Data Consultant",
+      "company": "Inetum / Noesis",
+      "location": "Portugal",
+      "period": "2022 - 2024",
+      "type": "Full-time",
+      "bullets": [
+        "Cloud Infrastructure Development and Maintaining;",
+        "Database Administration;",
+        "Network Analysis and Spatial Data Visualization;",
+        "Training of Interns;"
+      ],
+      "tech": [
+        "Azure",
+        "GCP",
+        "Terraform",
+        "Bash",
+        "Python",
+        "Postgres",
+        "PostGIS"
+      ]
+    },
+    {
+      "role": "Census Agent of Administration and Informatics",
+      "company": "IBGE",
+      "location": "Brazil",
+      "period": "2022",
+      "type": "Public Service",
+      "bullets": [
+        "Support Census Research in Assigned Areas/Regions;",
+        "Reviewing Field Sites and Research Reports;",
+        "Training of Census Agents to Conduct Interviews;",
+        "Data Collection and Supervision;"
+      ],
+      "tech": [
+        "Excel",
+        "Proprietary Software"
+      ]
+    },
+    {
+      "role": "Applied Data Scientist",
+      "company": "4Intelligence",
+      "location": "Brazil",
+      "period": "2021 - 2022",
+      "type": "Full-time",
+      "bullets": [
+        "Data Cleaning and Transformation;",
+        "Statistical and Machine Learning Modeling;",
+        "Time Series Forecasting and Anomaly Detection;",
+        "Development of Data Pipelines;"
+      ],
+      "tech": [
+        "Python",
+        "R",
+        "Bash",
+        "Postgres",
+        "SQL",
+        "Azure",
+        "Excel"
+      ]
+    },
+    {
+      "role": "Junior Data Scientist",
+      "company": "Aquarela",
+      "location": "Brazil",
+      "period": "2019 - 2021",
+      "type": "Full-time",
+      "bullets": [
+        "Data Cleaning and Transformations;",
+        "Development of Analytical Dashboards;",
+        "Statistical Modeling and Machine Learning;",
+        "Deployment of Dashboards in Production;"
+      ],
+      "tech": [
+        "R",
+        "Python",
+        "Docker",
+        "JS",
+        "CSS",
+        "GCP",
+        "AWS"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Science in GeoSpatial Technologies",
+      "institution": "University of Münster",
+      "period": "2023 - 2025",
+      "note": "Erasmus Mundus Joint Master Degree (WWU Münster, Germany; UJI, Spain; NOVA IMS, Portugal)."
+    },
+    {
+      "degree": "Bachelor of Science in Economics",
+      "institution": "Federal University of Santa Catarina",
+      "period": "2018 - 2022",
+      "note": "Focus on quantitative economics, econometrics, regional economics, and complexity science."
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Google Professional Cloud Architect",
+      "provider": "GCP",
+      "icon": "☁️"
+    },
+    {
+      "name": "Google Professional Cloud DevOps Engineer",
+      "provider": "GCP",
+      "icon": "🚀"
+    },
+    {
+      "name": "Google Generative AI Leader",
+      "provider": "GCP",
+      "icon": "✨"
+    },
+    {
+      "name": "Google Professional Machine Learning Engineer",
+      "provider": "GCP",
+      "icon": "🧠"
+    },
+    {
+      "name": "Google Associate Cloud Engineer",
+      "provider": "GCP",
+      "icon": "🛠️"
+    },
+    {
+      "name": "Google Associate Data Practitioner",
+      "provider": "GCP",
+      "icon": "📊"
+    },
+    {
+      "name": "Google Cloud Digital Leader",
+      "provider": "GCP",
+      "icon": "🌐"
+    },
+    {
+      "name": "Azure Associate Data Scientist",
+      "provider": "Azure",
+      "icon": "🧪"
+    },
+    {
+      "name": "Designing and Implementing a Data Science Solution on Azure (DP-100)",
+      "provider": "Azure",
+      "icon": "📐"
+    },
+    {
+      "name": "Microsoft Certified: Azure Data Fundamentals (DP-900)",
+      "provider": "Azure",
+      "icon": "🗃️"
+    },
+    {
+      "name": "Microsoft Certified: Azure Fundamentals (AZ-900)",
+      "provider": "Azure",
+      "icon": "☁️"
+    },
+    {
+      "name": "Microsoft Certified: Azure AI Fundamentals (AI-900)",
+      "provider": "Azure",
+      "icon": "🤖"
+    },
+    {
+      "name": "Microsoft Certified: Security, Compliance, and Identity Fundamentals (SC-900)",
+      "provider": "Azure",
+      "icon": "🔒"
+    },
+    {
+      "name": "Microsoft Certified: Power Platform Fundamentals (PL-900)",
+      "provider": "Azure",
+      "icon": "⚡"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Merit-based Fellowship",
+      "description": "Awarded for outstanding academic and research performance in the Master of Science in GeoSpatial Technologies program."
+    }
+  ],
+  "languages": [
+    {
+      "name": "Portuguese",
+      "flag": "🇧🇷",
+      "level": "C2",
+      "status": "Native",
+      "percent": 100
+    },
+    {
+      "name": "English",
+      "flag": "🇬🇧",
+      "level": "C2",
+      "status": "Fluent",
+      "percent": 99
+    },
+    {
+      "name": "Spanish",
+      "flag": "🇪🇸",
+      "level": "C1",
+      "status": "Advanced",
+      "percent": 80
+    },
+    {
+      "name": "German",
+      "flag": "🇩🇪",
+      "level": "B2",
+      "status": "Upper Intermediate",
+      "percent": 70
+    },
+    {
+      "name": "French",
+      "flag": "🇫🇷",
+      "level": "A1",
+      "status": "Elementary",
+      "percent": 9
+    },
+    {
+      "name": "Mandarin",
+      "flag": "🇨🇳",
+      "level": "HSK2",
+      "status": "Intermediate",
+      "percent": 22
+    }
+  ],
+  "methodology": {
+    "title": "Methodological Approach",
+    "tagline": "Architecting with Human-in-the-Loop Integrity",
+    "text": "I believe modern data architectures must place the 'Human-in-the-Loop' at the very center of technical innovation, grounding abstract algorithms in tangible human context. My methodological approach begins with collaborative discovery, where I partner closely with domain experts to translate complex business objectives into testable hypotheses, ensuring that our models capture real-world causal dynamics rather than mere statistical correlations. This foundation transitions into a defensive engineering strategy, where I architect automated, transparent pipelines that prioritize data integrity and error handling over opaque complexity. To guarantee that every insight stands up to rigorous scrutiny, I enforce a culture of radical reproducibility—leveraging containerized environments, comprehensive documentation, and version-controlled infrastructure—to ensure that every result is traceable, auditable, and scientifically valid. The lifecycle concludes not with deployment, but with active stewardship, utilizing automated monitoring and continuous feedback loops to refine the system as market conditions evolve, thereby securing long-term reliability and sustainable business value.",
+    "pillars": [
+      {
+        "title": "Human-in-the-Loop",
+        "desc": "Grounding abstract algorithms in tangible context and human judgment."
+      },
+      {
+        "title": "Collaborative Discovery",
+        "desc": "Partnering with domain experts to uncover true causal dynamics."
+      },
+      {
+        "title": "Defensive Engineering",
+        "desc": "Architecting resilient, automated pipelines prioritizing data integrity."
+      },
+      {
+        "title": "Radical Reproducibility",
+        "desc": "Containerized, version-controlled environments for verifiable results."
+      },
+      {
+        "title": "Active Stewardship",
+        "desc": "Continuous feedback loops and monitoring for enduring reliability."
+      }
+    ]
+  },
+  "connect": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/gui13go",
+      "icon": "github"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/in/guilherme-viegas/",
+      "icon": "linkedin"
+    },
+    {
+      "name": "Substack",
+      "url": "https://guilhermeviegas.substack.com",
+      "icon": "substack"
+    },
+    {
+      "name": "Email",
+      "url": "mailto:gui.viegas19@gmail.com",
+      "icon": "mail"
+    }
+  ]
+}

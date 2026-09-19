@@ -8,7 +8,7 @@
       "title": "My Camino",
       "path": "/geolayers/my-camino/",
       "description": "A geospatial visualization of my Camino de Santiago journey. From Florianópolis, Brazil, stepping across the Atlantic, all the way to Santiago de Compostela, Spain.",
-      "image": "/images/geolayers/my-camino.png",
+      "image": "/images/geolayers/my-camino.jpg",
       "availability": "work_in_progress",
       "status": "Work in Progress",
       "tags": [
@@ -23,7 +23,7 @@
       "title": "Cities I Have Visited",
       "path": "/geolayers/cities-i-have-visited/",
       "description": "A cartographic journey through personal history. Trace the geographic footprint of travel across the globe, visualized through interactive spatial coordinates.",
-      "image": "/images/cities_visited_map.png",
+      "image": "/images/geolayers/cities-i-have-visited.jpg",
       "availability": "available",
       "status": "Available",
       "tags": [
@@ -34,24 +34,6 @@
         "Interactive",
         "Coordinates",
         "Chronicle"
-      ]
-    },
-    {
-      "id": "cities-i-have-lived-in",
-      "title": "Cities I have Lived In",
-      "path": "/geolayers/cities-i-have-lived-in/",
-      "description": "Mapping the places called home. A spatial narrative of the cities that have shaped my personal and professional journey across different continents.",
-      "image": "/images/2worlds.webp",
-      "availability": "work_in_progress",
-      "status": "Work in Progress",
-      "tags": [
-        "Personal",
-        "Map",
-        "Migration",
-        "Home",
-        "Geography",
-        "Biography",
-        "Interactive"
       ]
     },
     {
@@ -95,7 +77,7 @@
       "title": "Map Projection Review",
       "path": "/geolayers/map-projection-review/",
       "description": "A Short Review on the various map projections out there, all rendered with D3.js",
-      "image": "/images/globeColorful.webp",
+      "image": "/images/geolayers/map-projection-review.jpg",
       "availability": "available",
       "status": "Available",
       "tags": [
@@ -159,7 +141,7 @@
       "title": "World Cities Population",
       "path": "/geolayers/world-cities-population/",
       "description": "Explore cities around the world and their population size. This interactive map visualizes the population distribution in major cities, helping you understand urbanization patterns.",
-      "image": "/images/population1.webp",
+      "image": "/images/geolayers/world-cities-population.jpg",
       "availability": "work_in_progress",
       "status": "Work in Progress",
       "tags": [
@@ -177,7 +159,7 @@
       "title": "Sea Level Simulator",
       "path": "/geolayers/sea-level-simulator/",
       "description": "Simulate sea level rise and its impact on coastal areas. This interactive map allows users to visualize how different levels of sea rise would affect regions around the world.",
-      "image": "/images/sea1.webp",
+      "image": "/images/geolayers/sea-level-simulator.jpg",
       "availability": "available",
       "status": "Available",
       "tags": [
@@ -212,7 +194,7 @@
       "title": "Brazilian Road Network",
       "path": "/geolayers/brazilian-road-network/",
       "description": "A spatial visualization of the brazilian road network through OpenLayer mapping.",
-      "image": "/images/roads1.webp",
+      "image": "/images/geolayers/brazilian-road-network.jpg",
       "availability": "work_in_progress",
       "status": "Work in Progress",
       "tags": [
@@ -230,7 +212,7 @@
       "title": "My Favourite Restaurants in the World",
       "path": "/geolayers/my-favourite-restaurants-in-the-world/",
       "description": "A culinary world map illustrating my favorite restaurants across the globe. Explore the flavors and places that have left a lasting impression.",
-      "image": "/images/restaurants5.webp",
+      "image": "/images/geolayers/my-favourite-restaurants-in-the-world.jpg",
       "availability": "work_in_progress",
       "status": "Work in Progress",
       "tags": [
@@ -248,7 +230,7 @@
       "title": "Dijkstras in Brazil",
       "path": "/geolayers/dijkstras-in-brazil/",
       "description": "Explore the optimal path between locations in Brazil using Dijkstra's algorithm. This interactive map visualizes the shortest route based on complex road network data.",
-      "image": "/images/roadsJungle.webp",
+      "image": "/images/geolayers/dijkstras-in-brazil.jpg",
       "availability": "work_in_progress",
       "status": "Work in Progress",
       "tags": [
@@ -280,29 +262,11 @@
       ]
     },
     {
-      "id": "barcelona-street-writtings",
-      "title": "Barcelona Street Writtings",
-      "path": "/geolayers/barcelona-street-writtings/",
-      "description": "Transforming the urban grid into a canvas. Write and visualize words across the streets of Barcelona, utilizing the unique geometry of the Eixample manzanas.",
-      "image": "/images/barcelona2.webp",
-      "availability": "available",
-      "status": "Available",
-      "tags": [
-        "Art",
-        "Urban",
-        "Barcelona",
-        "Creativity",
-        "Streetscape",
-        "Linguistics",
-        "Cartography"
-      ]
-    },
-    {
       "id": "world-tiles",
       "title": "World Tiles",
       "path": "/geolayers/world-tiles/",
       "description": "A masterclass in cartographic design. Explore this interactive map featuring customizable tiles that transform the visual narrative of geographic data.",
-      "image": "/images/worldTiles3.webp",
+      "image": "/images/geolayers/world-tiles.jpg",
       "availability": "work_in_progress",
       "status": "Work in Progress",
       "tags": [
@@ -320,7 +284,7 @@
       "title": "Seven Wonders of the Ancient World",
       "path": "/geolayers/seven-wonders-of-the-ancient-world/",
       "description": "A journey back to the dawn of civilization. Explore the legendary seven wonders of the ancient world, from the Great Pyramid to the Hanging Gardens.",
-      "image": "/images/world10.webp",
+      "image": "/images/geolayers/seven-wonders-of-the-ancient-world.jpg",
       "availability": "coming_soon",
       "status": "Coming Soon",
       "tags": [
@@ -338,7 +302,7 @@
       "title": "New Seven Wonders of the World",
       "path": "/geolayers/new-seven-wonders-of-the-world/",
       "description": "Modern marvels of the human spirit. Discover the new seven wonders of the world, selected by millions to represent the pinnacle of global cultural heritage.",
-      "image": "/images/world8.webp",
+      "image": "/images/geolayers/new-seven-wonders-of-the-world.jpg",
       "availability": "coming_soon",
       "status": "Coming Soon",
       "tags": [
@@ -356,7 +320,7 @@
       "title": "Seven Natural Wonders of the World",
       "path": "/geolayers/seven-natural-wonders-of-the-world/",
       "description": "The raw power of the natural world. Experience the most breathtaking natural wonders on Earth, from the Grand Canyon to the Great Barrier Reef.",
-      "image": "/images/world3.webp",
+      "image": "/images/geolayers/seven-natural-wonders-of-the-world.jpg",
       "availability": "coming_soon",
       "status": "Coming Soon",
       "tags": [
@@ -374,7 +338,7 @@
       "title": "Seven Wonders of the Modern World",
       "path": "/geolayers/seven-wonders-of-the-modern-world/",
       "description": "Triumphs of modern engineering. Explore the seven wonders of the modern world, celebrating the incredible feats of structural and civil engineering from the 20th century.",
-      "image": "/images/world5.webp",
+      "image": "/images/geolayers/seven-wonders-of-the-modern-world.jpg",
       "availability": "coming_soon",
       "status": "Coming Soon",
       "tags": [
@@ -392,7 +356,7 @@
       "title": "Deforestation Hotspots",
       "path": "/geolayers/deforestation-hotspots/",
       "description": "Monitoring the planet's pulse. This map visualizes critical deforestation hotspots globally, highlighting the urgent need for environmental conservation and sustainable management.",
-      "image": "/images/deforestation1.webp",
+      "image": "/images/geolayers/deforestation-hotspots.jpg",
       "availability": "coming_soon",
       "status": "Coming Soon",
       "tags": [

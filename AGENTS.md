@@ -7,12 +7,13 @@ This document defines the core architecture, design system, layout conventions, 
 ## 1. Navigation Bar Standards
 
 - **Active Navbar Menus** (defined in `hugo.toml` under `[menu.main]`):
-  1. **Blogs** (`/blogs/`, weight 10)
-  2. **Tools** (`/tools/`, weight 12)
-  3. **GeoLayers** (`/geolayers/`, weight 13)
-  4. **Publications** (`/publications/`, weight 14)
-  5. **Gallery** (`/gallery/`, weight 15)
-  6. **Search** (`/search/`, weight 40)
+  1. **About** (`/about/`, weight 10)
+  2. **Blogs** (`/blogs/`, weight 20)
+  3. **Publications** (`/publications/`, weight 30)
+  4. **GeoLayers** (`/geolayers/`, weight 40)
+  5. **Gallery** (`/gallery/`, weight 50)
+  6. **Tools** (`/tools/`, weight 60)
+  7. **Search** (`/search/`, weight 70)
 - **CRITICAL RULE**: **Tags** and **Categories** have been intentionally removed from the main navbar. **Do NOT re-add Tags or Categories to `menu.main` in `hugo.toml` or any navbar template.**
 
 ---

@@ -63,43 +63,49 @@ enableEmoji = true
 
   mainSections = ['blogs']
 
-# Main Menu with "Blogs" tab
+# Main Menu
 [menu]
+  [[menu.main]]
+    identifier = 'about'
+    name = 'About'
+    url = '/about/'
+    weight = 10
+
   [[menu.main]]
     identifier = 'blogs'
     name = 'Blogs'
     url = '/blogs/'
-    weight = 10
-
-  [[menu.main]]
-    identifier = 'tools'
-    name = 'Tools'
-    url = '/tools/'
-    weight = 12
-
-  [[menu.main]]
-    identifier = 'geolayers'
-    name = 'GeoLayers'
-    url = '/geolayers/'
-    weight = 13
+    weight = 20
 
   [[menu.main]]
     identifier = 'publications'
     name = 'Publications'
     url = '/publications/'
-    weight = 14
+    weight = 30
+
+  [[menu.main]]
+    identifier = 'geolayers'
+    name = 'GeoLayers'
+    url = '/geolayers/'
+    weight = 40
 
   [[menu.main]]
     identifier = 'gallery'
     name = 'Gallery'
     url = '/gallery/'
-    weight = 15
+    weight = 50
+
+  [[menu.main]]
+    identifier = 'tools'
+    name = 'Tools'
+    url = '/tools/'
+    weight = 60
 
   [[menu.main]]
     identifier = 'search'
     name = 'Search'
     url = '/search/'
-    weight = 40
+    weight = 70
 
 [outputs]
   home = ['HTML', 'RSS', 'JSON']
