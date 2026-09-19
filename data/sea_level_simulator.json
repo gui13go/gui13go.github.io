@@ -2,7 +2,7 @@
   "title": "Sea Level Simulator",
   "subtitle": "Interactive global coastal inundation simulation based on SRTM 90m elevation and hydrological modeling.",
   "dataset": "CGIAR-CSI SRTM 90m Digital Elevation Database v4.1 & SCALGO Hydrology Engine",
-  "wmts_endpoint": "https://ts2.scalgo.com/olpatch/wmts?token=CC5BF28A7D96B320C7DFBFD1236B5BEB",
+  "wmts_endpoint": "https://ts2.scalgo.com/olpatch/wmts",
   "wmts_layer": "SRTM_4_1:SRTM_4_1_flooded_sealevels",
   "matrix_set": "EPSG:3857",
   "default_threshold": 10,

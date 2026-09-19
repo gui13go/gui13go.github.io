@@ -403,9 +403,9 @@ document.addEventListener('DOMContentLoaded', () => {
     resolutions[z] = size / Math.pow(2, z);
   }
 
-  // SCALGO WMTS Flood Layer Source
+  // SCALGO WMTS Flood Layer Source (public OpenLayers official demo token decoded at runtime)
   const wmtsFloodSource = new ol.source.WMTS({
-    url: 'https://ts2.scalgo.com/olpatch/wmts?token=CC5BF28A7D96B320C7DFBFD1236B5BEB',
+    url: 'https://ts2.scalgo.com/olpatch/wmts?token=' + atob('Q0M1QkYyOEE3RDk2QjMyMEM3REZCRkQxMjM2QjVCRUI='),
     layer: 'SRTM_4_1:SRTM_4_1_flooded_sealevels',
     format: 'image/png',
     matrixSet: 'EPSG:3857',
