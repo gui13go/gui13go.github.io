@@ -84,7 +84,7 @@
           </a>
           {{- else }}
           <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="{{ .title }}"
-            data-desc="{{ .description }}" data-tags="{{ delimit .tags " , " }}">
+            data-desc="{{ .description }}" data-tags='{{ delimit .tags ", " }}'>
             <span>In Development</span>
             <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="12" r="10"></circle>
