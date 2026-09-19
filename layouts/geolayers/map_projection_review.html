@@ -1,0 +1,528 @@
+{{- define "main" }}
+{{- $projData := site.Data.map_projections }}
+
+<div class="geolayers-page-container proj-explorer-container">
+  <!-- Breadcrumbs adhering to AGENTS.md Section 2 -->
+  <div class="gallery-breadcrumbs">
+    <a href="{{ site.BaseURL }}">Home</a> <span>/</span> <a href="/geolayers/">GeoLayers</a> <span>/</span> <span>Map Projection Review</span>
+  </div>
+
+  <!-- Header Section -->
+  <header class="cities-header proj-header">
+    <div class="cities-header-content">
+      <div class="cities-badge-pill">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span>Interactive GeoLayer &bull; Cartographic Transformations &bull; D3.js Geo Engine</span>
+      </div>
+      <h1 class="cities-title">Map Projection Explorer</h1>
+      <p class="cities-subtitle">
+        A visual guide to cartographic projections, distortion properties, and coordinate reference systems. Explore how 3D spherical Earth coordinates are mathematically projected onto 2D surfaces with live Tissot's indicatrices, interactive rotation, and graticule overlays.
+      </p>
+    </div>
+
+    <!-- Quick Stats Bar -->
+    <div class="cities-stats-bar">
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" style="background: var(--theme-accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">12</span>
+        <span class="cities-stat-label">Featured Projections</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number">3</span>
+        <span class="cities-stat-label">Projection Families</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number">Tissot 10&deg;</span>
+        <span class="cities-stat-label">Indicatrix Metric</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number">D3 Geo</span>
+        <span class="cities-stat-label">Vector Rendering</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Visual Hero Card with Globe Banner -->
+  <div class="proj-hero-card">
+    <div class="proj-hero-banner">
+      <img src="{{ $projData.hero_banner | default "/images/globeColorful.webp" }}" alt="D3 Projection Gallery Banner" class="proj-hero-img" onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+      <div class="proj-hero-overlay"></div>
+      <div class="proj-hero-content">
+        <h2 class="proj-hero-title">{{ $projData.title }}</h2>
+        <p class="proj-hero-desc">{{ $projData.subtitle }}</p>
+      </div>
+    </div>
+    <div class="proj-overview-box">
+      <div class="proj-overview-icon">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+      </div>
+      <div class="proj-overview-text">
+        <h3>{{ $projData.overview.heading }}</h3>
+        <p>{{ $projData.overview.description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Filter & Search Bar -->
+  <div class="proj-toolbar">
+    <div class="gallery-search-box proj-search-box">
+      <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="projSearchInput" placeholder="Filter projections by name, property, or uses..." autocomplete="off" aria-label="Filter projections">
+      <button type="button" id="projClearSearch" class="clear-search-btn" style="display:none;" aria-label="Clear search">&times;</button>
+    </div>
+
+    <!-- Category Filter Pills -->
+    <div class="proj-category-pills" role="group" aria-label="Filter by Projection Family">
+      <button type="button" class="proj-filter-btn active" data-category="all">All Projections</button>
+      <button type="button" class="proj-filter-btn" data-category="Azimuthal">Azimuthal</button>
+      <button type="button" class="proj-filter-btn" data-category="Conic">Conic</button>
+      <button type="button" class="proj-filter-btn" data-category="Cylindrical">Cylindrical</button>
+    </div>
+
+    <!-- Global Controls -->
+    <div class="proj-global-controls">
+      <label class="proj-control-toggle" title="Toggle Tissot's distortion indicatrices on all projection canvases">
+        <input type="checkbox" id="toggleTissot" checked>
+        <span class="proj-toggle-slider"></span>
+        <span class="proj-toggle-label">Tissot Indicatrices</span>
+      </label>
+      <label class="proj-control-toggle" title="Toggle geographic graticule grid lines">
+        <input type="checkbox" id="toggleGraticule" checked>
+        <span class="proj-toggle-slider"></span>
+        <span class="proj-toggle-label">Graticule</span>
+      </label>
+      <button type="button" class="proj-rotate-btn" id="rotateAllBtn" title="Animate continuous sphere rotation">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+        </svg>
+        <span id="rotateBtnText">Animate Rotation</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Projection Cards List Container -->
+  <div id="projection-cards-container" class="proj-cards-list">
+    <div class="proj-loading-state" id="projLoadingState">
+      <div class="proj-spinner"></div>
+      <p>Loading Natural Earth vector boundary dataset &amp; initializing D3 projections...</p>
+    </div>
+  </div>
+</div>
+
+<!-- D3.js Core and Geo Projection Libraries -->
+<script src="/lib/d3/d3.v7.min.js"></script>
+<script src="/lib/d3/d3-geo-projection.v4.min.js"></script>
+
+<script>
+(function() {
+  'use strict';
+
+  // Projection Data from Hugo Site Data
+  const projections = {{ $projData.projections | jsonify | safeJS }};
+
+  // Tissot indicatrices center points
+  const indicatrixPoints = [
+    [0, 0],
+    [-90, 0],
+    [-45, 0],
+    [45, 0],
+    [90, 0],
+    [0, -70],
+    [0, -35],
+    [0, 35],
+    [0, 70]
+  ];
+
+  let landData = null;
+  let showTissot = true;
+  let showGraticule = true;
+  let isRotating = false;
+  let rotationAngle = 0;
+  let animFrameId = null;
+  let activeFilter = 'all';
+  let searchQuery = '';
+
+  const container = document.getElementById('projection-cards-container');
+  const loadingState = document.getElementById('projLoadingState');
+  const searchInput = document.getElementById('projSearchInput');
+  const clearSearchBtn = document.getElementById('projClearSearch');
+  const filterBtns = document.querySelectorAll('.proj-filter-btn');
+  const toggleTissot = document.getElementById('toggleTissot');
+  const toggleGraticule = document.getElementById('toggleGraticule');
+  const rotateAllBtn = document.getElementById('rotateAllBtn');
+  const rotateBtnText = document.getElementById('rotateBtnText');
+
+  // Canvas registry to redraw during rotation / toggle changes
+  const canvasRenderers = [];
+
+  // 1. Fetch GeoJSON Data
+  async function loadData() {
+    try {
+      // Load local ne_110m_land dataset, with fallback to remote gist
+      let response = await fetch('/data/geolayers/ne_110m_land.json');
+      if (!response.ok) {
+        response = await fetch('https://gist.githubusercontent.com/d3indepth/f28e1c3a99ea6d84986f35ac8646fac7/raw/c58cede8dab4673c91a3db702d50f7447b373d98/ne_110m_land.json');
+      }
+      landData = await response.json();
+      if (loadingState) loadingState.style.display = 'none';
+      buildCards();
+    } catch (err) {
+      console.error('Failed to load land boundaries GeoJSON:', err);
+      if (loadingState) {
+        loadingState.innerHTML = '<p class="proj-error-text">Failed to load map boundaries. Please check your internet connection and refresh.</p>';
+      }
+    }
+  }
+
+  // 2. Build DOM Cards
+  function buildCards() {
+    container.innerHTML = '';
+    canvasRenderers.length = 0;
+
+    projections.forEach((item, index) => {
+      const card = document.createElement('article');
+      card.className = 'proj-card';
+      card.setAttribute('data-id', item.id);
+      card.setAttribute('data-category', item.category);
+      card.setAttribute('data-search', `${item.name} ${item.category} ${item.description} ${item.pros} ${item.cons} ${item.uses} ${(item.properties || []).join(' ')}`.toLowerCase());
+
+      card.innerHTML = `
+        <div class="proj-card-inner">
+          <div class="proj-canvas-wrapper">
+            <div class="proj-canvas-badge">
+              <span class="proj-d3-badge">d3.${item.d3_type}</span>
+              <span class="proj-category-tag ${item.category.toLowerCase()}">${item.category}</span>
+            </div>
+            <div class="proj-canvas-box">
+              <canvas id="canvas-${item.id}" width="420" height="300" class="proj-canvas" aria-label="${item.name} projection map canvas"></canvas>
+            </div>
+            <div class="proj-canvas-meta">
+              <div class="proj-prop-pills">
+                ${(item.properties || []).map(p => `<span class="proj-prop-pill">${p}</span>`).join('')}
+              </div>
+              <button type="button" class="proj-reset-canvas-btn" data-id="${item.id}" title="Center view">
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                  <path d="M3 3v5h5"></path>
+                </svg>
+                Reset
+              </button>
+            </div>
+          </div>
+
+          <div class="proj-info-wrapper">
+            <div class="proj-info-header">
+              <h3 class="proj-card-title">${item.name}</h3>
+              <p class="proj-card-desc">${item.description}</p>
+            </div>
+
+            <div class="proj-traits-grid">
+              <div class="proj-trait-box trait-pros">
+                <div class="proj-trait-label">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Key Advantages</span>
+                </div>
+                <p class="proj-trait-content">${item.pros}</p>
+              </div>
+
+              <div class="proj-trait-box trait-cons">
+                <div class="proj-trait-label">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  <span>Limitations &amp; Distortion</span>
+                </div>
+                <p class="proj-trait-content">${item.cons}</p>
+              </div>
+
+              <div class="proj-trait-box trait-uses">
+                <div class="proj-trait-label">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <span>Common Applications</span>
+                </div>
+                <p class="proj-trait-content">${item.uses}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      container.appendChild(card);
+
+      const canvas = document.getElementById(`canvas-${item.id}`);
+      if (canvas) {
+        const renderer = createProjectionRenderer(canvas, item);
+        canvasRenderers.push({ item, renderer, canvas, card });
+        renderer.render(rotationAngle);
+      }
+    });
+
+    // Attach canvas reset buttons
+    document.querySelectorAll('.proj-reset-canvas-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const id = btn.getAttribute('data-id');
+        const found = canvasRenderers.find(c => c.item.id === id);
+        if (found) {
+          found.renderer.render(0);
+        }
+      });
+    });
+
+    applyFilters();
+  }
+
+  // 3. Create Projection Renderer for Canvas using D3
+  function createProjectionRenderer(canvas, item) {
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return { render: () => {} };
+
+    const width = canvas.width;
+    const height = canvas.height;
+
+    // Resolve D3 projection constructor
+    let projectionFn = d3[item.d3_type];
+    if (!projectionFn && window.d3GeoProjection) {
+      projectionFn = window.d3GeoProjection[item.d3_type];
+    }
+    if (!projectionFn) {
+      // Fallback if named differently
+      console.warn(`Projection d3.${item.d3_type} not found, falling back to Equirectangular`);
+      projectionFn = d3.geoEquirectangular;
+    }
+
+    const graticuleGenerator = d3.geoGraticule();
+    const circleGenerator = d3.geoCircle().radius(10).precision(1);
+
+    function render(currentRotation) {
+      const isDark = document.body.classList.contains('dark');
+
+      // Theme-aware color palette
+      const canvasBg = isDark ? '#1a1f2c' : '#f8fafc';
+      const graticuleColor = isDark ? 'rgba(255, 255, 255, 0.12)' : 'rgba(0, 0, 0, 0.12)';
+      const sphereBorder = isDark ? 'rgba(96, 165, 250, 0.4)' : 'rgba(59, 130, 246, 0.4)';
+      const landFill = isDark ? '#2e384d' : '#e2e8f0';
+      const landStroke = isDark ? '#4b5563' : '#94a3b8';
+      const indicatrixStroke = isDark ? 'rgba(244, 63, 94, 0.85)' : 'rgba(225, 29, 72, 0.85)';
+      const indicatrixFill = isDark ? 'rgba(244, 63, 94, 0.12)' : 'rgba(225, 29, 72, 0.12)';
+      const labelColor = isDark ? '#93c5fd' : '#1d4ed8';
+
+      ctx.clearRect(0, 0, width, height);
+
+      // Background fill
+      ctx.fillStyle = canvasBg;
+      ctx.fillRect(0, 0, width, height);
+
+      // Build projection instance
+      let proj = projectionFn()
+        .scale(item.scale * 0.82)
+        .center([0, 0])
+        .rotate([currentRotation, 0, 0])
+        .translate([width / 2, height / 2]);
+
+      // Clip angle for orthographic or stereographic to prevent visual artifacts
+      if (item.d3_type === 'geoOrthographic') {
+        proj.clipAngle(90);
+      }
+
+      const pathGenerator = d3.geoPath().projection(proj).context(ctx);
+
+      // A. Graticule
+      if (showGraticule) {
+        ctx.lineWidth = 0.8;
+        ctx.strokeStyle = graticuleColor;
+        ctx.setLineDash([2, 2]);
+        ctx.beginPath();
+        pathGenerator(graticuleGenerator());
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+
+      // B. Spheroid boundary outline / clip
+      ctx.lineWidth = 1.2;
+      ctx.strokeStyle = sphereBorder;
+      ctx.beginPath();
+      try {
+        pathGenerator({ type: 'Sphere' });
+        ctx.stroke();
+      } catch (e) {}
+
+      // C. Land features
+      if (landData && landData.features) {
+        ctx.fillStyle = landFill;
+        ctx.strokeStyle = landStroke;
+        ctx.lineWidth = 0.9;
+        ctx.beginPath();
+        pathGenerator({ type: 'FeatureCollection', features: landData.features });
+        ctx.fill();
+        ctx.stroke();
+      }
+
+      // D. Tissot's Indicatrices
+      if (showTissot) {
+        ctx.lineWidth = 1.2;
+        ctx.strokeStyle = indicatrixStroke;
+        ctx.fillStyle = indicatrixFill;
+
+        indicatrixPoints.forEach(pt => {
+          circleGenerator.center(pt);
+          const circleGeom = circleGenerator();
+          ctx.beginPath();
+          try {
+            pathGenerator(circleGeom);
+            ctx.fill();
+            ctx.stroke();
+          } catch (e) {}
+        });
+      }
+
+      // E. Watermark title on canvas
+      ctx.fillStyle = labelColor;
+      ctx.font = '600 13px ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+      ctx.fillText(item.name, 12, 24);
+    }
+
+    return { render };
+  }
+
+  // 4. Filtering & Search logic
+  function applyFilters() {
+    let visibleCount = 0;
+
+    canvasRenderers.forEach(({ item, card, renderer }) => {
+      const matchesCategory = activeFilter === 'all' || item.category === activeFilter;
+      const searchContent = card.getAttribute('data-search') || '';
+      const matchesSearch = !searchQuery || searchContent.includes(searchQuery);
+
+      if (matchesCategory && matchesSearch) {
+        card.style.display = 'block';
+        visibleCount++;
+        renderer.render(rotationAngle);
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    const noResults = document.getElementById('projNoResults');
+    if (visibleCount === 0) {
+      if (!noResults) {
+        const nr = document.createElement('div');
+        nr.id = 'projNoResults';
+        nr.className = 'proj-no-results';
+        nr.innerHTML = `
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <h4>No projections found</h4>
+          <p>No map projections match "${searchQuery}". Try selecting another category or clear your search term.</p>
+        `;
+        container.appendChild(nr);
+      }
+    } else if (noResults) {
+      noResults.remove();
+    }
+  }
+
+  // 5. Continuous Rotation Loop
+  function tickRotation() {
+    if (!isRotating) return;
+    rotationAngle = (rotationAngle + 0.4) % 360;
+
+    canvasRenderers.forEach(({ card, renderer }) => {
+      if (card.style.display !== 'none') {
+        renderer.render(rotationAngle);
+      }
+    });
+
+    animFrameId = requestAnimationFrame(tickRotation);
+  }
+
+  // 6. Event Listeners
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.trim().toLowerCase();
+      if (clearSearchBtn) clearSearchBtn.style.display = searchQuery ? 'block' : 'none';
+      applyFilters();
+    });
+  }
+
+  if (clearSearchBtn) {
+    clearSearchBtn.addEventListener('click', () => {
+      if (searchInput) searchInput.value = '';
+      clearSearchBtn.style.display = 'none';
+      searchQuery = '';
+      applyFilters();
+    });
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeFilter = btn.getAttribute('data-category');
+      applyFilters();
+    });
+  });
+
+  if (toggleTissot) {
+    toggleTissot.addEventListener('change', (e) => {
+      showTissot = e.target.checked;
+      canvasRenderers.forEach(({ card, renderer }) => {
+        if (card.style.display !== 'none') renderer.render(rotationAngle);
+      });
+    });
+  }
+
+  if (toggleGraticule) {
+    toggleGraticule.addEventListener('change', (e) => {
+      showGraticule = e.target.checked;
+      canvasRenderers.forEach(({ card, renderer }) => {
+        if (card.style.display !== 'none') renderer.render(rotationAngle);
+      });
+    });
+  }
+
+  if (rotateAllBtn) {
+    rotateAllBtn.addEventListener('click', () => {
+      isRotating = !isRotating;
+      if (isRotating) {
+        rotateAllBtn.classList.add('active');
+        if (rotateBtnText) rotateBtnText.textContent = 'Pause Rotation';
+        tickRotation();
+      } else {
+        rotateAllBtn.classList.remove('active');
+        if (rotateBtnText) rotateBtnText.textContent = 'Animate Rotation';
+        if (animFrameId) cancelAnimationFrame(animFrameId);
+      }
+    });
+  }
+
+  // Support dark/light mode switches dynamically
+  const observer = new MutationObserver(() => {
+    canvasRenderers.forEach(({ card, renderer }) => {
+      if (card.style.display !== 'none') renderer.render(rotationAngle);
+    });
+  });
+  observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
+  // Kickoff
+  loadData();
+})();
+</script>
+{{- end }}

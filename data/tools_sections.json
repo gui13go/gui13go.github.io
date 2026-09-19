@@ -8,8 +8,8 @@
       "url": "/tools/revolution-os-timeline/",
       "navLabel": "Revolution OS Timeline",
       "countUnit": "milestones",
-      "count": 31,
-      "description": "An interactive timeline exploring the 49-year evolution of Unix, GNU, Linux, open-source licensing, and corporate battles from 1969 to 2018.",
+      "count": 34,
+      "description": "An interactive, chronological timeline exploring the evolution of Unix, GNU, the Linux kernel, open-source licensing wars, and the triumph of the hacker movement.",
       "icon": "terminal",
       "badge": "Interactive Timeline"
     },

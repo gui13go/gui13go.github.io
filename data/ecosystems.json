@@ -1,0 +1,107 @@
+{
+  "total_ecoregions": 820,
+  "total_realms": 8,
+  "total_biomes": 14,
+  "hotspots": [
+    {
+      "name": "Amazon Basin",
+      "realm": "Neotropic",
+      "center": [
+        -60.0,
+        -3.0
+      ],
+      "zoom": 5,
+      "desc": "World's largest tropical rainforest and river drainage basin."
+    },
+    {
+      "name": "Congo Basin",
+      "realm": "Afrotropic",
+      "center": [
+        22.0,
+        -1.0
+      ],
+      "zoom": 5,
+      "desc": "Second largest contiguous tropical moist forest on Earth."
+    },
+    {
+      "name": "Borneo Rain Forests",
+      "realm": "Indomalayan",
+      "center": [
+        114.0,
+        1.0
+      ],
+      "zoom": 6,
+      "desc": "Ancient biodiversity hotspot with rich Dipterocarp forests."
+    },
+    {
+      "name": "Sahara Desert",
+      "realm": "Palearctic",
+      "center": [
+        15.0,
+        23.0
+      ],
+      "zoom": 4,
+      "desc": "Largest hot desert in the world spanning North Africa."
+    },
+    {
+      "name": "Siberian Taiga",
+      "realm": "Palearctic",
+      "center": [
+        105.0,
+        62.0
+      ],
+      "zoom": 4,
+      "desc": "Vast boreal conifer belt sequestering global carbon."
+    },
+    {
+      "name": "Serengeti & Savannas",
+      "realm": "Afrotropic",
+      "center": [
+        35.0,
+        -2.5
+      ],
+      "zoom": 7,
+      "desc": "Iconic tropical grasslands hosting megafauna migrations."
+    },
+    {
+      "name": "Great Barrier Reef & Coral Coast",
+      "realm": "Australasia",
+      "center": [
+        145.0,
+        -17.0
+      ],
+      "zoom": 6,
+      "desc": "Queensland tropical coastal ecosystems and mangroves."
+    },
+    {
+      "name": "Mediterranean Basin",
+      "realm": "Palearctic",
+      "center": [
+        18.0,
+        38.0
+      ],
+      "zoom": 5,
+      "desc": "Dry summer subtropical sclerophyll scrub and woodlands."
+    },
+    {
+      "name": "North American Prairies",
+      "realm": "Nearctic",
+      "center": [
+        -100.0,
+        42.0
+      ],
+      "zoom": 5,
+      "desc": "Extensive temperate grassland and mixed prairie biome."
+    },
+    {
+      "name": "Arctic Tundra",
+      "realm": "Nearctic",
+      "center": [
+        -100.0,
+        70.0
+      ],
+      "zoom": 4,
+      "desc": "Permafrost landscape dominated by mosses, lichens, and dwarf shrubs."
+    }
+  ]
+}

@@ -9,7 +9,7 @@ This document defines the core architecture, design system, layout conventions, 
 - **Active Navbar Menus** (defined in `hugo.toml` under `[menu.main]`):
   1. **Blogs** (`/blogs/`, weight 10)
   2. **Tools** (`/tools/`, weight 12)
-  3. **GeoLayer** (`/geolayers/`, weight 13)
+  3. **GeoLayers** (`/geolayers/`, weight 13)
   4. **Publications** (`/publications/`, weight 14)
   5. **Gallery** (`/gallery/`, weight 15)
   6. **Search** (`/search/`, weight 40)
@@ -19,7 +19,7 @@ This document defines the core architecture, design system, layout conventions, 
 
 ## 2. Standardized Section Header Pattern
 
-All primary section/menu pages (**Blogs**, **Tools**, **GeoLayer**, **Publications**, **Gallery**, **Search**) MUST use the unified header layout:
+All primary section/menu pages (**Blogs**, **Tools**, **GeoLayers**, **Publications**, **Gallery**, **Search**) MUST use the unified header layout:
 
 ```html
 <header class="gallery-header">
@@ -51,7 +51,7 @@ All primary section/menu pages (**Blogs**, **Tools**, **GeoLayer**, **Publicatio
      -webkit-background-clip: text;
      -webkit-text-fill-color: transparent;
      ```
-   - Must match the section's menu name exactly (e.g. `Blogs`, `Tools`, `GeoLayer`, `Publications`, `Gallery`, `Search`).
+   - Must match the section's menu name exactly (e.g. `Blogs`, `Tools`, `GeoLayers`, `Publications`, `Gallery`, `Search`).
 
 3. **Subtitle / Description (`.gallery-subtitle`)**:
    - `<p>` element with class `gallery-subtitle`.

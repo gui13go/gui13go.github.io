@@ -1,0 +1,905 @@
+{{- define "main" }}
+{{- $tzData := site.Data.timezones }}
+<!-- Local OpenLayers bundle with CDN fallback -->
+<link rel="stylesheet" href="/lib/openlayers/ol.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@8.2.0/ol.css">
+
+<div class="cities-page-container timezones-container">
+  <!-- Standard Breadcrumbs -->
+  <div class="gallery-breadcrumbs">
+    <a href="{{ site.BaseURL }}">Home</a> <span>/</span> <a href="/geolayers/">GeoLayers</a> <span>/</span> <span>Timezones</span>
+  </div>
+
+  <!-- Header Section -->
+  <header class="cities-header">
+    <div class="cities-header-content">
+      <div class="cities-badge-pill tz-badge-pill">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <span>Global Chronology &bull; Solar Daylight Illumination &bull; Real-Time</span>
+      </div>
+      <h1 class="cities-title">World Timezones &amp; Solar Daylight</h1>
+      <p class="cities-subtitle">
+        An interactive cartographic exploration of global standard timezones. Watch real-time daylight progression
+        across earth's standard meridians, compare offsets from UTC, scrub through 24 hours of solar terminator motion, and inspect local clocks around the globe.
+      </p>
+    </div>
+
+    <!-- Quick Stats Bar -->
+    <div class="cities-stats-bar">
+      <div class="cities-stat-card">
+        <span class="cities-stat-number font-mono tz-clock-display" id="statsUtcClock">--:--:--</span>
+        <span class="cities-stat-label">UTC / GMT (Reference)</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number font-mono tz-clock-display" id="statsLocalClock">--:--:--</span>
+        <span class="cities-stat-label">Your Local Time</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number tz-subsolar" id="statsSubsolarMeridian">0.0&deg;</span>
+        <span class="cities-stat-label">Solar Noon Longitude</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" id="statsTotalZones">{{ len $tzData.zones }}</span>
+        <span class="cities-stat-label">Standard Timezones</span>
+      </div>
+      <div class="cities-stat-card active-city-card" id="activeZoneStatCard" style="display:none;">
+        <span class="cities-stat-number active-city-name" id="activeZoneCardTitle">-</span>
+        <span class="cities-stat-label" id="activeZoneCardSub">Selected Zone</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Interactive Controls & Filter Toolbar -->
+  <div class="tz-toolbar-panel">
+    <div class="tz-toolbar-top">
+      <!-- Search Box -->
+      <div class="cities-search-box tz-search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="tzSearchInput" placeholder="Search timezone or city (e.g. Tokyo, London, São Paulo, UTC+5)..." autocomplete="off" aria-label="Search timezone or city">
+        <button type="button" id="clearTzSearch" class="clear-search-btn" style="display:none;" aria-label="Clear filter">&times;</button>
+      </div>
+
+      <!-- Live / Simulation Mode Controls -->
+      <div class="tz-mode-toggle-group">
+        <button type="button" class="tz-mode-btn active" id="btnLiveMode" title="Sync to real-time clock">
+          <span class="tz-live-indicator"></span> Live Clock
+        </button>
+        <button type="button" class="tz-mode-btn" id="btnSimMode" title="Scrub through 24-hour solar cycle">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          Solar Scrubber
+        </button>
+      </div>
+
+      <!-- Basemap & View Actions -->
+      <div class="tz-actions-group">
+        <button type="button" class="groups-btn-action" id="btnResetView" title="Reset global map view">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+          </svg>
+          <span>Reset Globe</span>
+        </button>
+        <button type="button" class="groups-btn-action" id="btnToggleBasemap" title="Switch dark/light basemap">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <span id="basemapLabel">Light Tiles</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Solar Time Scrubber Bar (visible when solar scrubber mode is engaged) -->
+    <div class="tz-scrubber-container" id="tzScrubberContainer" style="display:none;">
+      <div class="tz-scrubber-header">
+        <div class="tz-scrubber-title">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+          </svg>
+          <span>Simulated Solar Time (UTC):</span>
+          <strong id="simulatedTimeDisplay" class="font-mono">12:00:00</strong>
+        </div>
+        <div class="tz-scrubber-subtext">
+          Drag slider to view how daylight sweeps across planetary meridians
+        </div>
+      </div>
+      <div class="tz-slider-wrapper">
+        <span class="tz-slider-label">00:00</span>
+        <input type="range" id="timeScrubber" min="0" max="1439" value="720" step="5" aria-label="Solar time scrubber">
+        <span class="tz-slider-label">23:59</span>
+      </div>
+      <div class="tz-scrubber-presets">
+        <button type="button" class="tz-scrubber-quick-btn" data-hour="0">00:00 (London Midnight)</button>
+        <button type="button" class="tz-scrubber-quick-btn" data-hour="6">06:00 (European Dawn)</button>
+        <button type="button" class="tz-scrubber-quick-btn" data-hour="12">12:00 (Greenwich Noon)</button>
+        <button type="button" class="tz-scrubber-quick-btn" data-hour="17">17:00 (Americas Afternoon)</button>
+        <button type="button" class="tz-scrubber-quick-btn" data-hour="21">21:00 (Pacific Sunset)</button>
+      </div>
+    </div>
+
+    <!-- Major Region Quick-Jump Chips -->
+    <div class="tz-quick-chips" id="tzQuickChips">
+      <span class="tz-chips-label">Quick Jump:</span>
+      {{- range $tzData.zones }}
+      {{- if in (slice "utc-8" "utc-5" "utc-3" "utc-0" "utc-1-plus" "utc-3-plus" "utc-5-30-plus" "utc-8-plus" "utc-9-plus" "utc-10-plus" "utc-12-plus" "utc-14-plus") .id }}
+      <button type="button" class="tz-chip-btn" data-zone-id="{{ .id }}" data-offset="{{ .offset_minutes }}" data-name="{{ .name }}" data-lon="{{ index .center 0 }}" data-lat="{{ index .center 1 }}" data-zoom="{{ .zoom }}">
+        {{ .label }}
+      </button>
+      {{- end }}
+      {{- end }}
+    </div>
+  </div>
+
+  <!-- Stacked Layout: Map Viewport -->
+  <div class="tz-map-section">
+    <div class="tz-map-card">
+      <div class="tz-map-header-bar">
+        <div class="tz-map-title-info">
+          <span class="tz-map-dot"></span>
+          <span class="tz-map-heading">Interactive Daylight &amp; Timezone Horizon</span>
+          <span class="tz-map-legend">
+            <span class="legend-color legend-sun"></span> Daytime (Sunlight)
+            <span class="legend-color legend-night"></span> Nighttime (Darkness)
+          </span>
+        </div>
+        <div class="tz-map-status" id="mapLoadingStatus">
+          <div class="tz-spinner"></div> Loading timezones.kml...
+        </div>
+      </div>
+
+      <!-- Map Viewport -->
+      <div class="tz-viewport-wrap">
+        <div id="timezonesMap" class="timezones-map-element" tabindex="0" aria-label="World Timezones Map"></div>
+
+        <!-- Floating Tooltip Overlay -->
+        <div id="tzTooltip" class="tz-map-floating-tooltip" style="display:none;"></div>
+
+        <!-- Active Selected Timezone Overlay Card -->
+        <div id="tzDetailCard" class="tz-active-card-overlay" style="display:none;">
+          <button type="button" id="closeDetailCard" class="tz-close-card-btn" aria-label="Close detail panel">&times;</button>
+          <div class="tz-card-header">
+            <span class="tz-card-offset" id="cardTzOffset">UTC+00:00</span>
+            <span class="tz-card-status-badge" id="cardTzDaylight">Day</span>
+          </div>
+          <h3 class="tz-card-name" id="cardTzName">Greenwich Mean Time</h3>
+          <div class="tz-card-clock font-mono" id="cardTzClock">12:00:00</div>
+          <p class="tz-card-relation" id="cardTzRelation">Matches your local timezone</p>
+          <div class="tz-card-cities-section">
+            <span class="tz-card-cities-label">Representative Major Cities:</span>
+            <div class="tz-card-cities-list" id="cardTzCities">London, Dublin, Lisbon, Accra</div>
+          </div>
+          <p class="tz-card-description" id="cardTzDesc">The primary reference meridian.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- World Timezones Directory & Live Clock Grid -->
+  <section class="tz-directory-section" id="tzDirectorySection">
+    <div class="groups-row-header">
+      <div class="groups-header-info">
+        <div class="groups-title-wrap">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <h2 class="groups-title">Global Timezone Directory</h2>
+          <span class="groups-total-pill">{{ len $tzData.zones }} Meridians &amp; Local Clocks</span>
+        </div>
+      </div>
+      <div class="groups-header-actions">
+        <button type="button" class="groups-btn-action" id="toggleDirectoryCardsBtn">
+          <span id="toggleCardsLabel">Collapse Grid</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="tz-cards-grid" id="tzCardsContainer">
+      {{- range $tzData.zones }}
+      <article class="tz-grid-card" data-zone-id="{{ .id }}" data-name="{{ .name }}" data-offset="{{ .offset_minutes }}" data-cities="{{ delimit .cities ", " }}" data-lon="{{ index .center 0 }}" data-lat="{{ index .center 1 }}" data-zoom="{{ .zoom }}">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">{{ .name }}</span>
+          <span class="tz-grid-phase-pill" id="phase-{{ .id }}">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">{{ .label }}</h3>
+        <div class="tz-grid-clock font-mono" id="clock-{{ .id }}">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> {{ delimit .cities ", " }}</p>
+        <p class="tz-grid-desc">{{ .description }}</p>
+      </article>
+      {{- end }}
+    </div>
+  </section>
+</div>
+
+<!-- Load Local OpenLayers with CDN Fallback -->
+<script src="/lib/openlayers/ol.js"></script>
+<script>
+  if (typeof ol === 'undefined') {
+    document.write('<script src="https://cdn.jsdelivr.net/npm/ol@8.2.0/dist/ol.js"><\/script>');
+  }
+</script>
+
+<!-- Embedded Timezone JSON Data for JS Engine -->
+<script id="tzJsonData" type="application/json">
+{{ $tzData | jsonify | safeJS }}
+</script>
+
+<!-- Timezones Application Script -->
+<script>
+(function() {
+  'use strict';
+
+  function initTimezonesApp() {
+    if (typeof ol === 'undefined') {
+      setTimeout(initTimezonesApp, 100);
+      return;
+    }
+
+    var tzDataElement = document.getElementById('tzJsonData');
+    var tzMeta = {};
+    try {
+      tzMeta = JSON.parse(tzDataElement.textContent);
+    } catch(e) {
+      console.error('Failed to parse timezone metadata:', e);
+    }
+    var zoneMapById = {};
+    var zoneMapByName = {};
+    if (tzMeta.zones) {
+      tzMeta.zones.forEach(function(z) {
+        zoneMapById[z.id] = z;
+        zoneMapByName[z.name.toUpperCase().trim()] = z;
+      });
+    }
+
+    // State Variables
+    var isLiveMode = true;
+    var simulatedMinutes = 720; // 12:00 UTC default
+    var activeBasemapType = 'dark'; // 'dark' or 'light'
+    var selectedFeature = null;
+    var hoveredFeature = null;
+    var kmlLoaded = false;
+
+    // DOM Elements
+    var statsUtcClock = document.getElementById('statsUtcClock');
+    var statsLocalClock = document.getElementById('statsLocalClock');
+    var statsSubsolar = document.getElementById('statsSubsolarMeridian');
+    var activeZoneStatCard = document.getElementById('activeZoneStatCard');
+    var activeZoneCardTitle = document.getElementById('activeZoneCardTitle');
+    var activeZoneCardSub = document.getElementById('activeZoneCardSub');
+
+    var btnLiveMode = document.getElementById('btnLiveMode');
+    var btnSimMode = document.getElementById('btnSimMode');
+    var tzScrubberContainer = document.getElementById('tzScrubberContainer');
+    var timeScrubber = document.getElementById('timeScrubber');
+    var simulatedTimeDisplay = document.getElementById('simulatedTimeDisplay');
+
+    var btnResetView = document.getElementById('btnResetView');
+    var btnToggleBasemap = document.getElementById('btnToggleBasemap');
+    var basemapLabel = document.getElementById('basemapLabel');
+
+    var tzSearchInput = document.getElementById('tzSearchInput');
+    var clearTzSearch = document.getElementById('clearTzSearch');
+
+    var tzTooltip = document.getElementById('tzTooltip');
+    var tzDetailCard = document.getElementById('tzDetailCard');
+    var closeDetailCard = document.getElementById('closeDetailCard');
+    var cardTzOffset = document.getElementById('cardTzOffset');
+    var cardTzDaylight = document.getElementById('cardTzDaylight');
+    var cardTzName = document.getElementById('cardTzName');
+    var cardTzClock = document.getElementById('cardTzClock');
+    var cardTzRelation = document.getElementById('cardTzRelation');
+    var cardTzCities = document.getElementById('cardTzCities');
+    var cardTzDesc = document.getElementById('cardTzDesc');
+
+    var mapLoadingStatus = document.getElementById('mapLoadingStatus');
+    var mapContainer = document.getElementById('timezonesMap');
+
+    // Time Computation Helper
+    function getReferenceTime() {
+      if (isLiveMode) {
+        return new Date();
+      } else {
+        var now = new Date();
+        var hours = Math.floor(simulatedMinutes / 60);
+        var mins = simulatedMinutes % 60;
+        var sim = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), hours, mins, 0));
+        return sim;
+      }
+    }
+
+    function formatDigits(n) {
+      return n < 10 ? '0' + n : '' + n;
+    }
+
+    function formatTime(d) {
+      return formatDigits(d.getHours()) + ':' + formatDigits(d.getMinutes()) + ':' + formatDigits(d.getSeconds());
+    }
+
+    function formatUtcTime(d) {
+      return formatDigits(d.getUTCHours()) + ':' + formatDigits(d.getUTCMinutes()) + ':' + formatDigits(d.getUTCSeconds());
+    }
+
+    // Solar Subsolar Longitude: At UTC 12:00 noon, subsolar point is 0° (Greenwich).
+    // Earth rotates 360° in 24 hours (15° per hour or 0.25° per minute).
+    // Longitude = (12 - UTC_hours) * 15°
+    function getSubsolarLongitude(d) {
+      var utcDecHours = d.getUTCHours() + d.getUTCMinutes() / 60 + d.getUTCSeconds() / 3600;
+      var lon = (12 - utcDecHours) * 15;
+      if (lon > 180) lon -= 360;
+      if (lon < -180) lon += 360;
+      return lon.toFixed(1) + (lon >= 0 ? '° E' : '° W');
+    }
+
+    // Calculate daylight intensity and phase for a timezone offset
+    function calculateDaylight(refDate, offsetMinutes) {
+      // Create local date in target timezone
+      // targetTime = UTC + offsetMinutes
+      var utcMs = refDate.getTime() + (refDate.getTimezoneOffset() * 60000);
+      var localDate = new Date(utcMs + (offsetMinutes * 60000));
+
+      var decHours = localDate.getHours() + localDate.getMinutes() / 60 + localDate.getSeconds() / 3600;
+      var distFromNoon = Math.abs(12 - decHours);
+      if (distFromNoon > 12) distFromNoon = 24 - distFromNoon;
+
+      // 0 = exact noon, 12 = exact midnight
+      var intensity = 0.55 * Math.max(0, 1 - (distFromNoon / 12));
+
+      var phase = 'Night';
+      var phaseColor = '#94a3b8';
+      if (distFromNoon <= 3.5) {
+        phase = 'Solar Noon';
+        phaseColor = '#fbbf24';
+      } else if (distFromNoon <= 6) {
+        phase = 'Daylight';
+        phaseColor = '#facc15';
+      } else if (distFromNoon <= 7.5) {
+        phase = 'Twilight';
+        phaseColor = '#fb923c';
+      } else {
+        phase = 'Night';
+        phaseColor = '#818cf8';
+      }
+
+      return {
+        localDate: localDate,
+        intensity: intensity,
+        distFromNoon: distFromNoon,
+        phase: phase,
+        phaseColor: phaseColor
+      };
+    }
+
+    // Basemap Layers - keyless OpenStreetMap tile layers
+    var osmSource = new ol.source.OSM({
+      attributions: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
+    });
+
+    var darkBasemap = new ol.layer.Tile({
+      source: osmSource,
+      className: 'tz-dark-tiles',
+      visible: true
+    });
+
+    var lightBasemap = new ol.layer.Tile({
+      source: osmSource,
+      visible: false
+    });
+
+    // Parse timezone offset minutes from polygon feature name (e.g. "GMT -05:00", "GMT +05:30")
+    function parseOffsetFromFeature(feature) {
+      var offset = feature.get('tz-offset');
+      if (offset !== undefined && offset !== null) return offset;
+
+      var name = feature.get('name') || '';
+      var m = name.match(/([+-]?)(\d{1,2}):(\d{2})$/);
+      if (m) {
+        var sign = (m[1] === '-') ? -1 : 1;
+        var h = parseInt(m[2], 10);
+        var min = parseInt(m[3], 10);
+        offset = sign * (h * 60 + min);
+      } else if (name.indexOf('GMT 00:00') !== -1 || name.indexOf('GMT 0') !== -1) {
+        offset = 0;
+      } else {
+        offset = 0;
+      }
+      feature.set('tz-offset', offset, true);
+      return offset;
+    }
+
+    // Dynamic Style function replicating and elevating the inspiration algorithm
+    function timezoneStyleFunction(feature) {
+      var offset = parseOffsetFromFeature(feature);
+      var refDate = getReferenceTime();
+      var dl = calculateDaylight(refDate, offset);
+
+      var isSelected = (selectedFeature === feature);
+      var isHovered = (hoveredFeature === feature);
+
+      var fillColor;
+      if (dl.intensity > 0.02) {
+        // Vibrant daylight golden sunlight illumination
+        fillColor = [255, 220, 60, dl.intensity];
+      } else {
+        // Subtle dark night tint
+        fillColor = activeBasemapType === 'dark' ? [15, 23, 42, 0.40] : [71, 85, 105, 0.20];
+      }
+
+      var strokeColor = isSelected ? '#38bdf8' : (isHovered ? '#fbbf24' : 'rgba(255, 255, 255, 0.32)');
+      var strokeWidth = isSelected ? 2.8 : (isHovered ? 2.0 : 0.85);
+
+      return new ol.style.Style({
+        fill: new ol.style.Fill({ color: fillColor }),
+        stroke: new ol.style.Stroke({ color: strokeColor, width: strokeWidth })
+      });
+    }
+
+    // Vector Source & Layer for timezones.kml
+    var kmlSource = new ol.source.Vector({
+      url: '/data/timezones.kml',
+      format: new ol.format.KML({ extractStyles: false })
+    });
+
+    var timezoneVectorLayer = new ol.layer.Vector({
+      source: kmlSource,
+      style: timezoneStyleFunction
+    });
+
+    // Tooltip Overlay
+    var tooltipOverlay = new ol.Overlay({
+      element: tzTooltip,
+      offset: [15, -10],
+      positioning: 'bottom-left'
+    });
+
+    // Map View
+    var defaultCenter = ol.proj.fromLonLat([10, 20]);
+    var defaultZoom = 2.2;
+    var mapView = new ol.View({
+      center: defaultCenter,
+      zoom: defaultZoom,
+      minZoom: 1.5,
+      maxZoom: 10
+    });
+
+    // OpenLayers Map Instance
+    var map = new ol.Map({
+      target: mapContainer,
+      layers: [darkBasemap, lightBasemap, timezoneVectorLayer],
+      view: mapView,
+      overlays: [tooltipOverlay],
+      controls: ol.control.defaults.defaults({
+        zoom: true,
+        rotate: false,
+        attribution: true
+      })
+    });
+
+    // When KML features are loaded
+    kmlSource.on('featuresloadend', function(e) {
+      kmlLoaded = true;
+      if (mapLoadingStatus) {
+        mapLoadingStatus.innerHTML = '<span class="tz-ready-badge">&check; 38 Timezones Active</span>';
+      }
+      e.features.forEach(function(feat) {
+        parseOffsetFromFeature(feat);
+      });
+      // Initial render pass
+      timezoneVectorLayer.changed();
+    });
+
+    kmlSource.on('featuresloaderror', function() {
+      if (mapLoadingStatus) {
+        mapLoadingStatus.innerHTML = '<span class="tz-err-badge">! Error loading timezones.kml</span>';
+      }
+    });
+
+    // Pointer move listener for hover tooltip
+    map.on('pointermove', function(evt) {
+      if (evt.dragging) {
+        tooltipOverlay.setPosition(undefined);
+        tzTooltip.style.display = 'none';
+        return;
+      }
+
+      var hitFeature = map.forEachFeatureAtPixel(evt.pixel, function(feat) {
+        return feat;
+      });
+
+      if (hitFeature && hitFeature.get('name')) {
+        if (hoveredFeature !== hitFeature) {
+          hoveredFeature = hitFeature;
+          timezoneVectorLayer.changed();
+        }
+
+        var tzName = hitFeature.get('name') || '';
+        var offset = parseOffsetFromFeature(hitFeature);
+        var ref = getReferenceTime();
+        var dl = calculateDaylight(ref, offset);
+
+        // Find metadata if available
+        var cleanName = tzName.toUpperCase().trim();
+        var meta = zoneMapByName[cleanName];
+        var citiesSnippet = meta ? meta.cities.slice(0, 3).join(', ') : '';
+
+        var html = '<div class="tz-tooltip-header">' +
+          '<span class="tz-tooltip-name">' + tzName + '</span>' +
+          '<span class="tz-tooltip-phase" style="color:' + dl.phaseColor + ';">' + dl.phase + '</span>' +
+          '</div>' +
+          '<div class="tz-tooltip-time font-mono">' + formatTime(dl.localDate) + '</div>' +
+          (citiesSnippet ? '<div class="tz-tooltip-cities">' + citiesSnippet + '</div>' : '');
+
+        tzTooltip.innerHTML = html;
+        tzTooltip.style.display = 'block';
+        tooltipOverlay.setPosition(evt.coordinate);
+        map.getTargetElement().style.cursor = 'pointer';
+      } else {
+        if (hoveredFeature !== null) {
+          hoveredFeature = null;
+          timezoneVectorLayer.changed();
+        }
+        tooltipOverlay.setPosition(undefined);
+        tzTooltip.style.display = 'none';
+        map.getTargetElement().style.cursor = '';
+      }
+    });
+
+    // Click listener to select timezone and inspect details
+    map.on('click', function(evt) {
+      var hit = map.forEachFeatureAtPixel(evt.pixel, function(feat) {
+        return feat;
+      });
+
+      if (hit && hit.get('name')) {
+        selectTimezoneFeature(hit);
+      } else {
+        deselectTimezone();
+      }
+    });
+
+    function selectTimezoneFeature(feature) {
+      selectedFeature = feature;
+      timezoneVectorLayer.changed();
+
+      var tzName = feature.get('name') || '';
+      var offset = parseOffsetFromFeature(feature);
+      var ref = getReferenceTime();
+      var dl = calculateDaylight(ref, offset);
+
+      var cleanName = tzName.toUpperCase().trim();
+      var meta = zoneMapByName[cleanName];
+
+      // Update Detail Card
+      cardTzOffset.textContent = tzName;
+      cardTzDaylight.textContent = dl.phase;
+      cardTzDaylight.style.backgroundColor = dl.phaseColor + '22';
+      cardTzDaylight.style.color = dl.phaseColor;
+      cardTzDaylight.style.borderColor = dl.phaseColor + '55';
+
+      cardTzName.textContent = meta ? meta.label : tzName;
+      cardTzClock.textContent = formatTime(dl.localDate);
+
+      // Relationship to viewer's local time
+      var userOffsetMin = -new Date().getTimezoneOffset();
+      var diffMin = offset - userOffsetMin;
+      var diffHours = (diffMin / 60);
+      var relationText = '';
+      if (diffMin === 0) {
+        relationText = 'Same time as your current location';
+      } else if (diffMin > 0) {
+        relationText = diffHours + ' hour' + (Math.abs(diffHours) === 1 ? '' : 's') + ' ahead of your local time';
+      } else {
+        relationText = Math.abs(diffHours) + ' hour' + (Math.abs(diffHours) === 1 ? '' : 's') + ' behind your local time';
+      }
+      cardTzRelation.textContent = relationText;
+
+      if (meta && meta.cities) {
+        cardTzCities.textContent = meta.cities.join(', ');
+        cardTzDesc.textContent = meta.description;
+      } else {
+        cardTzCities.textContent = 'Standard international maritime / territory coordinates';
+        cardTzDesc.textContent = 'International Standard Time offset division.';
+      }
+
+      tzDetailCard.style.display = 'block';
+
+      // Update Quick Stat card in header
+      if (activeZoneStatCard) {
+        activeZoneStatCard.style.display = 'flex';
+        activeZoneCardTitle.textContent = formatTime(dl.localDate);
+        activeZoneCardSub.textContent = tzName;
+      }
+
+      // Highlight corresponding card in directory grid
+      highlightDirectoryCard(tzName);
+    }
+
+    function deselectTimezone() {
+      selectedFeature = null;
+      timezoneVectorLayer.changed();
+      tzDetailCard.style.display = 'none';
+      if (activeZoneStatCard) {
+        activeZoneStatCard.style.display = 'none';
+      }
+      highlightDirectoryCard(null);
+    }
+
+    if (closeDetailCard) {
+      closeDetailCard.addEventListener('click', function() {
+        deselectTimezone();
+      });
+    }
+
+    // Highlight Directory Card
+    function highlightDirectoryCard(tzName) {
+      var allCards = document.querySelectorAll('.tz-grid-card');
+      allCards.forEach(function(card) {
+        if (tzName && card.getAttribute('data-name') === tzName) {
+          card.classList.add('active-card');
+          card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          card.classList.remove('active-card');
+        }
+      });
+    }
+
+    // Directory Card Click Handler
+    var directoryContainer = document.getElementById('tzCardsContainer');
+    if (directoryContainer) {
+      directoryContainer.addEventListener('click', function(e) {
+        var card = e.target.closest('.tz-grid-card');
+        if (!card) return;
+
+        var name = card.getAttribute('data-name');
+        var lon = parseFloat(card.getAttribute('data-lon'));
+        var lat = parseFloat(card.getAttribute('data-lat'));
+        var zoom = parseFloat(card.getAttribute('data-zoom')) || 3.5;
+
+        // Smooth camera fly-to
+        mapView.animate({
+          center: ol.proj.fromLonLat([lon, lat]),
+          zoom: zoom,
+          duration: 900
+        });
+
+        // Find feature in vector layer
+        if (kmlSource) {
+          var feats = kmlSource.getFeatures();
+          for (var i = 0; i < feats.length; i++) {
+            if (feats[i].get('name') === name) {
+              selectTimezoneFeature(feats[i]);
+              break;
+            }
+          }
+        }
+      });
+    }
+
+    // Quick Chips Buttons
+    var quickChips = document.getElementById('tzQuickChips');
+    if (quickChips) {
+      quickChips.addEventListener('click', function(e) {
+        var btn = e.target.closest('.tz-chip-btn');
+        if (!btn) return;
+
+        var lon = parseFloat(btn.getAttribute('data-lon'));
+        var lat = parseFloat(btn.getAttribute('data-lat'));
+        var zoom = parseFloat(btn.getAttribute('data-zoom')) || 3.5;
+        var name = btn.getAttribute('data-name');
+
+        mapView.animate({
+          center: ol.proj.fromLonLat([lon, lat]),
+          zoom: zoom,
+          duration: 850
+        });
+
+        if (kmlSource) {
+          var feats = kmlSource.getFeatures();
+          for (var i = 0; i < feats.length; i++) {
+            if (feats[i].get('name') === name) {
+              selectTimezoneFeature(feats[i]);
+              break;
+            }
+          }
+        }
+      });
+    }
+
+    // Mode Toggle: Live vs Solar Simulation
+    btnLiveMode.addEventListener('click', function() {
+      isLiveMode = true;
+      btnLiveMode.classList.add('active');
+      btnSimMode.classList.remove('active');
+      tzScrubberContainer.style.display = 'none';
+      updateAllDisplays();
+    });
+
+    btnSimMode.addEventListener('click', function() {
+      isLiveMode = false;
+      btnSimMode.classList.add('active');
+      btnLiveMode.classList.remove('active');
+      tzScrubberContainer.style.display = 'block';
+
+      // Initialize slider to current UTC minutes
+      var now = new Date();
+      simulatedMinutes = now.getUTCHours() * 60 + now.getUTCMinutes();
+      timeScrubber.value = simulatedMinutes;
+      updateScrubberDisplay();
+      updateAllDisplays();
+    });
+
+    timeScrubber.addEventListener('input', function() {
+      simulatedMinutes = parseInt(timeScrubber.value, 10);
+      updateScrubberDisplay();
+      updateAllDisplays();
+    });
+
+    function updateScrubberDisplay() {
+      var h = Math.floor(simulatedMinutes / 60);
+      var m = simulatedMinutes % 60;
+      simulatedTimeDisplay.textContent = formatDigits(h) + ':' + formatDigits(m) + ':00';
+    }
+
+    // Scrubber Quick Preset Buttons
+    var scrubberQuickBtns = document.querySelectorAll('.tz-scrubber-quick-btn');
+    scrubberQuickBtns.forEach(function(b) {
+      b.addEventListener('click', function() {
+        var targetHour = parseInt(b.getAttribute('data-hour'), 10);
+        simulatedMinutes = targetHour * 60;
+        timeScrubber.value = simulatedMinutes;
+        updateScrubberDisplay();
+        updateAllDisplays();
+      });
+    });
+
+    // Basemap Switcher
+    btnToggleBasemap.addEventListener('click', function() {
+      if (activeBasemapType === 'dark') {
+        activeBasemapType = 'light';
+        darkBasemap.setVisible(false);
+        lightBasemap.setVisible(true);
+        basemapLabel.textContent = 'Dark Tiles';
+        mapContainer.style.backgroundColor = '#e2e8f0';
+      } else {
+        activeBasemapType = 'dark';
+        darkBasemap.setVisible(true);
+        lightBasemap.setVisible(false);
+        basemapLabel.textContent = 'Light Tiles';
+        mapContainer.style.backgroundColor = '#0b0f19';
+      }
+      timezoneVectorLayer.changed();
+    });
+
+    // Reset View Button
+    btnResetView.addEventListener('click', function() {
+      mapView.animate({
+        center: defaultCenter,
+        zoom: defaultZoom,
+        duration: 750
+      });
+    });
+
+    // Search and Filter Functionality
+    tzSearchInput.addEventListener('input', function() {
+      var query = tzSearchInput.value.toLowerCase().trim();
+      clearTzSearch.style.display = query ? 'inline-flex' : 'none';
+      filterTimezones(query);
+    });
+
+    clearTzSearch.addEventListener('click', function() {
+      tzSearchInput.value = '';
+      clearTzSearch.style.display = 'none';
+      filterTimezones('');
+      tzSearchInput.focus();
+    });
+
+    function filterTimezones(q) {
+      var cards = document.querySelectorAll('.tz-grid-card');
+      var matchedCount = 0;
+      var firstMatchCard = null;
+
+      cards.forEach(function(c) {
+        var name = (c.getAttribute('data-name') || '').toLowerCase();
+        var cities = (c.getAttribute('data-cities') || '').toLowerCase();
+        var title = (c.querySelector('.tz-grid-title') ? c.querySelector('.tz-grid-title').textContent : '').toLowerCase();
+
+        var match = (!q || name.indexOf(q) !== -1 || cities.indexOf(q) !== -1 || title.indexOf(q) !== -1);
+        c.style.display = match ? 'flex' : 'none';
+        if (match) {
+          matchedCount++;
+          if (!firstMatchCard) firstMatchCard = c;
+        }
+      });
+    }
+
+    // Toggle Directory Grid Visibility
+    var toggleCardsBtn = document.getElementById('toggleDirectoryCardsBtn');
+    var toggleCardsLabel = document.getElementById('toggleCardsLabel');
+    if (toggleCardsBtn && toggleCardsLabel && directoryContainer) {
+      toggleCardsBtn.addEventListener('click', function() {
+        if (directoryContainer.style.display === 'none') {
+          directoryContainer.style.display = 'grid';
+          toggleCardsLabel.textContent = 'Collapse Grid';
+        } else {
+          directoryContainer.style.display = 'none';
+          toggleCardsLabel.textContent = 'Expand Grid';
+        }
+      });
+    }
+
+    // Main Clock & Display Update Loop
+    function updateAllDisplays() {
+      var ref = getReferenceTime();
+
+      // Top Header Stats
+      if (statsUtcClock) statsUtcClock.textContent = formatUtcTime(ref);
+      if (statsLocalClock) statsLocalClock.textContent = formatTime(isLiveMode ? new Date() : ref);
+      if (statsSubsolar) statsSubsolar.textContent = getSubsolarLongitude(ref);
+
+      // If a timezone is currently selected, update its clock
+      if (selectedFeature) {
+        var off = parseOffsetFromFeature(selectedFeature);
+        var dl = calculateDaylight(ref, off);
+        cardTzClock.textContent = formatTime(dl.localDate);
+        if (activeZoneCardTitle) activeZoneCardTitle.textContent = formatTime(dl.localDate);
+      }
+
+      // Update Directory Cards clocks & phase badges
+      if (tzMeta.zones) {
+        tzMeta.zones.forEach(function(z) {
+          var clockEl = document.getElementById('clock-' + z.id);
+          var phaseEl = document.getElementById('phase-' + z.id);
+          if (clockEl || phaseEl) {
+            var dl = calculateDaylight(ref, z.offset_minutes);
+            if (clockEl) clockEl.textContent = formatTime(dl.localDate);
+            if (phaseEl) {
+              phaseEl.textContent = dl.phase;
+              phaseEl.style.color = dl.phaseColor;
+              phaseEl.style.backgroundColor = dl.phaseColor + '20';
+              phaseEl.style.borderColor = dl.phaseColor + '40';
+            }
+          }
+        });
+      }
+
+      // Redraw map vector layer styles
+      if (kmlLoaded) {
+        timezoneVectorLayer.changed();
+      }
+    }
+
+    // Run clock updates every 1000ms
+    updateAllDisplays();
+    setInterval(function() {
+      if (isLiveMode) {
+        updateAllDisplays();
+      }
+    }, 1000);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTimezonesApp);
+  } else {
+    initTimezonesApp();
+  }
+})();
+</script>
+{{- end }}

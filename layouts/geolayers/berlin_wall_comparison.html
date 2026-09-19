@@ -1,0 +1,875 @@
+{{- define "main" }}
+{{- $wall := site.Data.berlin_wall }}
+<link rel="stylesheet" href="/lib/leaflet/leaflet.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<div class="cities-page-container berlin-wall-container">
+  <!-- Standard Breadcrumbs conforming to AGENTS.md -->
+  <div class="gallery-breadcrumbs">
+    <a href="{{ site.BaseURL }}">Home</a> <span>/</span> <a href="/geolayers/">GeoLayers</a> <span>/</span> <span>Berlin Wall Comparison</span>
+  </div>
+
+  <!-- Standard Header Section conforming to AGENTS.md -->
+  <header class="cities-header">
+    <div class="cities-header-content">
+      <div class="cities-badge-pill berlin-wall-badge">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="3" y1="9" x2="21" y2="9"></line>
+          <line x1="3" y1="15" x2="21" y2="15"></line>
+          <line x1="9" y1="3" x2="9" y2="21"></line>
+          <line x1="15" y1="3" x2="15" y2="21"></line>
+        </svg>
+        <span>Cold War Geopolitics &bull; 1961–1989 &bull; 10,316 Days of Division</span>
+      </div>
+      <h1 class="cities-title">Berlin Wall Comparison</h1>
+      <p class="cities-subtitle">
+        An interactive cartographic visualization comparing the true scale and footprint of the Berlin Wall to major world cities. Project the 155 km fortified barrier onto any metropolitan center across the globe to comprehend what it would mean to wall off entire urban civilisations.
+      </p>
+    </div>
+
+    <!-- Quick Stats Bar -->
+    <div class="cities-stats-bar">
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" style="background: var(--theme-accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">155.0 km</span>
+        <span class="cities-stat-label">Total Perimeter</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" style="color: #ef4444;">43.1 km</span>
+        <span class="cities-stat-label">Inner Berlin Division</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number">302</span>
+        <span class="cities-stat-label">Watchtowers</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" style="color: #10b981;">2.1 M</span>
+        <span class="cities-stat-label">West Berliners Encircled</span>
+      </div>
+      <div class="cities-stat-card active-city-card" id="activeCompareCard">
+        <span class="cities-stat-number active-city-name" id="activeCityTitle">Berlin (Original)</span>
+        <span class="cities-stat-label" id="activeCitySubtitle">Historical Course</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Interactive Comparison & Exploration Toolbar -->
+  <div class="berlin-sim-toolbar">
+    <div class="berlin-city-pills" role="group" aria-label="Compare with World Metropolises">
+      <span class="berlin-toolbar-label">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        Overlay onto City:
+      </span>
+      {{- range $wall.comparisons }}
+      <button type="button" class="berlin-city-pill-btn {{- if eq .id "berlin" }} active{{- end }}" data-city-id="{{ .id }}" data-lat="{{ index .center 0 }}" data-lng="{{ index .center 1 }}" data-zoom="{{ .zoom }}" title="{{ .name }} - {{ .scale_comparison }}">
+        <span class="city-pill-name">{{ .name }}</span>
+      </button>
+      {{- end }}
+    </div>
+
+    <!-- Rotation & Custom Projection Options -->
+    <div class="berlin-toolbar-controls">
+      <div class="berlin-rotation-control">
+        <label for="wallRotationSlider" class="berlin-control-label">
+          Rotate Overlay: <span id="wallRotationValue">0&deg;</span>
+        </label>
+        <input type="range" id="wallRotationSlider" min="0" max="360" step="15" value="0" class="berlin-slider">
+      </div>
+      <button type="button" class="groups-btn-action" id="toggleBriefingBtn" title="Toggle Historical Briefing">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+        </svg>
+        <span id="toggleBriefingText">Historical Briefing</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- City Scale Context Banner -->
+  <div class="berlin-comparison-banner" id="berlinComparisonBanner">
+    <div class="comparison-banner-icon">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+        <line x1="9" y1="9" x2="9.01" y2="9"></line>
+        <line x1="15" y1="9" x2="15.01" y2="9"></line>
+      </svg>
+    </div>
+    <div class="comparison-banner-text">
+      <h3 id="bannerCityHeading">The Berlin Wall at Historical Scale (155 km)</h3>
+      <p id="bannerCityDesc">Encompassing 480 km² of Allied West Berlin territory (American, British, and French sectors), completely encircled by the German Democratic Republic.</p>
+    </div>
+  </div>
+
+  <!-- Collapsible Historical Briefing -->
+  <div class="nukes-briefing-drawer" id="historicalBriefingDrawer" style="display:none;">
+    <div class="briefing-drawer-inner">
+      <div class="briefing-drawer-header">
+        <div class="briefing-drawer-title">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          <h3>Historical &amp; Strategic Dossier: The Architecture of Division</h3>
+        </div>
+        <button type="button" class="close-briefing-btn" id="closeBriefingBtn" aria-label="Close Dossier">&times;</button>
+      </div>
+      <div class="briefing-content-grid">
+        {{- range $wall.briefing.sections }}
+        <article class="briefing-card">
+          <h4 class="briefing-heading">{{ .heading }}</h4>
+          <p class="briefing-text">{{ .content }}</p>
+        </article>
+        {{- end }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Stacked Layout: Row 1 = Checkpoint Explorer, Row 2 = Interactive Map Viewport -->
+  <div class="cities-layout-stacked">
+    <!-- Key Checkpoints & Relics Explorer -->
+    <section class="cities-groups-row" id="wallExplorerSection">
+      <div class="groups-row-header">
+        <div class="groups-header-info">
+          <div class="groups-title-wrap">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <h2 class="groups-title">Historical Checkpoints &amp; Relics</h2>
+            <span class="groups-total-pill">8 Strategic Landmarks &bull; Berlin Sector Line</span>
+          </div>
+
+          <!-- Quick Search -->
+          <div class="cities-search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="checkpointSearchInput" placeholder="Filter landmark by name, sector or type..." autocomplete="off" aria-label="Filter landmarks">
+            <button type="button" id="clearCheckpointSearch" class="clear-search-btn" style="display:none;" aria-label="Clear filter">&times;</button>
+          </div>
+        </div>
+
+        <div class="groups-header-actions">
+          <button type="button" class="groups-btn-action toggle-cards-btn" id="toggleCardsBtn" title="Show or hide landmark cards">
+            <svg id="toggleCardsIcon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+            <span id="toggleCardsText">Collapse Cards</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Filter Pills -->
+      <div class="nukes-filter-chips-row">
+        <button type="button" class="nuke-chip-btn active" data-filter="all">All Landmarks (8)</button>
+        <button type="button" class="nuke-chip-btn" data-filter="checkpoint">Checkpoints</button>
+        <button type="button" class="nuke-chip-btn" data-filter="memorial">Memorials &amp; Relics</button>
+        <button type="button" class="nuke-chip-btn" data-filter="historic">1989 Fall Sites</button>
+      </div>
+
+      <!-- Checkpoint Cards Grid -->
+      <div class="cities-groups-cards-grid nukes-cards-grid" id="checkpointCardsGrid">
+        {{- range $wall.checkpoints }}
+        <div class="city-group-card nuke-bomb-card" data-landmark-id="{{ .id }}" data-type="{{ .type | lower }}" data-name="{{ .name | lower }}" data-sector="{{ .sector | lower }}" data-lat="{{ .lat }}" data-lon="{{ .lon }}">
+          <div class="city-group-card-header">
+            <div class="card-header-left">
+              <span class="bomb-badge-dot" style="background-color: {{ .color }}; box-shadow: 0 0 10px {{ .color }};"></span>
+              <span class="group-name">{{ .name }}</span>
+              <span class="nuke-status-badge" style="border-color: {{ .color }}66; color: {{ .color }}; background: {{ .color }}14;">
+                {{ .badge }}
+              </span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn nuke-fly-btn" data-lat="{{ .lat }}" data-lon="{{ .lon }}" title="Fly camera to {{ .name }}">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="city-group-card-body show nuke-card-body">
+            <div class="nuke-location-title">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>{{ .sector }}</span>
+              <span class="nuke-elevation">({{ .status }})</span>
+            </div>
+
+            <p class="nuke-card-desc">{{ .summary }}</p>
+            <p class="nuke-tech-detail">{{ .description }}</p>
+
+            <div class="nuke-specs-row">
+              <div class="nuke-spec">
+                <span class="spec-dim">Coordinates:</span>
+                <span class="spec-val">{{ printf "%.4f" .lat }}&deg; N, {{ printf "%.4f" .lon }}&deg; E</span>
+              </div>
+              <div class="nuke-spec">
+                <span class="spec-dim">Type:</span>
+                <span class="spec-val">{{ .type }}</span>
+              </div>
+            </div>
+
+            <button type="button" class="nuke-card-action-btn" data-lat="{{ .lat }}" data-lon="{{ .lon }}" data-id="{{ .id }}">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Focus on Map</span>
+            </button>
+          </div>
+        </div>
+        {{- end }}
+      </div>
+    </section>
+
+    <!-- Row 2: Interactive Map Viewport (Full Width Below) -->
+    <main class="cities-map-viewport nukes-map-viewport berlin-map-viewport">
+      <!-- Floating Toolbar on top of map -->
+      <div class="cities-map-controls-bar">
+        <!-- Quick Landmark Jump -->
+        <div class="map-control-group">
+          <label for="landmarkJumpSelect" class="sr-only">Jump to Historical Landmark</label>
+          <select id="landmarkJumpSelect" class="map-select-input" aria-label="Jump to Historical Landmark">
+            <option value="overview">🎯 Berlin Wall Entire Perimeter (155 km)</option>
+            {{- range $wall.checkpoints }}
+            <option value="{{ .id }}" data-lat="{{ .lat }}" data-lon="{{ .lon }}">
+              📍 {{ .name }}
+            </option>
+            {{- end }}
+          </select>
+        </div>
+
+        <!-- Basemap Switcher (100% Free, NO API Key Required) -->
+        <div class="map-control-group">
+          <label for="basemapSelect" class="sr-only">Basemap Style (No API Key Required)</label>
+          <select id="basemapSelect" class="map-select-input" aria-label="Select Basemap (No API Key Required)">
+            <option value="carto-dark" selected>🌌 CartoDB Dark (Keyless)</option>
+            <option value="osm">🗺️ OpenStreetMap (Keyless)</option>
+            <option value="satellite">🛰️ Satellite (Esri - Keyless)</option>
+            <option value="esri-dark">🌙 Dark Gray (Esri - Keyless)</option>
+            <option value="esri-light">☀️ Minimal Light (Esri - Keyless)</option>
+            <option value="topo">🏔️ Topographic (OpenTopo - Keyless)</option>
+          </select>
+        </div>
+
+        <!-- Layers Toggle -->
+        <div class="map-control-group">
+          <button type="button" class="map-toggle-btn active" id="btnToggleWallPolyline" title="Toggle 155km Outer Wall Perimeter">
+            <span class="btn-indicator"></span> Outer Wall (155 km)
+          </button>
+        </div>
+
+        <div class="map-control-group">
+          <button type="button" class="map-toggle-btn active" id="btnToggleInnerPolyline" title="Toggle 43km Inner Berlin Sector Wall">
+            <span class="btn-indicator inner-indicator"></span> Inner Divide (43 km)
+          </button>
+        </div>
+
+        <div class="map-control-group">
+          <button type="button" class="map-toggle-btn active" id="btnToggleCheckpoints" title="Toggle Landmark Markers">
+            <span class="btn-indicator marker-indicator"></span> Landmarks
+          </button>
+        </div>
+
+        <!-- Recenter Action -->
+        <div class="map-control-group">
+          <button type="button" class="map-toggle-btn" id="btnRecenter" title="Reset View to Active Center">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+              <path d="M3 3v5h5" />
+            </svg>
+            Recenter
+          </button>
+        </div>
+      </div>
+
+      <!-- Map Canvas Container -->
+      <div id="berlinWallMap" class="cities-leaflet-container" tabindex="0" aria-label="Interactive Berlin Wall Map"></div>
+
+      <!-- Map Legend Overlay -->
+      <div class="cities-map-legend-overlay nukes-legend-box berlin-legend-box" id="mapLegend">
+        <div class="legend-header">
+          <span class="legend-title">Cartographic Legend</span>
+          <button type="button" class="legend-toggle-btn" id="legendToggleBtn" aria-label="Toggle Legend">&minus;</button>
+        </div>
+        <div class="legend-content" id="legendBody">
+          <div class="legend-item">
+            <span class="legend-line" style="background: #ef4444; box-shadow: 0 0 8px #ef4444;"></span>
+            <span class="legend-label"><strong>Inner Berlin Wall (43.1 km)</strong> &ndash; Bisecting the metropolis</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-line" style="background: #3b82f6; box-shadow: 0 0 8px #3b82f6;"></span>
+            <span class="legend-label"><strong>Outer Perimeter Wall (111.9 km)</strong> &ndash; GDR border cordon</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background: #f59e0b; box-shadow: 0 0 8px #f59e0b;"></span>
+            <span class="legend-label"><strong>Checkpoints &amp; Memorials</strong> &ndash; 8 historic sites</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background: #8b5cf6; box-shadow: 0 0 8px #8b5cf6;"></span>
+            <span class="legend-label"><strong>Comparison Center</strong> &ndash; Projection anchor point</span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Embedded JSON Data for Leaflet Initialization -->
+<script id="berlinWallData" type="application/json">
+  {{ $wall | jsonify | safeJS }}
+</script>
+
+<script src="/lib/leaflet/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+  (function () {
+    const rawDataElem = document.getElementById('berlinWallData');
+    if (!rawDataElem) return;
+
+    let wallData = {};
+    try {
+      wallData = JSON.parse(rawDataElem.textContent);
+    } catch (e) {
+      console.error('Failed to parse Berlin Wall data JSON:', e);
+      return;
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function () {
+        initBerlinWallApp(wallData);
+      });
+    } else {
+      initBerlinWallApp(wallData);
+    }
+  })();
+
+  function initBerlinWallApp(data) {
+    const mapContainer = document.getElementById('berlinWallMap');
+    if (!mapContainer || mapContainer._leaflet_id) return;
+
+    // Basemap Providers (100% Free, NO API Key Required)
+    const basemaps = {
+      'carto-dark': L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://carto.com/">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 19
+      }),
+      'osm': L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        maxZoom: 19
+      }),
+      'satellite': L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Maxar, Earthstar Geographics',
+        maxZoom: 18
+      }),
+      'esri-dark': L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri',
+        maxZoom: 16
+      }),
+      'esri-light': L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri',
+        maxZoom: 16
+      }),
+      'topo': L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map: &copy; OpenTopoMap',
+        maxZoom: 17
+      })
+    };
+
+    // Auto-detect dark or light mode from Hugo PaperMod class
+    const isDarkInitial = document.body.classList.contains('dark') || document.documentElement.classList.contains('dark');
+    let activeBasemapKey = isDarkInitial ? 'carto-dark' : 'osm';
+
+    const basemapSelect = document.getElementById('basemapSelect');
+    if (basemapSelect) {
+      basemapSelect.value = activeBasemapKey;
+    }
+
+    // Graceful fallback if any tile provider experiences an error
+    Object.keys(basemaps).forEach(key => {
+      basemaps[key].on('tileerror', function () {
+        console.warn(`Tile load issue on ${key}. Fallback available without API key.`);
+      });
+    });
+
+    const originalCenter = data.wall_center || [52.5163, 13.3777];
+    let currentCenter = [...originalCenter];
+    let currentRotation = 0;
+    let currentCityId = 'berlin';
+
+    const map = L.map('berlinWallMap', {
+      center: originalCenter,
+      zoom: data.default_zoom || 11,
+      zoomControl: false,
+      layers: [basemaps[activeBasemapKey]],
+      minZoom: 3,
+      maxZoom: 18
+    });
+
+    L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+    // Watch for theme toggles in PaperMod
+    const themeObserver = new MutationObserver(() => {
+      const isDarkNow = document.body.classList.contains('dark') || document.documentElement.classList.contains('dark');
+      if (activeBasemapKey === 'carto-dark' || activeBasemapKey === 'osm') {
+        const targetKey = isDarkNow ? 'carto-dark' : 'osm';
+        if (targetKey !== activeBasemapKey) {
+          map.removeLayer(basemaps[activeBasemapKey]);
+          map.addLayer(basemaps[targetKey]);
+          activeBasemapKey = targetKey;
+          if (basemapSelect) basemapSelect.value = targetKey;
+        }
+      }
+    });
+    themeObserver.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
+    // Layer Groups
+    const outerWallLayer = L.layerGroup().addTo(map);
+    const innerWallLayer = L.layerGroup().addTo(map);
+    const checkpointLayer = L.layerGroup().addTo(map);
+    const centerAnchorLayer = L.layerGroup().addTo(map);
+
+    // Projection & Rotation Math:
+    // Transforms coordinates relative to Berlin's center, applies rotation, and projects around new target center
+    function transformCoords(lat, lon, anchorLat, anchorLon, newCenterLat, newCenterLon, angleDeg) {
+      const dLat = lat - anchorLat;
+      const dLon = lon - anchorLon;
+
+      // Adjust lon for latitude compression (Mercator approximation)
+      const latRad = (anchorLat * Math.PI) / 180;
+      const x = dLon * Math.cos(latRad);
+      const y = dLat;
+
+      const angleRad = (angleDeg * Math.PI) / 180;
+      const cosA = Math.cos(angleRad);
+      const sinA = Math.sin(angleRad);
+
+      const rotX = x * cosA - y * sinA;
+      const rotY = x * sinA + y * cosA;
+
+      const newLatRad = (newCenterLat * Math.PI) / 180;
+      const finalLon = newCenterLon + rotX / Math.cos(newLatRad);
+      const finalLat = newCenterLat + rotY;
+
+      return [finalLat, finalLon];
+    }
+
+    // Render Wall Polylines & Checkpoints
+    function renderLayers() {
+      outerWallLayer.clearLayers();
+      innerWallLayer.clearLayers();
+      checkpointLayer.clearLayers();
+      centerAnchorLayer.clearLayers();
+
+      const [origLat, origLon] = originalCenter;
+      const [curLat, curLon] = currentCenter;
+
+      // 1. Transform Outer Wall Path
+      const transformedOuterPath = data.wall_path.map(pt =>
+        transformCoords(pt[0], pt[1], origLat, origLon, curLat, curLon, currentRotation)
+      );
+
+      // Outer Wall - Glow + Main Polyline
+      L.polyline(transformedOuterPath, {
+        color: '#3b82f6',
+        weight: 8,
+        opacity: 0.35,
+        lineCap: 'round',
+        lineJoin: 'round'
+      }).addTo(outerWallLayer);
+
+      const outerPolyline = L.polyline(transformedOuterPath, {
+        color: '#60a5fa',
+        weight: 3.5,
+        opacity: 0.95,
+        dashArray: '6, 6',
+        lineCap: 'round',
+        lineJoin: 'round'
+      }).addTo(outerWallLayer);
+
+      outerPolyline.bindTooltip(
+        `<strong>Outer Wall Encirclement</strong><br>111.9 km separating West Berlin from GDR territory`,
+        { sticky: true, className: 'nuke-permanent-tooltip' }
+      );
+
+      // 2. Transform Inner Dividing Wall Path
+      const transformedInnerPath = data.inner_dividing_path.map(pt =>
+        transformCoords(pt[0], pt[1], origLat, origLon, curLat, curLon, currentRotation)
+      );
+
+      L.polyline(transformedInnerPath, {
+        color: '#ef4444',
+        weight: 9,
+        opacity: 0.4,
+        lineCap: 'round',
+        lineJoin: 'round'
+      }).addTo(innerWallLayer);
+
+      const innerPolyline = L.polyline(transformedInnerPath, {
+        color: '#f87171',
+        weight: 4,
+        opacity: 1,
+        lineCap: 'round',
+        lineJoin: 'round'
+      }).addTo(innerWallLayer);
+
+      innerPolyline.bindTooltip(
+        `<strong>Inner Berlin Division</strong><br>43.1 km bisecting the heart of Berlin`,
+        { sticky: true, className: 'nuke-permanent-tooltip' }
+      );
+
+      // 3. Transform Checkpoints
+      data.checkpoints.forEach((cp, idx) => {
+        const [cpLat, cpLon] = transformCoords(cp.lat, cp.lon, origLat, origLon, curLat, curLon, currentRotation);
+
+        const iconHtml = `
+          <div class="nuke-leaflet-pin" data-id="${cp.id}">
+            <div class="nuke-pin-core" style="background: ${cp.color}; border-color: #ffffff; box-shadow: 0 0 12px ${cp.color};">
+              ${idx + 1}
+            </div>
+            ${cp.id === 'checkpoint-charlie' || cp.id === 'brandenburg-gate' ? `<span class="nuke-pulse detonation-pulse" style="border-color:${cp.color};"></span>` : ''}
+          </div>
+        `;
+
+        const pinIcon = L.divIcon({
+          className: 'custom-div-icon',
+          html: iconHtml,
+          iconSize: [28, 28],
+          iconAnchor: [14, 14],
+          popupAnchor: [0, -14]
+        });
+
+        const marker = L.marker([cpLat, cpLon], { icon: pinIcon }).addTo(checkpointLayer);
+
+        const popupContent = `
+          <div class="nuke-popup-card">
+            <div class="nuke-popup-header" style="border-bottom: 2px solid ${cp.color};">
+              <span class="popup-title">${cp.name}</span>
+              <span class="popup-badge" style="background:${cp.color}22; color:${cp.color}; border:1px solid ${cp.color}55;">${cp.badge}</span>
+            </div>
+            <div class="nuke-popup-body">
+              <p class="popup-summary">${cp.summary}</p>
+              <p class="popup-desc">${cp.description}</p>
+              <div class="popup-specs-grid">
+                <div><strong>Sector:</strong> ${cp.sector}</div>
+                <div><strong>Status:</strong> ${cp.status}</div>
+                <div><strong>Original Coords:</strong> ${cp.lat.toFixed(4)}&deg; N, ${cp.lon.toFixed(4)}&deg; E</div>
+                <div><strong>Projected Coords:</strong> ${cpLat.toFixed(4)}&deg;, ${cpLon.toFixed(4)}&deg;</div>
+              </div>
+            </div>
+          </div>
+        `;
+
+        marker.bindPopup(popupContent, { maxWidth: 320, className: 'nuke-custom-leaflet-popup' });
+      });
+
+      // 4. Center Anchor Marker (if comparing with another city)
+      if (currentCityId !== 'berlin') {
+        const anchorIcon = L.divIcon({
+          className: 'custom-div-icon',
+          html: `
+            <div class="nuke-leaflet-pin">
+              <div class="nuke-pin-core" style="background:#8b5cf6; border-color:#fff; box-shadow:0 0 15px #8b5cf6;">
+                ★
+              </div>
+            </div>
+          `,
+          iconSize: [28, 28],
+          iconAnchor: [14, 14]
+        });
+        const anchorMarker = L.marker(currentCenter, { icon: anchorIcon }).addTo(centerAnchorLayer);
+        anchorMarker.bindTooltip(
+          `<strong>Projection Center:</strong> ${document.getElementById('activeCityTitle').textContent}`,
+          { permanent: false, direction: 'top' }
+        );
+      }
+    }
+
+    renderLayers();
+
+    // City Pill Buttons Event
+    const cityPills = document.querySelectorAll('.berlin-city-pill-btn');
+    const activeCityTitle = document.getElementById('activeCityTitle');
+    const activeCitySubtitle = document.getElementById('activeCitySubtitle');
+    const bannerCityHeading = document.getElementById('bannerCityHeading');
+    const bannerCityDesc = document.getElementById('bannerCityDesc');
+
+    cityPills.forEach(btn => {
+      btn.addEventListener('click', function () {
+        cityPills.forEach(p => p.classList.remove('active'));
+        this.classList.add('active');
+
+        const cityId = this.getAttribute('data-city-id');
+        const lat = parseFloat(this.getAttribute('data-lat'));
+        const lng = parseFloat(this.getAttribute('data-lng'));
+        const zoom = parseInt(this.getAttribute('data-zoom'), 10) || 10;
+
+        currentCityId = cityId;
+        currentCenter = [lat, lng];
+
+        const match = data.comparisons.find(c => c.id === cityId);
+        if (match) {
+          activeCityTitle.textContent = match.name;
+          activeCitySubtitle.textContent = match.country;
+          bannerCityHeading.textContent = `${match.name}: Berlin Wall Footprint`;
+          bannerCityDesc.textContent = `${match.description} ${match.scale_comparison}`;
+        }
+
+        renderLayers();
+        map.flyTo(currentCenter, zoom, { duration: 1.5 });
+      });
+    });
+
+    // Rotation Slider Event
+    const rotationSlider = document.getElementById('wallRotationSlider');
+    const rotationValueDisplay = document.getElementById('wallRotationValue');
+    if (rotationSlider && rotationValueDisplay) {
+      rotationSlider.addEventListener('input', function (e) {
+        currentRotation = parseInt(e.target.value, 10);
+        rotationValueDisplay.innerHTML = `${currentRotation}&deg;`;
+        renderLayers();
+      });
+    }
+
+    // Basemap Switcher Change Listener
+    if (basemapSelect) {
+      basemapSelect.addEventListener('change', function (e) {
+        const val = e.target.value;
+        if (basemaps[val] && val !== activeBasemapKey) {
+          map.removeLayer(basemaps[activeBasemapKey]);
+          map.addLayer(basemaps[val]);
+          activeBasemapKey = val;
+        }
+      });
+    }
+
+    // Layer Toggles
+    const btnToggleWall = document.getElementById('btnToggleWallPolyline');
+    if (btnToggleWall) {
+      btnToggleWall.addEventListener('click', function () {
+        if (map.hasLayer(outerWallLayer)) {
+          map.removeLayer(outerWallLayer);
+          this.classList.remove('active');
+        } else {
+          map.addLayer(outerWallLayer);
+          this.classList.add('active');
+        }
+      });
+    }
+
+    const btnToggleInner = document.getElementById('btnToggleInnerPolyline');
+    if (btnToggleInner) {
+      btnToggleInner.addEventListener('click', function () {
+        if (map.hasLayer(innerWallLayer)) {
+          map.removeLayer(innerWallLayer);
+          this.classList.remove('active');
+        } else {
+          map.addLayer(innerWallLayer);
+          this.classList.add('active');
+        }
+      });
+    }
+
+    const btnToggleCheckpoints = document.getElementById('btnToggleCheckpoints');
+    if (btnToggleCheckpoints) {
+      btnToggleCheckpoints.addEventListener('click', function () {
+        if (map.hasLayer(checkpointLayer)) {
+          map.removeLayer(checkpointLayer);
+          this.classList.remove('active');
+        } else {
+          map.addLayer(checkpointLayer);
+          this.classList.add('active');
+        }
+      });
+    }
+
+    // Recenter View
+    const btnRecenter = document.getElementById('btnRecenter');
+    if (btnRecenter) {
+      btnRecenter.addEventListener('click', function () {
+        map.flyTo(currentCenter, 11, { duration: 1.2 });
+      });
+    }
+
+    // Landmark Jump Selector
+    const landmarkJumpSelect = document.getElementById('landmarkJumpSelect');
+    if (landmarkJumpSelect) {
+      landmarkJumpSelect.addEventListener('change', function (e) {
+        const val = e.target.value;
+        if (val === 'overview') {
+          map.flyTo(currentCenter, 11, { duration: 1.2 });
+          return;
+        }
+        const opt = e.target.selectedOptions[0];
+        const rawLat = parseFloat(opt.getAttribute('data-lat'));
+        const rawLon = parseFloat(opt.getAttribute('data-lon'));
+        if (!isNaN(rawLat) && !isNaN(rawLon)) {
+          const [projLat, projLon] = transformCoords(
+            rawLat,
+            rawLon,
+            originalCenter[0],
+            originalCenter[1],
+            currentCenter[0],
+            currentCenter[1],
+            currentRotation
+          );
+          map.flyTo([projLat, projLon], 14, { duration: 1.2 });
+        }
+      });
+    }
+
+    // Toggle Historical Briefing Drawer
+    const toggleBriefingBtn = document.getElementById('toggleBriefingBtn');
+    const briefingDrawer = document.getElementById('historicalBriefingDrawer');
+    const closeBriefingBtn = document.getElementById('closeBriefingBtn');
+    const toggleBriefingText = document.getElementById('toggleBriefingText');
+
+    function toggleBriefing() {
+      if (!briefingDrawer) return;
+      const isHidden = briefingDrawer.style.display === 'none' || briefingDrawer.style.display === '';
+      briefingDrawer.style.display = isHidden ? 'block' : 'none';
+      if (toggleBriefingText) {
+        toggleBriefingText.textContent = isHidden ? 'Hide Briefing' : 'Historical Briefing';
+      }
+      if (isHidden) {
+        briefingDrawer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    if (toggleBriefingBtn) toggleBriefingBtn.addEventListener('click', toggleBriefing);
+    if (closeBriefingBtn) closeBriefingBtn.addEventListener('click', toggleBriefing);
+
+    // Toggle Cards Accordion
+    const toggleCardsBtn = document.getElementById('toggleCardsBtn');
+    const toggleCardsText = document.getElementById('toggleCardsText');
+    const toggleCardsIcon = document.getElementById('toggleCardsIcon');
+    const cardsGrid = document.getElementById('checkpointCardsGrid');
+
+    if (toggleCardsBtn && cardsGrid) {
+      let isCollapsed = false;
+      toggleCardsBtn.addEventListener('click', function () {
+        isCollapsed = !isCollapsed;
+        cardsGrid.style.display = isCollapsed ? 'none' : 'grid';
+        if (toggleCardsText) toggleCardsText.textContent = isCollapsed ? 'Show Cards' : 'Collapse Cards';
+        if (toggleCardsIcon) {
+          toggleCardsIcon.innerHTML = isCollapsed
+            ? '<polyline points="6 9 12 15 18 9"></polyline>'
+            : '<polyline points="18 15 12 9 6 15"></polyline>';
+        }
+      });
+    }
+
+    // Filter Chips
+    const filterChips = document.querySelectorAll('.nuke-chip-btn');
+    const cardElements = document.querySelectorAll('.nuke-bomb-card');
+
+    filterChips.forEach(chip => {
+      chip.addEventListener('click', function () {
+        filterChips.forEach(c => c.classList.remove('active'));
+        this.classList.add('active');
+
+        const filter = this.getAttribute('data-filter');
+        applyFilters(filter, document.getElementById('checkpointSearchInput')?.value || '');
+      });
+    });
+
+    // Search Input
+    const searchInput = document.getElementById('checkpointSearchInput');
+    const clearSearchBtn = document.getElementById('clearCheckpointSearch');
+
+    if (searchInput) {
+      searchInput.addEventListener('input', function (e) {
+        const query = e.target.value.toLowerCase().trim();
+        if (clearSearchBtn) clearSearchBtn.style.display = query ? 'block' : 'none';
+        const activeChip = document.querySelector('.nuke-chip-btn.active');
+        const filter = activeChip ? activeChip.getAttribute('data-filter') : 'all';
+        applyFilters(filter, query);
+      });
+    }
+
+    if (clearSearchBtn) {
+      clearSearchBtn.addEventListener('click', function () {
+        if (searchInput) searchInput.value = '';
+        clearSearchBtn.style.display = 'none';
+        const activeChip = document.querySelector('.nuke-chip-btn.active');
+        applyFilters(activeChip ? activeChip.getAttribute('data-filter') : 'all', '');
+      });
+    }
+
+    function applyFilters(filter, query) {
+      cardElements.forEach(card => {
+        const type = (card.getAttribute('data-type') || '').toLowerCase();
+        const name = (card.getAttribute('data-name') || '').toLowerCase();
+        const sector = (card.getAttribute('data-sector') || '').toLowerCase();
+
+        let matchesFilter = false;
+        if (filter === 'all') {
+          matchesFilter = true;
+        } else if (filter === 'checkpoint') {
+          matchesFilter = type.includes('checkpoint') || type.includes('transit');
+        } else if (filter === 'memorial') {
+          matchesFilter = type.includes('memorial') || type.includes('symbolic') || type.includes('relic');
+        } else if (filter === 'historic') {
+          matchesFilter = type.includes('breach') || type.includes('symbolic') || name.includes('bornholmer');
+        }
+
+        const matchesSearch = !query || name.includes(query) || sector.includes(query) || type.includes(query);
+        card.style.display = (matchesFilter && matchesSearch) ? 'flex' : 'none';
+      });
+    }
+
+    // Card Action Buttons (Focus on map)
+    const cardButtons = document.querySelectorAll('.nuke-card-action-btn, .nuke-fly-btn');
+    cardButtons.forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const rawLat = parseFloat(this.getAttribute('data-lat'));
+        const rawLon = parseFloat(this.getAttribute('data-lon'));
+        if (!isNaN(rawLat) && !isNaN(rawLon)) {
+          const [projLat, projLon] = transformCoords(
+            rawLat,
+            rawLon,
+            originalCenter[0],
+            originalCenter[1],
+            currentCenter[0],
+            currentCenter[1],
+            currentRotation
+          );
+          map.flyTo([projLat, projLon], 14, { duration: 1.2 });
+          mapContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    });
+
+    // Legend Toggle
+    const legendToggleBtn = document.getElementById('legendToggleBtn');
+    const legendBody = document.getElementById('legendBody');
+    if (legendToggleBtn && legendBody) {
+      let isLegendOpen = true;
+      legendToggleBtn.addEventListener('click', function () {
+        isLegendOpen = !isLegendOpen;
+        legendBody.style.display = isLegendOpen ? 'flex' : 'none';
+        legendToggleBtn.innerHTML = isLegendOpen ? '&minus;' : '&#43;';
+      });
+    }
+
+    // Window Resize Fix
+    window.addEventListener('resize', function () {
+      map.invalidateSize();
+    });
+  }
+</script>
+{{- end }}

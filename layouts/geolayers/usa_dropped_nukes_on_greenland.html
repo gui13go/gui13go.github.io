@@ -1,12 +1,13 @@
 {{- define "main" }}
-{{- $incident := site.Data.palomares_incident }}
+{{- $incident := site.Data.thule_incident }}
 <link rel="stylesheet" href="/lib/leaflet/leaflet.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
-<div class="cities-page-container nukes-spain-container">
+<div class="cities-page-container nukes-greenland-container">
   <!-- Breadcrumbs -->
   <div class="gallery-breadcrumbs">
-    <a href="{{ site.BaseURL }}">Home</a> <span>/</span> <a href="/geolayers/">GeoLayers</a> <span>/</span> <span>USA dropped nukes on Spain</span>
+    <a href="{{ site.BaseURL }}">Home</a> <span>/</span> <a href="/geolayers/">GeoLayers</a> <span>/</span> <span>USA
+      dropped nukes on Greenland</span>
   </div>
 
   <!-- Header Section -->
@@ -18,11 +19,13 @@
           <line x1="12" y1="8" x2="12" y2="12"></line>
           <line x1="12" y1="16" x2="12.01" y2="16"></line>
         </svg>
-        <span>Cold War Incident &bull; Broken Arrow &bull; January 17, 1966</span>
+        <span>Cold War Incident &bull; Broken Arrow &bull; January 21, 1968</span>
       </div>
-      <h1 class="cities-title">USA dropped nukes on Spain</h1>
+      <h1 class="cities-title">USA dropped nukes on Greenland</h1>
       <p class="cities-subtitle">
-        An interactive cartographic reconstruction of the 1966 Palomares incident. A mid-air collision between a USAF B-52G bomber and a KC-135 tanker released four B28 thermonuclear weapons over the coast of Almer&iacute;a, Spain.
+        An interactive cartographic reconstruction of the 1968 Thule Air Base accident. An emergency in-flight fire
+        forced a USAF B-52G bomber carrying four B28FI thermonuclear weapons to crash onto the frozen sea ice of North
+        Star Bay, Greenland.
       </p>
     </div>
 
@@ -33,16 +36,16 @@
         <span class="cities-stat-label">Hydrogen Bombs</span>
       </div>
       <div class="cities-stat-card">
-        <span class="cities-stat-number">5.8 MT</span>
+        <span class="cities-stat-number">4.4 MT</span>
         <span class="cities-stat-label">Total Nuclear Yield</span>
       </div>
       <div class="cities-stat-card">
-        <span class="cities-stat-number" style="color: #ff4500;">2</span>
-        <span class="cities-stat-label">HE Detonations</span>
+        <span class="cities-stat-number" style="color: #ff4500;">-60&deg;C</span>
+        <span class="cities-stat-label">Project Crested Ice</span>
       </div>
       <div class="cities-stat-card">
-        <span class="cities-stat-number" style="color: #1e90ff;">880 m</span>
-        <span class="cities-stat-label">Subsea Depth (Alvin)</span>
+        <span class="cities-stat-number" style="color: #06b6d4;">1</span>
+        <span class="cities-stat-label">Lost Secondary (#78252)</span>
       </div>
       <div class="cities-stat-card active-city-card" id="activeBombCard" style="display:none;">
         <span class="cities-stat-number active-city-name" id="activeBombName">-</span>
@@ -60,25 +63,31 @@
         <div class="groups-header-info">
           <div class="groups-title-wrap">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+              </polygon>
             </svg>
-            <h2 class="groups-title">Impact &amp; Recovery Sites</h2>
-            <span class="groups-total-pill">4 Weapons &bull; Palomares, Spain</span>
+            <h2 class="groups-title">Incident Sites &amp; Strategic Outposts</h2>
+            <span class="groups-total-pill">6 Key Locations &bull; North Star Bay, Greenland</span>
           </div>
 
           <!-- Quick Filter / Search -->
           <div class="cities-search-box">
-            <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+              stroke-width="2">
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
-            <input type="text" id="bombSearchInput" placeholder="Filter bomb by location or status..." autocomplete="off" aria-label="Filter bombs">
-            <button type="button" id="clearBombSearch" class="clear-search-btn" style="display:none;" aria-label="Clear filter">&times;</button>
+            <input type="text" id="bombSearchInput" placeholder="Filter site by name, location or status..."
+              autocomplete="off" aria-label="Filter sites">
+            <button type="button" id="clearBombSearch" class="clear-search-btn" style="display:none;"
+              aria-label="Clear filter">&times;</button>
           </div>
         </div>
 
         <div class="groups-header-actions">
-          <button type="button" class="groups-btn-action" id="toggleBriefingBtn" title="Toggle Historical Briefing narrative">
+          <button type="button" class="groups-btn-action" id="toggleBriefingBtn"
+            title="Toggle Historical Briefing narrative">
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="12" r="10"></circle>
               <line x1="12" y1="16" x2="12" y2="12"></line>
@@ -86,8 +95,10 @@
             </svg>
             <span id="toggleBriefingText">Mission Briefing</span>
           </button>
-          <button type="button" class="groups-btn-action toggle-cards-btn" id="toggleCardsBtn" title="Show or hide bomb cards">
-            <svg id="toggleCardsIcon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+          <button type="button" class="groups-btn-action toggle-cards-btn" id="toggleCardsBtn"
+            title="Show or hide site cards">
+            <svg id="toggleCardsIcon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor"
+              stroke-width="2">
               <polyline points="18 15 12 9 6 15"></polyline>
             </svg>
             <span id="toggleCardsText">Minimize Cards</span>
@@ -97,15 +108,21 @@
 
       <!-- Filter Pills Carousel -->
       <div class="cities-pill-carousel" id="statusPills">
-        <button type="button" class="country-pill active" data-status="all">All Sites (4)</button>
+        <button type="button" class="country-pill active" data-status="all">All Sites (6)</button>
         <button type="button" class="country-pill" data-status="detonated">
-          <span style="color:#ff4500;">●</span> Detonated Non-Nuclear (2)
+          <span style="color:#ff4500;">●</span> Crash &amp; Detonation (1)
         </button>
-        <button type="button" class="country-pill" data-status="intact">
-          <span style="color:#32cd32;">●</span> Recovered Intact (1)
+        <button type="button" class="country-pill" data-status="debris">
+          <span style="color:#ffa500;">●</span> Contamination Swath (1)
         </button>
         <button type="button" class="country-pill" data-status="sea">
-          <span style="color:#1e90ff;">●</span> Lost at Sea (1)
+          <span style="color:#06b6d4;">●</span> Lost Secondary Search (1)
+        </button>
+        <button type="button" class="country-pill" data-status="base,camp">
+          <span style="color:#3b82f6;">●</span> Military &amp; Outposts (2)
+        </button>
+        <button type="button" class="country-pill" data-status="bailout">
+          <span style="color:#a855f7;">●</span> Bailout &amp; Rescue (1)
         </button>
       </div>
 
@@ -113,56 +130,48 @@
       <div class="nukes-briefing-drawer show" id="briefingDrawer">
         <div class="nukes-briefing-inner">
           <div class="briefing-header">
-            <span class="briefing-tag">OPERATION CHROME DOME &bull; SAC 1966</span>
-            <h3 class="briefing-title">The Palomares Incident Narrative</h3>
+            <span class="briefing-tag">{{ $incident.briefing.subtitle }}</span>
+            <h3 class="briefing-title">{{ $incident.briefing.title }}</h3>
           </div>
           <div class="briefing-content-grid">
             <div class="briefing-text-col">
-              <p>
-                On <strong>January 17, 1966</strong>, at 31,000 feet over the Mediterranean coast of Spain, a USAF Boeing B-52G Stratofortress carrying <strong>four B28FI Mod 2 Y1 thermonuclear bombs</strong> (1.45 megatons yield each) collided with a KC-135A Stratotanker during routine mid-air refueling.
-              </p>
-              <p>
-                The collision ripped both aircraft apart, killing all four tanker crew members and three of the seven bomber crew. The four nuclear weapons separated from the disintegrating fuselage and plummeted toward the coastal agricultural village of <strong>Palomares</strong> in Almer&iacute;a.
-              </p>
+              {{- range $incident.briefing.paragraphs }}
+              <p>{{ . | safeHTML }}</p>
+              {{- end }}
             </div>
             <div class="briefing-fates-col">
+              {{- range $incident.briefing.fates }}
               <div class="fate-mini-card">
-                <span class="fate-dot" style="background:#32cd32;"></span>
+                <span class="fate-dot" {{ printf "style=\"background: %s;\"" .color | safeHTMLAttr }}></span>
                 <div>
-                  <strong>Bomb 1 (Riverbed)</strong>: Parachute deployed successfully; weapon landed intact in soft gravel.
+                  <strong>{{ .title }}</strong>: {{ .description | safeHTML }}
                 </div>
               </div>
-              <div class="fate-mini-card">
-                <span class="fate-dot" style="background:#ff4500;"></span>
-                <div>
-                  <strong>Bombs 2 &amp; 3 (Land Impacts)</strong>: Parachutes failed; conventional high explosives detonated on impact, aerosolizing weapons-grade plutonium over 2 km&sup2; of cropland.
-                </div>
-              </div>
-              <div class="fate-mini-card">
-                <span class="fate-dot" style="background:#1e90ff;"></span>
-                <div>
-                  <strong>Bomb 4 (Mediterranean)</strong>: Splashed offshore; recovered after 80 days at 880 m depth by deep-submergence vehicle <em>Alvin</em>.
-                </div>
-              </div>
+              {{- end }}
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Bomb Cards Grid -->
+      <!-- Sites Cards Grid -->
       <div class="cities-groups-cards-grid nukes-cards-grid" id="bombCardsGrid">
         {{- range $incident.bombs }}
-        <div class="city-group-card nuke-bomb-card" data-bomb-id="{{ .id }}" data-status="{{ .status_type }}" data-name="{{ .name | lower }}" data-location="{{ .location | lower }}" data-lat="{{ .lat }}" data-lon="{{ .lon }}">
+        <div class="city-group-card nuke-bomb-card" data-bomb-id="{{ .id }}" data-status="{{ .status_type }}"
+          data-name="{{ .name | lower }}" data-location="{{ .location | lower }}" data-lat="{{ .lat }}"
+          data-lon="{{ .lon }}">
           <div class="city-group-card-header">
             <div class="card-header-left">
-              <span class="bomb-badge-dot" {{ printf "style=\"background-color: %s; box-shadow: 0 0 10px %s;\"" .color .color | safeHTMLAttr }}></span>
+              <span class="bomb-badge-dot"
+                {{ printf "style=\"background-color: %s; box-shadow: 0 0 10px %s;\"" .color .color | safeHTMLAttr }}></span>
               <span class="group-name">{{ .name }}</span>
-              <span class="nuke-status-badge" {{ printf "style=\"border-color: %s66; color: %s; background: %s14;\"" .color .color .color | safeHTMLAttr }}>
+              <span class="nuke-status-badge"
+                {{ printf "style=\"border-color: %s66; color: %s; background: %s14;\"" .color .color .color | safeHTMLAttr }}>
                 {{ .status }}
               </span>
             </div>
             <div class="card-header-right">
-              <button type="button" class="group-zoom-btn nuke-fly-btn" data-lat="{{ .lat }}" data-lon="{{ .lon }}" title="Fly camera to {{ .name }}">
+              <button type="button" class="group-zoom-btn nuke-fly-btn" data-lat="{{ .lat }}" data-lon="{{ .lon }}"
+                title="Fly camera to {{ .name }}">
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
                 </svg>
@@ -188,7 +197,8 @@
             <div class="nuke-specs-row">
               <div class="nuke-spec">
                 <span class="spec-dim">Coordinates:</span>
-                <span class="spec-val">{{ printf "%.5f" .lat }}&deg; N, {{ printf "%.5f" (math.Abs .lon) }}&deg; W</span>
+                <span class="spec-val">{{ printf "%.4f" .lat }}&deg; N, {{ printf "%.4f" (math.Abs .lon) }}&deg;
+                  W</span>
               </div>
               <div class="nuke-spec">
                 <span class="spec-dim">Payload:</span>
@@ -196,7 +206,8 @@
               </div>
             </div>
 
-            <button type="button" class="nuke-card-action-btn" data-lat="{{ .lat }}" data-lon="{{ .lon }}" data-id="{{ .id }}">
+            <button type="button" class="nuke-card-action-btn" data-lat="{{ .lat }}" data-lon="{{ .lon }}"
+              data-id="{{ .id }}">
               <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="11" cy="11" r="8"></circle>
                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -213,14 +224,16 @@
     <main class="cities-map-viewport nukes-map-viewport">
       <!-- Floating Toolbar on top of map -->
       <div class="cities-map-controls-bar">
-        <!-- Quick Bomb Jump Selector -->
+        <!-- Quick Site Jump Selector -->
         <div class="map-control-group">
-          <label for="bombJumpSelect" class="sr-only">Jump to Weapon Location</label>
-          <select id="bombJumpSelect" class="map-select-input" aria-label="Jump to Weapon Location">
-            <option value="all">🎯 All Impact Sites (Palomares Overview)</option>
+          <label for="bombJumpSelect" class="sr-only">Jump to Incident Location</label>
+          <select id="bombJumpSelect" class="map-select-input" aria-label="Jump to Incident Location">
+            <option value="all">🎯 All Sites (Thule / North Star Bay Overview)</option>
             {{- range $incident.bombs }}
             <option value="{{ .id }}" data-lat="{{ .lat }}" data-lon="{{ .lon }}">
-              {{- if eq .status_type "intact" }}🟢{{ else if eq .status_type "detonated" }}🔴{{ else }}🔵{{ end }} {{ .name }} &bull; {{ .location }}
+              {{- if eq .status_type "detonated" }}🔴{{ else if eq .status_type "debris" }}🟠{{ else if eq .status_type
+              "sea" }}🔵{{ else if eq .status_type "base" }}🔷{{ else if eq .status_type "camp" }}🟢{{ else }}🟣{{ end
+              }} {{ .name }} &bull; {{ .location }}
             </option>
             {{- end }}
           </select>
@@ -241,7 +254,7 @@
 
         <!-- Contamination Overlay Toggle -->
         <button type="button" class="map-action-btn active" id="toggleZonesBtn"
-          title="Toggle plutonium dispersion impact radius">
+          title="Toggle plutonium dispersion &amp; search zones">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="9"></circle>
             <circle cx="12" cy="12" r="3"></circle>
@@ -250,7 +263,7 @@
         </button>
 
         <!-- Toggle Labels -->
-        <button type="button" class="map-action-btn active" id="toggleLabelsBtn" title="Toggle weapon name labels">
+        <button type="button" class="map-action-btn active" id="toggleLabelsBtn" title="Toggle site name labels">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M4 7V4h16v3M9 20h6M12 4v16" />
           </svg>
@@ -258,36 +271,49 @@
         </button>
 
         <!-- Reset Global Bounds -->
-        <button type="button" class="map-action-btn" id="resetMapBoundsBtn" title="Reset map to fit all 4 bombs">
+        <button type="button" class="map-action-btn" id="resetMapBoundsBtn" title="Reset map to fit all locations">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="1 4 1 10 7 10"></polyline>
             <polyline points="23 20 23 14 17 14"></polyline>
             <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
           </svg>
-          <span class="btn-text">Overview</span>
+          <span class="btn-text">Recenter</span>
         </button>
       </div>
 
       <!-- Leaflet Map Container with explicit styling -->
-      <div id="palomaresMap" class="cities-leaflet-container" style="height: 650px; min-height: 520px; width: 100%; position: relative; background: #0f172a;" tabindex="0"
-        aria-label="Interactive map showing the 4 bomb crash coordinates of the 1966 Palomares incident"></div>
+      <div id="thuleMap" class="cities-leaflet-container"
+        style="height: 650px; min-height: 520px; width: 100%; position: relative; background: #0f172a;" tabindex="0"
+        aria-label="Interactive map showing the crash coordinates and key locations of the 1968 Thule incident"></div>
 
       <!-- Map Legend Overlay (Bottom Left) -->
       <div class="cities-map-legend-overlay nukes-legend-box">
         <div class="legend-indicator">
           <span class="legend-point-dot" style="background:#ff4500;"></span>
-          <span><strong>2</strong> Non-Nuclear Detonations (Plutonium dispersed)</span>
+          <span><strong>Crash &amp; Detonation</strong>: 670 m scorched ice trench</span>
         </div>
         <div class="legend-indicator">
-          <span class="legend-point-dot" style="background:#32cd32;"></span>
-          <span><strong>1</strong> Recovered Intact (Riverbed)</span>
+          <span class="legend-point-dot" style="background:#ffa500;"></span>
+          <span><strong>Debris &amp; Contamination</strong>: 5.6 km &times; 1 km plutonium plume</span>
         </div>
         <div class="legend-indicator">
-          <span class="legend-point-dot" style="background:#1e90ff;"></span>
-          <span><strong>1</strong> Lost at Sea (Alvin 880 m depth)</span>
+          <span class="legend-point-dot" style="background:#06b6d4;"></span>
+          <span><strong>Subsea Search</strong>: Missing secondary stage (#78252)</span>
+        </div>
+        <div class="legend-indicator">
+          <span class="legend-point-dot" style="background:#3b82f6;"></span>
+          <span><strong>Thule Air Base</strong>: Strategic SAC &amp; BMEWS Outpost</span>
+        </div>
+        <div class="legend-indicator">
+          <span class="legend-point-dot" style="background:#10b981;"></span>
+          <span><strong>Camp Hunley</strong>: Ice shelf decontamination HQ (-60&deg;C)</span>
+        </div>
+        <div class="legend-indicator">
+          <span class="legend-point-dot" style="background:#a855f7;"></span>
+          <span><strong>Bailout Zone</strong>: 6 crew survivors rescued</span>
         </div>
         <div class="legend-hint">
-          Click any bomb marker or card above to fly camera &bull; Zero API keys required.
+          Click any marker or card above to fly camera &bull; Zero API keys required.
         </div>
       </div>
     </main>
@@ -299,9 +325,9 @@
 <script src="/lib/leaflet/leaflet.js"></script>
 
 <script>
-(function () {
-  // Direct Data injection from Hugo
-  const incidentData = {{ $incident | jsonify | safeJS }};
+  (function () {
+    // Direct Data injection from Hugo
+    const incidentData = {{ $incident | jsonify | safeJS }};
 
   function ensureLeaflet(readyCallback) {
     if (typeof L !== 'undefined') {
@@ -321,19 +347,19 @@
 
   function initMapApp() {
     ensureLeaflet(function () {
-      buildPalomaresMap(incidentData);
+      buildThuleMap(incidentData);
     });
   }
 
-  function buildPalomaresMap(data) {
+  function buildThuleMap(data) {
     if (!data || !data.bombs || !Array.isArray(data.bombs)) {
-      console.error('Palomares incident data missing or invalid');
+      console.error('Thule incident data missing or invalid');
       return;
     }
 
-    const mapContainer = document.getElementById('palomaresMap');
+    const mapContainer = document.getElementById('thuleMap');
     if (!mapContainer) {
-      console.error('Map container #palomaresMap not found');
+      console.error('Map container #thuleMap not found');
       return;
     }
 
@@ -388,11 +414,11 @@
       }
     });
 
-    // Center over Palomares, Spain
-    const initialCenter = [37.24, -1.796944];
-    const initialZoom = 12;
+    // Center over North Star Bay / Thule, Greenland
+    const initialCenter = data.map_center || [76.525, -69.10];
+    const initialZoom = data.default_zoom || 11;
 
-    const map = L.map('palomaresMap', {
+    const map = L.map('thuleMap', {
       center: initialCenter,
       zoom: initialZoom,
       zoomControl: false,
@@ -418,18 +444,18 @@
     }
 
     // Custom Marker Pins
-    function createPinIcon(bomb, isHighlighted = false) {
+    function createPinIcon(site, isHighlighted = false) {
       const size = isHighlighted ? 34 : 28;
-      const pulse = (bomb.status_type === 'detonated') ? '<span class="nuke-pulse detonation-pulse"></span>' :
-                    (bomb.status_type === 'sea') ? '<span class="nuke-pulse sea-pulse"></span>' : '';
+      const pulse = (site.status_type === 'detonated') ? '<span class="nuke-pulse detonation-pulse"></span>' :
+        (site.status_type === 'sea') ? '<span class="nuke-pulse sea-pulse"></span>' : '';
 
       return L.divIcon({
         className: `nuke-leaflet-pin ${isHighlighted ? 'highlighted' : ''}`,
         html: `
           <div class="nuke-pin-wrap">
             ${pulse}
-            <div class="nuke-pin-core" style="background-color: ${bomb.color}; box-shadow: 0 0 ${isHighlighted ? '16px' : '10px'} ${bomb.color};">
-              <span class="nuke-pin-num">${bomb.number}</span>
+            <div class="nuke-pin-core" style="background-color: ${site.color}; box-shadow: 0 0 ${isHighlighted ? '16px' : '10px'} ${site.color};">
+              <span class="nuke-pin-num">${site.number}</span>
             </div>
           </div>
         `,
@@ -439,7 +465,7 @@
       });
     }
 
-    // Build Markers, Popups, and Dispersion Zones
+    // Build Markers, Popups, and Dispersion / Search Zones
     const allMarkers = [];
     const bombMarkerMap = {};
     const latLngList = [];
@@ -447,56 +473,78 @@
     let showLabels = true;
     let showZones = true;
 
-    data.bombs.forEach(bomb => {
-      const latLng = L.latLng(bomb.lat, bomb.lon);
+    data.bombs.forEach(site => {
+      const latLng = L.latLng(site.lat, site.lon);
       latLngList.push(latLng);
 
-      // Contamination circles around non-nuclear detonations (Bombs 2 & 3)
-      if (bomb.status_type === 'detonated') {
-        const zoneCircle = L.circle(latLng, {
-          radius: 650, // approx 0.77 sq mi dispersion area
+      // Impact crater zone around primary crash site
+      if (site.status_type === 'detonated') {
+        const crashCircle = L.circle(latLng, {
+          radius: 700,
           color: '#ff4500',
           weight: 1.5,
-          opacity: 0.8,
+          opacity: 0.85,
           fillColor: '#ff4500',
-          fillOpacity: 0.18,
+          fillOpacity: 0.2,
           dashArray: '4, 6'
         });
-        zoneCircle.bindTooltip(`<strong>${bomb.name} Radiation Dispersion Zone</strong><br>Soil plutonium removal boundary`, {
+        crashCircle.bindTooltip(`<strong>${site.name}</strong><br>670 m high-velocity ice impact trench`, {
           direction: 'center',
           className: 'nuke-zone-tooltip'
         });
-        zonesLayerGroup.addLayer(zoneCircle);
+        zonesLayerGroup.addLayer(crashCircle);
       }
 
-      // Subsea search marker radius for Bomb 4
-      if (bomb.status_type === 'sea') {
-        const seaSearchZone = L.circle(latLng, {
-          radius: 1200,
-          color: '#1e90ff',
+      // Radioactive fallout & debris dispersion swath
+      if (site.status_type === 'debris') {
+        const debrisZone = L.polygon([
+          [76.514, -69.175],
+          [76.518, -69.170],
+          [76.527, -69.340],
+          [76.521, -69.360]
+        ], {
+          color: '#ffa500',
           weight: 1.5,
-          opacity: 0.7,
-          fillColor: '#1e90ff',
-          fillOpacity: 0.12,
+          opacity: 0.8,
+          fillColor: '#ffa500',
+          fillOpacity: 0.16,
+          dashArray: '4, 4'
+        });
+        debrisZone.bindTooltip(`<strong>Plutonium-239 Dispersion Swath</strong><br>5.6 km &times; 1 km radioactive contamination plume`, {
+          direction: 'center',
+          className: 'nuke-zone-tooltip'
+        });
+        zonesLayerGroup.addLayer(debrisZone);
+      }
+
+      // Subsea search sector for missing secondary stage
+      if (site.status_type === 'sea') {
+        const seaSearchZone = L.circle(latLng, {
+          radius: 1400,
+          color: '#06b6d4',
+          weight: 1.5,
+          opacity: 0.75,
+          fillColor: '#06b6d4',
+          fillOpacity: 0.14,
           dashArray: '3, 6'
         });
-        seaSearchZone.bindTooltip(`<strong>Task Force 65 Subsea Search Grid</strong><br>Found at 880 m depth by DSV Alvin`, {
+        seaSearchZone.bindTooltip(`<strong>Subsea Sonar Search Grid</strong><br>Taurus Submersible Search Area for Secondary #78252`, {
           direction: 'center',
           className: 'nuke-zone-tooltip'
         });
         zonesLayerGroup.addLayer(seaSearchZone);
       }
 
-      const marker = L.marker(latLng, { icon: createPinIcon(bomb, false) });
+      const marker = L.marker(latLng, { icon: createPinIcon(site, false) });
 
       // Popup Content with Technical Details
       const popupHtml = `
         <div class="city-popup-card nuke-popup-card">
-          <div class="popup-header" style="border-left: 3px solid ${bomb.color}; padding-left: 8px;">
-            <span class="popup-flag" style="color: ${bomb.color}; font-size: 1.1rem;">☢️</span>
+          <div class="popup-header" style="border-left: 3px solid ${site.color}; padding-left: 8px;">
+            <span class="popup-flag" style="color: ${site.color}; font-size: 1.1rem;">☢️</span>
             <div class="popup-title-box">
-              <span class="popup-country" style="color: ${bomb.color}; font-weight: 700;">${bomb.status}</span>
-              <h4 class="popup-city-name">${bomb.name}</h4>
+              <span class="popup-country" style="color: ${site.color}; font-weight: 700;">${site.status}</span>
+              <h4 class="popup-city-name">${site.name}</h4>
             </div>
           </div>
 
@@ -506,18 +554,18 @@
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                 <circle cx="12" cy="10" r="3"></circle>
               </svg>
-              <strong>${bomb.location}</strong> &bull; ${bomb.lat.toFixed(4)}&deg; N, ${Math.abs(bomb.lon).toFixed(4)}&deg; W
+              <strong>${site.location}</strong> &bull; ${site.lat.toFixed(4)}&deg; N, ${Math.abs(site.lon).toFixed(4)}&deg; W
             </span>
           </div>
 
-          <p class="nuke-popup-desc" style="font-size: 0.84rem; margin: 8px 0; color: var(--content);">${bomb.description}</p>
-          <p class="nuke-popup-tech" style="font-size: 0.76rem; margin: 0 0 10px; color: var(--secondary); background: var(--tertiary); padding: 6px 8px; border-radius: 6px;">${bomb.technical_details}</p>
+          <p class="nuke-popup-desc" style="font-size: 0.84rem; margin: 8px 0; color: var(--content);">${site.description}</p>
+          <p class="nuke-popup-tech" style="font-size: 0.76rem; margin: 0 0 10px; color: var(--secondary); background: var(--tertiary); padding: 6px 8px; border-radius: 6px;">${site.technical_details}</p>
 
           <div class="popup-footer">
-            <a href="https://www.google.com/maps/search/?api=1&query=${bomb.lat},${bomb.lon}" target="_blank" rel="noopener noreferrer" class="popup-link-btn">
+            <a href="https://www.google.com/maps/search/?api=1&query=${site.lat},${site.lon}" target="_blank" rel="noopener noreferrer" class="popup-link-btn">
               <span>Google Maps &rarr;</span>
             </a>
-            <button type="button" class="popup-zoom-btn" onclick="window._zoomBombTo(${bomb.lat}, ${bomb.lon})">
+            <button type="button" class="popup-zoom-btn" onclick="window._zoomBombTo(${site.lat}, ${site.lon})">
               <span>Zoom Close</span>
             </button>
           </div>
@@ -531,22 +579,22 @@
       });
 
       // Tooltip permanent label
-      marker.bindTooltip(`<strong>${bomb.name}</strong> &bull; ${bomb.location}`, {
+      marker.bindTooltip(`<strong>${site.name}</strong> &bull; ${site.location}`, {
         direction: 'top',
         permanent: true,
         className: 'nuke-permanent-tooltip',
         offset: [0, -16]
       });
 
-      marker.bombData = bomb;
+      marker.bombData = site;
 
       marker.on('click', () => {
-        highlightActiveBomb(bomb.id, false);
+        highlightActiveBomb(site.id, false);
       });
 
       marker.addTo(map);
       allMarkers.push(marker);
-      bombMarkerMap[bomb.id] = { marker, bomb, latLng };
+      bombMarkerMap[site.id] = { marker, site, latLng };
     });
 
     // Calculate Bounds
@@ -554,10 +602,10 @@
 
     // Global helper for popup "Zoom Close"
     window._zoomBombTo = (lat, lon) => {
-      map.flyTo([lat, lon], 15, { duration: 1.2 });
+      map.flyTo([lat, lon], 14, { duration: 1.2 });
     };
 
-    // Highlight Bomb Functionality
+    // Highlight Location Functionality
     let currentActiveMarker = null;
     const activeCard = document.getElementById('activeBombCard');
     const activeBombName = document.getElementById('activeBombName');
@@ -572,13 +620,13 @@
       }
 
       currentActiveMarker = entry.marker;
-      entry.marker.setIcon(createPinIcon(entry.bomb, true));
+      entry.marker.setIcon(createPinIcon(entry.site, true));
 
       // Update Quick Stats active card
       if (activeCard && activeBombName && activeBombStatus) {
         activeCard.style.display = 'flex';
-        activeBombName.textContent = entry.bomb.name;
-        activeBombStatus.textContent = `${entry.bomb.location} (${entry.bomb.status})`;
+        activeBombName.textContent = entry.site.name;
+        activeBombStatus.textContent = `${entry.site.location} (${entry.site.status})`;
       }
 
       // Highlight card in explorer grid
@@ -598,7 +646,7 @@
       }
 
       if (fly) {
-        map.flyTo(entry.latLng, 14, { duration: 1.2 });
+        map.flyTo(entry.latLng, 13, { duration: 1.2 });
         setTimeout(() => {
           entry.marker.openPopup();
         }, 700);
@@ -637,7 +685,7 @@
       bombJumpSelect.addEventListener('change', (e) => {
         const val = e.target.value;
         if (val === 'all') {
-          map.fitBounds(allBounds, { padding: [50, 50], maxZoom: 13 });
+          map.fitBounds(allBounds, { padding: [50, 50], maxZoom: 12 });
           if (activeCard) activeCard.style.display = 'none';
           document.querySelectorAll('.nuke-bomb-card').forEach(c => c.classList.remove('active'));
         } else {
@@ -648,16 +696,17 @@
 
     // Status Pills Filter
     const statusPills = document.querySelectorAll('#statusPills .country-pill');
-    function filterByStatus(status) {
+    function filterByStatus(statusKey) {
       statusPills.forEach(p => {
-        if (p.getAttribute('data-status') === status) p.classList.add('active');
+        if (p.getAttribute('data-status') === statusKey) p.classList.add('active');
         else p.classList.remove('active');
       });
 
+      const allowedStatuses = statusKey.split(',');
       const matchingBounds = [];
       document.querySelectorAll('.nuke-bomb-card').forEach(card => {
         const cardStatus = card.getAttribute('data-status');
-        const matches = (status === 'all' || cardStatus === status);
+        const matches = (statusKey === 'all' || allowedStatuses.includes(cardStatus));
         card.style.display = matches ? '' : 'none';
 
         if (matches) {
@@ -668,7 +717,7 @@
       });
 
       if (matchingBounds.length > 0) {
-        map.fitBounds(L.latLngBounds(matchingBounds), { padding: [60, 60], maxZoom: 14 });
+        map.fitBounds(L.latLngBounds(matchingBounds), { padding: [60, 60], maxZoom: 13 });
       }
     }
 
@@ -679,7 +728,7 @@
       });
     });
 
-    // Real-time Bomb Search
+    // Real-time Search
     const searchInput = document.getElementById('bombSearchInput');
     const clearSearch = document.getElementById('clearBombSearch');
 
@@ -702,7 +751,7 @@
       });
 
       if (matchingBounds.length > 0 && term) {
-        map.fitBounds(L.latLngBounds(matchingBounds), { padding: [50, 50], maxZoom: 14 });
+        map.fitBounds(L.latLngBounds(matchingBounds), { padding: [50, 50], maxZoom: 13 });
       }
     }
 
@@ -722,7 +771,7 @@
         }
         clearSearch.style.display = 'none';
         runBombSearch('');
-        map.fitBounds(allBounds, { padding: [50, 50], maxZoom: 13 });
+        map.fitBounds(allBounds, { padding: [50, 50], maxZoom: 12 });
       });
     }
 
@@ -755,7 +804,7 @@
         cardsCollapsed = !cardsCollapsed;
         bombCardsGrid.style.display = cardsCollapsed ? 'none' : 'grid';
         if (toggleCardsText) {
-          toggleCardsText.textContent = cardsCollapsed ? 'Show Weapon Cards' : 'Minimize Cards';
+          toggleCardsText.textContent = cardsCollapsed ? 'Show Sites' : 'Minimize Cards';
         }
         if (toggleCardsIcon) {
           toggleCardsIcon.style.transform = cardsCollapsed ? 'rotate(180deg)' : 'rotate(0deg)';
@@ -790,7 +839,7 @@
     const resetMapBoundsBtn = document.getElementById('resetMapBoundsBtn');
     if (resetMapBoundsBtn) {
       resetMapBoundsBtn.addEventListener('click', () => {
-        map.fitBounds(allBounds, { padding: [50, 50], maxZoom: 13 });
+        map.fitBounds(allBounds, { padding: [50, 50], maxZoom: 12 });
         if (activeCard) activeCard.style.display = 'none';
         if (currentActiveMarker) {
           currentActiveMarker.setIcon(createPinIcon(currentActiveMarker.bombData, false));
@@ -820,7 +869,7 @@
     // Initial bounds fit & multiple invalidateSize passes to guarantee rendering
     map.invalidateSize();
     try {
-      map.fitBounds(allBounds, { padding: [50, 50], maxZoom: 13 });
+      map.fitBounds(allBounds, { padding: [50, 50], maxZoom: 12 });
     } catch (e) {
       map.setView(initialCenter, initialZoom);
     }
@@ -828,8 +877,8 @@
     setTimeout(() => {
       map.invalidateSize();
       try {
-        map.fitBounds(allBounds, { padding: [50, 50], maxZoom: 13 });
-      } catch (e) {}
+        map.fitBounds(allBounds, { padding: [50, 50], maxZoom: 12 });
+      } catch (e) { }
     }, 150);
 
     setTimeout(() => {
@@ -847,6 +896,6 @@
   } else {
     initMapApp();
   }
-})();
+}) ();
 </script>
 {{- end }}

@@ -1,0 +1,660 @@
+{{- define "main" }}
+{{- $ecoData := site.Data.ecosystems }}
+<!-- Local OpenLayers bundle with CDN fallback -->
+<link rel="stylesheet" href="/lib/openlayers/ol.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@8.2.0/ol.css">
+
+<div class="cities-page-container ecosystems-page-container">
+  <!-- Breadcrumbs adhering to AGENTS.md -->
+  <div class="gallery-breadcrumbs">
+    <a href="{{ site.BaseURL }}">Home</a> <span>/</span> <a href="/geolayers/">GeoLayers</a> <span>/</span> <span>Ecosystems of the World</span>
+  </div>
+
+  <!-- Header Section -->
+  <header class="cities-header">
+    <div class="cities-header-content">
+      <div class="cities-badge-pill eco-badge-pill">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="M12 8v8M8 12h8"/>
+        </svg>
+        <span>Global Biomes &bull; Resolve Ecoregions 2017 &bull; Biodiversity &bull; Conservation</span>
+      </div>
+      <h1 class="cities-title">Ecosystems of the World</h1>
+      <p class="cities-subtitle">
+        Explore Earth's terrestrial ecosystems, biomes, and biogeographic realms. From Amazonian rain forests and Siberian taiga to arid deserts and arctic tundra, explore the distribution of life and global conservation status.
+      </p>
+    </div>
+
+    <!-- Quick Stats Bar -->
+    <div class="cities-stats-bar">
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" id="statsTotalEcoregions" style="background: var(--theme-accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">820</span>
+        <span class="cities-stat-label">Terrestrial Ecoregions</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number">14</span>
+        <span class="cities-stat-label">Major Biomes</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number">8</span>
+        <span class="cities-stat-label">Biogeographic Realms</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" id="statsActiveBasemap">ESRI Satellite</span>
+        <span class="cities-stat-label">Basemap Style</span>
+      </div>
+      <div class="cities-stat-card active-city-card" id="activeEcoStatCard" style="display:none;">
+        <span class="cities-stat-number active-city-name" id="activeEcoCardTitle">-</span>
+        <span class="cities-stat-label" id="activeEcoCardSub">Selected Ecoregion</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Interactive Controls & Toolbar -->
+  <div class="eco-toolbar">
+    <div class="eco-toolbar-top">
+      <!-- Search Box -->
+      <div class="eco-search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="ecoSearchInput" placeholder="Search ecoregion, biome, or realm (e.g. Amazon, Taiga, Afrotropic)..." autocomplete="off" aria-label="Search ecoregion">
+      </div>
+
+      <!-- Jump to Hotspot Region -->
+      <div class="eco-actions-group">
+        <label for="hotspotSelect" class="eco-filter-label">Jump to:</label>
+        <select id="hotspotSelect" class="eco-select-input" aria-label="Jump to hotspot region">
+          <option value="global" data-x="0" data-y="10" data-zoom="2">🌍 Global View</option>
+          {{- range $ecoData.hotspots }}
+          <option value="{{ .name | urlize }}" data-x="{{ index .center 0 }}" data-y="{{ index .center 1 }}" data-zoom="{{ .zoom }}">
+            📍 {{ .name }} ({{ .realm }})
+          </option>
+          {{- end }}
+        </select>
+      </div>
+
+      <!-- Color Layer Mode: Biome / Nature Needs Half / Unique Ecoregion -->
+      <div class="eco-actions-group">
+        <span class="eco-filter-label">Color By:</span>
+        <div class="eco-color-mode-pills" role="group" aria-label="Color Mode">
+          <button type="button" class="eco-color-btn active" id="btnColorBio" data-mode="bio" title="Color by 14 Global Biomes">
+            Biome
+          </button>
+          <button type="button" class="eco-color-btn" id="btnColorNnh" data-mode="nnh" title="Color by Nature Needs Half Conservation Category">
+            Conservation
+          </button>
+          <button type="button" class="eco-color-btn" id="btnColorEco" data-mode="eco" title="Unique Distinct Ecoregion Colors">
+            Ecoregion
+          </button>
+        </div>
+      </div>
+
+      <!-- Basemap Switcher -->
+      <div class="eco-actions-group">
+        <label for="basemapSelect" class="eco-filter-label">Basemap:</label>
+        <select id="basemapSelect" class="eco-select-input" aria-label="Select Basemap">
+          <option value="satellite" selected>ESRI Satellite</option>
+          <option value="dark">CARTO Dark</option>
+          <option value="light">CARTO Light</option>
+          <option value="osm">OpenStreetMap</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Map Viewport -->
+  <div class="eco-viewport-wrap" id="ecoViewportWrap">
+    <!-- Map Canvas Container -->
+    <div id="ecoMap" class="eco-map-canvas" tabindex="0" aria-label="Interactive OpenLayers Ecosystems Map"></div>
+
+    <!-- Map Action Buttons (Top Left) -->
+    <div class="eco-map-actions-top-left">
+      <button type="button" class="map-action-btn" id="btnResetView" title="Reset View to Global">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+          <path d="M3 3v5h5" />
+        </svg>
+        <span class="btn-text">Reset</span>
+      </button>
+      <button type="button" class="map-action-btn" id="btnToggleFullscreen" title="Toggle Fullscreen">
+        <svg id="fsIcon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+        </svg>
+        <span class="btn-text" id="fsText">Fullscreen</span>
+      </button>
+    </div>
+
+    <!-- Floating Hover Tooltip (Pointer-following / Cursor Info) -->
+    <div id="ecoTooltip" class="eco-info-tooltip"></div>
+
+    <!-- Selected Feature Bottom-Right Dock -->
+    <aside id="ecoDock" class="eco-selected-dock" aria-label="Selected Ecoregion Details">
+      <div class="eco-dock-header">
+        <h3 class="eco-dock-title" id="dockTitle">Ecoregion Details</h3>
+        <button type="button" class="eco-dock-close" id="dockClose" aria-label="Close panel">&times;</button>
+      </div>
+      <div class="eco-dock-badges">
+        <span class="eco-badge" id="dockRealmBadge" style="background: rgba(59,130,246,0.15); color: #3b82f6;">Realm</span>
+        <span class="eco-badge" id="dockBiomeBadge" style="background: rgba(16,185,129,0.15); color: #10b981;">Biome</span>
+      </div>
+      <div class="eco-tooltip-row">
+        <span class="eco-tooltip-label">Conservation:</span>
+        <span class="eco-tooltip-val" id="dockNnhVal" style="color: #f59e0b;">-</span>
+      </div>
+      <div class="eco-tooltip-row">
+        <span class="eco-tooltip-label">Coordinates:</span>
+        <span class="eco-tooltip-val font-mono" id="dockCoordsVal">-</span>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Major Biomes Legend Section -->
+  <section class="eco-legend-section" aria-label="Major Biomes Classification">
+    <div class="eco-legend-header">
+      <h2 class="eco-legend-title">Major Terrestrial Biomes</h2>
+      <span class="eco-filter-label">Click a biome to filter</span>
+    </div>
+    <div class="eco-legend-grid" id="biomeLegendGrid">
+      <!-- Generated via JS for interactive filtering -->
+    </div>
+  </section>
+</div>
+
+<!-- Load Local OpenLayers with CDN Fallback -->
+<script src="/lib/openlayers/ol.js"></script>
+<script>
+  if (typeof ol === 'undefined') {
+    document.write('<script src="https://cdn.jsdelivr.net/npm/ol@8.2.0/dist/ol.js"><\/script>');
+  }
+</script>
+
+<!-- Embedded Ecosystems Data -->
+<script id="ecoJsonData" type="application/json">
+{{ $ecoData | jsonify | safeJS }}
+</script>
+
+<script>
+(function() {
+  'use strict';
+
+  function initEcosystemsApp() {
+    if (typeof ol === 'undefined') {
+      setTimeout(initEcosystemsApp, 100);
+      return;
+    }
+
+    var mapEl = document.getElementById('ecoMap');
+    if (!mapEl) return;
+
+    var ecoDataEl = document.getElementById('ecoJsonData');
+    var ecoMeta = {};
+    try {
+      if (ecoDataEl && ecoDataEl.textContent.trim()) {
+        ecoMeta = JSON.parse(ecoDataEl.textContent);
+      }
+    } catch(e) {
+      console.warn('Error parsing ecoJsonData:', e);
+    }
+
+    // Basemap Layers
+    var esriSatellite = new ol.layer.Tile({
+      source: new ol.source.XYZ({
+        url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+        attributions: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
+        maxZoom: 19
+      }),
+      visible: true
+    });
+
+    var cartoDark = new ol.layer.Tile({
+      source: new ol.source.XYZ({
+        url: 'https://{a-c}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
+        attributions: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+      }),
+      visible: false
+    });
+
+    var cartoLight = new ol.layer.Tile({
+      source: new ol.source.XYZ({
+        url: 'https://{a-c}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
+        attributions: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+      }),
+      visible: false
+    });
+
+    var osmLayer = new ol.layer.Tile({
+      source: new ol.source.OSM(),
+      visible: false
+    });
+
+    // Color Mode: 'bio' (Biome), 'nnh' (Nature Needs Half), 'eco' (Unique Ecoregion)
+    var currentColorMode = 'bio';
+    var activeBiomeFilter = null;
+    var searchQuery = '';
+
+    // Style caches to optimize rendering of 820+ multipolygons
+    var styleCache = {};
+
+    function getEcoregionStyle(feature) {
+      var props = feature.getProperties() || {};
+      var biome = props.BIOME_NAME || 'Other';
+      var ecoName = props.ECO_NAME || '';
+      var realm = props.REALM || '';
+
+      // Check search or biome filter match
+      var isDimmed = false;
+      if (activeBiomeFilter && biome !== activeBiomeFilter) {
+        isDimmed = true;
+      }
+      if (searchQuery) {
+        var query = searchQuery.toLowerCase();
+        var match = ecoName.toLowerCase().indexOf(query) !== -1 ||
+                    biome.toLowerCase().indexOf(query) !== -1 ||
+                    realm.toLowerCase().indexOf(query) !== -1;
+        if (!match) {
+          isDimmed = true;
+        }
+      }
+
+      var fillColor;
+      if (currentColorMode === 'nnh') {
+        fillColor = props.COLOR_NNH || '#f59e0b';
+      } else if (currentColorMode === 'eco') {
+        fillColor = props.COLOR || props.COLOR_BIO || '#38A700';
+      } else {
+        fillColor = props.COLOR_BIO || props.COLOR || '#38A700';
+      }
+
+      // Convert hex to RGBA with opacity
+      var key = fillColor + '_' + (isDimmed ? 'dim' : 'normal');
+      if (styleCache[key]) {
+        return styleCache[key];
+      }
+
+      var hex = fillColor.replace('#', '');
+      var r = 120, g = 120, b = 120;
+      if (hex.length === 6) {
+        r = parseInt(hex.substring(0, 2), 16);
+        g = parseInt(hex.substring(2, 4), 16);
+        b = parseInt(hex.substring(4, 6), 16);
+      }
+
+      var fillRgba = isDimmed ?
+        'rgba(' + r + ',' + g + ',' + b + ',0.15)' :
+        'rgba(' + r + ',' + g + ',' + b + ',0.72)';
+      var strokeColor = isDimmed ?
+        'rgba(255,255,255,0.08)' :
+        'rgba(255,255,255,0.3)';
+
+      var style = new ol.style.Style({
+        fill: new ol.style.Fill({
+          color: fillRgba
+        }),
+        stroke: new ol.style.Stroke({
+          color: strokeColor,
+          width: 0.8
+        })
+      });
+
+      styleCache[key] = style;
+      return style;
+    }
+
+    // Vector Source with local JSON and remote fallback
+    var ecoregionsSource = new ol.source.Vector({
+      url: '/data/ecoregions.json',
+      format: new ol.format.GeoJSON()
+    });
+
+    // Fallback if local fetch fails (e.g. if served under different base path)
+    ecoregionsSource.on('error', function() {
+      console.warn('Local ecoregions.json failed, falling back to openlayers.org CDN');
+      ecoregionsSource.setUrl('https://openlayers.org/data/vector/ecoregions.json');
+      ecoregionsSource.refresh();
+    });
+
+    var ecoregionsLayer = new ol.layer.Vector({
+      source: ecoregionsSource,
+      style: getEcoregionStyle
+    });
+
+    // Highlight Layer (For hovered / clicked feature)
+    var highlightSource = new ol.source.Vector();
+    var highlightLayer = new ol.layer.Vector({
+      source: highlightSource,
+      style: new ol.style.Style({
+        stroke: new ol.style.Stroke({
+          color: 'rgba(255, 255, 255, 0.95)',
+          width: 2.5
+        }),
+        fill: new ol.style.Fill({
+          color: 'rgba(255, 255, 255, 0.15)'
+        })
+      })
+    });
+
+    // Create OpenLayers Map View
+    var defaultCenter = ol.proj.fromLonLat([0, 15]);
+    var defaultZoom = 2.2;
+
+    var view = new ol.View({
+      center: defaultCenter,
+      zoom: defaultZoom,
+      minZoom: 1.5,
+      maxZoom: 16
+    });
+
+    var map = new ol.Map({
+      target: mapEl,
+      layers: [
+        esriSatellite,
+        cartoDark,
+        cartoLight,
+        osmLayer,
+        ecoregionsLayer,
+        highlightLayer
+      ],
+      view: view
+    });
+
+    // Tooltip and Dock Elements
+    var tooltip = document.getElementById('ecoTooltip');
+    var dock = document.getElementById('ecoDock');
+    var dockTitle = document.getElementById('dockTitle');
+    var dockRealmBadge = document.getElementById('dockRealmBadge');
+    var dockBiomeBadge = document.getElementById('dockBiomeBadge');
+    var dockNnhVal = document.getElementById('dockNnhVal');
+    var dockCoordsVal = document.getElementById('dockCoordsVal');
+    var dockClose = document.getElementById('dockClose');
+
+    var activeEcoStatCard = document.getElementById('activeEcoStatCard');
+    var activeEcoCardTitle = document.getElementById('activeEcoCardTitle');
+    var activeEcoCardSub = document.getElementById('activeEcoCardSub');
+
+    var currentHighlightedFeature = null;
+
+    function setHighlight(feature) {
+      if (currentHighlightedFeature === feature) return;
+      highlightSource.clear();
+      if (feature) {
+        highlightSource.addFeature(feature);
+      }
+      currentHighlightedFeature = feature;
+    }
+
+    // Hover Tooltip Interaction
+    function handlePointerMove(evt) {
+      if (evt.dragging) {
+        if (tooltip) tooltip.style.display = 'none';
+        return;
+      }
+
+      var pixel = map.getEventPixel(evt.originalEvent);
+      var feature = map.forEachFeatureAtPixel(pixel, function(f) {
+        return f;
+      }, {
+        layerFilter: function(layer) {
+          return layer === ecoregionsLayer;
+        }
+      });
+
+      if (feature) {
+        var props = feature.getProperties() || {};
+        var eco = props.ECO_NAME || 'Unknown Ecoregion';
+        var biome = props.BIOME_NAME || props.BIOME_DESC || 'Unknown Biome';
+        var realm = props.REALM || 'Unknown Realm';
+        var nnh = props.NNH_NAME || props.NNH || 'Not Assessed';
+
+        var html = '<div class="eco-tooltip-title">' + eco + '</div>' +
+                   '<div class="eco-tooltip-row"><span class="eco-tooltip-label">Realm:</span> <span class="eco-tooltip-val">' + realm + '</span></div>' +
+                   '<div class="eco-tooltip-row"><span class="eco-tooltip-label">Biome:</span> <span class="eco-tooltip-val">' + biome + '</span></div>' +
+                   '<div class="eco-tooltip-row"><span class="eco-tooltip-label">Status:</span> <span class="eco-tooltip-val" style="color:#10b981;">' + nnh + '</span></div>';
+
+        if (tooltip) {
+          tooltip.innerHTML = html;
+          tooltip.style.display = 'block';
+          var rect = mapEl.getBoundingClientRect();
+          var x = evt.originalEvent.clientX - rect.left + 15;
+          var y = evt.originalEvent.clientY - rect.top + 15;
+          // Prevent overflowing container
+          if (x + 280 > rect.width) x = x - 300;
+          if (y + 120 > rect.height) y = y - 140;
+          tooltip.style.left = Math.max(10, x) + 'px';
+          tooltip.style.top = Math.max(10, y) + 'px';
+        }
+        mapEl.style.cursor = 'pointer';
+        setHighlight(feature);
+      } else {
+        if (tooltip) tooltip.style.display = 'none';
+        mapEl.style.cursor = '';
+        if (!selectedFeature) {
+          setHighlight(null);
+        }
+      }
+    }
+
+    map.on('pointermove', handlePointerMove);
+
+    // Click on Feature: Select and open dock
+    var selectedFeature = null;
+
+    map.on('singleclick', function(evt) {
+      var feature = map.forEachFeatureAtPixel(evt.pixel, function(f) {
+        return f;
+      }, {
+        layerFilter: function(layer) {
+          return layer === ecoregionsLayer;
+        }
+      });
+
+      if (feature) {
+        selectedFeature = feature;
+        setHighlight(feature);
+
+        var props = feature.getProperties() || {};
+        var eco = props.ECO_NAME || 'Unknown Ecoregion';
+        var biome = props.BIOME_NAME || 'Unknown Biome';
+        var realm = props.REALM || 'Unknown Realm';
+        var nnh = props.NNH_NAME || 'Nature Assessed';
+
+        var coords = ol.proj.toLonLat(evt.coordinate);
+        var lonStr = Math.abs(coords[0]).toFixed(2) + (coords[0] >= 0 ? '°E' : '°W');
+        var latStr = Math.abs(coords[1]).toFixed(2) + (coords[1] >= 0 ? '°N' : '°S');
+
+        if (dock) {
+          dockTitle.textContent = eco;
+          dockRealmBadge.textContent = realm;
+          dockBiomeBadge.textContent = biome;
+          dockNnhVal.textContent = nnh;
+          dockCoordsVal.textContent = latStr + ', ' + lonStr;
+          dock.style.display = 'block';
+        }
+
+        if (activeEcoStatCard) {
+          activeEcoStatCard.style.display = 'flex';
+          activeEcoCardTitle.textContent = eco;
+          activeEcoCardSub.textContent = biome;
+        }
+      }
+    });
+
+    if (dockClose) {
+      dockClose.addEventListener('click', function() {
+        if (dock) dock.style.display = 'none';
+        selectedFeature = null;
+        setHighlight(null);
+        if (activeEcoStatCard) activeEcoStatCard.style.display = 'none';
+      });
+    }
+
+    // Basemap Selection
+    var basemapSelect = document.getElementById('basemapSelect');
+    var statsActiveBasemap = document.getElementById('statsActiveBasemap');
+    if (basemapSelect) {
+      basemapSelect.addEventListener('change', function() {
+        var val = this.value;
+        esriSatellite.setVisible(val === 'satellite');
+        cartoDark.setVisible(val === 'dark');
+        cartoLight.setVisible(val === 'light');
+        osmLayer.setVisible(val === 'osm');
+
+        var names = {
+          satellite: 'ESRI Satellite',
+          dark: 'CARTO Dark',
+          light: 'CARTO Light',
+          osm: 'OpenStreetMap'
+        };
+        if (statsActiveBasemap) statsActiveBasemap.textContent = names[val] || val;
+      });
+    }
+
+    // Color Mode Selection Buttons
+    var colorBtns = document.querySelectorAll('.eco-color-btn');
+    colorBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        colorBtns.forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        currentColorMode = this.getAttribute('data-mode');
+        styleCache = {};
+        ecoregionsLayer.changed();
+      });
+    });
+
+    // Hotspot Region Selector
+    var hotspotSelect = document.getElementById('hotspotSelect');
+    if (hotspotSelect) {
+      hotspotSelect.addEventListener('change', function() {
+        var opt = this.options[this.selectedIndex];
+        var x = parseFloat(opt.getAttribute('data-x'));
+        var y = parseFloat(opt.getAttribute('data-y'));
+        var z = parseFloat(opt.getAttribute('data-zoom'));
+
+        if (!isNaN(x) && !isNaN(y)) {
+          view.animate({
+            center: ol.proj.fromLonLat([x, y]),
+            zoom: z || 5,
+            duration: 900
+          });
+        }
+      });
+    }
+
+    // Reset View Button
+    var btnResetView = document.getElementById('btnResetView');
+    if (btnResetView) {
+      btnResetView.addEventListener('click', function() {
+        view.animate({
+          center: defaultCenter,
+          zoom: defaultZoom,
+          duration: 700
+        });
+        if (hotspotSelect) hotspotSelect.value = 'global';
+      });
+    }
+
+    // Fullscreen Toggle
+    var btnToggleFullscreen = document.getElementById('btnToggleFullscreen');
+    var viewportWrap = document.getElementById('ecoViewportWrap');
+    var fsText = document.getElementById('fsText');
+    if (btnToggleFullscreen && viewportWrap) {
+      btnToggleFullscreen.addEventListener('click', function() {
+        if (!document.fullscreenElement) {
+          viewportWrap.requestFullscreen().catch(function(err) {
+            console.error('Fullscreen error: ', err);
+          });
+        } else {
+          document.exitFullscreen();
+        }
+      });
+
+      document.addEventListener('fullscreenchange', function() {
+        var isFs = !!document.fullscreenElement;
+        if (fsText) fsText.textContent = isFs ? 'Exit' : 'Fullscreen';
+        setTimeout(function() {
+          map.updateSize();
+        }, 150);
+      });
+    }
+
+    // Search Input Filter
+    var searchInput = document.getElementById('ecoSearchInput');
+    if (searchInput) {
+      var searchTimeout = null;
+      searchInput.addEventListener('input', function() {
+        var self = this;
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(function() {
+          searchQuery = self.value.trim();
+          styleCache = {};
+          ecoregionsLayer.changed();
+        }, 250);
+      });
+    }
+
+    // Generate Major Biomes Legend and enable interactive filtering
+    var biomesList = [
+      { name: 'Tropical & Subtropical Moist Broadleaf Forests', color: '#38A700', count: 220 },
+      { name: 'Tropical & Subtropical Dry Broadleaf Forests', color: '#CCCD65', count: 56 },
+      { name: 'Tropical & Subtropical Coniferous Forests', color: '#88CE66', count: 14 },
+      { name: 'Temperate Broadleaf & Mixed Forests', color: '#00734C', count: 81 },
+      { name: 'Temperate Conifer Forests', color: '#458970', count: 47 },
+      { name: 'Boreal Forests/Taiga', color: '#7AB6F5', count: 26 },
+      { name: 'Tropical & Subtropical Grasslands, Savannas & Shrublands', color: '#FEAA01', count: 56 },
+      { name: 'Temperate Grasslands, Savannas & Shrublands', color: '#FEFF73', count: 46 },
+      { name: 'Flooded Grasslands & Savannas', color: '#BEE7FF', count: 25 },
+      { name: 'Montane Grasslands & Shrublands', color: '#D6C39D', count: 46 },
+      { name: 'Tundra', color: '#9ED7C2', count: 45 },
+      { name: 'Mediterranean Forests, Woodlands & Scrub', color: '#FE0000', count: 40 },
+      { name: 'Deserts & Xeric Shrublands', color: '#CC6767', count: 99 },
+      { name: 'Mangroves', color: '#FE01C4', count: 19 }
+    ];
+
+    var legendGrid = document.getElementById('biomeLegendGrid');
+    if (legendGrid) {
+      biomesList.forEach(function(b) {
+        var item = document.createElement('div');
+        item.className = 'eco-legend-item';
+        item.setAttribute('data-biome', b.name);
+        item.innerHTML = '<span class="eco-legend-swatch" style="background-color:' + b.color + '"></span>' +
+                         '<span class="eco-legend-name">' + b.name + '</span>' +
+                         '<span class="eco-legend-count">' + b.count + '</span>';
+
+        item.addEventListener('click', function() {
+          if (activeBiomeFilter === b.name) {
+            activeBiomeFilter = null;
+            document.querySelectorAll('.eco-legend-item').forEach(function(el) {
+              el.style.opacity = '1';
+              el.style.borderColor = 'var(--theme-border)';
+            });
+          } else {
+            activeBiomeFilter = b.name;
+            document.querySelectorAll('.eco-legend-item').forEach(function(el) {
+              if (el.getAttribute('data-biome') === b.name) {
+                el.style.opacity = '1';
+                el.style.borderColor = '#10b981';
+              } else {
+                el.style.opacity = '0.45';
+                el.style.borderColor = 'var(--theme-border)';
+              }
+            });
+          }
+          styleCache = {};
+          ecoregionsLayer.changed();
+        });
+
+        legendGrid.appendChild(item);
+      });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initEcosystemsApp);
+  } else {
+    initEcosystemsApp();
+  }
+})();
+</script>
+{{- end }}

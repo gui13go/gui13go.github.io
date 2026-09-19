@@ -1,0 +1,195 @@
+{
+  "title": "Atomic Bomb Blast Zones: Hiroshima & Nagasaki (1945)",
+  "short_title": "Hiroshima-Nagasaki",
+  "subtitle": "Interactive cartographic analysis of the 1945 atomic bombings, weapon yields, and comparative blast radii.",
+  "date": "1945-08-06",
+  "date_display": "August 6 & 9, 1945",
+  "incident_code": "Manhattan Project",
+  "operation": "Operation Centerboard I & II",
+  "combined_yield": "36 Kilotons (15 KT + 21 KT)",
+  "casualties": "~214,000 total estimated fatalities by end of 1945",
+  "map_center": [33.5, 131.0],
+  "default_zoom": 8,
+  "legend": [
+    {
+      "label": "Zone A: Total Annihilation (0–1.2 km)",
+      "color": "#ef4444",
+      "type": "zone-a"
+    },
+    {
+      "label": "Zone B: Severe Damage & Firestorm (1–2.2 km)",
+      "color": "#f97316",
+      "type": "zone-b"
+    },
+    {
+      "label": "Zone C: Thermal Burns & Radiation (2–3.2 km)",
+      "color": "#eab308",
+      "type": "zone-c"
+    },
+    {
+      "label": "Memorial & Peace Landmarks",
+      "color": "#06b6d4",
+      "type": "memorial"
+    }
+  ],
+  "targets": [
+    {
+      "id": "hiroshima-little-boy",
+      "number": 1,
+      "name": "Hiroshima (Little Boy)",
+      "city": "Hiroshima",
+      "weapon": "Little Boy",
+      "design": "Gun-Type Fission",
+      "fissile_material": "Uranium-235",
+      "yield": "15 Kilotons",
+      "date": "August 6, 1945",
+      "time": "08:15 JST",
+      "aircraft": "B-29 Superfortress Enola Gay",
+      "pilot": "Col. Paul W. Tibbets Jr.",
+      "lat": 34.394594,
+      "lon": 132.454797,
+      "altitude": "580 m (1,900 ft) airburst",
+      "hypocenter": "Shima Hospital (near Aioi Bridge)",
+      "fatalities": "~70,000–80,000 instant; ~140,000 by end of 1945",
+      "color": "#ef4444",
+      "badge_class": "badge-hiroshima",
+      "description": "First nuclear weapon deployed in armed conflict. Detonated 580 meters directly above Shima Hospital, triggering a catastrophic blast wave and massive firestorm that engulfed 11 km² of the city.",
+      "technical_details": "Fired a hollow subcritical uranium-235 projectile into a target cylinder. Only approximately 1.4% of the 64 kg payload underwent nuclear fission. Ground temperature reached 3,000°C–4,000°C within milliseconds.",
+      "zones": [
+        {
+          "radius": 1000,
+          "label": "Zone A (0–1.0 km)",
+          "name": "Total Destruction Zone",
+          "color": "rgba(239, 68, 68, 0.4)",
+          "stroke_color": "#ef4444",
+          "effect": "100% of structures demolished or incinerated; instant vaporization at epicenter.",
+          "casualties": "90–100% fatality rate; ground temp 3,000°C+"
+        },
+        {
+          "radius": 2000,
+          "label": "Zone B (1.0–2.0 km)",
+          "name": "Severe Damage & Firestorm",
+          "color": "rgba(249, 115, 22, 0.3)",
+          "stroke_color": "#f97316",
+          "effect": "Severe structural destruction; thousands of fires merged into an uncontrollable firestorm.",
+          "casualties": "Approx. 50% mortality rate; severe thermal burns"
+        },
+        {
+          "radius": 3000,
+          "label": "Zone C (2.0–3.0 km)",
+          "name": "Moderate Damage & Ionizing Radiation",
+          "color": "rgba(234, 179, 8, 0.2)",
+          "stroke_color": "#eab308",
+          "effect": "Heavy flying glass hazards, residential roofs collapsed, intense flash heat.",
+          "casualties": "Widespread third-degree burns, blindness, acute radiation syndrome"
+        }
+      ]
+    },
+    {
+      "id": "nagasaki-fat-man",
+      "number": 2,
+      "name": "Nagasaki (Fat Man)",
+      "city": "Nagasaki",
+      "weapon": "Fat Man",
+      "design": "Implosion-Type Fission",
+      "fissile_material": "Plutonium-239",
+      "yield": "21 Kilotons",
+      "date": "August 9, 1945",
+      "time": "11:02 JST",
+      "aircraft": "B-29 Superfortress Bockscar",
+      "pilot": "Maj. Charles W. Sweeney",
+      "lat": 32.773611,
+      "lon": 129.863333,
+      "altitude": "503 m (1,650 ft) airburst",
+      "hypocenter": "Matsuyama-machi (Urakami Basin)",
+      "fatalities": "~35,000–40,000 instant; ~74,000 by end of 1945",
+      "color": "#f97316",
+      "badge_class": "badge-nagasaki",
+      "description": "Second wartime atomic detonation. Diverted from secondary target Kokura due to smoke cover, the plutonium weapon exploded over the Urakami industrial valley, devastating factories and residential districts.",
+      "technical_details": "Utilized a 6.2 kg delta-phase plutonium core surrounded by high-explosive lenses generating symmetrical inward shockwaves. The steep surrounding Urakami mountains channeled the shockwave north-south while partially shielding the historic harbor.",
+      "zones": [
+        {
+          "radius": 1200,
+          "label": "Zone A (0–1.2 km)",
+          "name": "Complete Annihilation Zone",
+          "color": "rgba(239, 68, 68, 0.4)",
+          "stroke_color": "#ef4444",
+          "effect": "Complete obliteration; Urakami Cathedral and Mitsubishi arms plants leveled.",
+          "casualties": "100% fatalities at ground zero; catastrophic fireball"
+        },
+        {
+          "radius": 2200,
+          "label": "Zone B (1.2–2.2 km)",
+          "name": "Severe Industrial Blast Zone",
+          "color": "rgba(249, 115, 22, 0.3)",
+          "stroke_color": "#f97316",
+          "effect": "Reinforced steel framing buckled, timber residences collapsed and burnt.",
+          "casualties": "High mortality; fatal flash burns and blast trauma"
+        },
+        {
+          "radius": 3200,
+          "label": "Zone C (2.2–3.2 km)",
+          "name": "Thermal & Blast Radius",
+          "color": "rgba(234, 179, 8, 0.2)",
+          "stroke_color": "#eab308",
+          "effect": "Shattered windows and plaster damage across hillside terraces.",
+          "casualties": "Severe secondary burns, acute ionizing radiation sickness"
+        }
+      ]
+    }
+  ],
+  "memorials": [
+    {
+      "id": "hiroshima-dome",
+      "name": "Hiroshima Peace Memorial (Genbaku Dome)",
+      "city": "Hiroshima",
+      "lat": 34.3928,
+      "lon": 132.4526,
+      "status": "UNESCO World Heritage Site",
+      "color": "#06b6d4",
+      "description": "Located only 160 meters from the hypocenter, the former Prefectural Industrial Promotion Hall was one of the few structures whose vertical brick skeleton withstood the downward blast. Preserved as a monument to international peace.",
+      "elevation": "6 m above sea level"
+    },
+    {
+      "id": "nagasaki-peace-park",
+      "name": "Nagasaki Ground Zero Cenotaph & Peace Park",
+      "city": "Nagasaki",
+      "lat": 32.7738,
+      "lon": 129.8631,
+      "status": "National Memorial Park",
+      "color": "#06b6d4",
+      "description": "A quiet park marking the exact hypocenter where the plutonium bomb burst overhead. Features the black granite cenotaph, the iconic 10-meter Peace Statue, and remnants of the destroyed Urakami Cathedral.",
+      "elevation": "14 m above sea level"
+    }
+  ],
+  "briefing": {
+    "title": "The Atomic Bombings of Japan (August 1945)",
+    "subtitle": "OPERATION CENTERBOARD • MANHATTAN PROJECT",
+    "paragraphs": [
+      "In August 1945, during the closing days of World War II, the United States dropped two atomic bombs over the Japanese cities of <strong>Hiroshima</strong> and <strong>Nagasaki</strong>. These operations, developed under the secretive <strong>Manhattan Project</strong>, marked the first and only instances of nuclear weapons used in warfare.",
+      "On August 6 at 08:15 JST, the B-29 bomber <em>Enola Gay</em> released <strong>Little Boy</strong> over Hiroshima's flat river delta, killing an estimated 140,000 residents by December 1945. Three days later, on August 9 at 11:02 JST, the B-29 <em>Bockscar</em> released <strong>Fat Man</strong> over Nagasaki's Urakami Valley, killing another 74,000. On August 15, Emperor Hirohito announced Japan's unconditional surrender, formally ending the Second World War."
+    ],
+    "fates": [
+      {
+        "title": "Hiroshima: The Delta Firestorm",
+        "color": "#ef4444",
+        "description": "Because Hiroshima was situated on flat terrain, the 15-kiloton detonation initiated a massive thermal firestorm that consumed 4.4 square miles (11 km²) within hours."
+      },
+      {
+        "title": "Nagasaki: The Valley Confinement",
+        "color": "#f97316",
+        "description": "The 21-kiloton Fat Man exploded with greater energy than Little Boy, but the surrounding hills of the Urakami basin contained the lateral shockwave, sparing downtown Nagasaki."
+      },
+      {
+        "title": "Concentric Blast Damage Tiers",
+        "color": "#eab308",
+        "description": "Zone A (0–1.2 km) produced total annihilation; Zone B (1–2.2 km) created fatal burns and firestorms; Zone C (2–3.2 km) inflicted widespread thermal burns and acute radiation exposure."
+      },
+      {
+        "title": "The Dawn of the Atomic Age",
+        "color": "#06b6d4",
+        "description": "The bombings precipitated the immediate conclusion of WWII and inaugurated the Cold War nuclear arms race, fundamentally altering international geopolitics."
+      }
+    ]
+  }
+}

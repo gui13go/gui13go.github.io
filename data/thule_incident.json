@@ -1,0 +1,181 @@
+{
+  "title": "The Thule Incident (1968)",
+  "subtitle": "Locations of the 4 US Hydrogen Bombs dropped by \"accident\" in Greenland.",
+  "short_title": "USA dropped nukes on Greenland",
+  "date": "1968-01-21",
+  "date_display": "January 21, 1968",
+  "incident_code": "Broken Arrow",
+  "operation": "Operation Chrome Dome",
+  "aircraft_bomber": "Boeing B-52G Stratofortress (58-0188)",
+  "aircraft_tanker": "None (Emergency Divert to Thule AFB)",
+  "bombs_carried": "4 × B28FI Mod 2 Y1 Thermonuclear Bombs (1.1 Megatons each)",
+  "casualties": "1 crew member killed (Co-pilot Capt. Leonard Svitenko); 6 survived",
+  "map_center": [76.525, -69.10],
+  "default_zoom": 11,
+  "legend": [
+    {
+      "label": "Non-Nuclear Detonation",
+      "color": "#FF4500",
+      "type": "detonated"
+    },
+    {
+      "label": "Contamination Swath",
+      "color": "#FFA500",
+      "type": "debris"
+    },
+    {
+      "label": "Lost Secondary Search",
+      "color": "#06B6D4",
+      "type": "sea"
+    },
+    {
+      "label": "Military Installation",
+      "color": "#3B82F6",
+      "type": "base"
+    },
+    {
+      "label": "Arctic Cleanup Camp",
+      "color": "#10B981",
+      "type": "camp"
+    },
+    {
+      "label": "Crew Bailout & Rescue",
+      "color": "#A855F7",
+      "type": "bailout"
+    }
+  ],
+  "bombs": [
+    {
+      "id": "site-crash",
+      "number": 1,
+      "name": "Primary Impact & Crash Swath",
+      "location": "North Star Bay Sea Ice",
+      "lat": 76.5160,
+      "lon": -69.1830,
+      "status": "Non-nuclear Detonation",
+      "status_type": "detonated",
+      "color": "#FF4500",
+      "badge_class": "badge-detonated",
+      "description": "B-52G slammed into sea ice at 500 knots. High explosives detonated on impact, gouging a 670-meter blackened trench into the ice pack.",
+      "technical_details": "Conventional high-explosive trigger lenses in the four B28FI bombs detonated upon high-velocity impact with the frozen ice. No nuclear yield occurred, but burning JP-4 fuel melted through the ice sheet into seawater, pulverizing the airframe and aerosolizing weapons-grade plutonium.",
+      "recovery_method": "Excavation during Project Crested Ice; contaminated ice and slush loaded into steel tanks",
+      "elevation": "0 m (Sea Ice Surface)",
+      "payload": "4 × B28FI Thermonuclear Warheads (4.4 MT Total Yield)"
+    },
+    {
+      "id": "site-plume",
+      "number": 2,
+      "name": "Debris Field & Plutonium Swath",
+      "location": "West-Northwest Dispersion Track",
+      "lat": 76.5200,
+      "lon": -69.3000,
+      "status": "Contaminated Ice Plume",
+      "status_type": "debris",
+      "color": "#FFA500",
+      "badge_class": "badge-debris",
+      "description": "Main radioactive fallout plume spanning 5.6 km by 1 km across frozen Bylot Sound toward Saunders Island.",
+      "technical_details": "Polar winds whipped alpha-emitting plutonium-239 and americium-241 particles across the snowpack. Over 500,000 gallons of contaminated snow, ice, and blackened aircraft wreckage were scraped by heavy graders and bulldozers to prevent marine ecosystem contamination upon spring melt.",
+      "recovery_method": "Bulldozed, melted in steel vats, sealed in 67 train-car-sized containers, and shipped to Savannah River",
+      "elevation": "0 m (Sea Ice Surface)",
+      "payload": "Aerosolized Pu-239, U-235, Am-241 & Tritium"
+    },
+    {
+      "id": "site-lost-bomb",
+      "number": 3,
+      "name": "The 'Lost Bomb' Subsea Grid",
+      "location": "North Star Bay Seabed (Bylot Sound)",
+      "lat": 76.5050,
+      "lon": -69.2300,
+      "status": "Missing Secondary Core",
+      "status_type": "sea",
+      "color": "#06B6D4",
+      "badge_class": "badge-sea",
+      "description": "Subsea search grid for thermonuclear secondary stage Serial #78252, lost through ruptured ice to the ocean floor.",
+      "technical_details": "Declassified documents in 2008 confirmed that while components of the other weapons were recovered, one secondary uranium/lithium-6 deuteride cylinder (Serial #78252) sank to the bottom of North Star Bay. In summer 1968, Canadian submersible Taurus searched the 200 m seabed without locating it, and the US military concluded it was buried under marine sediment.",
+      "recovery_method": "Submersible Taurus Sonar Survey (Search abandoned; secondary remains on seabed)",
+      "elevation": "-200 m (Ocean Floor)",
+      "payload": "Secondary Stage Serial #78252 (Enriched U-235 / Li-6 Deuteride)"
+    },
+    {
+      "id": "site-thule-base",
+      "number": 4,
+      "name": "Thule Air Base (Pituffik)",
+      "location": "Pituffik, Northwestern Greenland",
+      "lat": 76.5310,
+      "lon": -68.7030,
+      "status": "Strategic Outpost & BMEWS",
+      "status_type": "base",
+      "color": "#3B82F6",
+      "badge_class": "badge-base",
+      "description": "Critical SAC Arctic outpost and BMEWS missile radar installation; intended emergency divert runway for HOBO 28.",
+      "technical_details": "Hosts the 12th Space Warning Squadron's Ballistic Missile Early Warning System (BMEWS J-Site). HOBO 28 declared an emergency due to an uncontrollable cockpit fire and requested an immediate visual landing on runway 08/26, but power failure and zero cockpit visibility forced Captain Haug to order an evacuation 7 miles south of the runway.",
+      "recovery_method": "Operational Cold War Air Base & Logistics Hub for Project Crested Ice",
+      "elevation": "77 m above sea level",
+      "payload": "Air Base Runway 08/26 & BMEWS Radar Installation"
+    },
+    {
+      "id": "site-camp-hunley",
+      "number": 5,
+      "name": "Camp Hunley (Decon Base)",
+      "location": "North Star Bay Ice Shelf",
+      "lat": 76.5250,
+      "lon": -69.1200,
+      "status": "Arctic Decontamination HQ",
+      "status_type": "camp",
+      "color": "#10B981",
+      "badge_class": "badge-camp",
+      "description": "Temporary polar station built directly on sea ice to manage Project Crested Ice (dubbed 'Dr. Freezelove').",
+      "technical_details": "Constructed in perpetual polar night at windchills reaching -60°C. Comprised heated prefab shelters, generators, and a helicopter landing zone. Housed over 70 Danish and American nuclear radiation specialists who operated around the clock to clear contaminated ice before the spring thaw.",
+      "recovery_method": "Dismantled and evacuated in May 1968 before seasonal sea ice breakup",
+      "elevation": "0 m (Sea Ice Surface)",
+      "payload": "Project Crested Ice Command Post"
+    },
+    {
+      "id": "site-bailout",
+      "number": 6,
+      "name": "Crew Bailout & Rescue Corridor",
+      "location": "Wolstenholme Fjord Shoreline",
+      "lat": 76.5550,
+      "lon": -69.4200,
+      "status": "Crew Ejection & Rescue",
+      "status_type": "bailout",
+      "color": "#A855F7",
+      "badge_class": "badge-bailout",
+      "description": "Corridor where six crew members parachuted into the pitch-black Arctic night; rescued by Inughuit dog sledders.",
+      "technical_details": "Six crew members ejected at 2,000 feet over the frozen bay and survived parachute landings in -35°C Arctic gales. Local Inughuit hunters with dog-sled teams and USAF HH-43 Pedro helicopters located and rescued all six. Co-pilot Capt. Leonard Svitenko perished when attempting manual bail-out through the lower hatch without an ejection seat.",
+      "recovery_method": "Rescued by Greenlandic Inughuit dog-sled teams and USAF HH-43 rescue helicopters",
+      "elevation": "15 m (Fjord shoreline)",
+      "payload": "Bailout Corridor (6 Survivors, 1 Fatality)"
+    }
+  ],
+  "briefing": {
+    "title": "The Thule Air Base Accident Narrative",
+    "subtitle": "OPERATION CHROME DOME • HARD HEAD MISSION 1968",
+    "paragraphs": [
+      "On <strong>January 21, 1968</strong>, a USAF Boeing B-52G Stratofortress (serial 58-0188, callsign <strong>HOBO 28</strong>) carrying <strong>four B28FI thermonuclear weapons</strong> (1.1 megatons yield each) crashed onto the frozen sea ice of <strong>North Star Bay</strong> in Bylot Sound, Greenland, approximately 7 miles south-southwest of Thule Air Base.",
+      "While flying a secret continuous airborne alert monitoring the Thule BMEWS radar ('Hard Head'), an improvised heating duct modification ignited spare seat cushions stowed under the lower deck. The fire rapidly escalated into an uncontrollable inferno, filling the cockpit with blinding smoke and knocking out all onboard electrical power. Unable to land on Thule's runway, Captain John Haug ordered the crew to bail out into the Arctic darkness before the unmanned bomber banked and plummeted into the sea ice at 500 knots."
+    ],
+    "fates": [
+      {
+        "title": "Non-Nuclear Detonation",
+        "color": "#ff4500",
+        "description": "<strong>Weapons 1, 2 & 3</strong>: The conventional high explosives detonated on impact, gouging a 670 m blackened trench in the ice and aerosolizing weapons-grade plutonium over 5 km²."
+      },
+      {
+        "title": "The 'Missing' Secondary",
+        "color": "#06b6d4",
+        "description": "<strong>Weapon 4 (Serial 78252)</strong>: High explosives detonated; its secondary thermonuclear stage broke through the melting ice into North Star Bay and was never found."
+      },
+      {
+        "title": "Operation Crested Ice",
+        "color": "#10b981",
+        "description": "<strong>Dr. Freezelove Cleanup</strong>: American and Danish teams shoveled 500,000+ gallons of radioactive slush at -60°C into steel tanks before the spring ice thaw."
+      },
+      {
+        "title": "Permanent Strategic Shift",
+        "color": "#a855f7",
+        "description": "<strong>End of Chrome Dome</strong>: Following Palomares (1966) and Thule (1968), the Pentagon officially and permanently ended 24/7 airborne nuclear bomber patrols."
+      }
+    ]
+  }
+}

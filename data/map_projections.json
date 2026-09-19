@@ -1,0 +1,155 @@
+{
+  "title": "Map Projection Explorer",
+  "subtitle": "Visualize and compare common cartographic map projections, graticules, Tissot indicatrices, and distortion properties with interactive D3.js rendering.",
+  "hero_banner": "/images/globeColorful.webp",
+  "overview": {
+    "heading": "Understanding Map Projections",
+    "description": "Map projections transform the spherical three-dimensional surface of the Earth onto a two-dimensional planar medium. Carl Friedrich Gauss proved with his Theorema Egregium that a sphere cannot be projected onto a plane without introducing distortion. Consequently, every map projection represents a compromise among preserving area (equivalence), conformal angles and local shapes (orthomorphism), distances from specific origins (equidistance), or navigational directions (loxodromes and great circles)."
+  },
+  "projections": [
+    {
+      "id": "azimuthal-equal-area",
+      "name": "Lambert Azimuthal Equal-Area",
+      "d3_type": "geoAzimuthalEqualArea",
+      "category": "Azimuthal",
+      "properties": ["Equal-Area", "True Direction from Center"],
+      "scale": 150,
+      "description": "Preserves area accurately across all regions of the map while projecting directions faithfully from the central point.",
+      "pros": "Strictly equal-area across global extents; ideal for continental and polar statistical distributions without biasing land masses.",
+      "cons": "Distorts local shapes and angles progressively as distance from the projection origin increases toward the periphery.",
+      "uses": "Hemispheric thematic maps, polar research charts, continental demographic atlases, and statistical choropleths."
+    },
+    {
+      "id": "azimuthal-equidistant",
+      "name": "Azimuthal Equidistant",
+      "d3_type": "geoAzimuthalEquidistant",
+      "category": "Azimuthal",
+      "properties": ["Equidistant from Center", "True Azimuths"],
+      "scale": 120,
+      "description": "Preserves exact distances and true directions from the designated center point to all other locations on the globe.",
+      "pros": "Accurate linear scale along all radii emanating from the center; straight lines from origin represent shortest geodesic great circles.",
+      "cons": "Severe angular and areal distortion in outer margins; the point opposite the center is stretched into the entire enclosing boundary circle.",
+      "uses": "High-frequency radio transmission planning, seismic epicenter distance measurement, strategic polar aviation routing, and the UN emblem."
+    },
+    {
+      "id": "gnomonic",
+      "name": "Gnomonic",
+      "d3_type": "geoGnomonic",
+      "category": "Azimuthal",
+      "properties": ["Geodesic Straight Lines", "Perspective"],
+      "scale": 140,
+      "description": "Projects points on the sphere from the Earth's geometric center onto a tangent plane, rendering every great circle as a straight line.",
+      "pros": "Shortest flight routes and oceanic geodesic paths are always plotted as perfectly straight lines between any two coordinates.",
+      "cons": "Cannot display a full hemisphere; extreme areal and linear stretching occurs outward from the tangent center.",
+      "uses": "Aviation flight planning, maritime great-circle navigation plotting, seismic P/S-wave directional analysis, and astrometry."
+    },
+    {
+      "id": "orthographic",
+      "name": "Orthographic",
+      "d3_type": "geoOrthographic",
+      "category": "Azimuthal",
+      "properties": ["Perspective from Infinity", "Photorealistic Globe"],
+      "scale": 190,
+      "description": "Simulates a perspective view of the 3D rotating globe viewed from infinite space, preserving the visual curvature of the horizon.",
+      "pros": "Intuitive, photorealistic aesthetic resembling views from orbit; excellent for single-hemisphere regional overviews.",
+      "cons": "Displays only one hemisphere at a time; severe compression and foreshortening near the planetary limb.",
+      "uses": "Educational graphics, interactive globe widgets, regional contextual insets, space sciences, and editorial media."
+    },
+    {
+      "id": "stereographic",
+      "name": "Stereographic",
+      "d3_type": "geoStereographic",
+      "category": "Azimuthal",
+      "properties": ["Conformal", "Circle-Preserving"],
+      "scale": 140,
+      "description": "A perspective conformal projection where points are projected from the antipode onto a tangent plane, mapping all circles on the sphere to circles.",
+      "pros": "Preserves infinitesimal angles, shapes, and mutual bearings around any point; transforms spherical circles into planar circles.",
+      "cons": "Areal scale expands exponentially away from the center point, creating massive exaggeration in peripheral territories.",
+      "uses": "Polar navigation charts, structural geology, crystallographic stereonets, deep-sky astronomy star charts, and geophysical fault plane analysis."
+    },
+    {
+      "id": "albers",
+      "name": "Albers Equal-Area Conic",
+      "d3_type": "geoAlbers",
+      "category": "Conic",
+      "properties": ["Equal-Area", "Secant Conic"],
+      "scale": 170,
+      "description": "An equal-area conic projection that minimizes distortion along two selected standard parallels across mid-latitude continental extents.",
+      "pros": "Preserves relative area flawlessly; balances scale variations evenly between standard parallels with minimal shear distortion.",
+      "cons": "Neither conformal nor equidistant; polar and equatorial extremes suffer considerable curvature deformation.",
+      "uses": "Official USGS national atlas maps, US Census Bureau demographic maps, and mid-latitude regional administrative surveys."
+    },
+    {
+      "id": "conic-conformal",
+      "name": "Lambert Conformal Conic",
+      "d3_type": "geoConicConformal",
+      "category": "Conic",
+      "properties": ["Conformal", "Aeronautical Standard"],
+      "scale": 150,
+      "description": "A conformal conic projection conceived by Johann Heinrich Lambert that retains true local shapes and angles along mid-latitude belts.",
+      "pros": "Preserves angles and shapes locally; straight lines closely approximate great circles over medium continental spans.",
+      "cons": "Exaggerates surface areas significantly north and south of its designated standard parallels.",
+      "uses": "ICAO aeronautical sectional charts, national meteorological surface analyses, state plane coordinate systems (SPCS), and air traffic control."
+    },
+    {
+      "id": "conic-equal-area",
+      "name": "Conic Equal-Area",
+      "d3_type": "geoConicEqualArea",
+      "category": "Conic",
+      "properties": ["Equal-Area", "Standard Parallels"],
+      "scale": 150,
+      "description": "General conic equal-area projection configuration designed to maintain uniform surface proportions across temperate regions.",
+      "pros": "Guarantees that regions of equal geographic area on the spheroid occupy identical pixel extents on the cartographic canvas.",
+      "cons": "Shape distortion increases non-linearly when moving beyond the standard parallels towards the equator or poles.",
+      "uses": "Agricultural land-use evaluations, mid-latitude regional vegetation cover atlases, and environmental basin assessments."
+    },
+    {
+      "id": "conic-equidistant",
+      "name": "Conic Equidistant",
+      "d3_type": "geoConicEquidistant",
+      "category": "Conic",
+      "properties": ["Equidistant Meridians", "Balanced"],
+      "scale": 140,
+      "description": "A conic projection that maintains a constant scale along every meridian and along two chosen standard parallels.",
+      "pros": "Balanced compromise with true linear distances along meridians; simple calculation and clean aesthetic layout.",
+      "cons": "Neither conformal nor equal-area; introduces moderate distortion across both angles and land parcel sizes.",
+      "uses": "School reference atlases, transcontinental highway network charts, and mid-latitude country regional profiles."
+    },
+    {
+      "id": "equirectangular",
+      "name": "Equirectangular (Plate Carrée)",
+      "d3_type": "geoEquirectangular",
+      "category": "Cylindrical",
+      "properties": ["Equidistant Graticule", "Linear Coordinates"],
+      "scale": 120,
+      "description": "A simple cylindrical projection mapping longitude directly to x and latitude directly to y as an orthogonal Cartesian grid.",
+      "pros": "Direct 1:1 mapping between Geographic WGS84 coordinate space (lon/lat) and raster pixel matrices; universally intuitive indexing.",
+      "cons": "Massive shape and areal deformation away from the equator; poles are stretched into horizontal lines as wide as the equator.",
+      "uses": "GIS raster digital elevation models, global satellite texture wraps, texture coordinates in 3D planetary rendering, and quick spatial previews."
+    },
+    {
+      "id": "mercator",
+      "name": "Mercator",
+      "d3_type": "geoMercator",
+      "category": "Cylindrical",
+      "properties": ["Conformal", "Rhumb Lines as Straight Lines"],
+      "scale": 95,
+      "description": "A conformal cylindrical projection formulated by Gerardus Mercator in 1569 that renders lines of constant compass course as straight tracks.",
+      "pros": "Preserves angles and shapes locally; any straight line is a loxodrome (rhumb line), enabling straightforward marine compass navigation.",
+      "cons": "Infamous polar area inflation: Greenland appears roughly equal in size to Africa, despite Africa being 14 times larger in reality.",
+      "uses": "Marine navigational charts, Web Mercator (EPSG:3857) web tiling (OpenStreetMap, Google Maps, Mapbox), and nautical piloting."
+    },
+    {
+      "id": "transverse-mercator",
+      "name": "Transverse Mercator",
+      "d3_type": "geoTransverseMercator",
+      "category": "Cylindrical",
+      "properties": ["Conformal", "Meridian Foundation for UTM"],
+      "scale": 95,
+      "description": "A transverse cylinder orientation rotated 90 degrees relative to standard Mercator, tangent or secant along a specific central meridian.",
+      "pros": "Highly accurate and minimally distorted within a narrow zone (up to 6 degrees of longitude) surrounding the central meridian.",
+      "cons": "Scale factor and area error escalate rapidly as one moves east or west away from the standard longitudinal meridian.",
+      "uses": "Universal Transverse Mercator (UTM) worldwide grid, national cadastral surveys, ordnance mapping, and military topographic charts."
+    }
+  ]
+}

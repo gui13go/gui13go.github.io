@@ -1,0 +1,54 @@
+{
+  "title": "Solar Terminator",
+  "subtitle": "The moving line dividing Earth's daylight illumination and nocturnal darkness, computed from high-precision orbital astronomy.",
+  "seasonPresets": [
+    {
+      "id": "march-equinox",
+      "name": "Vernal Equinox",
+      "date": "2026-03-20T09:46:00Z",
+      "declination": "0.0°",
+      "description": "Sun shines perpendicularly over the equator. Day and night are nearly equal worldwide (~12h)."
+    },
+    {
+      "id": "june-solstice",
+      "name": "Summer Solstice",
+      "date": "2026-06-21T14:24:00Z",
+      "declination": "+23.44°",
+      "description": "Sun is at zenith over Tropic of Cancer. Arctic experiences midnight sun; Antarctica is in total darkness."
+    },
+    {
+      "id": "september-equinox",
+      "name": "Autumnal Equinox",
+      "date": "2026-09-22T19:05:00Z",
+      "declination": "0.0°",
+      "description": "Subsolar point crosses equator southward. Global day and night lengths balance again."
+    },
+    {
+      "id": "december-solstice",
+      "name": "Winter Solstice",
+      "date": "2026-12-21T21:50:00Z",
+      "declination": "-23.44°",
+      "description": "Sun is at zenith over Tropic of Capricorn. Antarctic experiences perpetual daylight; Arctic polar night."
+    }
+  ],
+  "sampleCities": [
+    { "name": "London, UK", "coords": [-0.1278, 51.5074] },
+    { "name": "New York, USA", "coords": [-74.006, 40.7128] },
+    { "name": "Tokyo, Japan", "coords": [139.6917, 35.6895] },
+    { "name": "São Paulo, Brazil", "coords": [-46.6333, -23.5505] },
+    { "name": "Sydney, Australia", "coords": [151.2093, -33.8688] },
+    { "name": "Cairo, Egypt", "coords": [31.2357, 30.0444] },
+    { "name": "Reykjavik, Iceland", "coords": [-21.9426, 64.1466] },
+    { "name": "Singapore", "coords": [103.8198, 1.3521] },
+    { "name": "Longyearbyen, Svalbard", "coords": [15.6356, 78.2232] },
+    { "name": "Honolulu, USA", "coords": [-157.8583, 21.3069] }
+  ],
+  "projections": [
+    { "id": "equirectangular", "name": "Equirectangular (Plate Carrée)" },
+    { "id": "naturalEarth1", "name": "Natural Earth I" },
+    { "id": "equalEarth", "name": "Equal Earth" },
+    { "id": "mercator", "name": "Mercator" },
+    { "id": "orthographic", "name": "Orthographic (3D Globe)" },
+    { "id": "mollweide", "name": "Mollweide (Equal Area)" }
+  ]
+}

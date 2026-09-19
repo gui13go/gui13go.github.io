@@ -61,6 +61,13 @@
       "quote": ""
     },
     {
+      "id": "1975-microsoft-founded",
+      "year": "1975",
+      "title": "Creation of Microsoft",
+      "summary": "Bill Gates and Paul Allen founded Micro-Soft in Albuquerque, New Mexico, after seeing the MITS Altair 8800 on the cover of Popular Electronics. Operating as an early microcomputer language and tools vendor before entering operating systems, their very first commercial product was Altair BASIC (an interpreter for the Intel 8080). They soon expanded to other programming languages including Microsoft FORTRAN and Microsoft COBOL, alongside the Z80 SoftCard hardware accessory for the Apple II.",
+      "quote": ""
+    },
+    {
       "id": "1976-gates-open-letter",
       "year": "1976",
       "title": "Gates' Open Letter",
@@ -69,10 +76,17 @@
       "quote_author": "Bill Gates (1976)"
     },
     {
+      "id": "1976-genesis-apple-computer",
+      "year": "1976",
+      "title": "Genesis of Apple Computer",
+      "summary": "On April 1, 1976, Steve Wozniak, Steve Jobs, and Ronald Wayne formed Apple Computer in Los Altos, California. Born directly out of the Homebrew Computer Club ethos, Wozniak hand-built the Apple I single-board computer, followed by the breakthrough Apple II in 1977. Apple catalyzed the personal computer revolution by commercializing fully assembled consumer hardware, initiating an era of vertically integrated personal computing.",
+      "quote": ""
+    },
+    {
       "id": "1980-xerox-paper-jam",
       "year": "1980",
       "title": "The Xerox 9700 Paper Jam and Stallman’s Epiphany",
-      "summary": "When researchers refused to share the Xerox 9700 printer driver source code due to a Non-Disclosure Agreement (NDA), Richard Stallman had an epiphany: NDAs were acts of social betrayal that destroyed developer solidarity. He resolved to build a completely free operating system.",
+      "summary": "At the MIT AI Lab, Richard Stallman had previously modified older printer drivers so the machine would broadcast network notifications whenever paper jammed, allowing users to quickly fix it. But when the lab received a new Xerox 9700 that jammed constantly and researchers refused to share its driver source code due to a Non-Disclosure Agreement (NDA), Stallman had an epiphany: NDAs were acts of social betrayal that destroyed developer solidarity. He resolved to build a completely free operating system.",
       "quote": "The refusal to share with your neighbor is an act of spiritual suicide… An NDA is an agreement to betray your fellow man.",
       "quote_author": "Richard Stallman (1980)"
     },
@@ -227,6 +241,13 @@
       "summary": "Microsoft CEO Steve Ballmer attacked Linux and the GPL as an intellectual property cancer in an interview with the Chicago Sun-Times, marking the height of Microsoft's aggressive corporate campaign against open source.",
       "quote": "Linux is a cancer that attaches itself in an intellectual property sense to everything it touches. The way the license is written, if you use any open-source software, you have to make the rest of your software open source.",
       "quote_author": "Steve Ballmer (June 2001)"
+    },
+    {
+      "id": "2001-apple-mac-os-x",
+      "year": "2001",
+      "title": "Mac OS X: Apple Embraces UNIX",
+      "summary": "Apple released Mac OS X 10.0 (Cheetah) in March 2001, completely replacing the legacy classic Mac OS architecture with an industrial-strength Unix foundation. Built upon NeXTSTEP heritage and Darwin (the open-source core combining Carnegie Mellon's Mach 3.0 microkernel with FreeBSD userland and networking code), Mac OS X brought native POSIX compliance, preemptive multitasking, and protected memory to millions of personal computers, ultimately earning official UNIX 03 certification.",
+      "quote": ""
     },
     {
       "id": "2004-canonical-ubuntu",

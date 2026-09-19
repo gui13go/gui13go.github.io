@@ -79,7 +79,7 @@ enableEmoji = true
 
   [[menu.main]]
     identifier = 'geolayers'
-    name = 'GeoLayer'
+    name = 'GeoLayers'
     url = '/geolayers/'
     weight = 13
 

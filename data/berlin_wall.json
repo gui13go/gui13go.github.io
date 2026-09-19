@@ -1,0 +1,278 @@
+{
+  "title": "Berlin Wall Comparison",
+  "subtitle": "An interactive visualization comparing the scale and geographic impact of the Berlin Wall to other cities and regions across the world.",
+  "short_title": "Berlin Wall Comparison",
+  "dates": "August 13, 1961 – November 9, 1989 (10,316 Days)",
+  "total_length_km": 155.0,
+  "inner_berlin_length_km": 43.1,
+  "outer_border_length_km": 111.9,
+  "watchtowers": 302,
+  "bunkers": 20,
+  "fatalities_documented": 140,
+  "successful_escapes": "5,075+",
+  "encircled_population": "2.1 Million",
+  "wall_center": [52.5163, 13.3777],
+  "default_zoom": 11,
+  "comparisons": [
+    {
+      "id": "berlin",
+      "name": "Berlin (Original Course)",
+      "country": "Germany",
+      "center": [52.5163, 13.3777],
+      "zoom": 11,
+      "description": "The actual historical course encircling West Berlin and bisecting the heart of the metropolis through Brandenburg Gate and Potsdamer Platz.",
+      "scale_comparison": "Encompassed 480 km² of Allied West Berlin territory (American, British, and French sectors)."
+    },
+    {
+      "id": "new-york",
+      "name": "New York City",
+      "country": "United States",
+      "center": [40.7306, -73.9352],
+      "zoom": 10,
+      "description": "If placed over New York, the 155 km perimeter would encircle the entire borough of Manhattan, extend past Brooklyn and Queens, cross into the Bronx, and reach deep into New Jersey.",
+      "scale_comparison": "The 155 km perimeter is 7.2x the length of Manhattan island (21.6 km) and would wall off the entire NY Harbor and Inner Metropolitan Core."
+    },
+    {
+      "id": "london",
+      "name": "London",
+      "country": "United Kingdom",
+      "center": [51.5074, -0.1278],
+      "zoom": 10,
+      "description": "Projected onto Greater London, the wall stretches roughly equivalent to London's North and South Circular roads combined, locking away the City, Westminster, Camden, Greenwich, and beyond.",
+      "scale_comparison": "Nearly matches the entire M25 London Orbital Motorway loop (188 km), trapping over 3 million inhabitants."
+    },
+    {
+      "id": "paris",
+      "name": "Paris",
+      "country": "France",
+      "center": [48.8566, 2.3522],
+      "zoom": 10,
+      "description": "At 155 km, the barrier is 4.4 times the circumference of the Boulevard Périphérique (35 km). It would encircle not just Paris proper, but Versailles, Saint-Denis, and the entire Petite Couronne.",
+      "scale_comparison": "Over 4 times the size of central Paris intra-muros, spanning all 20 arrondissements plus multiple suburban départements."
+    },
+    {
+      "id": "tokyo",
+      "name": "Tokyo",
+      "country": "Japan",
+      "center": [35.6762, 139.6503],
+      "zoom": 10,
+      "description": "Superimposed on Tokyo, the Berlin Wall footprint would enclose almost all of the 23 Special Wards, from Shinjuku and Shibuya to the shores of Tokyo Bay.",
+      "scale_comparison": "More than 4 times the loop length of the Yamanote rail line (34.5 km), slicing through one of Earth's densest urban megalopolises."
+    },
+    {
+      "id": "sao-paulo",
+      "name": "São Paulo",
+      "country": "Brazil",
+      "center": [-23.5505, -46.6333],
+      "zoom": 10,
+      "description": "Centering the barrier over Praça da Sé encompasses the entire central expanded perimeter (Mini-Anel Viário), cutting off Pinheiros, Mooca, Paulista, and Santana from the rest of the state.",
+      "scale_comparison": "Comparable to the Rodoanel Mário Covas South and West stretches, dividing South America's financial capital into sealed fortress zones."
+    },
+    {
+      "id": "san-francisco",
+      "name": "San Francisco Bay Area",
+      "country": "United States",
+      "center": [37.7749, -122.4194],
+      "zoom": 10,
+      "description": "The wall would seal off the entire San Francisco peninsula from San Jose to the Golden Gate, and cross the Bay to engulf Oakland and Berkeley.",
+      "scale_comparison": "Spans roughly the driving distance from San Francisco down to San Jose and back, severing the entire Silicon Valley corridor."
+    },
+    {
+      "id": "rome",
+      "name": "Rome",
+      "country": "Italy",
+      "center": [41.9028, 12.4964],
+      "zoom": 10,
+      "description": "The 155 km perimeter dwarfs Rome's historic Aurelian Walls (19 km) and extends further out than the entire Grande Raccordo Anulare (GRA) motorway ring (68 km).",
+      "scale_comparison": "More than twice the circumference of Rome's modern ring road, encapsulating the Vatican, EUR, Ostia Antica, and Castelli Romani."
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "checkpoint-charlie",
+      "name": "Checkpoint Charlie (Friedrichstraße)",
+      "lat": 52.5074,
+      "lon": 13.3904,
+      "type": "Checkpoint",
+      "status": "Allied Border Crossing C",
+      "color": "#3B82F6",
+      "badge": "Allied Checkpoint",
+      "summary": "The iconic crossing point for foreigners, diplomats, and Allied military personnel between the American sector and East Berlin.",
+      "description": "Site of the infamous October 1961 tank standoff between US M48 Patton and Soviet T-54 tanks standing barrel-to-barrel at 100 meters. Remains one of the world's best-known symbols of the Cold War.",
+      "sector": "US / Soviet Sector Line"
+    },
+    {
+      "id": "brandenburg-gate",
+      "name": "Brandenburg Gate (Brandenburger Tor)",
+      "lat": 52.5163,
+      "lon": 13.3777,
+      "type": "Symbolic Monument",
+      "status": "Inaccessible Exclusion Zone",
+      "color": "#EC4899",
+      "badge": "Historical Epicenter",
+      "summary": "18th-century neoclassical monument stranded inside the death strip, inaccessible to citizens of both East and West.",
+      "description": "Location of President Ronald Reagan's historic 1987 speech: 'Mr. Gorbachev, tear down this wall!'. When the wall opened on November 9, 1989, tens of thousands gathered here to celebrate the end of division.",
+      "sector": "British / Soviet Sector Line"
+    },
+    {
+      "id": "checkpoint-bravo",
+      "name": "Checkpoint Bravo (Dreilinden / Drewitz)",
+      "lat": 52.4162,
+      "lon": 13.1970,
+      "type": "Transit Point",
+      "status": "Allied Border Crossing B",
+      "color": "#10B981",
+      "badge": "Transit Checkpoint",
+      "summary": "Primary motorway transit crossing connecting West Berlin to the transit highway (Autobahn) towards West Germany.",
+      "description": "Heavily fortified highway terminal where Western vehicles were meticulously searched by GDR border troops with vehicle chassis mirrors, sniff dogs, and radiation detectors.",
+      "sector": "Southwestern Outer Border"
+    },
+    {
+      "id": "glienicke-bridge",
+      "name": "Glienicke Bridge (Bridge of Spies)",
+      "lat": 52.4136,
+      "lon": 13.0903,
+      "type": "Exchange Point",
+      "status": "Bridge of Spies",
+      "color": "#8B5CF6",
+      "badge": "Spy Exchange",
+      "summary": "Crossing between American-controlled West Berlin and Soviet-controlled Potsdam across the Havel River.",
+      "description": "Venue for Cold War prisoner swaps between CIA and KGB agents, famously including U-2 pilot Francis Gary Powers for Soviet spy Rudolf Abel in February 1962.",
+      "sector": "Potsdam Border"
+    },
+    {
+      "id": "bornholmer-strasse",
+      "name": "Bornholmer Straße Border Crossing",
+      "lat": 52.5546,
+      "lon": 13.3986,
+      "type": "Historic Breach",
+      "status": "First Gate to Fall",
+      "color": "#F59E0B",
+      "badge": "First Wall Breach (1989)",
+      "summary": "The first border crossing to open on the night of November 9, 1989, initiating the fall of the Berlin Wall.",
+      "description": "Following Günter Schabowski's confused press conference announcement ('immediately, without delay'), thousands of East Berliners pressed against the barriers. At 23:30, Lt. Col. Harald Jäger defied standing orders and opened the gates.",
+      "sector": "French / Soviet Sector Line"
+    },
+    {
+      "id": "east-side-gallery",
+      "name": "East Side Gallery (Mühlenstraße)",
+      "lat": 52.5052,
+      "lon": 13.4397,
+      "type": "Open-Air Memorial",
+      "status": "1.3 km Preserved Section",
+      "color": "#06B6D4",
+      "badge": "Preserved Wall",
+      "summary": "The longest continuous remaining section of the Berlin Wall, painted with 105 murals by international artists in 1990.",
+      "description": "Featuring iconic artworks such as Dmitri Vrubel's 'Fraternal Kiss' between Leonid Brezhnev and Erich Honecker, and Birgit Kinder's Trabant bursting through the concrete.",
+      "sector": "Spree River Inner Sector"
+    },
+    {
+      "id": "bernauer-strasse",
+      "name": "Berlin Wall Memorial (Bernauer Straße)",
+      "lat": 52.5353,
+      "lon": 13.3900,
+      "type": "Central Memorial",
+      "status": "Preserved Death Strip",
+      "color": "#EF4444",
+      "badge": "Memorial Site",
+      "summary": "Official national memorial site featuring preserved watchtowers, ground markings of escape tunnels, and the Window of Remembrance.",
+      "description": "Bernauer Straße witnessed dramatic escapes in August 1961 as residents jumped out of apartment windows situated on the East Berlin sidewalk directly into fire department nets held by West Berlin rescuers.",
+      "sector": "French / Soviet Sector Line"
+    },
+    {
+      "id": "traenenpalast",
+      "name": "Tränenpalast (Palace of Tears)",
+      "lat": 52.5204,
+      "lon": 13.3868,
+      "type": "Transit Hall",
+      "status": "Friedrichstraße Station",
+      "color": "#14B8A6",
+      "badge": "Tears Terminal",
+      "summary": "Customs and passport clearance pavilion at Bahnhof Friedrichstraße for West German visitors departing back to the West.",
+      "description": "Earned its name from the tearful, heartbreaking farewells between Western visitors and their East German family members who were strictly forbidden from traveling beyond the border.",
+      "sector": "Central Rail Crossing"
+    }
+  ],
+  "wall_path": [
+    [52.5546, 13.3986],
+    [52.5450, 13.3930],
+    [52.5353, 13.3900],
+    [52.5300, 13.3850],
+    [52.5255, 13.3770],
+    [52.5204, 13.3760],
+    [52.5163, 13.3777],
+    [52.5097, 13.3758],
+    [52.5074, 13.3904],
+    [52.5065, 13.4000],
+    [52.5030, 13.4150],
+    [52.5052, 13.4397],
+    [52.4950, 13.4500],
+    [52.4820, 13.4750],
+    [52.4600, 13.5000],
+    [52.4300, 13.5200],
+    [52.4000, 13.5350],
+    [52.3800, 13.5300],
+    [52.3650, 13.5100],
+    [52.3550, 13.4700],
+    [52.3600, 13.4200],
+    [52.3800, 13.3800],
+    [52.3900, 13.3200],
+    [52.4000, 13.2600],
+    [52.4162, 13.1970],
+    [52.4150, 13.1400],
+    [52.4136, 13.0903],
+    [52.4250, 13.0600],
+    [52.4500, 13.0800],
+    [52.4800, 13.1100],
+    [52.5200, 13.1300],
+    [52.5600, 13.1600],
+    [52.5900, 13.2000],
+    [52.6200, 13.2400],
+    [52.6450, 13.2900],
+    [52.6600, 13.3300],
+    [52.6500, 13.3700],
+    [52.6200, 13.3900],
+    [52.5850, 13.4000],
+    [52.5546, 13.3986]
+  ],
+  "inner_dividing_path": [
+    [52.5650, 13.4050],
+    [52.5546, 13.3986],
+    [52.5450, 13.3930],
+    [52.5353, 13.3900],
+    [52.5255, 13.3770],
+    [52.5204, 13.3760],
+    [52.5163, 13.3777],
+    [52.5097, 13.3758],
+    [52.5074, 13.3904],
+    [52.5065, 13.4000],
+    [52.5030, 13.4150],
+    [52.5052, 13.4397],
+    [52.4950, 13.4500],
+    [52.4820, 13.4750],
+    [52.4600, 13.5000],
+    [52.4400, 13.5150],
+    [52.4000, 13.5350]
+  ],
+  "briefing": {
+    "title": "Historical & Tactical Briefing: The Architecture of Division",
+    "sections": [
+      {
+        "heading": "Operation Rose & The Barbed Wire Sunday (August 13, 1961)",
+        "content": "Between 1949 and 1961, an estimated 2.7 to 3 million citizens escaped the German Democratic Republic (GDR) through the open sectors of Berlin — representing roughly one-sixth of East Germany's entire population and disproportionately composed of skilled doctors, engineers, and intellectuals ('the brain drain'). In the early morning darkness of Sunday, August 13, 1961, the East German army (NVA), police (Volkspolizei), and combat groups sealed off 193 streets, dug trenches, and tore up cobblestones to unroll barbed wire coils along 155 kilometers, severing transit links overnight."
+      },
+      {
+        "heading": "Evolution of the Barrier: From Barbed Wire to Grenzmauer 75",
+        "content": "The Berlin Wall was not a single barrier, but an elaborate multi-tiered military installation that evolved across four generations: 1) The 1961 wire and cinderblock phase; 2) The expanded concrete and wire fencing (1962–1965); 3) Concrete slab walls with cylindrical rounded pipe tops (1965–1975); and 4) The 'Grenzmauer 75' (Border Wall 75), assembled from 45,000 reinforced concrete sections, each 3.6 meters tall and 1.2 meters wide, weighing 2.75 tons each, anchored into inverted L-shaped foundations."
+      },
+      {
+        "heading": "The Death Strip (Todesstreifen)",
+        "content": "Behind the primary wall visible to West Berlin lay a heavily fortified no-man's land ranging from 15 to 150 meters wide. This lethal corridor contained: a trench designed to flip escaping motor vehicles, a raked sand strip ('Todesstreifen') where footprints were instantly tracked, trip-wire signal flares, patrol paths for Soviet-made armored scout cars, 259 dog runs with vicious guard dogs on overhead cables, floodlights turned inward, and 302 concrete watchtowers manned 24/7 with shoot-to-kill orders ('Schießbefehl')."
+      },
+      {
+        "heading": "The Fall of the Wall (November 9, 1989)",
+        "content": "Months of peaceful revolution and mass Monday demonstrations in Leipzig, Dresden, and Berlin culminated in the fateful evening of November 9, 1989. At a live broadcast press conference, Politburo spokesperson Günter Schabowski prematurely read out draft travel regulations and mistakenly proclaimed that border crossings were open 'immediately, without delay'. Crowds surged toward the checkpoints, and border guard officers, lacking orders to shoot from command, raised the boom gates at Bornholmer Straße, triggering the reunification of Europe."
+      }
+    ]
+  }
+}

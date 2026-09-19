@@ -1,0 +1,837 @@
+{{- define "main" }}
+{{- $stData := site.Data.solar_terminator }}
+
+<div class="cities-page-container solar-terminator-page-container">
+  <!-- Breadcrumbs adhering strictly to AGENTS.md -->
+  <div class="gallery-breadcrumbs">
+    <a href="{{ site.BaseURL }}">Home</a> <span>/</span> <a href="/geolayers/">GeoLayers</a> <span>/</span> <span>Solar Terminator</span>
+  </div>
+
+  <!-- Header Section adhering to AGENTS.md -->
+  <header class="cities-header">
+    <div class="cities-header-content">
+      <div class="cities-badge-pill st-badge-pill">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <span>Orbital Astronomy &bull; Solar Terminator &bull; Day/Night Transition</span>
+      </div>
+      <h1 class="cities-title">Solar Terminator Map</h1>
+      <p class="cities-subtitle">
+        The solar terminator is the moving boundary dividing Earth's daylight illumination and nighttime darkness. Computed from precise solar declination, the equation of time, and axial obliquity, inspect day/night boundaries across the globe, scrub solar cycles, and explore seasonal solstices and equinoxes.
+      </p>
+    </div>
+
+    <!-- Quick Stats Bar -->
+    <div class="cities-stats-bar">
+      <div class="cities-stat-card">
+        <span class="cities-stat-number font-mono" id="stStatsUtcTime">--:--:-- UTC</span>
+        <span class="cities-stat-label">Reference UTC Time</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" id="stStatsSubsolarLon">--&deg;</span>
+        <span class="cities-stat-label">Subsolar Longitude (Zenith)</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" id="stStatsSubsolarLat">--&deg;</span>
+        <span class="cities-stat-label">Solar Declination (&delta;)</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" id="stStatsSeasonDisplay">Equinox / Solstice</span>
+        <span class="cities-stat-label">Orbital Season</span>
+      </div>
+      <div class="cities-stat-card active-city-card" id="stActiveHoverCard" style="display:none;">
+        <span class="cities-stat-number active-city-name" id="stHoverStatus">Day</span>
+        <span class="cities-stat-label" id="stHoverCoords">--</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Interactive Control Panel & Seasonal Presets -->
+  <div class="st-toolbar-panel">
+    <div class="st-toolbar-row">
+      <!-- Playback Controls -->
+      <div class="st-playback-actions">
+        <button type="button" class="st-btn st-btn-primary" id="stBtnToggleLive" aria-label="Toggle live real-time clock">
+          <span class="st-btn-dot" id="stLivePulseDot"></span>
+          <span id="stBtnLiveText">Live Mode: ON</span>
+        </button>
+
+        <button type="button" class="st-btn st-btn-secondary" id="stBtnResetNow" title="Reset date and time to current moment">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="23 4 23 10 17 10"></polyline>
+            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+          </svg>
+          <span>Current Time</span>
+        </button>
+
+        <button type="button" class="st-btn st-btn-secondary" id="stBtnAnimateSpeed" title="Cycle animation speed">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <span id="stSpeedLabel">Speed: 1x</span>
+        </button>
+      </div>
+
+      <!-- Projection Selector & Options -->
+      <div class="st-select-group">
+        <label for="stProjectionSelect" class="st-select-label">Projection:</label>
+        <select id="stProjectionSelect" class="st-custom-select" aria-label="Select cartographic projection">
+          {{- range $stData.projections }}
+          <option value="{{ .id }}" {{- if eq .id "equirectangular" }} selected{{- end }}>{{ .name }}</option>
+          {{- end }}
+        </select>
+      </div>
+
+      <!-- Jump to Sample City -->
+      <div class="st-select-group">
+        <label for="stCitySelect" class="st-select-label">Inspect City:</label>
+        <select id="stCitySelect" class="st-custom-select" aria-label="Jump to sample city">
+          <option value="">-- Choose City --</option>
+          {{- range $stData.sampleCities }}
+          <option value="{{ index .coords 0 }},{{ index .coords 1 }}">{{ .name }}</option>
+          {{- end }}
+        </select>
+      </div>
+    </div>
+
+    <!-- Seasonal Presets Chips -->
+    <div class="st-season-presets-row">
+      <span class="st-presets-label">Astronomical Solstices &amp; Equinoxes:</span>
+      <div class="st-presets-chips">
+        {{- range $stData.seasonPresets }}
+        <button type="button" class="st-preset-chip" data-date="{{ .date }}" data-name="{{ .name }}" title="{{ .description }}">
+          <span class="st-chip-dot"></span>
+          <span class="st-chip-name">{{ .name }}</span>
+          <span class="st-chip-dec">({{ .declination }})</span>
+        </button>
+        {{- end }}
+      </div>
+    </div>
+
+    <!-- Time Scrubber & Manual Date Control -->
+    <div class="st-scrubber-row">
+      <div class="st-scrubber-info">
+        <label for="stTimeScrubber" class="st-scrubber-label">24-Hour Diurnal Solar Scrubber:</label>
+        <span class="st-scrubber-val font-mono" id="stScrubberDisplay">12:00:00 UTC</span>
+      </div>
+      <div class="st-scrubber-slider-wrap">
+        <input type="range" id="stTimeScrubber" min="0" max="86400" step="60" value="43200" class="st-slider" aria-label="Scrub through 24-hour day cycle">
+        <div class="st-scrubber-ticks">
+          <span>00:00</span>
+          <span>04:00</span>
+          <span>08:00</span>
+          <span>12:00 (Zenith Ref)</span>
+          <span>16:00</span>
+          <span>20:00</span>
+          <span>24:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Interactive Map Canvas Container -->
+  <div class="st-map-viewport-card">
+    <div class="st-map-header-bar">
+      <div class="st-legend-items">
+        <div class="st-legend-item">
+          <span class="st-legend-swatch st-swatch-day"></span>
+          <span>Daylight (Sunlit)</span>
+        </div>
+        <div class="st-legend-item">
+          <span class="st-legend-swatch st-swatch-night"></span>
+          <span>Night (Shadow)</span>
+        </div>
+        <div class="st-legend-item">
+          <span class="st-legend-swatch st-swatch-terminator"></span>
+          <span>Terminator Line</span>
+        </div>
+        <div class="st-legend-item">
+          <span class="st-legend-swatch st-swatch-subsolar"></span>
+          <span>Subsolar Point &odot;</span>
+        </div>
+      </div>
+
+      <div class="st-view-actions">
+        <button type="button" class="st-mini-btn" id="stBtnToggleGraticule" title="Toggle Graticule Coordinate Grid">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span id="stGraticuleLabel">Grid: ON</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Canvas Frame -->
+    <div class="st-canvas-container" id="stCanvasContainer">
+      <canvas id="stCanvas" class="st-canvas" width="960" height="540"></canvas>
+      
+      <!-- Loading Overlay -->
+      <div class="st-loading-overlay" id="stLoadingOverlay">
+        <div class="proj-spinner"></div>
+        <p>Loading Cartographic Geometry &amp; Solar Vectors...</p>
+      </div>
+
+      <!-- Hover / Cursor Floating Tooltip -->
+      <div class="st-map-tooltip" id="stMapTooltip" style="display:none;"></div>
+    </div>
+
+    <div class="st-map-footer-bar">
+      <div class="st-map-info-text">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+        <span>Move cursor over map to inspect coordinates, local sun status, and solar elevation angle. Drag on globe projections to rotate.</span>
+      </div>
+      <div class="st-timestamp-badge font-mono" id="stLiveTimeUtcDisplay">--:--:-- GMT</div>
+    </div>
+  </div>
+
+  <!-- Explanatory Scientific & Cartographic Overview -->
+  <section class="st-science-grid">
+    <div class="st-science-card">
+      <div class="st-card-icon-wrap">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+          <path d="M2 12h20"></path>
+        </svg>
+      </div>
+      <h3>Subsolar Point &amp; Zenith</h3>
+      <p>
+        The subsolar point is the exact position on Earth's surface where the Sun is perceived directly overhead at the zenith (90&deg; altitude angle). As Earth rotates, this point moves westward at 15 degrees of longitude per hour (roughly 1,670 km/h at the equator).
+      </p>
+    </div>
+
+    <div class="st-science-card">
+      <div class="st-card-icon-wrap">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2"></path>
+          <path d="M12 20v2"></path>
+          <path d="m4.93 4.93 1.41 1.41"></path>
+          <path d="m17.66 17.66 1.41 1.41"></path>
+          <path d="M2 12h2"></path>
+          <path d="M20 12h2"></path>
+          <path d="m6.34 17.66-1.41 1.41"></path>
+          <path d="m19.07 4.93-1.41 1.41"></path>
+        </svg>
+      </div>
+      <h3>Equation of Time &amp; Obliquity</h3>
+      <p>
+        Due to Earth's orbital eccentricity (0.0167) and the 23.44&deg; axial tilt (obliquity), apparent solar noon varies from mean clock noon by up to &plusmn;16 minutes throughout the year. The solar calculations here model this analemma variation in real time.
+      </p>
+    </div>
+
+    <div class="st-science-card">
+      <div class="st-card-icon-wrap">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+        </svg>
+      </div>
+      <h3>Great Circle Night Geometry</h3>
+      <p>
+        Geometrically, the solar terminator is a great circle 90&deg; away from the subsolar point. The dark hemisphere is rendered via spherical polygon coordinates centered on the antipodal point (&lambda; + 180&deg;, -&delta;), seamlessly projected onto any map coordinate system.
+      </p>
+    </div>
+  </section>
+</div>
+
+<!-- Load Local D3 & D3 Geo Projection with CDN Fallbacks -->
+<script src="/lib/d3/d3.v7.min.js"></script>
+<script src="/lib/d3/d3-geo-projection.v4.min.js"></script>
+<script>
+  if (typeof d3 === 'undefined') {
+    document.write('<script src="https://cdn.jsdelivr.net/npm/d3@7"><\/script>');
+    document.write('<script src="https://cdn.jsdelivr.net/npm/d3-geo-projection@4"><\/script>');
+  }
+</script>
+
+<!-- Embedded Metadata -->
+<script id="stJsonData" type="application/json">
+{{ $stData | jsonify | safeJS }}
+</script>
+
+<!-- Solar Terminator Script -->
+<script>
+(function() {
+  'use strict';
+
+  var canvas = document.getElementById('stCanvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  var loadingOverlay = document.getElementById('stLoadingOverlay');
+  var tooltip = document.getElementById('stMapTooltip');
+  var container = document.getElementById('stCanvasContainer');
+
+  // Stats DOM
+  var statsUtcTime = document.getElementById('stStatsUtcTime');
+  var statsSubsolarLon = document.getElementById('stStatsSubsolarLon');
+  var statsSubsolarLat = document.getElementById('stStatsSubsolarLat');
+  var statsSeasonDisplay = document.getElementById('stStatsSeasonDisplay');
+  var activeHoverCard = document.getElementById('stActiveHoverCard');
+  var hoverStatus = document.getElementById('stHoverStatus');
+  var hoverCoords = document.getElementById('stHoverCoords');
+  var liveTimeUtcDisplay = document.getElementById('stLiveTimeUtcDisplay');
+
+  // Controls DOM
+  var btnToggleLive = document.getElementById('stBtnToggleLive');
+  var btnLiveText = document.getElementById('stBtnLiveText');
+  var livePulseDot = document.getElementById('stLivePulseDot');
+  var btnResetNow = document.getElementById('stBtnResetNow');
+  var btnAnimateSpeed = document.getElementById('stBtnAnimateSpeed');
+  var speedLabel = document.getElementById('stSpeedLabel');
+  var projectionSelect = document.getElementById('stProjectionSelect');
+  var citySelect = document.getElementById('stCitySelect');
+  var timeScrubber = document.getElementById('stTimeScrubber');
+  var scrubberDisplay = document.getElementById('stScrubberDisplay');
+  var btnToggleGraticule = document.getElementById('stBtnToggleGraticule');
+  var graticuleLabel = document.getElementById('stGraticuleLabel');
+  var presetChips = document.querySelectorAll('.st-preset-chip');
+
+  // Astronomy formulas
+  var asin = Math.asin, cos = Math.cos, PI = Math.PI, pow = Math.pow, sin = Math.sin, tan = Math.tan;
+  function rad(deg) { return PI * deg / 180; }
+  function deg(r) { return 180 * r / PI; }
+  function mod(n, m) { return ((n % m) + m) % m; }
+
+  function meanSolarLongitude(T) {
+    var t = (280.46646 + T * (36000.76983 + 3032e-7 * T)) % 360;
+    return t < 0 ? t + 360 : t;
+  }
+  function meanAnomaly(T) {
+    return 357.52911 + T * (35999.05029 - 1537e-7 * T);
+  }
+  var J2000 = Date.UTC(2000, 0, 1, 12);
+  function obliquity(T) {
+    return 23 + (26 + (21.448 - T * (46.815 + T * (59e-5 - 0.001813 * T))) / 60) / 60 + 0.00256 * cos(rad(125.04 - 1934.136 * T));
+  }
+
+  function getSubsolarPoint(date) {
+    var E = new Date(date).setUTCHours(0, 0, 0, 0);
+    var D = (date - J2000) / 315576e7;
+    var eqTime = (function(T) {
+      var eps = obliquity(T), L = meanSolarLongitude(T), e = 0.016708634 - T * (42037e-9 + 1267e-10 * T), M = meanAnomaly(T);
+      var y = pow(tan(rad(eps) / 2), 2);
+      var s2L = sin(2 * rad(L)), sM = sin(rad(M));
+      return 4 * (deg(y * s2L - 2 * e * sM + 4 * e * y * sM * cos(2 * rad(L)) - 0.5 * y * y * sin(4 * rad(L)) - 1.25 * e * e * sin(2 * rad(M))));
+    })(D);
+
+    var lon = (E - date) / 864e5 * 360 - 180 - eqTime / 4;
+    var lat = (function(T) {
+      var eps = obliquity(T), M = meanAnomaly(T), L = meanSolarLongitude(T);
+      var C = sin(rad(M)) * (1.914602 - T * (0.004817 + 14e-6 * T)) + sin(2 * rad(M)) * (0.019993 - 101e-6 * T) + 289e-6 * sin(3 * rad(M));
+      var lambda = L + C - 0.00569 - 0.00478 * sin(rad(125.04 - 1934.136 * T));
+      return deg(asin(sin(rad(eps)) * sin(rad(lambda))));
+    })(D);
+
+    lon = mod(lon + 180, 360) - 180;
+    return [lon, lat];
+  }
+
+  // Application State
+  var isLive = true;
+  var showGraticule = true;
+  var speedMultiplier = 1;
+  var speeds = [1, 60, 300, 1800]; // 1x, 60x (1 min/s), 300x (5 min/s), 1800x (30 min/s)
+  var currentSpeedIdx = 0;
+  var activeDate = new Date();
+  var animationFrameId = null;
+  var lastAnimTimestamp = performance.now();
+  var currentProjectionId = 'equirectangular';
+  var landGeoJSON = null;
+  var highlightedCity = null;
+  var currentNightPath = null;
+  var currentProjection = null;
+  var globeRotation = [0, 0];
+  var isDraggingGlobe = false;
+  var dragStart = null;
+
+  // Format Helpers
+  function pad(n) { return n < 10 ? '0' + n : '' + n; }
+  function formatUtcFull(d) {
+    return pad(d.getUTCHours()) + ':' + pad(d.getUTCMinutes()) + ':' + pad(d.getUTCSeconds());
+  }
+
+  // Build D3 Projection
+  function getProjection(type, width, height) {
+    var proj;
+    if (type === 'naturalEarth1' && d3.geoNaturalEarth1) {
+      proj = d3.geoNaturalEarth1();
+    } else if (type === 'equalEarth' && d3.geoEqualEarth) {
+      proj = d3.geoEqualEarth();
+    } else if (type === 'mercator' && d3.geoMercator) {
+      proj = d3.geoMercator();
+    } else if (type === 'orthographic' && d3.geoOrthographic) {
+      proj = d3.geoOrthographic().rotate(globeRotation);
+    } else if (type === 'mollweide' && d3.geoMollweide) {
+      proj = d3.geoMollweide();
+    } else {
+      proj = d3.geoEquirectangular();
+    }
+
+    proj.fitSize([width, height], { type: 'Sphere' });
+    proj.precision(0.2);
+    return proj;
+  }
+
+  // Render Frame
+  function render() {
+    var width = canvas.width;
+    var height = canvas.height;
+
+    ctx.clearRect(0, 0, width, height);
+
+    var proj = getProjection(currentProjectionId, width, height);
+    currentProjection = proj;
+    var pathGen = d3.geoPath(proj, ctx);
+
+    // 1. Draw Sphere background (Oceans)
+    var sphere = { type: 'Sphere' };
+    var isDarkTheme = document.body.classList.contains('dark');
+
+    ctx.beginPath();
+    pathGen(sphere);
+    ctx.fillStyle = isDarkTheme ? '#0b1329' : '#e0f2fe';
+    ctx.fill();
+
+    // 2. Draw Coordinate Graticule (if enabled)
+    if (showGraticule) {
+      var graticule = d3.geoGraticule10();
+      ctx.beginPath();
+      pathGen(graticule);
+      ctx.strokeStyle = isDarkTheme ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.08)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+
+    // 3. Draw Landmasses
+    if (landGeoJSON) {
+      ctx.beginPath();
+      pathGen(landGeoJSON);
+      ctx.fillStyle = isDarkTheme ? '#1e293b' : '#334155';
+      ctx.fill();
+      ctx.strokeStyle = isDarkTheme ? '#334155' : '#1e293b';
+      ctx.lineWidth = 0.5;
+      ctx.stroke();
+    }
+
+    // 4. Calculate Subsolar & Antipodal Point
+    var subsolar = getSubsolarPoint(activeDate);
+    var antipodal = [
+      (subsolar[0] + 180) > 180 ? subsolar[0] - 180 : subsolar[0] + 180,
+      -subsolar[1]
+    ];
+
+    // 5. Generate Night Great Circle (90 deg radius around antipodal point)
+    var nightCircle = d3.geoCircle().radius(90).center(antipodal)();
+    currentNightPath = nightCircle;
+
+    // Draw Night Shading Overlay
+    ctx.beginPath();
+    pathGen(nightCircle);
+    ctx.fillStyle = isDarkTheme ? 'rgba(30, 58, 138, 0.45)' : 'rgba(37, 99, 235, 0.32)';
+    ctx.fill();
+
+    // Draw Terminator Boundary Line
+    ctx.strokeStyle = '#f59e0b';
+    ctx.lineWidth = 1.6;
+    ctx.shadowColor = '#f59e0b';
+    ctx.shadowBlur = 4;
+    ctx.stroke();
+    ctx.shadowBlur = 0; // reset
+
+    // 6. Draw Subsolar Point Indicator (Zenith Sun)
+    var subsolarPx = proj(subsolar);
+    if (subsolarPx && !isNaN(subsolarPx[0]) && !isNaN(subsolarPx[1])) {
+      // Draw pulsing sun marker
+      ctx.beginPath();
+      ctx.arc(subsolarPx[0], subsolarPx[1], 7, 0, 2 * PI);
+      ctx.fillStyle = '#fbbf24';
+      ctx.shadowColor = '#f59e0b';
+      ctx.shadowBlur = 10;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+
+      // Sun dot
+      ctx.beginPath();
+      ctx.arc(subsolarPx[0], subsolarPx[1], 2.5, 0, 2 * PI);
+      ctx.fillStyle = '#b45309';
+      ctx.fill();
+    }
+
+    // 7. Draw Highlighted City (if selected)
+    if (highlightedCity) {
+      var cityPx = proj(highlightedCity.coords);
+      if (cityPx && !isNaN(cityPx[0]) && !isNaN(cityPx[1])) {
+        var isNight = d3.geoContains(nightCircle, highlightedCity.coords);
+        ctx.beginPath();
+        ctx.arc(cityPx[0], cityPx[1], 6, 0, 2 * PI);
+        ctx.fillStyle = isNight ? '#38bdf8' : '#eab308';
+        ctx.strokeStyle = '#ffffff';
+        ctx.lineWidth = 2;
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.font = '600 12px Inter, sans-serif';
+        ctx.fillStyle = isDarkTheme ? '#ffffff' : '#0f172a';
+        ctx.shadowColor = isDarkTheme ? 'rgba(0,0,0,0.8)' : 'rgba(255,255,255,0.8)';
+        ctx.shadowBlur = 3;
+        ctx.fillText(highlightedCity.name + ' (' + (isNight ? 'Night' : 'Day') + ')', cityPx[0] + 10, cityPx[1] + 4);
+        ctx.shadowBlur = 0;
+      }
+    }
+
+    // 8. Outline Map Boundary (Sphere border)
+    ctx.beginPath();
+    pathGen(sphere);
+    ctx.strokeStyle = isDarkTheme ? 'rgba(255, 255, 255, 0.25)' : 'rgba(0, 0, 0, 0.25)';
+    ctx.lineWidth = 1.2;
+    ctx.stroke();
+
+    // 9. Update Stats Header
+    updateStatsDisplay(subsolar);
+  }
+
+  function updateStatsDisplay(subsolar) {
+    if (statsUtcTime) statsUtcTime.textContent = formatUtcFull(activeDate) + ' UTC';
+    if (liveTimeUtcDisplay) liveTimeUtcDisplay.textContent = activeDate.toUTCString();
+
+    if (statsSubsolarLon) {
+      var lonDeg = subsolar[0];
+      statsSubsolarLon.textContent = Math.abs(lonDeg).toFixed(2) + '° ' + (lonDeg >= 0 ? 'E' : 'W');
+    }
+    if (statsSubsolarLat) {
+      var latDeg = subsolar[1];
+      statsSubsolarLat.textContent = (latDeg >= 0 ? '+' : '') + latDeg.toFixed(2) + '° ' + (latDeg >= 0 ? 'N' : 'S');
+    }
+
+    if (statsSeasonDisplay) {
+      var dec = subsolar[1];
+      if (Math.abs(dec) <= 1.0) {
+        statsSeasonDisplay.textContent = 'Equinox (Near Equator)';
+      } else if (dec > 20.0) {
+        statsSeasonDisplay.textContent = 'Northern Summer (Cancer)';
+      } else if (dec < -20.0) {
+        statsSeasonDisplay.textContent = 'Southern Summer (Capricorn)';
+      } else if (dec > 0) {
+        statsSeasonDisplay.textContent = 'Northern Hemisphere Tilt';
+      } else {
+        statsSeasonDisplay.textContent = 'Southern Hemisphere Tilt';
+      }
+    }
+
+    // Sync Scrubber Position if in live or animation mode
+    if (timeScrubber && !isUserScrubbing) {
+      var seconds = activeDate.getUTCHours() * 3600 + activeDate.getUTCMinutes() * 60 + activeDate.getUTCSeconds();
+      timeScrubber.value = seconds;
+      if (scrubberDisplay) scrubberDisplay.textContent = formatUtcFull(activeDate) + ' UTC';
+    }
+  }
+
+  // Animation Loop
+  function animationTick(now) {
+    var deltaMs = now - lastAnimTimestamp;
+    lastAnimTimestamp = now;
+
+    if (isLive) {
+      if (speedMultiplier === 1) {
+        activeDate = new Date();
+      } else {
+        // Advance accelerated simulated time
+        activeDate = new Date(activeDate.getTime() + deltaMs * speedMultiplier);
+      }
+      render();
+    }
+
+    animationFrameId = requestAnimationFrame(animationTick);
+  }
+
+  // Load Land Geometry (Using local static Natural Earth 110m land GeoJSON)
+  function loadLandData() {
+    fetch('/data/geolayers/ne_110m_land.json')
+      .then(function(res) {
+        if (!res.ok) throw new Error('Local land file not reachable');
+        return res.json();
+      })
+      .then(function(geojson) {
+        landGeoJSON = geojson;
+        if (loadingOverlay) loadingOverlay.style.display = 'none';
+        render();
+      })
+      .catch(function(err) {
+        console.warn('Fallback to CDN land geometry:', err);
+        fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/land-50m.json')
+          .then(function(r) { return r.json(); })
+          .then(function(topo) {
+            // If TopoJSON, convert if topojson client exists
+            if (window.topojson) {
+              landGeoJSON = topojson.feature(topo, topo.objects.land);
+            }
+            if (loadingOverlay) loadingOverlay.style.display = 'none';
+            render();
+          })
+          .catch(function() {
+            if (loadingOverlay) loadingOverlay.style.display = 'none';
+            render();
+          });
+      });
+  }
+
+  // Mouse Hover Inspection & Tooltip
+  function handleMouseMove(e) {
+    if (!currentProjection || !currentNightPath) return;
+
+    var rect = canvas.getBoundingClientRect();
+    var scaleX = canvas.width / rect.width;
+    var scaleY = canvas.height / rect.height;
+    var x = (e.clientX - rect.left) * scaleX;
+    var y = (e.clientY - rect.top) * scaleY;
+
+    if (isDraggingGlobe && currentProjectionId === 'orthographic') {
+      var dx = e.clientX - dragStart.x;
+      var dy = e.clientY - dragStart.y;
+      dragStart = { x: e.clientX, y: e.clientY };
+      globeRotation[0] += dx * 0.4;
+      globeRotation[1] -= dy * 0.4;
+      globeRotation[1] = Math.max(-80, Math.min(80, globeRotation[1]));
+      render();
+      return;
+    }
+
+    var coords = currentProjection.invert([x, y]);
+    if (!coords || isNaN(coords[0]) || isNaN(coords[1])) {
+      if (tooltip) tooltip.style.display = 'none';
+      if (activeHoverCard) activeHoverCard.style.display = 'none';
+      return;
+    }
+
+    var lon = coords[0];
+    var lat = coords[1];
+
+    if (Math.abs(lat) > 90) {
+      if (tooltip) tooltip.style.display = 'none';
+      return;
+    }
+
+    var isNight = d3.geoContains(currentNightPath, [lon, lat]);
+    var statusText = isNight ? 'Night (Shadow)' : 'Day (Sunlit)';
+    var statusClass = isNight ? 'night' : 'day';
+
+    if (tooltip) {
+      tooltip.style.display = 'block';
+      tooltip.style.left = (e.clientX - rect.left + 14) + 'px';
+      tooltip.style.top = (e.clientY - rect.top - 10) + 'px';
+      tooltip.innerHTML = '<strong>' + Math.abs(lat).toFixed(1) + '° ' + (lat >= 0 ? 'N' : 'S') + ', ' +
+        Math.abs(lon).toFixed(1) + '° ' + (lon >= 0 ? 'E' : 'W') + '</strong>' +
+        '<div class="st-tooltip-status ' + statusClass + '">' + statusText + '</div>';
+    }
+
+    if (activeHoverCard) {
+      activeHoverCard.style.display = '';
+      if (hoverStatus) hoverStatus.textContent = isNight ? 'Night' : 'Day';
+      if (hoverCoords) hoverCoords.textContent = lat.toFixed(1) + '°, ' + lon.toFixed(1) + '°';
+    }
+  }
+
+  function handleMouseLeave() {
+    if (tooltip) tooltip.style.display = 'none';
+    if (activeHoverCard) activeHoverCard.style.display = 'none';
+    isDraggingGlobe = false;
+  }
+
+  function handleMouseDown(e) {
+    if (currentProjectionId === 'orthographic') {
+      isDraggingGlobe = true;
+      dragStart = { x: e.clientX, y: e.clientY };
+    }
+  }
+
+  function handleMouseUp() {
+    isDraggingGlobe = false;
+  }
+
+  // Scrubber Events
+  var isUserScrubbing = false;
+  if (timeScrubber) {
+    timeScrubber.addEventListener('input', function() {
+      isUserScrubbing = true;
+      // Pause live auto-updating
+      isLive = false;
+      updateLiveButtonState();
+
+      var totalSecs = parseInt(this.value, 10);
+      var hours = Math.floor(totalSecs / 3600);
+      var mins = Math.floor((totalSecs % 3600) / 60);
+      var secs = totalSecs % 60;
+
+      activeDate = new Date(Date.UTC(
+        activeDate.getUTCFullYear(),
+        activeDate.getUTCMonth(),
+        activeDate.getUTCDate(),
+        hours, mins, secs
+      ));
+
+      if (scrubberDisplay) scrubberDisplay.textContent = formatUtcFull(activeDate) + ' UTC';
+      render();
+    });
+
+    timeScrubber.addEventListener('change', function() {
+      isUserScrubbing = false;
+    });
+  }
+
+  function updateLiveButtonState() {
+    if (!btnToggleLive) return;
+    if (isLive) {
+      btnToggleLive.classList.add('st-btn-primary');
+      btnToggleLive.classList.remove('st-btn-secondary');
+      if (btnLiveText) btnLiveText.textContent = 'Live Mode: ON';
+      if (livePulseDot) livePulseDot.style.display = 'inline-block';
+    } else {
+      btnToggleLive.classList.remove('st-btn-primary');
+      btnToggleLive.classList.add('st-btn-secondary');
+      if (btnLiveText) btnLiveText.textContent = 'Live Mode: PAUSED';
+      if (livePulseDot) livePulseDot.style.display = 'none';
+    }
+  }
+
+  // Button Listeners
+  if (btnToggleLive) {
+    btnToggleLive.addEventListener('click', function() {
+      isLive = !isLive;
+      updateLiveButtonState();
+      if (isLive) {
+        lastAnimTimestamp = performance.now();
+      }
+    });
+  }
+
+  if (btnResetNow) {
+    btnResetNow.addEventListener('click', function() {
+      activeDate = new Date();
+      isLive = true;
+      currentSpeedIdx = 0;
+      speedMultiplier = 1;
+      if (speedLabel) speedLabel.textContent = 'Speed: 1x';
+      presetChips.forEach(function(c) { c.classList.remove('active'); });
+      updateLiveButtonState();
+      render();
+    });
+  }
+
+  if (btnAnimateSpeed) {
+    btnAnimateSpeed.addEventListener('click', function() {
+      currentSpeedIdx = (currentSpeedIdx + 1) % speeds.length;
+      speedMultiplier = speeds[currentSpeedIdx];
+      if (speedLabel) speedLabel.textContent = 'Speed: ' + (speedMultiplier === 1 ? '1x' : (speedMultiplier + 'x'));
+      isLive = true;
+      updateLiveButtonState();
+    });
+  }
+
+  if (projectionSelect) {
+    projectionSelect.addEventListener('change', function() {
+      currentProjectionId = this.value;
+      if (currentProjectionId === 'orthographic') {
+        canvas.style.cursor = 'grab';
+      } else {
+        canvas.style.cursor = 'crosshair';
+      }
+      render();
+    });
+  }
+
+  if (citySelect) {
+    citySelect.addEventListener('change', function() {
+      if (!this.value) {
+        highlightedCity = null;
+      } else {
+        var parts = this.value.split(',');
+        highlightedCity = {
+          name: this.options[this.selectedIndex].text,
+          coords: [parseFloat(parts[0]), parseFloat(parts[1])]
+        };
+      }
+      render();
+    });
+  }
+
+  if (btnToggleGraticule) {
+    btnToggleGraticule.addEventListener('click', function() {
+      showGraticule = !showGraticule;
+      if (graticuleLabel) graticuleLabel.textContent = 'Grid: ' + (showGraticule ? 'ON' : 'OFF');
+      render();
+    });
+  }
+
+  // Solstice / Equinox Preset Chips
+  presetChips.forEach(function(chip) {
+    chip.addEventListener('click', function() {
+      presetChips.forEach(function(c) { c.classList.remove('active'); });
+      this.classList.add('active');
+
+      var dateStr = this.getAttribute('data-date');
+      activeDate = new Date(dateStr);
+      isLive = false;
+      updateLiveButtonState();
+      render();
+    });
+  });
+
+  // Responsive Canvas Sizing
+  function resizeCanvas() {
+    var rect = container.getBoundingClientRect();
+    var dpr = window.devicePixelRatio || 1;
+    var w = Math.min(1160, Math.floor(rect.width));
+    var h = Math.round(w * 0.54); // standard 16:9 ratio
+
+    canvas.width = w * dpr;
+    canvas.height = h * dpr;
+    canvas.style.width = w + 'px';
+    canvas.style.height = h + 'px';
+    ctx.scale(dpr, dpr);
+    render();
+  }
+
+  // Event Attachments
+  canvas.addEventListener('mousemove', handleMouseMove);
+  canvas.addEventListener('mouseleave', handleMouseLeave);
+  canvas.addEventListener('mousedown', handleMouseDown);
+  window.addEventListener('mouseup', handleMouseUp);
+  window.addEventListener('resize', function() {
+    clearTimeout(window._stResizeTimer);
+    window._stResizeTimer = setTimeout(resizeCanvas, 150);
+  });
+
+  // Theme change observer to re-render colors
+  var themeObserver = new MutationObserver(function() {
+    render();
+  });
+  themeObserver.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
+  // Init
+  resizeCanvas();
+  loadLandData();
+  animationFrameId = requestAnimationFrame(animationTick);
+
+})();
+</script>
+{{- end }}

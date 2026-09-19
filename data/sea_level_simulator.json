@@ -1,0 +1,147 @@
+{
+  "title": "Sea Level Simulator",
+  "subtitle": "Interactive global coastal inundation simulation based on SRTM 90m elevation and hydrological modeling.",
+  "dataset": "CGIAR-CSI SRTM 90m Digital Elevation Database v4.1 & SCALGO Hydrology Engine",
+  "wmts_endpoint": "https://ts2.scalgo.com/olpatch/wmts?token=CC5BF28A7D96B320C7DFBFD1236B5BEB",
+  "wmts_layer": "SRTM_4_1:SRTM_4_1_flooded_sealevels",
+  "matrix_set": "EPSG:3857",
+  "default_threshold": 10,
+  "min_threshold": -1,
+  "max_threshold": 100,
+  "default_center": [-9871995, 3566245],
+  "default_zoom": 6,
+  "default_basemap": "satellite",
+  "default_opacity": 0.6,
+  "stats": [
+    { "label": "Default Threshold", "value": "10 m", "id": "statThreshold" },
+    { "label": "Elevation Grid", "value": "90 m", "id": "statResolution" },
+    { "label": "Simulation Range", "value": "-1m to 100m", "id": "statRange" },
+    { "label": "Active Region", "value": "Gulf of Mexico", "id": "statRegion" }
+  ],
+  "hotspots": [
+    {
+      "id": "gulf-mexico",
+      "name": "Gulf of Mexico & Mississippi Delta",
+      "location": "USA (Louisiana / Florida)",
+      "center": [-9871995, 3566245],
+      "zoom": 6,
+      "description": "Low-lying Mississippi River Delta and Florida Peninsula, among the most vulnerable coastal zones in North America."
+    },
+    {
+      "id": "netherlands",
+      "name": "The Netherlands & North Sea",
+      "location": "Western Europe",
+      "center": [550000, 6850000],
+      "zoom": 7,
+      "description": "Dense delta plain with over 26% of land currently situated below sea level, protected by the Delta Works system."
+    },
+    {
+      "id": "bangladesh",
+      "name": "Ganges-Brahmaputra Delta",
+      "location": "Bangladesh & West Bengal",
+      "center": [10050000, 2600000],
+      "zoom": 7,
+      "description": "The world's largest river delta, where tens of millions live less than 5 meters above sea level in cyclone-prone wetlands."
+    },
+    {
+      "id": "nile-delta",
+      "name": "Nile Delta & Alexandria",
+      "location": "Egypt",
+      "center": [3480000, 3650000],
+      "zoom": 8,
+      "description": "Agricultural breadbasket of Egypt, with historical Alexandria and extensive Mediterranean lagoons at extreme flood risk."
+    },
+    {
+      "id": "venice",
+      "name": "Venice Lagoon & Po Plain",
+      "location": "Italy",
+      "center": [1370000, 5680000],
+      "zoom": 8,
+      "description": "Historic Venetian archipelago and the flat Po River Valley, vulnerable to regular 'Acqua Alta' tidal surges."
+    },
+    {
+      "id": "tokyo-bay",
+      "name": "Tokyo Bay & Kanto Plain",
+      "location": "Japan",
+      "center": [15560000, 4240000],
+      "zoom": 8,
+      "description": "Megacity metropolis with extensive reclaimed bay land, subterranean infrastructure, and high population density."
+    },
+    {
+      "id": "thames",
+      "name": "London & Thames Estuary",
+      "location": "United Kingdom",
+      "center": [70000, 6710000],
+      "zoom": 8,
+      "description": "Lowland estuary defended by the Thames Barrier, facing heightened tidal surge frequencies as oceans warm."
+    },
+    {
+      "id": "new-york",
+      "name": "New York Harbor & Manhattan",
+      "location": "USA (East Coast)",
+      "center": [-8238000, 4970000],
+      "zoom": 9,
+      "description": "Dense island topography where subway tunnels, waterfront districts, and Brooklyn shores face severe storm surge exposure."
+    },
+    {
+      "id": "shanghai",
+      "name": "Yangtze Delta & Shanghai",
+      "location": "China",
+      "center": [13520000, 3680000],
+      "zoom": 7,
+      "description": "Massive urban sprawl and global shipping hub built upon soft alluvial silt with average elevations under 4 meters."
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon River Delta",
+      "location": "Brazil (Pará / Amapá)",
+      "center": [-5550000, -50000],
+      "zoom": 7,
+      "description": "Vast equatorial delta discharging 20% of global river flow into the Atlantic, encircled by tidal mangrove forests."
+    }
+  ],
+  "scenarios": [
+    {
+      "threshold": -1,
+      "title": "Lowered Baseline (-1 m)",
+      "tag": "Glacial Regress",
+      "color": "#64748b",
+      "summary": "Simulates lowered global sea levels prior to recent anthropomorphic heating or during cooler glacial fluctuation stages."
+    },
+    {
+      "threshold": 1,
+      "title": "+1 Meter Rise",
+      "tag": "IPCC 2100 Median",
+      "color": "#38bdf8",
+      "summary": "Projected near-term high emission trajectory by 2100. Routine high-tide flooding of sunny streets in Miami, Venice, and Jakarta."
+    },
+    {
+      "threshold": 5,
+      "title": "+5 Meters Rise",
+      "tag": "Ice Shelf Disruption",
+      "color": "#3b82f6",
+      "summary": "Triggered by rapid disintegration of West Antarctic marine-terminating ice shelves and accelerated Greenland peripheral ice loss."
+    },
+    {
+      "threshold": 10,
+      "title": "+10 Meters Rise",
+      "tag": "Major Inundation",
+      "color": "#6366f1",
+      "summary": "Complete disappearance of southern Florida, large portions of Bangladesh, the Netherlands coastal ring, and Shanghai lowlands."
+    },
+    {
+      "threshold": 20,
+      "title": "+20 Meters Rise",
+      "tag": "Multi-Century Collapse",
+      "color": "#8b5cf6",
+      "summary": "Multi-century equilibrium state under sustained elevated atmospheric CO2 levels, submerging lowlands and shifting continental shorelines."
+    },
+    {
+      "threshold": 60,
+      "title": "+60 Meters Rise",
+      "tag": "Total Deglaciation",
+      "color": "#ec4899",
+      "summary": "Catastrophic melting of the entire Antarctic and Greenland ice caps. Complete redrawing of Earth's continental maps."
+    }
+  ]
+}
