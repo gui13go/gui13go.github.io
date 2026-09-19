@@ -6,8 +6,7 @@
       <a href="{{ site.BaseURL }}">Home</a> <span>/</span> <span>GeoLayer</span>
     </div>
     <h1 class="gallery-title">GeoLayer</h1>
-    <p class="gallery-subtitle">{{ .Description | default "Interactive geospatial visualizations, cartographic
-      explorations, and spatial narratives." }}</p>
+    <p class="gallery-subtitle">{{ .Description | default "Interactive geospatial visualizations, cartographic explorations, and spatial narratives." }}</p>
   </header>
 
   <!-- Filter & Search Toolbar -->
@@ -46,8 +45,7 @@
     {{- range $geoData.geolayers }}
     {{- $isAvailable := eq .availability "available" }}
     <article class="geolayer-card {{ if $isAvailable }}is-available{{ else }}is-wip{{ end }}" data-id="{{ .id }}"
-      data-title="{{ .title | lower }}" data-description="{{ .description | lower }}" data-tags="{{ delimit .tags " ," |
-      lower }}" data-availability="{{ .availability }}">
+      data-title="{{ .title | lower }}" data-description="{{ .description | lower }}" data-tags="{{ delimit .tags "," | lower }}" data-availability="{{ .availability }}">
       <div class="geolayer-card-media">
         <img src="{{ .image }}" alt="{{ .title }}" loading="lazy" class="geolayer-card-img"
           onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
