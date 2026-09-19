@@ -147,16 +147,16 @@
       "year": "1991",
       "title": "386BSD Operating System",
       "summary": "William and Lynne Jolitz ported Berkeley Net/2 to the Intel 386 chip, creating 386BSD—a complete, battle-tested, industrial-grade Unix operating system containing thirty years of Bell Labs and Berkeley heritage. However, the 1992 AT&T/USL lawsuit froze BSD development, opening a window of opportunity for Linux.",
-      "quote": "386BSD was a complete, battle-tested, industrial-grade Unix operating system containing thirty years of Bell Labs and Berkeley heritage.",
-      "quote_author": "Historical Analysis"
+      "quote": "If 386BSD had been available when I started, I probably would not have written Linux.",
+      "quote_author": "Linus Torvalds"
     },
     {
       "id": "1991-linux-001",
       "year": "1991",
       "title": "Linux 0.01: Linus Torvalds Fills Kernel Void",
       "summary": "On August 25, 1991, 21-year-old Finnish student Linus Torvalds announced a free hobby operating system for 386 clones on comp.os.minix. Because Linux was a clean-room implementation with zero AT&T code, it became the legally safe sanctuary for the worldwide hacker community.",
-      "quote": "If 386BSD had been available when I started, I probably would not have written Linux.",
-      "quote_author": "Linus Torvalds"
+      "quote": "I'm doing a (free) operating system (just a hobby, won't be big and professional like gnu) for 386(486) AT clones.",
+      "quote_author": "Linus Torvalds (August 25, 1991)"
     },
     {
       "id": "1992-gnu-linux-marriage",
@@ -199,7 +199,7 @@
       "id": "1997-cathedral-and-bazaar",
       "year": "1997",
       "title": "Cathedral & The Bazaar",
-      "summary": "Eric S. Raymond published his landmark essay contrasting the centralized, cloistered Cathedral development model with the open, distributed Bazaar model of the Linux community, formulating Linus's Law.",
+      "summary": "Eric S. Raymond published his landmark essay contrasting two opposing development philosophies: the 'Cathedral' model (centralized, top-down, cloistered development where code is crafted in isolation by an elite inner circle and only released in finished, infrequent versions) versus the 'Bazaar' model (decentralized, public collaboration where anyone can contribute, driven by rapid iterations, 'release early, release often', and peer review across the internet). Linus Torvalds' management of Linux proved that the chaotic bazaar could out-innovate and out-debug monolithic cathedrals.",
       "quote": "Given enough eyeballs, all bugs are shallow.",
       "quote_author": "Linus’s Law (Eric S. Raymond, 1997)"
     },
@@ -257,6 +257,14 @@
       "quote": ""
     },
     {
+      "id": "2005-git-created",
+      "year": "2005",
+      "title": "Linus Torvalds Creates Git",
+      "summary": "After BitKeeper revoked free access for Linux kernel developers following an engineering dispute, Linus Torvalds stepped away from kernel development for several weeks to build a replacement version control system: Git. Built around a content-addressable Merkle tree architecture, local branching, and cryptographic SHA-1 hashes, Git discarded centralized client-server models (like CVS and SVN) in favor of fully distributed version control, forever revolutionizing global open-source software collaboration.",
+      "quote": "I'm an egotistical bastard, and I name all my projects after myself. First 'Linux', now 'Git'.",
+      "quote_author": "Linus Torvalds (2005)"
+    },
+    {
       "id": "2007-gplv3-tivoization",
       "year": "2007",
       "title": "Stallman Designed GPLv3 to Prevent \"Tivoization\"",
@@ -274,7 +282,7 @@
       "id": "2013-docker-released",
       "year": "2013",
       "title": "Docker Released",
-      "summary": "Solomon Hykes released Docker as open-source, turning native Linux kernel primitives (namespaces, cgroups) into an accessible developer paradigm: lightweight containers built from layered, portable images.",
+      "summary": "Solomon Hykes released Docker as open-source at PyCon, transforming existing Linux kernel primitives into an intuitive container standard. Instead of running heavy hypervisors that emulate complete hardware and run separate guest operating systems (like traditional virtual machines), Docker leverages native Linux kernel features: namespaces (for process, mount, and network isolation), cgroups (control groups for CPU, memory, and I/O throttling), and UnionFS (layered root filesystems). By sharing a single underlying host Linux kernel while offering isolated userlands, Docker made application packaging instant, ultra-lightweight, and reproducible, sparking the modern container and Kubernetes cloud revolution.",
       "quote": "We’re trying to build the shipping container for software.",
       "quote_author": "Solomon Hykes, PyCon (March 2013)"
     },

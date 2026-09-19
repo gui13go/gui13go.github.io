@@ -8,7 +8,7 @@
       "url": "/tools/revolution-os-timeline/",
       "navLabel": "Revolution OS Timeline",
       "countUnit": "milestones",
-      "count": 34,
+      "count": 35,
       "description": "An interactive, chronological timeline exploring the evolution of Unix, GNU, the Linux kernel, open-source licensing wars, and the triumph of the hacker movement.",
       "icon": "terminal",
       "badge": "Interactive Timeline"
