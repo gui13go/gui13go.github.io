@@ -1,0 +1,852 @@
+{{- define "main" }}
+{{- $incident := site.Data.palomares_incident }}
+<link rel="stylesheet" href="/lib/leaflet/leaflet.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<div class="cities-page-container nukes-spain-container">
+  <!-- Breadcrumbs -->
+  <div class="gallery-breadcrumbs">
+    <a href="{{ site.BaseURL }}">Home</a> <span>/</span> <a href="/geolayers/">GeoLayer</a> <span>/</span> <span>USA dropped nukes on Spain</span>
+  </div>
+
+  <!-- Header Section -->
+  <header class="cities-header">
+    <div class="cities-header-content">
+      <div class="cities-badge-pill">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+        <span>Cold War Incident &bull; Broken Arrow &bull; January 17, 1966</span>
+      </div>
+      <h1 class="cities-title">USA dropped nukes on Spain</h1>
+      <p class="cities-subtitle">
+        An interactive cartographic reconstruction of the 1966 Palomares incident. A mid-air collision between a USAF B-52G bomber and a KC-135 tanker released four B28 thermonuclear weapons over the coast of Almer&iacute;a, Spain.
+      </p>
+    </div>
+
+    <!-- Quick Stats Bar -->
+    <div class="cities-stats-bar">
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" id="statsTotalBombs">4</span>
+        <span class="cities-stat-label">Hydrogen Bombs</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number">5.8 MT</span>
+        <span class="cities-stat-label">Total Nuclear Yield</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" style="color: #ff4500;">2</span>
+        <span class="cities-stat-label">HE Detonations</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" style="color: #1e90ff;">880 m</span>
+        <span class="cities-stat-label">Subsea Depth (Alvin)</span>
+      </div>
+      <div class="cities-stat-card active-city-card" id="activeBombCard" style="display:none;">
+        <span class="cities-stat-number active-city-name" id="activeBombName">-</span>
+        <span class="cities-stat-label" id="activeBombStatus">Selected Location</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Stacked Layout: Row 1 = Explorer & Briefing, Row 2 = Interactive Map Viewport -->
+  <div class="cities-layout-stacked">
+
+    <!-- Row 1: Bomb Sites & Mission Briefing Explorer -->
+    <section class="cities-groups-row" id="nukesExplorerSection">
+      <div class="groups-row-header">
+        <div class="groups-header-info">
+          <div class="groups-title-wrap">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <h2 class="groups-title">Impact &amp; Recovery Sites</h2>
+            <span class="groups-total-pill">4 Weapons &bull; Palomares, Spain</span>
+          </div>
+
+          <!-- Quick Filter / Search -->
+          <div class="cities-search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="bombSearchInput" placeholder="Filter bomb by location or status..." autocomplete="off" aria-label="Filter bombs">
+            <button type="button" id="clearBombSearch" class="clear-search-btn" style="display:none;" aria-label="Clear filter">&times;</button>
+          </div>
+        </div>
+
+        <div class="groups-header-actions">
+          <button type="button" class="groups-btn-action" id="toggleBriefingBtn" title="Toggle Historical Briefing narrative">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span id="toggleBriefingText">Mission Briefing</span>
+          </button>
+          <button type="button" class="groups-btn-action toggle-cards-btn" id="toggleCardsBtn" title="Show or hide bomb cards">
+            <svg id="toggleCardsIcon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+            <span id="toggleCardsText">Minimize Cards</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Filter Pills Carousel -->
+      <div class="cities-pill-carousel" id="statusPills">
+        <button type="button" class="country-pill active" data-status="all">All Sites (4)</button>
+        <button type="button" class="country-pill" data-status="detonated">
+          <span style="color:#ff4500;">●</span> Detonated Non-Nuclear (2)
+        </button>
+        <button type="button" class="country-pill" data-status="intact">
+          <span style="color:#32cd32;">●</span> Recovered Intact (1)
+        </button>
+        <button type="button" class="country-pill" data-status="sea">
+          <span style="color:#1e90ff;">●</span> Lost at Sea (1)
+        </button>
+      </div>
+
+      <!-- Collapsible Historical Mission Briefing -->
+      <div class="nukes-briefing-drawer show" id="briefingDrawer">
+        <div class="nukes-briefing-inner">
+          <div class="briefing-header">
+            <span class="briefing-tag">OPERATION CHROME DOME &bull; SAC 1966</span>
+            <h3 class="briefing-title">The Palomares Incident Narrative</h3>
+          </div>
+          <div class="briefing-content-grid">
+            <div class="briefing-text-col">
+              <p>
+                On <strong>January 17, 1966</strong>, at 31,000 feet over the Mediterranean coast of Spain, a USAF Boeing B-52G Stratofortress carrying <strong>four B28FI Mod 2 Y1 thermonuclear bombs</strong> (1.45 megatons yield each) collided with a KC-135A Stratotanker during routine mid-air refueling.
+              </p>
+              <p>
+                The collision ripped both aircraft apart, killing all four tanker crew members and three of the seven bomber crew. The four nuclear weapons separated from the disintegrating fuselage and plummeted toward the coastal agricultural village of <strong>Palomares</strong> in Almer&iacute;a.
+              </p>
+            </div>
+            <div class="briefing-fates-col">
+              <div class="fate-mini-card">
+                <span class="fate-dot" style="background:#32cd32;"></span>
+                <div>
+                  <strong>Bomb 1 (Riverbed)</strong>: Parachute deployed successfully; weapon landed intact in soft gravel.
+                </div>
+              </div>
+              <div class="fate-mini-card">
+                <span class="fate-dot" style="background:#ff4500;"></span>
+                <div>
+                  <strong>Bombs 2 &amp; 3 (Land Impacts)</strong>: Parachutes failed; conventional high explosives detonated on impact, aerosolizing weapons-grade plutonium over 2 km&sup2; of cropland.
+                </div>
+              </div>
+              <div class="fate-mini-card">
+                <span class="fate-dot" style="background:#1e90ff;"></span>
+                <div>
+                  <strong>Bomb 4 (Mediterranean)</strong>: Splashed offshore; recovered after 80 days at 880 m depth by deep-submergence vehicle <em>Alvin</em>.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bomb Cards Grid -->
+      <div class="cities-groups-cards-grid nukes-cards-grid" id="bombCardsGrid">
+        {{- range $incident.bombs }}
+        <div class="city-group-card nuke-bomb-card" data-bomb-id="{{ .id }}" data-status="{{ .status_type }}" data-name="{{ .name | lower }}" data-location="{{ .location | lower }}" data-lat="{{ .lat }}" data-lon="{{ .lon }}">
+          <div class="city-group-card-header">
+            <div class="card-header-left">
+              <span class="bomb-badge-dot" style="background-color: {{ .color }}; box-shadow: 0 0 10px {{ .color }};"></span>
+              <span class="group-name">{{ .name }}</span>
+              <span class="nuke-status-badge" style="border-color: {{ .color }}66; color: {{ .color }}; background: {{ .color }}14;">
+                {{ .status }}
+              </span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn nuke-fly-btn" data-lat="{{ .lat }}" data-lon="{{ .lon }}" title="Fly camera to {{ .name }}">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="city-group-card-body show nuke-card-body">
+            <div class="nuke-location-title">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>{{ .location }}</span>
+              {{- with .elevation }}
+              <span class="nuke-elevation">({{ . }})</span>
+              {{- end }}
+            </div>
+
+            <p class="nuke-card-desc">{{ .description }}</p>
+            <p class="nuke-tech-detail">{{ .technical_details }}</p>
+
+            <div class="nuke-specs-row">
+              <div class="nuke-spec">
+                <span class="spec-dim">Coordinates:</span>
+                <span class="spec-val">{{ printf "%.5f" .lat }}&deg; N, {{ printf "%.5f" (math.Abs .lon) }}&deg; W</span>
+              </div>
+              <div class="nuke-spec">
+                <span class="spec-dim">Payload:</span>
+                <span class="spec-val">{{ .payload }}</span>
+              </div>
+            </div>
+
+            <button type="button" class="nuke-card-action-btn" data-lat="{{ .lat }}" data-lon="{{ .lon }}" data-id="{{ .id }}">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Focus on Map</span>
+            </button>
+          </div>
+        </div>
+        {{- end }}
+      </div>
+    </section>
+
+    <!-- Row 2: Interactive Map Viewport (Full Width Below) -->
+    <main class="cities-map-viewport nukes-map-viewport">
+      <!-- Floating Toolbar on top of map -->
+      <div class="cities-map-controls-bar">
+        <!-- Quick Bomb Jump Selector -->
+        <div class="map-control-group">
+          <label for="bombJumpSelect" class="sr-only">Jump to Weapon Location</label>
+          <select id="bombJumpSelect" class="map-select-input" aria-label="Jump to Weapon Location">
+            <option value="all">🎯 All Impact Sites (Palomares Overview)</option>
+            {{- range $incident.bombs }}
+            <option value="{{ .id }}" data-lat="{{ .lat }}" data-lon="{{ .lon }}">
+              {{- if eq .status_type "intact" }}🟢{{ else if eq .status_type "detonated" }}🔴{{ else }}🔵{{ end }} {{ .name }} &bull; {{ .location }}
+            </option>
+            {{- end }}
+          </select>
+        </div>
+
+        <!-- Basemap Layer Switcher -->
+        <div class="map-control-group">
+          <label for="basemapSelect" class="sr-only">Basemap Style</label>
+          <select id="basemapSelect" class="map-select-input" aria-label="Select Basemap">
+            <option value="osm" selected>🗺️ OpenStreetMap</option>
+            <option value="satellite">🛰️ Satellite (Esri)</option>
+            <option value="esri-dark">🌙 Dark Gray (Esri)</option>
+            <option value="carto-dark">🌌 CartoDB Dark</option>
+            <option value="esri-light">☀️ Minimal Light (Esri)</option>
+            <option value="topo">⛰️ Topographic (OpenTopoMap)</option>
+          </select>
+        </div>
+
+        <!-- Contamination Overlay Toggle -->
+        <button type="button" class="map-action-btn active" id="toggleZonesBtn"
+          title="Toggle plutonium dispersion impact radius">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="9"></circle>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+          <span class="btn-text">Zones</span>
+        </button>
+
+        <!-- Toggle Labels -->
+        <button type="button" class="map-action-btn active" id="toggleLabelsBtn" title="Toggle weapon name labels">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 7V4h16v3M9 20h6M12 4v16" />
+          </svg>
+          <span class="btn-text">Labels</span>
+        </button>
+
+        <!-- Reset Global Bounds -->
+        <button type="button" class="map-action-btn" id="resetMapBoundsBtn" title="Reset map to fit all 4 bombs">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="1 4 1 10 7 10"></polyline>
+            <polyline points="23 20 23 14 17 14"></polyline>
+            <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
+          </svg>
+          <span class="btn-text">Overview</span>
+        </button>
+      </div>
+
+      <!-- Leaflet Map Container with explicit styling -->
+      <div id="palomaresMap" class="cities-leaflet-container" style="height: 650px; min-height: 520px; width: 100%; position: relative; background: #0f172a;" tabindex="0"
+        aria-label="Interactive map showing the 4 bomb crash coordinates of the 1966 Palomares incident"></div>
+
+      <!-- Map Legend Overlay (Bottom Left) -->
+      <div class="cities-map-legend-overlay nukes-legend-box">
+        <div class="legend-indicator">
+          <span class="legend-point-dot" style="background:#ff4500;"></span>
+          <span><strong>2</strong> Non-Nuclear Detonations (Plutonium dispersed)</span>
+        </div>
+        <div class="legend-indicator">
+          <span class="legend-point-dot" style="background:#32cd32;"></span>
+          <span><strong>1</strong> Recovered Intact (Riverbed)</span>
+        </div>
+        <div class="legend-indicator">
+          <span class="legend-point-dot" style="background:#1e90ff;"></span>
+          <span><strong>1</strong> Lost at Sea (Alvin 880 m depth)</span>
+        </div>
+        <div class="legend-hint">
+          Click any bomb marker or card above to fly camera &bull; Zero API keys required.
+        </div>
+      </div>
+    </main>
+
+  </div>
+</div>
+
+<!-- Load Leaflet JS -->
+<script src="/lib/leaflet/leaflet.js"></script>
+
+<script>
+(function () {
+  // Direct Data injection from Hugo
+  const incidentData = {{ $incident | jsonify | safeJS }};
+
+  function ensureLeaflet(readyCallback) {
+    if (typeof L !== 'undefined') {
+      readyCallback();
+      return;
+    }
+    // Fallback if local leaflet didn't load in time
+    const s = document.createElement('script');
+    s.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+    s.crossOrigin = 'anonymous';
+    s.onload = readyCallback;
+    s.onerror = function () {
+      console.error('Failed to load Leaflet from unpkg fallback');
+    };
+    document.head.appendChild(s);
+  }
+
+  function initMapApp() {
+    ensureLeaflet(function () {
+      buildPalomaresMap(incidentData);
+    });
+  }
+
+  function buildPalomaresMap(data) {
+    if (!data || !data.bombs || !Array.isArray(data.bombs)) {
+      console.error('Palomares incident data missing or invalid');
+      return;
+    }
+
+    const mapContainer = document.getElementById('palomaresMap');
+    if (!mapContainer) {
+      console.error('Map container #palomaresMap not found');
+      return;
+    }
+
+    // Avoid double initialization
+    if (mapContainer._leaflet_id) {
+      return;
+    }
+
+    // Basemap Providers (100% Free, NO API Key Required)
+    const basemapLayers = {
+      'osm': L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors',
+        maxZoom: 19
+      }),
+      'satellite': L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics',
+        maxZoom: 18
+      }),
+      'esri-dark': L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+        maxZoom: 16
+      }),
+      'carto-dark': L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://carto.com/">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 19
+      }),
+      'esri-light': L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+        maxZoom: 16
+      }),
+      'topo': L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data: &copy; OpenStreetMap contributors, SRTM | Map style: &copy; OpenTopoMap',
+        maxZoom: 17
+      })
+    };
+
+    let currentBasemapKey = 'osm';
+
+    // Automatic fallback if satellite tiles fail (e.g. Brave Shields block)
+    basemapLayers['satellite'].on('tileerror', function () {
+      if (!window._satelliteFallbackTriggered) {
+        window._satelliteFallbackTriggered = true;
+        console.warn('Satellite tiles blocked or failed. Gracefully falling back to OpenStreetMap.');
+        if (currentBasemapKey === 'satellite') {
+          map.removeLayer(basemapLayers['satellite']);
+          map.addLayer(basemapLayers['osm']);
+          currentBasemapKey = 'osm';
+          const sel = document.getElementById('basemapSelect');
+          if (sel) sel.value = 'osm';
+        }
+      }
+    });
+
+    // Center over Palomares, Spain
+    const initialCenter = [37.24, -1.796944];
+    const initialZoom = 12;
+
+    const map = L.map('palomaresMap', {
+      center: initialCenter,
+      zoom: initialZoom,
+      zoomControl: false,
+      layers: [basemapLayers[currentBasemapKey]],
+      minZoom: 4,
+      maxZoom: 18
+    });
+
+    // Re-position zoom control to bottom right
+    L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+    // Basemap Switcher Handler
+    const basemapSelect = document.getElementById('basemapSelect');
+    if (basemapSelect) {
+      basemapSelect.addEventListener('change', (e) => {
+        const selected = e.target.value;
+        if (basemapLayers[selected] && selected !== currentBasemapKey) {
+          map.removeLayer(basemapLayers[currentBasemapKey]);
+          map.addLayer(basemapLayers[selected]);
+          currentBasemapKey = selected;
+        }
+      });
+    }
+
+    // Custom Marker Pins
+    function createPinIcon(bomb, isHighlighted = false) {
+      const size = isHighlighted ? 34 : 28;
+      const pulse = (bomb.status_type === 'detonated') ? '<span class="nuke-pulse detonation-pulse"></span>' :
+                    (bomb.status_type === 'sea') ? '<span class="nuke-pulse sea-pulse"></span>' : '';
+
+      return L.divIcon({
+        className: `nuke-leaflet-pin ${isHighlighted ? 'highlighted' : ''}`,
+        html: `
+          <div class="nuke-pin-wrap">
+            ${pulse}
+            <div class="nuke-pin-core" style="background-color: ${bomb.color}; box-shadow: 0 0 ${isHighlighted ? '16px' : '10px'} ${bomb.color};">
+              <span class="nuke-pin-num">${bomb.number}</span>
+            </div>
+          </div>
+        `,
+        iconSize: [size, size],
+        iconAnchor: [size / 2, size / 2],
+        popupAnchor: [0, -size / 2 - 4]
+      });
+    }
+
+    // Build Markers, Popups, and Dispersion Zones
+    const allMarkers = [];
+    const bombMarkerMap = {};
+    const latLngList = [];
+    const zonesLayerGroup = L.layerGroup().addTo(map);
+    let showLabels = true;
+    let showZones = true;
+
+    data.bombs.forEach(bomb => {
+      const latLng = L.latLng(bomb.lat, bomb.lon);
+      latLngList.push(latLng);
+
+      // Contamination circles around non-nuclear detonations (Bombs 2 & 3)
+      if (bomb.status_type === 'detonated') {
+        const zoneCircle = L.circle(latLng, {
+          radius: 650, // approx 0.77 sq mi dispersion area
+          color: '#ff4500',
+          weight: 1.5,
+          opacity: 0.8,
+          fillColor: '#ff4500',
+          fillOpacity: 0.18,
+          dashArray: '4, 6'
+        });
+        zoneCircle.bindTooltip(`<strong>${bomb.name} Radiation Dispersion Zone</strong><br>Soil plutonium removal boundary`, {
+          direction: 'center',
+          className: 'nuke-zone-tooltip'
+        });
+        zonesLayerGroup.addLayer(zoneCircle);
+      }
+
+      // Subsea search marker radius for Bomb 4
+      if (bomb.status_type === 'sea') {
+        const seaSearchZone = L.circle(latLng, {
+          radius: 1200,
+          color: '#1e90ff',
+          weight: 1.5,
+          opacity: 0.7,
+          fillColor: '#1e90ff',
+          fillOpacity: 0.12,
+          dashArray: '3, 6'
+        });
+        seaSearchZone.bindTooltip(`<strong>Task Force 65 Subsea Search Grid</strong><br>Found at 880 m depth by DSV Alvin`, {
+          direction: 'center',
+          className: 'nuke-zone-tooltip'
+        });
+        zonesLayerGroup.addLayer(seaSearchZone);
+      }
+
+      const marker = L.marker(latLng, { icon: createPinIcon(bomb, false) });
+
+      // Popup Content with Technical Details
+      const popupHtml = `
+        <div class="city-popup-card nuke-popup-card">
+          <div class="popup-header" style="border-left: 3px solid ${bomb.color}; padding-left: 8px;">
+            <span class="popup-flag" style="color: ${bomb.color}; font-size: 1.1rem;">☢️</span>
+            <div class="popup-title-box">
+              <span class="popup-country" style="color: ${bomb.color}; font-weight: 700;">${bomb.status}</span>
+              <h4 class="popup-city-name">${bomb.name}</h4>
+            </div>
+          </div>
+
+          <div class="popup-meta-row" style="margin-top: 6px;">
+            <span class="popup-coords">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <strong>${bomb.location}</strong> &bull; ${bomb.lat.toFixed(4)}&deg; N, ${Math.abs(bomb.lon).toFixed(4)}&deg; W
+            </span>
+          </div>
+
+          <p class="nuke-popup-desc" style="font-size: 0.84rem; margin: 8px 0; color: var(--content);">${bomb.description}</p>
+          <p class="nuke-popup-tech" style="font-size: 0.76rem; margin: 0 0 10px; color: var(--secondary); background: var(--tertiary); padding: 6px 8px; border-radius: 6px;">${bomb.technical_details}</p>
+
+          <div class="popup-footer">
+            <a href="https://www.google.com/maps/search/?api=1&query=${bomb.lat},${bomb.lon}" target="_blank" rel="noopener noreferrer" class="popup-link-btn">
+              <span>Google Maps &rarr;</span>
+            </a>
+            <button type="button" class="popup-zoom-btn" onclick="window._zoomBombTo(${bomb.lat}, ${bomb.lon})">
+              <span>Zoom Close</span>
+            </button>
+          </div>
+        </div>
+      `;
+
+      marker.bindPopup(popupHtml, {
+        className: 'custom-leaflet-popup',
+        closeButton: true,
+        maxWidth: 320
+      });
+
+      // Tooltip permanent label
+      marker.bindTooltip(`<strong>${bomb.name}</strong> &bull; ${bomb.location}`, {
+        direction: 'top',
+        permanent: true,
+        className: 'nuke-permanent-tooltip',
+        offset: [0, -16]
+      });
+
+      marker.bombData = bomb;
+
+      marker.on('click', () => {
+        highlightActiveBomb(bomb.id, false);
+      });
+
+      marker.addTo(map);
+      allMarkers.push(marker);
+      bombMarkerMap[bomb.id] = { marker, bomb, latLng };
+    });
+
+    // Calculate Bounds
+    const allBounds = L.latLngBounds(latLngList);
+
+    // Global helper for popup "Zoom Close"
+    window._zoomBombTo = (lat, lon) => {
+      map.flyTo([lat, lon], 15, { duration: 1.2 });
+    };
+
+    // Highlight Bomb Functionality
+    let currentActiveMarker = null;
+    const activeCard = document.getElementById('activeBombCard');
+    const activeBombName = document.getElementById('activeBombName');
+    const activeBombStatus = document.getElementById('activeBombStatus');
+
+    function highlightActiveBomb(bombId, fly = true) {
+      const entry = bombMarkerMap[bombId];
+      if (!entry) return;
+
+      if (currentActiveMarker && currentActiveMarker !== entry.marker) {
+        currentActiveMarker.setIcon(createPinIcon(currentActiveMarker.bombData, false));
+      }
+
+      currentActiveMarker = entry.marker;
+      entry.marker.setIcon(createPinIcon(entry.bomb, true));
+
+      // Update Quick Stats active card
+      if (activeCard && activeBombName && activeBombStatus) {
+        activeCard.style.display = 'flex';
+        activeBombName.textContent = entry.bomb.name;
+        activeBombStatus.textContent = `${entry.bomb.location} (${entry.bomb.status})`;
+      }
+
+      // Highlight card in explorer grid
+      document.querySelectorAll('.nuke-bomb-card').forEach(c => {
+        if (c.getAttribute('data-bomb-id') === bombId) {
+          c.classList.add('active');
+          c.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          c.classList.remove('active');
+        }
+      });
+
+      // Update jump select dropdown
+      const jumpSelect = document.getElementById('bombJumpSelect');
+      if (jumpSelect) {
+        jumpSelect.value = bombId;
+      }
+
+      if (fly) {
+        map.flyTo(entry.latLng, 14, { duration: 1.2 });
+        setTimeout(() => {
+          entry.marker.openPopup();
+        }, 700);
+
+        // Smoothly bring map into viewport if needed
+        const mapViewport = document.querySelector('.cities-map-viewport');
+        if (mapViewport) {
+          const rect = mapViewport.getBoundingClientRect();
+          if (rect.top < 60 || rect.bottom > window.innerHeight + 120) {
+            mapViewport.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }
+      }
+    }
+
+    // Event Handlers for Cards & Buttons
+    document.querySelectorAll('.nuke-fly-btn, .nuke-card-action-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const card = btn.closest('.nuke-bomb-card');
+        const bombId = card.getAttribute('data-bomb-id');
+        highlightActiveBomb(bombId, true);
+      });
+    });
+
+    document.querySelectorAll('.nuke-bomb-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const bombId = card.getAttribute('data-bomb-id');
+        highlightActiveBomb(bombId, true);
+      });
+    });
+
+    // Jump Select handler
+    const bombJumpSelect = document.getElementById('bombJumpSelect');
+    if (bombJumpSelect) {
+      bombJumpSelect.addEventListener('change', (e) => {
+        const val = e.target.value;
+        if (val === 'all') {
+          map.fitBounds(allBounds, { padding: [50, 50], maxZoom: 13 });
+          if (activeCard) activeCard.style.display = 'none';
+          document.querySelectorAll('.nuke-bomb-card').forEach(c => c.classList.remove('active'));
+        } else {
+          highlightActiveBomb(val, true);
+        }
+      });
+    }
+
+    // Status Pills Filter
+    const statusPills = document.querySelectorAll('#statusPills .country-pill');
+    function filterByStatus(status) {
+      statusPills.forEach(p => {
+        if (p.getAttribute('data-status') === status) p.classList.add('active');
+        else p.classList.remove('active');
+      });
+
+      const matchingBounds = [];
+      document.querySelectorAll('.nuke-bomb-card').forEach(card => {
+        const cardStatus = card.getAttribute('data-status');
+        const matches = (status === 'all' || cardStatus === status);
+        card.style.display = matches ? '' : 'none';
+
+        if (matches) {
+          const lat = parseFloat(card.getAttribute('data-lat'));
+          const lon = parseFloat(card.getAttribute('data-lon'));
+          matchingBounds.push(L.latLng(lat, lon));
+        }
+      });
+
+      if (matchingBounds.length > 0) {
+        map.fitBounds(L.latLngBounds(matchingBounds), { padding: [60, 60], maxZoom: 14 });
+      }
+    }
+
+    statusPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        const status = pill.getAttribute('data-status');
+        filterByStatus(status);
+      });
+    });
+
+    // Real-time Bomb Search
+    const searchInput = document.getElementById('bombSearchInput');
+    const clearSearch = document.getElementById('clearBombSearch');
+
+    function runBombSearch(query) {
+      const term = query.trim().toLowerCase();
+      const matchingBounds = [];
+
+      document.querySelectorAll('.nuke-bomb-card').forEach(card => {
+        const name = (card.getAttribute('data-name') || '').toLowerCase();
+        const loc = (card.getAttribute('data-location') || '').toLowerCase();
+        const status = (card.getAttribute('data-status') || '').toLowerCase();
+        const matches = !term || name.includes(term) || loc.includes(term) || status.includes(term);
+
+        card.style.display = matches ? '' : 'none';
+        if (matches) {
+          const lat = parseFloat(card.getAttribute('data-lat'));
+          const lon = parseFloat(card.getAttribute('data-lon'));
+          matchingBounds.push(L.latLng(lat, lon));
+        }
+      });
+
+      if (matchingBounds.length > 0 && term) {
+        map.fitBounds(L.latLngBounds(matchingBounds), { padding: [50, 50], maxZoom: 14 });
+      }
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const q = e.target.value;
+        if (clearSearch) clearSearch.style.display = q ? 'block' : 'none';
+        runBombSearch(q);
+      });
+    }
+
+    if (clearSearch) {
+      clearSearch.addEventListener('click', () => {
+        if (searchInput) {
+          searchInput.value = '';
+          searchInput.focus();
+        }
+        clearSearch.style.display = 'none';
+        runBombSearch('');
+        map.fitBounds(allBounds, { padding: [50, 50], maxZoom: 13 });
+      });
+    }
+
+    // Toggle Briefing Drawer
+    const toggleBriefingBtn = document.getElementById('toggleBriefingBtn');
+    const briefingDrawer = document.getElementById('briefingDrawer');
+    const toggleBriefingText = document.getElementById('toggleBriefingText');
+    let briefingVisible = true;
+
+    if (toggleBriefingBtn && briefingDrawer) {
+      toggleBriefingBtn.addEventListener('click', () => {
+        briefingVisible = !briefingVisible;
+        briefingDrawer.classList.toggle('show', briefingVisible);
+        if (toggleBriefingText) {
+          toggleBriefingText.textContent = briefingVisible ? 'Minimize Briefing' : 'Mission Briefing';
+        }
+        setTimeout(() => map.invalidateSize(), 150);
+      });
+    }
+
+    // Toggle Cards Grid (Minimize / Show)
+    const toggleCardsBtn = document.getElementById('toggleCardsBtn');
+    const bombCardsGrid = document.getElementById('bombCardsGrid');
+    const toggleCardsText = document.getElementById('toggleCardsText');
+    const toggleCardsIcon = document.getElementById('toggleCardsIcon');
+    let cardsCollapsed = false;
+
+    if (toggleCardsBtn && bombCardsGrid) {
+      toggleCardsBtn.addEventListener('click', () => {
+        cardsCollapsed = !cardsCollapsed;
+        bombCardsGrid.style.display = cardsCollapsed ? 'none' : 'grid';
+        if (toggleCardsText) {
+          toggleCardsText.textContent = cardsCollapsed ? 'Show Weapon Cards' : 'Minimize Cards';
+        }
+        if (toggleCardsIcon) {
+          toggleCardsIcon.style.transform = cardsCollapsed ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
+        setTimeout(() => map.invalidateSize(), 150);
+      });
+    }
+
+    // Map Toolbar Controls (Labels, Zones, Reset)
+    const toggleLabelsBtn = document.getElementById('toggleLabelsBtn');
+    if (toggleLabelsBtn) {
+      toggleLabelsBtn.addEventListener('click', () => {
+        showLabels = !showLabels;
+        toggleLabelsBtn.classList.toggle('active', showLabels);
+        allMarkers.forEach(marker => {
+          if (showLabels) marker.openTooltip();
+          else marker.closeTooltip();
+        });
+      });
+    }
+
+    const toggleZonesBtn = document.getElementById('toggleZonesBtn');
+    if (toggleZonesBtn) {
+      toggleZonesBtn.addEventListener('click', () => {
+        showZones = !showZones;
+        toggleZonesBtn.classList.toggle('active', showZones);
+        if (showZones) map.addLayer(zonesLayerGroup);
+        else map.removeLayer(zonesLayerGroup);
+      });
+    }
+
+    const resetMapBoundsBtn = document.getElementById('resetMapBoundsBtn');
+    if (resetMapBoundsBtn) {
+      resetMapBoundsBtn.addEventListener('click', () => {
+        map.fitBounds(allBounds, { padding: [50, 50], maxZoom: 13 });
+        if (activeCard) activeCard.style.display = 'none';
+        if (currentActiveMarker) {
+          currentActiveMarker.setIcon(createPinIcon(currentActiveMarker.bombData, false));
+          currentActiveMarker.closePopup();
+          currentActiveMarker = null;
+        }
+        document.querySelectorAll('.nuke-bomb-card').forEach(c => c.classList.remove('active'));
+        if (bombJumpSelect) bombJumpSelect.value = 'all';
+      });
+    }
+
+    // Auto theme switcher on dark mode mutation
+    const themeObserver = new MutationObserver(() => {
+      const isDarkNow = document.body.classList.contains('dark') || document.documentElement.classList.contains('dark');
+      if (currentBasemapKey === 'esri-dark' || currentBasemapKey === 'carto-dark' || currentBasemapKey === 'osm') {
+        const targetKey = isDarkNow ? 'carto-dark' : 'osm';
+        if (targetKey !== currentBasemapKey && basemapLayers[targetKey]) {
+          map.removeLayer(basemapLayers[currentBasemapKey]);
+          map.addLayer(basemapLayers[targetKey]);
+          currentBasemapKey = targetKey;
+          if (basemapSelect) basemapSelect.value = targetKey;
+        }
+      }
+    });
+    themeObserver.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
+    // Initial bounds fit & multiple invalidateSize passes to guarantee rendering
+    map.invalidateSize();
+    try {
+      map.fitBounds(allBounds, { padding: [50, 50], maxZoom: 13 });
+    } catch (e) {
+      map.setView(initialCenter, initialZoom);
+    }
+
+    setTimeout(() => {
+      map.invalidateSize();
+      try {
+        map.fitBounds(allBounds, { padding: [50, 50], maxZoom: 13 });
+      } catch (e) {}
+    }, 150);
+
+    setTimeout(() => {
+      map.invalidateSize();
+    }, 500);
+
+    window.addEventListener('resize', () => {
+      map.invalidateSize();
+    });
+  }
+
+  // Safe Lifecycle Hook: executes whether DOM is still loading or already ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMapApp);
+  } else {
+    initMapApp();
+  }
+})();
+</script>
+{{- end }}

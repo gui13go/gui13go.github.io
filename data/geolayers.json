@@ -1,0 +1,661 @@
+{
+  "title": "GeoLayers",
+  "subtitle": "Interactive geospatial visualizations and maps showcasing data layers and spatial analysis.",
+  "image": "/images/cloud16.webp",
+  "geolayers": [
+    {
+      "id": "my-camino",
+      "title": "My Camino",
+      "path": "/geolayers/my-camino/",
+      "description": "A geospatial visualization of my Camino de Santiago journey. From Florianópolis, Brazil, stepping across the Atlantic, all the way to Santiago de Compostela, Spain.",
+      "image": "/images/geolayers/my-camino.png",
+      "availability": "work_in_progress",
+      "status": "Work in Progress",
+      "tags": [
+        "Travel",
+        "Pilgrimage",
+        "Interactive",
+        "Map"
+      ]
+    },
+    {
+      "id": "cities-i-have-visited",
+      "title": "Cities I Have Visited",
+      "path": "/geolayers/cities-i-have-visited/",
+      "description": "A cartographic journey through personal history. Trace the geographic footprint of travel across the globe, visualized through interactive spatial coordinates.",
+      "image": "/images/cities_visited_map.png",
+      "availability": "available",
+      "status": "Available",
+      "tags": [
+        "Personal",
+        "Travel",
+        "Geospatial",
+        "Map",
+        "Interactive",
+        "Coordinates",
+        "Chronicle"
+      ]
+    },
+    {
+      "id": "cities-i-have-lived-in",
+      "title": "Cities I have Lived In",
+      "path": "/geolayers/cities-i-have-lived-in/",
+      "description": "Mapping the places called home. A spatial narrative of the cities that have shaped my personal and professional journey across different continents.",
+      "image": "/images/2worlds.webp",
+      "availability": "work_in_progress",
+      "status": "Work in Progress",
+      "tags": [
+        "Personal",
+        "Map",
+        "Migration",
+        "Home",
+        "Geography",
+        "Biography",
+        "Interactive"
+      ]
+    },
+    {
+      "id": "usa-dropped-nukes-on-spain",
+      "title": "USA dropped nukes on Spain",
+      "path": "/geolayers/usa-dropped-nukes-on-spain/",
+      "description": "Decoding a Cold War catastrophe. An interactive reconstruction of the 1966 Palomares incident, where hydrogen bombs were accidentally dropped onto the Spanish coast.",
+      "image": "/images/palomares_1966.webp",
+      "availability": "available",
+      "status": "Available",
+      "tags": [
+        "Nuke",
+        "History",
+        "Spain",
+        "Cold War",
+        "Geopolitics",
+        "Analysis",
+        "Incident"
+      ]
+    },
+    {
+      "id": "usa-dropped-nukes-on-greenland",
+      "title": "USA dropped nukes on Greenland",
+      "path": "/geolayers/usa-dropped-nukes-on-greenland/",
+      "description": "A visualization of the 1968 Thule Air Base accident. It reconstructs the crash of a B-52 carrying hydrogen bombs in the icy landscape of Northern Greenland.",
+      "image": "/images/thule_1968.webp",
+      "availability": "available",
+      "status": "Available",
+      "tags": [
+        "Nuke",
+        "History",
+        "Greenland",
+        "Cold War",
+        "Geopolitics",
+        "Analysis",
+        "Arctic"
+      ]
+    },
+    {
+      "id": "map-projection-review",
+      "title": "Map Projection Review",
+      "path": "/geolayers/map-projection-review/",
+      "description": "A Short Review on the various map projections out there, all rendered with D3.js",
+      "image": "/images/globeColorful.webp",
+      "availability": "available",
+      "status": "Available",
+      "tags": [
+        "Cartography",
+        "D3.js",
+        "CRS",
+        "Map Projections"
+      ]
+    },
+    {
+      "id": "hiroshima-nagasaki",
+      "title": "Hiroshima-Nagasaki",
+      "path": "/geolayers/hiroshima-nagasaki/",
+      "description": "A spatial demonstration of the Hiroshima and Nagasaki atomic bombings, visualizing the impact zones and historical context of these events.",
+      "image": "/images/bomb1.webp",
+      "availability": "available",
+      "status": "Available",
+      "tags": [
+        "History",
+        "Analysis",
+        "Nuclear",
+        "Japan",
+        "World War II",
+        "Spatial Analysis",
+        "Impact Zones"
+      ]
+    },
+    {
+      "id": "ecosystems-of-the-world",
+      "title": "Ecosystems of the World",
+      "path": "/geolayers/ecosystems-of-the-world/",
+      "description": "Get to explore the ecosystems of the world, from deserts to rainforests, and understand their unique characteristics and biodiversity.",
+      "image": "/images/ecosystems3.webp",
+      "availability": "available",
+      "status": "Available",
+      "tags": [
+        "Nature",
+        "Environment",
+        "Biodiversity"
+      ]
+    },
+    {
+      "id": "timezones",
+      "title": "Timezones",
+      "path": "/geolayers/timezones/",
+      "description": "Explore the timezones of the world with this interactive map. Understand how time is divided across different regions and how it affects global connectivity.",
+      "image": "/images/time3.webp",
+      "availability": "available",
+      "status": "Available",
+      "tags": [
+        "Time",
+        "World",
+        "Geography",
+        "Timezones",
+        "Interactive",
+        "Chronology"
+      ]
+    },
+    {
+      "id": "world-cities-population",
+      "title": "World Cities Population",
+      "path": "/geolayers/world-cities-population/",
+      "description": "Explore cities around the world and their population size. This interactive map visualizes the population distribution in major cities, helping you understand urbanization patterns.",
+      "image": "/images/population1.webp",
+      "availability": "work_in_progress",
+      "status": "Work in Progress",
+      "tags": [
+        "Demography",
+        "Urban",
+        "Population",
+        "Mapping",
+        "Statistics",
+        "Growth",
+        "Sociology"
+      ]
+    },
+    {
+      "id": "sea-level-simulator",
+      "title": "Sea Level Simulator",
+      "path": "/geolayers/sea-level-simulator/",
+      "description": "Simulate sea level rise and its impact on coastal areas. This interactive map allows users to visualize how different levels of sea rise would affect regions around the world.",
+      "image": "/images/sea1.webp",
+      "availability": "available",
+      "status": "Available",
+      "tags": [
+        "Climate",
+        "Simulation",
+        "Sea Level",
+        "Environment",
+        "Oceanography",
+        "Risk",
+        "Geoscience"
+      ]
+    },
+    {
+      "id": "solar-terminator",
+      "title": "Solar Terminator",
+      "path": "/geolayers/solar-terminator/",
+      "description": "The solar terminator shows the moving line dividing Earth's day and night sides. Watch as the shadow of our planet transitions across the globe.",
+      "image": "/images/dayNnight7.webp",
+      "availability": "available",
+      "status": "Available",
+      "tags": [
+        "Astronomy",
+        "Nature",
+        "Earth",
+        "Day/Night",
+        "Visualization",
+        "Rotation"
+      ]
+    },
+    {
+      "id": "brazilian-road-network",
+      "title": "Brazilian Road Network",
+      "path": "/geolayers/brazilian-road-network/",
+      "description": "A spatial visualization of the brazilian road network through OpenLayer mapping.",
+      "image": "/images/roads1.webp",
+      "availability": "work_in_progress",
+      "status": "Work in Progress",
+      "tags": [
+        "Infrastructure",
+        "Brazil",
+        "Roads",
+        "Logistics",
+        "Mapping",
+        "Transport",
+        "Geodata"
+      ]
+    },
+    {
+      "id": "my-favourite-restaurants-in-the-world",
+      "title": "My Favourite Restaurants in the World",
+      "path": "/geolayers/my-favourite-restaurants-in-the-world/",
+      "description": "A culinary world map illustrating my favorite restaurants across the globe. Explore the flavors and places that have left a lasting impression.",
+      "image": "/images/restaurants5.webp",
+      "availability": "work_in_progress",
+      "status": "Work in Progress",
+      "tags": [
+        "Personal",
+        "Food",
+        "Restaurants",
+        "Gastronomy",
+        "Travel",
+        "Map",
+        "Lifestyle"
+      ]
+    },
+    {
+      "id": "dijkstras-in-brazil",
+      "title": "Dijkstras in Brazil",
+      "path": "/geolayers/dijkstras-in-brazil/",
+      "description": "Explore the optimal path between locations in Brazil using Dijkstra's algorithm. This interactive map visualizes the shortest route based on complex road network data.",
+      "image": "/images/roadsJungle.webp",
+      "availability": "work_in_progress",
+      "status": "Work in Progress",
+      "tags": [
+        "Algorithm",
+        "Transport",
+        "Brazil",
+        "Dijkstra",
+        "Road Network",
+        "Optimization",
+        "Logistics"
+      ]
+    },
+    {
+      "id": "berlin-wall-comparison",
+      "title": "Berlin Wall Comparison",
+      "path": "/geolayers/berlin-wall-comparison/",
+      "description": "An interactive visualization comparing the scale and geographic impact of the Berlin Wall to other cities and regions across the world.",
+      "image": "/images/berlin_wall_square_1767703715353.png",
+      "availability": "available",
+      "status": "Available",
+      "tags": [
+        "History",
+        "Geopolitics",
+        "Berlin",
+        "Comparison",
+        "Visualization",
+        "Cold War",
+        "Borders"
+      ]
+    },
+    {
+      "id": "barcelona-street-writtings",
+      "title": "Barcelona Street Writtings",
+      "path": "/geolayers/barcelona-street-writtings/",
+      "description": "Transforming the urban grid into a canvas. Write and visualize words across the streets of Barcelona, utilizing the unique geometry of the Eixample manzanas.",
+      "image": "/images/barcelona2.webp",
+      "availability": "available",
+      "status": "Available",
+      "tags": [
+        "Art",
+        "Urban",
+        "Barcelona",
+        "Creativity",
+        "Streetscape",
+        "Linguistics",
+        "Cartography"
+      ]
+    },
+    {
+      "id": "world-tiles",
+      "title": "World Tiles",
+      "path": "/geolayers/world-tiles/",
+      "description": "A masterclass in cartographic design. Explore this interactive map featuring customizable tiles that transform the visual narrative of geographic data.",
+      "image": "/images/worldTiles3.webp",
+      "availability": "work_in_progress",
+      "status": "Work in Progress",
+      "tags": [
+        "Cartography",
+        "Design",
+        "World",
+        "Tiles",
+        "Visual",
+        "Mapping",
+        "Customization"
+      ]
+    },
+    {
+      "id": "seven-wonders-of-the-ancient-world",
+      "title": "Seven Wonders of the Ancient World",
+      "path": "/geolayers/seven-wonders-of-the-ancient-world/",
+      "description": "A journey back to the dawn of civilization. Explore the legendary seven wonders of the ancient world, from the Great Pyramid to the Hanging Gardens.",
+      "image": "/images/world10.webp",
+      "availability": "coming_soon",
+      "status": "Coming Soon",
+      "tags": [
+        "History",
+        "Culture",
+        "Ancient",
+        "Wonders",
+        "Archaeology",
+        "Heritage",
+        "Architecture"
+      ]
+    },
+    {
+      "id": "new-seven-wonders-of-the-world",
+      "title": "New Seven Wonders of the World",
+      "path": "/geolayers/new-seven-wonders-of-the-world/",
+      "description": "Modern marvels of the human spirit. Discover the new seven wonders of the world, selected by millions to represent the pinnacle of global cultural heritage.",
+      "image": "/images/world8.webp",
+      "availability": "coming_soon",
+      "status": "Coming Soon",
+      "tags": [
+        "Culture",
+        "Travel",
+        "New",
+        "Wonders",
+        "Global",
+        "Landmarks",
+        "Modern History"
+      ]
+    },
+    {
+      "id": "seven-natural-wonders-of-the-world",
+      "title": "Seven Natural Wonders of the World",
+      "path": "/geolayers/seven-natural-wonders-of-the-world/",
+      "description": "The raw power of the natural world. Experience the most breathtaking natural wonders on Earth, from the Grand Canyon to the Great Barrier Reef.",
+      "image": "/images/world3.webp",
+      "availability": "coming_soon",
+      "status": "Coming Soon",
+      "tags": [
+        "Nature",
+        "Travel",
+        "Geology",
+        "Landscapes",
+        "Wilderness",
+        "Environment",
+        "Exploration"
+      ]
+    },
+    {
+      "id": "seven-wonders-of-the-modern-world",
+      "title": "Seven Wonders of the Modern World",
+      "path": "/geolayers/seven-wonders-of-the-modern-world/",
+      "description": "Triumphs of modern engineering. Explore the seven wonders of the modern world, celebrating the incredible feats of structural and civil engineering from the 20th century.",
+      "image": "/images/world5.webp",
+      "availability": "coming_soon",
+      "status": "Coming Soon",
+      "tags": [
+        "Engineering",
+        "Modern",
+        "Architecture",
+        "Infrastructure",
+        "Innovation",
+        "Design",
+        "Construction"
+      ]
+    },
+    {
+      "id": "deforestation-hotspots",
+      "title": "Deforestation Hotspots",
+      "path": "/geolayers/deforestation-hotspots/",
+      "description": "Monitoring the planet's pulse. This map visualizes critical deforestation hotspots globally, highlighting the urgent need for environmental conservation and sustainable management.",
+      "image": "/images/deforestation1.webp",
+      "availability": "coming_soon",
+      "status": "Coming Soon",
+      "tags": [
+        "Environment",
+        "Climate",
+        "Deforestation",
+        "Hotspots",
+        "Conservation",
+        "Ecology",
+        "Sustainability"
+      ]
+    },
+    {
+      "id": "underground-railroad-routes",
+      "title": "Underground Railroad Routes",
+      "path": "/geolayers/underground-railroad-routes/",
+      "description": "The path to freedom. Visualize the clandestine network of routes and safe houses used by enslaved people in the United States to escape to free states and Canada.",
+      "image": "/images/train3.webp",
+      "availability": "coming_soon",
+      "status": "Coming Soon",
+      "tags": [
+        "History",
+        "Human Rights",
+        "Railroad",
+        "Freedom",
+        "USA",
+        "Resistance",
+        "Civil Rights"
+      ]
+    },
+    {
+      "id": "empires-of-the-past",
+      "title": "Empires of the Past",
+      "path": "/geolayers/empires-of-the-past/",
+      "description": "The rise and fall of civilizations. This interactive map visualizes the vast extent of historical empires, allowing users to explore their evolving boundaries and geopolitical influence.",
+      "image": "/images/empire2.webp",
+      "availability": "coming_soon",
+      "status": "Coming Soon",
+      "tags": [
+        "History",
+        "Geopolitics",
+        "Empires",
+        "Expansion",
+        "Boundaries",
+        "Conquest",
+        "Dynasties"
+      ]
+    },
+    {
+      "id": "active-volcanos",
+      "title": "Active Volcanos",
+      "path": "/geolayers/active-volcanos/",
+      "description": "Windows into the Earth's interior. Track the locations and activity of the world's most active volcanoes, and understand the tectonic forces that shape our planet.",
+      "image": "/images/volcano2.webp",
+      "availability": "coming_soon",
+      "status": "Coming Soon",
+      "tags": [
+        "Nature",
+        "Geology",
+        "Volcanos",
+        "Tectonics",
+        "Geohazards",
+        "Seismology",
+        "Earth Science"
+      ]
+    },
+    {
+      "id": "indigenous-lands",
+      "title": "Indigenous Lands",
+      "path": "/geolayers/indigenous-lands/",
+      "description": "Mapping heritage and sovereignty. Explore the geographic extent of indigenous lands worldwide, highlighting the importance of territorial rights and cultural preservation.",
+      "image": "/images/indigenous2.webp",
+      "availability": "coming_soon",
+      "status": "Coming Soon",
+      "tags": [
+        "Culture",
+        "Rights",
+        "Indigenous",
+        "Territory",
+        "Sovereignty",
+        "Heritage",
+        "Demography"
+      ]
+    },
+    {
+      "id": "religeous-sites",
+      "title": "Religeous Sites",
+      "path": "/geolayers/religeous-sites/",
+      "description": "Geographies of the sacred. A curated map of significant religious and spiritual sites around the globe, from ancient temples to modern cathedrals.",
+      "image": "/images/religion5.webp",
+      "availability": "coming_soon",
+      "status": "Coming Soon",
+      "tags": [
+        "Culture",
+        "Religion",
+        "Sacred",
+        "Architecture",
+        "Spirituality",
+        "Pilgrimage",
+        "History"
+      ]
+    },
+    {
+      "id": "global-festivals",
+      "title": "Global Festivals",
+      "path": "/geolayers/global-festivals/",
+      "description": "A global celebration of life. Discover major festivals around the world, from the vibrant colors of Holi to the rhythmic beats of Carnival and the legendary Woodstock.",
+      "image": "/images/festival5.webp",
+      "availability": "coming_soon",
+      "status": "Coming Soon",
+      "tags": [
+        "Culture",
+        "Fun",
+        "Festivals",
+        "Music",
+        "Art",
+        "Celebration",
+        "Global"
+      ]
+    },
+    {
+      "id": "particle-accelerators",
+      "title": "Particle Accelerators",
+      "path": "/geolayers/particle-accelerators/",
+      "description": "Exploring the building blocks of matter. Navigate the global network of particle accelerators, including CERN and other premier research facilities pushing the frontiers of physics.",
+      "image": "/images/particleAccelerator3.webp",
+      "availability": "coming_soon",
+      "status": "Coming Soon",
+      "tags": [
+        "Science",
+        "Physics",
+        "Research",
+        "Technology",
+        "Innovation",
+        "Quantum",
+        "CERN"
+      ]
+    },
+    {
+      "id": "undersea-cables",
+      "title": "Undersea Cables",
+      "path": "/geolayers/undersea-cables/",
+      "description": "The nervous system of the global internet. Visualize the massive network of undersea fiber-optic cables that carry nearly all transoceanic digital traffic.",
+      "image": "/images/underseaCables1.webp",
+      "availability": "coming_soon",
+      "status": "Coming Soon",
+      "tags": [
+        "Infrastructure",
+        "Tech",
+        "Internet",
+        "Communications",
+        "Global",
+        "Maritime",
+        "Connectivity"
+      ]
+    },
+    {
+      "id": "nuclear-test-sites",
+      "title": "Nuclear Test Sites",
+      "path": "/geolayers/nuclear-test-sites/",
+      "description": "Scars of the atomic age. Map the locations of historical nuclear test sites worldwide, reflecting on the profound impact of atomic weapons development during the 20th century.",
+      "image": "/images/nuclear2.webp",
+      "availability": "coming_soon",
+      "status": "Coming Soon",
+      "tags": [
+        "History",
+        "Military",
+        "Nuclear",
+        "Cold War",
+        "Atomic",
+        "Geopolitics",
+        "Weaponry"
+      ]
+    },
+    {
+      "id": "nuclear-plants",
+      "title": "Nuclear Plants",
+      "path": "/geolayers/nuclear-plants/",
+      "description": "Architectures of atomic power. A global overview of nuclear power plants, exploring the distribution of nuclear energy as a major component of modern power grids.",
+      "image": "/images/nuclear5.webp",
+      "availability": "coming_soon",
+      "status": "Coming Soon",
+      "tags": [
+        "Energy",
+        "Tech",
+        "Nuclear",
+        "Power",
+        "Sustainability",
+        "Infrastructure",
+        "Global"
+      ]
+    },
+    {
+      "id": "antarctic-research-stations",
+      "title": "Antarctic Research Stations",
+      "path": "/geolayers/antarctic-research-stations/",
+      "description": "Outposts at the edge of the world. Navigate the diverse research stations in Antarctica, where scientists from across the globe conduct critical climate and earth science studies.",
+      "image": "/images/antartic1.webp",
+      "availability": "coming_soon",
+      "status": "Coming Soon",
+      "tags": [
+        "Science",
+        "Exploration",
+        "Antarctica",
+        "Research",
+        "Remote",
+        "Global",
+        "Meteorology"
+      ]
+    },
+    {
+      "id": "unesco-heritage-sites",
+      "title": "UNESCO Heritage Sites",
+      "path": "/geolayers/unesco-heritage-sites/",
+      "description": "The world's most precious legacy. An interactive map of UNESCO World Heritage Sites, celebrating the cultural and natural treasures that define our collective identity.",
+      "image": "/images/unesco2.webp",
+      "availability": "coming_soon",
+      "status": "Coming Soon",
+      "tags": [
+        "Culture",
+        "Preservation",
+        "UNESCO",
+        "Heritage",
+        "World",
+        "Tourism",
+        "History"
+      ]
+    },
+    {
+      "id": "marine-traffic",
+      "title": "Marine Traffic",
+      "path": "/geolayers/marine-traffic/",
+      "description": "The global pulse of shipping. Visualize real-time and historical marine traffic patterns, revealing the complex logistics and routes that power international trade.",
+      "image": "/images/marineTraffic2.webp",
+      "availability": "coming_soon",
+      "status": "Coming Soon",
+      "tags": [
+        "Transport",
+        "Logistics",
+        "Maritime",
+        "Shipping",
+        "Global Trade",
+        "Navigation",
+        "Ports"
+      ]
+    },
+    {
+      "id": "usa-military-bases",
+      "title": "USA Military Bases",
+      "path": "/geolayers/usa-military-bases/",
+      "description": "Global defense networks. A mapping of USA military bases and installations worldwide, examining the geopolitical footprint and strategic presence of the United States.",
+      "image": "/images/military2.webp",
+      "availability": "coming_soon",
+      "status": "Coming Soon",
+      "tags": [
+        "Military",
+        "Geopolitics",
+        "USA",
+        "Strategy",
+        "Global",
+        "Defense",
+        "Security"
+      ]
+    }
+  ]
+}

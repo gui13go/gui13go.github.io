@@ -55,3 +55,73 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
+
+{{- /* Smart Auto-hiding Header: slide up on scroll down, slide down on scroll up */ -}}
+<script>
+(function () {
+  const header = document.querySelector(".header");
+  if (!header) return;
+
+  let lastScrollY = Math.max(0, window.pageYOffset || document.documentElement.scrollTop || 0);
+  let ticking = false;
+  const deltaThreshold = 8;
+  let accumulatedScroll = 0;
+  let lastDirection = 0; // 1: down, -1: up
+
+  function updateHeader() {
+    const currentScrollY = Math.max(0, window.pageYOffset || document.documentElement.scrollTop || 0);
+    const diff = currentScrollY - lastScrollY;
+    const headerHeight = header.offsetHeight || 60;
+
+    // Always keep header visible at the very top of the page
+    if (currentScrollY <= headerHeight) {
+      header.classList.remove("header-hidden");
+      accumulatedScroll = 0;
+      lastDirection = 0;
+      lastScrollY = currentScrollY;
+      ticking = false;
+      return;
+    }
+
+    const direction = diff > 0 ? 1 : diff < 0 ? -1 : 0;
+
+    if (direction !== 0) {
+      if (direction !== lastDirection) {
+        accumulatedScroll = 0;
+        lastDirection = direction;
+      }
+      accumulatedScroll += Math.abs(diff);
+
+      if (accumulatedScroll >= deltaThreshold) {
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        // Avoid hiding when overscrolling at the bottom of the page (Safari / mobile bounce)
+        if (currentScrollY < maxScroll - 10 || direction === -1) {
+          if (direction === 1) {
+            header.classList.add("header-hidden");
+          } else {
+            header.classList.remove("header-hidden");
+          }
+        }
+      }
+    }
+
+    lastScrollY = currentScrollY;
+    ticking = false;
+  }
+
+  function onScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(updateHeader);
+      ticking = true;
+    }
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  window.addEventListener("resize", function () {
+    if ((window.pageYOffset || document.documentElement.scrollTop || 0) <= (header.offsetHeight || 60)) {
+      header.classList.remove("header-hidden");
+    }
+  }, { passive: true });
+})();
+</script>

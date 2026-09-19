@@ -1,0 +1,290 @@
+{{- define "main" }}
+{{- $pubData := site.Data.publications }}
+<div class="publications-page-container">
+  <header class="gallery-header">
+    <div class="gallery-breadcrumbs">
+      <a href="{{ site.BaseURL }}">Home</a> <span>/</span> <span>Publications</span>
+    </div>
+    <h1 class="gallery-title">Publications</h1>
+    <p class="gallery-subtitle">{{ $pubData.description }}</p>
+  </header>
+
+  <!-- Filter & Search Toolbar -->
+  <div class="publications-toolbar">
+    <div class="gallery-search-box publications-search-box">
+      <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="pubSearchInput" placeholder="Search publications by title, abstract, or keywords..." autocomplete="off" aria-label="Search publications">
+      <button type="button" id="pubClearSearch" class="clear-search-btn" style="display:none;" aria-label="Clear search">&times;</button>
+    </div>
+
+    <div class="gallery-count-badge publications-count-badge">
+      Showing <span id="pubVisibleCount">{{ len $pubData.items }}</span> of {{ len $pubData.items }} publications
+    </div>
+  </div>
+
+  <!-- Tag Filter Chips -->
+  <div class="publications-tag-filter" id="pubTagFilter" role="group" aria-label="Filter by category">
+    <button type="button" class="pub-filter-btn active" data-tag="all">All</button>
+    <button type="button" class="pub-filter-btn" data-tag="thesis">Thesis</button>
+    <button type="button" class="pub-filter-btn" data-tag="research">Research</button>
+    <button type="button" class="pub-filter-btn" data-tag="data science">Data Science</button>
+    <button type="button" class="pub-filter-btn" data-tag="economy">Economy / Economics</button>
+    <button type="button" class="pub-filter-btn" data-tag="complexity">Complexity</button>
+    <button type="button" class="pub-filter-btn" data-tag="migration">Migration</button>
+  </div>
+
+  <!-- Publications Grid -->
+  <div class="publications-grid" id="publicationsGrid">
+    {{- range $pubData.items }}
+    {{- $isAvailable := eq .availability "available" }}
+    {{- $isExternal := hasPrefix .path "http" }}
+    <article class="publication-card{{ if not $isAvailable }} is-coming-soon{{ end }}"
+             data-id="{{ .id }}"
+             data-title="{{ .title | lower }}"
+             data-excerpt="{{ .excerpt | lower }}"
+             data-availability="{{ .availability }}"
+             data-path="{{ .path }}"
+             data-tags="{{ range .tags }}{{ .title | lower }} {{ end }}">
+      
+      <div class="pub-card-image-wrap">
+        <img src="{{ .image }}" alt="{{ .title }} thumbnail" loading="lazy" class="pub-card-img" onerror="this.onerror=null;this.classList.add('img-fallback');">
+        <div class="pub-card-overlay-indicator">
+          {{- if $isAvailable }}
+          <span class="pub-open-icon" title="Open publication">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </span>
+          {{- else }}
+          <span class="pub-open-icon coming-soon-icon" title="Under development">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </span>
+          {{- end }}
+        </div>
+      </div>
+
+      <div class="pub-card-body">
+        <h2 class="pub-card-title">{{ .title }}</h2>
+        <p class="pub-card-excerpt">{{ .excerpt }}</p>
+
+        <div class="pub-card-footer">
+          <!-- Availability Badge -->
+          <div class="pub-status-badge pub-status-{{ .availability }}">
+            <span class="pub-status-dot-wrap">
+              <span class="pub-status-ping"></span>
+              <span class="pub-status-dot"></span>
+            </span>
+            <span class="pub-status-label">{{ if $isAvailable }}Available{{ else }}Coming Soon{{ end }}</span>
+          </div>
+
+          <!-- Tags List -->
+          <div class="pub-tags-list">
+            {{- range .tags }}
+            <span class="pub-tag-chip" style="--tag-color: {{ .color }};">
+              {{ .title }}
+            </span>
+            {{- end }}
+          </div>
+        </div>
+      </div>
+    </article>
+    {{- end }}
+  </div>
+
+  <!-- Empty Search State -->
+  <div class="gallery-empty-state" id="pubEmptyState" style="display: none;">
+    <p>No publications matched your search criteria.</p>
+    <button type="button" class="pub-filter-btn" id="pubResetFiltersBtn" style="margin-top: 12px;">Reset Filters</button>
+  </div>
+</div>
+
+<!-- Accessible Modal for Coming Soon items -->
+<div class="pub-modal-backdrop" id="pubModalBackdrop" aria-hidden="true">
+  <div class="pub-modal" role="dialog" aria-modal="true" aria-labelledby="pubModalTitle">
+    <div class="pub-modal-header">
+      <div class="pub-modal-icon-badge">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+      </div>
+      <button type="button" class="pub-modal-close" id="pubModalCloseBtn" aria-label="Close dialog">&times;</button>
+    </div>
+    <div class="pub-modal-body">
+      <h3 class="pub-modal-title" id="pubModalTitle">Coming Soon</h3>
+      <p class="pub-modal-message" id="pubModalMessage">This publication and its benchmark datasets are currently under finalization and code optimization. Check back soon for the full release!</p>
+    </div>
+    <div class="pub-modal-footer">
+      <button type="button" class="pub-modal-action-btn" id="pubModalOkBtn">Got it</button>
+    </div>
+  </div>
+</div>
+
+<!-- Interactive Client-side Script -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const searchInput = document.getElementById("pubSearchInput");
+  const clearBtn = document.getElementById("pubClearSearch");
+  const visibleCount = document.getElementById("pubVisibleCount");
+  const emptyState = document.getElementById("pubEmptyState");
+  const resetBtn = document.getElementById("pubResetFiltersBtn");
+  const cards = Array.from(document.querySelectorAll(".publication-card"));
+  const filterBtns = Array.from(document.querySelectorAll(".pub-filter-btn[data-tag]"));
+  
+  // Info Tooltip
+  const infoBtn = document.getElementById("publicationsInfoBtn");
+  const tooltip = document.getElementById("publicationsTooltip");
+  if (infoBtn && tooltip) {
+    infoBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      tooltip.classList.toggle("is-active");
+    });
+    document.addEventListener("click", function (e) {
+      if (!tooltip.contains(e.target) && e.target !== infoBtn) {
+        tooltip.classList.remove("is-active");
+      }
+    });
+  }
+
+  // Modal
+  const modalBackdrop = document.getElementById("pubModalBackdrop");
+  const modalCloseBtn = document.getElementById("pubModalCloseBtn");
+  const modalOkBtn = document.getElementById("pubModalOkBtn");
+
+  function openModal(title, msg) {
+    if (!modalBackdrop) return;
+    if (title) document.getElementById("pubModalTitle").textContent = title;
+    if (msg) document.getElementById("pubModalMessage").textContent = msg;
+    modalBackdrop.classList.add("is-visible");
+    modalBackdrop.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    if (!modalBackdrop) return;
+    modalBackdrop.classList.remove("is-visible");
+    modalBackdrop.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  if (modalCloseBtn) modalCloseBtn.addEventListener("click", closeModal);
+  if (modalOkBtn) modalOkBtn.addEventListener("click", closeModal);
+  if (modalBackdrop) {
+    modalBackdrop.addEventListener("click", function (e) {
+      if (e.target === modalBackdrop) closeModal();
+    });
+  }
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && modalBackdrop && modalBackdrop.classList.contains("is-visible")) {
+      closeModal();
+    }
+  });
+
+  // Card click navigation
+  cards.forEach(function (card) {
+    card.addEventListener("click", function (e) {
+      const availability = card.getAttribute("data-availability");
+      const path = card.getAttribute("data-path");
+      const title = card.querySelector(".pub-card-title") ? card.querySelector(".pub-card-title").textContent : "Publication";
+
+      if (availability === "coming_soon") {
+        e.preventDefault();
+        openModal(
+          "Coming Soon: " + title,
+          "This technical benchmark and publication are currently undergoing final hardware verification and code optimization. Stay tuned for the public release!"
+        );
+        return;
+      }
+
+      if (path) {
+        if (path.startsWith("http")) {
+          window.open(path, "_blank", "noopener,noreferrer");
+        } else {
+          window.location.href = path;
+        }
+      }
+    });
+  });
+
+  // Filter & Search
+  let currentTag = "all";
+
+  function filterCards() {
+    const query = (searchInput.value || "").trim().toLowerCase();
+    let count = 0;
+
+    cards.forEach(function (card) {
+      const title = card.getAttribute("data-title") || "";
+      const excerpt = card.getAttribute("data-excerpt") || "";
+      const tags = card.getAttribute("data-tags") || "";
+
+      let matchesTag = true;
+      if (currentTag !== "all") {
+        if (currentTag === "economy") {
+          matchesTag = tags.includes("economy") || tags.includes("economics");
+        } else {
+          matchesTag = tags.includes(currentTag);
+        }
+      }
+
+      let matchesQuery = true;
+      if (query) {
+        matchesQuery = title.includes(query) || excerpt.includes(query) || tags.includes(query);
+      }
+
+      if (matchesTag && matchesQuery) {
+        card.style.display = "";
+        count++;
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    if (visibleCount) visibleCount.textContent = count;
+    if (emptyState) emptyState.style.display = count === 0 ? "block" : "none";
+    if (clearBtn) clearBtn.style.display = query.length > 0 ? "block" : "none";
+  }
+
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      filterBtns.forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      currentTag = btn.getAttribute("data-tag") || "all";
+      filterCards();
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener("input", filterCards);
+  }
+
+  if (clearBtn) {
+    clearBtn.addEventListener("click", function () {
+      searchInput.value = "";
+      filterCards();
+      searchInput.focus();
+    });
+  }
+
+  if (resetBtn) {
+    resetBtn.addEventListener("click", function () {
+      if (searchInput) searchInput.value = "";
+      currentTag = "all";
+      filterBtns.forEach(function (b) {
+        if (b.getAttribute("data-tag") === "all") b.classList.add("active");
+        else b.classList.remove("active");
+      });
+      filterCards();
+    });
+  }
+});
+</script>
+{{- end }}

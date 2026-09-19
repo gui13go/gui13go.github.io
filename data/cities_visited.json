@@ -1,0 +1,3058 @@
+{
+  "title": "Cities I Have Visited",
+  "description": "A cartographic journey through personal history. Trace the geographic footprint of travel across the globe, visualized through interactive spatial coordinates.",
+  "total_cities": 207,
+  "total_countries": 20,
+  "groups": [
+    {
+      "group": "Brasil",
+      "flag": "🇧🇷",
+      "subgroups": [
+        {
+          "subgroup": "Santa Catarina",
+          "cities": [
+            {
+              "name": "Florianópolis, Santa Catarina",
+              "lon": -48.564151,
+              "lat": -27.59355,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "São José, Santa Catarina",
+              "lon": -48.6367,
+              "lat": -27.6136,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Palhoça, Santa Catarina",
+              "lon": -48.6691,
+              "lat": -27.6458,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Biguaçu, Santa Catarina",
+              "lon": -48.659,
+              "lat": -27.4956,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Santo Amaro da Imperatriz, Santa Catarina",
+              "lon": -48.7817,
+              "lat": -27.6858,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Alfredo Wagner, Santa Catarina",
+              "lon": -49.3697,
+              "lat": -28.6775,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Urubici, Santa Catarina",
+              "lon": -49.593,
+              "lat": -28.015,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Bom retiro, Santa Catarina",
+              "lon": -49.3697,
+              "lat": -28.6775,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Anitápolis, Santa Catarina",
+              "lon": -49.3697,
+              "lat": -28.6775,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Rancho queimado, Santa Catarina",
+              "lon": -49.3697,
+              "lat": -28.6775,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Garopaba, Santa Catarina",
+              "lon": -49.3697,
+              "lat": -28.6775,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Governador Celso Ramos, Santa Catarina",
+              "lon": -49.3697,
+              "lat": -28.6775,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Tijucas, Santa Catarina",
+              "lon": -49.3697,
+              "lat": -28.6775,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Indaial, Santa Catarina",
+              "lon": -49.3697,
+              "lat": -28.6775,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Timbó, Santa Catarina",
+              "lon": -49.3697,
+              "lat": -28.6775,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Itajaí, Santa Catarina",
+              "lon": -49.3697,
+              "lat": -28.6775,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Balneario Barra do Sul, Santa Catarina",
+              "lon": -49.3697,
+              "lat": -28.6775,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Barra Velha, Santa Catarina",
+              "lon": -49.3697,
+              "lat": -28.6775,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Chapecó, Santa Catarina",
+              "lon": -52.6152,
+              "lat": -27.0964,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Joinville, Santa Catarina",
+              "lon": -48.8451,
+              "lat": -26.3045,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Blumenau, Santa Catarina",
+              "lon": -49.0661,
+              "lat": -26.9155,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Jaraguá do Sul, Santa Catarina",
+              "lon": -49.0713,
+              "lat": -26.4851,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Balneário Camboriú, Santa Catarina",
+              "lon": -48.6175,
+              "lat": -26.9926,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Lages, Santa Catarina",
+              "lon": -50.326,
+              "lat": -27.816,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Criciúma, Santa Catarina",
+              "lon": -49.3697,
+              "lat": -28.6775,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Brusque, Santa Catarina",
+              "lon": -48.911,
+              "lat": -27.098,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Imbituba, Santa Catarina",
+              "lon": -48.666,
+              "lat": -28.229,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "Penha, Santa Catarina",
+              "lon": -48.646,
+              "lat": -26.769,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            },
+            {
+              "name": "São Francisco do Sul, Santa Catarina",
+              "lon": -48.638,
+              "lat": -26.243,
+              "group": "Brasil",
+              "subgroup": "Santa Catarina"
+            }
+          ]
+        },
+        {
+          "subgroup": "Rio Grande do Sul",
+          "cities": [
+            {
+              "name": "Porto Alegre, Rio Grande do Sul",
+              "lon": -51.23,
+              "lat": -30.033,
+              "group": "Brasil",
+              "subgroup": "Rio Grande do Sul"
+            }
+          ]
+        },
+        {
+          "subgroup": "Paraná",
+          "cities": [
+            {
+              "name": "Pinhais, Paraná",
+              "lon": -49.182948,
+              "lat": -25.440711,
+              "group": "Brasil",
+              "subgroup": "Paraná"
+            },
+            {
+              "name": "São José dos Pinhais, Paraná",
+              "lon": -49.201972,
+              "lat": -25.532864,
+              "group": "Brasil",
+              "subgroup": "Paraná"
+            },
+            {
+              "name": "Curitiba, Paraná",
+              "lon": -49.2775,
+              "lat": -25.4284,
+              "group": "Brasil",
+              "subgroup": "Paraná"
+            },
+            {
+              "name": "Morretes, Paraná",
+              "lon": -48.834,
+              "lat": -25.477,
+              "group": "Brasil",
+              "subgroup": "Paraná"
+            },
+            {
+              "name": "Foz do Iguaçu, Paraná",
+              "lon": -54.5881,
+              "lat": -25.5163,
+              "group": "Brasil",
+              "subgroup": "Paraná"
+            }
+          ]
+        },
+        {
+          "subgroup": "São Paulo",
+          "cities": [
+            {
+              "name": "Cananéia, São Paulo",
+              "lon": -47.927,
+              "lat": -25.015,
+              "group": "Brasil",
+              "subgroup": "São Paulo"
+            },
+            {
+              "name": "São Paulo, São Paulo",
+              "lon": -46.6333,
+              "lat": -23.5505,
+              "group": "Brasil",
+              "subgroup": "São Paulo"
+            },
+            {
+              "name": "Guarulhos, São Paulo",
+              "lon": -46.533,
+              "lat": -23.454,
+              "group": "Brasil",
+              "subgroup": "São Paulo"
+            },
+            {
+              "name": "Santana do Parnaiba, São Paulo",
+              "lon": -46.867861,
+              "lat": -23.474367,
+              "group": "Brasil",
+              "subgroup": "São Paulo"
+            },
+            {
+              "name": "Rio Claro, São Paulo",
+              "lon": -47.556,
+              "lat": -22.3988,
+              "group": "Brasil",
+              "subgroup": "São Paulo"
+            },
+            {
+              "name": "Piracicaba, São Paulo",
+              "lon": -47.649,
+              "lat": -22.725,
+              "group": "Brasil",
+              "subgroup": "São Paulo"
+            },
+            {
+              "name": "Campinas, São Paulo",
+              "lon": -47.0626,
+              "lat": -22.9056,
+              "group": "Brasil",
+              "subgroup": "São Paulo"
+            }
+          ]
+        },
+        {
+          "subgroup": "Rio de Janeiro",
+          "cities": [
+            {
+              "name": "Rio de Janeiro, Rio de Janeiro",
+              "lon": -43.1729,
+              "lat": -22.9068,
+              "group": "Brasil",
+              "subgroup": "Rio de Janeiro"
+            },
+            {
+              "name": "Niterói, Rio de Janeiro",
+              "lon": -43.104,
+              "lat": -22.883,
+              "group": "Brasil",
+              "subgroup": "Rio de Janeiro"
+            }
+          ]
+        },
+        {
+          "subgroup": "Distrito Federal",
+          "cities": [
+            {
+              "name": "Brasília, Distrito Federal",
+              "lon": -47.8928,
+              "lat": -15.7975,
+              "group": "Brasil",
+              "subgroup": "Distrito Federal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Argentina",
+      "flag": "🇦🇷",
+      "cities": [
+        {
+          "name": "Puerto Iguazú, Argentina",
+          "lon": -54.5736,
+          "lat": -25.5991,
+          "group": "Argentina",
+          "subgroup": ""
+        }
+      ]
+    },
+    {
+      "group": "Paraguay",
+      "flag": "🇵🇾",
+      "cities": [
+        {
+          "name": "Asunción, Paraguay",
+          "lon": -57.5759,
+          "lat": -25.2637,
+          "group": "Paraguay",
+          "subgroup": ""
+        },
+        {
+          "name": "Ciudad del Este, Paraguay",
+          "lon": -54.6111,
+          "lat": -25.5097,
+          "group": "Paraguay",
+          "subgroup": ""
+        }
+      ]
+    },
+    {
+      "group": "Panama",
+      "flag": "🇵🇦",
+      "cities": [
+        {
+          "name": "Panama City, Panama",
+          "lon": -79.5199,
+          "lat": 8.9824,
+          "group": "Panama",
+          "subgroup": ""
+        },
+        {
+          "name": "Colón, Panama",
+          "lon": -79.9068,
+          "lat": 9.356,
+          "group": "Panama",
+          "subgroup": ""
+        },
+        {
+          "name": "San Miguelito, Panama",
+          "lon": -79.497,
+          "lat": 9.052,
+          "group": "Panama",
+          "subgroup": ""
+        }
+      ]
+    },
+    {
+      "group": "USA",
+      "flag": "🇺🇸",
+      "cities": [
+        {
+          "name": "Washington DC, USA",
+          "lon": -77.0369,
+          "lat": 38.9072,
+          "group": "USA",
+          "subgroup": ""
+        },
+        {
+          "name": "Dulles, Virginia, USA",
+          "lon": -77.449531,
+          "lat": 38.958653,
+          "group": "USA",
+          "subgroup": ""
+        },
+        {
+          "name": "McLean, Virginia, USA",
+          "lon": -77.179292,
+          "lat": 38.931248,
+          "group": "USA",
+          "subgroup": ""
+        }
+      ]
+    },
+    {
+      "group": "Portugal",
+      "flag": "🇵🇹",
+      "cities": [
+        {
+          "name": "Lisbon, Portugal",
+          "lon": -9.1393,
+          "lat": 38.7223,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Porto, Portugal",
+          "lon": -8.6102,
+          "lat": 41.1496,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Loures, Portugal",
+          "lon": -9.1689,
+          "lat": 38.8309,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Vila Nova de Gaia, Portugal",
+          "lon": -8.611,
+          "lat": 41.1336,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Ericeira, Portugal",
+          "lon": -9.4167,
+          "lat": 38.9667,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Estoril, Portugal",
+          "lon": -9.3977,
+          "lat": 38.7057,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Alcabideche, Portugal",
+          "lon": -9.4197,
+          "lat": 38.7336,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Amadora, Portugal",
+          "lon": -9.2308,
+          "lat": 38.7597,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Óbidos, Portugal",
+          "lon": -9.1567,
+          "lat": 39.36,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Covilhã, Portugal",
+          "lon": -7.5,
+          "lat": 40.2833,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Foz do Arelho, Portugal",
+          "lon": -9.2167,
+          "lat": 39.4333,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Faro, Portugal",
+          "lon": -7.9304,
+          "lat": 37.0194,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Coimbra, Portugal",
+          "lon": -8.4265,
+          "lat": 40.2033,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Braga, Portugal",
+          "lon": -8.4253,
+          "lat": 41.5331,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Aveiro, Portugal",
+          "lon": -8.6455,
+          "lat": 40.6443,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Setúbal, Portugal",
+          "lon": -8.8882,
+          "lat": 38.5244,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Vila Real de Santo António, Portugal",
+          "lon": -7.4208,
+          "lat": 37.199,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Elvas, Portugal",
+          "lon": -7.1633,
+          "lat": 38.8815,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Évora, Portugal",
+          "lon": -7.9065,
+          "lat": 38.5714,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Guarda, Portugal",
+          "lon": -7.2637,
+          "lat": 40.5364,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Fundão, Portugal",
+          "lon": -7.5003,
+          "lat": 40.141,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Albufeira, Portugal",
+          "lon": -8.253,
+          "lat": 37.095,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Almada, Portugal",
+          "lon": -9.161,
+          "lat": 38.679,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Cascais, Portugal",
+          "lon": -9.422,
+          "lat": 38.697,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Oeiras, Portugal",
+          "lon": -9.311,
+          "lat": 38.691,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Carcavelos, Portugal",
+          "lon": -9.333,
+          "lat": 38.683,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Parede, Portugal",
+          "lon": -9.354,
+          "lat": 38.693,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Sintra, Portugal",
+          "lon": -9.381,
+          "lat": 38.797,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Peniche, Portugal",
+          "lon": -9.381,
+          "lat": 39.356,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Odivelas, Portugal",
+          "lon": -9.164,
+          "lat": 38.793,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Caldas da Rainha, Portugal",
+          "lon": -9.134,
+          "lat": 39.407,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Manteigas, Portugal",
+          "lon": -7.539,
+          "lat": 40.402,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Viseu, Portugal",
+          "lon": -7.912,
+          "lat": 40.661,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Matosinhos, Portugal",
+          "lon": -8.69,
+          "lat": 41.183,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Vila do Conde, Portugal",
+          "lon": -8.748,
+          "lat": 41.351,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Póvoa de Varzim, Portugal",
+          "lon": -8.759,
+          "lat": 41.383,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Apúlia, Portugal",
+          "lon": -8.77,
+          "lat": 41.485,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Fão, Portugal",
+          "lon": -8.768,
+          "lat": 41.51,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Esposende, Portugal",
+          "lon": -8.781,
+          "lat": 41.533,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Viana do Castelo, Portugal",
+          "lon": -8.835,
+          "lat": 41.701,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Caminha, Portugal",
+          "lon": -8.837,
+          "lat": 41.877,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Vila de Mouros, Portugal",
+          "lon": -8.797,
+          "lat": 41.891,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Vila Nova de Cerveira, Portugal",
+          "lon": -8.744,
+          "lat": 41.938,
+          "group": "Portugal",
+          "subgroup": ""
+        },
+        {
+          "name": "Valença, Portugal",
+          "lon": -8.644,
+          "lat": 42.029,
+          "group": "Portugal",
+          "subgroup": ""
+        }
+      ]
+    },
+    {
+      "group": "Spain",
+      "flag": "🇪🇸",
+      "cities": [
+        {
+          "name": "Ayamonte, Spain",
+          "lon": -7.404,
+          "lat": 37.214,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Mérida, Spain",
+          "lon": -6.344,
+          "lat": 38.916,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Cáceres, Spain",
+          "lon": -6.372,
+          "lat": 39.476,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Toledo, Spain",
+          "lon": -4.023,
+          "lat": 39.862,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Tarifa, Spain",
+          "lon": -5.606,
+          "lat": 36.013,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Algeciras, Spain",
+          "lon": -5.441,
+          "lat": 36.14,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "La Línea de la Concepción, Spain",
+          "lon": -5.348,
+          "lat": 36.168,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Marbella, Spain",
+          "lon": -4.882,
+          "lat": 36.515,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Ronda, Spain",
+          "lon": -5.167,
+          "lat": 36.742,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Setenil de las Bodegas, Spain",
+          "lon": -5.181,
+          "lat": 36.864,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Madrid, Spain",
+          "lon": -3.7038,
+          "lat": 40.4168,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Barcelona, Spain",
+          "lon": 2.1734,
+          "lat": 41.3851,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Badajoz, Spain",
+          "lon": -6.9707,
+          "lat": 38.8794,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Salamanca, Spain",
+          "lon": -5.6631,
+          "lat": 40.9701,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Seville, Spain",
+          "lon": -5.9845,
+          "lat": 37.3891,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Málaga, Spain",
+          "lon": -4.4203,
+          "lat": 36.7213,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Granada, Spain",
+          "lon": -3.5986,
+          "lat": 37.1773,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Córdoba, Spain",
+          "lon": -4.7794,
+          "lat": 37.8882,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Cádiz, Spain",
+          "lon": -6.2946,
+          "lat": 36.5297,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Valencia, Spain",
+          "lon": -0.3774,
+          "lat": 39.4699,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Castellón de la Plana, Spain",
+          "lon": -0.0576,
+          "lat": 39.9864,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Donostia-San Sebastian, Spain",
+          "lon": -1.98011,
+          "lat": 43.317488,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Bilbao, Spain",
+          "lon": -2.934997,
+          "lat": 43.263019,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Barakaldo, Spain",
+          "lon": -2.98693,
+          "lat": 43.296864,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Sestao, Spain",
+          "lon": -3.003953,
+          "lat": 43.312023,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Portugalete, Spain",
+          "lon": -3.020275,
+          "lat": 43.320641,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Getxo, Spain",
+          "lon": -3.010776,
+          "lat": 43.32759,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Santander, Spain",
+          "lon": -3.79315,
+          "lat": 43.472724,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "León, Spain",
+          "lon": -5.571907,
+          "lat": 42.598104,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Monforte de Lemos, Spain",
+          "lon": -7.514766,
+          "lat": 42.520561,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Vigo, Spain",
+          "lon": -8.714817,
+          "lat": 42.234387,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Tui, Spain",
+          "lon": -8.646,
+          "lat": 42.049,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "O Porriño, Spain",
+          "lon": -8.619,
+          "lat": 42.161,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Teis, Spain",
+          "lon": -8.692,
+          "lat": 42.251,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Redondela, Spain",
+          "lon": -8.609,
+          "lat": 42.281,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Arcade, Spain",
+          "lon": -8.605,
+          "lat": 42.339,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Pontevedra, Spain",
+          "lon": -8.643,
+          "lat": 42.431,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Caldas de Reis, Spain",
+          "lon": -8.641,
+          "lat": 42.604,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Padrón, Spain",
+          "lon": -8.659,
+          "lat": 42.739,
+          "group": "Spain",
+          "subgroup": ""
+        },
+        {
+          "name": "Santiago de Compostela, Spain",
+          "lon": -8.545,
+          "lat": 42.88,
+          "group": "Spain",
+          "subgroup": ""
+        }
+      ]
+    },
+    {
+      "group": "United Kingdom",
+      "flag": "🇬🇧",
+      "cities": [
+        {
+          "name": "Gibraltar, United Kingdom",
+          "lon": -5.3436,
+          "lat": 36.1408,
+          "group": "United Kingdom",
+          "subgroup": ""
+        },
+        {
+          "name": "London, England",
+          "lon": -0.1276,
+          "lat": 51.5074,
+          "group": "United Kingdom",
+          "subgroup": ""
+        },
+        {
+          "name": "Manchester, England",
+          "lon": -2.2426,
+          "lat": 53.4808,
+          "group": "United Kingdom",
+          "subgroup": ""
+        }
+      ]
+    },
+    {
+      "group": "Ireland",
+      "flag": "🇮🇪",
+      "cities": [
+        {
+          "name": "Dublin, Ireland",
+          "lon": -6.2603,
+          "lat": 53.3498,
+          "group": "Ireland",
+          "subgroup": ""
+        },
+        {
+          "name": "Cork, Ireland",
+          "lon": -8.4761,
+          "lat": 51.8969,
+          "group": "Ireland",
+          "subgroup": ""
+        },
+        {
+          "name": "Belfast, Ireland",
+          "lon": -5.9301,
+          "lat": 54.5973,
+          "group": "Ireland",
+          "subgroup": ""
+        },
+        {
+          "name": "Limerick, Ireland",
+          "lon": -8.6291,
+          "lat": 52.668,
+          "group": "Ireland",
+          "subgroup": ""
+        },
+        {
+          "name": "Galway, Ireland",
+          "lon": -9.0488,
+          "lat": 53.2707,
+          "group": "Ireland",
+          "subgroup": ""
+        },
+        {
+          "name": "Tallaght, Ireland",
+          "lon": -6.357519,
+          "lat": 53.288164,
+          "group": "Ireland",
+          "subgroup": ""
+        },
+        {
+          "name": "Swords, Ireland",
+          "lon": -6.219903,
+          "lat": 53.459258,
+          "group": "Ireland",
+          "subgroup": ""
+        },
+        {
+          "name": "Blanchardstown, Ireland",
+          "lon": -6.370929,
+          "lat": 53.38278,
+          "group": "Ireland",
+          "subgroup": ""
+        },
+        {
+          "name": "Bray, Ireland",
+          "lon": -6.111114,
+          "lat": 53.200765,
+          "group": "Ireland",
+          "subgroup": ""
+        }
+      ]
+    },
+    {
+      "group": "Scotland",
+      "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+      "cities": [
+        {
+          "name": "Edinburgh, Scotland",
+          "lon": -3.1883,
+          "lat": 55.953,
+          "group": "Scotland",
+          "subgroup": ""
+        }
+      ]
+    },
+    {
+      "group": "Germany",
+      "flag": "🇩🇪",
+      "cities": [
+        {
+          "name": "Münster, Germany",
+          "lon": 7.6261,
+          "lat": 51.9607,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Dortmund, Germany",
+          "lon": 7.4686,
+          "lat": 51.5136,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Bonn, Germany",
+          "lon": 7.0982,
+          "lat": 50.7374,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Wesseling, Germany",
+          "lon": 6.975,
+          "lat": 50.827,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Wuppertal, Germany",
+          "lon": 7.1864,
+          "lat": 51.2563,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Essen, Germany",
+          "lon": 7.0123,
+          "lat": 51.4556,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Duisburg, Germany",
+          "lon": 6.7735,
+          "lat": 51.4344,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Köln, Germany",
+          "lon": 6.9603,
+          "lat": 50.9375,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Aachen, Germany",
+          "lon": 6.0834,
+          "lat": 50.7753,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Hamburg, Germany",
+          "lon": 9.9937,
+          "lat": 53.5511,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Munich, Germany",
+          "lon": 11.581,
+          "lat": 48.1351,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Berlin, Germany",
+          "lon": 13.405,
+          "lat": 52.52,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Leipzig, Germany",
+          "lon": 12.3731,
+          "lat": 51.3397,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Jena, Germany",
+          "lon": 11.5886,
+          "lat": 50.9277,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Frankfurt am Main, Germany",
+          "lon": 8.6821,
+          "lat": 50.1109,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Frankfurt an der Oder, Germany",
+          "lon": 14.5501,
+          "lat": 52.3411,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Stuttgart, Germany",
+          "lon": 9.1829,
+          "lat": 48.7758,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Erfurt, Germany",
+          "lon": 10.9847,
+          "lat": 50.9848,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Hanover, Germany",
+          "lon": 9.7332,
+          "lat": 52.3759,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Osnabrück, Germany",
+          "lon": 8.0476,
+          "lat": 52.2799,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Bremen, Germany",
+          "lon": 8.8017,
+          "lat": 53.0793,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Nuremberg, Germany",
+          "lon": 11.0775,
+          "lat": 49.4521,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Bielefeld, Germany",
+          "lon": 8.5325,
+          "lat": 52.0302,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Emden, Germany",
+          "lon": 8.212,
+          "lat": 53.3667,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Hamm, Germany",
+          "lon": 7.199,
+          "lat": 51.6739,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Würzburg, Germany",
+          "lon": 9.9333,
+          "lat": 49.7903,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Dresden, Germany",
+          "lon": 13.7373,
+          "lat": 51.0504,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Chemnitz, Germany",
+          "lon": 12.92,
+          "lat": 50.8333,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Zwickau, Germany",
+          "lon": 12.5,
+          "lat": 50.7167,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Cottbus, Germany",
+          "lon": 14.3333,
+          "lat": 51.7667,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Potsdam, Germany",
+          "lon": 13.0667,
+          "lat": 52.4,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Göttingen, Germany",
+          "lon": 9.9333,
+          "lat": 51.5333,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Wünsdorf, Germany",
+          "lon": 13.45,
+          "lat": 52.1667,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Magdeburg, Germany",
+          "lon": 11.622519,
+          "lat": 52.13234,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Halle (Saale), Germany",
+          "lon": 11.983618,
+          "lat": 51.478539,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Gera, Germany",
+          "lon": 12.0833,
+          "lat": 50.8833,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Weimar, Germany",
+          "lon": 11.3333,
+          "lat": 50.9667,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Dessau, Germany",
+          "lon": 12.2333,
+          "lat": 51.8667,
+          "group": "Germany",
+          "subgroup": ""
+        },
+        {
+          "name": "Wernigerode, Germany",
+          "lon": 10.9667,
+          "lat": 51.8667,
+          "group": "Germany",
+          "subgroup": ""
+        }
+      ]
+    },
+    {
+      "group": "Austria",
+      "flag": "🇦🇹",
+      "cities": [
+        {
+          "name": "Salzburg, Austria",
+          "lon": 13.0434,
+          "lat": 47.8095,
+          "group": "Austria",
+          "subgroup": ""
+        },
+        {
+          "name": "Flachau, Austria",
+          "lon": 13.3833,
+          "lat": 47.3333,
+          "group": "Austria",
+          "subgroup": ""
+        }
+      ]
+    },
+    {
+      "group": "Czechia",
+      "flag": "🇨🇿",
+      "cities": [
+        {
+          "name": "Prague, Czechia",
+          "lon": 14.420489,
+          "lat": 50.087858,
+          "group": "Czechia",
+          "subgroup": ""
+        }
+      ]
+    },
+    {
+      "group": "Poland",
+      "flag": "🇵🇱",
+      "cities": [
+        {
+          "name": "Słubice, Poland",
+          "lon": 14.5667,
+          "lat": 52.35,
+          "group": "Poland",
+          "subgroup": ""
+        }
+      ]
+    },
+    {
+      "group": "Luxembourg",
+      "flag": "🇱🇺",
+      "cities": [
+        {
+          "name": "Luxembourg City, Luxembourg",
+          "lon": 6.1296,
+          "lat": 49.6118,
+          "group": "Luxembourg",
+          "subgroup": ""
+        },
+        {
+          "name": "Esch-sur-Alzette, Luxembourg",
+          "lon": 6.0369,
+          "lat": 49.5,
+          "group": "Luxembourg",
+          "subgroup": ""
+        }
+      ]
+    },
+    {
+      "group": "Italy",
+      "flag": "🇮🇹",
+      "cities": [
+        {
+          "name": "Rome, Italy",
+          "lon": 12.4964,
+          "lat": 41.9028,
+          "group": "Italy",
+          "subgroup": ""
+        },
+        {
+          "name": "Florence, Italy",
+          "lon": 11.2558,
+          "lat": 43.7696,
+          "group": "Italy",
+          "subgroup": ""
+        },
+        {
+          "name": "Pisa, Italy",
+          "lon": 10.3966,
+          "lat": 43.7228,
+          "group": "Italy",
+          "subgroup": ""
+        }
+      ]
+    },
+    {
+      "group": "France",
+      "flag": "🇫🇷",
+      "cities": [
+        {
+          "name": "Lyon, France",
+          "lon": 4.833543,
+          "lat": 45.767444,
+          "group": "France",
+          "subgroup": ""
+        }
+      ]
+    },
+    {
+      "group": "Netherlands",
+      "flag": "🇳🇱",
+      "cities": [
+        {
+          "name": "Amsterdam, Netherlands",
+          "lon": 4.8952,
+          "lat": 52.3702,
+          "group": "Netherlands",
+          "subgroup": ""
+        },
+        {
+          "name": "Enschede, Netherlands",
+          "lon": 6.8937,
+          "lat": 52.2215,
+          "group": "Netherlands",
+          "subgroup": ""
+        },
+        {
+          "name": "Eindhoven, Netherlands",
+          "lon": 5.4697,
+          "lat": 51.4416,
+          "group": "Netherlands",
+          "subgroup": ""
+        },
+        {
+          "name": "Hengelo, Netherlands",
+          "lon": 6.793619,
+          "lat": 52.260579,
+          "group": "Netherlands",
+          "subgroup": ""
+        }
+      ]
+    },
+    {
+      "group": "Russia",
+      "flag": "🇷🇺",
+      "cities": [
+        {
+          "name": "Moscow, Russia",
+          "lon": 37.6173,
+          "lat": 55.7558,
+          "group": "Russia",
+          "subgroup": ""
+        }
+      ]
+    },
+    {
+      "group": "Turkey",
+      "flag": "🇹🇷",
+      "cities": [
+        {
+          "name": "Istanbul, Turkey",
+          "lon": 28.985,
+          "lat": 41.036,
+          "group": "Turkey",
+          "subgroup": ""
+        },
+        {
+          "name": "Antalya, Turkey",
+          "lon": 30.713,
+          "lat": 36.896,
+          "group": "Turkey",
+          "subgroup": ""
+        }
+      ]
+    }
+  ],
+  "all_cities": [
+    {
+      "name": "Florianópolis, Santa Catarina",
+      "lon": -48.564151,
+      "lat": -27.59355,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "São José, Santa Catarina",
+      "lon": -48.6367,
+      "lat": -27.6136,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Palhoça, Santa Catarina",
+      "lon": -48.6691,
+      "lat": -27.6458,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Biguaçu, Santa Catarina",
+      "lon": -48.659,
+      "lat": -27.4956,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Santo Amaro da Imperatriz, Santa Catarina",
+      "lon": -48.7817,
+      "lat": -27.6858,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Alfredo Wagner, Santa Catarina",
+      "lon": -49.3697,
+      "lat": -28.6775,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Urubici, Santa Catarina",
+      "lon": -49.593,
+      "lat": -28.015,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Bom retiro, Santa Catarina",
+      "lon": -49.3697,
+      "lat": -28.6775,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Anitápolis, Santa Catarina",
+      "lon": -49.3697,
+      "lat": -28.6775,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Rancho queimado, Santa Catarina",
+      "lon": -49.3697,
+      "lat": -28.6775,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Garopaba, Santa Catarina",
+      "lon": -49.3697,
+      "lat": -28.6775,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Governador Celso Ramos, Santa Catarina",
+      "lon": -49.3697,
+      "lat": -28.6775,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Tijucas, Santa Catarina",
+      "lon": -49.3697,
+      "lat": -28.6775,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Indaial, Santa Catarina",
+      "lon": -49.3697,
+      "lat": -28.6775,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Timbó, Santa Catarina",
+      "lon": -49.3697,
+      "lat": -28.6775,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Itajaí, Santa Catarina",
+      "lon": -49.3697,
+      "lat": -28.6775,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Balneario Barra do Sul, Santa Catarina",
+      "lon": -49.3697,
+      "lat": -28.6775,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Barra Velha, Santa Catarina",
+      "lon": -49.3697,
+      "lat": -28.6775,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Chapecó, Santa Catarina",
+      "lon": -52.6152,
+      "lat": -27.0964,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Joinville, Santa Catarina",
+      "lon": -48.8451,
+      "lat": -26.3045,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Blumenau, Santa Catarina",
+      "lon": -49.0661,
+      "lat": -26.9155,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Jaraguá do Sul, Santa Catarina",
+      "lon": -49.0713,
+      "lat": -26.4851,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Balneário Camboriú, Santa Catarina",
+      "lon": -48.6175,
+      "lat": -26.9926,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Lages, Santa Catarina",
+      "lon": -50.326,
+      "lat": -27.816,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Criciúma, Santa Catarina",
+      "lon": -49.3697,
+      "lat": -28.6775,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Brusque, Santa Catarina",
+      "lon": -48.911,
+      "lat": -27.098,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Imbituba, Santa Catarina",
+      "lon": -48.666,
+      "lat": -28.229,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Penha, Santa Catarina",
+      "lon": -48.646,
+      "lat": -26.769,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "São Francisco do Sul, Santa Catarina",
+      "lon": -48.638,
+      "lat": -26.243,
+      "group": "Brasil",
+      "subgroup": "Santa Catarina"
+    },
+    {
+      "name": "Porto Alegre, Rio Grande do Sul",
+      "lon": -51.23,
+      "lat": -30.033,
+      "group": "Brasil",
+      "subgroup": "Rio Grande do Sul"
+    },
+    {
+      "name": "Pinhais, Paraná",
+      "lon": -49.182948,
+      "lat": -25.440711,
+      "group": "Brasil",
+      "subgroup": "Paraná"
+    },
+    {
+      "name": "São José dos Pinhais, Paraná",
+      "lon": -49.201972,
+      "lat": -25.532864,
+      "group": "Brasil",
+      "subgroup": "Paraná"
+    },
+    {
+      "name": "Curitiba, Paraná",
+      "lon": -49.2775,
+      "lat": -25.4284,
+      "group": "Brasil",
+      "subgroup": "Paraná"
+    },
+    {
+      "name": "Morretes, Paraná",
+      "lon": -48.834,
+      "lat": -25.477,
+      "group": "Brasil",
+      "subgroup": "Paraná"
+    },
+    {
+      "name": "Foz do Iguaçu, Paraná",
+      "lon": -54.5881,
+      "lat": -25.5163,
+      "group": "Brasil",
+      "subgroup": "Paraná"
+    },
+    {
+      "name": "Cananéia, São Paulo",
+      "lon": -47.927,
+      "lat": -25.015,
+      "group": "Brasil",
+      "subgroup": "São Paulo"
+    },
+    {
+      "name": "São Paulo, São Paulo",
+      "lon": -46.6333,
+      "lat": -23.5505,
+      "group": "Brasil",
+      "subgroup": "São Paulo"
+    },
+    {
+      "name": "Guarulhos, São Paulo",
+      "lon": -46.533,
+      "lat": -23.454,
+      "group": "Brasil",
+      "subgroup": "São Paulo"
+    },
+    {
+      "name": "Santana do Parnaiba, São Paulo",
+      "lon": -46.867861,
+      "lat": -23.474367,
+      "group": "Brasil",
+      "subgroup": "São Paulo"
+    },
+    {
+      "name": "Rio Claro, São Paulo",
+      "lon": -47.556,
+      "lat": -22.3988,
+      "group": "Brasil",
+      "subgroup": "São Paulo"
+    },
+    {
+      "name": "Piracicaba, São Paulo",
+      "lon": -47.649,
+      "lat": -22.725,
+      "group": "Brasil",
+      "subgroup": "São Paulo"
+    },
+    {
+      "name": "Campinas, São Paulo",
+      "lon": -47.0626,
+      "lat": -22.9056,
+      "group": "Brasil",
+      "subgroup": "São Paulo"
+    },
+    {
+      "name": "Rio de Janeiro, Rio de Janeiro",
+      "lon": -43.1729,
+      "lat": -22.9068,
+      "group": "Brasil",
+      "subgroup": "Rio de Janeiro"
+    },
+    {
+      "name": "Niterói, Rio de Janeiro",
+      "lon": -43.104,
+      "lat": -22.883,
+      "group": "Brasil",
+      "subgroup": "Rio de Janeiro"
+    },
+    {
+      "name": "Brasília, Distrito Federal",
+      "lon": -47.8928,
+      "lat": -15.7975,
+      "group": "Brasil",
+      "subgroup": "Distrito Federal"
+    },
+    {
+      "name": "Puerto Iguazú, Argentina",
+      "lon": -54.5736,
+      "lat": -25.5991,
+      "group": "Argentina",
+      "subgroup": ""
+    },
+    {
+      "name": "Asunción, Paraguay",
+      "lon": -57.5759,
+      "lat": -25.2637,
+      "group": "Paraguay",
+      "subgroup": ""
+    },
+    {
+      "name": "Ciudad del Este, Paraguay",
+      "lon": -54.6111,
+      "lat": -25.5097,
+      "group": "Paraguay",
+      "subgroup": ""
+    },
+    {
+      "name": "Panama City, Panama",
+      "lon": -79.5199,
+      "lat": 8.9824,
+      "group": "Panama",
+      "subgroup": ""
+    },
+    {
+      "name": "Colón, Panama",
+      "lon": -79.9068,
+      "lat": 9.356,
+      "group": "Panama",
+      "subgroup": ""
+    },
+    {
+      "name": "San Miguelito, Panama",
+      "lon": -79.497,
+      "lat": 9.052,
+      "group": "Panama",
+      "subgroup": ""
+    },
+    {
+      "name": "Washington DC, USA",
+      "lon": -77.0369,
+      "lat": 38.9072,
+      "group": "USA",
+      "subgroup": ""
+    },
+    {
+      "name": "Dulles, Virginia, USA",
+      "lon": -77.449531,
+      "lat": 38.958653,
+      "group": "USA",
+      "subgroup": ""
+    },
+    {
+      "name": "McLean, Virginia, USA",
+      "lon": -77.179292,
+      "lat": 38.931248,
+      "group": "USA",
+      "subgroup": ""
+    },
+    {
+      "name": "Lisbon, Portugal",
+      "lon": -9.1393,
+      "lat": 38.7223,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Porto, Portugal",
+      "lon": -8.6102,
+      "lat": 41.1496,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Loures, Portugal",
+      "lon": -9.1689,
+      "lat": 38.8309,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Vila Nova de Gaia, Portugal",
+      "lon": -8.611,
+      "lat": 41.1336,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Ericeira, Portugal",
+      "lon": -9.4167,
+      "lat": 38.9667,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Estoril, Portugal",
+      "lon": -9.3977,
+      "lat": 38.7057,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Alcabideche, Portugal",
+      "lon": -9.4197,
+      "lat": 38.7336,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Amadora, Portugal",
+      "lon": -9.2308,
+      "lat": 38.7597,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Óbidos, Portugal",
+      "lon": -9.1567,
+      "lat": 39.36,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Covilhã, Portugal",
+      "lon": -7.5,
+      "lat": 40.2833,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Foz do Arelho, Portugal",
+      "lon": -9.2167,
+      "lat": 39.4333,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Faro, Portugal",
+      "lon": -7.9304,
+      "lat": 37.0194,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Coimbra, Portugal",
+      "lon": -8.4265,
+      "lat": 40.2033,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Braga, Portugal",
+      "lon": -8.4253,
+      "lat": 41.5331,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Aveiro, Portugal",
+      "lon": -8.6455,
+      "lat": 40.6443,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Setúbal, Portugal",
+      "lon": -8.8882,
+      "lat": 38.5244,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Vila Real de Santo António, Portugal",
+      "lon": -7.4208,
+      "lat": 37.199,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Elvas, Portugal",
+      "lon": -7.1633,
+      "lat": 38.8815,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Évora, Portugal",
+      "lon": -7.9065,
+      "lat": 38.5714,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Guarda, Portugal",
+      "lon": -7.2637,
+      "lat": 40.5364,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Fundão, Portugal",
+      "lon": -7.5003,
+      "lat": 40.141,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Albufeira, Portugal",
+      "lon": -8.253,
+      "lat": 37.095,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Almada, Portugal",
+      "lon": -9.161,
+      "lat": 38.679,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Cascais, Portugal",
+      "lon": -9.422,
+      "lat": 38.697,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Oeiras, Portugal",
+      "lon": -9.311,
+      "lat": 38.691,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Carcavelos, Portugal",
+      "lon": -9.333,
+      "lat": 38.683,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Parede, Portugal",
+      "lon": -9.354,
+      "lat": 38.693,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Sintra, Portugal",
+      "lon": -9.381,
+      "lat": 38.797,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Peniche, Portugal",
+      "lon": -9.381,
+      "lat": 39.356,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Odivelas, Portugal",
+      "lon": -9.164,
+      "lat": 38.793,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Caldas da Rainha, Portugal",
+      "lon": -9.134,
+      "lat": 39.407,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Manteigas, Portugal",
+      "lon": -7.539,
+      "lat": 40.402,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Viseu, Portugal",
+      "lon": -7.912,
+      "lat": 40.661,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Matosinhos, Portugal",
+      "lon": -8.69,
+      "lat": 41.183,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Vila do Conde, Portugal",
+      "lon": -8.748,
+      "lat": 41.351,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Póvoa de Varzim, Portugal",
+      "lon": -8.759,
+      "lat": 41.383,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Apúlia, Portugal",
+      "lon": -8.77,
+      "lat": 41.485,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Fão, Portugal",
+      "lon": -8.768,
+      "lat": 41.51,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Esposende, Portugal",
+      "lon": -8.781,
+      "lat": 41.533,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Viana do Castelo, Portugal",
+      "lon": -8.835,
+      "lat": 41.701,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Caminha, Portugal",
+      "lon": -8.837,
+      "lat": 41.877,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Vila de Mouros, Portugal",
+      "lon": -8.797,
+      "lat": 41.891,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Vila Nova de Cerveira, Portugal",
+      "lon": -8.744,
+      "lat": 41.938,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Valença, Portugal",
+      "lon": -8.644,
+      "lat": 42.029,
+      "group": "Portugal",
+      "subgroup": ""
+    },
+    {
+      "name": "Ayamonte, Spain",
+      "lon": -7.404,
+      "lat": 37.214,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Mérida, Spain",
+      "lon": -6.344,
+      "lat": 38.916,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Cáceres, Spain",
+      "lon": -6.372,
+      "lat": 39.476,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Toledo, Spain",
+      "lon": -4.023,
+      "lat": 39.862,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Tarifa, Spain",
+      "lon": -5.606,
+      "lat": 36.013,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Algeciras, Spain",
+      "lon": -5.441,
+      "lat": 36.14,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "La Línea de la Concepción, Spain",
+      "lon": -5.348,
+      "lat": 36.168,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Marbella, Spain",
+      "lon": -4.882,
+      "lat": 36.515,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Ronda, Spain",
+      "lon": -5.167,
+      "lat": 36.742,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Setenil de las Bodegas, Spain",
+      "lon": -5.181,
+      "lat": 36.864,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Madrid, Spain",
+      "lon": -3.7038,
+      "lat": 40.4168,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Barcelona, Spain",
+      "lon": 2.1734,
+      "lat": 41.3851,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Badajoz, Spain",
+      "lon": -6.9707,
+      "lat": 38.8794,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Salamanca, Spain",
+      "lon": -5.6631,
+      "lat": 40.9701,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Seville, Spain",
+      "lon": -5.9845,
+      "lat": 37.3891,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Málaga, Spain",
+      "lon": -4.4203,
+      "lat": 36.7213,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Granada, Spain",
+      "lon": -3.5986,
+      "lat": 37.1773,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Córdoba, Spain",
+      "lon": -4.7794,
+      "lat": 37.8882,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Cádiz, Spain",
+      "lon": -6.2946,
+      "lat": 36.5297,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Valencia, Spain",
+      "lon": -0.3774,
+      "lat": 39.4699,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Castellón de la Plana, Spain",
+      "lon": -0.0576,
+      "lat": 39.9864,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Donostia-San Sebastian, Spain",
+      "lon": -1.98011,
+      "lat": 43.317488,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Bilbao, Spain",
+      "lon": -2.934997,
+      "lat": 43.263019,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Barakaldo, Spain",
+      "lon": -2.98693,
+      "lat": 43.296864,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Sestao, Spain",
+      "lon": -3.003953,
+      "lat": 43.312023,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Portugalete, Spain",
+      "lon": -3.020275,
+      "lat": 43.320641,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Getxo, Spain",
+      "lon": -3.010776,
+      "lat": 43.32759,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Santander, Spain",
+      "lon": -3.79315,
+      "lat": 43.472724,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "León, Spain",
+      "lon": -5.571907,
+      "lat": 42.598104,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Monforte de Lemos, Spain",
+      "lon": -7.514766,
+      "lat": 42.520561,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Vigo, Spain",
+      "lon": -8.714817,
+      "lat": 42.234387,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Tui, Spain",
+      "lon": -8.646,
+      "lat": 42.049,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "O Porriño, Spain",
+      "lon": -8.619,
+      "lat": 42.161,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Teis, Spain",
+      "lon": -8.692,
+      "lat": 42.251,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Redondela, Spain",
+      "lon": -8.609,
+      "lat": 42.281,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Arcade, Spain",
+      "lon": -8.605,
+      "lat": 42.339,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Pontevedra, Spain",
+      "lon": -8.643,
+      "lat": 42.431,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Caldas de Reis, Spain",
+      "lon": -8.641,
+      "lat": 42.604,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Padrón, Spain",
+      "lon": -8.659,
+      "lat": 42.739,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Santiago de Compostela, Spain",
+      "lon": -8.545,
+      "lat": 42.88,
+      "group": "Spain",
+      "subgroup": ""
+    },
+    {
+      "name": "Gibraltar, United Kingdom",
+      "lon": -5.3436,
+      "lat": 36.1408,
+      "group": "United Kingdom",
+      "subgroup": ""
+    },
+    {
+      "name": "London, England",
+      "lon": -0.1276,
+      "lat": 51.5074,
+      "group": "United Kingdom",
+      "subgroup": ""
+    },
+    {
+      "name": "Manchester, England",
+      "lon": -2.2426,
+      "lat": 53.4808,
+      "group": "United Kingdom",
+      "subgroup": ""
+    },
+    {
+      "name": "Dublin, Ireland",
+      "lon": -6.2603,
+      "lat": 53.3498,
+      "group": "Ireland",
+      "subgroup": ""
+    },
+    {
+      "name": "Cork, Ireland",
+      "lon": -8.4761,
+      "lat": 51.8969,
+      "group": "Ireland",
+      "subgroup": ""
+    },
+    {
+      "name": "Belfast, Ireland",
+      "lon": -5.9301,
+      "lat": 54.5973,
+      "group": "Ireland",
+      "subgroup": ""
+    },
+    {
+      "name": "Limerick, Ireland",
+      "lon": -8.6291,
+      "lat": 52.668,
+      "group": "Ireland",
+      "subgroup": ""
+    },
+    {
+      "name": "Galway, Ireland",
+      "lon": -9.0488,
+      "lat": 53.2707,
+      "group": "Ireland",
+      "subgroup": ""
+    },
+    {
+      "name": "Tallaght, Ireland",
+      "lon": -6.357519,
+      "lat": 53.288164,
+      "group": "Ireland",
+      "subgroup": ""
+    },
+    {
+      "name": "Swords, Ireland",
+      "lon": -6.219903,
+      "lat": 53.459258,
+      "group": "Ireland",
+      "subgroup": ""
+    },
+    {
+      "name": "Blanchardstown, Ireland",
+      "lon": -6.370929,
+      "lat": 53.38278,
+      "group": "Ireland",
+      "subgroup": ""
+    },
+    {
+      "name": "Bray, Ireland",
+      "lon": -6.111114,
+      "lat": 53.200765,
+      "group": "Ireland",
+      "subgroup": ""
+    },
+    {
+      "name": "Edinburgh, Scotland",
+      "lon": -3.1883,
+      "lat": 55.953,
+      "group": "Scotland",
+      "subgroup": ""
+    },
+    {
+      "name": "Münster, Germany",
+      "lon": 7.6261,
+      "lat": 51.9607,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Dortmund, Germany",
+      "lon": 7.4686,
+      "lat": 51.5136,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Bonn, Germany",
+      "lon": 7.0982,
+      "lat": 50.7374,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Wesseling, Germany",
+      "lon": 6.975,
+      "lat": 50.827,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Wuppertal, Germany",
+      "lon": 7.1864,
+      "lat": 51.2563,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Essen, Germany",
+      "lon": 7.0123,
+      "lat": 51.4556,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Duisburg, Germany",
+      "lon": 6.7735,
+      "lat": 51.4344,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Köln, Germany",
+      "lon": 6.9603,
+      "lat": 50.9375,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Aachen, Germany",
+      "lon": 6.0834,
+      "lat": 50.7753,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Hamburg, Germany",
+      "lon": 9.9937,
+      "lat": 53.5511,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Munich, Germany",
+      "lon": 11.581,
+      "lat": 48.1351,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Berlin, Germany",
+      "lon": 13.405,
+      "lat": 52.52,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Leipzig, Germany",
+      "lon": 12.3731,
+      "lat": 51.3397,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Jena, Germany",
+      "lon": 11.5886,
+      "lat": 50.9277,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Frankfurt am Main, Germany",
+      "lon": 8.6821,
+      "lat": 50.1109,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Frankfurt an der Oder, Germany",
+      "lon": 14.5501,
+      "lat": 52.3411,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Stuttgart, Germany",
+      "lon": 9.1829,
+      "lat": 48.7758,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Erfurt, Germany",
+      "lon": 10.9847,
+      "lat": 50.9848,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Hanover, Germany",
+      "lon": 9.7332,
+      "lat": 52.3759,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Osnabrück, Germany",
+      "lon": 8.0476,
+      "lat": 52.2799,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Bremen, Germany",
+      "lon": 8.8017,
+      "lat": 53.0793,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Nuremberg, Germany",
+      "lon": 11.0775,
+      "lat": 49.4521,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Bielefeld, Germany",
+      "lon": 8.5325,
+      "lat": 52.0302,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Emden, Germany",
+      "lon": 8.212,
+      "lat": 53.3667,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Hamm, Germany",
+      "lon": 7.199,
+      "lat": 51.6739,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Würzburg, Germany",
+      "lon": 9.9333,
+      "lat": 49.7903,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Dresden, Germany",
+      "lon": 13.7373,
+      "lat": 51.0504,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Chemnitz, Germany",
+      "lon": 12.92,
+      "lat": 50.8333,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Zwickau, Germany",
+      "lon": 12.5,
+      "lat": 50.7167,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Cottbus, Germany",
+      "lon": 14.3333,
+      "lat": 51.7667,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Potsdam, Germany",
+      "lon": 13.0667,
+      "lat": 52.4,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Göttingen, Germany",
+      "lon": 9.9333,
+      "lat": 51.5333,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Wünsdorf, Germany",
+      "lon": 13.45,
+      "lat": 52.1667,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Magdeburg, Germany",
+      "lon": 11.622519,
+      "lat": 52.13234,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Halle (Saale), Germany",
+      "lon": 11.983618,
+      "lat": 51.478539,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Gera, Germany",
+      "lon": 12.0833,
+      "lat": 50.8833,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Weimar, Germany",
+      "lon": 11.3333,
+      "lat": 50.9667,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Dessau, Germany",
+      "lon": 12.2333,
+      "lat": 51.8667,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Wernigerode, Germany",
+      "lon": 10.9667,
+      "lat": 51.8667,
+      "group": "Germany",
+      "subgroup": ""
+    },
+    {
+      "name": "Salzburg, Austria",
+      "lon": 13.0434,
+      "lat": 47.8095,
+      "group": "Austria",
+      "subgroup": ""
+    },
+    {
+      "name": "Flachau, Austria",
+      "lon": 13.3833,
+      "lat": 47.3333,
+      "group": "Austria",
+      "subgroup": ""
+    },
+    {
+      "name": "Prague, Czechia",
+      "lon": 14.420489,
+      "lat": 50.087858,
+      "group": "Czechia",
+      "subgroup": ""
+    },
+    {
+      "name": "Słubice, Poland",
+      "lon": 14.5667,
+      "lat": 52.35,
+      "group": "Poland",
+      "subgroup": ""
+    },
+    {
+      "name": "Luxembourg City, Luxembourg",
+      "lon": 6.1296,
+      "lat": 49.6118,
+      "group": "Luxembourg",
+      "subgroup": ""
+    },
+    {
+      "name": "Esch-sur-Alzette, Luxembourg",
+      "lon": 6.0369,
+      "lat": 49.5,
+      "group": "Luxembourg",
+      "subgroup": ""
+    },
+    {
+      "name": "Rome, Italy",
+      "lon": 12.4964,
+      "lat": 41.9028,
+      "group": "Italy",
+      "subgroup": ""
+    },
+    {
+      "name": "Florence, Italy",
+      "lon": 11.2558,
+      "lat": 43.7696,
+      "group": "Italy",
+      "subgroup": ""
+    },
+    {
+      "name": "Pisa, Italy",
+      "lon": 10.3966,
+      "lat": 43.7228,
+      "group": "Italy",
+      "subgroup": ""
+    },
+    {
+      "name": "Lyon, France",
+      "lon": 4.833543,
+      "lat": 45.767444,
+      "group": "France",
+      "subgroup": ""
+    },
+    {
+      "name": "Amsterdam, Netherlands",
+      "lon": 4.8952,
+      "lat": 52.3702,
+      "group": "Netherlands",
+      "subgroup": ""
+    },
+    {
+      "name": "Enschede, Netherlands",
+      "lon": 6.8937,
+      "lat": 52.2215,
+      "group": "Netherlands",
+      "subgroup": ""
+    },
+    {
+      "name": "Eindhoven, Netherlands",
+      "lon": 5.4697,
+      "lat": 51.4416,
+      "group": "Netherlands",
+      "subgroup": ""
+    },
+    {
+      "name": "Hengelo, Netherlands",
+      "lon": 6.793619,
+      "lat": 52.260579,
+      "group": "Netherlands",
+      "subgroup": ""
+    },
+    {
+      "name": "Moscow, Russia",
+      "lon": 37.6173,
+      "lat": 55.7558,
+      "group": "Russia",
+      "subgroup": ""
+    },
+    {
+      "name": "Istanbul, Turkey",
+      "lon": 28.985,
+      "lat": 41.036,
+      "group": "Turkey",
+      "subgroup": ""
+    },
+    {
+      "name": "Antalya, Turkey",
+      "lon": 30.713,
+      "lat": 36.896,
+      "group": "Turkey",
+      "subgroup": ""
+    }
+  ]
+}

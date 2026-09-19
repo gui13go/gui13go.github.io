@@ -1,6 +1,6 @@
 baseURL = 'https://gui13go.github.io/'
 languageCode = 'en-us'
-title = 'Guilherme Viegas'
+title = 'Gui13go'
 theme = 'PaperMod'
 
 enableEmoji = true
@@ -10,10 +10,13 @@ enableEmoji = true
 
 [params]
   env = 'production'
-  title = 'Guilherme Viegas'
+  title = 'Gui13go'
   description = 'Personal technical blog on GNU/Linux, Systems Engineering, Security, Virtualization, and Cloud Architecture.'
   keywords = ['Blog', 'Linux', 'Security', 'Kubernetes', 'Cloud', 'DevOps', 'Systems']
   author = 'Guilherme Viegas'
+
+  [params.label]
+    text = 'Gui13go'
 
   [params.profileMode]
     enabled = true
@@ -75,22 +78,22 @@ enableEmoji = true
     weight = 12
 
   [[menu.main]]
+    identifier = 'geolayers'
+    name = 'GeoLayer'
+    url = '/geolayers/'
+    weight = 13
+
+  [[menu.main]]
+    identifier = 'publications'
+    name = 'Publications'
+    url = '/publications/'
+    weight = 14
+
+  [[menu.main]]
     identifier = 'gallery'
     name = 'Gallery'
     url = '/gallery/'
     weight = 15
-
-  [[menu.main]]
-    identifier = 'tags'
-    name = 'Tags'
-    url = '/tags/'
-    weight = 20
-
-  [[menu.main]]
-    identifier = 'categories'
-    name = 'Categories'
-    url = '/categories/'
-    weight = 30
 
   [[menu.main]]
     identifier = 'search'

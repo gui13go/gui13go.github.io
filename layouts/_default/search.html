@@ -1,0 +1,17 @@
+{{- define "main" }}
+
+<header class="gallery-header">
+  <div class="gallery-breadcrumbs">
+    <a href="{{ site.BaseURL }}">Home</a> <span>/</span> <span>Search</span>
+  </div>
+  <h1 class="gallery-title">Search</h1>
+  <p class="gallery-subtitle">{{ .Description | default "Search blog posts, tools, geolayers, and publications across the site." }}</p>
+</header>
+
+<div id="searchbox" class="searchbox">
+    <input id="searchInput" disabled placeholder="{{ .Params.placeholder | default (printf "%s ↵" .Title) }}"
+        aria-label="search" type="search" autocomplete="off" maxlength="64">
+    <ul id="searchResults" class="searchResults" aria-label="search results"></ul>
+</div>
+
+{{- end }}

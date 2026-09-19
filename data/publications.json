@@ -1,0 +1,114 @@
+{
+  "id": "publications",
+  "label": "Publications",
+  "path": "/publications/",
+  "title": "Publications",
+  "description": "A rigorous archive of peer-reviewed research, academic theses, and technical papers dissecting migration dynamics, economic complexity, and spatial statistics.",
+  "seoTitle": "Research Publications",
+  "seoDescription": "Read my academic research papers and articles on economics, migration, and data science.",
+  "image": "/images/cloud9.webp",
+  "items": [
+    {
+      "id": "masters-thesis",
+      "title": "Masters Thesis: Migration Dynamics in Brazil",
+      "path": "https://run.unl.pt/handle/10362/180815",
+      "tags": [
+        {"title": "Thesis", "color": "#F59E0B"},
+        {"title": "Migration", "color": "#EA580C"},
+        {"title": "Economics", "color": "#3B82F6"},
+        {"title": "Brazil", "color": "#059669"},
+        {"title": "Data Science", "color": "#10B981"},
+        {"title": "Socioeconomics", "color": "#D97706"},
+        {"title": "Demographics", "color": "#EA580C"}
+      ],
+      "excerpt": "A comprehensive decoding of human movement. My Master's thesis investigates the complex socioeconomic drivers of migration in Brazil, utilizing advanced spatial datasets and economic indicators.",
+      "image": "/images/migSearchEngine.webp",
+      "availability": "available"
+    },
+    {
+      "id": "knowledge-spillovers-across-micro-regions-of-brazil",
+      "title": "Knowledge Spillovers Across Micro-Regions of Brazil",
+      "path": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4549754",
+      "tags": [
+        {"title": "Research", "color": "#D97706"},
+        {"title": "Economy", "color": "#D97706"},
+        {"title": "Brazil", "color": "#059669"},
+        {"title": "Data Science", "color": "#10B981"},
+        {"title": "GWR", "color": "#B45309"},
+        {"title": "Knowledge Spillovers", "color": "#8B5CF6"},
+        {"title": "Complexity", "color": "#7C3AED"}
+      ],
+      "excerpt": "Probing the spatiality of innovation. This research utilizes Geographically Weighted Regression (GWR) to map the impact of education and economic complexity on regional growth.",
+      "image": "/images/peopleReading.webp",
+      "availability": "available"
+    },
+    {
+      "id": "export-complexity-in-brazil",
+      "title": "Export complexity, industrial complexity and regional economic growth in Brazil",
+      "path": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0313945",
+      "tags": [
+        {"title": "Economy", "color": "#D97706"},
+        {"title": "Complexity", "color": "#7C3AED"},
+        {"title": "Brazil", "color": "#059669"},
+        {"title": "Data Analysis", "color": "#0EA5E9"},
+        {"title": "ECI", "color": "#3B82F6"},
+        {"title": "Trade", "color": "#D97706"},
+        {"title": "Employment", "color": "#10B981"}
+      ],
+      "excerpt": "Drivers of regional growth. A comparative analysis of economic complexity metrics (ECI) derived from export and employment data to uncover hidden patterns in the Brazilian industrial landscape.",
+      "image": "/images/boatContainer3.webp",
+      "availability": "available"
+    },
+    {
+      "id": "bachelor-thesis",
+      "title": "Bachelor Thesis: Human Capital, Knowledge Spillovers, and Economic Complexity",
+      "path": "https://repositorio.ufsc.br/handle/123456789/241843",
+      "tags": [
+        {"title": "Thesis", "color": "#F59E0B"},
+        {"title": "Economy", "color": "#D97706"},
+        {"title": "Brazil", "color": "#059669"},
+        {"title": "Human Capital", "color": "#F59E0B"},
+        {"title": "Knowledge Spillovers", "color": "#8B5CF6"},
+        {"title": "Complexity", "color": "#7C3AED"},
+        {"title": "Regional Growth", "color": "#10B981"}
+      ],
+      "excerpt": "Foundations of complexity. My Bachelor's thesis explores the interplay between human capital and knowledge diffusion as primary catalysts for regional economic transformation.",
+      "image": "/images/mindLetter.webp",
+      "availability": "available"
+    },
+    {
+      "id": "benchmarking-spatial-statistics",
+      "title": "Benchmarking Spatial Statistics",
+      "path": "https://www.guigo.dev.br",
+      "tags": [
+        {"title": "Data Science", "color": "#10B981"},
+        {"title": "Performance", "color": "#EAB308"},
+        {"title": "Spatial Statistics", "color": "#0EA5E9"},
+        {"title": "Benchmarking", "color": "#64748B"},
+        {"title": "Hardware", "color": "#F59E0B"},
+        {"title": "Optimization", "color": "#43E58D"},
+        {"title": "Moran's I", "color": "#3B82F6"}
+      ],
+      "excerpt": "Pushing the limits of spatial computation. A rigorous technical benchmark of spatial statistics algorithms across diverse hardware architectures, focusing on performance and code optimization.",
+      "image": "/images/spatialStatistic2.webp",
+      "availability": "coming_soon"
+    },
+    {
+      "id": "osesc",
+      "title": "Socioeconomic Observatory of Santa Catarina",
+      "path": "/publications/poster_osesc.pdf",
+      "tags": [
+        {"title": "Data", "color": "#10B981"},
+        {"title": "Economy", "color": "#D97706"},
+        {"title": "Brazil", "color": "#059669"},
+        {"title": "Time Series", "color": "#B45309"},
+        {"title": "Santa Catarina", "color": "#F59E0B"},
+        {"title": "Forecasting", "color": "#10B981"},
+        {"title": "Dashboard", "color": "#3B82F6"}
+      ],
+      "excerpt": "Monitoring regional development. A specialized dashboard designed to analyze and forecast socioeconomic trends in Santa Catarina, providing actionable insights for development planning.",
+      "image": "/images/santaCatarina.webp",
+      "availability": "available"
+    }
+  ]
+}

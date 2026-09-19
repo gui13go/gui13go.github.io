@@ -1,0 +1,281 @@
+{{- define "main" }}
+{{- $geoData := site.Data.geolayers }}
+<div class="geolayers-page-container">
+  <header class="gallery-header">
+    <div class="gallery-breadcrumbs">
+      <a href="{{ site.BaseURL }}">Home</a> <span>/</span> <span>GeoLayer</span>
+    </div>
+    <h1 class="gallery-title">GeoLayer</h1>
+    <p class="gallery-subtitle">{{ .Description | default "Interactive geospatial visualizations, cartographic explorations, and spatial narratives across global coordinates." }}</p>
+  </header>
+
+  <!-- Filter & Search Toolbar -->
+  <div class="geolayers-toolbar">
+    <div class="gallery-search-box geolayers-search-box">
+      <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="geoSearchInput" placeholder="Search geolayers by title, description, or tags..." autocomplete="off" aria-label="Search geolayers">
+      <button type="button" id="geoClearSearch" class="clear-search-btn" style="display:none;" aria-label="Clear search">&times;</button>
+    </div>
+
+    <div class="gallery-count-badge geolayers-count-badge">
+      Showing <span id="geoVisibleCount">{{ len $geoData.geolayers }}</span> of {{ len $geoData.geolayers }} geolayers
+    </div>
+  </div>
+
+  <!-- Tag Filter Chips -->
+  <div class="geolayers-tag-filter" id="geoTagFilter" role="group" aria-label="Filter by topic">
+    <button type="button" class="geo-filter-btn active" data-tag="all">All</button>
+    <button type="button" class="geo-filter-btn" data-tag="personal">Personal</button>
+    <button type="button" class="geo-filter-btn" data-tag="travel">Travel</button>
+    <button type="button" class="geo-filter-btn" data-tag="interactive">Interactive</button>
+    <button type="button" class="geo-filter-btn" data-tag="map">Map</button>
+    <button type="button" class="geo-filter-btn" data-tag="urban">Urban</button>
+    <button type="button" class="geo-filter-btn" data-tag="demography">Demography</button>
+    <button type="button" class="geo-filter-btn" data-tag="geospatial">Geospatial</button>
+  </div>
+
+  <!-- Geolayers Grid -->
+  <div class="geolayers-grid" id="geolayersGrid">
+    {{- range $geoData.geolayers }}
+    {{- $isAvailable := eq .availability "available" }}
+    <article class="geolayer-card {{ if $isAvailable }}is-available{{ else }}is-wip{{ end }}" 
+             data-id="{{ .id }}"
+             data-title="{{ .title | lower }}"
+             data-description="{{ .description | lower }}"
+             data-tags="{{ delimit .tags "," | lower }}"
+             data-availability="{{ .availability }}">
+      <div class="geolayer-card-media">
+        <img src="{{ .image }}" alt="{{ .title }}" loading="lazy" class="geolayer-card-img" onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill {{ if $isAvailable }}status-available{{ else }}status-wip{{ end }}">
+          <span class="status-dot"></span>
+          {{ .status }}
+        </div>
+      </div>
+      
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          {{- if $isAvailable }}
+          <a href="{{ .path }}">{{ .title }}</a>
+          {{- else }}
+          <span>{{ .title }}</span>
+          {{- end }}
+        </h2>
+
+        <p class="geolayer-card-desc">{{ .description }}</p>
+
+        {{- with .tags }}
+        <div class="geolayer-card-tags">
+          {{- range . }}
+          <span class="geolayer-tag">{{ . }}</span>
+          {{- end }}
+        </div>
+        {{- end }}
+
+        <div class="geolayer-card-footer">
+          {{- if $isAvailable }}
+          <a href="{{ .path }}" class="geolayer-card-btn active">
+            <span>Explore Map</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          {{- else }}
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" 
+                  data-title="{{ .title }}"
+                  data-desc="{{ .description }}"
+                  data-tags="{{ delimit .tags ", " }}">
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+          {{- end }}
+        </div>
+      </div>
+    </article>
+    {{- end }}
+  </div>
+
+  <!-- Empty Search Result State -->
+  <div class="geolayers-empty-state" id="geoEmptyState" style="display:none;">
+    <div class="empty-state-icon">
+      <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        <line x1="8" y1="11" x2="14" y2="11"></line>
+      </svg>
+    </div>
+    <h3>No geolayers found</h3>
+    <p>Try searching for a different keyword or resetting your filter selection.</p>
+    <button type="button" class="reset-filter-btn" id="geoResetFiltersBtn">Reset Filters</button>
+  </div>
+</div>
+
+<!-- Modal Dialog for Work-in-Progress Geolayers -->
+<dialog class="pub-modal" id="geoWipModal" aria-labelledby="geoModalTitle" aria-describedby="geoModalDesc">
+  <div class="pub-modal-content">
+    <div class="pub-modal-header">
+      <div class="pub-modal-badge status-wip">
+        <span class="status-dot"></span> In Development
+      </div>
+      <button type="button" class="pub-modal-close" id="closeGeoModalBtn" aria-label="Close dialog">&times;</button>
+    </div>
+    <h3 class="pub-modal-title" id="geoModalTitle">Geolayer Under Active Development</h3>
+    <p class="pub-modal-abstract" id="geoModalDesc"></p>
+    <div class="pub-modal-meta" id="geoModalMeta"></div>
+    <div class="pub-modal-notice">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="16" x2="12" y2="12"></line>
+        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+      </svg>
+      <span>This geovisualization layer is currently being modeled and cartographically staged. Check back soon for interactive geospatial release!</span>
+    </div>
+    <div class="pub-modal-actions">
+      <a href="/geolayers/cities-i-have-visited/" class="pub-modal-action-btn primary" style="text-decoration:none;">View "Cities I Have Visited" Map &rarr;</a>
+      <button type="button" class="pub-modal-action-btn secondary" id="dismissGeoModalBtn">Close</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('geoSearchInput');
+  const clearBtn = document.getElementById('geoClearSearch');
+  const visibleCount = document.getElementById('geoVisibleCount');
+  const cards = Array.from(document.querySelectorAll('.geolayer-card'));
+  const tagButtons = document.querySelectorAll('.geo-filter-btn');
+  const emptyState = document.getElementById('geoEmptyState');
+  const resetBtn = document.getElementById('geoResetFiltersBtn');
+  const infoBtn = document.getElementById('geolayersInfoBtn');
+  const tooltip = document.getElementById('geolayersTooltip');
+  const wipModal = document.getElementById('geoWipModal');
+  const modalTitle = document.getElementById('geoModalTitle');
+  const modalDesc = document.getElementById('geoModalDesc');
+  const modalMeta = document.getElementById('geoModalMeta');
+  const closeModalBtn = document.getElementById('closeGeoModalBtn');
+  const dismissModalBtn = document.getElementById('dismissGeoModalBtn');
+
+  let activeTag = 'all';
+  let searchTerm = '';
+
+  // Info Tooltip toggle
+  if (infoBtn && tooltip) {
+    infoBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      tooltip.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!tooltip.contains(e.target) && e.target !== infoBtn) {
+        tooltip.classList.remove('active');
+      }
+    });
+  }
+
+  // Filter and Search Engine
+  function applyFilters() {
+    let count = 0;
+    const term = searchTerm.trim().toLowerCase();
+
+    cards.forEach(card => {
+      const title = card.getAttribute('data-title') || '';
+      const desc = card.getAttribute('data-description') || '';
+      const tags = card.getAttribute('data-tags') || '';
+
+      const matchesSearch = !term || title.includes(term) || desc.includes(term) || tags.includes(term);
+      const matchesTag = activeTag === 'all' || tags.includes(activeTag);
+
+      if (matchesSearch && matchesTag) {
+        card.style.display = '';
+        count++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (visibleCount) visibleCount.textContent = count;
+    if (emptyState) {
+      emptyState.style.display = count === 0 ? 'block' : 'none';
+    }
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchTerm = e.target.value;
+      if (clearBtn) clearBtn.style.display = searchTerm.length > 0 ? 'block' : 'none';
+      applyFilters();
+    });
+  }
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      searchTerm = '';
+      clearBtn.style.display = 'none';
+      searchInput.focus();
+      applyFilters();
+    });
+  }
+
+  tagButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tagButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeTag = btn.getAttribute('data-tag');
+      applyFilters();
+    });
+  });
+
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      if (searchInput) searchInput.value = '';
+      searchTerm = '';
+      if (clearBtn) clearBtn.style.display = 'none';
+      activeTag = 'all';
+      tagButtons.forEach(b => b.classList.remove('active'));
+      const allBtn = document.querySelector('.geo-filter-btn[data-tag="all"]');
+      if (allBtn) allBtn.classList.add('active');
+      applyFilters();
+    });
+  }
+
+  // WIP Modal Trigger
+  document.querySelectorAll('.open-geo-modal').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const title = btn.getAttribute('data-title');
+      const desc = btn.getAttribute('data-desc');
+      const tags = btn.getAttribute('data-tags');
+
+      if (modalTitle) modalTitle.textContent = title;
+      if (modalDesc) modalDesc.textContent = desc;
+      if (modalMeta) modalMeta.textContent = tags ? 'Tags: ' + tags : '';
+      if (wipModal && typeof wipModal.showModal === 'function') {
+        wipModal.showModal();
+      }
+    });
+  });
+
+  const closeModal = () => {
+    if (wipModal) wipModal.close();
+  };
+
+  if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+  if (dismissModalBtn) dismissModalBtn.addEventListener('click', closeModal);
+  if (wipModal) {
+    wipModal.addEventListener('click', (e) => {
+      const rect = wipModal.getBoundingClientRect();
+      if (e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom) {
+        closeModal();
+      }
+    });
+  }
+});
+</script>
+{{- end }}

@@ -1,0 +1,828 @@
+{{- define "main" }}
+{{- $mapData := site.Data.cities_visited }}
+<link rel="stylesheet" href="/lib/leaflet/leaflet.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<div class="cities-page-container">
+  <div class="gallery-breadcrumbs">
+    <a href="{{ site.BaseURL }}">Home</a> <span>/</span> <a href="/geolayers/">GeoLayer</a> <span>/</span> <span>Cities
+      I Have Visited</span>
+  </div>
+
+  <!-- Header Section -->
+  <header class="cities-header">
+    <div class="cities-header-content">
+      <div class="cities-badge-pill">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+          <line x1="8" y1="2" x2="8" y2="18"></line>
+          <line x1="16" y1="6" x2="16" y2="22"></line>
+        </svg>
+        <span>Interactive GeoLayer</span>
+      </div>
+      <h1 class="cities-title">{{ $mapData.title }}</h1>
+      <p class="cities-subtitle">{{ $mapData.description }}</p>
+    </div>
+
+    <!-- Quick Stats Bar -->
+    <div class="cities-stats-bar">
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" id="statsTotalCities">{{ $mapData.total_cities }}</span>
+        <span class="cities-stat-label">Cities Visited</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" id="statsTotalCountries">{{ $mapData.total_countries }}</span>
+        <span class="cities-stat-label">Countries & Territories</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number">3</span>
+        <span class="cities-stat-label">Continents</span>
+      </div>
+      <div class="cities-stat-card active-city-card" id="activeCityCard" style="display:none;">
+        <span class="cities-stat-number active-city-name" id="activeCityName">-</span>
+        <span class="cities-stat-label" id="activeCityCountry">Selected Location</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Stacked Layout: Row 1 = City Groups Explorer, Row 2 = Interactive Map Viewport Below -->
+  <div class="cities-layout-stacked">
+    <!-- City Groups Explorer -->
+    <section class="cities-groups-row" id="citiesGroupsSection">
+      <div class="groups-row-header">
+        <div class="groups-header-info">
+          <div class="groups-title-wrap">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <h2 class="groups-title">City Groups</h2>
+            <span class="groups-total-pill">{{ $mapData.total_cities }} cities &bull; {{ $mapData.total_countries }}
+              groups</span>
+          </div>
+
+          <!-- Quick Search -->
+          <div class="cities-search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="citySearchInput" placeholder="Filter city or region..." autocomplete="off"
+              aria-label="Filter city">
+            <button type="button" id="clearCitySearch" class="clear-search-btn" style="display:none;"
+              aria-label="Clear filter">&times;</button>
+          </div>
+        </div>
+
+        <div class="groups-header-actions">
+          <button type="button" class="groups-btn-action" id="collapseAllBtn" title="Expand or collapse group cards">
+            <span id="collapseAllText">Collapse all</span>
+          </button>
+          <button type="button" class="groups-btn-action toggle-cards-btn" id="toggleExplorerRowBtn"
+            title="Show or hide city cards grid">
+            <svg id="toggleExplorerIcon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+            <span id="toggleExplorerText">Minimize Cards</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Country Pills Filter Bar -->
+      <div class="cities-pill-carousel" id="countryPills">
+        <button type="button" class="country-pill active" data-country="all">All ({{ $mapData.total_cities }})</button>
+        {{- range $mapData.groups }}
+        {{- $cCount := 0 }}
+        {{- if .cities }}{{ $cCount = len .cities }}{{ end }}
+        {{- if .subgroups }}{{ range .subgroups }}{{ $cCount = add $cCount (len .cities) }}{{ end }}{{ end }}
+        <button type="button" class="country-pill" data-country="{{ .group }}">
+          <span>{{ .flag }}</span>
+          <span>{{ .group }} ({{ $cCount }})</span>
+        </button>
+        {{- end }}
+      </div>
+
+      <!-- City Groups Cards Grid -->
+      <div class="cities-groups-cards-grid" id="citiesAccordion">
+        {{- range $gIdx, $grp := $mapData.groups }}
+        {{- $citiesCount := 0 }}
+        {{- if .cities }}{{ $citiesCount = len .cities }}{{ end }}
+        {{- if .subgroups }}{{ range .subgroups }}{{ $citiesCount = add $citiesCount (len .cities) }}{{ end }}{{ end }}
+
+        <div class="city-group-card" data-group-name="{{ $grp.group }}">
+          <div class="city-group-card-header" data-toggle="collapse" data-target="#group-collapse-{{ $gIdx }}">
+            <div class="card-header-left">
+              <span class="group-flag">{{ $grp.flag }}</span>
+              <span class="group-name">{{ $grp.group }}</span>
+              <span class="group-count-badge">{{ $citiesCount }}</span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn" data-group="{{ $grp.group }}"
+                title="Fit map to {{ $grp.group }}">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+              <svg class="group-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="city-group-card-body" id="group-collapse-{{ $gIdx }}">
+            {{- if $grp.subgroups }}
+            {{- range $sgIdx, $sub := $grp.subgroups }}
+            <div class="city-subgroup-item" data-subgroup-name="{{ $sub.subgroup }}">
+              <div class="city-subgroup-header">
+                <div class="subgroup-title">
+                  <span class="subgroup-dot"></span>
+                  <span class="subgroup-name">{{ $sub.subgroup }}</span>
+                  <span class="subgroup-badge">{{ len $sub.cities }}</span>
+                </div>
+                <button type="button" class="subgroup-zoom-btn" data-group="{{ $grp.group }}"
+                  data-subgroup="{{ $sub.subgroup }}" title="Fit to {{ $sub.subgroup }}">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                  </svg>
+                </button>
+              </div>
+              <ul class="cities-list">
+                {{- range $sub.cities }}
+                <li class="city-entry-item" data-name="{{ .name | lower }}" data-lat="{{ .lat }}" data-lon="{{ .lon }}"
+                  data-group="{{ .group }}" data-subgroup="{{ .subgroup }}">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">{{ .name }}</span>
+                  </div>
+                </li>
+                {{- end }}
+              </ul>
+            </div>
+            {{- end }}
+            {{- end }}
+
+            {{- if $grp.cities }}
+            <ul class="cities-list">
+              {{- range $grp.cities }}
+              <li class="city-entry-item" data-name="{{ .name | lower }}" data-lat="{{ .lat }}" data-lon="{{ .lon }}"
+                data-group="{{ .group }}" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">{{ .name }}</span>
+                </div>
+              </li>
+              {{- end }}
+            </ul>
+            {{- end }}
+          </div>
+        </div>
+        {{- end }}
+      </div>
+    </section>
+
+    <!-- Interactive Map Viewport (Bottom) -->
+    <main class="cities-map-viewport">
+      <!-- Floating Toolbar on top of map -->
+      <div class="cities-map-controls-bar">
+        <!-- Quick Country Dropdown Jump -->
+        <div class="map-control-group">
+          <label for="countryJumpSelect" class="sr-only">Jump to Country</label>
+          <select id="countryJumpSelect" class="map-select-input" aria-label="Jump to Country">
+            <option value="all">🌍 Global View (All Countries)</option>
+            {{- range $mapData.groups }}
+            <option value="{{ .group }}">{{ .flag }} {{ .group }}</option>
+            {{- end }}
+          </select>
+        </div>
+
+        <!-- Basemap Layer Switcher (100% Free, Zero API Keys, Zero Watermarks) -->
+        <div class="map-control-group">
+          <label for="basemapSelect" class="sr-only">Basemap Style</label>
+          <select id="basemapSelect" class="map-select-input" aria-label="Select Basemap">
+            <option value="osm">🗺️ OpenStreetMap</option>
+            <option value="esri-light">☀️ Minimal Light (Esri)</option>
+            <option value="esri-dark">🌙 Dark Gray (Esri)</option>
+            <option value="satellite">🛰️ Satellite (Esri)</option>
+            <option value="topo">⛰️ Topographic (OpenTopoMap)</option>
+          </select>
+        </div>
+
+        <!-- Toggle Labels -->
+        <button type="button" class="map-action-btn" id="toggleLabelsBtn" title="Toggle permanent city label pins">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 7V4h16v3M9 20h6M12 4v16" />
+          </svg>
+          <span class="btn-text">Labels</span>
+        </button>
+
+        <!-- Reset Global Bounds -->
+        <button type="button" class="map-action-btn" id="resetMapBoundsBtn" title="Reset map to show all cities">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="1 4 1 10 7 10"></polyline>
+            <polyline points="23 20 23 14 17 14"></polyline>
+            <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
+          </svg>
+          <span class="btn-text">Reset</span>
+        </button>
+      </div>
+
+      <!-- Leaflet Map Container -->
+      <div id="citiesMap" class="cities-leaflet-container" tabindex="0"
+        aria-label="Interactive map showing visited cities"></div>
+
+      <!-- Map Legend / Stats Footer Overlay -->
+      <div class="cities-map-legend-overlay">
+        <div class="legend-indicator">
+          <span class="legend-point-dot"></span>
+          <span><strong>{{ $mapData.total_cities }}</strong> Visited Cities</span>
+        </div>
+        <div class="legend-hint">
+          Click any point or list item to zoom in. Zero API keys required.
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Raw Data Payload for JavaScript Engine -->
+<script>
+  window.__CITIES_MAP_DATA__ = {{ $mapData | jsonify | safeJS }};
+</script>
+<script id="citiesMapData" type="application/json">
+{{- $mapData | jsonify | safeHTML -}}
+</script>
+
+<script src="/lib/leaflet/leaflet.js"></script>
+<script>
+  if (typeof L === 'undefined') {
+    document.write('<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"><\/script>');
+  }
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Parse Data Safely
+    let mapData = window.__CITIES_MAP_DATA__;
+    if (!mapData) {
+      const rawDataElem = document.getElementById('citiesMapData');
+      if (rawDataElem) {
+        try {
+          let parsed = JSON.parse(rawDataElem.textContent);
+          while (typeof parsed === 'string') {
+            parsed = JSON.parse(parsed);
+          }
+          mapData = parsed;
+        } catch (err) {
+          console.error('Failed to parse cities JSON:', err);
+        }
+      }
+    }
+
+    if (!mapData || !mapData.groups) {
+      console.error('No valid map data found!');
+      return;
+    }
+
+    // 2. Basemap Providers (100% Free, NO API Key Required, NO Watermark)
+    const basemapLayers = {
+      'osm': L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 19
+      }),
+      'esri-light': L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+        maxZoom: 16
+      }),
+      'esri-dark': L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+        maxZoom: 16
+      }),
+      'satellite': L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics',
+        maxZoom: 18
+      }),
+      'topo': L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data: &copy; OpenStreetMap contributors, SRTM | Map style: &copy; OpenTopoMap',
+        maxZoom: 17
+      })
+    };
+
+    // Determine initial basemap based on dark mode class
+    const isDarkMode = document.body.classList.contains('dark') || document.documentElement.classList.contains('dark');
+    let currentBasemapKey = isDarkMode ? 'esri-dark' : 'osm';
+
+    const basemapSelect = document.getElementById('basemapSelect');
+    if (basemapSelect) {
+      basemapSelect.value = currentBasemapKey;
+    }
+
+    // 3. Initialize Map with valid center and zoom
+    const map = L.map('citiesMap', {
+      center: [20, 0],
+      zoom: 2,
+      zoomControl: false,
+      layers: [basemapLayers[currentBasemapKey]],
+      minZoom: 2,
+      worldCopyJump: true
+    });
+
+    // Re-position zoom control to bottom right
+    L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+    // Basemap switcher listener
+    if (basemapSelect) {
+      basemapSelect.addEventListener('change', (e) => {
+        const selected = e.target.value;
+        if (basemapLayers[selected]) {
+          map.removeLayer(basemapLayers[currentBasemapKey]);
+          map.addLayer(basemapLayers[selected]);
+          currentBasemapKey = selected;
+        }
+      });
+    }
+
+    // Auto theme switcher on dark mode mutation
+    const themeObserver = new MutationObserver(() => {
+      const isDarkNow = document.body.classList.contains('dark') || document.documentElement.classList.contains('dark');
+      if (currentBasemapKey === 'esri-dark' || currentBasemapKey === 'esri-light' || currentBasemapKey === 'osm') {
+        const targetKey = isDarkNow ? 'esri-dark' : 'osm';
+        if (targetKey !== currentBasemapKey) {
+          map.removeLayer(basemapLayers[currentBasemapKey]);
+          map.addLayer(basemapLayers[targetKey]);
+          currentBasemapKey = targetKey;
+          if (basemapSelect) basemapSelect.value = targetKey;
+        }
+      }
+    });
+    themeObserver.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
+    // 4. Custom Marker Point Icon (Clean static points, no pulsing)
+    function createPointIcon(isHighlighted = false) {
+      const size = isHighlighted ? 14 : 10;
+      const pointClass = isHighlighted ? 'city-map-point highlighted' : 'city-map-point';
+      return L.divIcon({
+        className: 'custom-map-pin-container',
+        html: `<div class="${pointClass}"></div>`,
+        iconSize: [size, size],
+        iconAnchor: [size / 2, size / 2],
+        popupAnchor: [0, -size / 2 - 2]
+      });
+    }
+
+    const normalPinIcon = createPointIcon(false);
+    const activePinIcon = createPointIcon(true);
+
+    // 5. Build Markers and Group Indexes
+    const allMarkers = [];
+    const groupBounds = {};
+    const subgroupBounds = {};
+    const cityMarkerMap = new Map(); // key: "lat,lon" -> marker
+    const allLatLngs = [];
+    let showPermanentLabels = false;
+
+    // Flatten and process all groups
+    mapData.groups.forEach(grp => {
+      const countryName = grp.group;
+      const countryFlag = grp.flag || '📍';
+      const countryLatLngs = [];
+
+      function processCity(city, subgroupName = '') {
+        const lat = Number(city.lat);
+        const lon = Number(city.lon);
+        if (isNaN(lat) || isNaN(lon)) return;
+
+        const latLng = L.latLng(lat, lon);
+        allLatLngs.push(latLng);
+        countryLatLngs.push(latLng);
+
+        if (subgroupName) {
+          const sgKey = `${countryName}::${subgroupName}`;
+          if (!subgroupBounds[sgKey]) subgroupBounds[sgKey] = [];
+          subgroupBounds[sgKey].push(latLng);
+        }
+
+        // Popup HTML content
+        const popupHtml = `
+        <div class="city-popup-card">
+          <div class="popup-header">
+            <span class="popup-flag">${countryFlag}</span>
+            <div class="popup-title-box">
+              <span class="popup-country">${countryName}${subgroupName ? ' &bull; ' + subgroupName : ''}</span>
+              <h4 class="popup-city-name">${city.name}</h4>
+            </div>
+          </div>
+          <div class="popup-meta-row">
+            <span class="popup-coords">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              ${lat.toFixed(4)}&deg; N, ${lon.toFixed(4)}&deg; E
+            </span>
+          </div>
+          <div class="popup-footer">
+            <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(city.name)}" target="_blank" rel="noopener noreferrer" class="popup-link-btn">
+              <span>Google Maps &rarr;</span>
+            </a>
+            <button type="button" class="popup-zoom-btn" onclick="window._zoomCityTo(${lat}, ${lon})">
+              <span>Zoom In</span>
+            </button>
+          </div>
+        </div>
+      `;
+
+        const marker = L.marker(latLng, { icon: normalPinIcon });
+        marker.bindPopup(popupHtml, {
+          className: 'custom-leaflet-popup',
+          closeButton: true,
+          maxWidth: 280
+        });
+
+        marker.bindTooltip(`<strong>${city.name}</strong><br><span style="opacity:0.8">${countryFlag} ${countryName}</span>`, {
+          direction: 'top',
+          className: 'city-hover-tooltip',
+          offset: [0, -10]
+        });
+
+        marker.cityData = {
+          name: city.name,
+          group: countryName,
+          subgroup: subgroupName,
+          lat: lat,
+          lon: lon
+        };
+
+        marker.on('click', () => {
+          highlightCity(marker);
+        });
+
+        allMarkers.push(marker);
+        cityMarkerMap.set(`${lat.toFixed(5)},${lon.toFixed(5)}`, marker);
+        cityMarkerMap.set(city.name.toLowerCase(), marker);
+      }
+
+      if (grp.cities && Array.isArray(grp.cities)) {
+        grp.cities.forEach(c => processCity(c));
+      }
+
+      if (grp.subgroups && Array.isArray(grp.subgroups)) {
+        grp.subgroups.forEach(sg => {
+          if (sg.cities && Array.isArray(sg.cities)) {
+            sg.cities.forEach(c => processCity(c, sg.subgroup));
+          }
+        });
+      }
+
+      if (countryLatLngs.length > 0) {
+        groupBounds[countryName] = L.latLngBounds(countryLatLngs);
+      }
+    });
+
+    // Layer group to manage all city markers efficiently
+    const markersLayerGroup = L.featureGroup(allMarkers).addTo(map);
+
+    // Global Bounds Fit
+    const initialWorldBounds = L.latLngBounds(allLatLngs);
+    if (allLatLngs.length > 0) {
+      try {
+        map.fitBounds(initialWorldBounds, { padding: [30, 30], maxZoom: 8 });
+      } catch (e) {
+        console.warn('Initial fitBounds error:', e);
+      }
+    }
+
+    // Guarantee container dimensions and tiles load smoothly
+    setTimeout(() => {
+      map.invalidateSize();
+      if (allLatLngs.length > 0) {
+        map.fitBounds(initialWorldBounds, { padding: [30, 30], maxZoom: 8 });
+      }
+    }, 200);
+
+    // Active City Highlight
+    let currentActiveMarker = null;
+    const activeCard = document.getElementById('activeCityCard');
+    const activeCityNameElem = document.getElementById('activeCityName');
+    const activeCityCountryElem = document.getElementById('activeCityCountry');
+
+    function highlightCity(marker, fly = false) {
+      if (currentActiveMarker && currentActiveMarker !== marker) {
+        currentActiveMarker.setIcon(normalPinIcon);
+      }
+      currentActiveMarker = marker;
+      marker.setIcon(activePinIcon);
+
+      const data = marker.cityData;
+      if (activeCard && activeCityNameElem && activeCityCountryElem) {
+        activeCard.style.display = 'flex';
+        activeCityNameElem.textContent = data.name.split(',')[0];
+        activeCityCountryElem.textContent = `${data.group}${data.subgroup ? ' (' + data.subgroup + ')' : ''}`;
+      }
+
+      // Highlight in group cards
+      document.querySelectorAll('.city-entry-item').forEach(el => el.classList.remove('active'));
+      const entrySelector = `.city-entry-item[data-lat="${data.lat}"][data-lon="${data.lon}"]`;
+      const targetEntry = document.querySelector(entrySelector);
+      if (targetEntry) {
+        targetEntry.classList.add('active');
+        const parentBody = targetEntry.closest('.city-group-card-body');
+        if (parentBody && !parentBody.classList.contains('show')) {
+          parentBody.classList.add('show');
+          const chevron = parentBody.previousElementSibling.querySelector('.group-chevron');
+          if (chevron) chevron.classList.add('rotated');
+        }
+        targetEntry.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+
+      if (fly) {
+        map.flyTo(marker.getLatLng(), 12, { duration: 1.2 });
+        setTimeout(() => {
+          marker.openPopup();
+        }, 700);
+
+        // Smoothly bring map into viewport if needed
+        const mapContainer = document.getElementById('citiesMap');
+        if (mapContainer) {
+          const rect = mapContainer.getBoundingClientRect();
+          if (rect.top < 80 || rect.bottom > window.innerHeight + 100) {
+            mapContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }
+      }
+    }
+
+    // Global helper for popup "Zoom In" button
+    window._zoomCityTo = (lat, lon) => {
+      map.flyTo([lat, lon], 14, { duration: 1.0 });
+    };
+
+    // 6. Group Card Accordion Interactivity
+    const accordionHeaders = document.querySelectorAll('.city-group-card-header');
+    accordionHeaders.forEach(header => {
+      header.addEventListener('click', (e) => {
+        if (e.target.closest('.group-zoom-btn')) return;
+
+        const targetId = header.getAttribute('data-target');
+        const body = document.querySelector(targetId);
+        const chevron = header.querySelector('.group-chevron');
+
+        if (body) {
+          body.classList.toggle('show');
+          if (chevron) chevron.classList.toggle('rotated');
+        }
+      });
+    });
+
+    // Country zoom buttons
+    document.querySelectorAll('.group-zoom-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const country = btn.getAttribute('data-group');
+        if (groupBounds[country]) {
+          map.fitBounds(groupBounds[country], { padding: [50, 50], maxZoom: 11 });
+        }
+      });
+    });
+
+    // Subgroup zoom buttons (e.g. Santa Catarina, Paraná, etc.)
+    document.querySelectorAll('.subgroup-zoom-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const country = btn.getAttribute('data-group');
+        const subgroup = btn.getAttribute('data-subgroup');
+        const sgKey = `${country}::${subgroup}`;
+        if (subgroupBounds[sgKey]) {
+          map.fitBounds(L.latLngBounds(subgroupBounds[sgKey]), { padding: [40, 40], maxZoom: 12 });
+        }
+      });
+    });
+
+    // City list item click
+    document.querySelectorAll('.city-entry-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const lat = parseFloat(item.getAttribute('data-lat'));
+        const lon = parseFloat(item.getAttribute('data-lon'));
+        const marker = cityMarkerMap.get(`${lat.toFixed(5)},${lon.toFixed(5)}`);
+        if (marker) {
+          highlightCity(marker, true);
+        }
+      });
+    });
+
+    // 7. Collapse / Expand All
+    const collapseAllBtn = document.getElementById('collapseAllBtn');
+    const collapseAllText = document.getElementById('collapseAllText');
+    let allExpanded = true;
+
+    // Open all group bodies initially
+    document.querySelectorAll('.city-group-card-body').forEach(b => b.classList.add('show'));
+    document.querySelectorAll('.group-chevron').forEach(c => c.classList.add('rotated'));
+
+    if (collapseAllBtn) {
+      collapseAllBtn.addEventListener('click', () => {
+        allExpanded = !allExpanded;
+        document.querySelectorAll('.city-group-card-body').forEach(b => {
+          if (allExpanded) b.classList.add('show');
+          else b.classList.remove('show');
+        });
+        document.querySelectorAll('.group-chevron').forEach(c => {
+          if (allExpanded) c.classList.add('rotated');
+          else c.classList.remove('rotated');
+        });
+        if (collapseAllText) {
+          collapseAllText.textContent = allExpanded ? 'Collapse all' : 'Expand all';
+        }
+      });
+    }
+
+    // 8. Toggle Cards Grid (Minimize / Show)
+    const toggleExplorerBtn = document.getElementById('toggleExplorerRowBtn');
+    const citiesAccordion = document.getElementById('citiesAccordion');
+    const toggleExplorerText = document.getElementById('toggleExplorerText');
+    const toggleExplorerIcon = document.getElementById('toggleExplorerIcon');
+    let isExplorerCollapsed = false;
+
+    if (toggleExplorerBtn && citiesAccordion) {
+      toggleExplorerBtn.addEventListener('click', () => {
+        isExplorerCollapsed = !isExplorerCollapsed;
+        citiesAccordion.style.display = isExplorerCollapsed ? 'none' : 'grid';
+        if (toggleExplorerText) {
+          toggleExplorerText.textContent = isExplorerCollapsed ? 'Show City Cards' : 'Minimize Cards';
+        }
+        if (toggleExplorerIcon) {
+          toggleExplorerIcon.style.transform = isExplorerCollapsed ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
+        setTimeout(() => map.invalidateSize(), 150);
+      });
+    }
+
+    // 9. Filter Pills & Country Jump
+    const countryPills = document.querySelectorAll('.country-pill');
+    const countryJumpSelect = document.getElementById('countryJumpSelect');
+
+    function selectCountry(country) {
+      countryPills.forEach(p => {
+        if (p.getAttribute('data-country') === country) p.classList.add('active');
+        else p.classList.remove('active');
+      });
+
+      if (countryJumpSelect) {
+        countryJumpSelect.value = country;
+      }
+
+      if (country === 'all') {
+        document.querySelectorAll('.city-group-card').forEach(el => el.style.display = '');
+        map.fitBounds(initialWorldBounds, { padding: [40, 40] });
+      } else {
+        document.querySelectorAll('.city-group-card').forEach(el => {
+          if (el.getAttribute('data-group-name') === country) {
+            el.style.display = '';
+            const body = el.querySelector('.city-group-card-body');
+            if (body) body.classList.add('show');
+            const chevron = el.querySelector('.group-chevron');
+            if (chevron) chevron.classList.add('rotated');
+          } else {
+            el.style.display = 'none';
+          }
+        });
+
+        if (groupBounds[country]) {
+          map.fitBounds(groupBounds[country], { padding: [50, 50], maxZoom: 11 });
+        }
+      }
+    }
+
+    countryPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        const country = pill.getAttribute('data-country');
+        selectCountry(country);
+      });
+    });
+
+    if (countryJumpSelect) {
+      countryJumpSelect.addEventListener('change', (e) => {
+        selectCountry(e.target.value);
+      });
+    }
+
+    // 10. Real-time City Search
+    const searchInput = document.getElementById('citySearchInput');
+    const clearSearchBtn = document.getElementById('clearCitySearch');
+
+    function runCitySearch(query) {
+      const term = query.trim().toLowerCase();
+
+      // If cards grid was collapsed, expand it on search
+      if (term && isExplorerCollapsed && citiesAccordion) {
+        isExplorerCollapsed = false;
+        citiesAccordion.style.display = 'grid';
+        if (toggleExplorerText) toggleExplorerText.textContent = 'Minimize Cards';
+        if (toggleExplorerIcon) toggleExplorerIcon.style.transform = 'rotate(0deg)';
+      }
+
+      document.querySelectorAll('.city-group-card').forEach(groupItem => {
+        let groupHasMatches = false;
+        const groupName = (groupItem.getAttribute('data-group-name') || '').toLowerCase();
+
+        // Check subgroup entries
+        groupItem.querySelectorAll('.city-subgroup-item').forEach(subgroupItem => {
+          let subgroupHasMatches = false;
+          const subName = (subgroupItem.getAttribute('data-subgroup-name') || '').toLowerCase();
+
+          subgroupItem.querySelectorAll('.city-entry-item').forEach(cityItem => {
+            const cityName = cityItem.getAttribute('data-name') || '';
+            const matches = !term || cityName.includes(term) || subName.includes(term) || groupName.includes(term);
+            cityItem.style.display = matches ? '' : 'none';
+            if (matches) subgroupHasMatches = true;
+          });
+
+          subgroupItem.style.display = (!term || subgroupHasMatches) ? '' : 'none';
+          if (subgroupHasMatches) groupHasMatches = true;
+        });
+
+        // Direct cities list (if any)
+        groupItem.querySelectorAll(':scope > .city-group-card-body > .cities-list > .city-entry-item').forEach(cityItem => {
+          const cityName = cityItem.getAttribute('data-name') || '';
+          const matches = !term || cityName.includes(term) || groupName.includes(term);
+          cityItem.style.display = matches ? '' : 'none';
+          if (matches) groupHasMatches = true;
+        });
+
+        if (!term || groupHasMatches) {
+          groupItem.style.display = '';
+          if (term) {
+            const body = groupItem.querySelector('.city-group-card-body');
+            if (body) body.classList.add('show');
+            const chevron = groupItem.querySelector('.group-chevron');
+            if (chevron) chevron.classList.add('rotated');
+          }
+        } else {
+          groupItem.style.display = 'none';
+        }
+      });
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const q = e.target.value;
+        if (clearSearchBtn) clearSearchBtn.style.display = q ? 'block' : 'none';
+        runCitySearch(q);
+      });
+    }
+
+    if (clearSearchBtn) {
+      clearSearchBtn.addEventListener('click', () => {
+        if (searchInput) {
+          searchInput.value = '';
+          searchInput.focus();
+        }
+        clearSearchBtn.style.display = 'none';
+        runCitySearch('');
+      });
+    }
+
+    // 11. Toolbar Controls (Labels Toggle & Reset Map)
+    const toggleLabelsBtn = document.getElementById('toggleLabelsBtn');
+    if (toggleLabelsBtn) {
+      toggleLabelsBtn.addEventListener('click', () => {
+        showPermanentLabels = !showPermanentLabels;
+        toggleLabelsBtn.classList.toggle('active', showPermanentLabels);
+
+        allMarkers.forEach(marker => {
+          if (showPermanentLabels) {
+            marker.openTooltip();
+          } else {
+            marker.closeTooltip();
+          }
+        });
+      });
+    }
+
+    const resetMapBoundsBtn = document.getElementById('resetMapBoundsBtn');
+    if (resetMapBoundsBtn) {
+      resetMapBoundsBtn.addEventListener('click', () => {
+        selectCountry('all');
+        if (currentActiveMarker) {
+          currentActiveMarker.setIcon(normalPinIcon);
+          currentActiveMarker.closePopup();
+          currentActiveMarker = null;
+        }
+        if (activeCard) activeCard.style.display = 'none';
+        document.querySelectorAll('.city-entry-item').forEach(el => el.classList.remove('active'));
+      });
+    }
+  });
+</script>
+{{- end }}

@@ -1,0 +1,1295 @@
+{{- define "main" }}
+<meta name="referrer" content="no-referrer">
+<audio id="globalTtsAudio" referrerpolicy="no-referrer" preload="none" style="display:none;"></audio>
+<div class="lang-tool-wrapper">
+  <!-- Breadcrumbs & Header -->
+  <header class="lang-tool-header">
+    <div class="gallery-breadcrumbs">
+      <a href="{{ site.BaseURL }}">Home</a> <span>/</span> <a href="/tools/">Tools</a> <span>/</span> <span>Language
+        Review</span>
+    </div>
+
+    <div class="lang-header-row">
+      <div class="lang-title-group">
+        <h1 class="lang-hero-title">Language Review</h1>
+        <!-- <p class="lang-hero-subtitle">Interactive spreadsheet for reviewing, comparing, and mastering parallel sentences -->
+        <!-- across 8 world languages.</p> -->
+      </div>
+
+      <!-- File Actions & Quick Utilities -->
+      <div class="lang-header-actions">
+        <label for="customFileInput" class="lang-btn lang-btn-outline" title="Load custom CSV, TSV, or JSON file">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+          <span>Load File</span>
+        </label>
+        <input type="file" id="customFileInput" accept=".json,.csv,.tsv" style="display:none;" />
+
+        <button type="button" id="resetFileBtn" class="lang-btn lang-btn-ghost" title="Reset to default dataset">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="1 4 1 10 7 10"></polyline>
+            <polyline points="23 20 23 14 17 14"></polyline>
+            <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
+          </svg>
+          <span>Reset Default</span>
+        </button>
+
+        <div class="lang-dropdown">
+          <button type="button" id="exportMenuBtn" class="lang-btn lang-btn-outline" aria-expanded="false"
+            aria-haspopup="true">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Export</span>
+            <span class="dropdown-caret">&#9662;</span>
+          </button>
+          <div class="lang-dropdown-menu" id="exportMenu">
+            <a href="#" id="exportCsvBtn" role="button">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              Export Visible as CSV
+            </a>
+            <a href="#" id="exportJsonBtn" role="button">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+              Export Filtered as JSON
+            </a>
+            <a href="/data/language_review.csv" download="language_review_full.csv">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Download Full Dataset (.csv)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Spreadsheet Ribbon / Toolbar -->
+  <section class="lang-ribbon" aria-label="Spreadsheet Controls and Filters">
+    <!-- Row 1: Language Selection Bar -->
+    <div class="ribbon-block ribbon-languages">
+      <div class="ribbon-label-bar">
+        <span class="ribbon-label">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m5 8 6 6"></path>
+            <path d="m4 14 6-6 2-3"></path>
+            <path d="M2 5h12"></path>
+            <path d="M7 2h1"></path>
+            <path d="m22 22-5-10-5 10"></path>
+            <path d="M14 18h6"></path>
+          </svg>
+          Visible Languages
+        </span>
+        <div class="ribbon-presets">
+          <button type="button" id="presetDefaultLangs" class="ribbon-link-btn"
+            title="Default: Chinese, German, English">Default (ZH, DE, EN)</button>
+          <span class="dot-sep">&bull;</span>
+          <button type="button" id="presetAllLangs" class="ribbon-link-btn" title="Display all 8 languages">Show All
+            (8)</button>
+          <span class="dot-sep">&bull;</span>
+          <button type="button" id="presetClearLangs" class="ribbon-link-btn" title="Deselect all">Clear</button>
+        </div>
+      </div>
+
+      <!-- Language Toggle Chips -->
+      <div class="lang-chip-group" id="languageChipsContainer" role="group" aria-label="Toggle language columns">
+        <!-- Dynamically rendered via JS -->
+      </div>
+    </div>
+
+    <!-- Row 2: Level Filters, Search, Category, and Options -->
+    <div class="ribbon-block ribbon-filters-row">
+      <!-- Level Filters -->
+      <div class="filter-subgroup">
+        <span class="ribbon-label">Proficiency Level</span>
+        <div class="level-pills" id="levelPillsContainer" role="group" aria-label="Filter by level">
+          <button type="button" class="level-pill active" data-level="all">All Levels</button>
+          <button type="button" class="level-pill" data-level="basic">
+            <span class="level-indicator level-basic-dot"></span>Basic
+          </button>
+          <button type="button" class="level-pill" data-level="intermediate">
+            <span class="level-indicator level-intermediate-dot"></span>Intermediate
+          </button>
+          <button type="button" class="level-pill" data-level="advanced">
+            <span class="level-indicator level-advanced-dot"></span>Advanced
+          </button>
+          <button type="button" class="level-pill" data-level="fluent">
+            <span class="level-indicator level-fluent-dot"></span>Fluent
+          </button>
+        </div>
+      </div>
+
+      <!-- Search Box -->
+      <div class="filter-subgroup filter-search-group">
+        <span class="ribbon-label">Search Sentences</span>
+        <div class="lang-search-box">
+          <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="langTableSearch" placeholder="Search keywords, pinyin, words..." autocomplete="off" />
+          <button type="button" id="clearSearchBtn" class="clear-search-btn" style="display:none;"
+            aria-label="Clear search">&times;</button>
+        </div>
+      </div>
+
+      <!-- Category Filter Dropdown -->
+      <div class="filter-subgroup">
+        <span class="ribbon-label">Topic</span>
+        <select id="categorySelect" class="lang-select">
+          <option value="all">All Topics</option>
+        </select>
+      </div>
+
+      <!-- Display Toggles -->
+      <div class="filter-subgroup filter-toggles">
+        <span class="ribbon-label">Display Options</span>
+        <div class="display-toggle-items">
+          <label class="toggle-checkbox" title="Show or hide row # number column">
+            <input type="checkbox" id="toggleRowNumbers" checked />
+            <span class="toggle-switch"></span>
+            <span class="toggle-text"># Number</span>
+          </label>
+          <label class="toggle-checkbox" title="Show Pinyin and Romaji pronunciation guides">
+            <input type="checkbox" id="toggleRomanization" checked />
+            <span class="toggle-switch"></span>
+            <span class="toggle-text">Romanization</span>
+          </label>
+          <label class="toggle-checkbox" title="Display linguistic nuance & grammar notes column">
+            <input type="checkbox" id="toggleNotes" checked />
+            <span class="toggle-switch"></span>
+            <span class="toggle-text">Notes</span>
+          </label>
+          <label class="toggle-checkbox" title="Only show bookmarked or mastered sentences">
+            <input type="checkbox" id="toggleBookmarkedOnly" />
+            <span class="toggle-switch"></span>
+            <span class="toggle-text">Bookmarked ⭐</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spreadsheet Grid Container -->
+  <div class="lang-grid-outer" id="spreadsheetDropZone">
+    <!-- Drag & drop overlay notice -->
+    <div class="drop-zone-overlay" id="dropZoneOverlay">
+      <div class="drop-zone-content">
+        <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="17 8 12 3 7 8"></polyline>
+          <line x1="12" y1="3" x2="12" y2="15"></line>
+        </svg>
+        <h3>Drop CSV, TSV, or JSON file here</h3>
+        <p>Your spreadsheet will be instantly parsed and reviewed.</p>
+      </div>
+    </div>
+
+    <!-- Active Filter Notification Bar -->
+    <div class="spreadsheet-subbar">
+      <div class="subbar-info">
+        <span id="matchStats">Loading dataset...</span>
+        <span class="subbar-sep">|</span>
+        <span id="activeLangsSummary">Chinese, German, English</span>
+      </div>
+      <div class="subbar-tools">
+        <span class="dataset-source-tag" id="datasetSourceTag">
+          <span class="source-status-dot"></span>
+          <span id="datasetSourceText">Default File: language_review.json</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- The Spreadsheet Table -->
+    <div class="spreadsheet-scroll-container">
+      <table class="lang-table" id="languageReviewTable">
+        <thead>
+          <tr id="tableHeaderRow">
+            <th class="col-star" title="Bookmark / Mastered">⭐</th>
+            <th class="col-num sortable" data-sort="id" title="Sentence Number"># <span class="sort-icon"></span></th>
+            <!-- Dynamic Language Columns injected here -->
+            <th class="col-notes" id="notesHeaderCol">Linguistic Notes &amp; Nuances</th>
+            <th class="col-actions" title="Quick Actions">Inspect</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Sentences populated via JavaScript -->
+        </tbody>
+      </table>
+
+      <!-- Empty State -->
+      <div id="noMatchNotice" class="lang-no-matches" style="display:none;">
+        <div class="no-matches-icon">🔍</div>
+        <h3>No matching sentences found</h3>
+        <p>Try adjusting your search keywords, proficiency level, or language filters.</p>
+        <button type="button" id="resetFiltersBtn" class="lang-btn lang-btn-outline">Reset Filters</button>
+      </div>
+    </div>
+
+    <!-- Table Footer / Spreadsheet Status Bar -->
+    <footer class="spreadsheet-status-bar">
+      <div class="status-left">
+        <span id="statusSentenceCount">0 / 0 rows</span>
+        <span class="status-divider">•</span>
+        <span id="statusColumnsCount">3 columns visible</span>
+        <span class="status-divider">•</span>
+        <span id="statusMasteredCount">0 bookmarked</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Sentence Study / Full Detail Modal -->
+  <dialog class="lang-modal" id="sentenceDetailModal" aria-labelledby="modalSentenceTitle">
+    <div class="lang-modal-dialog">
+      <header class="lang-modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-id-badge" id="modalSentenceId">#1</span>
+          <span class="modal-level-badge" id="modalSentenceLevel">Basic</span>
+          <span class="modal-category-badge" id="modalSentenceCategory">Greetings</span>
+        </div>
+        <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close dialog">&times;</button>
+      </header>
+
+      <div class="lang-modal-body">
+        <h3 id="modalSentenceTitle" class="modal-primary-sentence">Sentence Parallel Comparison</h3>
+
+        <!-- Comparative Grid of All 8 Languages -->
+        <div class="modal-languages-grid" id="modalLanguagesGrid">
+          <!-- Populated dynamically -->
+        </div>
+
+        <!-- Notes Callout -->
+        <div class="modal-notes-box" id="modalNotesBox">
+          <div class="notes-header">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span>Linguistic Nuance &amp; Cross-Lingual Comparison</span>
+          </div>
+          <p id="modalNotesText" class="notes-body"></p>
+        </div>
+      </div>
+
+      <footer class="lang-modal-footer">
+        <button type="button" class="lang-btn lang-btn-ghost" id="modalPrevBtn">&larr; Previous</button>
+        <button type="button" class="lang-btn lang-btn-outline" id="modalBookmarkBtn">⭐ Bookmark</button>
+        <button type="button" class="lang-btn lang-btn-ghost" id="modalNextBtn">Next &rarr;</button>
+      </footer>
+    </div>
+  </dialog>
+</div>
+
+<!-- Embedded Dataset Fallback for instant load & offline resilience -->
+<script id="embeddedCorpusData" type="application/json">
+{{ site.Data.language_review | jsonify }}
+</script>
+
+<!-- Interactive Spreadsheet Engine -->
+<script>
+  (function () {
+    'use strict';
+
+    // Master State
+    const state = {
+      allSentences: [],
+      filteredSentences: [],
+      languages: [
+        { code: 'zh', name: 'Chinese', native: '中文', flag: '🇨🇳', visible: true, hasRomanization: true, romKey: 'zh_pinyin', voice: 'zh-CN' },
+        { code: 'de', name: 'German', native: 'Deutsch', flag: '🇩🇪', visible: true, hasRomanization: false, voice: 'de-DE' },
+        { code: 'en', name: 'English', native: 'English', flag: '🇬🇧', visible: true, hasRomanization: false, voice: 'en-US' },
+        { code: 'es', name: 'Spanish', native: 'Español', flag: '🇪🇸', visible: false, hasRomanization: false, voice: 'es-ES' },
+        { code: 'fr', name: 'French', native: 'Français', flag: '🇫🇷', visible: false, hasRomanization: false, voice: 'fr-FR' },
+        { code: 'ja', name: 'Japanese', native: '日本語', flag: '🇯🇵', visible: false, hasRomanization: true, romKey: 'ja_romaji', voice: 'ja-JP' },
+        { code: 'pt', name: 'Portuguese', native: 'Português', flag: '🇵🇹', visible: false, hasRomanization: false, voice: 'pt-PT' },
+        { code: 'ru', name: 'Russian', native: 'Русский', flag: '🇷🇺', visible: false, hasRomanization: false, voice: 'ru-RU' }
+      ],
+      activeLevel: 'all',
+      activeCategory: 'all',
+      searchQuery: '',
+      showRowNumbers: true,
+      showRomanization: true,
+      showNotes: true,
+      bookmarkedOnly: false,
+      sortField: 'id',
+      sortAsc: true,
+      bookmarkedIds: new Set(),
+      activeModalIndex: -1,
+      sourceFileName: 'language_review.json'
+    };
+
+    // Load Bookmarks from localStorage
+    try {
+      const saved = localStorage.getItem('langReview_bookmarks');
+      if (saved) {
+        JSON.parse(saved).forEach(id => state.bookmarkedIds.add(id));
+      }
+    } catch (e) { }
+
+    function saveBookmarks() {
+      try {
+        localStorage.setItem('langReview_bookmarks', JSON.stringify(Array.from(state.bookmarkedIds)));
+      } catch (e) { }
+    }
+
+    // DOM Elements
+    const languageChipsContainer = document.getElementById('languageChipsContainer');
+    const levelPillsContainer = document.getElementById('levelPillsContainer');
+    const searchInput = document.getElementById('langTableSearch');
+    const clearSearchBtn = document.getElementById('clearSearchBtn');
+    const categorySelect = document.getElementById('categorySelect');
+    const toggleRowNumbers = document.getElementById('toggleRowNumbers');
+    const toggleRomanization = document.getElementById('toggleRomanization');
+    const toggleNotes = document.getElementById('toggleNotes');
+    const toggleBookmarkedOnly = document.getElementById('toggleBookmarkedOnly');
+    const tableHeaderRow = document.getElementById('tableHeaderRow');
+    const tableBody = document.getElementById('tableBody');
+    const notesHeaderCol = document.getElementById('notesHeaderCol');
+    const noMatchNotice = document.getElementById('noMatchNotice');
+    const matchStats = document.getElementById('matchStats');
+    const activeLangsSummary = document.getElementById('activeLangsSummary');
+    const statusSentenceCount = document.getElementById('statusSentenceCount');
+    const statusColumnsCount = document.getElementById('statusColumnsCount');
+    const statusMasteredCount = document.getElementById('statusMasteredCount');
+    const datasetSourceText = document.getElementById('datasetSourceText');
+    const customFileInput = document.getElementById('customFileInput');
+    const resetFileBtn = document.getElementById('resetFileBtn');
+    const exportMenuBtn = document.getElementById('exportMenuBtn');
+    const exportMenu = document.getElementById('exportMenu');
+    const exportCsvBtn = document.getElementById('exportCsvBtn');
+    const exportJsonBtn = document.getElementById('exportJsonBtn');
+    const resetFiltersBtn = document.getElementById('resetFiltersBtn');
+    const detailModal = document.getElementById('sentenceDetailModal');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+    const modalPrevBtn = document.getElementById('modalPrevBtn');
+    const modalNextBtn = document.getElementById('modalNextBtn');
+    const modalBookmarkBtn = document.getElementById('modalBookmarkBtn');
+    const dropZone = document.getElementById('spreadsheetDropZone');
+    const dropZoneOverlay = document.getElementById('dropZoneOverlay');
+
+    // Initialize Language Chips
+    function renderLanguageChips() {
+      languageChipsContainer.innerHTML = '';
+      state.languages.forEach(lang => {
+        const chip = document.createElement('button');
+        chip.type = 'button';
+        chip.className = `lang-chip ${lang.visible ? 'active' : ''}`;
+        chip.setAttribute('data-lang', lang.code);
+        chip.setAttribute('aria-pressed', lang.visible ? 'true' : 'false');
+        chip.innerHTML = `
+        <span class="chip-flag">${lang.flag}</span>
+        <span class="chip-name">${lang.name}</span>
+        <span class="chip-native">${lang.native}</span>
+      `;
+        chip.addEventListener('click', () => {
+          // Toggle language visibility
+          lang.visible = !lang.visible;
+          // Keep at least one language visible
+          if (!state.languages.some(l => l.visible)) {
+            lang.visible = true;
+          }
+          renderLanguageChips();
+          renderTableHeader();
+          renderTableRows();
+          updateStatusBar();
+        });
+        languageChipsContainer.appendChild(chip);
+      });
+    }
+
+    // Render Table Header with Dynamic Language Columns
+    function renderTableHeader() {
+      // Preserve static columns: Star, and conditionally #
+      const starCol = `<th class="col-star" title="Bookmark / Mastered">⭐</th>`;
+      const numCol = state.showRowNumbers ? `
+      <th class="col-num sortable ${state.sortField === 'id' ? (state.sortAsc ? 'sorted-asc' : 'sorted-desc') : ''}" data-sort="id" title="Sentence Number"># <span class="sort-icon"></span></th>
+    ` : '';
+      const staticBefore = starCol + numCol;
+
+      let langCols = '';
+      state.languages.forEach(lang => {
+        if (lang.visible) {
+          const isSorted = state.sortField === lang.code;
+          const sortClass = isSorted ? (state.sortAsc ? 'sorted-asc' : 'sorted-desc') : '';
+          langCols += `
+          <th class="col-lang sortable ${sortClass}" data-sort="${lang.code}" data-lang="${lang.code}">
+            <div class="th-lang-title">
+              <span class="th-flag">${lang.flag}</span>
+              <span class="th-name">${lang.name}</span>
+              <span class="sort-icon"></span>
+            </div>
+            <span class="th-sub">${lang.native}</span>
+          </th>
+        `;
+        }
+      });
+
+      const notesCol = state.showNotes ? `
+      <th class="col-notes">Linguistic Notes &amp; Nuances</th>
+    ` : '';
+
+      const actionsCol = `
+      <th class="col-actions" title="Detailed inspection">Inspect</th>
+    `;
+
+      tableHeaderRow.innerHTML = staticBefore + langCols + notesCol + actionsCol;
+
+      // Attach sort event listeners
+      tableHeaderRow.querySelectorAll('th.sortable').forEach(th => {
+        th.addEventListener('click', () => {
+          const field = th.getAttribute('data-sort');
+          if (state.sortField === field) {
+            state.sortAsc = !state.sortAsc;
+          } else {
+            state.sortField = field;
+            state.sortAsc = true;
+          }
+          sortAndFilterSentences();
+        });
+      });
+    }
+
+    // Populate Categories in Dropdown
+    function populateCategories() {
+      const categories = new Set();
+      state.allSentences.forEach(s => {
+        if (s.category) categories.add(s.category);
+      });
+      const sortedCats = Array.from(categories).sort();
+
+      categorySelect.innerHTML = '<option value="all">All Topics</option>';
+      sortedCats.forEach(cat => {
+        const opt = document.createElement('option');
+        opt.value = cat;
+        opt.textContent = `${cat} (${state.allSentences.filter(s => s.category === cat).length})`;
+        categorySelect.appendChild(opt);
+      });
+    }
+
+    // Sort & Filter Sentences
+    function sortAndFilterSentences() {
+      const q = state.searchQuery.toLowerCase().trim();
+
+      state.filteredSentences = state.allSentences.filter(item => {
+        // Level filter
+        if (state.activeLevel !== 'all' && item.level !== state.activeLevel) {
+          return false;
+        }
+        // Category filter
+        if (state.activeCategory !== 'all' && item.category !== state.activeCategory) {
+          return false;
+        }
+        // Bookmarked filter
+        if (state.bookmarkedOnly && !state.bookmarkedIds.has(item.id)) {
+          return false;
+        }
+        // Search query
+        if (q) {
+          const matchEn = (item.en || '').toLowerCase().includes(q);
+          const matchZh = (item.zh || '').toLowerCase().includes(q) || (item.zh_pinyin || '').toLowerCase().includes(q);
+          const matchDe = (item.de || '').toLowerCase().includes(q);
+          const matchEs = (item.es || '').toLowerCase().includes(q);
+          const matchFr = (item.fr || '').toLowerCase().includes(q);
+          const matchJa = (item.ja || '').toLowerCase().includes(q) || (item.ja_romaji || '').toLowerCase().includes(q);
+          const matchPt = (item.pt || '').toLowerCase().includes(q);
+          const matchRu = (item.ru || '').toLowerCase().includes(q);
+          const matchNotes = (item.notes || '').toLowerCase().includes(q);
+          const matchCat = (item.category || '').toLowerCase().includes(q);
+          const matchId = String(item.id).includes(q);
+
+          if (!matchEn && !matchZh && !matchDe && !matchEs && !matchFr && !matchJa && !matchPt && !matchRu && !matchNotes && !matchCat && !matchId) {
+            return false;
+          }
+        }
+        return true;
+      });
+
+      // Sorting
+      state.filteredSentences.sort((a, b) => {
+        let valA = a[state.sortField] || '';
+        let valB = b[state.sortField] || '';
+
+        if (typeof valA === 'number' && typeof valB === 'number') {
+          return state.sortAsc ? valA - valB : valB - valA;
+        }
+
+        valA = String(valA).toLowerCase();
+        valB = String(valB).toLowerCase();
+
+        if (valA < valB) return state.sortAsc ? -1 : 1;
+        if (valA > valB) return state.sortAsc ? 1 : -1;
+        return 0;
+      });
+
+      renderTableHeader();
+      renderTableRows();
+      updateStatusBar();
+    }
+
+    // Reliable Audio Pronunciation Engine
+    const TTS_LANG_CODES = {
+      'zh': 'zh-CN',
+      'zh-CN': 'zh-CN',
+      'de': 'de',
+      'de-DE': 'de',
+      'en': 'en',
+      'en-US': 'en',
+      'es': 'es',
+      'es-ES': 'es',
+      'fr': 'fr',
+      'fr-FR': 'fr',
+      'ja': 'ja',
+      'ja-JP': 'ja',
+      'pt': 'pt',
+      'pt-PT': 'pt',
+      'ru': 'ru',
+      'ru-RU': 'ru'
+    };
+
+    let activeAudioBtn = null;
+    const ttsAudio = document.getElementById('globalTtsAudio');
+
+    function stopCurrentAudio() {
+      if (activeAudioBtn) {
+        activeAudioBtn.classList.remove('playing');
+        if (activeAudioBtn.classList.contains('modal-audio-btn')) {
+          activeAudioBtn.textContent = '🔊 Listen';
+        }
+        activeAudioBtn = null;
+      }
+      if (ttsAudio) {
+        ttsAudio.pause();
+        ttsAudio.currentTime = 0;
+        ttsAudio.src = '';
+      }
+      if ('speechSynthesis' in window && window.speechSynthesis.speaking) {
+        window.speechSynthesis.cancel();
+      }
+    }
+
+    function playSentenceAudio(text, langCode, btn) {
+      if (!text) return;
+
+      // Toggle off if currently playing this exact button
+      if (activeAudioBtn === btn) {
+        stopCurrentAudio();
+        return;
+      }
+
+      stopCurrentAudio();
+      activeAudioBtn = btn;
+      btn.classList.add('playing');
+      if (btn.classList.contains('modal-audio-btn')) {
+        btn.textContent = '⏹ Playing...';
+      }
+
+      const cleanText = text.trim();
+      const targetLang = TTS_LANG_CODES[langCode] || langCode.slice(0, 2);
+
+      // Primary: High-Fidelity Audio Stream (Google TTS without referer)
+      const audioUrl = 'https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=' + encodeURIComponent(targetLang) + '&q=' + encodeURIComponent(cleanText);
+
+      ttsAudio.onended = () => {
+        stopCurrentAudio();
+      };
+
+      ttsAudio.onerror = () => {
+        fallbackToWebSpeech(cleanText, langCode, btn);
+      };
+
+      ttsAudio.src = audioUrl;
+      const playPromise = ttsAudio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          fallbackToWebSpeech(cleanText, langCode, btn);
+        });
+      }
+    }
+
+    function fallbackToWebSpeech(text, langCode, btn) {
+      if (!('speechSynthesis' in window)) {
+        stopCurrentAudio();
+        return;
+      }
+
+      try {
+        if (window.speechSynthesis.paused) {
+          window.speechSynthesis.resume();
+        }
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = langCode;
+        utterance.rate = 0.92;
+
+        // Persist reference to avoid V8 garbage collection drop
+        window._activeSpeechUtterance = utterance;
+
+        const voices = window.speechSynthesis.getVoices();
+        if (voices && voices.length > 0) {
+          const matchingVoice = voices.find(v => v.lang === langCode || v.lang.startsWith(langCode.slice(0, 2)));
+          if (matchingVoice) utterance.voice = matchingVoice;
+        }
+
+        utterance.onend = () => {
+          stopCurrentAudio();
+        };
+
+        utterance.onerror = () => {
+          stopCurrentAudio();
+        };
+
+        window.speechSynthesis.speak(utterance);
+      } catch (err) {
+        stopCurrentAudio();
+      }
+    }
+
+    // Render Table Rows
+    function renderTableRows() {
+      tableBody.innerHTML = '';
+
+      if (state.filteredSentences.length === 0) {
+        noMatchNotice.style.display = 'block';
+        return;
+      }
+      noMatchNotice.style.display = 'none';
+
+      state.filteredSentences.forEach((item, index) => {
+        const tr = document.createElement('tr');
+        tr.className = 'lang-row';
+        tr.setAttribute('data-id', item.id);
+        const isBookmarked = state.bookmarkedIds.has(item.id);
+
+        // Star / Bookmark cell and # Number
+        let html = `
+        <td class="cell-star">
+          <button type="button" class="star-btn ${isBookmarked ? 'is-starred' : ''}" data-id="${item.id}" title="${isBookmarked ? 'Mark as unread' : 'Bookmark / Mastered'}" aria-label="Bookmark sentence ${item.id}">
+            ${isBookmarked ? '★' : '☆'}
+          </button>
+        </td>
+      `;
+
+        if (state.showRowNumbers) {
+          html += `
+        <td class="cell-num">
+          <span class="num-wrap" title="Level: ${item.level.toUpperCase()} • Topic: ${escapeHtml(item.category || '')}">
+            <span class="num-level-dot level-${item.level}-dot"></span>
+            <span>#${item.id}</span>
+          </span>
+        </td>
+        `;
+        }
+
+        // Language Cells
+        state.languages.forEach(lang => {
+          if (lang.visible) {
+            const text = item[lang.code] || '';
+            let romanizationHtml = '';
+            if (state.showRomanization && lang.hasRomanization && item[lang.romKey]) {
+              romanizationHtml = `<div class="cell-romanization">${escapeHtml(item[lang.romKey])}</div>`;
+            }
+
+            html += `
+            <td class="cell-lang" data-lang="${lang.code}">
+              <div class="cell-text-wrap">
+                <div class="cell-sentence">${escapeHtml(text)}</div>
+                ${romanizationHtml}
+              </div>
+              <div class="cell-hover-actions">
+                <button type="button" class="audio-btn" data-text="${escapeHtml(text)}" data-lang="${lang.voice}" title="Listen in ${lang.name}" aria-label="Listen">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                  </svg>
+                </button>
+                <button type="button" class="copy-cell-btn" data-text="${escapeHtml(text)}" title="Copy to clipboard" aria-label="Copy sentence">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                </button>
+              </div>
+            </td>
+          `;
+          }
+        });
+
+        // Notes Cell
+        if (state.showNotes) {
+          html += `
+          <td class="cell-notes">
+            <span class="notes-snippet" title="${escapeHtml(item.notes || '')}">
+              ${escapeHtml(item.notes || '—')}
+            </span>
+          </td>
+        `;
+        }
+
+        // Actions / Inspect Cell
+        html += `
+        <td class="cell-actions">
+          <button type="button" class="inspect-btn" data-id="${item.id}" title="Inspect full breakdown" aria-label="View sentence ${item.id} details">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+          </button>
+        </td>
+      `;
+
+        tr.innerHTML = html;
+
+        // Event: Star Toggle
+        const starBtn = tr.querySelector('.star-btn');
+        starBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const id = parseInt(starBtn.getAttribute('data-id'), 10);
+          if (state.bookmarkedIds.has(id)) {
+            state.bookmarkedIds.delete(id);
+            starBtn.classList.remove('is-starred');
+            starBtn.innerHTML = '☆';
+          } else {
+            state.bookmarkedIds.add(id);
+            starBtn.classList.add('is-starred');
+            starBtn.innerHTML = '★';
+          }
+          saveBookmarks();
+          updateStatusBar();
+          if (state.bookmarkedOnly) {
+            sortAndFilterSentences();
+          }
+        });
+
+        // Event: Audio Speech Buttons
+        tr.querySelectorAll('.audio-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const text = btn.getAttribute('data-text');
+            const lang = btn.getAttribute('data-lang');
+            playSentenceAudio(text, lang, btn);
+          });
+        });
+
+        // Event: Copy Cell Button
+        tr.querySelectorAll('.copy-cell-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const text = btn.getAttribute('data-text');
+            navigator.clipboard.writeText(text).then(() => {
+              btn.classList.add('copied');
+              setTimeout(() => btn.classList.remove('copied'), 1200);
+            });
+          });
+        });
+
+        // Event: Inspect Button / Double Click
+        const inspectBtn = tr.querySelector('.inspect-btn');
+        inspectBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          openModalForSentence(item.id);
+        });
+
+        tr.addEventListener('dblclick', () => {
+          openModalForSentence(item.id);
+        });
+
+        tableBody.appendChild(tr);
+      });
+    }
+
+    // Update Status Bar and Summary Counts
+    function updateStatusBar() {
+      const total = state.allSentences.length;
+      const showing = state.filteredSentences.length;
+      const activeLangs = state.languages.filter(l => l.visible).map(l => l.name);
+      const bookmarkedCount = state.allSentences.filter(s => state.bookmarkedIds.has(s.id)).length;
+
+      matchStats.textContent = `Showing ${showing} of ${total} sentences`;
+      const levelLabel = state.activeLevel === 'all' ? 'All Levels' : (state.activeLevel.charAt(0).toUpperCase() + state.activeLevel.slice(1));
+      const topicLabel = state.activeCategory === 'all' ? 'All Topics' : state.activeCategory;
+      activeLangsSummary.textContent = `${levelLabel} • ${topicLabel} • ${activeLangs.join(', ')}`;
+      statusSentenceCount.textContent = `${showing} / ${total} sentences`;
+      statusColumnsCount.textContent = `${activeLangs.length} of 8 languages visible`;
+      statusMasteredCount.textContent = `${bookmarkedCount} bookmarked`;
+
+      clearSearchBtn.style.display = state.searchQuery ? 'inline-flex' : 'none';
+    }
+
+    // Modal: Open & Populate for Sentence
+    function openModalForSentence(sentenceId) {
+      const index = state.allSentences.findIndex(s => s.id === sentenceId);
+      if (index === -1) return;
+
+      state.activeModalIndex = index;
+      const sentence = state.allSentences[index];
+
+      document.getElementById('modalSentenceId').textContent = `#${sentence.id}`;
+      const lvlBadge = document.getElementById('modalSentenceLevel');
+      lvlBadge.textContent = sentence.level.charAt(0).toUpperCase() + sentence.level.slice(1);
+      lvlBadge.className = `modal-level-badge level-${sentence.level}`;
+      document.getElementById('modalSentenceCategory').textContent = sentence.category || 'General';
+
+      // Primary title (English reference)
+      document.getElementById('modalSentenceTitle').textContent = sentence.en || 'Sentence Breakdown';
+
+      // Populate all 8 languages side by side
+      const grid = document.getElementById('modalLanguagesGrid');
+      grid.innerHTML = '';
+
+      state.languages.forEach(lang => {
+        const card = document.createElement('div');
+        card.className = `modal-lang-card ${lang.visible ? 'is-active-col' : ''}`;
+        const text = sentence[lang.code] || '';
+        let romHtml = '';
+        if (lang.hasRomanization && sentence[lang.romKey]) {
+          romHtml = `<div class="modal-rom-text">${escapeHtml(sentence[lang.romKey])}</div>`;
+        }
+
+        card.innerHTML = `
+        <div class="modal-card-top">
+          <div class="modal-card-lang">
+            <span class="modal-card-flag">${lang.flag}</span>
+            <strong>${lang.name}</strong>
+            <span class="modal-native-name">(${lang.native})</span>
+          </div>
+          <div class="modal-card-actions">
+            <button type="button" class="modal-audio-btn" data-text="${escapeHtml(text)}" data-lang="${lang.voice}" title="Play pronunciation">
+              🔊 Listen
+            </button>
+            <button type="button" class="modal-copy-btn" data-text="${escapeHtml(text)}" title="Copy text">
+              📋
+            </button>
+          </div>
+        </div>
+        <div class="modal-card-sentence">${escapeHtml(text)}</div>
+        ${romHtml}
+      `;
+
+        // Audio trigger
+        const audioBtn = card.querySelector('.modal-audio-btn');
+        audioBtn.addEventListener('click', () => {
+          playSentenceAudio(text, lang.voice, audioBtn);
+        });
+
+        // Copy trigger
+        const copyBtn = card.querySelector('.modal-copy-btn');
+        copyBtn.addEventListener('click', () => {
+          navigator.clipboard.writeText(text).then(() => {
+            copyBtn.textContent = '✓ Copied';
+            setTimeout(() => copyBtn.textContent = '📋', 1200);
+          });
+        });
+
+        grid.appendChild(card);
+      });
+
+      // Populate Notes
+      const notesBox = document.getElementById('modalNotesBox');
+      const notesText = document.getElementById('modalNotesText');
+      if (sentence.notes) {
+        notesText.textContent = sentence.notes;
+        notesBox.style.display = 'block';
+      } else {
+        notesBox.style.display = 'none';
+      }
+
+      // Modal bookmark state
+      updateModalBookmarkBtn(sentence.id);
+
+      // Show modal dialog
+      if (typeof detailModal.showModal === 'function') {
+        detailModal.showModal();
+      } else {
+        detailModal.setAttribute('open', '');
+      }
+    }
+
+    function updateModalBookmarkBtn(sentenceId) {
+      const isBookmarked = state.bookmarkedIds.has(sentenceId);
+      modalBookmarkBtn.innerHTML = isBookmarked ? '★ Bookmarked' : '☆ Bookmark';
+      modalBookmarkBtn.classList.toggle('active', isBookmarked);
+    }
+
+    modalBookmarkBtn.addEventListener('click', () => {
+      if (state.activeModalIndex < 0) return;
+      const sentence = state.allSentences[state.activeModalIndex];
+      if (state.bookmarkedIds.has(sentence.id)) {
+        state.bookmarkedIds.delete(sentence.id);
+      } else {
+        state.bookmarkedIds.add(sentence.id);
+      }
+      saveBookmarks();
+      updateModalBookmarkBtn(sentence.id);
+      renderTableRows();
+      updateStatusBar();
+    });
+
+    modalPrevBtn.addEventListener('click', () => {
+      stopCurrentAudio();
+      if (state.activeModalIndex > 0) {
+        openModalForSentence(state.allSentences[state.activeModalIndex - 1].id);
+      }
+    });
+
+    modalNextBtn.addEventListener('click', () => {
+      stopCurrentAudio();
+      if (state.activeModalIndex < state.allSentences.length - 1) {
+        openModalForSentence(state.allSentences[state.activeModalIndex + 1].id);
+      }
+    });
+
+    modalCloseBtn.addEventListener('click', () => {
+      stopCurrentAudio();
+      detailModal.close();
+    });
+
+    detailModal.addEventListener('click', (e) => {
+      if (e.target === detailModal) {
+        stopCurrentAudio();
+        detailModal.close();
+      }
+    });
+
+    // Preset Buttons for Languages
+    document.getElementById('presetDefaultLangs').addEventListener('click', () => {
+      state.languages.forEach(l => {
+        l.visible = (l.code === 'zh' || l.code === 'de' || l.code === 'en');
+      });
+      renderLanguageChips();
+      renderTableHeader();
+      renderTableRows();
+      updateStatusBar();
+    });
+
+    document.getElementById('presetAllLangs').addEventListener('click', () => {
+      state.languages.forEach(l => l.visible = true);
+      renderLanguageChips();
+      renderTableHeader();
+      renderTableRows();
+      updateStatusBar();
+    });
+
+    document.getElementById('presetClearLangs').addEventListener('click', () => {
+      state.languages.forEach(l => l.visible = false);
+      state.languages[0].visible = true; // Keep at least one
+      renderLanguageChips();
+      renderTableHeader();
+      renderTableRows();
+      updateStatusBar();
+    });
+
+    // Level Pills Event Listeners
+    levelPillsContainer.querySelectorAll('.level-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        levelPillsContainer.querySelectorAll('.level-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        state.activeLevel = pill.getAttribute('data-level');
+        sortAndFilterSentences();
+      });
+    });
+
+    // Search Input
+    searchInput.addEventListener('input', () => {
+      state.searchQuery = searchInput.value;
+      sortAndFilterSentences();
+    });
+
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        searchInput.value = '';
+        state.searchQuery = '';
+        sortAndFilterSentences();
+      }
+    });
+
+    clearSearchBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      state.searchQuery = '';
+      sortAndFilterSentences();
+      searchInput.focus();
+    });
+
+    // Category Select
+    categorySelect.addEventListener('change', () => {
+      state.activeCategory = categorySelect.value;
+      sortAndFilterSentences();
+    });
+
+    // Toggles
+    toggleRowNumbers.addEventListener('change', () => {
+      state.showRowNumbers = toggleRowNumbers.checked;
+      renderTableHeader();
+      renderTableRows();
+    });
+
+    toggleRomanization.addEventListener('change', () => {
+      state.showRomanization = toggleRomanization.checked;
+      renderTableRows();
+    });
+
+    toggleNotes.addEventListener('change', () => {
+      state.showNotes = toggleNotes.checked;
+      renderTableHeader();
+      renderTableRows();
+    });
+
+    toggleBookmarkedOnly.addEventListener('change', () => {
+      state.bookmarkedOnly = toggleBookmarkedOnly.checked;
+      sortAndFilterSentences();
+    });
+
+    // Reset Filters Button
+    resetFiltersBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      state.searchQuery = '';
+      state.activeLevel = 'all';
+      state.activeCategory = 'all';
+      state.bookmarkedOnly = false;
+      state.showRowNumbers = true;
+      toggleRowNumbers.checked = true;
+      categorySelect.value = 'all';
+      toggleBookmarkedOnly.checked = false;
+      levelPillsContainer.querySelectorAll('.level-pill').forEach(p => {
+        p.classList.toggle('active', p.getAttribute('data-level') === 'all');
+      });
+      sortAndFilterSentences();
+    });
+
+    // Export Dropdown
+    exportMenuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      exportMenu.classList.toggle('show');
+    });
+
+    document.addEventListener('click', () => {
+      exportMenu.classList.remove('show');
+    });
+
+    // Export as CSV
+    exportCsvBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const visibleLangs = state.languages.filter(l => l.visible);
+      const headers = ['id', 'level', 'category', ...visibleLangs.map(l => l.code), 'notes'];
+
+      const rows = [headers.join(',')];
+      state.filteredSentences.forEach(s => {
+        const rowVals = [
+          s.id,
+          `"${(s.level || '').replace(/"/g, '""')}"`,
+          `"${(s.category || '').replace(/"/g, '""')}"`,
+          ...visibleLangs.map(l => `"${(s[l.code] || '').replace(/"/g, '""')}"`),
+          `"${(s.notes || '').replace(/"/g, '""')}"`
+        ];
+        rows.push(rowVals.join(','));
+      });
+
+      const blob = new Blob(["\uFEFF" + rows.join('\n')], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `language_review_export_${new Date().toISOString().slice(0, 10)}.csv`;
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    // Export as JSON
+    exportJsonBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const dataStr = JSON.stringify(state.filteredSentences, null, 2);
+      const blob = new Blob([dataStr], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `language_review_export_${new Date().toISOString().slice(0, 10)}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    // FILE LOADING: From Disk (Input / Drag-and-drop)
+    customFileInput.addEventListener('change', (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (file) handleCustomFile(file);
+    });
+
+    // Drag & Drop Support
+    ['dragenter', 'dragover'].forEach(eventName => {
+      dropZone.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        dropZoneOverlay.classList.add('drag-active');
+      }, false);
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        dropZoneOverlay.classList.remove('drag-active');
+      }, false);
+    });
+
+    dropZone.addEventListener('drop', (e) => {
+      const dt = e.dataTransfer;
+      const file = dt && dt.files && dt.files[0];
+      if (file) handleCustomFile(file);
+    });
+
+    function handleCustomFile(file) {
+      const reader = new FileReader();
+      reader.onload = function (evt) {
+        try {
+          const content = evt.target.result;
+          let loadedData = [];
+
+          if (file.name.endsWith('.json')) {
+            const parsed = JSON.parse(content);
+            loadedData = Array.isArray(parsed) ? parsed : (parsed.sentences || []);
+          } else if (file.name.endsWith('.csv') || file.name.endsWith('.tsv')) {
+            loadedData = parseCsvSpreadsheet(content, file.name.endsWith('.tsv') ? '\t' : ',');
+          } else {
+            alert('Please upload a valid .json, .csv, or .tsv spreadsheet file.');
+            return;
+          }
+
+          if (loadedData.length === 0) {
+            alert('Could not detect any valid sentence records in this file.');
+            return;
+          }
+
+          // Apply new data
+          state.allSentences = loadedData;
+          state.sourceFileName = file.name;
+          datasetSourceText.textContent = `Custom File: ${file.name} (${loadedData.length} records)`;
+
+          populateCategories();
+          sortAndFilterSentences();
+        } catch (err) {
+          alert('Error parsing file: ' + err.message);
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    // Simple CSV Parser
+    function parseCsvSpreadsheet(text, delimiter) {
+      const lines = text.split(/\r?\n/).filter(line => line.trim().length > 0);
+      if (lines.length < 2) return [];
+
+      const headers = parseCsvLine(lines[0], delimiter).map(h => h.trim().toLowerCase());
+      const records = [];
+
+      for (let i = 1; i < lines.length; i++) {
+        const values = parseCsvLine(lines[i], delimiter);
+        if (values.length < 2) continue;
+        const row = {};
+        headers.forEach((h, idx) => {
+          row[h] = values[idx] || '';
+        });
+        row.id = parseInt(row.id, 10) || i;
+        row.level = (row.level || 'intermediate').toLowerCase();
+        records.push(row);
+      }
+      return records;
+    }
+
+    function parseCsvLine(line, delimiter) {
+      const result = [];
+      let cur = '';
+      let inQuote = false;
+      for (let i = 0; i < line.length; i++) {
+        const c = line[i];
+        if (c === '"') {
+          if (inQuote && line[i + 1] === '"') {
+            cur += '"';
+            i++;
+          } else {
+            inQuote = !inQuote;
+          }
+        } else if (c === delimiter && !inQuote) {
+          result.push(cur);
+          cur = '';
+        } else {
+          cur += c;
+        }
+      }
+      result.push(cur);
+      return result;
+    }
+
+    // Reset to default file
+    resetFileBtn.addEventListener('click', () => {
+      loadDefaultFile();
+    });
+
+    // Load Default File from /data/language_review.json
+    function loadDefaultFile() {
+      datasetSourceText.textContent = 'Loading /data/language_review.json...';
+
+      fetch('/data/language_review.json')
+        .then(res => {
+          if (!res.ok) throw new Error('Network error loading static file');
+          return res.json();
+        })
+        .then(data => {
+          state.allSentences = data.sentences || [];
+          state.sourceFileName = 'language_review.json';
+          datasetSourceText.textContent = `Default File: language_review.json (${state.allSentences.length} sentences)`;
+          populateCategories();
+          sortAndFilterSentences();
+        })
+        .catch(err => {
+          console.warn('Fallback to embedded dataset due to:', err);
+          // Fallback to embedded Hugo data
+          try {
+            const embeddedEl = document.getElementById('embeddedCorpusData');
+            if (embeddedEl) {
+              const data = JSON.parse(embeddedEl.textContent);
+              state.allSentences = data.sentences || [];
+              state.sourceFileName = 'embedded: language_review.json';
+              datasetSourceText.textContent = `Default File: language_review.json (${state.allSentences.length} sentences)`;
+              populateCategories();
+              sortAndFilterSentences();
+            }
+          } catch (e) {
+            console.error('Failed to load embedded fallback data', e);
+          }
+        });
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    // Boot
+    renderLanguageChips();
+    loadDefaultFile();
+
+  })();
+</script>
+{{- end }}

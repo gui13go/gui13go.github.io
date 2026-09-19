@@ -6,10 +6,6 @@ math: true
 url: "/blogs/revolution-os-review/"
 aliases:
   - "/blogs/revolution-os-review"
-  - "/blog/revolution-os-review/"
-  - "/blog/revolution-os-review"
-  - "/blog/reveolution-os-review/"
-  - "/blog/reveolution-os-review"
   - "/blogs/reveolution-os-review/"
   - "/blogs/reveolution-os-review"
 description: "A review and chronological dissection of 2001 documentary 'Revolution OS'. Exploring the 30-year collision between hacker ethics and corporate monopolies: Unix, Windows, GNU, the Linux Kernel, GNU Hurd, the FSF, the OSI, Red Hat, Debian, The Cathedral and the Bazaar, the GPL vs. MIT licenses, and the ideological clash between Richard Stallman, Linus Torvalds, Eric S. Raymond, and Bill Gates."

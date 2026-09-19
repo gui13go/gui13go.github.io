@@ -1,0 +1,134 @@
+{
+  "title": "The Palomares Incident (1966)",
+  "subtitle": "Locations of the 4 US Hydrogen Bombs dropped by \"accident\".",
+  "short_title": "USA dropped nukes on Spain",
+  "date": "1966-01-17",
+  "date_display": "January 17, 1966",
+  "incident_code": "Broken Arrow",
+  "operation": "Operation Chrome Dome",
+  "aircraft_bomber": "Boeing B-52G Stratofortress (58-0256)",
+  "aircraft_tanker": "Boeing KC-135A Stratotanker (61-0273)",
+  "bombs_carried": "4 × B28FI Mod 2 Y1 Thermonuclear Bombs (1.45 Megatons each)",
+  "casualties": "7 crew members killed (4 on KC-135, 3 on B-52G)",
+  "map_center": [37.235, -1.77],
+  "default_zoom": 12,
+  "legend": [
+    {
+      "label": "Detonated (Non-Nuclear)",
+      "color": "#FF4500",
+      "type": "detonated"
+    },
+    {
+      "label": "Intact",
+      "color": "#32CD32",
+      "type": "intact"
+    },
+    {
+      "label": "Sea Impact",
+      "color": "#1E90FF",
+      "type": "sea"
+    }
+  ],
+  "bombs": [
+    {
+      "id": "bomb-1",
+      "number": 1,
+      "name": "Bomb No. 1",
+      "location": "Rio Almanzora Estuary",
+      "lat": 37.254167,
+      "lon": -1.803056,
+      "status": "Recovered Intact",
+      "status_type": "intact",
+      "color": "#32CD32",
+      "badge_class": "badge-intact",
+      "description": "Found intact in the dried riverbed of the Almanzora River. Parachute deployed correctly.",
+      "technical_details": "Equipped with a 16-foot ring-slot parachute which functioned flawlessly. Drifted into the soft gravel wash of the riverbed, approx. 1.5 miles north of Palomares. Recovered completely intact within hours.",
+      "recovery_method": "Spanish Guardia Civil & USAF search team",
+      "elevation": "14 m above sea level",
+      "payload": "1.45 MT Thermonuclear Warhead"
+    },
+    {
+      "id": "bomb-2",
+      "number": 2,
+      "name": "Bomb No. 2",
+      "location": "Village (Tomato Patch)",
+      "lat": 37.246944,
+      "lon": -1.795000,
+      "status": "Non-nuclear Detonation",
+      "status_type": "detonated",
+      "color": "#FF4500",
+      "badge_class": "badge-detonated",
+      "description": "High explosives detonated on impact. Plutonium scattered, contaminating the area.",
+      "technical_details": "Parachute failed to deploy. High-velocity terminal impact directly into a cultivated tomato field east of the village center detonated the conventional high-explosive lens without nuclear yield. Radioactive plutonium-239 and americium-241 were aerosolized across urban streets and vegetable crops.",
+      "recovery_method": "Debris collected; soil excavated during Project Indalo",
+      "elevation": "22 m above sea level",
+      "payload": "1.45 MT Thermonuclear Warhead"
+    },
+    {
+      "id": "bomb-3",
+      "number": 3,
+      "name": "Bomb No. 3",
+      "location": "Village Outskirts",
+      "lat": 37.251389,
+      "lon": -1.796944,
+      "status": "Non-nuclear Detonation",
+      "status_type": "detonated",
+      "color": "#FF4500",
+      "badge_class": "badge-detonated",
+      "description": "High explosives detonated on impact. Created a crater and scattered radioactive material.",
+      "technical_details": "Parachute malfunctioned. The bomb struck a rocky ridge immediately north-northwest of the village. The conventional blast gouged a deep impact crater and distributed alpha-emitting plutonium dust downwind over agricultural plots.",
+      "recovery_method": "Explosive crater leveled; topsoil removed and packed into steel drums",
+      "elevation": "35 m above sea level",
+      "payload": "1.45 MT Thermonuclear Warhead"
+    },
+    {
+      "id": "bomb-4",
+      "number": 4,
+      "name": "Bomb No. 4",
+      "location": "Mediterranean Sea",
+      "lat": 37.168611,
+      "lon": -1.681389,
+      "status": "Lost at Sea",
+      "status_type": "sea",
+      "color": "#1E90FF",
+      "badge_class": "badge-sea",
+      "description": "Fell into the Mediterranean. Recovered after 80 days by the mini-sub Alvin.",
+      "technical_details": "Parachute partially opened. Local fisherman Francisco Simó Orts ('Paco el de la bomba') pinpointed the offshore splash site. A fleet of 34 US Navy vessels and the experimental submarine DSV Alvin hunted for 80 days. Found on March 17, 1966 on a steep underwater canyon face at 880 m depth, and lifted intact by CURV on April 7, 1966.",
+      "recovery_method": "DSV Alvin Submersible & CURV (Cable-controlled Underwater Recovery Vehicle)",
+      "elevation": "-880 m (Subsea canyon)",
+      "payload": "1.45 MT Thermonuclear Warhead"
+    }
+  ],
+  "briefing": {
+    "title": "The Palomares Incident (1966)",
+    "paragraphs": [
+      "On <strong>January 17, 1966</strong>, a massive B-52G Stratofortress bomber of the United States Air Force collided with a KC-135 Stratotanker during a mid-air refueling operation over the Mediterranean Sea, near the coast of Spain. The accident resulted in the destruction of both aircraft and the deaths of seven crew members."
+    ],
+    "sections": [
+      {
+        "title": "☢️ The Nuclear Payload",
+        "content": "The B-52G was carrying <strong>four B28FI Mod 2 Y1 hydrogen bombs</strong>. Upon the collision, these four nuclear weapons fell from the sky, landing in and around the small fishing village of <strong>Palomares</strong>.",
+        "bullets": [
+          {
+            "highlight": "Two bombs",
+            "class": "text-green",
+            "text": "fell safely by parachute and were recovered intact. One near the almanzora riverbed, and another safely on land."
+          },
+          {
+            "highlight": "Two bombs",
+            "class": "text-red",
+            "text": "suffered non-nuclear detonations of their conventional high explosives upon impact. This caused the radioactive plutonium core to fragment and scatter, contaminating an area of approximately 2 square kilometers (0.77 sq mi) dealing with crops and urban areas."
+          }
+        ]
+      },
+      {
+        "title": "🌊 The Lost Bomb",
+        "content": "The fourth bomb was lost in the Mediterranean Sea. It triggered one of the largest and most expensive search operations in naval history. After 80 days of search, it was located by the deep-submergence vehicle <em>Alvin</em> at a depth of 880 meters (2,900 ft) and recovered intact."
+      },
+      {
+        "title": "🧹 The Aftermath (\"Project Indalo\")",
+        "content": "To resolve the contamination, the US launched a massive cleanup operation. Thousands of tons of contaminated Spanish soil were excavated, packed into barrels, and shipped to the US for disposal at the Savannah River Site in South Carolina."
+      }
+    ]
+  }
+}

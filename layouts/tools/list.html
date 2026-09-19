@@ -4,7 +4,7 @@
     <div class="gallery-breadcrumbs">
       <a href="{{ site.BaseURL }}">Home</a> <span>/</span> <span>Tools</span>
     </div>
-    <h1 class="gallery-title">{{ site.Data.tools_sections.title }}</h1>
+    <h1 class="gallery-title">Tools</h1>
     <p class="gallery-subtitle">{{ site.Data.tools_sections.subtitle }}</p>
   </header>
 
@@ -16,6 +16,15 @@
         <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
           <polyline points="4 17 10 11 4 5"></polyline>
           <line x1="12" y1="19" x2="20" y2="19"></line>
+        </svg>
+        {{- else if eq .icon "languages" }}
+        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m5 8 6 6"></path>
+          <path d="m4 14 6-6 2-3"></path>
+          <path d="M2 5h12"></path>
+          <path d="M7 2h1"></path>
+          <path d="m22 22-5-10-5 10"></path>
+          <path d="M14 18h6"></path>
         </svg>
         {{- else }}
         <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">

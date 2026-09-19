@@ -12,6 +12,17 @@
       "description": "An interactive timeline exploring the 49-year evolution of Unix, GNU, Linux, open-source licensing, and corporate battles from 1969 to 2018.",
       "icon": "terminal",
       "badge": "Interactive Timeline"
+    },
+    {
+      "id": "language-review",
+      "title": "Multilingual Sentence Matrix",
+      "url": "/tools/language-review/",
+      "navLabel": "Language Review",
+      "countUnit": "sentences",
+      "count": 60,
+      "description": "Interactive multilingual spreadsheet to study and compare parallel sentences across 8 languages (Chinese, German, English, etc.) with level filtering and speech synthesis.",
+      "icon": "languages",
+      "badge": "Language Review"
     }
   ]
 }

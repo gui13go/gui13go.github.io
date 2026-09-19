@@ -101,7 +101,7 @@
     {
       "id": "1985-gnu-manifesto-fsf",
       "year": "1985",
-      "title": "GNU & FSF",
+      "title": "GNU & Free Software Foundation",
       "summary": "Stallman published the GNU Manifesto and incorporated the Free Software Foundation (FSF), formally establishing THE FOUR ESSENTIAL SOFTWARE FREEDOMS: Freedom 0 (Run), Freedom 1 (Study & Modify), Freedom 2 (Redistribute), and Freedom 3 (Distribute Modified Versions).",
       "quote": "I consider that the golden rule requires that if I like a program I must share it with other people who like it.",
       "quote_author": "The GNU Manifesto (1985)"
@@ -114,24 +114,24 @@
       "quote": ""
     },
     {
-      "id": "1987-1990-gnu-userland-done",
-      "year": "1987-1990",
-      "title": "Userland Done",
-      "summary": "The FSF successfully completed the entire GNU userland—including GCC (C Compiler), GNU Emacs, Bash (Bourne Again Shell), and Coreutils. However, development of the Mach-based GNU Hurd microkernel stalled due to asynchronous messaging complexity, leaving a critical kernel void.",
-      "quote": ""
-    },
-    {
       "id": "1989-gpl-masterstroke",
       "year": "1989",
-      "title": "The Legal Masterstroke—The GNU General Public License (GPL)",
+      "title": "The GNU General Public License (GPL)",
       "summary": "Stallman recognized that releasing software into the Public Domain or under permissive terms (like the early MIT License or BSD License) had a fatal structural flaw: a proprietary vendor could take the freely contributed code, make proprietary modifications, compile it into a binary, and distribute it under a closed license without sharing the source code back. To prevent this, he invented Copyleft and released the GNU GPL.",
       "quote": "If Software B is derived from A (where A ∈ GPL), ⟹ B MUST be distributed under GPL.",
       "quote_author": "The Copyleft Reciprocal Principle"
     },
     {
+      "id": "1990-gnu-userland-done",
+      "year": "1990",
+      "title": "GNU's Userland Is Ready",
+      "summary": "The FSF successfully completed the entire GNU userland—including GCC (C Compiler), GNU Emacs, Bash (Bourne Again Shell), and Coreutils. However, development of the Mach-based GNU Hurd microkernel stalled due to asynchronous messaging complexity, leaving a critical kernel void.",
+      "quote": ""
+    },
+    {
       "id": "1991-386bsd-released",
       "year": "1991",
-      "title": "Computer Scientists William and Lynne Jolitz Released 386BSD",
+      "title": "386BSD Operating System",
       "summary": "William and Lynne Jolitz ported Berkeley Net/2 to the Intel 386 chip, creating 386BSD—a complete, battle-tested, industrial-grade Unix operating system containing thirty years of Bell Labs and Berkeley heritage. However, the 1992 AT&T/USL lawsuit froze BSD development, opening a window of opportunity for Linux.",
       "quote": "386BSD was a complete, battle-tested, industrial-grade Unix operating system containing thirty years of Bell Labs and Berkeley heritage.",
       "quote_author": "Historical Analysis"
@@ -215,7 +215,7 @@
     {
       "id": "2000-ibm-invests-linux",
       "year": "2000",
-      "title": "January 2000: IBM Invests $1B in Linux",
+      "title": "IBM Invests $1B in Linux",
       "summary": "IBM commits $1 billion to Linux development and enterprise mainframe adoption, cementing Linux as a trusted commercial standard and accelerating open-source adoption across mission-critical enterprise infrastructure worldwide.",
       "quote": "IBM commits $1 billion to Linux development and enterprise mainframe adoption, cementing Linux as a trusted commercial standard.",
       "quote_author": "IBM Linux Strategy (January 2000)"
@@ -223,7 +223,7 @@
     {
       "id": "2001-ballmer-cancer-remark",
       "year": "2001",
-      "title": "Steve Ballmer Says that Linux is a Cancer",
+      "title": "Steve Ballmer Says Linux is a Cancer",
       "summary": "Microsoft CEO Steve Ballmer attacked Linux and the GPL as an intellectual property cancer in an interview with the Chicago Sun-Times, marking the height of Microsoft's aggressive corporate campaign against open source.",
       "quote": "Linux is a cancer that attaches itself in an intellectual property sense to everything it touches. The way the license is written, if you use any open-source software, you have to make the rest of your software open source.",
       "quote_author": "Steve Ballmer (June 2001)"
@@ -238,7 +238,7 @@
     {
       "id": "2007-gplv3-tivoization",
       "year": "2007",
-      "title": "Stallman Designed GPLv3 to Prevent “Tivoization”",
+      "title": "Stallman Designed GPLv3 to Prevent \"Tivoization\"",
       "summary": "Stallman created GPLv3 with anti-tivoization provisions to prevent manufacturers (like TiVo) from running GPL software on hardware locked with cryptographic signatures that block modified user code. Linus Torvalds fiercely refused to adopt GPLv3, locking the Linux kernel onto GPLv2.",
       "quote": ""
     },
