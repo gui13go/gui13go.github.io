@@ -380,6 +380,30 @@
   ],
   "journey": [
     {
+      "role": "Laboratory Engineer of Digital Technologies",
+      "company": "BiUH University (Bielefeld Hainan University of Applied Sciences)",
+      "location": "Hainan, China",
+      "period": "2026 - Present",
+      "type": "Full-time",
+      "bullets": [
+        "Instruction and laboratory supervision in Artificial Intelligence, Modern Computing, and Cluster Computing architectures;",
+        "Teaching applied quantitative coursework spanning Economics, Statistics, and Data Analytics;",
+        "Managing and maintaining digital technologies laboratory infrastructure and high-performance computing clusters;",
+        "Mentoring students through hands-on technical labs, systems engineering, and cluster deployments;"
+      ],
+      "tech": [
+        "AI",
+        "Computing",
+        "Cluster Computing",
+        "Python",
+        "Linux",
+        "Economics",
+        "Statistics",
+        "Bash",
+        "Docker"
+      ]
+    },
+    {
       "role": "AI Engineer",
       "company": "Wayvant",
       "location": "Spain",
