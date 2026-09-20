@@ -374,7 +374,7 @@
       "title": "Underground Railroad Routes",
       "path": "/geolayers/underground-railroad-routes/",
       "description": "The path to freedom. Visualize the clandestine network of routes and safe houses used by enslaved people in the United States to escape to free states and Canada.",
-      "image": "/images/train3.webp",
+      "image": "/images/geolayers/underground-railroad-routes.jpg",
       "availability": "coming_soon",
       "status": "Coming Soon",
       "tags": [
@@ -392,7 +392,7 @@
       "title": "Empires of the Past",
       "path": "/geolayers/empires-of-the-past/",
       "description": "The rise and fall of civilizations. This interactive map visualizes the vast extent of historical empires, allowing users to explore their evolving boundaries and geopolitical influence.",
-      "image": "/images/empire2.webp",
+      "image": "/images/geolayers/empires-of-the-past.jpg",
       "availability": "coming_soon",
       "status": "Coming Soon",
       "tags": [
@@ -410,7 +410,7 @@
       "title": "Active Volcanos",
       "path": "/geolayers/active-volcanos/",
       "description": "Windows into the Earth's interior. Track the locations and activity of the world's most active volcanoes, and understand the tectonic forces that shape our planet.",
-      "image": "/images/volcano2.webp",
+      "image": "/images/geolayers/active-volcanos.jpg",
       "availability": "coming_soon",
       "status": "Coming Soon",
       "tags": [
@@ -428,7 +428,7 @@
       "title": "Indigenous Lands",
       "path": "/geolayers/indigenous-lands/",
       "description": "Mapping heritage and sovereignty. Explore the geographic extent of indigenous lands worldwide, highlighting the importance of territorial rights and cultural preservation.",
-      "image": "/images/indigenous2.webp",
+      "image": "/images/geolayers/indigenous-lands.jpg",
       "availability": "coming_soon",
       "status": "Coming Soon",
       "tags": [
@@ -446,7 +446,7 @@
       "title": "Religeous Sites",
       "path": "/geolayers/religeous-sites/",
       "description": "Geographies of the sacred. A curated map of significant religious and spiritual sites around the globe, from ancient temples to modern cathedrals.",
-      "image": "/images/religion5.webp",
+      "image": "/images/geolayers/religeous-sites.jpg",
       "availability": "coming_soon",
       "status": "Coming Soon",
       "tags": [
@@ -464,7 +464,7 @@
       "title": "Global Festivals",
       "path": "/geolayers/global-festivals/",
       "description": "A global celebration of life. Discover major festivals around the world, from the vibrant colors of Holi to the rhythmic beats of Carnival and the legendary Woodstock.",
-      "image": "/images/festival5.webp",
+      "image": "/images/geolayers/global-festivals.jpg",
       "availability": "coming_soon",
       "status": "Coming Soon",
       "tags": [
@@ -482,7 +482,7 @@
       "title": "Particle Accelerators",
       "path": "/geolayers/particle-accelerators/",
       "description": "Exploring the building blocks of matter. Navigate the global network of particle accelerators, including CERN and other premier research facilities pushing the frontiers of physics.",
-      "image": "/images/particleAccelerator3.webp",
+      "image": "/images/geolayers/particle-accelerators.jpg",
       "availability": "coming_soon",
       "status": "Coming Soon",
       "tags": [
@@ -500,7 +500,7 @@
       "title": "Undersea Cables",
       "path": "/geolayers/undersea-cables/",
       "description": "The nervous system of the global internet. Visualize the massive network of undersea fiber-optic cables that carry nearly all transoceanic digital traffic.",
-      "image": "/images/underseaCables1.webp",
+      "image": "/images/geolayers/undersea-cables.jpg",
       "availability": "coming_soon",
       "status": "Coming Soon",
       "tags": [
@@ -518,7 +518,7 @@
       "title": "Nuclear Test Sites",
       "path": "/geolayers/nuclear-test-sites/",
       "description": "Scars of the atomic age. Map the locations of historical nuclear test sites worldwide, reflecting on the profound impact of atomic weapons development during the 20th century.",
-      "image": "/images/nuclear2.webp",
+      "image": "/images/geolayers/nuclear-test-sites.jpg",
       "availability": "coming_soon",
       "status": "Coming Soon",
       "tags": [
@@ -536,7 +536,7 @@
       "title": "Nuclear Plants",
       "path": "/geolayers/nuclear-plants/",
       "description": "Architectures of atomic power. A global overview of nuclear power plants, exploring the distribution of nuclear energy as a major component of modern power grids.",
-      "image": "/images/nuclear5.webp",
+      "image": "/images/geolayers/nuclear-plants.jpg",
       "availability": "coming_soon",
       "status": "Coming Soon",
       "tags": [
