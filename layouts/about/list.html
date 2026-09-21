@@ -41,7 +41,8 @@
           </div>
 
           <!-- Layer 3: Foreground Person + Elevated Bottom Clouds + Multi-Ring Gold Frame -->
-          <img src="/photos/guigo_avatar_fg.png" alt="{{ $about.personal.name }}" class="avatar-layer-fg" loading="eager" />
+          <img src="/photos/guigo_avatar_fg.png" alt="{{ $about.personal.name }}" class="avatar-layer-fg"
+            loading="eager" />
         </div>
       </div>
     </div>
@@ -64,38 +65,6 @@
         <p>{{ $about.personal.bio }}</p>
       </div>
 
-      <!-- Hero Quick Actions Row -->
-      <div class="about-hero-actions">
-        <a href="mailto:{{ $about.personal.email }}" class="hero-action-btn hero-primary-btn">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-            <polyline points="22,6 12,13 2,6"></polyline>
-          </svg>
-          Get in Touch
-        </a>
-        <button type="button" class="hero-action-btn hero-secondary-btn" id="copyEmailBtn" data-email="{{ $about.personal.email }}" title="Copy email address to clipboard">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-          </svg>
-          Copy Email
-        </button>
-        <button type="button" class="hero-action-btn hero-secondary-btn" id="printResumeBtn" title="Print or save formatted resume">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="6 9 6 2 18 2 18 9"></polyline>
-            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
-            <rect x="6" y="14" width="12" height="8"></rect>
-          </svg>
-          Print Resume
-        </button>
-        <a href="#toolkit" class="hero-action-btn hero-secondary-btn">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="16 18 22 12 16 6"></polyline>
-            <polyline points="8 6 2 12 8 18"></polyline>
-          </svg>
-          Explore Stack &darr;
-        </a>
-      </div>
 
       <!-- Quick Metrics Grid with Count-up -->
       <div class="about-stats-grid">
@@ -113,18 +82,23 @@
   <section class="about-section about-toolkit-section" id="toolkit">
     <div class="about-section-header">
       <h2 class="about-section-title"><span class="title-accent-bar"></span>Technical Toolkit</h2>
-      <span class="about-count-badge"><span id="toolkitVisibleCount">{{ len $about.toolkit }}</span> / {{ len $about.toolkit }} technologies</span>
+      <span class="about-count-badge"><span id="toolkitVisibleCount">{{ len $about.toolkit }}</span> / {{ len
+        $about.toolkit }} technologies</span>
     </div>
 
     <!-- Toolkit Toolbar (Search + Category Filter) -->
     <div class="about-toolbar">
       <div class="gallery-search-box about-search-box">
-        <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+        <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+          stroke-width="2">
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
-        <input type="text" id="toolkitSearchInput" placeholder="Filter technologies (e.g. Python, GCP, BigQuery, Docker)..." autocomplete="off" aria-label="Search toolkit">
-        <button type="button" id="toolkitClearSearch" class="clear-search-btn" style="display:none;" aria-label="Clear search">&times;</button>
+        <input type="text" id="toolkitSearchInput"
+          placeholder="Filter technologies (e.g. Python, GCP, BigQuery, Docker)..." autocomplete="off"
+          aria-label="Search toolkit">
+        <button type="button" id="toolkitClearSearch" class="clear-search-btn" style="display:none;"
+          aria-label="Clear search">&times;</button>
       </div>
 
       <div class="about-filter-chips" id="toolkitFilterGroup" role="group" aria-label="Filter technologies by category">
@@ -132,23 +106,23 @@
           All <span class="filter-count">({{ len $about.toolkit }})</span>
         </button>
         {{- range $cat := $about.toolkitCategories }}
-          {{- if ne $cat "All" }}
-            {{- $count := 0 }}
-            {{- range $about.toolkit }}
-              {{- $match := false }}
-              {{- if eq .category $cat }}
-                {{- $match = true }}
-              {{- else if .tags }}
-                {{- if in .tags $cat }}
-                  {{- $match = true }}
-                {{- end }}
-              {{- end }}
-              {{- if $match }}{{ $count = add $count 1 }}{{ end }}
-            {{- end }}
-            <button type="button" class="about-filter-btn" data-category="{{ $cat | lower }}">
-              {{ $cat }} <span class="filter-count">({{ $count }})</span>
-            </button>
-          {{- end }}
+        {{- if ne $cat "All" }}
+        {{- $count := 0 }}
+        {{- range $about.toolkit }}
+        {{- $match := false }}
+        {{- if eq .category $cat }}
+        {{- $match = true }}
+        {{- else if .tags }}
+        {{- if in .tags $cat }}
+        {{- $match = true }}
+        {{- end }}
+        {{- end }}
+        {{- if $match }}{{ $count = add $count 1 }}{{ end }}
+        {{- end }}
+        <button type="button" class="about-filter-btn" data-category="{{ $cat | lower }}">
+          {{ $cat }} <span class="filter-count">({{ $count }})</span>
+        </button>
+        {{- end }}
         {{- end }}
       </div>
     </div>
@@ -158,11 +132,12 @@
       {{- range $about.toolkit }}
       {{- $cats := slice (.category | lower) }}
       {{- with .tags }}
-        {{- range . }}
-          {{- $cats = $cats | append (. | lower) }}
-        {{- end }}
+      {{- range . }}
+      {{- $cats = $cats | append (. | lower) }}
       {{- end }}
-      <div class="about-tech-card" data-name="{{ .name | lower }}" data-category="{{ delimit $cats " " }}" title="Click to copy technology name">
+      {{- end }}
+      <div class="about-tech-card" data-name="{{ .name | lower }}" data-category="{{ delimit $cats " " }}"
+        title="Click to copy technology name">
         <span class="about-tech-icon" aria-hidden="true">{{ .icon }}</span>
         <div class="about-tech-info">
           <span class="about-tech-name">{{ .name }}</span>
@@ -174,7 +149,8 @@
     </div>
     <div class="gallery-empty-state" id="toolkitEmptyState" style="display:none;">
       <p>No technologies matched your search.</p>
-      <button type="button" class="about-filter-btn" id="toolkitResetBtn" style="margin-top:12px;">Reset Filters</button>
+      <button type="button" class="about-filter-btn" id="toolkitResetBtn" style="margin-top:12px;">Reset
+        Filters</button>
     </div>
   </section>
 
@@ -183,13 +159,6 @@
     <div class="about-section-header">
       <div>
         <h2 class="about-section-title"><span class="title-accent-bar"></span>Professional Journey</h2>
-        <p class="about-section-sub">Experience across cloud data platforms, ML engineering, economic modeling, and consulting.</p>
-      </div>
-      <div class="about-filter-chips" id="journeyFilterGroup" role="group" aria-label="Filter journey by role type">
-        <button type="button" class="about-filter-btn active" data-role="all">All Roles</button>
-        <button type="button" class="about-filter-btn" data-role="engineering">Engineering</button>
-        <button type="button" class="about-filter-btn" data-role="consulting">Consulting</button>
-        <button type="button" class="about-filter-btn" data-role="data science">Data Science</button>
       </div>
     </div>
 
@@ -227,7 +196,8 @@
           <div class="timeline-tech-stack">
             <span class="tech-stack-label">Key Stack:</span>
             {{- range .tech }}
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="{{ . }}" title="Search {{ . }} in Toolkit">
+            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="{{ . }}"
+              title="Search {{ . }} in Toolkit">
               {{ . }}
             </button>
             {{- end }}
@@ -277,7 +247,8 @@
     <div class="about-section-header">
       <h2 class="about-section-title"><span class="title-accent-bar"></span>Certifications & Credentials</h2>
       <div class="about-filter-chips" id="certsFilterGroup" role="group" aria-label="Filter certifications by provider">
-        <button type="button" class="about-filter-btn active" data-provider="all">All ({{ len $about.certifications }})</button>
+        <button type="button" class="about-filter-btn active" data-provider="all">All ({{ len $about.certifications
+          }})</button>
         <button type="button" class="about-filter-btn" data-provider="gcp">Google Cloud (7)</button>
         <button type="button" class="about-filter-btn" data-provider="azure">Microsoft Azure (7)</button>
       </div>
@@ -288,7 +259,8 @@
       <div class="about-cert-card" data-provider="{{ .provider | lower }}">
         <span class="cert-card-icon" aria-hidden="true">{{ .icon }}</span>
         <div class="cert-card-body">
-          <div class="cert-provider-badge provider-{{ .provider | lower }}">{{ if eq .provider "GCP" }}Google Cloud{{ else }}Microsoft Azure{{ end }}</div>
+          <div class="cert-provider-badge provider-{{ .provider | lower }}">{{ if eq .provider "GCP" }}Google Cloud{{
+            else }}Microsoft Azure{{ end }}</div>
           <h3 class="cert-name">{{ .name }}</h3>
         </div>
       </div>
@@ -352,22 +324,26 @@
   <section class="about-section about-connect-section" id="connect">
     <div class="about-connect-card">
       <h2 class="connect-title">Let's Connect</h2>
-      <p class="connect-subtitle">Interested in data architecture, machine learning systems, or collaborative engineering? Feel free to reach out.</p>
+      <p class="connect-subtitle">Interested in data architecture, machine learning systems, or collaborative
+        engineering? Feel free to reach out.</p>
 
       <div class="about-connect-links">
         {{- range $about.connect }}
         <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="about-connect-btn">
           {{- if eq .icon "github" }}
           <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
           </svg>
           {{- else if eq .icon "linkedin" }}
           <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
           </svg>
           {{- else if eq .icon "substack" }}
           <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-            <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
+            <path
+              d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z" />
           </svg>
           {{- else if eq .icon "mail" }}
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
@@ -388,229 +364,179 @@
 
 <!-- Client-side Interactive Script -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  // Toast notification helper
-  const toast = document.getElementById("aboutToast");
-  let toastTimer = null;
-  function showToast(msg) {
-    if (!toast) return;
-    toast.textContent = msg;
-    toast.classList.add("is-visible");
-    if (toastTimer) clearTimeout(toastTimer);
-    toastTimer = setTimeout(function () {
-      toast.classList.remove("is-visible");
-    }, 2400);
-  }
+  document.addEventListener("DOMContentLoaded", function () {
+    // Toast notification helper
+    const toast = document.getElementById("aboutToast");
+    let toastTimer = null;
+    function showToast(msg) {
+      if (!toast) return;
+      toast.textContent = msg;
+      toast.classList.add("is-visible");
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () {
+        toast.classList.remove("is-visible");
+      }, 2400);
+    }
 
-  // Copy Email button
-  const copyEmailBtn = document.getElementById("copyEmailBtn");
-  if (copyEmailBtn) {
-    copyEmailBtn.addEventListener("click", function () {
-      const email = copyEmailBtn.getAttribute("data-email");
-      if (email && navigator.clipboard) {
-        navigator.clipboard.writeText(email).then(function () {
-          showToast("Copied to clipboard: " + email);
-        }).catch(function () {
-          showToast("Email: " + email);
+    // Language Progress Bar Animation
+    const langBars = Array.from(document.querySelectorAll(".lang-progress-bar"));
+    if ("IntersectionObserver" in window) {
+      const langObserver = new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            const bar = entry.target;
+            const pct = bar.getAttribute("data-percent") || "0";
+            bar.style.width = pct + "%";
+            obs.unobserve(bar);
+          }
         });
-      }
-    });
-  }
+      }, { threshold: 0.2 });
 
-  // Print Resume button
-  const printBtn = document.getElementById("printResumeBtn");
-  if (printBtn) {
-    printBtn.addEventListener("click", function () {
-      window.print();
-    });
-  }
-
-  // Language Progress Bar Animation
-  const langBars = Array.from(document.querySelectorAll(".lang-progress-bar"));
-  if ("IntersectionObserver" in window) {
-    const langObserver = new IntersectionObserver(function (entries, obs) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          const bar = entry.target;
-          const pct = bar.getAttribute("data-percent") || "0";
-          bar.style.width = pct + "%";
-          obs.unobserve(bar);
-        }
+      langBars.forEach(function (b) { langObserver.observe(b); });
+    } else {
+      langBars.forEach(function (b) {
+        b.style.width = (b.getAttribute("data-percent") || "0") + "%";
       });
-    }, { threshold: 0.2 });
+    }
 
-    langBars.forEach(function (b) { langObserver.observe(b); });
-  } else {
-    langBars.forEach(function (b) {
-      b.style.width = (b.getAttribute("data-percent") || "0") + "%";
-    });
-  }
+    // Toolkit filter & search
+    const toolkitSearch = document.getElementById("toolkitSearchInput");
+    const toolkitClear = document.getElementById("toolkitClearSearch");
+    const toolkitCount = document.getElementById("toolkitVisibleCount");
+    const toolkitEmpty = document.getElementById("toolkitEmptyState");
+    const toolkitReset = document.getElementById("toolkitResetBtn");
+    const toolkitCards = Array.from(document.querySelectorAll(".about-tech-card"));
+    const toolkitFilterBtns = Array.from(document.querySelectorAll("#toolkitFilterGroup .about-filter-btn"));
 
-  // Toolkit filter & search
-  const toolkitSearch = document.getElementById("toolkitSearchInput");
-  const toolkitClear = document.getElementById("toolkitClearSearch");
-  const toolkitCount = document.getElementById("toolkitVisibleCount");
-  const toolkitEmpty = document.getElementById("toolkitEmptyState");
-  const toolkitReset = document.getElementById("toolkitResetBtn");
-  const toolkitCards = Array.from(document.querySelectorAll(".about-tech-card"));
-  const toolkitFilterBtns = Array.from(document.querySelectorAll("#toolkitFilterGroup .about-filter-btn"));
+    let currentCategory = "all";
 
-  let currentCategory = "all";
+    function filterToolkit() {
+      const query = (toolkitSearch.value || "").trim().toLowerCase();
+      let count = 0;
 
-  function filterToolkit() {
-    const query = (toolkitSearch.value || "").trim().toLowerCase();
-    let count = 0;
+      toolkitCards.forEach(function (card) {
+        const name = card.getAttribute("data-name") || "";
+        const cat = card.getAttribute("data-category") || "";
+        const cardCats = cat.toLowerCase().split(/\s+/);
 
-    toolkitCards.forEach(function (card) {
-      const name = card.getAttribute("data-name") || "";
-      const cat = card.getAttribute("data-category") || "";
-      const cardCats = cat.toLowerCase().split(/\s+/);
-
-      let matchesCat = true;
-      if (currentCategory !== "all") {
-        matchesCat = cardCats.includes(currentCategory);
-      }
-
-      let matchesQuery = true;
-      if (query) {
-        matchesQuery = name.includes(query) || cat.includes(query);
-      }
-
-      if (matchesCat && matchesQuery) {
-        card.style.display = "";
-        count++;
-      } else {
-        card.style.display = "none";
-      }
-    });
-
-    if (toolkitCount) toolkitCount.textContent = count;
-    if (toolkitEmpty) toolkitEmpty.style.display = count === 0 ? "block" : "none";
-    if (toolkitClear) toolkitClear.style.display = query.length > 0 ? "block" : "none";
-  }
-
-  toolkitFilterBtns.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      toolkitFilterBtns.forEach(function (b) { b.classList.remove("active"); });
-      btn.classList.add("active");
-      currentCategory = btn.getAttribute("data-category") || "all";
-      filterToolkit();
-    });
-  });
-
-  if (toolkitSearch) {
-    toolkitSearch.addEventListener("input", filterToolkit);
-  }
-
-  if (toolkitClear) {
-    toolkitClear.addEventListener("click", function () {
-      toolkitSearch.value = "";
-      filterToolkit();
-      toolkitSearch.focus();
-    });
-  }
-
-  if (toolkitReset) {
-    toolkitReset.addEventListener("click", function () {
-      if (toolkitSearch) toolkitSearch.value = "";
-      currentCategory = "all";
-      toolkitFilterBtns.forEach(function (b) {
-        if (b.getAttribute("data-category") === "all") b.classList.add("active");
-        else b.classList.remove("active");
-      });
-      filterToolkit();
-    });
-  }
-
-  // Click tech card to copy name
-  toolkitCards.forEach(function (card) {
-    card.addEventListener("click", function () {
-      const techName = card.querySelector(".about-tech-name") ? card.querySelector(".about-tech-name").textContent : "";
-      if (techName && navigator.clipboard) {
-        navigator.clipboard.writeText(techName).then(function () {
-          showToast("Copied technology: " + techName);
-        });
-      }
-    });
-  });
-
-  // Cross-component interaction: Click tech pill in timeline to find it in toolkit
-  const techPills = Array.from(document.querySelectorAll(".interactive-tech-pill"));
-  techPills.forEach(function (pill) {
-    pill.addEventListener("click", function (e) {
-      e.stopPropagation();
-      const tech = (pill.getAttribute("data-tech") || "").toLowerCase();
-      if (!tech) return;
-
-      // Reset category to all
-      currentCategory = "all";
-      toolkitFilterBtns.forEach(function (b) {
-        if (b.getAttribute("data-category") === "all") b.classList.add("active");
-        else b.classList.remove("active");
-      });
-
-      if (toolkitSearch) {
-        toolkitSearch.value = tech;
-        filterToolkit();
-      }
-
-      const toolkitSec = document.getElementById("toolkit");
-      if (toolkitSec) {
-        toolkitSec.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-
-      showToast("Filtered toolkit for: " + tech);
-    });
-  });
-
-  // Journey role filter
-  const journeyFilterBtns = Array.from(document.querySelectorAll("#journeyFilterGroup .about-filter-btn"));
-  const journeyItems = Array.from(document.querySelectorAll(".about-timeline-item"));
-
-  journeyFilterBtns.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      journeyFilterBtns.forEach(function (b) { b.classList.remove("active"); });
-      btn.classList.add("active");
-      const roleFilter = btn.getAttribute("data-role") || "all";
-
-      journeyItems.forEach(function (item) {
-        const title = item.getAttribute("data-role-title") || "";
-        const type = item.getAttribute("data-role-type") || "";
-
-        let match = true;
-        if (roleFilter === "engineering") {
-          match = title.includes("engineer") || type.includes("engineer");
-        } else if (roleFilter === "consulting") {
-          match = title.includes("consultant") || type.includes("consult");
-        } else if (roleFilter === "data science") {
-          match = title.includes("scientist") || title.includes("data");
+        let matchesCat = true;
+        if (currentCategory !== "all") {
+          matchesCat = cardCats.includes(currentCategory);
         }
 
-        item.style.display = match ? "" : "none";
-      });
-    });
-  });
+        let matchesQuery = true;
+        if (query) {
+          matchesQuery = name.includes(query) || cat.includes(query);
+        }
 
-  // Certifications filter
-  const certFilterBtns = Array.from(document.querySelectorAll("#certsFilterGroup .about-filter-btn"));
-  const certCards = Array.from(document.querySelectorAll(".about-cert-card"));
-
-  certFilterBtns.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      certFilterBtns.forEach(function (b) { b.classList.remove("active"); });
-      btn.classList.add("active");
-      const provider = btn.getAttribute("data-provider") || "all";
-
-      certCards.forEach(function (card) {
-        const cardProvider = card.getAttribute("data-provider");
-        if (provider === "all" || cardProvider === provider) {
+        if (matchesCat && matchesQuery) {
           card.style.display = "";
+          count++;
         } else {
           card.style.display = "none";
         }
       });
+
+      if (toolkitCount) toolkitCount.textContent = count;
+      if (toolkitEmpty) toolkitEmpty.style.display = count === 0 ? "block" : "none";
+      if (toolkitClear) toolkitClear.style.display = query.length > 0 ? "block" : "none";
+    }
+
+    toolkitFilterBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        toolkitFilterBtns.forEach(function (b) { b.classList.remove("active"); });
+        btn.classList.add("active");
+        currentCategory = btn.getAttribute("data-category") || "all";
+        filterToolkit();
+      });
+    });
+
+    if (toolkitSearch) {
+      toolkitSearch.addEventListener("input", filterToolkit);
+    }
+
+    if (toolkitClear) {
+      toolkitClear.addEventListener("click", function () {
+        toolkitSearch.value = "";
+        filterToolkit();
+        toolkitSearch.focus();
+      });
+    }
+
+    if (toolkitReset) {
+      toolkitReset.addEventListener("click", function () {
+        if (toolkitSearch) toolkitSearch.value = "";
+        currentCategory = "all";
+        toolkitFilterBtns.forEach(function (b) {
+          if (b.getAttribute("data-category") === "all") b.classList.add("active");
+          else b.classList.remove("active");
+        });
+        filterToolkit();
+      });
+    }
+
+    // Click tech card to copy name
+    toolkitCards.forEach(function (card) {
+      card.addEventListener("click", function () {
+        const techName = card.querySelector(".about-tech-name") ? card.querySelector(".about-tech-name").textContent : "";
+        if (techName && navigator.clipboard) {
+          navigator.clipboard.writeText(techName).then(function () {
+            showToast("Copied technology: " + techName);
+          });
+        }
+      });
+    });
+
+    // Cross-component interaction: Click tech pill in timeline to find it in toolkit
+    const techPills = Array.from(document.querySelectorAll(".interactive-tech-pill"));
+    techPills.forEach(function (pill) {
+      pill.addEventListener("click", function (e) {
+        e.stopPropagation();
+        const tech = (pill.getAttribute("data-tech") || "").toLowerCase();
+        if (!tech) return;
+
+        // Reset category to all
+        currentCategory = "all";
+        toolkitFilterBtns.forEach(function (b) {
+          if (b.getAttribute("data-category") === "all") b.classList.add("active");
+          else b.classList.remove("active");
+        });
+
+        if (toolkitSearch) {
+          toolkitSearch.value = tech;
+          filterToolkit();
+        }
+
+        const toolkitSec = document.getElementById("toolkit");
+        if (toolkitSec) {
+          toolkitSec.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        showToast("Filtered toolkit for: " + tech);
+      });
+    });
+
+
+    // Certifications filter
+    const certFilterBtns = Array.from(document.querySelectorAll("#certsFilterGroup .about-filter-btn"));
+    const certCards = Array.from(document.querySelectorAll(".about-cert-card"));
+
+    certFilterBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        certFilterBtns.forEach(function (b) { b.classList.remove("active"); });
+        btn.classList.add("active");
+        const provider = btn.getAttribute("data-provider") || "all";
+
+        certCards.forEach(function (card) {
+          const cardProvider = card.getAttribute("data-provider");
+          if (provider === "all" || cardProvider === provider) {
+            card.style.display = "";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
     });
   });
-});
 </script>
 {{- end }}

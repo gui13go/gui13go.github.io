@@ -49,7 +49,7 @@
     {
       "id": "1969-unix-genesis",
       "year": "1969",
-      "title": "The Genesis of Unix at Bell Labs",
+      "title": "The Genesis of Unix",
       "summary": "Following the collapse of the Multics project, Ken Thompson, Dennis Ritchie, Brian Kernighan, and Doug McIlroy at Bell Labs created Unix on a discarded DEC PDP-7 minicomputer, written originally in assembly language. It pioneered the modular Unix philosophy: write programs that do one thing and do it well, composing them over plain text streams. While its source code was widely shared in its early years across universities and research labs, it was distributed under restrictive academic and corporate licenses from AT&T, not open-source terms.",
       "quote": ""
     },
