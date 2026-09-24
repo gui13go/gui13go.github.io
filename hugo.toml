@@ -23,6 +23,11 @@ enableEmoji = true
     title = 'Guilherme Viegas'
     subtitle = 'Systems Engineer & Researcher'
 
+  [params.footer]
+    copyrightText = "Guilherme's Hub"
+    text = "Open Code, Open Mind 🚀"
+    hidePoweredBy = true
+
   # Theme settings
   defaultTheme = 'auto' # auto, dark, light
   disableThemeToggle = false
@@ -36,14 +41,6 @@ enableEmoji = true
   UseHugoToc = true
   disableSpecial1stPost = true
 
-  # Social Icons
-  [[params.socialIcons]]
-    name = 'github'
-    url = 'https://github.com/gui13go'
-
-  [[params.socialIcons]]
-    name = 'substack'
-    url = 'https://guilhermeviegas.substack.com'
 
   # Cover image settings
   [params.cover]

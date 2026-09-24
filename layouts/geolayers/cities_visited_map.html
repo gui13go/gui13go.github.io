@@ -35,7 +35,7 @@
         <span class="cities-stat-label">Countries & Territories</span>
       </div>
       <div class="cities-stat-card">
-        <span class="cities-stat-number">3</span>
+        <span class="cities-stat-number">{{ $mapData.total_continents | default 4 }}</span>
         <span class="cities-stat-label">Continents</span>
       </div>
       <div class="cities-stat-card active-city-card" id="activeCityCard" style="display:none;">

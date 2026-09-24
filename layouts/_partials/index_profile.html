@@ -8,26 +8,6 @@
             I engineer intelligent solutions that turn data into compelling digital narratives using creativity,
             technique, code, and AI.
         </p>
-
-        <div class="hero-cta-group">
-            <a href="{{ " /blogs/" | absURL }}" class="hero-btn primary">
-                <span>Explore Blogs & Articles</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-            </a>
-            <a href="{{ " /search/" | absURL }}" class="hero-btn secondary">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="11" cy="11" r="8" />
-                    <path d="m21 21-4.35-4.35" />
-                </svg>
-                <span>Search Topics</span>
-            </a>
-        </div>
-
-        {{- partial "social_icons.html" -}}
     </div>
 </div>
 
@@ -39,7 +19,7 @@
             <p class="section-desc">Here are some of the best contents from this website.
             </p>
         </div>
-        <a href="{{ " /blogs/" | absURL }}" class="section-all-link">
+        <a href="{{ "/blogs/" | relURL }}" class="section-all-link">
             <span>View all blogs</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
                 stroke-linecap="round" stroke-linejoin="round">
@@ -53,9 +33,13 @@
         <article class="featured-card">
             {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
             {{- if and .Params.cover.image (not $isHidden) }}
+            {{- $coverImg := .Params.cover.image }}
+            {{- if not (hasPrefix $coverImg "http") }}
+                {{- $coverImg = $coverImg | relURL }}
+            {{- end }}
             <a href="{{ .Permalink }}" class="card-cover-link">
                 <div class="card-cover-wrapper">
-                    <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}"
+                    <img src="{{ $coverImg }}" alt="{{ .Params.cover.alt | default .Title }}"
                         loading="lazy" class="card-cover-img" />
                     <div class="card-cover-gradient"></div>
                 </div>
@@ -63,7 +47,7 @@
             {{- end }}
             <div class="card-body">
                 <div class="card-meta">
-                    <time datetime="{{ .Date.Format " 2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
                     <span class="meta-dot">·</span>
                     <span>{{ .ReadingTime }} min read</span>
                 </div>
@@ -76,7 +60,7 @@
                 <div class="card-footer">
                     <div class="card-tags">
                         {{- range (first 3 .Params.tags) }}
-                        <a href="{{ printf " /tags/%s/" (. | urlize) | absURL }}" class="tag-pill">#{{ . }}</a>
+                        <a href="{{ printf "/tags/%s/" (. | urlize) | relURL }}" class="tag-pill">#{{ . }}</a>
                         {{- end }}
                     </div>
                     <a href="{{ .Permalink }}" class="read-more-link" aria-label="Read {{ .Title }}">

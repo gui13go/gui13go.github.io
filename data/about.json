@@ -4,7 +4,7 @@
     "title": "Systems Engineer & Strategic Data Architect",
     "tagline": "Human-in-the-loop",
     "avatar": "/photos/guigo_saint_avatar.png",
-    "cloudBanner": "/images/cloud1.webp",
+    "cloudBanner": "/images/celestial_cloud_banner.webp",
     "location": "Hainan, China",
     "email": "guilhermeviegas1993@gmail.com",
     "bio": "I am a strategic data architect and systems engineer who designs and implements robust, scalable data ecosystems, translating complex information into actionable insights. My expertise spans the entire data lifecycle, from developing cloud-native infrastructure and automated pipelines to deploying advanced machine learning and geospatial models. With a foundational understanding in economics, I consistently bridge technical innovation with business objectives, empowering data-driven decisions that foster growth and efficiency."
@@ -127,19 +127,25 @@
       "name": "Qdrant",
       "icon": "🎯",
       "category": "AI",
-      "tags": ["Databases"]
+      "tags": [
+        "Databases"
+      ]
     },
     {
       "name": "ChromaDB",
       "icon": "🌈",
       "category": "AI",
-      "tags": ["Databases"]
+      "tags": [
+        "Databases"
+      ]
     },
     {
       "name": "pgvector",
       "icon": "🐘",
       "category": "AI",
-      "tags": ["Databases"]
+      "tags": [
+        "Databases"
+      ]
     },
     {
       "name": "Pandas",
@@ -355,7 +361,9 @@
       "name": "PostGIS",
       "icon": "🌍",
       "category": "Geospatial",
-      "tags": ["Databases"]
+      "tags": [
+        "Databases"
+      ]
     },
     {
       "name": "GDAL/OGR",
@@ -654,14 +662,14 @@
       "flag": "🇩🇪",
       "level": "B2",
       "status": "Upper Intermediate",
-      "percent": 70
+      "percent": 55
     },
     {
       "name": "French",
       "flag": "🇫🇷",
       "level": "A1",
       "status": "Elementary",
-      "percent": 9
+      "percent": 4
     },
     {
       "name": "Mandarin",

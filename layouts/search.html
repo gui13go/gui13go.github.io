@@ -14,4 +14,29 @@
     <ul id="searchResults" class="searchResults" aria-label="search results"></ul>
 </div>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get("q");
+    if (q) {
+        const sInput = document.getElementById("searchInput");
+        const resList = document.getElementById("searchResults");
+        if (sInput) {
+            sInput.value = q;
+            let attempts = 0;
+            const timer = setInterval(() => {
+                attempts++;
+                if (!sInput.disabled) {
+                    sInput.dispatchEvent(new Event("input", { bubbles: true }));
+                }
+                // Stop once results are rendered or after 25 attempts (~2.5s)
+                if ((resList && resList.children.length > 0) || attempts > 25) {
+                    clearInterval(timer);
+                }
+            }, 100);
+        }
+    }
+});
+</script>
+
 {{- end }}
