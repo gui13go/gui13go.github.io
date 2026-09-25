@@ -1,0 +1,1583 @@
+<main class="main">
+<div class="geolayers-page-container">
+  <header class="gallery-header">
+    <div class="gallery-breadcrumbs">
+      <a href="http://localhost:1313/">Home</a> <span>/</span> <span>GeoLayers</span>
+    </div>
+    <h1 class="gallery-title">GeoLayers</h1>
+    <p class="gallery-subtitle">Interactive geospatial visualizations, cartographic explorations, and spatial narratives.</p>
+  </header>
+
+  
+  <div class="geolayers-toolbar">
+    <div class="gallery-search-box geolayers-search-box">
+      <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+        stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="geoSearchInput" placeholder="Search geolayers by title, description, or tags..."
+        autocomplete="off" aria-label="Search geolayers">
+      <button type="button" id="geoClearSearch" class="clear-search-btn" style="display:none;"
+        aria-label="Clear search">&times;</button>
+    </div>
+
+    <div class="gallery-count-badge geolayers-count-badge">
+      Showing <span id="geoVisibleCount">35</span> of 35 geolayers
+    </div>
+  </div>
+
+  
+  <div class="geolayers-tag-filter" id="geoTagFilter" role="group" aria-label="Filter by topic">
+    <button type="button" class="geo-filter-btn active" data-tag="all">All</button>
+    <button type="button" class="geo-filter-btn" data-tag="personal">Personal</button>
+    <button type="button" class="geo-filter-btn" data-tag="travel">Travel</button>
+    <button type="button" class="geo-filter-btn" data-tag="interactive">Interactive</button>
+    <button type="button" class="geo-filter-btn" data-tag="map">Map</button>
+    <button type="button" class="geo-filter-btn" data-tag="urban">Urban</button>
+    <button type="button" class="geo-filter-btn" data-tag="demography">Demography</button>
+    <button type="button" class="geo-filter-btn" data-tag="geospatial">Geospatial</button>
+  </div>
+
+  
+  <div class="geolayers-grid" id="geolayersGrid">
+    <article class="geolayer-card is-wip" data-id="my-camino"
+      data-title="my camino" data-description="a geospatial visualization of my camino de santiago journey. from florianópolis, brazil, stepping across the atlantic, all the way to santiago de compostela, spain." data-tags="travel,pilgrimage,interactive,map" data-availability="work_in_progress">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/my-camino.jpg" alt="My Camino" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Work in Progress
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>My Camino</span>
+        </h2>
+
+        <p class="geolayer-card-desc">A geospatial visualization of my Camino de Santiago journey. From Florianópolis, Brazil, stepping across the Atlantic, all the way to Santiago de Compostela, Spain.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Travel</span>
+          <span class="geolayer-tag">Pilgrimage</span>
+          <span class="geolayer-tag">Interactive</span>
+          <span class="geolayer-tag">Map</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="My Camino"
+            data-desc="A geospatial visualization of my Camino de Santiago journey. From Florianópolis, Brazil, stepping across the Atlantic, all the way to Santiago de Compostela, Spain." data-tags='Travel, Pilgrimage, Interactive, Map'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-available" data-id="cities-i-have-visited"
+      data-title="cities i have visited" data-description="a cartographic journey through personal history. trace the geographic footprint of travel across the globe, visualized through interactive spatial coordinates." data-tags="personal,travel,geospatial,map,interactive,coordinates,chronicle" data-availability="available">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/cities-i-have-visited.jpg" alt="Cities I Have Visited" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-available">
+          <span class="status-dot"></span>
+          Available
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <a href="/geolayers/cities-i-have-visited/">Cities I Have Visited</a>
+        </h2>
+
+        <p class="geolayer-card-desc">A cartographic journey through personal history. Trace the geographic footprint of travel across the globe, visualized through interactive spatial coordinates.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Personal</span>
+          <span class="geolayer-tag">Travel</span>
+          <span class="geolayer-tag">Geospatial</span>
+          <span class="geolayer-tag">Map</span>
+          <span class="geolayer-tag">Interactive</span>
+          <span class="geolayer-tag">Coordinates</span>
+          <span class="geolayer-tag">Chronicle</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <a href="/geolayers/cities-i-have-visited/" class="geolayer-card-btn active">
+            <span>Explore Map</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-available" data-id="usa-dropped-nukes-on-spain"
+      data-title="usa dropped nukes on spain" data-description="decoding a cold war catastrophe. an interactive reconstruction of the 1966 palomares incident, where hydrogen bombs were accidentally dropped onto the spanish coast." data-tags="nuke,history,spain,cold war,geopolitics,analysis,incident" data-availability="available">
+      <div class="geolayer-card-media">
+        <img src="/images/palomares_1966.webp" alt="USA dropped nukes on Spain" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-available">
+          <span class="status-dot"></span>
+          Available
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <a href="/geolayers/usa-dropped-nukes-on-spain/">USA dropped nukes on Spain</a>
+        </h2>
+
+        <p class="geolayer-card-desc">Decoding a Cold War catastrophe. An interactive reconstruction of the 1966 Palomares incident, where hydrogen bombs were accidentally dropped onto the Spanish coast.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Nuke</span>
+          <span class="geolayer-tag">History</span>
+          <span class="geolayer-tag">Spain</span>
+          <span class="geolayer-tag">Cold War</span>
+          <span class="geolayer-tag">Geopolitics</span>
+          <span class="geolayer-tag">Analysis</span>
+          <span class="geolayer-tag">Incident</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <a href="/geolayers/usa-dropped-nukes-on-spain/" class="geolayer-card-btn active">
+            <span>Explore Map</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-available" data-id="usa-dropped-nukes-on-greenland"
+      data-title="usa dropped nukes on greenland" data-description="a visualization of the 1968 thule air base accident. it reconstructs the crash of a b-52 carrying hydrogen bombs in the icy landscape of northern greenland." data-tags="nuke,history,greenland,cold war,geopolitics,analysis,arctic" data-availability="available">
+      <div class="geolayer-card-media">
+        <img src="/images/thule_1968.webp" alt="USA dropped nukes on Greenland" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-available">
+          <span class="status-dot"></span>
+          Available
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <a href="/geolayers/usa-dropped-nukes-on-greenland/">USA dropped nukes on Greenland</a>
+        </h2>
+
+        <p class="geolayer-card-desc">A visualization of the 1968 Thule Air Base accident. It reconstructs the crash of a B-52 carrying hydrogen bombs in the icy landscape of Northern Greenland.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Nuke</span>
+          <span class="geolayer-tag">History</span>
+          <span class="geolayer-tag">Greenland</span>
+          <span class="geolayer-tag">Cold War</span>
+          <span class="geolayer-tag">Geopolitics</span>
+          <span class="geolayer-tag">Analysis</span>
+          <span class="geolayer-tag">Arctic</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <a href="/geolayers/usa-dropped-nukes-on-greenland/" class="geolayer-card-btn active">
+            <span>Explore Map</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-available" data-id="map-projection-review"
+      data-title="map projection review" data-description="a short review on the various map projections out there, all rendered with d3.js" data-tags="cartography,d3.js,crs,map projections" data-availability="available">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/map-projection-review.jpg" alt="Map Projection Review" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-available">
+          <span class="status-dot"></span>
+          Available
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <a href="/geolayers/map-projection-review/">Map Projection Review</a>
+        </h2>
+
+        <p class="geolayer-card-desc">A Short Review on the various map projections out there, all rendered with D3.js</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Cartography</span>
+          <span class="geolayer-tag">D3.js</span>
+          <span class="geolayer-tag">CRS</span>
+          <span class="geolayer-tag">Map Projections</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <a href="/geolayers/map-projection-review/" class="geolayer-card-btn active">
+            <span>Explore Map</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-available" data-id="hiroshima-nagasaki"
+      data-title="hiroshima-nagasaki" data-description="a spatial demonstration of the hiroshima and nagasaki atomic bombings, visualizing the impact zones and historical context of these events." data-tags="history,analysis,nuclear,japan,world war ii,spatial analysis,impact zones" data-availability="available">
+      <div class="geolayer-card-media">
+        <img src="/images/bomb1.webp" alt="Hiroshima-Nagasaki" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-available">
+          <span class="status-dot"></span>
+          Available
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <a href="/geolayers/hiroshima-nagasaki/">Hiroshima-Nagasaki</a>
+        </h2>
+
+        <p class="geolayer-card-desc">A spatial demonstration of the Hiroshima and Nagasaki atomic bombings, visualizing the impact zones and historical context of these events.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">History</span>
+          <span class="geolayer-tag">Analysis</span>
+          <span class="geolayer-tag">Nuclear</span>
+          <span class="geolayer-tag">Japan</span>
+          <span class="geolayer-tag">World War II</span>
+          <span class="geolayer-tag">Spatial Analysis</span>
+          <span class="geolayer-tag">Impact Zones</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <a href="/geolayers/hiroshima-nagasaki/" class="geolayer-card-btn active">
+            <span>Explore Map</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-available" data-id="ecosystems-of-the-world"
+      data-title="ecosystems of the world" data-description="get to explore the ecosystems of the world, from deserts to rainforests, and understand their unique characteristics and biodiversity." data-tags="nature,environment,biodiversity" data-availability="available">
+      <div class="geolayer-card-media">
+        <img src="/images/ecosystems_world.webp" alt="Ecosystems of the World" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-available">
+          <span class="status-dot"></span>
+          Available
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <a href="/geolayers/ecosystems-of-the-world/">Ecosystems of the World</a>
+        </h2>
+
+        <p class="geolayer-card-desc">Get to explore the ecosystems of the world, from deserts to rainforests, and understand their unique characteristics and biodiversity.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Nature</span>
+          <span class="geolayer-tag">Environment</span>
+          <span class="geolayer-tag">Biodiversity</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <a href="/geolayers/ecosystems-of-the-world/" class="geolayer-card-btn active">
+            <span>Explore Map</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-available" data-id="timezones"
+      data-title="timezones" data-description="explore the timezones of the world with this interactive map. understand how time is divided across different regions and how it affects global connectivity." data-tags="time,world,geography,timezones,interactive,chronology" data-availability="available">
+      <div class="geolayer-card-media">
+        <img src="/images/time3.webp" alt="Timezones" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-available">
+          <span class="status-dot"></span>
+          Available
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <a href="/geolayers/timezones/">Timezones</a>
+        </h2>
+
+        <p class="geolayer-card-desc">Explore the timezones of the world with this interactive map. Understand how time is divided across different regions and how it affects global connectivity.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Time</span>
+          <span class="geolayer-tag">World</span>
+          <span class="geolayer-tag">Geography</span>
+          <span class="geolayer-tag">Timezones</span>
+          <span class="geolayer-tag">Interactive</span>
+          <span class="geolayer-tag">Chronology</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <a href="/geolayers/timezones/" class="geolayer-card-btn active">
+            <span>Explore Map</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="world-cities-population"
+      data-title="world cities population" data-description="explore cities around the world and their population size. this interactive map visualizes the population distribution in major cities, helping you understand urbanization patterns." data-tags="demography,urban,population,mapping,statistics,growth,sociology" data-availability="work_in_progress">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/world-cities-population.jpg" alt="World Cities Population" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Work in Progress
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>World Cities Population</span>
+        </h2>
+
+        <p class="geolayer-card-desc">Explore cities around the world and their population size. This interactive map visualizes the population distribution in major cities, helping you understand urbanization patterns.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Demography</span>
+          <span class="geolayer-tag">Urban</span>
+          <span class="geolayer-tag">Population</span>
+          <span class="geolayer-tag">Mapping</span>
+          <span class="geolayer-tag">Statistics</span>
+          <span class="geolayer-tag">Growth</span>
+          <span class="geolayer-tag">Sociology</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="World Cities Population"
+            data-desc="Explore cities around the world and their population size. This interactive map visualizes the population distribution in major cities, helping you understand urbanization patterns." data-tags='Demography, Urban, Population, Mapping, Statistics, Growth, Sociology'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-available" data-id="sea-level-simulator"
+      data-title="sea level simulator" data-description="simulate sea level rise and its impact on coastal areas. this interactive map allows users to visualize how different levels of sea rise would affect regions around the world." data-tags="climate,simulation,sea level,environment,oceanography,risk,geoscience" data-availability="available">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/sea-level-simulator.jpg" alt="Sea Level Simulator" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-available">
+          <span class="status-dot"></span>
+          Available
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <a href="/geolayers/sea-level-simulator/">Sea Level Simulator</a>
+        </h2>
+
+        <p class="geolayer-card-desc">Simulate sea level rise and its impact on coastal areas. This interactive map allows users to visualize how different levels of sea rise would affect regions around the world.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Climate</span>
+          <span class="geolayer-tag">Simulation</span>
+          <span class="geolayer-tag">Sea Level</span>
+          <span class="geolayer-tag">Environment</span>
+          <span class="geolayer-tag">Oceanography</span>
+          <span class="geolayer-tag">Risk</span>
+          <span class="geolayer-tag">Geoscience</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <a href="/geolayers/sea-level-simulator/" class="geolayer-card-btn active">
+            <span>Explore Map</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-available" data-id="solar-terminator"
+      data-title="solar terminator" data-description="the solar terminator shows the moving line dividing earth&#39;s day and night sides. watch as the shadow of our planet transitions across the globe." data-tags="astronomy,nature,earth,day/night,visualization,rotation" data-availability="available">
+      <div class="geolayer-card-media">
+        <img src="/images/dayNnight7.webp" alt="Solar Terminator" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-available">
+          <span class="status-dot"></span>
+          Available
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <a href="/geolayers/solar-terminator/">Solar Terminator</a>
+        </h2>
+
+        <p class="geolayer-card-desc">The solar terminator shows the moving line dividing Earth&#39;s day and night sides. Watch as the shadow of our planet transitions across the globe.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Astronomy</span>
+          <span class="geolayer-tag">Nature</span>
+          <span class="geolayer-tag">Earth</span>
+          <span class="geolayer-tag">Day/Night</span>
+          <span class="geolayer-tag">Visualization</span>
+          <span class="geolayer-tag">Rotation</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <a href="/geolayers/solar-terminator/" class="geolayer-card-btn active">
+            <span>Explore Map</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="brazilian-road-network"
+      data-title="brazilian road network" data-description="a spatial visualization of the brazilian road network through openlayer mapping." data-tags="infrastructure,brazil,roads,logistics,mapping,transport,geodata" data-availability="work_in_progress">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/brazilian-road-network.jpg" alt="Brazilian Road Network" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Work in Progress
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>Brazilian Road Network</span>
+        </h2>
+
+        <p class="geolayer-card-desc">A spatial visualization of the brazilian road network through OpenLayer mapping.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Infrastructure</span>
+          <span class="geolayer-tag">Brazil</span>
+          <span class="geolayer-tag">Roads</span>
+          <span class="geolayer-tag">Logistics</span>
+          <span class="geolayer-tag">Mapping</span>
+          <span class="geolayer-tag">Transport</span>
+          <span class="geolayer-tag">Geodata</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="Brazilian Road Network"
+            data-desc="A spatial visualization of the brazilian road network through OpenLayer mapping." data-tags='Infrastructure, Brazil, Roads, Logistics, Mapping, Transport, Geodata'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="my-favourite-restaurants-in-the-world"
+      data-title="my favourite restaurants in the world" data-description="a culinary world map illustrating my favorite restaurants across the globe. explore the flavors and places that have left a lasting impression." data-tags="personal,food,restaurants,gastronomy,travel,map,lifestyle" data-availability="work_in_progress">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/my-favourite-restaurants-in-the-world.jpg" alt="My Favourite Restaurants in the World" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Work in Progress
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>My Favourite Restaurants in the World</span>
+        </h2>
+
+        <p class="geolayer-card-desc">A culinary world map illustrating my favorite restaurants across the globe. Explore the flavors and places that have left a lasting impression.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Personal</span>
+          <span class="geolayer-tag">Food</span>
+          <span class="geolayer-tag">Restaurants</span>
+          <span class="geolayer-tag">Gastronomy</span>
+          <span class="geolayer-tag">Travel</span>
+          <span class="geolayer-tag">Map</span>
+          <span class="geolayer-tag">Lifestyle</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="My Favourite Restaurants in the World"
+            data-desc="A culinary world map illustrating my favorite restaurants across the globe. Explore the flavors and places that have left a lasting impression." data-tags='Personal, Food, Restaurants, Gastronomy, Travel, Map, Lifestyle'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="dijkstras-in-brazil"
+      data-title="dijkstras in brazil" data-description="explore the optimal path between locations in brazil using dijkstra&#39;s algorithm. this interactive map visualizes the shortest route based on complex road network data." data-tags="algorithm,transport,brazil,dijkstra,road network,optimization,logistics" data-availability="work_in_progress">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/dijkstras-in-brazil.jpg" alt="Dijkstras in Brazil" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Work in Progress
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>Dijkstras in Brazil</span>
+        </h2>
+
+        <p class="geolayer-card-desc">Explore the optimal path between locations in Brazil using Dijkstra&#39;s algorithm. This interactive map visualizes the shortest route based on complex road network data.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Algorithm</span>
+          <span class="geolayer-tag">Transport</span>
+          <span class="geolayer-tag">Brazil</span>
+          <span class="geolayer-tag">Dijkstra</span>
+          <span class="geolayer-tag">Road Network</span>
+          <span class="geolayer-tag">Optimization</span>
+          <span class="geolayer-tag">Logistics</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="Dijkstras in Brazil"
+            data-desc="Explore the optimal path between locations in Brazil using Dijkstra&#39;s algorithm. This interactive map visualizes the shortest route based on complex road network data." data-tags='Algorithm, Transport, Brazil, Dijkstra, Road Network, Optimization, Logistics'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-available" data-id="berlin-wall-comparison"
+      data-title="berlin wall comparison" data-description="an interactive visualization comparing the scale and geographic impact of the berlin wall to other cities and regions across the world." data-tags="history,geopolitics,berlin,comparison,visualization,cold war,borders" data-availability="available">
+      <div class="geolayer-card-media">
+        <img src="/images/berlin_wall_square_1767703715353.png" alt="Berlin Wall Comparison" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-available">
+          <span class="status-dot"></span>
+          Available
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <a href="/geolayers/berlin-wall-comparison/">Berlin Wall Comparison</a>
+        </h2>
+
+        <p class="geolayer-card-desc">An interactive visualization comparing the scale and geographic impact of the Berlin Wall to other cities and regions across the world.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">History</span>
+          <span class="geolayer-tag">Geopolitics</span>
+          <span class="geolayer-tag">Berlin</span>
+          <span class="geolayer-tag">Comparison</span>
+          <span class="geolayer-tag">Visualization</span>
+          <span class="geolayer-tag">Cold War</span>
+          <span class="geolayer-tag">Borders</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <a href="/geolayers/berlin-wall-comparison/" class="geolayer-card-btn active">
+            <span>Explore Map</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="world-tiles"
+      data-title="world tiles" data-description="a masterclass in cartographic design. explore this interactive map featuring customizable tiles that transform the visual narrative of geographic data." data-tags="cartography,design,world,tiles,visual,mapping,customization" data-availability="work_in_progress">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/world-tiles.jpg" alt="World Tiles" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Work in Progress
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>World Tiles</span>
+        </h2>
+
+        <p class="geolayer-card-desc">A masterclass in cartographic design. Explore this interactive map featuring customizable tiles that transform the visual narrative of geographic data.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Cartography</span>
+          <span class="geolayer-tag">Design</span>
+          <span class="geolayer-tag">World</span>
+          <span class="geolayer-tag">Tiles</span>
+          <span class="geolayer-tag">Visual</span>
+          <span class="geolayer-tag">Mapping</span>
+          <span class="geolayer-tag">Customization</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="World Tiles"
+            data-desc="A masterclass in cartographic design. Explore this interactive map featuring customizable tiles that transform the visual narrative of geographic data." data-tags='Cartography, Design, World, Tiles, Visual, Mapping, Customization'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="seven-wonders-of-the-ancient-world"
+      data-title="seven wonders of the ancient world" data-description="a journey back to the dawn of civilization. explore the legendary seven wonders of the ancient world, from the great pyramid to the hanging gardens." data-tags="history,culture,ancient,wonders,archaeology,heritage,architecture" data-availability="coming_soon">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/seven-wonders-of-the-ancient-world.jpg" alt="Seven Wonders of the Ancient World" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Coming Soon
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>Seven Wonders of the Ancient World</span>
+        </h2>
+
+        <p class="geolayer-card-desc">A journey back to the dawn of civilization. Explore the legendary seven wonders of the ancient world, from the Great Pyramid to the Hanging Gardens.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">History</span>
+          <span class="geolayer-tag">Culture</span>
+          <span class="geolayer-tag">Ancient</span>
+          <span class="geolayer-tag">Wonders</span>
+          <span class="geolayer-tag">Archaeology</span>
+          <span class="geolayer-tag">Heritage</span>
+          <span class="geolayer-tag">Architecture</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="Seven Wonders of the Ancient World"
+            data-desc="A journey back to the dawn of civilization. Explore the legendary seven wonders of the ancient world, from the Great Pyramid to the Hanging Gardens." data-tags='History, Culture, Ancient, Wonders, Archaeology, Heritage, Architecture'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="new-seven-wonders-of-the-world"
+      data-title="new seven wonders of the world" data-description="modern marvels of the human spirit. discover the new seven wonders of the world, selected by millions to represent the pinnacle of global cultural heritage." data-tags="culture,travel,new,wonders,global,landmarks,modern history" data-availability="coming_soon">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/new-seven-wonders-of-the-world.jpg" alt="New Seven Wonders of the World" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Coming Soon
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>New Seven Wonders of the World</span>
+        </h2>
+
+        <p class="geolayer-card-desc">Modern marvels of the human spirit. Discover the new seven wonders of the world, selected by millions to represent the pinnacle of global cultural heritage.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Culture</span>
+          <span class="geolayer-tag">Travel</span>
+          <span class="geolayer-tag">New</span>
+          <span class="geolayer-tag">Wonders</span>
+          <span class="geolayer-tag">Global</span>
+          <span class="geolayer-tag">Landmarks</span>
+          <span class="geolayer-tag">Modern History</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="New Seven Wonders of the World"
+            data-desc="Modern marvels of the human spirit. Discover the new seven wonders of the world, selected by millions to represent the pinnacle of global cultural heritage." data-tags='Culture, Travel, New, Wonders, Global, Landmarks, Modern History'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="seven-natural-wonders-of-the-world"
+      data-title="seven natural wonders of the world" data-description="the raw power of the natural world. experience the most breathtaking natural wonders on earth, from the grand canyon to the great barrier reef." data-tags="nature,travel,geology,landscapes,wilderness,environment,exploration" data-availability="coming_soon">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/seven-natural-wonders-of-the-world.jpg" alt="Seven Natural Wonders of the World" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Coming Soon
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>Seven Natural Wonders of the World</span>
+        </h2>
+
+        <p class="geolayer-card-desc">The raw power of the natural world. Experience the most breathtaking natural wonders on Earth, from the Grand Canyon to the Great Barrier Reef.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Nature</span>
+          <span class="geolayer-tag">Travel</span>
+          <span class="geolayer-tag">Geology</span>
+          <span class="geolayer-tag">Landscapes</span>
+          <span class="geolayer-tag">Wilderness</span>
+          <span class="geolayer-tag">Environment</span>
+          <span class="geolayer-tag">Exploration</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="Seven Natural Wonders of the World"
+            data-desc="The raw power of the natural world. Experience the most breathtaking natural wonders on Earth, from the Grand Canyon to the Great Barrier Reef." data-tags='Nature, Travel, Geology, Landscapes, Wilderness, Environment, Exploration'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="seven-wonders-of-the-modern-world"
+      data-title="seven wonders of the modern world" data-description="triumphs of modern engineering. explore the seven wonders of the modern world, celebrating the incredible feats of structural and civil engineering from the 20th century." data-tags="engineering,modern,architecture,infrastructure,innovation,design,construction" data-availability="coming_soon">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/seven-wonders-of-the-modern-world.jpg" alt="Seven Wonders of the Modern World" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Coming Soon
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>Seven Wonders of the Modern World</span>
+        </h2>
+
+        <p class="geolayer-card-desc">Triumphs of modern engineering. Explore the seven wonders of the modern world, celebrating the incredible feats of structural and civil engineering from the 20th century.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Engineering</span>
+          <span class="geolayer-tag">Modern</span>
+          <span class="geolayer-tag">Architecture</span>
+          <span class="geolayer-tag">Infrastructure</span>
+          <span class="geolayer-tag">Innovation</span>
+          <span class="geolayer-tag">Design</span>
+          <span class="geolayer-tag">Construction</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="Seven Wonders of the Modern World"
+            data-desc="Triumphs of modern engineering. Explore the seven wonders of the modern world, celebrating the incredible feats of structural and civil engineering from the 20th century." data-tags='Engineering, Modern, Architecture, Infrastructure, Innovation, Design, Construction'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="deforestation-hotspots"
+      data-title="deforestation hotspots" data-description="monitoring the planet&#39;s pulse. this map visualizes critical deforestation hotspots globally, highlighting the urgent need for environmental conservation and sustainable management." data-tags="environment,climate,deforestation,hotspots,conservation,ecology,sustainability" data-availability="coming_soon">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/deforestation-hotspots.jpg" alt="Deforestation Hotspots" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Coming Soon
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>Deforestation Hotspots</span>
+        </h2>
+
+        <p class="geolayer-card-desc">Monitoring the planet&#39;s pulse. This map visualizes critical deforestation hotspots globally, highlighting the urgent need for environmental conservation and sustainable management.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Environment</span>
+          <span class="geolayer-tag">Climate</span>
+          <span class="geolayer-tag">Deforestation</span>
+          <span class="geolayer-tag">Hotspots</span>
+          <span class="geolayer-tag">Conservation</span>
+          <span class="geolayer-tag">Ecology</span>
+          <span class="geolayer-tag">Sustainability</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="Deforestation Hotspots"
+            data-desc="Monitoring the planet&#39;s pulse. This map visualizes critical deforestation hotspots globally, highlighting the urgent need for environmental conservation and sustainable management." data-tags='Environment, Climate, Deforestation, Hotspots, Conservation, Ecology, Sustainability'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="underground-railroad-routes"
+      data-title="underground railroad routes" data-description="the path to freedom. visualize the clandestine network of routes and safe houses used by enslaved people in the united states to escape to free states and canada." data-tags="history,human rights,railroad,freedom,usa,resistance,civil rights" data-availability="coming_soon">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/underground-railroad-routes.jpg" alt="Underground Railroad Routes" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Coming Soon
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>Underground Railroad Routes</span>
+        </h2>
+
+        <p class="geolayer-card-desc">The path to freedom. Visualize the clandestine network of routes and safe houses used by enslaved people in the United States to escape to free states and Canada.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">History</span>
+          <span class="geolayer-tag">Human Rights</span>
+          <span class="geolayer-tag">Railroad</span>
+          <span class="geolayer-tag">Freedom</span>
+          <span class="geolayer-tag">USA</span>
+          <span class="geolayer-tag">Resistance</span>
+          <span class="geolayer-tag">Civil Rights</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="Underground Railroad Routes"
+            data-desc="The path to freedom. Visualize the clandestine network of routes and safe houses used by enslaved people in the United States to escape to free states and Canada." data-tags='History, Human Rights, Railroad, Freedom, USA, Resistance, Civil Rights'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="empires-of-the-past"
+      data-title="empires of the past" data-description="the rise and fall of civilizations. this interactive map visualizes the vast extent of historical empires, allowing users to explore their evolving boundaries and geopolitical influence." data-tags="history,geopolitics,empires,expansion,boundaries,conquest,dynasties" data-availability="coming_soon">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/empires-of-the-past.jpg" alt="Empires of the Past" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Coming Soon
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>Empires of the Past</span>
+        </h2>
+
+        <p class="geolayer-card-desc">The rise and fall of civilizations. This interactive map visualizes the vast extent of historical empires, allowing users to explore their evolving boundaries and geopolitical influence.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">History</span>
+          <span class="geolayer-tag">Geopolitics</span>
+          <span class="geolayer-tag">Empires</span>
+          <span class="geolayer-tag">Expansion</span>
+          <span class="geolayer-tag">Boundaries</span>
+          <span class="geolayer-tag">Conquest</span>
+          <span class="geolayer-tag">Dynasties</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="Empires of the Past"
+            data-desc="The rise and fall of civilizations. This interactive map visualizes the vast extent of historical empires, allowing users to explore their evolving boundaries and geopolitical influence." data-tags='History, Geopolitics, Empires, Expansion, Boundaries, Conquest, Dynasties'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="active-volcanos"
+      data-title="active volcanos" data-description="windows into the earth&#39;s interior. track the locations and activity of the world&#39;s most active volcanoes, and understand the tectonic forces that shape our planet." data-tags="nature,geology,volcanos,tectonics,geohazards,seismology,earth science" data-availability="coming_soon">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/active-volcanos.jpg" alt="Active Volcanos" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Coming Soon
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>Active Volcanos</span>
+        </h2>
+
+        <p class="geolayer-card-desc">Windows into the Earth&#39;s interior. Track the locations and activity of the world&#39;s most active volcanoes, and understand the tectonic forces that shape our planet.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Nature</span>
+          <span class="geolayer-tag">Geology</span>
+          <span class="geolayer-tag">Volcanos</span>
+          <span class="geolayer-tag">Tectonics</span>
+          <span class="geolayer-tag">Geohazards</span>
+          <span class="geolayer-tag">Seismology</span>
+          <span class="geolayer-tag">Earth Science</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="Active Volcanos"
+            data-desc="Windows into the Earth&#39;s interior. Track the locations and activity of the world&#39;s most active volcanoes, and understand the tectonic forces that shape our planet." data-tags='Nature, Geology, Volcanos, Tectonics, Geohazards, Seismology, Earth Science'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="indigenous-lands"
+      data-title="indigenous lands" data-description="mapping heritage and sovereignty. explore the geographic extent of indigenous lands worldwide, highlighting the importance of territorial rights and cultural preservation." data-tags="culture,rights,indigenous,territory,sovereignty,heritage,demography" data-availability="coming_soon">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/indigenous-lands.jpg" alt="Indigenous Lands" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Coming Soon
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>Indigenous Lands</span>
+        </h2>
+
+        <p class="geolayer-card-desc">Mapping heritage and sovereignty. Explore the geographic extent of indigenous lands worldwide, highlighting the importance of territorial rights and cultural preservation.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Culture</span>
+          <span class="geolayer-tag">Rights</span>
+          <span class="geolayer-tag">Indigenous</span>
+          <span class="geolayer-tag">Territory</span>
+          <span class="geolayer-tag">Sovereignty</span>
+          <span class="geolayer-tag">Heritage</span>
+          <span class="geolayer-tag">Demography</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="Indigenous Lands"
+            data-desc="Mapping heritage and sovereignty. Explore the geographic extent of indigenous lands worldwide, highlighting the importance of territorial rights and cultural preservation." data-tags='Culture, Rights, Indigenous, Territory, Sovereignty, Heritage, Demography'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="religeous-sites"
+      data-title="religeous sites" data-description="geographies of the sacred. a curated map of significant religious and spiritual sites around the globe, from ancient temples to modern cathedrals." data-tags="culture,religion,sacred,architecture,spirituality,pilgrimage,history" data-availability="coming_soon">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/religeous-sites.jpg" alt="Religeous Sites" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Coming Soon
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>Religeous Sites</span>
+        </h2>
+
+        <p class="geolayer-card-desc">Geographies of the sacred. A curated map of significant religious and spiritual sites around the globe, from ancient temples to modern cathedrals.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Culture</span>
+          <span class="geolayer-tag">Religion</span>
+          <span class="geolayer-tag">Sacred</span>
+          <span class="geolayer-tag">Architecture</span>
+          <span class="geolayer-tag">Spirituality</span>
+          <span class="geolayer-tag">Pilgrimage</span>
+          <span class="geolayer-tag">History</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="Religeous Sites"
+            data-desc="Geographies of the sacred. A curated map of significant religious and spiritual sites around the globe, from ancient temples to modern cathedrals." data-tags='Culture, Religion, Sacred, Architecture, Spirituality, Pilgrimage, History'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="global-festivals"
+      data-title="global festivals" data-description="a global celebration of life. discover major festivals around the world, from the vibrant colors of holi to the rhythmic beats of carnival and the legendary woodstock." data-tags="culture,fun,festivals,music,art,celebration,global" data-availability="coming_soon">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/global-festivals.jpg" alt="Global Festivals" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Coming Soon
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>Global Festivals</span>
+        </h2>
+
+        <p class="geolayer-card-desc">A global celebration of life. Discover major festivals around the world, from the vibrant colors of Holi to the rhythmic beats of Carnival and the legendary Woodstock.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Culture</span>
+          <span class="geolayer-tag">Fun</span>
+          <span class="geolayer-tag">Festivals</span>
+          <span class="geolayer-tag">Music</span>
+          <span class="geolayer-tag">Art</span>
+          <span class="geolayer-tag">Celebration</span>
+          <span class="geolayer-tag">Global</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="Global Festivals"
+            data-desc="A global celebration of life. Discover major festivals around the world, from the vibrant colors of Holi to the rhythmic beats of Carnival and the legendary Woodstock." data-tags='Culture, Fun, Festivals, Music, Art, Celebration, Global'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="particle-accelerators"
+      data-title="particle accelerators" data-description="exploring the building blocks of matter. navigate the global network of particle accelerators, including cern and other premier research facilities pushing the frontiers of physics." data-tags="science,physics,research,technology,innovation,quantum,cern" data-availability="coming_soon">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/particle-accelerators.jpg" alt="Particle Accelerators" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Coming Soon
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>Particle Accelerators</span>
+        </h2>
+
+        <p class="geolayer-card-desc">Exploring the building blocks of matter. Navigate the global network of particle accelerators, including CERN and other premier research facilities pushing the frontiers of physics.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Science</span>
+          <span class="geolayer-tag">Physics</span>
+          <span class="geolayer-tag">Research</span>
+          <span class="geolayer-tag">Technology</span>
+          <span class="geolayer-tag">Innovation</span>
+          <span class="geolayer-tag">Quantum</span>
+          <span class="geolayer-tag">CERN</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="Particle Accelerators"
+            data-desc="Exploring the building blocks of matter. Navigate the global network of particle accelerators, including CERN and other premier research facilities pushing the frontiers of physics." data-tags='Science, Physics, Research, Technology, Innovation, Quantum, CERN'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="undersea-cables"
+      data-title="undersea cables" data-description="the nervous system of the global internet. visualize the massive network of undersea fiber-optic cables that carry nearly all transoceanic digital traffic." data-tags="infrastructure,tech,internet,communications,global,maritime,connectivity" data-availability="coming_soon">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/undersea-cables.jpg" alt="Undersea Cables" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Coming Soon
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>Undersea Cables</span>
+        </h2>
+
+        <p class="geolayer-card-desc">The nervous system of the global internet. Visualize the massive network of undersea fiber-optic cables that carry nearly all transoceanic digital traffic.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Infrastructure</span>
+          <span class="geolayer-tag">Tech</span>
+          <span class="geolayer-tag">Internet</span>
+          <span class="geolayer-tag">Communications</span>
+          <span class="geolayer-tag">Global</span>
+          <span class="geolayer-tag">Maritime</span>
+          <span class="geolayer-tag">Connectivity</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="Undersea Cables"
+            data-desc="The nervous system of the global internet. Visualize the massive network of undersea fiber-optic cables that carry nearly all transoceanic digital traffic." data-tags='Infrastructure, Tech, Internet, Communications, Global, Maritime, Connectivity'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="nuclear-test-sites"
+      data-title="nuclear test sites" data-description="scars of the atomic age. map the locations of historical nuclear test sites worldwide, reflecting on the profound impact of atomic weapons development during the 20th century." data-tags="history,military,nuclear,cold war,atomic,geopolitics,weaponry" data-availability="coming_soon">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/nuclear-test-sites.jpg" alt="Nuclear Test Sites" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Coming Soon
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>Nuclear Test Sites</span>
+        </h2>
+
+        <p class="geolayer-card-desc">Scars of the atomic age. Map the locations of historical nuclear test sites worldwide, reflecting on the profound impact of atomic weapons development during the 20th century.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">History</span>
+          <span class="geolayer-tag">Military</span>
+          <span class="geolayer-tag">Nuclear</span>
+          <span class="geolayer-tag">Cold War</span>
+          <span class="geolayer-tag">Atomic</span>
+          <span class="geolayer-tag">Geopolitics</span>
+          <span class="geolayer-tag">Weaponry</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="Nuclear Test Sites"
+            data-desc="Scars of the atomic age. Map the locations of historical nuclear test sites worldwide, reflecting on the profound impact of atomic weapons development during the 20th century." data-tags='History, Military, Nuclear, Cold War, Atomic, Geopolitics, Weaponry'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="nuclear-plants"
+      data-title="nuclear plants" data-description="architectures of atomic power. a global overview of nuclear power plants, exploring the distribution of nuclear energy as a major component of modern power grids." data-tags="energy,tech,nuclear,power,sustainability,infrastructure,global" data-availability="coming_soon">
+      <div class="geolayer-card-media">
+        <img src="/images/geolayers/nuclear-plants.jpg" alt="Nuclear Plants" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Coming Soon
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>Nuclear Plants</span>
+        </h2>
+
+        <p class="geolayer-card-desc">Architectures of atomic power. A global overview of nuclear power plants, exploring the distribution of nuclear energy as a major component of modern power grids.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Energy</span>
+          <span class="geolayer-tag">Tech</span>
+          <span class="geolayer-tag">Nuclear</span>
+          <span class="geolayer-tag">Power</span>
+          <span class="geolayer-tag">Sustainability</span>
+          <span class="geolayer-tag">Infrastructure</span>
+          <span class="geolayer-tag">Global</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="Nuclear Plants"
+            data-desc="Architectures of atomic power. A global overview of nuclear power plants, exploring the distribution of nuclear energy as a major component of modern power grids." data-tags='Energy, Tech, Nuclear, Power, Sustainability, Infrastructure, Global'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="antarctic-research-stations"
+      data-title="antarctic research stations" data-description="outposts at the edge of the world. navigate the diverse research stations in antarctica, where scientists from across the globe conduct critical climate and earth science studies." data-tags="science,exploration,antarctica,research,remote,global,meteorology" data-availability="coming_soon">
+      <div class="geolayer-card-media">
+        <img src="/images/antartic1.webp" alt="Antarctic Research Stations" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Coming Soon
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>Antarctic Research Stations</span>
+        </h2>
+
+        <p class="geolayer-card-desc">Outposts at the edge of the world. Navigate the diverse research stations in Antarctica, where scientists from across the globe conduct critical climate and earth science studies.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Science</span>
+          <span class="geolayer-tag">Exploration</span>
+          <span class="geolayer-tag">Antarctica</span>
+          <span class="geolayer-tag">Research</span>
+          <span class="geolayer-tag">Remote</span>
+          <span class="geolayer-tag">Global</span>
+          <span class="geolayer-tag">Meteorology</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="Antarctic Research Stations"
+            data-desc="Outposts at the edge of the world. Navigate the diverse research stations in Antarctica, where scientists from across the globe conduct critical climate and earth science studies." data-tags='Science, Exploration, Antarctica, Research, Remote, Global, Meteorology'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="unesco-heritage-sites"
+      data-title="unesco heritage sites" data-description="the world&#39;s most precious legacy. an interactive map of unesco world heritage sites, celebrating the cultural and natural treasures that define our collective identity." data-tags="culture,preservation,unesco,heritage,world,tourism,history" data-availability="coming_soon">
+      <div class="geolayer-card-media">
+        <img src="/images/unesco2.webp" alt="UNESCO Heritage Sites" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Coming Soon
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>UNESCO Heritage Sites</span>
+        </h2>
+
+        <p class="geolayer-card-desc">The world&#39;s most precious legacy. An interactive map of UNESCO World Heritage Sites, celebrating the cultural and natural treasures that define our collective identity.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Culture</span>
+          <span class="geolayer-tag">Preservation</span>
+          <span class="geolayer-tag">UNESCO</span>
+          <span class="geolayer-tag">Heritage</span>
+          <span class="geolayer-tag">World</span>
+          <span class="geolayer-tag">Tourism</span>
+          <span class="geolayer-tag">History</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="UNESCO Heritage Sites"
+            data-desc="The world&#39;s most precious legacy. An interactive map of UNESCO World Heritage Sites, celebrating the cultural and natural treasures that define our collective identity." data-tags='Culture, Preservation, UNESCO, Heritage, World, Tourism, History'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="marine-traffic"
+      data-title="marine traffic" data-description="the global pulse of shipping. visualize real-time and historical marine traffic patterns, revealing the complex logistics and routes that power international trade." data-tags="transport,logistics,maritime,shipping,global trade,navigation,ports" data-availability="coming_soon">
+      <div class="geolayer-card-media">
+        <img src="/images/marineTraffic2.webp" alt="Marine Traffic" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Coming Soon
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>Marine Traffic</span>
+        </h2>
+
+        <p class="geolayer-card-desc">The global pulse of shipping. Visualize real-time and historical marine traffic patterns, revealing the complex logistics and routes that power international trade.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Transport</span>
+          <span class="geolayer-tag">Logistics</span>
+          <span class="geolayer-tag">Maritime</span>
+          <span class="geolayer-tag">Shipping</span>
+          <span class="geolayer-tag">Global Trade</span>
+          <span class="geolayer-tag">Navigation</span>
+          <span class="geolayer-tag">Ports</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="Marine Traffic"
+            data-desc="The global pulse of shipping. Visualize real-time and historical marine traffic patterns, revealing the complex logistics and routes that power international trade." data-tags='Transport, Logistics, Maritime, Shipping, Global Trade, Navigation, Ports'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="geolayer-card is-wip" data-id="usa-military-bases"
+      data-title="usa military bases" data-description="global defense networks. a mapping of usa military bases and installations worldwide, examining the geopolitical footprint and strategic presence of the united states." data-tags="military,geopolitics,usa,strategy,global,defense,security" data-availability="coming_soon">
+      <div class="geolayer-card-media">
+        <img src="/images/military2.webp" alt="USA Military Bases" loading="lazy" class="geolayer-card-img"
+          onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+        <div class="geolayer-status-pill status-wip">
+          <span class="status-dot"></span>
+          Coming Soon
+        </div>
+      </div>
+
+      <div class="geolayer-card-body">
+        <h2 class="geolayer-card-title">
+          <span>USA Military Bases</span>
+        </h2>
+
+        <p class="geolayer-card-desc">Global defense networks. A mapping of USA military bases and installations worldwide, examining the geopolitical footprint and strategic presence of the United States.</p>
+        <div class="geolayer-card-tags">
+          <span class="geolayer-tag">Military</span>
+          <span class="geolayer-tag">Geopolitics</span>
+          <span class="geolayer-tag">USA</span>
+          <span class="geolayer-tag">Strategy</span>
+          <span class="geolayer-tag">Global</span>
+          <span class="geolayer-tag">Defense</span>
+          <span class="geolayer-tag">Security</span>
+        </div>
+
+        <div class="geolayer-card-footer">
+          <button type="button" class="geolayer-card-btn disabled open-geo-modal" data-title="USA Military Bases"
+            data-desc="Global defense networks. A mapping of USA military bases and installations worldwide, examining the geopolitical footprint and strategic presence of the United States." data-tags='Military, Geopolitics, USA, Strategy, Global, Defense, Security'>
+            <span>In Development</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  
+  <div class="geolayers-empty-state" id="geoEmptyState" style="display:none;">
+    <div class="empty-state-icon">
+      <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        <line x1="8" y1="11" x2="14" y2="11"></line>
+      </svg>
+    </div>
+    <h3>No geolayers found</h3>
+    <p>Try searching for a different keyword or resetting your filter selection.</p>
+    <button type="button" class="reset-filter-btn" id="geoResetFiltersBtn">Reset Filters</button>
+  </div>
+</div>
+
+
+<dialog class="pub-modal" id="geoWipModal" aria-labelledby="geoModalTitle" aria-describedby="geoModalDesc">
+  <div class="pub-modal-content">
+    <div class="pub-modal-header">
+      <div class="pub-modal-badge status-wip">
+        <span class="status-dot"></span> In Development
+      </div>
+      <button type="button" class="pub-modal-close" id="closeGeoModalBtn" aria-label="Close dialog">&times;</button>
+    </div>
+    <h3 class="pub-modal-title" id="geoModalTitle">Geolayer Under Active Development</h3>
+    <p class="pub-modal-abstract" id="geoModalDesc"></p>
+    <div class="pub-modal-meta" id="geoModalMeta"></div>
+    <div class="pub-modal-notice">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="16" x2="12" y2="12"></line>
+        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+      </svg>
+      <span>This geovisualization layer is currently being modeled and cartographically staged. Check back soon for
+        interactive geospatial release!</span>
+    </div>
+    <div class="pub-modal-actions">
+      <a href="/geolayers/cities-i-have-visited/" class="pub-modal-action-btn primary"
+        style="text-decoration:none;">View "Cities I Have Visited" Map &rarr;</a>
+      <button type="button" class="pub-modal-action-btn secondary" id="dismissGeoModalBtn">Close</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('geoSearchInput');
+    const clearBtn = document.getElementById('geoClearSearch');
+    const visibleCount = document.getElementById('geoVisibleCount');
+    const cards = Array.from(document.querySelectorAll('.geolayer-card'));
+    const tagButtons = document.querySelectorAll('.geo-filter-btn');
+    const emptyState = document.getElementById('geoEmptyState');
+    const resetBtn = document.getElementById('geoResetFiltersBtn');
+    const infoBtn = document.getElementById('geolayersInfoBtn');
+    const tooltip = document.getElementById('geolayersTooltip');
+    const wipModal = document.getElementById('geoWipModal');
+    const modalTitle = document.getElementById('geoModalTitle');
+    const modalDesc = document.getElementById('geoModalDesc');
+    const modalMeta = document.getElementById('geoModalMeta');
+    const closeModalBtn = document.getElementById('closeGeoModalBtn');
+    const dismissModalBtn = document.getElementById('dismissGeoModalBtn');
+
+    let activeTag = 'all';
+    let searchTerm = '';
+
+    
+    if (infoBtn && tooltip) {
+      infoBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        tooltip.classList.toggle('active');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!tooltip.contains(e.target) && e.target !== infoBtn) {
+          tooltip.classList.remove('active');
+        }
+      });
+    }
+
+    
+    function applyFilters() {
+      let count = 0;
+      const term = searchTerm.trim().toLowerCase();
+
+      cards.forEach(card => {
+        const title = card.getAttribute('data-title') || '';
+        const desc = card.getAttribute('data-description') || '';
+        const tags = card.getAttribute('data-tags') || '';
+
+        const matchesSearch = !term || title.includes(term) || desc.includes(term) || tags.includes(term);
+        const matchesTag = activeTag === 'all' || tags.includes(activeTag);
+
+        if (matchesSearch && matchesTag) {
+          card.style.display = '';
+          count++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (visibleCount) visibleCount.textContent = count;
+      if (emptyState) {
+        emptyState.style.display = count === 0 ? 'block' : 'none';
+      }
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchTerm = e.target.value;
+        if (clearBtn) clearBtn.style.display = searchTerm.length > 0 ? 'block' : 'none';
+        applyFilters();
+      });
+    }
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        searchTerm = '';
+        clearBtn.style.display = 'none';
+        searchInput.focus();
+        applyFilters();
+      });
+    }
+
+    tagButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tagButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeTag = btn.getAttribute('data-tag');
+        applyFilters();
+      });
+    });
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        if (searchInput) searchInput.value = '';
+        searchTerm = '';
+        if (clearBtn) clearBtn.style.display = 'none';
+        activeTag = 'all';
+        tagButtons.forEach(b => b.classList.remove('active'));
+        const allBtn = document.querySelector('.geo-filter-btn[data-tag="all"]');
+        if (allBtn) allBtn.classList.add('active');
+        applyFilters();
+      });
+    }
+
+    
+    document.querySelectorAll('.open-geo-modal').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const title = btn.getAttribute('data-title');
+        const desc = btn.getAttribute('data-desc');
+        const tags = btn.getAttribute('data-tags');
+
+        if (modalTitle) modalTitle.textContent = title;
+        if (modalDesc) modalDesc.textContent = desc;
+        if (modalMeta) modalMeta.textContent = tags ? 'Tags: ' + tags : '';
+        if (wipModal && typeof wipModal.showModal === 'function') {
+          wipModal.showModal();
+        }
+      });
+    });
+
+    const closeModal = () => {
+      if (wipModal) wipModal.close();
+    };
+
+    if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+    if (dismissModalBtn) dismissModalBtn.addEventListener('click', closeModal);
+    if (wipModal) {
+      wipModal.addEventListener('click', (e) => {
+        const rect = wipModal.getBoundingClientRect();
+        if (e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom) {
+          closeModal();
+        }
+      });
+    }
+  });
+</script>
+    </main>

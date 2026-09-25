@@ -1,0 +1,740 @@
+<main class="main">
+<link rel="stylesheet" href="/lib/openlayers/ol.css">
+
+<div class="cities-page-container sea-simulator-container">
+  
+  <div class="gallery-breadcrumbs">
+    <a href="http://localhost:1313/">Home</a> <span>/</span> <a href="/geolayers/">GeoLayers</a> <span>/</span> <span>Sea Level Simulator</span>
+  </div>
+
+  
+  <header class="cities-header">
+    <div class="cities-header-content">
+      <div class="cities-badge-pill">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M2 12c3 0 3-4 6-4s3 4 6 4 3-4 6-4 3 4 6 4M2 17c3 0 3-4 6-4s3 4 6 4 3-4 6-4 3 4 6 4" />
+        </svg>
+        <span>Interactive GeoLayer &bull; Hydrological Inundation &bull; SRTM 90m DEM</span>
+      </div>
+      <h1 class="cities-title">Sea Level Simulator</h1>
+      <p class="cities-subtitle">
+        Simulate sea level rise and its impact on coastal areas worldwide. Powered by CGIAR-CSI SRTM elevation data and SCALGO hydrological flood modeling, explore how sea levels from -1m to +100m redraw global coastlines, submerge lowlands, and reshape continents.
+      </p>
+    </div>
+
+    
+    <div class="cities-stats-bar">
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" id="statsThresholdDisplay" style="background: var(--theme-accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">+10 m</span>
+        <span class="cities-stat-label">Current Threshold</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number">90 m</span>
+        <span class="cities-stat-label">DEM Resolution</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" id="statsActiveRegion">Gulf of Mexico</span>
+        <span class="cities-stat-label">Active Region</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" id="statsBasemapDisplay">Satellite</span>
+        <span class="cities-stat-label">Basemap Style</span>
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="sea-sim-toolbar">
+    <div class="sea-scenario-pills" role="group" aria-label="Preset Climate Scenarios">
+      <span class="sea-toolbar-label">Scenario Presets:</span>
+      <button type="button" class="sea-scenario-btn" data-threshold="-1" title="Simulates lowered global sea levels prior to recent anthropomorphic heating or during cooler glacial fluctuation stages.">
+        <span class="scenario-btn-dot" style="background-color: #64748b;"></span>
+        <span class="scenario-btn-title">Lowered Baseline (-1 m)</span>
+      </button>
+      <button type="button" class="sea-scenario-btn" data-threshold="1" title="Projected near-term high emission trajectory by 2100. Routine high-tide flooding of sunny streets in Miami, Venice, and Jakarta.">
+        <span class="scenario-btn-dot" style="background-color: #38bdf8;"></span>
+        <span class="scenario-btn-title">&#43;1 Meter Rise</span>
+      </button>
+      <button type="button" class="sea-scenario-btn" data-threshold="5" title="Triggered by rapid disintegration of West Antarctic marine-terminating ice shelves and accelerated Greenland peripheral ice loss.">
+        <span class="scenario-btn-dot" style="background-color: #3b82f6;"></span>
+        <span class="scenario-btn-title">&#43;5 Meters Rise</span>
+      </button>
+      <button type="button" class="sea-scenario-btn" data-threshold="10" title="Complete disappearance of southern Florida, large portions of Bangladesh, the Netherlands coastal ring, and Shanghai lowlands.">
+        <span class="scenario-btn-dot" style="background-color: #6366f1;"></span>
+        <span class="scenario-btn-title">&#43;10 Meters Rise</span>
+      </button>
+      <button type="button" class="sea-scenario-btn" data-threshold="20" title="Multi-century equilibrium state under sustained elevated atmospheric CO2 levels, submerging lowlands and shifting continental shorelines.">
+        <span class="scenario-btn-dot" style="background-color: #8b5cf6;"></span>
+        <span class="scenario-btn-title">&#43;20 Meters Rise</span>
+      </button>
+      <button type="button" class="sea-scenario-btn" data-threshold="60" title="Catastrophic melting of the entire Antarctic and Greenland ice caps. Complete redrawing of Earth&#39;s continental maps.">
+        <span class="scenario-btn-dot" style="background-color: #ec4899;"></span>
+        <span class="scenario-btn-title">&#43;60 Meters Rise</span>
+      </button>
+    </div>
+
+    <div class="sea-region-selector-wrap">
+      <label for="hotspotSelect" class="sea-toolbar-label">Jump to Region:</label>
+      <select id="hotspotSelect" class="map-select-input sea-region-select" aria-label="Select Coastal Region">
+        <option value="gulf-mexico" data-x="-9.871995e&#43;06" data-y="3.566245e&#43;06" data-zoom="6" selected>
+          📍 Gulf of Mexico &amp; Mississippi Delta (USA (Louisiana / Florida))
+        </option>
+        <option value="netherlands" data-x="550000" data-y="6.85e&#43;06" data-zoom="7">
+          📍 The Netherlands &amp; North Sea (Western Europe)
+        </option>
+        <option value="bangladesh" data-x="1.005e&#43;07" data-y="2.6e&#43;06" data-zoom="7">
+          📍 Ganges-Brahmaputra Delta (Bangladesh &amp; West Bengal)
+        </option>
+        <option value="nile-delta" data-x="3.48e&#43;06" data-y="3.65e&#43;06" data-zoom="8">
+          📍 Nile Delta &amp; Alexandria (Egypt)
+        </option>
+        <option value="venice" data-x="1.37e&#43;06" data-y="5.68e&#43;06" data-zoom="8">
+          📍 Venice Lagoon &amp; Po Plain (Italy)
+        </option>
+        <option value="tokyo-bay" data-x="1.556e&#43;07" data-y="4.24e&#43;06" data-zoom="8">
+          📍 Tokyo Bay &amp; Kanto Plain (Japan)
+        </option>
+        <option value="thames" data-x="70000" data-y="6.71e&#43;06" data-zoom="8">
+          📍 London &amp; Thames Estuary (United Kingdom)
+        </option>
+        <option value="new-york" data-x="-8.238e&#43;06" data-y="4.97e&#43;06" data-zoom="9">
+          📍 New York Harbor &amp; Manhattan (USA (East Coast))
+        </option>
+        <option value="shanghai" data-x="1.352e&#43;07" data-y="3.68e&#43;06" data-zoom="7">
+          📍 Yangtze Delta &amp; Shanghai (China)
+        </option>
+        <option value="amazon" data-x="-5.55e&#43;06" data-y="-50000" data-zoom="7">
+          📍 Amazon River Delta (Brazil (Pará / Amapá))
+        </option>
+      </select>
+    </div>
+  </div>
+
+  
+  <div class="cities-map-viewport sea-map-viewport" id="seaMapViewport">
+    
+    <div id="seaMap" class="cities-leaflet-container sea-map-canvas" tabindex="0" aria-label="Interactive OpenLayers Sea Level Simulator Map"></div>
+
+    
+    <div class="sea-map-actions-top-left">
+      <button type="button" class="map-action-btn" id="btnResetView" title="Reset Camera to Default Region">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+          <path d="M3 3v5h5" />
+        </svg>
+        <span class="btn-text">Recenter</span>
+      </button>
+      <button type="button" class="map-action-btn" id="btnToggleFullscreen" title="Toggle Fullscreen Viewport">
+        <svg id="fsIconExpand" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+        </svg>
+        <span class="btn-text" id="fsText">Fullscreen</span>
+      </button>
+    </div>
+
+    
+    <aside class="sea-sim-control-panel" id="simControlPanel" aria-label="Sea Level Controls">
+      <div class="sim-panel-header">
+        <div class="sim-panel-title-wrap">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+          </svg>
+          <span class="sim-panel-title">Sea Level Control</span>
+        </div>
+        <button type="button" class="sim-panel-minimize-btn" id="btnMinimizePanel" title="Minimize or Expand Panel" aria-expanded="true">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <div class="sim-panel-body" id="simPanelBody">
+        
+        <div class="sim-control-group">
+          <div class="sim-label-row">
+            <label for="thresholdRangeInput" class="sim-control-label">Sea-level threshold:</label>
+            <span class="sim-threshold-badge" id="panelThresholdBadge">+10 m</span>
+          </div>
+          <input type="range" min="-1" max="100" value="10" step="1" class="sea-sim-range" id="thresholdRangeInput" aria-label="Sea level threshold slider in meters">
+          <div class="sim-slider-ticks">
+            <span>-1m</span>
+            <span>0m</span>
+            <span>+25m</span>
+            <span>+50m</span>
+            <span>+75m</span>
+            <span>+100m</span>
+          </div>
+
+          
+          <div class="sim-stepper-row">
+            <div class="sim-step-buttons">
+              <button type="button" class="sim-step-btn" data-step="-5" title="Decrease by 5 meters">-5m</button>
+              <button type="button" class="sim-step-btn" data-step="-1" title="Decrease by 1 meter">-1m</button>
+              <button type="button" class="sim-step-btn" data-step="1" title="Increase by 1 meter">+1m</button>
+              <button type="button" class="sim-step-btn" data-step="5" title="Increase by 5 meters">+5m</button>
+            </div>
+            <button type="button" class="sim-play-btn" id="btnPlaySimulation" title="Animate sea level rise simulation">
+              <svg id="playIcon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <span id="playBtnText">Animate</span>
+            </button>
+          </div>
+        </div>
+
+        
+        <div class="sim-control-group">
+          <label for="basemapSelect" class="sim-control-label">Basemap Style</label>
+          <select id="basemapSelect" class="sim-select-input" aria-label="Select Basemap Layer">
+            <option value="satellite" selected>🛰️ Google Satellite</option>
+            <option value="osm">🗺️ OpenStreetMap</option>
+            <option value="terrain">⛰️ Google Terrain</option>
+            <option value="carto-dark">🌌 CartoDB Dark Matter</option>
+            <option value="carto-light">☀️ CartoDB Positron</option>
+          </select>
+        </div>
+
+        
+        <div class="sim-control-group">
+          <div class="sim-label-row">
+            <label for="opacitySlider" class="sim-control-label">Water Layer Opacity:</label>
+            <span class="sim-opacity-val" id="opacityValDisplay">60%</span>
+          </div>
+          <input type="range" min="10" max="100" value="60" step="5" class="sea-sim-range opacity-range" id="opacitySlider" aria-label="Water layer opacity slider">
+        </div>
+
+        
+        <div class="sim-region-info-box" id="regionInfoBox">
+          <div class="region-info-title" id="regionInfoTitle">Gulf of Mexico & Mississippi Delta</div>
+          <p class="region-info-desc" id="regionInfoDesc">
+            Low-lying Mississippi River Delta and Florida Peninsula, among the most vulnerable coastal zones in North America.
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    
+    <div class="cities-map-legend-overlay sea-legend-box">
+      <div class="legend-indicator">
+        <span class="sea-legend-swatch" style="background: rgba(30, 144, 255, 0.75);"></span>
+        <span><strong>Flooded Lowlands</strong>: Hydrologically connected inundation</span>
+      </div>
+      <div class="legend-indicator">
+        <span class="sea-legend-dot"></span>
+        <span><strong>Elevation Model</strong>: CGIAR-CSI SRTM 90m v4.1 via SCALGO</span>
+      </div>
+    </div>
+  </div>
+
+  
+  <section class="sea-briefing-section">
+    <div class="sea-briefing-header">
+      <h2 class="sea-section-heading">Global Sea Level Impact Scenarios</h2>
+      <p class="sea-section-sub">
+        Explore how varying degrees of sea level rise correspond to climate equilibrium states and human civilization milestones.
+      </p>
+    </div>
+
+    
+    <div class="sea-scenarios-grid">
+      <div class="sea-scenario-card" data-threshold="-1">
+        <div class="scenario-card-header">
+          <span class="scenario-card-badge" style="border-color: #64748b66; color: #64748b; background: #64748b14;">
+            Glacial Regress
+          </span>
+          <span class="scenario-card-meters" style="color: #64748b;">Lowered Baseline (-1 m)</span>
+        </div>
+        <p class="scenario-card-summary">Simulates lowered global sea levels prior to recent anthropomorphic heating or during cooler glacial fluctuation stages.</p>
+        <button type="button" class="scenario-card-apply-btn" data-threshold="-1">
+          <span>Apply Lowered Baseline (-1 m)</span> &rarr;
+        </button>
+      </div>
+      <div class="sea-scenario-card" data-threshold="1">
+        <div class="scenario-card-header">
+          <span class="scenario-card-badge" style="border-color: #38bdf866; color: #38bdf8; background: #38bdf814;">
+            IPCC 2100 Median
+          </span>
+          <span class="scenario-card-meters" style="color: #38bdf8;">&#43;1 Meter Rise</span>
+        </div>
+        <p class="scenario-card-summary">Projected near-term high emission trajectory by 2100. Routine high-tide flooding of sunny streets in Miami, Venice, and Jakarta.</p>
+        <button type="button" class="scenario-card-apply-btn" data-threshold="1">
+          <span>Apply &#43;1 Meter Rise</span> &rarr;
+        </button>
+      </div>
+      <div class="sea-scenario-card" data-threshold="5">
+        <div class="scenario-card-header">
+          <span class="scenario-card-badge" style="border-color: #3b82f666; color: #3b82f6; background: #3b82f614;">
+            Ice Shelf Disruption
+          </span>
+          <span class="scenario-card-meters" style="color: #3b82f6;">&#43;5 Meters Rise</span>
+        </div>
+        <p class="scenario-card-summary">Triggered by rapid disintegration of West Antarctic marine-terminating ice shelves and accelerated Greenland peripheral ice loss.</p>
+        <button type="button" class="scenario-card-apply-btn" data-threshold="5">
+          <span>Apply &#43;5 Meters Rise</span> &rarr;
+        </button>
+      </div>
+      <div class="sea-scenario-card" data-threshold="10">
+        <div class="scenario-card-header">
+          <span class="scenario-card-badge" style="border-color: #6366f166; color: #6366f1; background: #6366f114;">
+            Major Inundation
+          </span>
+          <span class="scenario-card-meters" style="color: #6366f1;">&#43;10 Meters Rise</span>
+        </div>
+        <p class="scenario-card-summary">Complete disappearance of southern Florida, large portions of Bangladesh, the Netherlands coastal ring, and Shanghai lowlands.</p>
+        <button type="button" class="scenario-card-apply-btn" data-threshold="10">
+          <span>Apply &#43;10 Meters Rise</span> &rarr;
+        </button>
+      </div>
+      <div class="sea-scenario-card" data-threshold="20">
+        <div class="scenario-card-header">
+          <span class="scenario-card-badge" style="border-color: #8b5cf666; color: #8b5cf6; background: #8b5cf614;">
+            Multi-Century Collapse
+          </span>
+          <span class="scenario-card-meters" style="color: #8b5cf6;">&#43;20 Meters Rise</span>
+        </div>
+        <p class="scenario-card-summary">Multi-century equilibrium state under sustained elevated atmospheric CO2 levels, submerging lowlands and shifting continental shorelines.</p>
+        <button type="button" class="scenario-card-apply-btn" data-threshold="20">
+          <span>Apply &#43;20 Meters Rise</span> &rarr;
+        </button>
+      </div>
+      <div class="sea-scenario-card" data-threshold="60">
+        <div class="scenario-card-header">
+          <span class="scenario-card-badge" style="border-color: #ec489966; color: #ec4899; background: #ec489914;">
+            Total Deglaciation
+          </span>
+          <span class="scenario-card-meters" style="color: #ec4899;">&#43;60 Meters Rise</span>
+        </div>
+        <p class="scenario-card-summary">Catastrophic melting of the entire Antarctic and Greenland ice caps. Complete redrawing of Earth&#39;s continental maps.</p>
+        <button type="button" class="scenario-card-apply-btn" data-threshold="60">
+          <span>Apply &#43;60 Meters Rise</span> &rarr;
+        </button>
+      </div>
+    </div>
+
+    
+    <div class="sea-tech-card">
+      <div class="sea-tech-header">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+        <h3>Methodology &amp; Hydrological Modeling</h3>
+      </div>
+      <div class="sea-tech-body">
+        <p>
+          Unlike simplistic &ldquo;bathtub&rdquo; models that flood all terrestrial pixels below a given elevation regardless of inland topography, this visualization employs <strong>SCALGO&rsquo;s hydrological flow engine</strong>. A terrestrial cell is only marked flooded if it is <em>hydrologically connected</em> to the open sea or ocean basin without natural or artificial terrain barriers blocking water intrusion.
+        </p>
+        <div class="sea-tech-columns">
+          <div class="sea-tech-col">
+            <h4>Elevation Source (SRTM 90m v4.1)</h4>
+            <p>
+              Shuttle Radar Topography Mission (SRTM) digital elevation model provided by the CGIAR Consortium for Spatial Information (CGIAR-CSI). Provides continuous global topographical coverage between 60&deg;N and 56&deg;S latitude at 3 arc-second (approx. 90-meter) resolution.
+            </p>
+          </div>
+          <div class="sea-tech-col">
+            <h4>WMTS Tile Service &amp; EPSG:3857</h4>
+            <p>
+              Tiles are requested dynamically over the Web Map Tile Service (WMTS) specification in Web Mercator projection across zoom levels 0 through 14. Modifying the sea-level threshold sends updated dimension query keys to the tile generator to refresh inundation contours in real time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<script src="/lib/openlayers/ol.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  
+  if (typeof ol === 'undefined') {
+    console.error('OpenLayers library not loaded');
+    return;
+  }
+
+  
+  let currentThreshold = 10;
+  let currentBasemap = 'satellite';
+  let currentOpacity = 0.6;
+  let isPlaying = false;
+  let playInterval = null;
+
+  
+  const mapElement = document.getElementById('seaMap');
+  const thresholdSlider = document.getElementById('thresholdRangeInput');
+  const panelThresholdBadge = document.getElementById('panelThresholdBadge');
+  const statsThresholdDisplay = document.getElementById('statsThresholdDisplay');
+  const statsActiveRegion = document.getElementById('statsActiveRegion');
+  const statsBasemapDisplay = document.getElementById('statsBasemapDisplay');
+  const basemapSelect = document.getElementById('basemapSelect');
+  const opacitySlider = document.getElementById('opacitySlider');
+  const opacityValDisplay = document.getElementById('opacityValDisplay');
+  const hotspotSelect = document.getElementById('hotspotSelect');
+  const btnResetView = document.getElementById('btnResetView');
+  const btnToggleFullscreen = document.getElementById('btnToggleFullscreen');
+  const btnPlaySimulation = document.getElementById('btnPlaySimulation');
+  const playIcon = document.getElementById('playIcon');
+  const playBtnText = document.getElementById('playBtnText');
+  const simPanelBody = document.getElementById('simPanelBody');
+  const btnMinimizePanel = document.getElementById('btnMinimizePanel');
+  const regionInfoTitle = document.getElementById('regionInfoTitle');
+  const regionInfoDesc = document.getElementById('regionInfoDesc');
+  const scenarioPills = document.querySelectorAll('.sea-scenario-btn');
+  const scenarioCardBtns = document.querySelectorAll('.scenario-card-apply-btn');
+  const stepBtns = document.querySelectorAll('.sim-step-btn');
+
+  
+  const regionData = {
+    'gulf-mexico': {
+      name: 'Gulf of Mexico & Mississippi Delta',
+      location: 'USA (Louisiana / Florida)',
+      center: [-9871995, 3566245],
+      zoom: 6,
+      desc: 'Low-lying Mississippi River Delta and Florida Peninsula, among the most vulnerable coastal zones in North America.'
+    },
+    'netherlands': {
+      name: 'The Netherlands & North Sea',
+      location: 'Western Europe',
+      center: [550000, 6850000],
+      zoom: 7,
+      desc: 'Dense delta plain with over 26% of land currently situated below sea level, protected by the Delta Works system.'
+    },
+    'bangladesh': {
+      name: 'Ganges-Brahmaputra Delta',
+      location: 'Bangladesh & West Bengal',
+      center: [10050000, 2600000],
+      zoom: 7,
+      desc: "The world's largest river delta, where tens of millions live less than 5 meters above sea level in cyclone-prone wetlands."
+    },
+    'nile-delta': {
+      name: 'Nile Delta & Alexandria',
+      location: 'Egypt',
+      center: [3480000, 3650000],
+      zoom: 8,
+      desc: 'Agricultural breadbasket of Egypt, with historical Alexandria and extensive Mediterranean lagoons at extreme flood risk.'
+    },
+    'venice': {
+      name: 'Venice Lagoon & Po Plain',
+      location: 'Italy',
+      center: [1370000, 5680000],
+      zoom: 8,
+      desc: "Historic Venetian archipelago and the flat Po River Valley, vulnerable to regular 'Acqua Alta' tidal surges."
+    },
+    'tokyo-bay': {
+      name: 'Tokyo Bay & Kanto Plain',
+      location: 'Japan',
+      center: [15560000, 4240000],
+      zoom: 8,
+      desc: 'Megacity metropolis with extensive reclaimed bay land, subterranean infrastructure, and high population density.'
+    },
+    'thames': {
+      name: 'London & Thames Estuary',
+      location: 'United Kingdom',
+      center: [70000, 6710000],
+      zoom: 8,
+      desc: 'Lowland estuary defended by the Thames Barrier, facing heightened tidal surge frequencies as oceans warm.'
+    },
+    'new-york': {
+      name: 'New York Harbor & Manhattan',
+      location: 'USA (East Coast)',
+      center: [-8238000, 4970000],
+      zoom: 9,
+      desc: 'Dense island topography where subway tunnels, waterfront districts, and Brooklyn shores face severe storm surge exposure.'
+    },
+    'shanghai': {
+      name: 'Yangtze Delta & Shanghai',
+      location: 'China',
+      center: [13520000, 3680000],
+      zoom: 7,
+      desc: 'Massive urban sprawl and global shipping hub built upon soft alluvial silt with average elevations under 4 meters.'
+    },
+    'amazon': {
+      name: 'Amazon River Delta',
+      location: 'Brazil (Pará / Amapá)',
+      center: [-5550000, -50000],
+      zoom: 7,
+      desc: 'Vast equatorial delta discharging 20% of global river flow into the Atlantic, encircled by tidal mangrove forests.'
+    }
+  };
+
+  
+  function createBasemapSource(style) {
+    switch (style) {
+      case 'osm':
+        return new ol.source.OSM({
+          attributions: '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
+        });
+      case 'terrain':
+        return new ol.source.XYZ({
+          url: 'https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',
+          attributions: '© Google Terrain'
+        });
+      case 'carto-dark':
+        return new ol.source.XYZ({
+          url: 'https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
+          attributions: '© <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>'
+        });
+      case 'carto-light':
+        return new ol.source.XYZ({
+          url: 'https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
+          attributions: '© <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>'
+        });
+      case 'satellite':
+      default:
+        return new ol.source.XYZ({
+          url: 'https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
+          attributions: '© Google Satellite'
+        });
+    }
+  }
+
+  
+  const projection = ol.proj.get('EPSG:3857');
+  const projectionExtent = projection.getExtent();
+  const size = ol.extent.getWidth(projectionExtent) / 256;
+  const resolutions = new Array(15);
+  const matrixIds = new Array(15);
+
+  for (let z = 0; z <= 14; ++z) {
+    matrixIds[z] = z.toString();
+    resolutions[z] = size / Math.pow(2, z);
+  }
+
+  
+  const wmtsFloodSource = new ol.source.WMTS({
+    url: 'https://ts2.scalgo.com/olpatch/wmts?token=' + atob('Q0M1QkYyOEE3RDk2QjMyMEM3REZCRkQxMjM2QjVCRUI='),
+    layer: 'SRTM_4_1:SRTM_4_1_flooded_sealevels',
+    format: 'image/png',
+    matrixSet: 'EPSG:3857',
+    tileGrid: new ol.tilegrid.WMTS({
+      origin: ol.extent.getTopLeft(projectionExtent),
+      resolutions: resolutions,
+      matrixIds: matrixIds
+    }),
+    style: 'default',
+    dimensions: { threshold: currentThreshold.toString() },
+    attributions: [
+      '<a href="https://scalgo.com" target="_blank" rel="noopener">SCALGO</a>',
+      '<a href="https://cgiarcsi.community/data/srtm-90m-digital-elevation-database-v4-1" target="_blank" rel="noopener">CGIAR-CSI SRTM</a>'
+    ]
+  });
+
+  
+  const basemapLayer = new ol.layer.Tile({
+    source: createBasemapSource(currentBasemap)
+  });
+
+  
+  const floodTileLayer = new ol.layer.Tile({
+    opacity: currentOpacity,
+    source: wmtsFloodSource
+  });
+
+  
+  const initialCenter = [-9871995, 3566245]; 
+  const mapView = new ol.View({
+    projection: projection,
+    center: initialCenter,
+    zoom: 6,
+    minZoom: 2,
+    maxZoom: 13
+  });
+
+  const map = new ol.Map({
+    target: mapElement,
+    view: mapView,
+    layers: [basemapLayer, floodTileLayer]
+  });
+
+  
+  let updateDebounceTimer = null;
+
+  function updateSeaLevel(threshold, updateSliderVal = true) {
+    currentThreshold = Math.min(100, Math.max(-1, parseInt(threshold, 10)));
+    const formattedStr = (currentThreshold >= 0 ? '+' : '') + currentThreshold + ' m';
+
+    
+    panelThresholdBadge.textContent = formattedStr;
+    statsThresholdDisplay.textContent = formattedStr;
+
+    if (updateSliderVal && thresholdSlider.value != currentThreshold) {
+      thresholdSlider.value = currentThreshold;
+    }
+
+    
+    scenarioPills.forEach(btn => {
+      const btnThresh = parseInt(btn.getAttribute('data-threshold'), 10);
+      if (btnThresh === currentThreshold) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    
+    clearTimeout(updateDebounceTimer);
+    updateDebounceTimer = setTimeout(() => {
+      wmtsFloodSource.updateDimensions({ threshold: currentThreshold.toString() });
+    }, 40);
+  }
+
+  
+  thresholdSlider.addEventListener('input', (e) => {
+    updateSeaLevel(e.target.value, false);
+  });
+
+  
+  stepBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const step = parseInt(btn.getAttribute('data-step'), 10);
+      updateSeaLevel(currentThreshold + step);
+    });
+  });
+
+  
+  basemapSelect.addEventListener('change', (e) => {
+    currentBasemap = e.target.value;
+    basemapLayer.setSource(createBasemapSource(currentBasemap));
+    const selectedOption = basemapSelect.options[basemapSelect.selectedIndex];
+    statsBasemapDisplay.textContent = selectedOption.textContent.replace(/[^\w\s]/gi, '').trim();
+  });
+
+  
+  opacitySlider.addEventListener('input', (e) => {
+    currentOpacity = parseFloat(e.target.value) / 100;
+    floodTileLayer.setOpacity(currentOpacity);
+    opacityValDisplay.textContent = e.target.value + '%';
+  });
+
+  
+  function applyScenario(thresh) {
+    updateSeaLevel(thresh);
+  }
+
+  scenarioPills.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const thresh = parseInt(btn.getAttribute('data-threshold'), 10);
+      applyScenario(thresh);
+    });
+  });
+
+  scenarioCardBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const thresh = parseInt(btn.getAttribute('data-threshold'), 10);
+      applyScenario(thresh);
+      
+      document.getElementById('seaMapViewport').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  });
+
+  
+  function flyToRegion(regionId) {
+    const region = regionData[regionId];
+    if (!region) return;
+
+    statsActiveRegion.textContent = region.name.split('&')[0].trim();
+    regionInfoTitle.textContent = region.name;
+    regionInfoDesc.textContent = region.desc;
+
+    mapView.animate({
+      center: region.center,
+      zoom: region.zoom,
+      duration: 1200
+    });
+  }
+
+  hotspotSelect.addEventListener('change', (e) => {
+    flyToRegion(e.target.value);
+  });
+
+  
+  btnResetView.addEventListener('click', () => {
+    hotspotSelect.value = 'gulf-mexico';
+    flyToRegion('gulf-mexico');
+  });
+
+  
+  btnToggleFullscreen.addEventListener('click', () => {
+    const viewport = document.getElementById('seaMapViewport');
+    const fsText = document.getElementById('fsText');
+
+    if (!document.fullscreenElement) {
+      if (viewport.requestFullscreen) {
+        viewport.requestFullscreen();
+      } else if (viewport.webkitRequestFullscreen) {
+        viewport.webkitRequestFullscreen();
+      }
+      fsText.textContent = 'Exit Fullscreen';
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      }
+      fsText.textContent = 'Fullscreen';
+    }
+  });
+
+  document.addEventListener('fullscreenchange', () => {
+    const fsText = document.getElementById('fsText');
+    const viewport = document.getElementById('seaMapViewport');
+    if (document.fullscreenElement) {
+      viewport.classList.add('is-fullscreen');
+      fsText.textContent = 'Exit Fullscreen';
+    } else {
+      viewport.classList.remove('is-fullscreen');
+      fsText.textContent = 'Fullscreen';
+    }
+    setTimeout(() => { map.updateSize(); }, 200);
+  });
+
+  
+  btnPlaySimulation.addEventListener('click', () => {
+    if (isPlaying) {
+      
+      clearInterval(playInterval);
+      isPlaying = false;
+      playBtnText.textContent = 'Animate';
+      playIcon.innerHTML = '<polygon points="5 3 19 12 5 21 5 3"></polygon>';
+      btnPlaySimulation.classList.remove('active');
+    } else {
+      
+      isPlaying = true;
+      playBtnText.textContent = 'Pause';
+      playIcon.innerHTML = '<rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect>';
+      btnPlaySimulation.classList.add('active');
+
+      playInterval = setInterval(() => {
+        let nextThresh = currentThreshold + 1;
+        if (nextThresh > 30) {
+          nextThresh = -1;
+        }
+        updateSeaLevel(nextThresh);
+      }, 450);
+    }
+  });
+
+  
+  btnMinimizePanel.addEventListener('click', () => {
+    const isCollapsed = simPanelBody.style.display === 'none';
+    if (isCollapsed) {
+      simPanelBody.style.display = 'block';
+      btnMinimizePanel.classList.remove('collapsed');
+      btnMinimizePanel.setAttribute('aria-expanded', 'true');
+    } else {
+      simPanelBody.style.display = 'none';
+      btnMinimizePanel.classList.add('collapsed');
+      btnMinimizePanel.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  
+  window.addEventListener('resize', () => {
+    map.updateSize();
+  });
+});
+</script>
+    </main>

@@ -1,0 +1,624 @@
+<main class="main">
+<link rel="stylesheet" href="/lib/leaflet/leaflet.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<div class="cities-page-container nukes-greenland-container">
+  
+  <div class="gallery-breadcrumbs">
+    <a href="http://localhost:1313/">Home</a> <span>/</span> <a href="/geolayers/">GeoLayers</a> <span>/</span> <span>USA
+      dropped nukes on Greenland</span>
+  </div>
+
+  
+  <header class="cities-header">
+    <div class="cities-header-content">
+      <div class="cities-badge-pill">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+        <span>Cold War Incident &bull; Broken Arrow &bull; January 21, 1968</span>
+      </div>
+      <h1 class="cities-title">USA dropped nukes on Greenland</h1>
+      <p class="cities-subtitle">
+        An interactive cartographic reconstruction of the 1968 Thule Air Base accident. An emergency in-flight fire
+        forced a USAF B-52G bomber carrying four B28FI thermonuclear weapons to crash onto the frozen sea ice of North
+        Star Bay, Greenland.
+      </p>
+    </div>
+
+    
+    <div class="cities-stats-bar">
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" id="statsTotalBombs">4</span>
+        <span class="cities-stat-label">Hydrogen Bombs</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number">4.4 MT</span>
+        <span class="cities-stat-label">Total Nuclear Yield</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" style="color: #ff4500;">-60&deg;C</span>
+        <span class="cities-stat-label">Project Crested Ice</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" style="color: #06b6d4;">1</span>
+        <span class="cities-stat-label">Lost Secondary (#78252)</span>
+      </div>
+      <div class="cities-stat-card active-city-card" id="activeBombCard" style="display:none;">
+        <span class="cities-stat-number active-city-name" id="activeBombName">-</span>
+        <span class="cities-stat-label" id="activeBombStatus">Selected Location</span>
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="cities-layout-stacked">
+
+    
+    <section class="cities-groups-row" id="nukesExplorerSection">
+      <div class="groups-row-header">
+        <div class="groups-header-info">
+          <div class="groups-title-wrap">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+              </polygon>
+            </svg>
+            <h2 class="groups-title">Incident Sites &amp; Strategic Outposts</h2>
+            <span class="groups-total-pill">6 Key Locations &bull; North Star Bay, Greenland</span>
+          </div>
+
+          
+          <div class="cities-search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="bombSearchInput" placeholder="Filter site by name, location or status..."
+              autocomplete="off" aria-label="Filter sites">
+            <button type="button" id="clearBombSearch" class="clear-search-btn" style="display:none;"
+              aria-label="Clear filter">&times;</button>
+          </div>
+        </div>
+
+        <div class="groups-header-actions">
+          <button type="button" class="groups-btn-action" id="toggleBriefingBtn"
+            title="Toggle Historical Briefing narrative">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span id="toggleBriefingText">Mission Briefing</span>
+          </button>
+          <button type="button" class="groups-btn-action toggle-cards-btn" id="toggleCardsBtn"
+            title="Show or hide site cards">
+            <svg id="toggleCardsIcon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+            <span id="toggleCardsText">Minimize Cards</span>
+          </button>
+        </div>
+      </div>
+
+      
+      <div class="cities-pill-carousel" id="statusPills">
+        <button type="button" class="country-pill active" data-status="all">All Sites (6)</button>
+        <button type="button" class="country-pill" data-status="detonated">
+          <span style="color:#ff4500;">●</span> Crash &amp; Detonation (1)
+        </button>
+        <button type="button" class="country-pill" data-status="debris">
+          <span style="color:#ffa500;">●</span> Contamination Swath (1)
+        </button>
+        <button type="button" class="country-pill" data-status="sea">
+          <span style="color:#06b6d4;">●</span> Lost Secondary Search (1)
+        </button>
+        <button type="button" class="country-pill" data-status="base,camp">
+          <span style="color:#3b82f6;">●</span> Military &amp; Outposts (2)
+        </button>
+        <button type="button" class="country-pill" data-status="bailout">
+          <span style="color:#a855f7;">●</span> Bailout &amp; Rescue (1)
+        </button>
+      </div>
+
+      
+      <div class="nukes-briefing-drawer show" id="briefingDrawer">
+        <div class="nukes-briefing-inner">
+          <div class="briefing-header">
+            <span class="briefing-tag">OPERATION CHROME DOME • HARD HEAD MISSION 1968</span>
+            <h3 class="briefing-title">The Thule Air Base Accident Narrative</h3>
+          </div>
+          <div class="briefing-content-grid">
+            <div class="briefing-text-col">
+              <p>On <strong>January 21, 1968</strong>, a USAF Boeing B-52G Stratofortress (serial 58-0188, callsign <strong>HOBO 28</strong>) carrying <strong>four B28FI thermonuclear weapons</strong> (1.1 megatons yield each) crashed onto the frozen sea ice of <strong>North Star Bay</strong> in Bylot Sound, Greenland, approximately 7 miles south-southwest of Thule Air Base.</p>
+              <p>While flying a secret continuous airborne alert monitoring the Thule BMEWS radar ('Hard Head'), an improvised heating duct modification ignited spare seat cushions stowed under the lower deck. The fire rapidly escalated into an uncontrollable inferno, filling the cockpit with blinding smoke and knocking out all onboard electrical power. Unable to land on Thule's runway, Captain John Haug ordered the crew to bail out into the Arctic darkness before the unmanned bomber banked and plummeted into the sea ice at 500 knots.</p>
+            </div>
+            <div class="briefing-fates-col">
+              <div class="fate-mini-card">
+                <span class="fate-dot" style="background: #ff4500;"></span>
+                <div>
+                  <strong>Non-Nuclear Detonation</strong>: <strong>Weapons 1, 2 & 3</strong>: The conventional high explosives detonated on impact, gouging a 670 m blackened trench in the ice and aerosolizing weapons-grade plutonium over 5 km².
+                </div>
+              </div>
+              <div class="fate-mini-card">
+                <span class="fate-dot" style="background: #06b6d4;"></span>
+                <div>
+                  <strong>The &#39;Missing&#39; Secondary</strong>: <strong>Weapon 4 (Serial 78252)</strong>: High explosives detonated; its secondary thermonuclear stage broke through the melting ice into North Star Bay and was never found.
+                </div>
+              </div>
+              <div class="fate-mini-card">
+                <span class="fate-dot" style="background: #10b981;"></span>
+                <div>
+                  <strong>Operation Crested Ice</strong>: <strong>Dr. Freezelove Cleanup</strong>: American and Danish teams shoveled 500,000+ gallons of radioactive slush at -60°C into steel tanks before the spring ice thaw.
+                </div>
+              </div>
+              <div class="fate-mini-card">
+                <span class="fate-dot" style="background: #a855f7;"></span>
+                <div>
+                  <strong>Permanent Strategic Shift</strong>: <strong>End of Chrome Dome</strong>: Following Palomares (1966) and Thule (1968), the Pentagon officially and permanently ended 24/7 airborne nuclear bomber patrols.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="cities-groups-cards-grid nukes-cards-grid" id="bombCardsGrid">
+        <div class="city-group-card nuke-bomb-card" data-bomb-id="site-crash" data-status="detonated"
+          data-name="primary impact &amp; crash swath" data-location="north star bay sea ice" data-lat="76.516"
+          data-lon="-69.183">
+          <div class="city-group-card-header">
+            <div class="card-header-left">
+              <span class="bomb-badge-dot"
+                style="background-color: #FF4500; box-shadow: 0 0 10px #FF4500;"></span>
+              <span class="group-name">Primary Impact &amp; Crash Swath</span>
+              <span class="nuke-status-badge"
+                style="border-color: #FF450066; color: #FF4500; background: #FF450014;">
+                Non-nuclear Detonation
+              </span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn nuke-fly-btn" data-lat="76.516" data-lon="-69.183"
+                title="Fly camera to Primary Impact &amp; Crash Swath">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="city-group-card-body show nuke-card-body">
+            <div class="nuke-location-title">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>North Star Bay Sea Ice</span>
+              <span class="nuke-elevation">(0 m (Sea Ice Surface))</span>
+            </div>
+
+            <p class="nuke-card-desc">B-52G slammed into sea ice at 500 knots. High explosives detonated on impact, gouging a 670-meter blackened trench into the ice pack.</p>
+            <p class="nuke-tech-detail">Conventional high-explosive trigger lenses in the four B28FI bombs detonated upon high-velocity impact with the frozen ice. No nuclear yield occurred, but burning JP-4 fuel melted through the ice sheet into seawater, pulverizing the airframe and aerosolizing weapons-grade plutonium.</p>
+
+            <div class="nuke-specs-row">
+              <div class="nuke-spec">
+                <span class="spec-dim">Coordinates:</span>
+                <span class="spec-val">76.5160&deg; N, 69.1830&deg;
+                  W</span>
+              </div>
+              <div class="nuke-spec">
+                <span class="spec-dim">Payload:</span>
+                <span class="spec-val">4 × B28FI Thermonuclear Warheads (4.4 MT Total Yield)</span>
+              </div>
+            </div>
+
+            <button type="button" class="nuke-card-action-btn" data-lat="76.516" data-lon="-69.183"
+              data-id="site-crash">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Focus on Map</span>
+            </button>
+          </div>
+        </div>
+        <div class="city-group-card nuke-bomb-card" data-bomb-id="site-plume" data-status="debris"
+          data-name="debris field &amp; plutonium swath" data-location="west-northwest dispersion track" data-lat="76.52"
+          data-lon="-69.3">
+          <div class="city-group-card-header">
+            <div class="card-header-left">
+              <span class="bomb-badge-dot"
+                style="background-color: #FFA500; box-shadow: 0 0 10px #FFA500;"></span>
+              <span class="group-name">Debris Field &amp; Plutonium Swath</span>
+              <span class="nuke-status-badge"
+                style="border-color: #FFA50066; color: #FFA500; background: #FFA50014;">
+                Contaminated Ice Plume
+              </span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn nuke-fly-btn" data-lat="76.52" data-lon="-69.3"
+                title="Fly camera to Debris Field &amp; Plutonium Swath">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="city-group-card-body show nuke-card-body">
+            <div class="nuke-location-title">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>West-Northwest Dispersion Track</span>
+              <span class="nuke-elevation">(0 m (Sea Ice Surface))</span>
+            </div>
+
+            <p class="nuke-card-desc">Main radioactive fallout plume spanning 5.6 km by 1 km across frozen Bylot Sound toward Saunders Island.</p>
+            <p class="nuke-tech-detail">Polar winds whipped alpha-emitting plutonium-239 and americium-241 particles across the snowpack. Over 500,000 gallons of contaminated snow, ice, and blackened aircraft wreckage were scraped by heavy graders and bulldozers to prevent marine ecosystem contamination upon spring melt.</p>
+
+            <div class="nuke-specs-row">
+              <div class="nuke-spec">
+                <span class="spec-dim">Coordinates:</span>
+                <span class="spec-val">76.5200&deg; N, 69.3000&deg;
+                  W</span>
+              </div>
+              <div class="nuke-spec">
+                <span class="spec-dim">Payload:</span>
+                <span class="spec-val">Aerosolized Pu-239, U-235, Am-241 &amp; Tritium</span>
+              </div>
+            </div>
+
+            <button type="button" class="nuke-card-action-btn" data-lat="76.52" data-lon="-69.3"
+              data-id="site-plume">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Focus on Map</span>
+            </button>
+          </div>
+        </div>
+        <div class="city-group-card nuke-bomb-card" data-bomb-id="site-lost-bomb" data-status="sea"
+          data-name="the &#39;lost bomb&#39; subsea grid" data-location="north star bay seabed (bylot sound)" data-lat="76.505"
+          data-lon="-69.23">
+          <div class="city-group-card-header">
+            <div class="card-header-left">
+              <span class="bomb-badge-dot"
+                style="background-color: #06B6D4; box-shadow: 0 0 10px #06B6D4;"></span>
+              <span class="group-name">The &#39;Lost Bomb&#39; Subsea Grid</span>
+              <span class="nuke-status-badge"
+                style="border-color: #06B6D466; color: #06B6D4; background: #06B6D414;">
+                Missing Secondary Core
+              </span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn nuke-fly-btn" data-lat="76.505" data-lon="-69.23"
+                title="Fly camera to The &#39;Lost Bomb&#39; Subsea Grid">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="city-group-card-body show nuke-card-body">
+            <div class="nuke-location-title">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>North Star Bay Seabed (Bylot Sound)</span>
+              <span class="nuke-elevation">(-200 m (Ocean Floor))</span>
+            </div>
+
+            <p class="nuke-card-desc">Subsea search grid for thermonuclear secondary stage Serial #78252, lost through ruptured ice to the ocean floor.</p>
+            <p class="nuke-tech-detail">Declassified documents in 2008 confirmed that while components of the other weapons were recovered, one secondary uranium/lithium-6 deuteride cylinder (Serial #78252) sank to the bottom of North Star Bay. In summer 1968, Canadian submersible Taurus searched the 200 m seabed without locating it, and the US military concluded it was buried under marine sediment.</p>
+
+            <div class="nuke-specs-row">
+              <div class="nuke-spec">
+                <span class="spec-dim">Coordinates:</span>
+                <span class="spec-val">76.5050&deg; N, 69.2300&deg;
+                  W</span>
+              </div>
+              <div class="nuke-spec">
+                <span class="spec-dim">Payload:</span>
+                <span class="spec-val">Secondary Stage Serial #78252 (Enriched U-235 / Li-6 Deuteride)</span>
+              </div>
+            </div>
+
+            <button type="button" class="nuke-card-action-btn" data-lat="76.505" data-lon="-69.23"
+              data-id="site-lost-bomb">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Focus on Map</span>
+            </button>
+          </div>
+        </div>
+        <div class="city-group-card nuke-bomb-card" data-bomb-id="site-thule-base" data-status="base"
+          data-name="thule air base (pituffik)" data-location="pituffik, northwestern greenland" data-lat="76.531"
+          data-lon="-68.703">
+          <div class="city-group-card-header">
+            <div class="card-header-left">
+              <span class="bomb-badge-dot"
+                style="background-color: #3B82F6; box-shadow: 0 0 10px #3B82F6;"></span>
+              <span class="group-name">Thule Air Base (Pituffik)</span>
+              <span class="nuke-status-badge"
+                style="border-color: #3B82F666; color: #3B82F6; background: #3B82F614;">
+                Strategic Outpost &amp; BMEWS
+              </span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn nuke-fly-btn" data-lat="76.531" data-lon="-68.703"
+                title="Fly camera to Thule Air Base (Pituffik)">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="city-group-card-body show nuke-card-body">
+            <div class="nuke-location-title">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Pituffik, Northwestern Greenland</span>
+              <span class="nuke-elevation">(77 m above sea level)</span>
+            </div>
+
+            <p class="nuke-card-desc">Critical SAC Arctic outpost and BMEWS missile radar installation; intended emergency divert runway for HOBO 28.</p>
+            <p class="nuke-tech-detail">Hosts the 12th Space Warning Squadron&#39;s Ballistic Missile Early Warning System (BMEWS J-Site). HOBO 28 declared an emergency due to an uncontrollable cockpit fire and requested an immediate visual landing on runway 08/26, but power failure and zero cockpit visibility forced Captain Haug to order an evacuation 7 miles south of the runway.</p>
+
+            <div class="nuke-specs-row">
+              <div class="nuke-spec">
+                <span class="spec-dim">Coordinates:</span>
+                <span class="spec-val">76.5310&deg; N, 68.7030&deg;
+                  W</span>
+              </div>
+              <div class="nuke-spec">
+                <span class="spec-dim">Payload:</span>
+                <span class="spec-val">Air Base Runway 08/26 &amp; BMEWS Radar Installation</span>
+              </div>
+            </div>
+
+            <button type="button" class="nuke-card-action-btn" data-lat="76.531" data-lon="-68.703"
+              data-id="site-thule-base">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Focus on Map</span>
+            </button>
+          </div>
+        </div>
+        <div class="city-group-card nuke-bomb-card" data-bomb-id="site-camp-hunley" data-status="camp"
+          data-name="camp hunley (decon base)" data-location="north star bay ice shelf" data-lat="76.525"
+          data-lon="-69.12">
+          <div class="city-group-card-header">
+            <div class="card-header-left">
+              <span class="bomb-badge-dot"
+                style="background-color: #10B981; box-shadow: 0 0 10px #10B981;"></span>
+              <span class="group-name">Camp Hunley (Decon Base)</span>
+              <span class="nuke-status-badge"
+                style="border-color: #10B98166; color: #10B981; background: #10B98114;">
+                Arctic Decontamination HQ
+              </span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn nuke-fly-btn" data-lat="76.525" data-lon="-69.12"
+                title="Fly camera to Camp Hunley (Decon Base)">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="city-group-card-body show nuke-card-body">
+            <div class="nuke-location-title">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>North Star Bay Ice Shelf</span>
+              <span class="nuke-elevation">(0 m (Sea Ice Surface))</span>
+            </div>
+
+            <p class="nuke-card-desc">Temporary polar station built directly on sea ice to manage Project Crested Ice (dubbed &#39;Dr. Freezelove&#39;).</p>
+            <p class="nuke-tech-detail">Constructed in perpetual polar night at windchills reaching -60°C. Comprised heated prefab shelters, generators, and a helicopter landing zone. Housed over 70 Danish and American nuclear radiation specialists who operated around the clock to clear contaminated ice before the spring thaw.</p>
+
+            <div class="nuke-specs-row">
+              <div class="nuke-spec">
+                <span class="spec-dim">Coordinates:</span>
+                <span class="spec-val">76.5250&deg; N, 69.1200&deg;
+                  W</span>
+              </div>
+              <div class="nuke-spec">
+                <span class="spec-dim">Payload:</span>
+                <span class="spec-val">Project Crested Ice Command Post</span>
+              </div>
+            </div>
+
+            <button type="button" class="nuke-card-action-btn" data-lat="76.525" data-lon="-69.12"
+              data-id="site-camp-hunley">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Focus on Map</span>
+            </button>
+          </div>
+        </div>
+        <div class="city-group-card nuke-bomb-card" data-bomb-id="site-bailout" data-status="bailout"
+          data-name="crew bailout &amp; rescue corridor" data-location="wolstenholme fjord shoreline" data-lat="76.555"
+          data-lon="-69.42">
+          <div class="city-group-card-header">
+            <div class="card-header-left">
+              <span class="bomb-badge-dot"
+                style="background-color: #A855F7; box-shadow: 0 0 10px #A855F7;"></span>
+              <span class="group-name">Crew Bailout &amp; Rescue Corridor</span>
+              <span class="nuke-status-badge"
+                style="border-color: #A855F766; color: #A855F7; background: #A855F714;">
+                Crew Ejection &amp; Rescue
+              </span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn nuke-fly-btn" data-lat="76.555" data-lon="-69.42"
+                title="Fly camera to Crew Bailout &amp; Rescue Corridor">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="city-group-card-body show nuke-card-body">
+            <div class="nuke-location-title">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Wolstenholme Fjord Shoreline</span>
+              <span class="nuke-elevation">(15 m (Fjord shoreline))</span>
+            </div>
+
+            <p class="nuke-card-desc">Corridor where six crew members parachuted into the pitch-black Arctic night; rescued by Inughuit dog sledders.</p>
+            <p class="nuke-tech-detail">Six crew members ejected at 2,000 feet over the frozen bay and survived parachute landings in -35°C Arctic gales. Local Inughuit hunters with dog-sled teams and USAF HH-43 Pedro helicopters located and rescued all six. Co-pilot Capt. Leonard Svitenko perished when attempting manual bail-out through the lower hatch without an ejection seat.</p>
+
+            <div class="nuke-specs-row">
+              <div class="nuke-spec">
+                <span class="spec-dim">Coordinates:</span>
+                <span class="spec-val">76.5550&deg; N, 69.4200&deg;
+                  W</span>
+              </div>
+              <div class="nuke-spec">
+                <span class="spec-dim">Payload:</span>
+                <span class="spec-val">Bailout Corridor (6 Survivors, 1 Fatality)</span>
+              </div>
+            </div>
+
+            <button type="button" class="nuke-card-action-btn" data-lat="76.555" data-lon="-69.42"
+              data-id="site-bailout">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Focus on Map</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <main class="cities-map-viewport nukes-map-viewport">
+      
+      <div class="cities-map-controls-bar">
+        
+        <div class="map-control-group">
+          <label for="bombJumpSelect" class="sr-only">Jump to Incident Location</label>
+          <select id="bombJumpSelect" class="map-select-input" aria-label="Jump to Incident Location">
+            <option value="all">🎯 All Sites (Thule / North Star Bay Overview)</option>
+            <option value="site-crash" data-lat="76.516" data-lon="-69.183">🔴 Primary Impact &amp; Crash Swath &bull; North Star Bay Sea Ice
+            </option>
+            <option value="site-plume" data-lat="76.52" data-lon="-69.3">🟠 Debris Field &amp; Plutonium Swath &bull; West-Northwest Dispersion Track
+            </option>
+            <option value="site-lost-bomb" data-lat="76.505" data-lon="-69.23">🔵 The &#39;Lost Bomb&#39; Subsea Grid &bull; North Star Bay Seabed (Bylot Sound)
+            </option>
+            <option value="site-thule-base" data-lat="76.531" data-lon="-68.703">🔷 Thule Air Base (Pituffik) &bull; Pituffik, Northwestern Greenland
+            </option>
+            <option value="site-camp-hunley" data-lat="76.525" data-lon="-69.12">🟢 Camp Hunley (Decon Base) &bull; North Star Bay Ice Shelf
+            </option>
+            <option value="site-bailout" data-lat="76.555" data-lon="-69.42">🟣 Crew Bailout &amp; Rescue Corridor &bull; Wolstenholme Fjord Shoreline
+            </option>
+          </select>
+        </div>
+
+        
+        <div class="map-control-group">
+          <label for="basemapSelect" class="sr-only">Basemap Style</label>
+          <select id="basemapSelect" class="map-select-input" aria-label="Select Basemap">
+            <option value="osm" selected>🗺️ OpenStreetMap</option>
+            <option value="satellite">🛰️ Satellite (Esri)</option>
+            <option value="esri-dark">🌙 Dark Gray (Esri)</option>
+            <option value="carto-dark">🌌 CartoDB Dark</option>
+            <option value="esri-light">☀️ Minimal Light (Esri)</option>
+            <option value="topo">⛰️ Topographic (OpenTopoMap)</option>
+          </select>
+        </div>
+
+        
+        <button type="button" class="map-action-btn active" id="toggleZonesBtn"
+          title="Toggle plutonium dispersion &amp; search zones">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="9"></circle>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+          <span class="btn-text">Zones</span>
+        </button>
+
+        
+        <button type="button" class="map-action-btn active" id="toggleLabelsBtn" title="Toggle site name labels">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 7V4h16v3M9 20h6M12 4v16" />
+          </svg>
+          <span class="btn-text">Labels</span>
+        </button>
+
+        
+        <button type="button" class="map-action-btn" id="resetMapBoundsBtn" title="Reset map to fit all locations">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="1 4 1 10 7 10"></polyline>
+            <polyline points="23 20 23 14 17 14"></polyline>
+            <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
+          </svg>
+          <span class="btn-text">Recenter</span>
+        </button>
+      </div>
+
+      
+      <div id="thuleMap" class="cities-leaflet-container"
+        style="height: 650px; min-height: 520px; width: 100%; position: relative; background: #0f172a;" tabindex="0"
+        aria-label="Interactive map showing the crash coordinates and key locations of the 1968 Thule incident"></div>
+
+      
+      <div class="cities-map-legend-overlay nukes-legend-box">
+        <div class="legend-indicator">
+          <span class="legend-point-dot" style="background:#ff4500;"></span>
+          <span><strong>Crash &amp; Detonation</strong>: 670 m scorched ice trench</span>
+        </div>
+        <div class="legend-indicator">
+          <span class="legend-point-dot" style="background:#ffa500;"></span>
+          <span><strong>Debris &amp; Contamination</strong>: 5.6 km &times; 1 km plutonium plume</span>
+        </div>
+        <div class="legend-indicator">
+          <span class="legend-point-dot" style="background:#06b6d4;"></span>
+          <span><strong>Subsea Search</strong>: Missing secondary stage (#78252)</span>
+        </div>
+        <div class="legend-indicator">
+          <span class="legend-point-dot" style="background:#3b82f6;"></span>
+          <span><strong>Thule Air Base</strong>: Strategic SAC &amp; BMEWS Outpost</span>
+        </div>
+        <div class="legend-indicator">
+          <span class="legend-point-dot" style="background:#10b981;"></span>
+          <span><strong>Camp Hunley</strong>: Ice shelf decontamination HQ (-60&deg;C)</span>
+        </div>
+        <div class="legend-indicator">
+          <span class="legend-point-dot" style="background:#a855f7;"></span>
+          <span><strong>Bailout Zone</strong>: 6 crew survivors rescued</span>
+        </div>
+        <div class="legend-hint">
+          Click any marker or card above to fly camera &bull; Zero API keys required.
+        </div>
+      </div>
+    </main>

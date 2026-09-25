@@ -1,0 +1,1291 @@
+<main class="main">
+
+<link rel="stylesheet" href="/lib/openlayers/ol.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@8.2.0/ol.css">
+
+<div class="cities-page-container timezones-container">
+  
+  <div class="gallery-breadcrumbs">
+    <a href="http://localhost:1313/">Home</a> <span>/</span> <a href="/geolayers/">GeoLayers</a> <span>/</span> <span>Timezones</span>
+  </div>
+
+  
+  <header class="cities-header">
+    <div class="cities-header-content">
+      <div class="cities-badge-pill tz-badge-pill">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <span>Global Chronology &bull; Solar Daylight Illumination &bull; Real-Time</span>
+      </div>
+      <h1 class="cities-title">World Timezones &amp; Solar Daylight</h1>
+      <p class="cities-subtitle">
+        An interactive cartographic exploration of global standard timezones. Watch real-time daylight progression
+        across earth's standard meridians, compare offsets from UTC, scrub through 24 hours of solar terminator motion, and inspect local clocks around the globe.
+      </p>
+    </div>
+
+    
+    <div class="cities-stats-bar">
+      <div class="cities-stat-card">
+        <span class="cities-stat-number font-mono tz-clock-display" id="statsUtcClock">--:--:--</span>
+        <span class="cities-stat-label">UTC / GMT (Reference)</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number font-mono tz-clock-display" id="statsLocalClock">--:--:--</span>
+        <span class="cities-stat-label">Your Local Time</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number tz-subsolar" id="statsSubsolarMeridian">0.0&deg;</span>
+        <span class="cities-stat-label">Solar Noon Longitude</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" id="statsTotalZones">37</span>
+        <span class="cities-stat-label">Standard Timezones</span>
+      </div>
+      <div class="cities-stat-card active-city-card" id="activeZoneStatCard" style="display:none;">
+        <span class="cities-stat-number active-city-name" id="activeZoneCardTitle">-</span>
+        <span class="cities-stat-label" id="activeZoneCardSub">Selected Zone</span>
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="tz-toolbar-panel">
+    <div class="tz-toolbar-top">
+      
+      <div class="cities-search-box tz-search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="tzSearchInput" placeholder="Search timezone or city (e.g. Tokyo, London, São Paulo, UTC+5)..." autocomplete="off" aria-label="Search timezone or city">
+        <button type="button" id="clearTzSearch" class="clear-search-btn" style="display:none;" aria-label="Clear filter">&times;</button>
+      </div>
+
+      
+      <div class="tz-mode-toggle-group">
+        <button type="button" class="tz-mode-btn active" id="btnLiveMode" title="Sync to real-time clock">
+          <span class="tz-live-indicator"></span> Live Clock
+        </button>
+        <button type="button" class="tz-mode-btn" id="btnSimMode" title="Scrub through 24-hour solar cycle">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          Solar Scrubber
+        </button>
+      </div>
+
+      
+      <div class="tz-actions-group">
+        <button type="button" class="groups-btn-action" id="btnResetView" title="Reset global map view">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+          </svg>
+          <span>Reset Globe</span>
+        </button>
+        <button type="button" class="groups-btn-action" id="btnToggleBasemap" title="Switch dark/light basemap">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <span id="basemapLabel">Light Tiles</span>
+        </button>
+      </div>
+    </div>
+
+    
+    <div class="tz-scrubber-container" id="tzScrubberContainer" style="display:none;">
+      <div class="tz-scrubber-header">
+        <div class="tz-scrubber-title">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+          </svg>
+          <span>Simulated Solar Time (UTC):</span>
+          <strong id="simulatedTimeDisplay" class="font-mono">12:00:00</strong>
+        </div>
+        <div class="tz-scrubber-subtext">
+          Drag slider to view how daylight sweeps across planetary meridians
+        </div>
+      </div>
+      <div class="tz-slider-wrapper">
+        <span class="tz-slider-label">00:00</span>
+        <input type="range" id="timeScrubber" min="0" max="1439" value="720" step="5" aria-label="Solar time scrubber">
+        <span class="tz-slider-label">23:59</span>
+      </div>
+      <div class="tz-scrubber-presets">
+        <button type="button" class="tz-scrubber-quick-btn" data-hour="0">00:00 (London Midnight)</button>
+        <button type="button" class="tz-scrubber-quick-btn" data-hour="6">06:00 (European Dawn)</button>
+        <button type="button" class="tz-scrubber-quick-btn" data-hour="12">12:00 (Greenwich Noon)</button>
+        <button type="button" class="tz-scrubber-quick-btn" data-hour="17">17:00 (Americas Afternoon)</button>
+        <button type="button" class="tz-scrubber-quick-btn" data-hour="21">21:00 (Pacific Sunset)</button>
+      </div>
+    </div>
+
+    
+    <div class="tz-quick-chips" id="tzQuickChips">
+      <span class="tz-chips-label">Quick Jump:</span>
+      <button type="button" class="tz-chip-btn" data-zone-id="utc-8" data-offset="-480" data-name="GMT -08:00" data-lon="-122.41" data-lat="37.77" data-zoom="3">
+        UTC-08:00 (Pacific Time)
+      </button>
+      <button type="button" class="tz-chip-btn" data-zone-id="utc-5" data-offset="-300" data-name="GMT -05:00" data-lon="-74" data-lat="40.71" data-zoom="3">
+        UTC-05:00 (Eastern Time)
+      </button>
+      <button type="button" class="tz-chip-btn" data-zone-id="utc-3" data-offset="-180" data-name="GMT -03:00" data-lon="-46.63" data-lat="-23.55" data-zoom="3">
+        UTC-03:00 (Brasília / Buenos Aires)
+      </button>
+      <button type="button" class="tz-chip-btn" data-zone-id="utc-0" data-offset="0" data-name="GMT 00:00" data-lon="-0.12" data-lat="51.5" data-zoom="3">
+        UTC±00:00 (Greenwich / London)
+      </button>
+      <button type="button" class="tz-chip-btn" data-zone-id="utc-1-plus" data-offset="60" data-name="GMT &#43;01:00" data-lon="13.4" data-lat="52.52" data-zoom="3">
+        UTC&#43;01:00 (Central European Time)
+      </button>
+      <button type="button" class="tz-chip-btn" data-zone-id="utc-3-plus" data-offset="180" data-name="GMT &#43;03:00" data-lon="37.61" data-lat="55.75" data-zoom="3">
+        UTC&#43;03:00 (Moscow / Arabia / East Africa)
+      </button>
+      <button type="button" class="tz-chip-btn" data-zone-id="utc-5-30-plus" data-offset="330" data-name="GMT &#43;05:30" data-lon="77.2" data-lat="28.61" data-zoom="3">
+        UTC&#43;05:30 (India / Sri Lanka)
+      </button>
+      <button type="button" class="tz-chip-btn" data-zone-id="utc-8-plus" data-offset="480" data-name="GMT &#43;08:00" data-lon="116.4" data-lat="39.9" data-zoom="3">
+        UTC&#43;08:00 (China / Singapore / WA)
+      </button>
+      <button type="button" class="tz-chip-btn" data-zone-id="utc-9-plus" data-offset="540" data-name="GMT &#43;09:00" data-lon="139.69" data-lat="35.68" data-zoom="3">
+        UTC&#43;09:00 (Japan / Korea)
+      </button>
+      <button type="button" class="tz-chip-btn" data-zone-id="utc-10-plus" data-offset="600" data-name="GMT &#43;10:00" data-lon="151.2" data-lat="-33.86" data-zoom="3">
+        UTC&#43;10:00 (Eastern Australia / Vladivostok)
+      </button>
+      <button type="button" class="tz-chip-btn" data-zone-id="utc-12-plus" data-offset="720" data-name="GMT &#43;12:00" data-lon="174.76" data-lat="-36.84" data-zoom="3">
+        UTC&#43;12:00 (New Zealand / Fiji)
+      </button>
+      <button type="button" class="tz-chip-btn" data-zone-id="utc-14-plus" data-offset="840" data-name="GMT &#43;14:00" data-lon="-157.36" data-lat="1.87" data-zoom="3">
+        UTC&#43;14:00 (Line Islands, Kiribati)
+      </button>
+    </div>
+  </div>
+
+  
+  <div class="tz-map-section">
+    <div class="tz-map-card">
+      <div class="tz-map-header-bar">
+        <div class="tz-map-title-info">
+          <span class="tz-map-dot"></span>
+          <span class="tz-map-heading">Interactive Daylight &amp; Timezone Horizon</span>
+          <span class="tz-map-legend">
+            <span class="legend-color legend-sun"></span> Daytime (Sunlight)
+            <span class="legend-color legend-night"></span> Nighttime (Darkness)
+          </span>
+        </div>
+        <div class="tz-map-status" id="mapLoadingStatus">
+          <div class="tz-spinner"></div> Loading timezones.kml...
+        </div>
+      </div>
+
+      
+      <div class="tz-viewport-wrap">
+        <div id="timezonesMap" class="timezones-map-element" tabindex="0" aria-label="World Timezones Map"></div>
+
+        
+        <div id="tzTooltip" class="tz-map-floating-tooltip" style="display:none;"></div>
+
+        
+        <div id="tzDetailCard" class="tz-active-card-overlay" style="display:none;">
+          <button type="button" id="closeDetailCard" class="tz-close-card-btn" aria-label="Close detail panel">&times;</button>
+          <div class="tz-card-header">
+            <span class="tz-card-offset" id="cardTzOffset">UTC+00:00</span>
+            <span class="tz-card-status-badge" id="cardTzDaylight">Day</span>
+          </div>
+          <h3 class="tz-card-name" id="cardTzName">Greenwich Mean Time</h3>
+          <div class="tz-card-clock font-mono" id="cardTzClock">12:00:00</div>
+          <p class="tz-card-relation" id="cardTzRelation">Matches your local timezone</p>
+          <div class="tz-card-cities-section">
+            <span class="tz-card-cities-label">Representative Major Cities:</span>
+            <div class="tz-card-cities-list" id="cardTzCities">London, Dublin, Lisbon, Accra</div>
+          </div>
+          <p class="tz-card-description" id="cardTzDesc">The primary reference meridian.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <section class="tz-directory-section" id="tzDirectorySection">
+    <div class="groups-row-header">
+      <div class="groups-header-info">
+        <div class="groups-title-wrap">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <h2 class="groups-title">Global Timezone Directory</h2>
+          <span class="groups-total-pill">37 Meridians &amp; Local Clocks</span>
+        </div>
+      </div>
+      <div class="groups-header-actions">
+        <button type="button" class="groups-btn-action" id="toggleDirectoryCardsBtn">
+          <span id="toggleCardsLabel">Collapse Grid</span>
+        </button>
+      </div>
+    </div>
+
+    
+    <div class="tz-cards-grid" id="tzCardsContainer">
+      <article class="tz-grid-card" data-zone-id="utc-12" data-name="GMT -12:00" data-offset="-720" data-cities="Baker Island, Howland Island" data-lon="-176.47" data-lat="0.19" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT -12:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-12">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC-12:00 (Baker Island)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-12">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Baker Island, Howland Island</p>
+        <p class="tz-grid-desc">The westernmost timezone on Earth. Uninhabited US minor islands that are the last places to enter a new calendar day.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-11" data-name="GMT -11:00" data-offset="-660" data-cities="Pago Pago, Alofi, Midway Atoll" data-lon="-170.7" data-lat="-14.27" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT -11:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-11">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC-11:00 (Samoa / Niue)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-11">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Pago Pago, Alofi, Midway Atoll</p>
+        <p class="tz-grid-desc">Covers American Samoa and Niue in the South Pacific Ocean.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-10" data-name="GMT -10:00" data-offset="-600" data-cities="Honolulu, Papeete, Hilo, Rarotonga" data-lon="-157.85" data-lat="21.3" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT -10:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-10">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC-10:00 (Hawaii / Tahiti)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-10">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Honolulu, Papeete, Hilo, Rarotonga</p>
+        <p class="tz-grid-desc">Hawaii-Aleutian Standard Time and Tahiti. Does not observe Daylight Saving Time in Hawaii.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-9" data-name="GMT -09:00" data-offset="-540" data-cities="Anchorage, Fairbanks, Juneau, Gambier Islands" data-lon="-149.9" data-lat="61.21" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT -09:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-9">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC-09:00 (Alaska)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-9">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Anchorage, Fairbanks, Juneau, Gambier Islands</p>
+        <p class="tz-grid-desc">Alaska Standard Time, covering nearly the entire state of Alaska except the westernmost Aleutian islands.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-8" data-name="GMT -08:00" data-offset="-480" data-cities="Los Angeles, San Francisco, Seattle, Vancouver, Tijuana" data-lon="-122.41" data-lat="37.77" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT -08:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-8">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC-08:00 (Pacific Time)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-8">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Los Angeles, San Francisco, Seattle, Vancouver, Tijuana</p>
+        <p class="tz-grid-desc">Pacific Standard Time (PST), home to Silicon Valley, the US Pacific coast, and British Columbia.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-7" data-name="GMT -07:00" data-offset="-420" data-cities="Denver, Phoenix, Salt Lake City, Calgary, Edmonton" data-lon="-104.99" data-lat="39.73" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT -07:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-7">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC-07:00 (Mountain Time)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-7">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Denver, Phoenix, Salt Lake City, Calgary, Edmonton</p>
+        <p class="tz-grid-desc">Mountain Standard Time (MST). Arizona remains on UTC-7 year-round without Daylight Saving Time.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-6" data-name="GMT -06:00" data-offset="-360" data-cities="Chicago, Houston, Dallas, Mexico City, Guatemala City" data-lon="-87.62" data-lat="41.87" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT -06:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-6">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC-06:00 (Central Time)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-6">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Chicago, Houston, Dallas, Mexico City, Guatemala City</p>
+        <p class="tz-grid-desc">Central Standard Time (CST), stretching from Canada through the US Midwest and Texas down into Central America.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-5" data-name="GMT -05:00" data-offset="-300" data-cities="New York, Washington D.C., Toronto, Miami, Bogota, Lima" data-lon="-74" data-lat="40.71" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT -05:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-5">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC-05:00 (Eastern Time)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-5">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> New York, Washington D.C., Toronto, Miami, Bogota, Lima</p>
+        <p class="tz-grid-desc">Eastern Standard Time (EST), covering Wall Street, US capital, and western South America (Colombia, Peru, Ecuador).</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-4" data-name="GMT -04:00" data-offset="-240" data-cities="Caracas, Santiago, La Paz, San Juan, Halifax, Santo Domingo" data-lon="-66.1" data-lat="18.46" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT -04:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-4">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC-04:00 (Atlantic / Caribbean)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-4">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Caracas, Santiago, La Paz, San Juan, Halifax, Santo Domingo</p>
+        <p class="tz-grid-desc">Atlantic Standard Time and parts of South America (Venezuela, Bolivia, Chile in winter).</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-3-30" data-name="GMT -03:30" data-offset="-210" data-cities="St. John&#39;s, Corner Brook, Gander" data-lon="-52.71" data-lat="47.56" data-zoom="4">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT -03:30</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-3-30">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC-03:30 (Newfoundland)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-3-30">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> St. John&#39;s, Corner Brook, Gander</p>
+        <p class="tz-grid-desc">Newfoundland Time Zone, a distinctive half-hour offset in eastern Canada.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-3" data-name="GMT -03:00" data-offset="-180" data-cities="São Paulo, Buenos Aires, Rio de Janeiro, Montevideo, Brasília, Nuuk" data-lon="-46.63" data-lat="-23.55" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT -03:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-3">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC-03:00 (Brasília / Buenos Aires)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-3">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> São Paulo, Buenos Aires, Rio de Janeiro, Montevideo, Brasília, Nuuk</p>
+        <p class="tz-grid-desc">Brasília Time and Argentina Time. Dominates south-eastern South America and Greenland&#39;s main settlements.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-2" data-name="GMT -02:00" data-offset="-120" data-cities="Fernando de Noronha, South Georgia, King Edward Point" data-lon="-32.42" data-lat="-3.85" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT -02:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-2">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC-02:00 (Mid-Atlantic)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-2">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Fernando de Noronha, South Georgia, King Edward Point</p>
+        <p class="tz-grid-desc">Mid-Atlantic islands including Brazil&#39;s Fernando de Noronha archipelago and South Georgia.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-1" data-name="GMT -01:00" data-offset="-60" data-cities="Praia, Ponta Delgada, Ittoqqortoormiit" data-lon="-25.66" data-lat="37.74" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT -01:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-1">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC-01:00 (Cape Verde / Azores)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-1">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Praia, Ponta Delgada, Ittoqqortoormiit</p>
+        <p class="tz-grid-desc">Cape Verde and Portugal&#39;s Azores archipelago (standard time).</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-0" data-name="GMT 00:00" data-offset="0" data-cities="London, Dublin, Lisbon, Reykjavik, Accra, Dakar" data-lon="-0.12" data-lat="51.5" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT 00:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-0">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC±00:00 (Greenwich / London)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-0">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> London, Dublin, Lisbon, Reykjavik, Accra, Dakar</p>
+        <p class="tz-grid-desc">Greenwich Mean Time (GMT) and Coordinated Universal Time (UTC) reference meridian. Spans the UK, Portugal, Iceland, and West Africa.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-1-plus" data-name="GMT &#43;01:00" data-offset="60" data-cities="Paris, Berlin, Rome, Madrid, Amsterdam, Lagos, Kinshasa" data-lon="13.4" data-lat="52.52" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT &#43;01:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-1-plus">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC&#43;01:00 (Central European Time)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-1-plus">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Paris, Berlin, Rome, Madrid, Amsterdam, Lagos, Kinshasa</p>
+        <p class="tz-grid-desc">Central European Time (CET) and West Africa Time. One of the most populous and economically active timezones.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-2-plus" data-name="GMT &#43;02:00" data-offset="120" data-cities="Cairo, Johannesburg, Athens, Kyiv, Jerusalem, Helsinki, Bucharest" data-lon="31.23" data-lat="30.04" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT &#43;02:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-2-plus">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC&#43;02:00 (Eastern European / Cairo)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-2-plus">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Cairo, Johannesburg, Athens, Kyiv, Jerusalem, Helsinki, Bucharest</p>
+        <p class="tz-grid-desc">Eastern European Time (EET), Central Africa Time, and South African Standard Time.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-3-plus" data-name="GMT &#43;03:00" data-offset="180" data-cities="Moscow, Istanbul, Riyadh, Nairobi, Doha, Baghdad, Addis Ababa" data-lon="37.61" data-lat="55.75" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT &#43;03:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-3-plus">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC&#43;03:00 (Moscow / Arabia / East Africa)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-3-plus">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Moscow, Istanbul, Riyadh, Nairobi, Doha, Baghdad, Addis Ababa</p>
+        <p class="tz-grid-desc">Moscow Time, Arabia Standard Time, and East Africa Time. Year-round fixed UTC&#43;3 in Turkey, Saudi Arabia, and Moscow.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-3-30-plus" data-name="GMT &#43;03:30" data-offset="210" data-cities="Tehran, Isfahan, Mashhad, Shiraz" data-lon="51.38" data-lat="35.68" data-zoom="4">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT &#43;03:30</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-3-30-plus">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC&#43;03:30 (Iran)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-3-30-plus">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Tehran, Isfahan, Mashhad, Shiraz</p>
+        <p class="tz-grid-desc">Iran Standard Time (IRST). Iran abolished DST in 2022, staying permanently on UTC&#43;3:30.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-4-plus" data-name="GMT &#43;04:00" data-offset="240" data-cities="Dubai, Abu Dhabi, Baku, Tbilisi, Yerevan, Muscat" data-lon="55.27" data-lat="25.2" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT &#43;04:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-4-plus">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC&#43;04:00 (Gulf / Caucasus)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-4-plus">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Dubai, Abu Dhabi, Baku, Tbilisi, Yerevan, Muscat</p>
+        <p class="tz-grid-desc">Gulf Standard Time and Caucasus nations (Azerbaijan, Georgia, Armenia).</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-4-30-plus" data-name="GMT &#43;04:30" data-offset="270" data-cities="Kabul, Kandahar, Herat, Mazar-i-Sharif" data-lon="69.17" data-lat="34.55" data-zoom="4">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT &#43;04:30</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-4-30-plus">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC&#43;04:30 (Afghanistan)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-4-30-plus">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Kabul, Kandahar, Herat, Mazar-i-Sharif</p>
+        <p class="tz-grid-desc">Afghanistan Standard Time (AFT), half-hour offset across the Hindu Kush.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-5-plus" data-name="GMT &#43;05:00" data-offset="300" data-cities="Karachi, Islamabad, Tashkent, Yekaterinburg, Ashgabat, Male" data-lon="73.04" data-lat="33.68" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT &#43;05:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-5-plus">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC&#43;05:00 (Pakistan / Central Asia)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-5-plus">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Karachi, Islamabad, Tashkent, Yekaterinburg, Ashgabat, Male</p>
+        <p class="tz-grid-desc">Pakistan Standard Time, Uzbekistan, Turkmenistan, Maldives, and western Siberia.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-5-30-plus" data-name="GMT &#43;05:30" data-offset="330" data-cities="New Delhi, Mumbai, Bengaluru, Kolkata, Colombo, Chennai" data-lon="77.2" data-lat="28.61" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT &#43;05:30</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-5-30-plus">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC&#43;05:30 (India / Sri Lanka)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-5-30-plus">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> New Delhi, Mumbai, Bengaluru, Kolkata, Colombo, Chennai</p>
+        <p class="tz-grid-desc">Indian Standard Time (IST), serving over 1.4 billion people across the entire Indian subcontinent with a single half-hour offset.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-5-45-plus" data-name="GMT &#43;05:45" data-offset="345" data-cities="Kathmandu, Pokhara, Lalitpur, Biratnagar" data-lon="85.32" data-lat="27.71" data-zoom="4">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT &#43;05:45</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-5-45-plus">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC&#43;05:45 (Nepal)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-5-45-plus">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Kathmandu, Pokhara, Lalitpur, Biratnagar</p>
+        <p class="tz-grid-desc">Nepal Standard Time, one of only three 45-minute timezone offsets in the world, based on the meridian of Mount Gauri Sankar.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-6-plus" data-name="GMT &#43;06:00" data-offset="360" data-cities="Dhaka, Almaty, Astana, Omsk, Thimphu" data-lon="90.41" data-lat="23.81" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT &#43;06:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-6-plus">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC&#43;06:00 (Bangladesh / Omsk)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-6-plus">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Dhaka, Almaty, Astana, Omsk, Thimphu</p>
+        <p class="tz-grid-desc">Bangladesh Standard Time, Bhutan, and eastern Kazakhstan.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-6-30-plus" data-name="GMT &#43;06:30" data-offset="390" data-cities="Yangon, Mandalay, Naypyidaw, Cocos Islands" data-lon="96.19" data-lat="16.86" data-zoom="4">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT &#43;06:30</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-6-30-plus">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC&#43;06:30 (Myanmar / Cocos)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-6-30-plus">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Yangon, Mandalay, Naypyidaw, Cocos Islands</p>
+        <p class="tz-grid-desc">Myanmar Standard Time (MMT) and Australia&#39;s Cocos (Keeling) Islands.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-7-plus" data-name="GMT &#43;07:00" data-offset="420" data-cities="Bangkok, Jakarta, Ho Chi Minh City, Hanoi, Novosibirsk" data-lon="100.5" data-lat="13.75" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT &#43;07:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-7-plus">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC&#43;07:00 (Indochina / Western Indonesia)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-7-plus">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Bangkok, Jakarta, Ho Chi Minh City, Hanoi, Novosibirsk</p>
+        <p class="tz-grid-desc">Indochina Time (ICT) and Western Indonesia Time (WIB).</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-8-plus" data-name="GMT &#43;08:00" data-offset="480" data-cities="Beijing, Shanghai, Hong Kong, Singapore, Taipei, Kuala Lumpur, Perth, Manila" data-lon="116.4" data-lat="39.9" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT &#43;08:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-8-plus">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC&#43;08:00 (China / Singapore / WA)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-8-plus">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Beijing, Shanghai, Hong Kong, Singapore, Taipei, Kuala Lumpur, Perth, Manila</p>
+        <p class="tz-grid-desc">China Standard Time (covering all 5 geographical solar zones under Beijing time), Singapore, Malaysia, Philippines, and Western Australia.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-8-45-plus" data-name="GMT &#43;08:45" data-offset="525" data-cities="Eucla, Border Village, Mundrabilla" data-lon="128.88" data-lat="-31.67" data-zoom="4">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT &#43;08:45</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-8-45-plus">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC&#43;08:45 (Eucla, Australia)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-8-45-plus">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Eucla, Border Village, Mundrabilla</p>
+        <p class="tz-grid-desc">Central Western Standard Time (CWST), an unofficial 45-minute offset used along the Eyre Highway in Western Australia.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-9-plus" data-name="GMT &#43;09:00" data-offset="540" data-cities="Tokyo, Seoul, Osaka, Pyongyang, Yakutsk" data-lon="139.69" data-lat="35.68" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT &#43;09:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-9-plus">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC&#43;09:00 (Japan / Korea)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-9-plus">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Tokyo, Seoul, Osaka, Pyongyang, Yakutsk</p>
+        <p class="tz-grid-desc">Japan Standard Time (JST) and Korea Standard Time (KST). Does not observe Daylight Saving Time.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-9-30-plus" data-name="GMT &#43;09:30" data-offset="570" data-cities="Adelaide, Darwin, Alice Springs, Broken Hill" data-lon="138.6" data-lat="-34.92" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT &#43;09:30</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-9-30-plus">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC&#43;09:30 (Central Australia)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-9-30-plus">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Adelaide, Darwin, Alice Springs, Broken Hill</p>
+        <p class="tz-grid-desc">Australian Central Standard Time (ACST), covering South Australia and Northern Territory.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-10-plus" data-name="GMT &#43;10:00" data-offset="600" data-cities="Sydney, Melbourne, Brisbane, Canberra, Vladivostok, Guam" data-lon="151.2" data-lat="-33.86" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT &#43;10:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-10-plus">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC&#43;10:00 (Eastern Australia / Vladivostok)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-10-plus">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Sydney, Melbourne, Brisbane, Canberra, Vladivostok, Guam</p>
+        <p class="tz-grid-desc">Australian Eastern Standard Time (AEST), eastern Russia, and Guam.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-10-30-plus" data-name="GMT &#43;10:30" data-offset="630" data-cities="Lord Howe Island" data-lon="159.08" data-lat="-31.55" data-zoom="4">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT &#43;10:30</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-10-30-plus">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC&#43;10:30 (Lord Howe Island)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-10-30-plus">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Lord Howe Island</p>
+        <p class="tz-grid-desc">Lord Howe Standard Time. Uniquely advances by only 30 minutes for Daylight Saving Time (to UTC&#43;11:00).</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-11-plus" data-name="GMT &#43;11:00" data-offset="660" data-cities="Nouméa, Honiara, Port Vila, Magadan" data-lon="166.45" data-lat="-22.27" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT &#43;11:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-11-plus">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC&#43;11:00 (Solomon Islands / New Caledonia)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-11-plus">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Nouméa, Honiara, Port Vila, Magadan</p>
+        <p class="tz-grid-desc">Southwest Pacific nations (New Caledonia, Solomon Islands, Vanuatu) and Magadan in eastern Russia.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-12-plus" data-name="GMT &#43;12:00" data-offset="720" data-cities="Auckland, Wellington, Suva, Petropavlovsk-Kamchatsky" data-lon="174.76" data-lat="-36.84" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT &#43;12:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-12-plus">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC&#43;12:00 (New Zealand / Fiji)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-12-plus">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Auckland, Wellington, Suva, Petropavlovsk-Kamchatsky</p>
+        <p class="tz-grid-desc">New Zealand Standard Time, Fiji, and Kamchatka peninsula. Among the earliest places to celebrate each new day.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-12-45-plus" data-name="GMT &#43;12:45" data-offset="765" data-cities="Waitangi, Kaingaroa, Owenga" data-lon="-176.55" data-lat="-43.95" data-zoom="4">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT &#43;12:45</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-12-45-plus">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC&#43;12:45 (Chatham Islands)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-12-45-plus">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Waitangi, Kaingaroa, Owenga</p>
+        <p class="tz-grid-desc">Chatham Islands Standard Time, New Zealand&#39;s unique 45-minute offset archipelago.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-13-plus" data-name="GMT &#43;13:00" data-offset="780" data-cities="Nuku&#39;alofa, Apia, Fakaofo (Tokelau)" data-lon="-175.2" data-lat="-21.13" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT &#43;13:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-13-plus">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC&#43;13:00 (Tonga / Samoa / Phoenix)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-13-plus">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Nuku&#39;alofa, Apia, Fakaofo (Tokelau)</p>
+        <p class="tz-grid-desc">Tonga, Samoa (which crossed the International Date Line in 2011 to align with Australia/NZ trade), and Kiribati&#39;s Phoenix Islands.</p>
+      </article>
+      <article class="tz-grid-card" data-zone-id="utc-14-plus" data-name="GMT &#43;14:00" data-offset="840" data-cities="Kiritimati (Christmas Island), Tabuaeran, Teraina" data-lon="-157.36" data-lat="1.87" data-zoom="3">
+        <div class="tz-grid-card-top">
+          <span class="tz-grid-offset">GMT &#43;14:00</span>
+          <span class="tz-grid-phase-pill" id="phase-utc-14-plus">Calculating...</span>
+        </div>
+        <h3 class="tz-grid-title">UTC&#43;14:00 (Line Islands, Kiribati)</h3>
+        <div class="tz-grid-clock font-mono" id="clock-utc-14-plus">--:--:--</div>
+        <p class="tz-grid-cities"><strong>Cities:</strong> Kiritimati (Christmas Island), Tabuaeran, Teraina</p>
+        <p class="tz-grid-desc">The easternmost timezone on Earth. The very first place on Earth to greet each calendar day and celebrate New Year.</p>
+      </article>
+    </div>
+  </section>
+</div>
+
+
+<script src="/lib/openlayers/ol.js"></script>
+<script>
+  if (typeof ol === 'undefined') {
+    document.write('\x3Cscript src="https://cdn.jsdelivr.net/npm/ol@8.2.0/dist/ol.js"><\/script>');
+  }
+</script>
+
+
+<script id="tzJsonData" type="application/json">
+{"subtitle":"Global chronology, solar illumination, and standard international time offsets.","title":"World Timezones","total_zones":38,"zones":[{"center":[-176.47,0.19],"cities":["Baker Island","Howland Island"],"description":"The westernmost timezone on Earth. Uninhabited US minor islands that are the last places to enter a new calendar day.","id":"utc-12","label":"UTC-12:00 (Baker Island)","name":"GMT -12:00","offset_hours":-12,"offset_minutes":-720,"zoom":3},{"center":[-170.7,-14.27],"cities":["Pago Pago","Alofi","Midway Atoll"],"description":"Covers American Samoa and Niue in the South Pacific Ocean.","id":"utc-11","label":"UTC-11:00 (Samoa / Niue)","name":"GMT -11:00","offset_hours":-11,"offset_minutes":-660,"zoom":3},{"center":[-157.85,21.3],"cities":["Honolulu","Papeete","Hilo","Rarotonga"],"description":"Hawaii-Aleutian Standard Time and Tahiti. Does not observe Daylight Saving Time in Hawaii.","id":"utc-10","label":"UTC-10:00 (Hawaii / Tahiti)","name":"GMT -10:00","offset_hours":-10,"offset_minutes":-600,"zoom":3},{"center":[-149.9,61.21],"cities":["Anchorage","Fairbanks","Juneau","Gambier Islands"],"description":"Alaska Standard Time, covering nearly the entire state of Alaska except the westernmost Aleutian islands.","id":"utc-9","label":"UTC-09:00 (Alaska)","name":"GMT -09:00","offset_hours":-9,"offset_minutes":-540,"zoom":3},{"center":[-122.41,37.77],"cities":["Los Angeles","San Francisco","Seattle","Vancouver","Tijuana"],"description":"Pacific Standard Time (PST), home to Silicon Valley, the US Pacific coast, and British Columbia.","id":"utc-8","label":"UTC-08:00 (Pacific Time)","name":"GMT -08:00","offset_hours":-8,"offset_minutes":-480,"zoom":3},{"center":[-104.99,39.73],"cities":["Denver","Phoenix","Salt Lake City","Calgary","Edmonton"],"description":"Mountain Standard Time (MST). Arizona remains on UTC-7 year-round without Daylight Saving Time.","id":"utc-7","label":"UTC-07:00 (Mountain Time)","name":"GMT -07:00","offset_hours":-7,"offset_minutes":-420,"zoom":3},{"center":[-87.62,41.87],"cities":["Chicago","Houston","Dallas","Mexico City","Guatemala City"],"description":"Central Standard Time (CST), stretching from Canada through the US Midwest and Texas down into Central America.","id":"utc-6","label":"UTC-06:00 (Central Time)","name":"GMT -06:00","offset_hours":-6,"offset_minutes":-360,"zoom":3},{"center":[-74,40.71],"cities":["New York","Washington D.C.","Toronto","Miami","Bogota","Lima"],"description":"Eastern Standard Time (EST), covering Wall Street, US capital, and western South America (Colombia, Peru, Ecuador).","id":"utc-5","label":"UTC-05:00 (Eastern Time)","name":"GMT -05:00","offset_hours":-5,"offset_minutes":-300,"zoom":3},{"center":[-66.1,18.46],"cities":["Caracas","Santiago","La Paz","San Juan","Halifax","Santo Domingo"],"description":"Atlantic Standard Time and parts of South America (Venezuela, Bolivia, Chile in winter).","id":"utc-4","label":"UTC-04:00 (Atlantic / Caribbean)","name":"GMT -04:00","offset_hours":-4,"offset_minutes":-240,"zoom":3},{"center":[-52.71,47.56],"cities":["St. John's","Corner Brook","Gander"],"description":"Newfoundland Time Zone, a distinctive half-hour offset in eastern Canada.","id":"utc-3-30","label":"UTC-03:30 (Newfoundland)","name":"GMT -03:30","offset_hours":-3.5,"offset_minutes":-210,"zoom":4},{"center":[-46.63,-23.55],"cities":["São Paulo","Buenos Aires","Rio de Janeiro","Montevideo","Brasília","Nuuk"],"description":"Brasília Time and Argentina Time. Dominates south-eastern South America and Greenland's main settlements.","id":"utc-3","label":"UTC-03:00 (Brasília / Buenos Aires)","name":"GMT -03:00","offset_hours":-3,"offset_minutes":-180,"zoom":3},{"center":[-32.42,-3.85],"cities":["Fernando de Noronha","South Georgia","King Edward Point"],"description":"Mid-Atlantic islands including Brazil's Fernando de Noronha archipelago and South Georgia.","id":"utc-2","label":"UTC-02:00 (Mid-Atlantic)","name":"GMT -02:00","offset_hours":-2,"offset_minutes":-120,"zoom":3},{"center":[-25.66,37.74],"cities":["Praia","Ponta Delgada","Ittoqqortoormiit"],"description":"Cape Verde and Portugal's Azores archipelago (standard time).","id":"utc-1","label":"UTC-01:00 (Cape Verde / Azores)","name":"GMT -01:00","offset_hours":-1,"offset_minutes":-60,"zoom":3},{"center":[-0.12,51.5],"cities":["London","Dublin","Lisbon","Reykjavik","Accra","Dakar"],"description":"Greenwich Mean Time (GMT) and Coordinated Universal Time (UTC) reference meridian. Spans the UK, Portugal, Iceland, and West Africa.","id":"utc-0","label":"UTC±00:00 (Greenwich / London)","name":"GMT 00:00","offset_hours":0,"offset_minutes":0,"zoom":3},{"center":[13.4,52.52],"cities":["Paris","Berlin","Rome","Madrid","Amsterdam","Lagos","Kinshasa"],"description":"Central European Time (CET) and West Africa Time. One of the most populous and economically active timezones.","id":"utc-1-plus","label":"UTC+01:00 (Central European Time)","name":"GMT +01:00","offset_hours":1,"offset_minutes":60,"zoom":3},{"center":[31.23,30.04],"cities":["Cairo","Johannesburg","Athens","Kyiv","Jerusalem","Helsinki","Bucharest"],"description":"Eastern European Time (EET), Central Africa Time, and South African Standard Time.","id":"utc-2-plus","label":"UTC+02:00 (Eastern European / Cairo)","name":"GMT +02:00","offset_hours":2,"offset_minutes":120,"zoom":3},{"center":[37.61,55.75],"cities":["Moscow","Istanbul","Riyadh","Nairobi","Doha","Baghdad","Addis Ababa"],"description":"Moscow Time, Arabia Standard Time, and East Africa Time. Year-round fixed UTC+3 in Turkey, Saudi Arabia, and Moscow.","id":"utc-3-plus","label":"UTC+03:00 (Moscow / Arabia / East Africa)","name":"GMT +03:00","offset_hours":3,"offset_minutes":180,"zoom":3},{"center":[51.38,35.68],"cities":["Tehran","Isfahan","Mashhad","Shiraz"],"description":"Iran Standard Time (IRST). Iran abolished DST in 2022, staying permanently on UTC+3:30.","id":"utc-3-30-plus","label":"UTC+03:30 (Iran)","name":"GMT +03:30","offset_hours":3.5,"offset_minutes":210,"zoom":4},{"center":[55.27,25.2],"cities":["Dubai","Abu Dhabi","Baku","Tbilisi","Yerevan","Muscat"],"description":"Gulf Standard Time and Caucasus nations (Azerbaijan, Georgia, Armenia).","id":"utc-4-plus","label":"UTC+04:00 (Gulf / Caucasus)","name":"GMT +04:00","offset_hours":4,"offset_minutes":240,"zoom":3},{"center":[69.17,34.55],"cities":["Kabul","Kandahar","Herat","Mazar-i-Sharif"],"description":"Afghanistan Standard Time (AFT), half-hour offset across the Hindu Kush.","id":"utc-4-30-plus","label":"UTC+04:30 (Afghanistan)","name":"GMT +04:30","offset_hours":4.5,"offset_minutes":270,"zoom":4},{"center":[73.04,33.68],"cities":["Karachi","Islamabad","Tashkent","Yekaterinburg","Ashgabat","Male"],"description":"Pakistan Standard Time, Uzbekistan, Turkmenistan, Maldives, and western Siberia.","id":"utc-5-plus","label":"UTC+05:00 (Pakistan / Central Asia)","name":"GMT +05:00","offset_hours":5,"offset_minutes":300,"zoom":3},{"center":[77.2,28.61],"cities":["New Delhi","Mumbai","Bengaluru","Kolkata","Colombo","Chennai"],"description":"Indian Standard Time (IST), serving over 1.4 billion people across the entire Indian subcontinent with a single half-hour offset.","id":"utc-5-30-plus","label":"UTC+05:30 (India / Sri Lanka)","name":"GMT +05:30","offset_hours":5.5,"offset_minutes":330,"zoom":3},{"center":[85.32,27.71],"cities":["Kathmandu","Pokhara","Lalitpur","Biratnagar"],"description":"Nepal Standard Time, one of only three 45-minute timezone offsets in the world, based on the meridian of Mount Gauri Sankar.","id":"utc-5-45-plus","label":"UTC+05:45 (Nepal)","name":"GMT +05:45","offset_hours":5.75,"offset_minutes":345,"zoom":4},{"center":[90.41,23.81],"cities":["Dhaka","Almaty","Astana","Omsk","Thimphu"],"description":"Bangladesh Standard Time, Bhutan, and eastern Kazakhstan.","id":"utc-6-plus","label":"UTC+06:00 (Bangladesh / Omsk)","name":"GMT +06:00","offset_hours":6,"offset_minutes":360,"zoom":3},{"center":[96.19,16.86],"cities":["Yangon","Mandalay","Naypyidaw","Cocos Islands"],"description":"Myanmar Standard Time (MMT) and Australia's Cocos (Keeling) Islands.","id":"utc-6-30-plus","label":"UTC+06:30 (Myanmar / Cocos)","name":"GMT +06:30","offset_hours":6.5,"offset_minutes":390,"zoom":4},{"center":[100.5,13.75],"cities":["Bangkok","Jakarta","Ho Chi Minh City","Hanoi","Novosibirsk"],"description":"Indochina Time (ICT) and Western Indonesia Time (WIB).","id":"utc-7-plus","label":"UTC+07:00 (Indochina / Western Indonesia)","name":"GMT +07:00","offset_hours":7,"offset_minutes":420,"zoom":3},{"center":[116.4,39.9],"cities":["Beijing","Shanghai","Hong Kong","Singapore","Taipei","Kuala Lumpur","Perth","Manila"],"description":"China Standard Time (covering all 5 geographical solar zones under Beijing time), Singapore, Malaysia, Philippines, and Western Australia.","id":"utc-8-plus","label":"UTC+08:00 (China / Singapore / WA)","name":"GMT +08:00","offset_hours":8,"offset_minutes":480,"zoom":3},{"center":[128.88,-31.67],"cities":["Eucla","Border Village","Mundrabilla"],"description":"Central Western Standard Time (CWST), an unofficial 45-minute offset used along the Eyre Highway in Western Australia.","id":"utc-8-45-plus","label":"UTC+08:45 (Eucla, Australia)","name":"GMT +08:45","offset_hours":8.75,"offset_minutes":525,"zoom":4},{"center":[139.69,35.68],"cities":["Tokyo","Seoul","Osaka","Pyongyang","Yakutsk"],"description":"Japan Standard Time (JST) and Korea Standard Time (KST). Does not observe Daylight Saving Time.","id":"utc-9-plus","label":"UTC+09:00 (Japan / Korea)","name":"GMT +09:00","offset_hours":9,"offset_minutes":540,"zoom":3},{"center":[138.6,-34.92],"cities":["Adelaide","Darwin","Alice Springs","Broken Hill"],"description":"Australian Central Standard Time (ACST), covering South Australia and Northern Territory.","id":"utc-9-30-plus","label":"UTC+09:30 (Central Australia)","name":"GMT +09:30","offset_hours":9.5,"offset_minutes":570,"zoom":3},{"center":[151.2,-33.86],"cities":["Sydney","Melbourne","Brisbane","Canberra","Vladivostok","Guam"],"description":"Australian Eastern Standard Time (AEST), eastern Russia, and Guam.","id":"utc-10-plus","label":"UTC+10:00 (Eastern Australia / Vladivostok)","name":"GMT +10:00","offset_hours":10,"offset_minutes":600,"zoom":3},{"center":[159.08,-31.55],"cities":["Lord Howe Island"],"description":"Lord Howe Standard Time. Uniquely advances by only 30 minutes for Daylight Saving Time (to UTC+11:00).","id":"utc-10-30-plus","label":"UTC+10:30 (Lord Howe Island)","name":"GMT +10:30","offset_hours":10.5,"offset_minutes":630,"zoom":4},{"center":[166.45,-22.27],"cities":["Nouméa","Honiara","Port Vila","Magadan"],"description":"Southwest Pacific nations (New Caledonia, Solomon Islands, Vanuatu) and Magadan in eastern Russia.","id":"utc-11-plus","label":"UTC+11:00 (Solomon Islands / New Caledonia)","name":"GMT +11:00","offset_hours":11,"offset_minutes":660,"zoom":3},{"center":[174.76,-36.84],"cities":["Auckland","Wellington","Suva","Petropavlovsk-Kamchatsky"],"description":"New Zealand Standard Time, Fiji, and Kamchatka peninsula. Among the earliest places to celebrate each new day.","id":"utc-12-plus","label":"UTC+12:00 (New Zealand / Fiji)","name":"GMT +12:00","offset_hours":12,"offset_minutes":720,"zoom":3},{"center":[-176.55,-43.95],"cities":["Waitangi","Kaingaroa","Owenga"],"description":"Chatham Islands Standard Time, New Zealand's unique 45-minute offset archipelago.","id":"utc-12-45-plus","label":"UTC+12:45 (Chatham Islands)","name":"GMT +12:45","offset_hours":12.75,"offset_minutes":765,"zoom":4},{"center":[-175.2,-21.13],"cities":["Nuku'alofa","Apia","Fakaofo (Tokelau)"],"description":"Tonga, Samoa (which crossed the International Date Line in 2011 to align with Australia/NZ trade), and Kiribati's Phoenix Islands.","id":"utc-13-plus","label":"UTC+13:00 (Tonga / Samoa / Phoenix)","name":"GMT +13:00","offset_hours":13,"offset_minutes":780,"zoom":3},{"center":[-157.36,1.87],"cities":["Kiritimati (Christmas Island)","Tabuaeran","Teraina"],"description":"The easternmost timezone on Earth. The very first place on Earth to greet each calendar day and celebrate New Year.","id":"utc-14-plus","label":"UTC+14:00 (Line Islands, Kiribati)","name":"GMT +14:00","offset_hours":14,"offset_minutes":840,"zoom":3}]}
+</script>
+
+
+<script>
+(function() {
+  'use strict';
+
+  function initTimezonesApp() {
+    if (typeof ol === 'undefined') {
+      setTimeout(initTimezonesApp, 100);
+      return;
+    }
+
+    var tzDataElement = document.getElementById('tzJsonData');
+    var tzMeta = {};
+    try {
+      tzMeta = JSON.parse(tzDataElement.textContent);
+    } catch(e) {
+      console.error('Failed to parse timezone metadata:', e);
+    }
+    var zoneMapById = {};
+    var zoneMapByName = {};
+    if (tzMeta.zones) {
+      tzMeta.zones.forEach(function(z) {
+        zoneMapById[z.id] = z;
+        zoneMapByName[z.name.toUpperCase().trim()] = z;
+      });
+    }
+
+    
+    var isLiveMode = true;
+    var simulatedMinutes = 720; 
+    var activeBasemapType = 'dark'; 
+    var selectedFeature = null;
+    var hoveredFeature = null;
+    var kmlLoaded = false;
+
+    
+    var statsUtcClock = document.getElementById('statsUtcClock');
+    var statsLocalClock = document.getElementById('statsLocalClock');
+    var statsSubsolar = document.getElementById('statsSubsolarMeridian');
+    var activeZoneStatCard = document.getElementById('activeZoneStatCard');
+    var activeZoneCardTitle = document.getElementById('activeZoneCardTitle');
+    var activeZoneCardSub = document.getElementById('activeZoneCardSub');
+
+    var btnLiveMode = document.getElementById('btnLiveMode');
+    var btnSimMode = document.getElementById('btnSimMode');
+    var tzScrubberContainer = document.getElementById('tzScrubberContainer');
+    var timeScrubber = document.getElementById('timeScrubber');
+    var simulatedTimeDisplay = document.getElementById('simulatedTimeDisplay');
+
+    var btnResetView = document.getElementById('btnResetView');
+    var btnToggleBasemap = document.getElementById('btnToggleBasemap');
+    var basemapLabel = document.getElementById('basemapLabel');
+
+    var tzSearchInput = document.getElementById('tzSearchInput');
+    var clearTzSearch = document.getElementById('clearTzSearch');
+
+    var tzTooltip = document.getElementById('tzTooltip');
+    var tzDetailCard = document.getElementById('tzDetailCard');
+    var closeDetailCard = document.getElementById('closeDetailCard');
+    var cardTzOffset = document.getElementById('cardTzOffset');
+    var cardTzDaylight = document.getElementById('cardTzDaylight');
+    var cardTzName = document.getElementById('cardTzName');
+    var cardTzClock = document.getElementById('cardTzClock');
+    var cardTzRelation = document.getElementById('cardTzRelation');
+    var cardTzCities = document.getElementById('cardTzCities');
+    var cardTzDesc = document.getElementById('cardTzDesc');
+
+    var mapLoadingStatus = document.getElementById('mapLoadingStatus');
+    var mapContainer = document.getElementById('timezonesMap');
+
+    
+    function getReferenceTime() {
+      if (isLiveMode) {
+        return new Date();
+      } else {
+        var now = new Date();
+        var hours = Math.floor(simulatedMinutes / 60);
+        var mins = simulatedMinutes % 60;
+        var sim = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), hours, mins, 0));
+        return sim;
+      }
+    }
+
+    function formatDigits(n) {
+      return n < 10 ? '0' + n : '' + n;
+    }
+
+    function formatTime(d) {
+      return formatDigits(d.getHours()) + ':' + formatDigits(d.getMinutes()) + ':' + formatDigits(d.getSeconds());
+    }
+
+    function formatUtcTime(d) {
+      return formatDigits(d.getUTCHours()) + ':' + formatDigits(d.getUTCMinutes()) + ':' + formatDigits(d.getUTCSeconds());
+    }
+
+    
+    
+    
+    function getSubsolarLongitude(d) {
+      var utcDecHours = d.getUTCHours() + d.getUTCMinutes() / 60 + d.getUTCSeconds() / 3600;
+      var lon = (12 - utcDecHours) * 15;
+      if (lon > 180) lon -= 360;
+      if (lon < -180) lon += 360;
+      return lon.toFixed(1) + (lon >= 0 ? '° E' : '° W');
+    }
+
+    
+    function calculateDaylight(refDate, offsetMinutes) {
+      
+      
+      var utcMs = refDate.getTime() + (refDate.getTimezoneOffset() * 60000);
+      var localDate = new Date(utcMs + (offsetMinutes * 60000));
+
+      var decHours = localDate.getHours() + localDate.getMinutes() / 60 + localDate.getSeconds() / 3600;
+      var distFromNoon = Math.abs(12 - decHours);
+      if (distFromNoon > 12) distFromNoon = 24 - distFromNoon;
+
+      
+      var intensity = 0.55 * Math.max(0, 1 - (distFromNoon / 12));
+
+      var phase = 'Night';
+      var phaseColor = '#94a3b8';
+      if (distFromNoon <= 3.5) {
+        phase = 'Solar Noon';
+        phaseColor = '#fbbf24';
+      } else if (distFromNoon <= 6) {
+        phase = 'Daylight';
+        phaseColor = '#facc15';
+      } else if (distFromNoon <= 7.5) {
+        phase = 'Twilight';
+        phaseColor = '#fb923c';
+      } else {
+        phase = 'Night';
+        phaseColor = '#818cf8';
+      }
+
+      return {
+        localDate: localDate,
+        intensity: intensity,
+        distFromNoon: distFromNoon,
+        phase: phase,
+        phaseColor: phaseColor
+      };
+    }
+
+    
+    var osmSource = new ol.source.OSM({
+      attributions: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
+    });
+
+    var darkBasemap = new ol.layer.Tile({
+      source: osmSource,
+      className: 'tz-dark-tiles',
+      visible: true
+    });
+
+    var lightBasemap = new ol.layer.Tile({
+      source: osmSource,
+      visible: false
+    });
+
+    
+    function parseOffsetFromFeature(feature) {
+      var offset = feature.get('tz-offset');
+      if (offset !== undefined && offset !== null) return offset;
+
+      var name = feature.get('name') || '';
+      var m = name.match(/([+-]?)(\d{1,2}):(\d{2})$/);
+      if (m) {
+        var sign = (m[1] === '-') ? -1 : 1;
+        var h = parseInt(m[2], 10);
+        var min = parseInt(m[3], 10);
+        offset = sign * (h * 60 + min);
+      } else if (name.indexOf('GMT 00:00') !== -1 || name.indexOf('GMT 0') !== -1) {
+        offset = 0;
+      } else {
+        offset = 0;
+      }
+      feature.set('tz-offset', offset, true);
+      return offset;
+    }
+
+    
+    function timezoneStyleFunction(feature) {
+      var offset = parseOffsetFromFeature(feature);
+      var refDate = getReferenceTime();
+      var dl = calculateDaylight(refDate, offset);
+
+      var isSelected = (selectedFeature === feature);
+      var isHovered = (hoveredFeature === feature);
+
+      var fillColor;
+      if (dl.intensity > 0.02) {
+        
+        fillColor = [255, 220, 60, dl.intensity];
+      } else {
+        
+        fillColor = activeBasemapType === 'dark' ? [15, 23, 42, 0.40] : [71, 85, 105, 0.20];
+      }
+
+      var strokeColor = isSelected ? '#38bdf8' : (isHovered ? '#fbbf24' : 'rgba(255, 255, 255, 0.32)');
+      var strokeWidth = isSelected ? 2.8 : (isHovered ? 2.0 : 0.85);
+
+      return new ol.style.Style({
+        fill: new ol.style.Fill({ color: fillColor }),
+        stroke: new ol.style.Stroke({ color: strokeColor, width: strokeWidth })
+      });
+    }
+
+    
+    var kmlSource = new ol.source.Vector({
+      url: '/data/timezones.kml',
+      format: new ol.format.KML({ extractStyles: false })
+    });
+
+    var timezoneVectorLayer = new ol.layer.Vector({
+      source: kmlSource,
+      style: timezoneStyleFunction
+    });
+
+    
+    var tooltipOverlay = new ol.Overlay({
+      element: tzTooltip,
+      offset: [15, -10],
+      positioning: 'bottom-left'
+    });
+
+    
+    var defaultCenter = ol.proj.fromLonLat([10, 20]);
+    var defaultZoom = 2.2;
+    var mapView = new ol.View({
+      center: defaultCenter,
+      zoom: defaultZoom,
+      minZoom: 1.5,
+      maxZoom: 10
+    });
+
+    
+    var map = new ol.Map({
+      target: mapContainer,
+      layers: [darkBasemap, lightBasemap, timezoneVectorLayer],
+      view: mapView,
+      overlays: [tooltipOverlay],
+      controls: ol.control.defaults.defaults({
+        zoom: true,
+        rotate: false,
+        attribution: true
+      })
+    });
+
+    
+    kmlSource.on('featuresloadend', function(e) {
+      kmlLoaded = true;
+      if (mapLoadingStatus) {
+        mapLoadingStatus.innerHTML = '<span class="tz-ready-badge">&check; 38 Timezones Active</span>';
+      }
+      e.features.forEach(function(feat) {
+        parseOffsetFromFeature(feat);
+      });
+      
+      timezoneVectorLayer.changed();
+    });
+
+    kmlSource.on('featuresloaderror', function() {
+      if (mapLoadingStatus) {
+        mapLoadingStatus.innerHTML = '<span class="tz-err-badge">! Error loading timezones.kml</span>';
+      }
+    });
+
+    
+    map.on('pointermove', function(evt) {
+      if (evt.dragging) {
+        tooltipOverlay.setPosition(undefined);
+        tzTooltip.style.display = 'none';
+        return;
+      }
+
+      var hitFeature = map.forEachFeatureAtPixel(evt.pixel, function(feat) {
+        return feat;
+      });
+
+      if (hitFeature && hitFeature.get('name')) {
+        if (hoveredFeature !== hitFeature) {
+          hoveredFeature = hitFeature;
+          timezoneVectorLayer.changed();
+        }
+
+        var tzName = hitFeature.get('name') || '';
+        var offset = parseOffsetFromFeature(hitFeature);
+        var ref = getReferenceTime();
+        var dl = calculateDaylight(ref, offset);
+
+        
+        var cleanName = tzName.toUpperCase().trim();
+        var meta = zoneMapByName[cleanName];
+        var citiesSnippet = meta ? meta.cities.slice(0, 3).join(', ') : '';
+
+        var html = '<div class="tz-tooltip-header">' +
+          '<span class="tz-tooltip-name">' + tzName + '</span>' +
+          '<span class="tz-tooltip-phase" style="color:' + dl.phaseColor + ';">' + dl.phase + '</span>' +
+          '</div>' +
+          '<div class="tz-tooltip-time font-mono">' + formatTime(dl.localDate) + '</div>' +
+          (citiesSnippet ? '<div class="tz-tooltip-cities">' + citiesSnippet + '</div>' : '');
+
+        tzTooltip.innerHTML = html;
+        tzTooltip.style.display = 'block';
+        tooltipOverlay.setPosition(evt.coordinate);
+        map.getTargetElement().style.cursor = 'pointer';
+      } else {
+        if (hoveredFeature !== null) {
+          hoveredFeature = null;
+          timezoneVectorLayer.changed();
+        }
+        tooltipOverlay.setPosition(undefined);
+        tzTooltip.style.display = 'none';
+        map.getTargetElement().style.cursor = '';
+      }
+    });
+
+    
+    map.on('click', function(evt) {
+      var hit = map.forEachFeatureAtPixel(evt.pixel, function(feat) {
+        return feat;
+      });
+
+      if (hit && hit.get('name')) {
+        selectTimezoneFeature(hit);
+      } else {
+        deselectTimezone();
+      }
+    });
+
+    function selectTimezoneFeature(feature) {
+      selectedFeature = feature;
+      timezoneVectorLayer.changed();
+
+      var tzName = feature.get('name') || '';
+      var offset = parseOffsetFromFeature(feature);
+      var ref = getReferenceTime();
+      var dl = calculateDaylight(ref, offset);
+
+      var cleanName = tzName.toUpperCase().trim();
+      var meta = zoneMapByName[cleanName];
+
+      
+      cardTzOffset.textContent = tzName;
+      cardTzDaylight.textContent = dl.phase;
+      cardTzDaylight.style.backgroundColor = dl.phaseColor + '22';
+      cardTzDaylight.style.color = dl.phaseColor;
+      cardTzDaylight.style.borderColor = dl.phaseColor + '55';
+
+      cardTzName.textContent = meta ? meta.label : tzName;
+      cardTzClock.textContent = formatTime(dl.localDate);
+
+      
+      var userOffsetMin = -new Date().getTimezoneOffset();
+      var diffMin = offset - userOffsetMin;
+      var diffHours = (diffMin / 60);
+      var relationText = '';
+      if (diffMin === 0) {
+        relationText = 'Same time as your current location';
+      } else if (diffMin > 0) {
+        relationText = diffHours + ' hour' + (Math.abs(diffHours) === 1 ? '' : 's') + ' ahead of your local time';
+      } else {
+        relationText = Math.abs(diffHours) + ' hour' + (Math.abs(diffHours) === 1 ? '' : 's') + ' behind your local time';
+      }
+      cardTzRelation.textContent = relationText;
+
+      if (meta && meta.cities) {
+        cardTzCities.textContent = meta.cities.join(', ');
+        cardTzDesc.textContent = meta.description;
+      } else {
+        cardTzCities.textContent = 'Standard international maritime / territory coordinates';
+        cardTzDesc.textContent = 'International Standard Time offset division.';
+      }
+
+      tzDetailCard.style.display = 'block';
+
+      
+      if (activeZoneStatCard) {
+        activeZoneStatCard.style.display = 'flex';
+        activeZoneCardTitle.textContent = formatTime(dl.localDate);
+        activeZoneCardSub.textContent = tzName;
+      }
+
+      
+      highlightDirectoryCard(tzName);
+    }
+
+    function deselectTimezone() {
+      selectedFeature = null;
+      timezoneVectorLayer.changed();
+      tzDetailCard.style.display = 'none';
+      if (activeZoneStatCard) {
+        activeZoneStatCard.style.display = 'none';
+      }
+      highlightDirectoryCard(null);
+    }
+
+    if (closeDetailCard) {
+      closeDetailCard.addEventListener('click', function() {
+        deselectTimezone();
+      });
+    }
+
+    
+    function highlightDirectoryCard(tzName) {
+      var allCards = document.querySelectorAll('.tz-grid-card');
+      allCards.forEach(function(card) {
+        if (tzName && card.getAttribute('data-name') === tzName) {
+          card.classList.add('active-card');
+          card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          card.classList.remove('active-card');
+        }
+      });
+    }
+
+    
+    var directoryContainer = document.getElementById('tzCardsContainer');
+    if (directoryContainer) {
+      directoryContainer.addEventListener('click', function(e) {
+        var card = e.target.closest('.tz-grid-card');
+        if (!card) return;
+
+        var name = card.getAttribute('data-name');
+        var lon = parseFloat(card.getAttribute('data-lon'));
+        var lat = parseFloat(card.getAttribute('data-lat'));
+        var zoom = parseFloat(card.getAttribute('data-zoom')) || 3.5;
+
+        
+        mapView.animate({
+          center: ol.proj.fromLonLat([lon, lat]),
+          zoom: zoom,
+          duration: 900
+        });
+
+        
+        if (kmlSource) {
+          var feats = kmlSource.getFeatures();
+          for (var i = 0; i < feats.length; i++) {
+            if (feats[i].get('name') === name) {
+              selectTimezoneFeature(feats[i]);
+              break;
+            }
+          }
+        }
+      });
+    }
+
+    
+    var quickChips = document.getElementById('tzQuickChips');
+    if (quickChips) {
+      quickChips.addEventListener('click', function(e) {
+        var btn = e.target.closest('.tz-chip-btn');
+        if (!btn) return;
+
+        var lon = parseFloat(btn.getAttribute('data-lon'));
+        var lat = parseFloat(btn.getAttribute('data-lat'));
+        var zoom = parseFloat(btn.getAttribute('data-zoom')) || 3.5;
+        var name = btn.getAttribute('data-name');
+
+        mapView.animate({
+          center: ol.proj.fromLonLat([lon, lat]),
+          zoom: zoom,
+          duration: 850
+        });
+
+        if (kmlSource) {
+          var feats = kmlSource.getFeatures();
+          for (var i = 0; i < feats.length; i++) {
+            if (feats[i].get('name') === name) {
+              selectTimezoneFeature(feats[i]);
+              break;
+            }
+          }
+        }
+      });
+    }
+
+    
+    btnLiveMode.addEventListener('click', function() {
+      isLiveMode = true;
+      btnLiveMode.classList.add('active');
+      btnSimMode.classList.remove('active');
+      tzScrubberContainer.style.display = 'none';
+      updateAllDisplays();
+    });
+
+    btnSimMode.addEventListener('click', function() {
+      isLiveMode = false;
+      btnSimMode.classList.add('active');
+      btnLiveMode.classList.remove('active');
+      tzScrubberContainer.style.display = 'block';
+
+      
+      var now = new Date();
+      simulatedMinutes = now.getUTCHours() * 60 + now.getUTCMinutes();
+      timeScrubber.value = simulatedMinutes;
+      updateScrubberDisplay();
+      updateAllDisplays();
+    });
+
+    timeScrubber.addEventListener('input', function() {
+      simulatedMinutes = parseInt(timeScrubber.value, 10);
+      updateScrubberDisplay();
+      updateAllDisplays();
+    });
+
+    function updateScrubberDisplay() {
+      var h = Math.floor(simulatedMinutes / 60);
+      var m = simulatedMinutes % 60;
+      simulatedTimeDisplay.textContent = formatDigits(h) + ':' + formatDigits(m) + ':00';
+    }
+
+    
+    var scrubberQuickBtns = document.querySelectorAll('.tz-scrubber-quick-btn');
+    scrubberQuickBtns.forEach(function(b) {
+      b.addEventListener('click', function() {
+        var targetHour = parseInt(b.getAttribute('data-hour'), 10);
+        simulatedMinutes = targetHour * 60;
+        timeScrubber.value = simulatedMinutes;
+        updateScrubberDisplay();
+        updateAllDisplays();
+      });
+    });
+
+    
+    btnToggleBasemap.addEventListener('click', function() {
+      if (activeBasemapType === 'dark') {
+        activeBasemapType = 'light';
+        darkBasemap.setVisible(false);
+        lightBasemap.setVisible(true);
+        basemapLabel.textContent = 'Dark Tiles';
+        mapContainer.style.backgroundColor = '#e2e8f0';
+      } else {
+        activeBasemapType = 'dark';
+        darkBasemap.setVisible(true);
+        lightBasemap.setVisible(false);
+        basemapLabel.textContent = 'Light Tiles';
+        mapContainer.style.backgroundColor = '#0b0f19';
+      }
+      timezoneVectorLayer.changed();
+    });
+
+    
+    btnResetView.addEventListener('click', function() {
+      mapView.animate({
+        center: defaultCenter,
+        zoom: defaultZoom,
+        duration: 750
+      });
+    });
+
+    
+    tzSearchInput.addEventListener('input', function() {
+      var query = tzSearchInput.value.toLowerCase().trim();
+      clearTzSearch.style.display = query ? 'inline-flex' : 'none';
+      filterTimezones(query);
+    });
+
+    clearTzSearch.addEventListener('click', function() {
+      tzSearchInput.value = '';
+      clearTzSearch.style.display = 'none';
+      filterTimezones('');
+      tzSearchInput.focus();
+    });
+
+    function filterTimezones(q) {
+      var cards = document.querySelectorAll('.tz-grid-card');
+      var matchedCount = 0;
+      var firstMatchCard = null;
+
+      cards.forEach(function(c) {
+        var name = (c.getAttribute('data-name') || '').toLowerCase();
+        var cities = (c.getAttribute('data-cities') || '').toLowerCase();
+        var title = (c.querySelector('.tz-grid-title') ? c.querySelector('.tz-grid-title').textContent : '').toLowerCase();
+
+        var match = (!q || name.indexOf(q) !== -1 || cities.indexOf(q) !== -1 || title.indexOf(q) !== -1);
+        c.style.display = match ? 'flex' : 'none';
+        if (match) {
+          matchedCount++;
+          if (!firstMatchCard) firstMatchCard = c;
+        }
+      });
+    }
+
+    
+    var toggleCardsBtn = document.getElementById('toggleDirectoryCardsBtn');
+    var toggleCardsLabel = document.getElementById('toggleCardsLabel');
+    if (toggleCardsBtn && toggleCardsLabel && directoryContainer) {
+      toggleCardsBtn.addEventListener('click', function() {
+        if (directoryContainer.style.display === 'none') {
+          directoryContainer.style.display = 'grid';
+          toggleCardsLabel.textContent = 'Collapse Grid';
+        } else {
+          directoryContainer.style.display = 'none';
+          toggleCardsLabel.textContent = 'Expand Grid';
+        }
+      });
+    }
+
+    
+    function updateAllDisplays() {
+      var ref = getReferenceTime();
+
+      
+      if (statsUtcClock) statsUtcClock.textContent = formatUtcTime(ref);
+      if (statsLocalClock) statsLocalClock.textContent = formatTime(isLiveMode ? new Date() : ref);
+      if (statsSubsolar) statsSubsolar.textContent = getSubsolarLongitude(ref);
+
+      
+      if (selectedFeature) {
+        var off = parseOffsetFromFeature(selectedFeature);
+        var dl = calculateDaylight(ref, off);
+        cardTzClock.textContent = formatTime(dl.localDate);
+        if (activeZoneCardTitle) activeZoneCardTitle.textContent = formatTime(dl.localDate);
+      }
+
+      
+      if (tzMeta.zones) {
+        tzMeta.zones.forEach(function(z) {
+          var clockEl = document.getElementById('clock-' + z.id);
+          var phaseEl = document.getElementById('phase-' + z.id);
+          if (clockEl || phaseEl) {
+            var dl = calculateDaylight(ref, z.offset_minutes);
+            if (clockEl) clockEl.textContent = formatTime(dl.localDate);
+            if (phaseEl) {
+              phaseEl.textContent = dl.phase;
+              phaseEl.style.color = dl.phaseColor;
+              phaseEl.style.backgroundColor = dl.phaseColor + '20';
+              phaseEl.style.borderColor = dl.phaseColor + '40';
+            }
+          }
+        });
+      }
+
+      
+      if (kmlLoaded) {
+        timezoneVectorLayer.changed();
+      }
+    }
+
+    
+    updateAllDisplays();
+    setInterval(function() {
+      if (isLiveMode) {
+        updateAllDisplays();
+      }
+    }, 1000);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTimezonesApp);
+  } else {
+    initTimezonesApp();
+  }
+})();
+</script>
+    </main>

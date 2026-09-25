@@ -1,0 +1,727 @@
+<main class="main">
+<link rel="stylesheet" href="/lib/leaflet/leaflet.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<div class="cities-page-container berlin-wall-container">
+  
+  <div class="gallery-breadcrumbs">
+    <a href="http://localhost:1313/">Home</a> <span>/</span> <a href="/geolayers/">GeoLayers</a> <span>/</span> <span>Berlin Wall Comparison</span>
+  </div>
+
+  
+  <header class="cities-header">
+    <div class="cities-header-content">
+      <div class="cities-badge-pill berlin-wall-badge">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="3" y1="9" x2="21" y2="9"></line>
+          <line x1="3" y1="15" x2="21" y2="15"></line>
+          <line x1="9" y1="3" x2="9" y2="21"></line>
+          <line x1="15" y1="3" x2="15" y2="21"></line>
+        </svg>
+        <span>Cold War Geopolitics &bull; 1961–1989 &bull; 10,316 Days of Division</span>
+      </div>
+      <h1 class="cities-title">Berlin Wall Comparison</h1>
+      <p class="cities-subtitle">
+        An interactive cartographic visualization comparing the true scale and footprint of the Berlin Wall to major world cities. Project the 155 km fortified barrier onto any metropolitan center across the globe to comprehend what it would mean to wall off entire urban civilisations.
+      </p>
+    </div>
+
+    
+    <div class="cities-stats-bar">
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" style="background: var(--theme-accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">155.0 km</span>
+        <span class="cities-stat-label">Total Perimeter</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" style="color: #ef4444;">43.1 km</span>
+        <span class="cities-stat-label">Inner Berlin Division</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number">302</span>
+        <span class="cities-stat-label">Watchtowers</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" style="color: #10b981;">2.1 M</span>
+        <span class="cities-stat-label">West Berliners Encircled</span>
+      </div>
+      <div class="cities-stat-card active-city-card" id="activeCompareCard">
+        <span class="cities-stat-number active-city-name" id="activeCityTitle">Berlin (Original)</span>
+        <span class="cities-stat-label" id="activeCitySubtitle">Historical Course</span>
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="berlin-sim-toolbar">
+    <div class="berlin-city-pills" role="group" aria-label="Compare with World Metropolises">
+      <span class="berlin-toolbar-label">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        Overlay onto City:
+      </span>
+      <button type="button" class="berlin-city-pill-btn active" data-city-id="berlin" data-lat="52.5163" data-lng="13.3777" data-zoom="11" title="Berlin (Original Course) - Encompassed 480 km² of Allied West Berlin territory (American, British, and French sectors).">
+        <span class="city-pill-name">Berlin (Original Course)</span>
+      </button>
+      <button type="button" class="berlin-city-pill-btn" data-city-id="new-york" data-lat="40.7306" data-lng="-73.9352" data-zoom="10" title="New York City - The 155 km perimeter is 7.2x the length of Manhattan island (21.6 km) and would wall off the entire NY Harbor and Inner Metropolitan Core.">
+        <span class="city-pill-name">New York City</span>
+      </button>
+      <button type="button" class="berlin-city-pill-btn" data-city-id="london" data-lat="51.5074" data-lng="-0.1278" data-zoom="10" title="London - Nearly matches the entire M25 London Orbital Motorway loop (188 km), trapping over 3 million inhabitants.">
+        <span class="city-pill-name">London</span>
+      </button>
+      <button type="button" class="berlin-city-pill-btn" data-city-id="paris" data-lat="48.8566" data-lng="2.3522" data-zoom="10" title="Paris - Over 4 times the size of central Paris intra-muros, spanning all 20 arrondissements plus multiple suburban départements.">
+        <span class="city-pill-name">Paris</span>
+      </button>
+      <button type="button" class="berlin-city-pill-btn" data-city-id="tokyo" data-lat="35.6762" data-lng="139.6503" data-zoom="10" title="Tokyo - More than 4 times the loop length of the Yamanote rail line (34.5 km), slicing through one of Earth&#39;s densest urban megalopolises.">
+        <span class="city-pill-name">Tokyo</span>
+      </button>
+      <button type="button" class="berlin-city-pill-btn" data-city-id="sao-paulo" data-lat="-23.5505" data-lng="-46.6333" data-zoom="10" title="São Paulo - Comparable to the Rodoanel Mário Covas South and West stretches, dividing South America&#39;s financial capital into sealed fortress zones.">
+        <span class="city-pill-name">São Paulo</span>
+      </button>
+      <button type="button" class="berlin-city-pill-btn" data-city-id="san-francisco" data-lat="37.7749" data-lng="-122.4194" data-zoom="10" title="San Francisco Bay Area - Spans roughly the driving distance from San Francisco down to San Jose and back, severing the entire Silicon Valley corridor.">
+        <span class="city-pill-name">San Francisco Bay Area</span>
+      </button>
+      <button type="button" class="berlin-city-pill-btn" data-city-id="rome" data-lat="41.9028" data-lng="12.4964" data-zoom="10" title="Rome - More than twice the circumference of Rome&#39;s modern ring road, encapsulating the Vatican, EUR, Ostia Antica, and Castelli Romani.">
+        <span class="city-pill-name">Rome</span>
+      </button>
+    </div>
+
+    
+    <div class="berlin-toolbar-controls">
+      <div class="berlin-rotation-control">
+        <label for="wallRotationSlider" class="berlin-control-label">
+          Rotate Overlay: <span id="wallRotationValue">0&deg;</span>
+        </label>
+        <input type="range" id="wallRotationSlider" min="0" max="360" step="15" value="0" class="berlin-slider">
+      </div>
+      <button type="button" class="groups-btn-action" id="toggleBriefingBtn" title="Toggle Historical Briefing">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+        </svg>
+        <span id="toggleBriefingText">Historical Briefing</span>
+      </button>
+    </div>
+  </div>
+
+  
+  <div class="berlin-comparison-banner" id="berlinComparisonBanner">
+    <div class="comparison-banner-icon">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+        <line x1="9" y1="9" x2="9.01" y2="9"></line>
+        <line x1="15" y1="9" x2="15.01" y2="9"></line>
+      </svg>
+    </div>
+    <div class="comparison-banner-text">
+      <h3 id="bannerCityHeading">The Berlin Wall at Historical Scale (155 km)</h3>
+      <p id="bannerCityDesc">Encompassing 480 km² of Allied West Berlin territory (American, British, and French sectors), completely encircled by the German Democratic Republic.</p>
+    </div>
+  </div>
+
+  
+  <div class="nukes-briefing-drawer" id="historicalBriefingDrawer" style="display:none;">
+    <div class="briefing-drawer-inner">
+      <div class="briefing-drawer-header">
+        <div class="briefing-drawer-title">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          <h3>Historical &amp; Strategic Dossier: The Architecture of Division</h3>
+        </div>
+        <button type="button" class="close-briefing-btn" id="closeBriefingBtn" aria-label="Close Dossier">&times;</button>
+      </div>
+      <div class="briefing-content-grid">
+        <article class="briefing-card">
+          <h4 class="briefing-heading">Operation Rose &amp; The Barbed Wire Sunday (August 13, 1961)</h4>
+          <p class="briefing-text">Between 1949 and 1961, an estimated 2.7 to 3 million citizens escaped the German Democratic Republic (GDR) through the open sectors of Berlin — representing roughly one-sixth of East Germany&#39;s entire population and disproportionately composed of skilled doctors, engineers, and intellectuals (&#39;the brain drain&#39;). In the early morning darkness of Sunday, August 13, 1961, the East German army (NVA), police (Volkspolizei), and combat groups sealed off 193 streets, dug trenches, and tore up cobblestones to unroll barbed wire coils along 155 kilometers, severing transit links overnight.</p>
+        </article>
+        <article class="briefing-card">
+          <h4 class="briefing-heading">Evolution of the Barrier: From Barbed Wire to Grenzmauer 75</h4>
+          <p class="briefing-text">The Berlin Wall was not a single barrier, but an elaborate multi-tiered military installation that evolved across four generations: 1) The 1961 wire and cinderblock phase; 2) The expanded concrete and wire fencing (1962–1965); 3) Concrete slab walls with cylindrical rounded pipe tops (1965–1975); and 4) The &#39;Grenzmauer 75&#39; (Border Wall 75), assembled from 45,000 reinforced concrete sections, each 3.6 meters tall and 1.2 meters wide, weighing 2.75 tons each, anchored into inverted L-shaped foundations.</p>
+        </article>
+        <article class="briefing-card">
+          <h4 class="briefing-heading">The Death Strip (Todesstreifen)</h4>
+          <p class="briefing-text">Behind the primary wall visible to West Berlin lay a heavily fortified no-man&#39;s land ranging from 15 to 150 meters wide. This lethal corridor contained: a trench designed to flip escaping motor vehicles, a raked sand strip (&#39;Todesstreifen&#39;) where footprints were instantly tracked, trip-wire signal flares, patrol paths for Soviet-made armored scout cars, 259 dog runs with vicious guard dogs on overhead cables, floodlights turned inward, and 302 concrete watchtowers manned 24/7 with shoot-to-kill orders (&#39;Schießbefehl&#39;).</p>
+        </article>
+        <article class="briefing-card">
+          <h4 class="briefing-heading">The Fall of the Wall (November 9, 1989)</h4>
+          <p class="briefing-text">Months of peaceful revolution and mass Monday demonstrations in Leipzig, Dresden, and Berlin culminated in the fateful evening of November 9, 1989. At a live broadcast press conference, Politburo spokesperson Günter Schabowski prematurely read out draft travel regulations and mistakenly proclaimed that border crossings were open &#39;immediately, without delay&#39;. Crowds surged toward the checkpoints, and border guard officers, lacking orders to shoot from command, raised the boom gates at Bornholmer Straße, triggering the reunification of Europe.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="cities-layout-stacked">
+    
+    <section class="cities-groups-row" id="wallExplorerSection">
+      <div class="groups-row-header">
+        <div class="groups-header-info">
+          <div class="groups-title-wrap">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <h2 class="groups-title">Historical Checkpoints &amp; Relics</h2>
+            <span class="groups-total-pill">8 Strategic Landmarks &bull; Berlin Sector Line</span>
+          </div>
+
+          
+          <div class="cities-search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="checkpointSearchInput" placeholder="Filter landmark by name, sector or type..." autocomplete="off" aria-label="Filter landmarks">
+            <button type="button" id="clearCheckpointSearch" class="clear-search-btn" style="display:none;" aria-label="Clear filter">&times;</button>
+          </div>
+        </div>
+
+        <div class="groups-header-actions">
+          <button type="button" class="groups-btn-action toggle-cards-btn" id="toggleCardsBtn" title="Show or hide landmark cards">
+            <svg id="toggleCardsIcon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+            <span id="toggleCardsText">Collapse Cards</span>
+          </button>
+        </div>
+      </div>
+
+      
+      <div class="nukes-filter-chips-row">
+        <button type="button" class="nuke-chip-btn active" data-filter="all">All Landmarks (8)</button>
+        <button type="button" class="nuke-chip-btn" data-filter="checkpoint">Checkpoints</button>
+        <button type="button" class="nuke-chip-btn" data-filter="memorial">Memorials &amp; Relics</button>
+        <button type="button" class="nuke-chip-btn" data-filter="historic">1989 Fall Sites</button>
+      </div>
+
+      
+      <div class="cities-groups-cards-grid nukes-cards-grid" id="checkpointCardsGrid">
+        <div class="city-group-card nuke-bomb-card" data-landmark-id="checkpoint-charlie" data-type="checkpoint" data-name="checkpoint charlie (friedrichstraße)" data-sector="us / soviet sector line" data-lat="52.5074" data-lon="13.3904">
+          <div class="city-group-card-header">
+            <div class="card-header-left">
+              <span class="bomb-badge-dot" style="background-color: #3B82F6; box-shadow: 0 0 10px #3B82F6;"></span>
+              <span class="group-name">Checkpoint Charlie (Friedrichstraße)</span>
+              <span class="nuke-status-badge" style="border-color: #3B82F666; color: #3B82F6; background: #3B82F614;">
+                Allied Checkpoint
+              </span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn nuke-fly-btn" data-lat="52.5074" data-lon="13.3904" title="Fly camera to Checkpoint Charlie (Friedrichstraße)">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="city-group-card-body show nuke-card-body">
+            <div class="nuke-location-title">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>US / Soviet Sector Line</span>
+              <span class="nuke-elevation">(Allied Border Crossing C)</span>
+            </div>
+
+            <p class="nuke-card-desc">The iconic crossing point for foreigners, diplomats, and Allied military personnel between the American sector and East Berlin.</p>
+            <p class="nuke-tech-detail">Site of the infamous October 1961 tank standoff between US M48 Patton and Soviet T-54 tanks standing barrel-to-barrel at 100 meters. Remains one of the world&#39;s best-known symbols of the Cold War.</p>
+
+            <div class="nuke-specs-row">
+              <div class="nuke-spec">
+                <span class="spec-dim">Coordinates:</span>
+                <span class="spec-val">52.5074&deg; N, 13.3904&deg; E</span>
+              </div>
+              <div class="nuke-spec">
+                <span class="spec-dim">Type:</span>
+                <span class="spec-val">Checkpoint</span>
+              </div>
+            </div>
+
+            <button type="button" class="nuke-card-action-btn" data-lat="52.5074" data-lon="13.3904" data-id="checkpoint-charlie">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Focus on Map</span>
+            </button>
+          </div>
+        </div>
+        <div class="city-group-card nuke-bomb-card" data-landmark-id="brandenburg-gate" data-type="symbolic monument" data-name="brandenburg gate (brandenburger tor)" data-sector="british / soviet sector line" data-lat="52.5163" data-lon="13.3777">
+          <div class="city-group-card-header">
+            <div class="card-header-left">
+              <span class="bomb-badge-dot" style="background-color: #EC4899; box-shadow: 0 0 10px #EC4899;"></span>
+              <span class="group-name">Brandenburg Gate (Brandenburger Tor)</span>
+              <span class="nuke-status-badge" style="border-color: #EC489966; color: #EC4899; background: #EC489914;">
+                Historical Epicenter
+              </span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn nuke-fly-btn" data-lat="52.5163" data-lon="13.3777" title="Fly camera to Brandenburg Gate (Brandenburger Tor)">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="city-group-card-body show nuke-card-body">
+            <div class="nuke-location-title">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>British / Soviet Sector Line</span>
+              <span class="nuke-elevation">(Inaccessible Exclusion Zone)</span>
+            </div>
+
+            <p class="nuke-card-desc">18th-century neoclassical monument stranded inside the death strip, inaccessible to citizens of both East and West.</p>
+            <p class="nuke-tech-detail">Location of President Ronald Reagan&#39;s historic 1987 speech: &#39;Mr. Gorbachev, tear down this wall!&#39;. When the wall opened on November 9, 1989, tens of thousands gathered here to celebrate the end of division.</p>
+
+            <div class="nuke-specs-row">
+              <div class="nuke-spec">
+                <span class="spec-dim">Coordinates:</span>
+                <span class="spec-val">52.5163&deg; N, 13.3777&deg; E</span>
+              </div>
+              <div class="nuke-spec">
+                <span class="spec-dim">Type:</span>
+                <span class="spec-val">Symbolic Monument</span>
+              </div>
+            </div>
+
+            <button type="button" class="nuke-card-action-btn" data-lat="52.5163" data-lon="13.3777" data-id="brandenburg-gate">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Focus on Map</span>
+            </button>
+          </div>
+        </div>
+        <div class="city-group-card nuke-bomb-card" data-landmark-id="checkpoint-bravo" data-type="transit point" data-name="checkpoint bravo (dreilinden / drewitz)" data-sector="southwestern outer border" data-lat="52.4162" data-lon="13.197">
+          <div class="city-group-card-header">
+            <div class="card-header-left">
+              <span class="bomb-badge-dot" style="background-color: #10B981; box-shadow: 0 0 10px #10B981;"></span>
+              <span class="group-name">Checkpoint Bravo (Dreilinden / Drewitz)</span>
+              <span class="nuke-status-badge" style="border-color: #10B98166; color: #10B981; background: #10B98114;">
+                Transit Checkpoint
+              </span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn nuke-fly-btn" data-lat="52.4162" data-lon="13.197" title="Fly camera to Checkpoint Bravo (Dreilinden / Drewitz)">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="city-group-card-body show nuke-card-body">
+            <div class="nuke-location-title">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Southwestern Outer Border</span>
+              <span class="nuke-elevation">(Allied Border Crossing B)</span>
+            </div>
+
+            <p class="nuke-card-desc">Primary motorway transit crossing connecting West Berlin to the transit highway (Autobahn) towards West Germany.</p>
+            <p class="nuke-tech-detail">Heavily fortified highway terminal where Western vehicles were meticulously searched by GDR border troops with vehicle chassis mirrors, sniff dogs, and radiation detectors.</p>
+
+            <div class="nuke-specs-row">
+              <div class="nuke-spec">
+                <span class="spec-dim">Coordinates:</span>
+                <span class="spec-val">52.4162&deg; N, 13.1970&deg; E</span>
+              </div>
+              <div class="nuke-spec">
+                <span class="spec-dim">Type:</span>
+                <span class="spec-val">Transit Point</span>
+              </div>
+            </div>
+
+            <button type="button" class="nuke-card-action-btn" data-lat="52.4162" data-lon="13.197" data-id="checkpoint-bravo">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Focus on Map</span>
+            </button>
+          </div>
+        </div>
+        <div class="city-group-card nuke-bomb-card" data-landmark-id="glienicke-bridge" data-type="exchange point" data-name="glienicke bridge (bridge of spies)" data-sector="potsdam border" data-lat="52.4136" data-lon="13.0903">
+          <div class="city-group-card-header">
+            <div class="card-header-left">
+              <span class="bomb-badge-dot" style="background-color: #8B5CF6; box-shadow: 0 0 10px #8B5CF6;"></span>
+              <span class="group-name">Glienicke Bridge (Bridge of Spies)</span>
+              <span class="nuke-status-badge" style="border-color: #8B5CF666; color: #8B5CF6; background: #8B5CF614;">
+                Spy Exchange
+              </span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn nuke-fly-btn" data-lat="52.4136" data-lon="13.0903" title="Fly camera to Glienicke Bridge (Bridge of Spies)">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="city-group-card-body show nuke-card-body">
+            <div class="nuke-location-title">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Potsdam Border</span>
+              <span class="nuke-elevation">(Bridge of Spies)</span>
+            </div>
+
+            <p class="nuke-card-desc">Crossing between American-controlled West Berlin and Soviet-controlled Potsdam across the Havel River.</p>
+            <p class="nuke-tech-detail">Venue for Cold War prisoner swaps between CIA and KGB agents, famously including U-2 pilot Francis Gary Powers for Soviet spy Rudolf Abel in February 1962.</p>
+
+            <div class="nuke-specs-row">
+              <div class="nuke-spec">
+                <span class="spec-dim">Coordinates:</span>
+                <span class="spec-val">52.4136&deg; N, 13.0903&deg; E</span>
+              </div>
+              <div class="nuke-spec">
+                <span class="spec-dim">Type:</span>
+                <span class="spec-val">Exchange Point</span>
+              </div>
+            </div>
+
+            <button type="button" class="nuke-card-action-btn" data-lat="52.4136" data-lon="13.0903" data-id="glienicke-bridge">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Focus on Map</span>
+            </button>
+          </div>
+        </div>
+        <div class="city-group-card nuke-bomb-card" data-landmark-id="bornholmer-strasse" data-type="historic breach" data-name="bornholmer straße border crossing" data-sector="french / soviet sector line" data-lat="52.5546" data-lon="13.3986">
+          <div class="city-group-card-header">
+            <div class="card-header-left">
+              <span class="bomb-badge-dot" style="background-color: #F59E0B; box-shadow: 0 0 10px #F59E0B;"></span>
+              <span class="group-name">Bornholmer Straße Border Crossing</span>
+              <span class="nuke-status-badge" style="border-color: #F59E0B66; color: #F59E0B; background: #F59E0B14;">
+                First Wall Breach (1989)
+              </span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn nuke-fly-btn" data-lat="52.5546" data-lon="13.3986" title="Fly camera to Bornholmer Straße Border Crossing">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="city-group-card-body show nuke-card-body">
+            <div class="nuke-location-title">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>French / Soviet Sector Line</span>
+              <span class="nuke-elevation">(First Gate to Fall)</span>
+            </div>
+
+            <p class="nuke-card-desc">The first border crossing to open on the night of November 9, 1989, initiating the fall of the Berlin Wall.</p>
+            <p class="nuke-tech-detail">Following Günter Schabowski&#39;s confused press conference announcement (&#39;immediately, without delay&#39;), thousands of East Berliners pressed against the barriers. At 23:30, Lt. Col. Harald Jäger defied standing orders and opened the gates.</p>
+
+            <div class="nuke-specs-row">
+              <div class="nuke-spec">
+                <span class="spec-dim">Coordinates:</span>
+                <span class="spec-val">52.5546&deg; N, 13.3986&deg; E</span>
+              </div>
+              <div class="nuke-spec">
+                <span class="spec-dim">Type:</span>
+                <span class="spec-val">Historic Breach</span>
+              </div>
+            </div>
+
+            <button type="button" class="nuke-card-action-btn" data-lat="52.5546" data-lon="13.3986" data-id="bornholmer-strasse">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Focus on Map</span>
+            </button>
+          </div>
+        </div>
+        <div class="city-group-card nuke-bomb-card" data-landmark-id="east-side-gallery" data-type="open-air memorial" data-name="east side gallery (mühlenstraße)" data-sector="spree river inner sector" data-lat="52.5052" data-lon="13.4397">
+          <div class="city-group-card-header">
+            <div class="card-header-left">
+              <span class="bomb-badge-dot" style="background-color: #06B6D4; box-shadow: 0 0 10px #06B6D4;"></span>
+              <span class="group-name">East Side Gallery (Mühlenstraße)</span>
+              <span class="nuke-status-badge" style="border-color: #06B6D466; color: #06B6D4; background: #06B6D414;">
+                Preserved Wall
+              </span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn nuke-fly-btn" data-lat="52.5052" data-lon="13.4397" title="Fly camera to East Side Gallery (Mühlenstraße)">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="city-group-card-body show nuke-card-body">
+            <div class="nuke-location-title">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Spree River Inner Sector</span>
+              <span class="nuke-elevation">(1.3 km Preserved Section)</span>
+            </div>
+
+            <p class="nuke-card-desc">The longest continuous remaining section of the Berlin Wall, painted with 105 murals by international artists in 1990.</p>
+            <p class="nuke-tech-detail">Featuring iconic artworks such as Dmitri Vrubel&#39;s &#39;Fraternal Kiss&#39; between Leonid Brezhnev and Erich Honecker, and Birgit Kinder&#39;s Trabant bursting through the concrete.</p>
+
+            <div class="nuke-specs-row">
+              <div class="nuke-spec">
+                <span class="spec-dim">Coordinates:</span>
+                <span class="spec-val">52.5052&deg; N, 13.4397&deg; E</span>
+              </div>
+              <div class="nuke-spec">
+                <span class="spec-dim">Type:</span>
+                <span class="spec-val">Open-Air Memorial</span>
+              </div>
+            </div>
+
+            <button type="button" class="nuke-card-action-btn" data-lat="52.5052" data-lon="13.4397" data-id="east-side-gallery">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Focus on Map</span>
+            </button>
+          </div>
+        </div>
+        <div class="city-group-card nuke-bomb-card" data-landmark-id="bernauer-strasse" data-type="central memorial" data-name="berlin wall memorial (bernauer straße)" data-sector="french / soviet sector line" data-lat="52.5353" data-lon="13.39">
+          <div class="city-group-card-header">
+            <div class="card-header-left">
+              <span class="bomb-badge-dot" style="background-color: #EF4444; box-shadow: 0 0 10px #EF4444;"></span>
+              <span class="group-name">Berlin Wall Memorial (Bernauer Straße)</span>
+              <span class="nuke-status-badge" style="border-color: #EF444466; color: #EF4444; background: #EF444414;">
+                Memorial Site
+              </span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn nuke-fly-btn" data-lat="52.5353" data-lon="13.39" title="Fly camera to Berlin Wall Memorial (Bernauer Straße)">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="city-group-card-body show nuke-card-body">
+            <div class="nuke-location-title">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>French / Soviet Sector Line</span>
+              <span class="nuke-elevation">(Preserved Death Strip)</span>
+            </div>
+
+            <p class="nuke-card-desc">Official national memorial site featuring preserved watchtowers, ground markings of escape tunnels, and the Window of Remembrance.</p>
+            <p class="nuke-tech-detail">Bernauer Straße witnessed dramatic escapes in August 1961 as residents jumped out of apartment windows situated on the East Berlin sidewalk directly into fire department nets held by West Berlin rescuers.</p>
+
+            <div class="nuke-specs-row">
+              <div class="nuke-spec">
+                <span class="spec-dim">Coordinates:</span>
+                <span class="spec-val">52.5353&deg; N, 13.3900&deg; E</span>
+              </div>
+              <div class="nuke-spec">
+                <span class="spec-dim">Type:</span>
+                <span class="spec-val">Central Memorial</span>
+              </div>
+            </div>
+
+            <button type="button" class="nuke-card-action-btn" data-lat="52.5353" data-lon="13.39" data-id="bernauer-strasse">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Focus on Map</span>
+            </button>
+          </div>
+        </div>
+        <div class="city-group-card nuke-bomb-card" data-landmark-id="traenenpalast" data-type="transit hall" data-name="tränenpalast (palace of tears)" data-sector="central rail crossing" data-lat="52.5204" data-lon="13.3868">
+          <div class="city-group-card-header">
+            <div class="card-header-left">
+              <span class="bomb-badge-dot" style="background-color: #14B8A6; box-shadow: 0 0 10px #14B8A6;"></span>
+              <span class="group-name">Tränenpalast (Palace of Tears)</span>
+              <span class="nuke-status-badge" style="border-color: #14B8A666; color: #14B8A6; background: #14B8A614;">
+                Tears Terminal
+              </span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn nuke-fly-btn" data-lat="52.5204" data-lon="13.3868" title="Fly camera to Tränenpalast (Palace of Tears)">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="city-group-card-body show nuke-card-body">
+            <div class="nuke-location-title">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Central Rail Crossing</span>
+              <span class="nuke-elevation">(Friedrichstraße Station)</span>
+            </div>
+
+            <p class="nuke-card-desc">Customs and passport clearance pavilion at Bahnhof Friedrichstraße for West German visitors departing back to the West.</p>
+            <p class="nuke-tech-detail">Earned its name from the tearful, heartbreaking farewells between Western visitors and their East German family members who were strictly forbidden from traveling beyond the border.</p>
+
+            <div class="nuke-specs-row">
+              <div class="nuke-spec">
+                <span class="spec-dim">Coordinates:</span>
+                <span class="spec-val">52.5204&deg; N, 13.3868&deg; E</span>
+              </div>
+              <div class="nuke-spec">
+                <span class="spec-dim">Type:</span>
+                <span class="spec-val">Transit Hall</span>
+              </div>
+            </div>
+
+            <button type="button" class="nuke-card-action-btn" data-lat="52.5204" data-lon="13.3868" data-id="traenenpalast">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Focus on Map</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <main class="cities-map-viewport nukes-map-viewport berlin-map-viewport">
+      
+      <div class="cities-map-controls-bar">
+        
+        <div class="map-control-group">
+          <label for="landmarkJumpSelect" class="sr-only">Jump to Historical Landmark</label>
+          <select id="landmarkJumpSelect" class="map-select-input" aria-label="Jump to Historical Landmark">
+            <option value="overview">🎯 Berlin Wall Entire Perimeter (155 km)</option>
+            <option value="checkpoint-charlie" data-lat="52.5074" data-lon="13.3904">
+              📍 Checkpoint Charlie (Friedrichstraße)
+            </option>
+            <option value="brandenburg-gate" data-lat="52.5163" data-lon="13.3777">
+              📍 Brandenburg Gate (Brandenburger Tor)
+            </option>
+            <option value="checkpoint-bravo" data-lat="52.4162" data-lon="13.197">
+              📍 Checkpoint Bravo (Dreilinden / Drewitz)
+            </option>
+            <option value="glienicke-bridge" data-lat="52.4136" data-lon="13.0903">
+              📍 Glienicke Bridge (Bridge of Spies)
+            </option>
+            <option value="bornholmer-strasse" data-lat="52.5546" data-lon="13.3986">
+              📍 Bornholmer Straße Border Crossing
+            </option>
+            <option value="east-side-gallery" data-lat="52.5052" data-lon="13.4397">
+              📍 East Side Gallery (Mühlenstraße)
+            </option>
+            <option value="bernauer-strasse" data-lat="52.5353" data-lon="13.39">
+              📍 Berlin Wall Memorial (Bernauer Straße)
+            </option>
+            <option value="traenenpalast" data-lat="52.5204" data-lon="13.3868">
+              📍 Tränenpalast (Palace of Tears)
+            </option>
+          </select>
+        </div>
+
+        
+        <div class="map-control-group">
+          <label for="basemapSelect" class="sr-only">Basemap Style (No API Key Required)</label>
+          <select id="basemapSelect" class="map-select-input" aria-label="Select Basemap (No API Key Required)">
+            <option value="carto-dark" selected>🌌 CartoDB Dark (Keyless)</option>
+            <option value="osm">🗺️ OpenStreetMap (Keyless)</option>
+            <option value="satellite">🛰️ Satellite (Esri - Keyless)</option>
+            <option value="esri-dark">🌙 Dark Gray (Esri - Keyless)</option>
+            <option value="esri-light">☀️ Minimal Light (Esri - Keyless)</option>
+            <option value="topo">🏔️ Topographic (OpenTopo - Keyless)</option>
+          </select>
+        </div>
+
+        
+        <div class="map-control-group">
+          <button type="button" class="map-toggle-btn active" id="btnToggleWallPolyline" title="Toggle 155km Outer Wall Perimeter">
+            <span class="btn-indicator"></span> Outer Wall (155 km)
+          </button>
+        </div>
+
+        <div class="map-control-group">
+          <button type="button" class="map-toggle-btn active" id="btnToggleInnerPolyline" title="Toggle 43km Inner Berlin Sector Wall">
+            <span class="btn-indicator inner-indicator"></span> Inner Divide (43 km)
+          </button>
+        </div>
+
+        <div class="map-control-group">
+          <button type="button" class="map-toggle-btn active" id="btnToggleCheckpoints" title="Toggle Landmark Markers">
+            <span class="btn-indicator marker-indicator"></span> Landmarks
+          </button>
+        </div>
+
+        
+        <div class="map-control-group">
+          <button type="button" class="map-toggle-btn" id="btnRecenter" title="Reset View to Active Center">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+              <path d="M3 3v5h5" />
+            </svg>
+            Recenter
+          </button>
+        </div>
+      </div>
+
+      
+      <div id="berlinWallMap" class="cities-leaflet-container" tabindex="0" aria-label="Interactive Berlin Wall Map"></div>
+
+      
+      <div class="cities-map-legend-overlay nukes-legend-box berlin-legend-box" id="mapLegend">
+        <div class="legend-header">
+          <span class="legend-title">Cartographic Legend</span>
+          <button type="button" class="legend-toggle-btn" id="legendToggleBtn" aria-label="Toggle Legend">&minus;</button>
+        </div>
+        <div class="legend-content" id="legendBody">
+          <div class="legend-item">
+            <span class="legend-line" style="background: #ef4444; box-shadow: 0 0 8px #ef4444;"></span>
+            <span class="legend-label"><strong>Inner Berlin Wall (43.1 km)</strong> &ndash; Bisecting the metropolis</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-line" style="background: #3b82f6; box-shadow: 0 0 8px #3b82f6;"></span>
+            <span class="legend-label"><strong>Outer Perimeter Wall (111.9 km)</strong> &ndash; GDR border cordon</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background: #f59e0b; box-shadow: 0 0 8px #f59e0b;"></span>
+            <span class="legend-label"><strong>Checkpoints &amp; Memorials</strong> &ndash; 8 historic sites</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background: #8b5cf6; box-shadow: 0 0 8px #8b5cf6;"></span>
+            <span class="legend-label"><strong>Comparison Center</strong> &ndash; Projection anchor point</span>
+          </div>
+        </div>
+      </div>
+    </main>

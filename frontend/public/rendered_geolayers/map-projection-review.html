@@ -1,0 +1,527 @@
+<main class="main">
+
+<div class="geolayers-page-container proj-explorer-container">
+  
+  <div class="gallery-breadcrumbs">
+    <a href="http://localhost:1313/">Home</a> <span>/</span> <a href="/geolayers/">GeoLayers</a> <span>/</span> <span>Map Projection Review</span>
+  </div>
+
+  
+  <header class="cities-header proj-header">
+    <div class="cities-header-content">
+      <div class="cities-badge-pill">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span>Interactive GeoLayer &bull; Cartographic Transformations &bull; D3.js Geo Engine</span>
+      </div>
+      <h1 class="cities-title">Map Projection Explorer</h1>
+      <p class="cities-subtitle">
+        A visual guide to cartographic projections, distortion properties, and coordinate reference systems. Explore how 3D spherical Earth coordinates are mathematically projected onto 2D surfaces with live Tissot's indicatrices, interactive rotation, and graticule overlays.
+      </p>
+    </div>
+
+    
+    <div class="cities-stats-bar">
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" style="background: var(--theme-accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">12</span>
+        <span class="cities-stat-label">Featured Projections</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number">3</span>
+        <span class="cities-stat-label">Projection Families</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number">Tissot 10&deg;</span>
+        <span class="cities-stat-label">Indicatrix Metric</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number">D3 Geo</span>
+        <span class="cities-stat-label">Vector Rendering</span>
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="proj-hero-card">
+    <div class="proj-hero-banner">
+      <img src="/images/globeColorful.webp" alt="D3 Projection Gallery Banner" class="proj-hero-img" onerror="this.onerror=null; this.src='/images/cities_visited_map.png';">
+      <div class="proj-hero-overlay"></div>
+      <div class="proj-hero-content">
+        <h2 class="proj-hero-title">Map Projection Explorer</h2>
+        <p class="proj-hero-desc">Visualize and compare common cartographic map projections, graticules, Tissot indicatrices, and distortion properties with interactive D3.js rendering.</p>
+      </div>
+    </div>
+    <div class="proj-overview-box">
+      <div class="proj-overview-icon">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+      </div>
+      <div class="proj-overview-text">
+        <h3>Understanding Map Projections</h3>
+        <p>Map projections transform the spherical three-dimensional surface of the Earth onto a two-dimensional planar medium. Carl Friedrich Gauss proved with his Theorema Egregium that a sphere cannot be projected onto a plane without introducing distortion. Consequently, every map projection represents a compromise among preserving area (equivalence), conformal angles and local shapes (orthomorphism), distances from specific origins (equidistance), or navigational directions (loxodromes and great circles).</p>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="proj-toolbar">
+    <div class="gallery-search-box proj-search-box">
+      <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="projSearchInput" placeholder="Filter projections by name, property, or uses..." autocomplete="off" aria-label="Filter projections">
+      <button type="button" id="projClearSearch" class="clear-search-btn" style="display:none;" aria-label="Clear search">&times;</button>
+    </div>
+
+    
+    <div class="proj-category-pills" role="group" aria-label="Filter by Projection Family">
+      <button type="button" class="proj-filter-btn active" data-category="all">All Projections</button>
+      <button type="button" class="proj-filter-btn" data-category="Azimuthal">Azimuthal</button>
+      <button type="button" class="proj-filter-btn" data-category="Conic">Conic</button>
+      <button type="button" class="proj-filter-btn" data-category="Cylindrical">Cylindrical</button>
+    </div>
+
+    
+    <div class="proj-global-controls">
+      <label class="proj-control-toggle" title="Toggle Tissot's distortion indicatrices on all projection canvases">
+        <input type="checkbox" id="toggleTissot" checked>
+        <span class="proj-toggle-slider"></span>
+        <span class="proj-toggle-label">Tissot Indicatrices</span>
+      </label>
+      <label class="proj-control-toggle" title="Toggle geographic graticule grid lines">
+        <input type="checkbox" id="toggleGraticule" checked>
+        <span class="proj-toggle-slider"></span>
+        <span class="proj-toggle-label">Graticule</span>
+      </label>
+      <button type="button" class="proj-rotate-btn" id="rotateAllBtn" title="Animate continuous sphere rotation">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+        </svg>
+        <span id="rotateBtnText">Animate Rotation</span>
+      </button>
+    </div>
+  </div>
+
+  
+  <div id="projection-cards-container" class="proj-cards-list">
+    <div class="proj-loading-state" id="projLoadingState">
+      <div class="proj-spinner"></div>
+      <p>Loading Natural Earth vector boundary dataset &amp; initializing D3 projections...</p>
+    </div>
+  </div>
+</div>
+
+
+<script src="/lib/d3/d3.v7.min.js"></script>
+<script src="/lib/d3/d3-geo-projection.v4.min.js"></script>
+
+<script>
+(function() {
+  'use strict';
+
+  
+  const projections = [{"category":"Azimuthal","cons":"Distorts local shapes and angles progressively as distance from the projection origin increases toward the periphery.","d3_type":"geoAzimuthalEqualArea","description":"Preserves area accurately across all regions of the map while projecting directions faithfully from the central point.","id":"azimuthal-equal-area","name":"Lambert Azimuthal Equal-Area","properties":["Equal-Area","True Direction from Center"],"pros":"Strictly equal-area across global extents; ideal for continental and polar statistical distributions without biasing land masses.","scale":150,"uses":"Hemispheric thematic maps, polar research charts, continental demographic atlases, and statistical choropleths."},{"category":"Azimuthal","cons":"Severe angular and areal distortion in outer margins; the point opposite the center is stretched into the entire enclosing boundary circle.","d3_type":"geoAzimuthalEquidistant","description":"Preserves exact distances and true directions from the designated center point to all other locations on the globe.","id":"azimuthal-equidistant","name":"Azimuthal Equidistant","properties":["Equidistant from Center","True Azimuths"],"pros":"Accurate linear scale along all radii emanating from the center; straight lines from origin represent shortest geodesic great circles.","scale":120,"uses":"High-frequency radio transmission planning, seismic epicenter distance measurement, strategic polar aviation routing, and the UN emblem."},{"category":"Azimuthal","cons":"Cannot display a full hemisphere; extreme areal and linear stretching occurs outward from the tangent center.","d3_type":"geoGnomonic","description":"Projects points on the sphere from the Earth's geometric center onto a tangent plane, rendering every great circle as a straight line.","id":"gnomonic","name":"Gnomonic","properties":["Geodesic Straight Lines","Perspective"],"pros":"Shortest flight routes and oceanic geodesic paths are always plotted as perfectly straight lines between any two coordinates.","scale":140,"uses":"Aviation flight planning, maritime great-circle navigation plotting, seismic P/S-wave directional analysis, and astrometry."},{"category":"Azimuthal","cons":"Displays only one hemisphere at a time; severe compression and foreshortening near the planetary limb.","d3_type":"geoOrthographic","description":"Simulates a perspective view of the 3D rotating globe viewed from infinite space, preserving the visual curvature of the horizon.","id":"orthographic","name":"Orthographic","properties":["Perspective from Infinity","Photorealistic Globe"],"pros":"Intuitive, photorealistic aesthetic resembling views from orbit; excellent for single-hemisphere regional overviews.","scale":190,"uses":"Educational graphics, interactive globe widgets, regional contextual insets, space sciences, and editorial media."},{"category":"Azimuthal","cons":"Areal scale expands exponentially away from the center point, creating massive exaggeration in peripheral territories.","d3_type":"geoStereographic","description":"A perspective conformal projection where points are projected from the antipode onto a tangent plane, mapping all circles on the sphere to circles.","id":"stereographic","name":"Stereographic","properties":["Conformal","Circle-Preserving"],"pros":"Preserves infinitesimal angles, shapes, and mutual bearings around any point; transforms spherical circles into planar circles.","scale":140,"uses":"Polar navigation charts, structural geology, crystallographic stereonets, deep-sky astronomy star charts, and geophysical fault plane analysis."},{"category":"Conic","cons":"Neither conformal nor equidistant; polar and equatorial extremes suffer considerable curvature deformation.","d3_type":"geoAlbers","description":"An equal-area conic projection that minimizes distortion along two selected standard parallels across mid-latitude continental extents.","id":"albers","name":"Albers Equal-Area Conic","properties":["Equal-Area","Secant Conic"],"pros":"Preserves relative area flawlessly; balances scale variations evenly between standard parallels with minimal shear distortion.","scale":170,"uses":"Official USGS national atlas maps, US Census Bureau demographic maps, and mid-latitude regional administrative surveys."},{"category":"Conic","cons":"Exaggerates surface areas significantly north and south of its designated standard parallels.","d3_type":"geoConicConformal","description":"A conformal conic projection conceived by Johann Heinrich Lambert that retains true local shapes and angles along mid-latitude belts.","id":"conic-conformal","name":"Lambert Conformal Conic","properties":["Conformal","Aeronautical Standard"],"pros":"Preserves angles and shapes locally; straight lines closely approximate great circles over medium continental spans.","scale":150,"uses":"ICAO aeronautical sectional charts, national meteorological surface analyses, state plane coordinate systems (SPCS), and air traffic control."},{"category":"Conic","cons":"Shape distortion increases non-linearly when moving beyond the standard parallels towards the equator or poles.","d3_type":"geoConicEqualArea","description":"General conic equal-area projection configuration designed to maintain uniform surface proportions across temperate regions.","id":"conic-equal-area","name":"Conic Equal-Area","properties":["Equal-Area","Standard Parallels"],"pros":"Guarantees that regions of equal geographic area on the spheroid occupy identical pixel extents on the cartographic canvas.","scale":150,"uses":"Agricultural land-use evaluations, mid-latitude regional vegetation cover atlases, and environmental basin assessments."},{"category":"Conic","cons":"Neither conformal nor equal-area; introduces moderate distortion across both angles and land parcel sizes.","d3_type":"geoConicEquidistant","description":"A conic projection that maintains a constant scale along every meridian and along two chosen standard parallels.","id":"conic-equidistant","name":"Conic Equidistant","properties":["Equidistant Meridians","Balanced"],"pros":"Balanced compromise with true linear distances along meridians; simple calculation and clean aesthetic layout.","scale":140,"uses":"School reference atlases, transcontinental highway network charts, and mid-latitude country regional profiles."},{"category":"Cylindrical","cons":"Massive shape and areal deformation away from the equator; poles are stretched into horizontal lines as wide as the equator.","d3_type":"geoEquirectangular","description":"A simple cylindrical projection mapping longitude directly to x and latitude directly to y as an orthogonal Cartesian grid.","id":"equirectangular","name":"Equirectangular (Plate Carrée)","properties":["Equidistant Graticule","Linear Coordinates"],"pros":"Direct 1:1 mapping between Geographic WGS84 coordinate space (lon/lat) and raster pixel matrices; universally intuitive indexing.","scale":120,"uses":"GIS raster digital elevation models, global satellite texture wraps, texture coordinates in 3D planetary rendering, and quick spatial previews."},{"category":"Cylindrical","cons":"Infamous polar area inflation: Greenland appears roughly equal in size to Africa, despite Africa being 14 times larger in reality.","d3_type":"geoMercator","description":"A conformal cylindrical projection formulated by Gerardus Mercator in 1569 that renders lines of constant compass course as straight tracks.","id":"mercator","name":"Mercator","properties":["Conformal","Rhumb Lines as Straight Lines"],"pros":"Preserves angles and shapes locally; any straight line is a loxodrome (rhumb line), enabling straightforward marine compass navigation.","scale":95,"uses":"Marine navigational charts, Web Mercator (EPSG:3857) web tiling (OpenStreetMap, Google Maps, Mapbox), and nautical piloting."},{"category":"Cylindrical","cons":"Scale factor and area error escalate rapidly as one moves east or west away from the standard longitudinal meridian.","d3_type":"geoTransverseMercator","description":"A transverse cylinder orientation rotated 90 degrees relative to standard Mercator, tangent or secant along a specific central meridian.","id":"transverse-mercator","name":"Transverse Mercator","properties":["Conformal","Meridian Foundation for UTM"],"pros":"Highly accurate and minimally distorted within a narrow zone (up to 6 degrees of longitude) surrounding the central meridian.","scale":95,"uses":"Universal Transverse Mercator (UTM) worldwide grid, national cadastral surveys, ordnance mapping, and military topographic charts."}];
+
+  
+  const indicatrixPoints = [
+    [0, 0],
+    [-90, 0],
+    [-45, 0],
+    [45, 0],
+    [90, 0],
+    [0, -70],
+    [0, -35],
+    [0, 35],
+    [0, 70]
+  ];
+
+  let landData = null;
+  let showTissot = true;
+  let showGraticule = true;
+  let isRotating = false;
+  let rotationAngle = 0;
+  let animFrameId = null;
+  let activeFilter = 'all';
+  let searchQuery = '';
+
+  const container = document.getElementById('projection-cards-container');
+  const loadingState = document.getElementById('projLoadingState');
+  const searchInput = document.getElementById('projSearchInput');
+  const clearSearchBtn = document.getElementById('projClearSearch');
+  const filterBtns = document.querySelectorAll('.proj-filter-btn');
+  const toggleTissot = document.getElementById('toggleTissot');
+  const toggleGraticule = document.getElementById('toggleGraticule');
+  const rotateAllBtn = document.getElementById('rotateAllBtn');
+  const rotateBtnText = document.getElementById('rotateBtnText');
+
+  
+  const canvasRenderers = [];
+
+  
+  async function loadData() {
+    try {
+      
+      let response = await fetch('/data/geolayers/ne_110m_land.json');
+      if (!response.ok) {
+        response = await fetch('https://gist.githubusercontent.com/d3indepth/f28e1c3a99ea6d84986f35ac8646fac7/raw/c58cede8dab4673c91a3db702d50f7447b373d98/ne_110m_land.json');
+      }
+      landData = await response.json();
+      if (loadingState) loadingState.style.display = 'none';
+      buildCards();
+    } catch (err) {
+      console.error('Failed to load land boundaries GeoJSON:', err);
+      if (loadingState) {
+        loadingState.innerHTML = '<p class="proj-error-text">Failed to load map boundaries. Please check your internet connection and refresh.</p>';
+      }
+    }
+  }
+
+  
+  function buildCards() {
+    container.innerHTML = '';
+    canvasRenderers.length = 0;
+
+    projections.forEach((item, index) => {
+      const card = document.createElement('article');
+      card.className = 'proj-card';
+      card.setAttribute('data-id', item.id);
+      card.setAttribute('data-category', item.category);
+      card.setAttribute('data-search', `${item.name} ${item.category} ${item.description} ${item.pros} ${item.cons} ${item.uses} ${(item.properties || []).join(' ')}`.toLowerCase());
+
+      card.innerHTML = `
+        <div class="proj-card-inner">
+          <div class="proj-canvas-wrapper">
+            <div class="proj-canvas-badge">
+              <span class="proj-d3-badge">d3.${item.d3_type}</span>
+              <span class="proj-category-tag ${item.category.toLowerCase()}">${item.category}</span>
+            </div>
+            <div class="proj-canvas-box">
+              <canvas id="canvas-${item.id}" width="420" height="300" class="proj-canvas" aria-label="${item.name} projection map canvas"></canvas>
+            </div>
+            <div class="proj-canvas-meta">
+              <div class="proj-prop-pills">
+                ${(item.properties || []).map(p => `<span class="proj-prop-pill">${p}</span>`).join('')}
+              </div>
+              <button type="button" class="proj-reset-canvas-btn" data-id="${item.id}" title="Center view">
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                  <path d="M3 3v5h5"></path>
+                </svg>
+                Reset
+              </button>
+            </div>
+          </div>
+
+          <div class="proj-info-wrapper">
+            <div class="proj-info-header">
+              <h3 class="proj-card-title">${item.name}</h3>
+              <p class="proj-card-desc">${item.description}</p>
+            </div>
+
+            <div class="proj-traits-grid">
+              <div class="proj-trait-box trait-pros">
+                <div class="proj-trait-label">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Key Advantages</span>
+                </div>
+                <p class="proj-trait-content">${item.pros}</p>
+              </div>
+
+              <div class="proj-trait-box trait-cons">
+                <div class="proj-trait-label">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  <span>Limitations &amp; Distortion</span>
+                </div>
+                <p class="proj-trait-content">${item.cons}</p>
+              </div>
+
+              <div class="proj-trait-box trait-uses">
+                <div class="proj-trait-label">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <span>Common Applications</span>
+                </div>
+                <p class="proj-trait-content">${item.uses}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      container.appendChild(card);
+
+      const canvas = document.getElementById(`canvas-${item.id}`);
+      if (canvas) {
+        const renderer = createProjectionRenderer(canvas, item);
+        canvasRenderers.push({ item, renderer, canvas, card });
+        renderer.render(rotationAngle);
+      }
+    });
+
+    
+    document.querySelectorAll('.proj-reset-canvas-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const id = btn.getAttribute('data-id');
+        const found = canvasRenderers.find(c => c.item.id === id);
+        if (found) {
+          found.renderer.render(0);
+        }
+      });
+    });
+
+    applyFilters();
+  }
+
+  
+  function createProjectionRenderer(canvas, item) {
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return { render: () => {} };
+
+    const width = canvas.width;
+    const height = canvas.height;
+
+    
+    let projectionFn = d3[item.d3_type];
+    if (!projectionFn && window.d3GeoProjection) {
+      projectionFn = window.d3GeoProjection[item.d3_type];
+    }
+    if (!projectionFn) {
+      
+      console.warn(`Projection d3.${item.d3_type} not found, falling back to Equirectangular`);
+      projectionFn = d3.geoEquirectangular;
+    }
+
+    const graticuleGenerator = d3.geoGraticule();
+    const circleGenerator = d3.geoCircle().radius(10).precision(1);
+
+    function render(currentRotation) {
+      const isDark = document.body.classList.contains('dark');
+
+      
+      const canvasBg = isDark ? '#1a1f2c' : '#f8fafc';
+      const graticuleColor = isDark ? 'rgba(255, 255, 255, 0.12)' : 'rgba(0, 0, 0, 0.12)';
+      const sphereBorder = isDark ? 'rgba(96, 165, 250, 0.4)' : 'rgba(59, 130, 246, 0.4)';
+      const landFill = isDark ? '#2e384d' : '#e2e8f0';
+      const landStroke = isDark ? '#4b5563' : '#94a3b8';
+      const indicatrixStroke = isDark ? 'rgba(244, 63, 94, 0.85)' : 'rgba(225, 29, 72, 0.85)';
+      const indicatrixFill = isDark ? 'rgba(244, 63, 94, 0.12)' : 'rgba(225, 29, 72, 0.12)';
+      const labelColor = isDark ? '#93c5fd' : '#1d4ed8';
+
+      ctx.clearRect(0, 0, width, height);
+
+      
+      ctx.fillStyle = canvasBg;
+      ctx.fillRect(0, 0, width, height);
+
+      
+      let proj = projectionFn()
+        .scale(item.scale * 0.82)
+        .center([0, 0])
+        .rotate([currentRotation, 0, 0])
+        .translate([width / 2, height / 2]);
+
+      
+      if (item.d3_type === 'geoOrthographic') {
+        proj.clipAngle(90);
+      }
+
+      const pathGenerator = d3.geoPath().projection(proj).context(ctx);
+
+      
+      if (showGraticule) {
+        ctx.lineWidth = 0.8;
+        ctx.strokeStyle = graticuleColor;
+        ctx.setLineDash([2, 2]);
+        ctx.beginPath();
+        pathGenerator(graticuleGenerator());
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+
+      
+      ctx.lineWidth = 1.2;
+      ctx.strokeStyle = sphereBorder;
+      ctx.beginPath();
+      try {
+        pathGenerator({ type: 'Sphere' });
+        ctx.stroke();
+      } catch (e) {}
+
+      
+      if (landData && landData.features) {
+        ctx.fillStyle = landFill;
+        ctx.strokeStyle = landStroke;
+        ctx.lineWidth = 0.9;
+        ctx.beginPath();
+        pathGenerator({ type: 'FeatureCollection', features: landData.features });
+        ctx.fill();
+        ctx.stroke();
+      }
+
+      
+      if (showTissot) {
+        ctx.lineWidth = 1.2;
+        ctx.strokeStyle = indicatrixStroke;
+        ctx.fillStyle = indicatrixFill;
+
+        indicatrixPoints.forEach(pt => {
+          circleGenerator.center(pt);
+          const circleGeom = circleGenerator();
+          ctx.beginPath();
+          try {
+            pathGenerator(circleGeom);
+            ctx.fill();
+            ctx.stroke();
+          } catch (e) {}
+        });
+      }
+
+      
+      ctx.fillStyle = labelColor;
+      ctx.font = '600 13px ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+      ctx.fillText(item.name, 12, 24);
+    }
+
+    return { render };
+  }
+
+  
+  function applyFilters() {
+    let visibleCount = 0;
+
+    canvasRenderers.forEach(({ item, card, renderer }) => {
+      const matchesCategory = activeFilter === 'all' || item.category === activeFilter;
+      const searchContent = card.getAttribute('data-search') || '';
+      const matchesSearch = !searchQuery || searchContent.includes(searchQuery);
+
+      if (matchesCategory && matchesSearch) {
+        card.style.display = 'block';
+        visibleCount++;
+        renderer.render(rotationAngle);
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    const noResults = document.getElementById('projNoResults');
+    if (visibleCount === 0) {
+      if (!noResults) {
+        const nr = document.createElement('div');
+        nr.id = 'projNoResults';
+        nr.className = 'proj-no-results';
+        nr.innerHTML = `
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <h4>No projections found</h4>
+          <p>No map projections match "${searchQuery}". Try selecting another category or clear your search term.</p>
+        `;
+        container.appendChild(nr);
+      }
+    } else if (noResults) {
+      noResults.remove();
+    }
+  }
+
+  
+  function tickRotation() {
+    if (!isRotating) return;
+    rotationAngle = (rotationAngle + 0.4) % 360;
+
+    canvasRenderers.forEach(({ card, renderer }) => {
+      if (card.style.display !== 'none') {
+        renderer.render(rotationAngle);
+      }
+    });
+
+    animFrameId = requestAnimationFrame(tickRotation);
+  }
+
+  
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.trim().toLowerCase();
+      if (clearSearchBtn) clearSearchBtn.style.display = searchQuery ? 'block' : 'none';
+      applyFilters();
+    });
+  }
+
+  if (clearSearchBtn) {
+    clearSearchBtn.addEventListener('click', () => {
+      if (searchInput) searchInput.value = '';
+      clearSearchBtn.style.display = 'none';
+      searchQuery = '';
+      applyFilters();
+    });
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeFilter = btn.getAttribute('data-category');
+      applyFilters();
+    });
+  });
+
+  if (toggleTissot) {
+    toggleTissot.addEventListener('change', (e) => {
+      showTissot = e.target.checked;
+      canvasRenderers.forEach(({ card, renderer }) => {
+        if (card.style.display !== 'none') renderer.render(rotationAngle);
+      });
+    });
+  }
+
+  if (toggleGraticule) {
+    toggleGraticule.addEventListener('change', (e) => {
+      showGraticule = e.target.checked;
+      canvasRenderers.forEach(({ card, renderer }) => {
+        if (card.style.display !== 'none') renderer.render(rotationAngle);
+      });
+    });
+  }
+
+  if (rotateAllBtn) {
+    rotateAllBtn.addEventListener('click', () => {
+      isRotating = !isRotating;
+      if (isRotating) {
+        rotateAllBtn.classList.add('active');
+        if (rotateBtnText) rotateBtnText.textContent = 'Pause Rotation';
+        tickRotation();
+      } else {
+        rotateAllBtn.classList.remove('active');
+        if (rotateBtnText) rotateBtnText.textContent = 'Animate Rotation';
+        if (animFrameId) cancelAnimationFrame(animFrameId);
+      }
+    });
+  }
+
+  
+  const observer = new MutationObserver(() => {
+    canvasRenderers.forEach(({ card, renderer }) => {
+      if (card.style.display !== 'none') renderer.render(rotationAngle);
+    });
+  });
+  observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
+  
+  loadData();
+})();
+</script>
+    </main>

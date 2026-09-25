@@ -1,0 +1,3296 @@
+<main class="main">
+<link rel="stylesheet" href="/lib/leaflet/leaflet.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<div class="cities-page-container">
+  <div class="gallery-breadcrumbs">
+    <a href="http://localhost:1313/">Home</a> <span>/</span> <a href="/geolayers/">GeoLayers</a> <span>/</span> <span>Cities
+      I Have Visited</span>
+  </div>
+
+  
+  <header class="cities-header">
+    <div class="cities-header-content">
+      <div class="cities-badge-pill">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+          <line x1="8" y1="2" x2="8" y2="18"></line>
+          <line x1="16" y1="6" x2="16" y2="22"></line>
+        </svg>
+        <span>Interactive GeoLayer</span>
+      </div>
+      <h1 class="cities-title">Cities I Have Visited</h1>
+      <p class="cities-subtitle">A cartographic journey through personal history. Trace the geographic footprint of travel across the globe, visualized through interactive spatial coordinates.</p>
+    </div>
+
+    
+    <div class="cities-stats-bar">
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" id="statsTotalCities">215</span>
+        <span class="cities-stat-label">Cities Visited</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" id="statsTotalCountries">21</span>
+        <span class="cities-stat-label">Countries & Territories</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number">4</span>
+        <span class="cities-stat-label">Continents</span>
+      </div>
+      <div class="cities-stat-card active-city-card" id="activeCityCard" style="display:none;">
+        <span class="cities-stat-number active-city-name" id="activeCityName">-</span>
+        <span class="cities-stat-label" id="activeCityCountry">Selected Location</span>
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="cities-layout-stacked">
+    
+    <section class="cities-groups-row" id="citiesGroupsSection">
+      <div class="groups-row-header">
+        <div class="groups-header-info">
+          <div class="groups-title-wrap">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <h2 class="groups-title">City Groups</h2>
+            <span class="groups-total-pill">215 cities &bull; 21
+              groups</span>
+          </div>
+
+          
+          <div class="cities-search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="citySearchInput" placeholder="Filter city or region..." autocomplete="off"
+              aria-label="Filter city">
+            <button type="button" id="clearCitySearch" class="clear-search-btn" style="display:none;"
+              aria-label="Clear filter">&times;</button>
+          </div>
+        </div>
+
+        <div class="groups-header-actions">
+          <button type="button" class="groups-btn-action" id="collapseAllBtn" title="Expand or collapse group cards">
+            <span id="collapseAllText">Collapse all</span>
+          </button>
+          <button type="button" class="groups-btn-action toggle-cards-btn" id="toggleExplorerRowBtn"
+            title="Show or hide city cards grid">
+            <svg id="toggleExplorerIcon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+            <span id="toggleExplorerText">Minimize Cards</span>
+          </button>
+        </div>
+      </div>
+
+      
+      <div class="cities-pill-carousel" id="countryPills">
+        <button type="button" class="country-pill active" data-country="all">All (215)</button>
+        <button type="button" class="country-pill" data-country="Brasil">
+          <span>🇧🇷</span>
+          <span>Brasil (46)</span>
+        </button>
+        <button type="button" class="country-pill" data-country="Argentina">
+          <span>🇦🇷</span>
+          <span>Argentina (1)</span>
+        </button>
+        <button type="button" class="country-pill" data-country="Paraguay">
+          <span>🇵🇾</span>
+          <span>Paraguay (2)</span>
+        </button>
+        <button type="button" class="country-pill" data-country="Panama">
+          <span>🇵🇦</span>
+          <span>Panama (3)</span>
+        </button>
+        <button type="button" class="country-pill" data-country="USA">
+          <span>🇺🇸</span>
+          <span>USA (3)</span>
+        </button>
+        <button type="button" class="country-pill" data-country="Portugal">
+          <span>🇵🇹</span>
+          <span>Portugal (44)</span>
+        </button>
+        <button type="button" class="country-pill" data-country="Spain">
+          <span>🇪🇸</span>
+          <span>Spain (40)</span>
+        </button>
+        <button type="button" class="country-pill" data-country="United Kingdom">
+          <span>🇬🇧</span>
+          <span>United Kingdom (3)</span>
+        </button>
+        <button type="button" class="country-pill" data-country="Ireland">
+          <span>🇮🇪</span>
+          <span>Ireland (9)</span>
+        </button>
+        <button type="button" class="country-pill" data-country="Scotland">
+          <span>🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
+          <span>Scotland (1)</span>
+        </button>
+        <button type="button" class="country-pill" data-country="Germany">
+          <span>🇩🇪</span>
+          <span>Germany (39)</span>
+        </button>
+        <button type="button" class="country-pill" data-country="Austria">
+          <span>🇦🇹</span>
+          <span>Austria (2)</span>
+        </button>
+        <button type="button" class="country-pill" data-country="Czechia">
+          <span>🇨🇿</span>
+          <span>Czechia (1)</span>
+        </button>
+        <button type="button" class="country-pill" data-country="Poland">
+          <span>🇵🇱</span>
+          <span>Poland (1)</span>
+        </button>
+        <button type="button" class="country-pill" data-country="Luxembourg">
+          <span>🇱🇺</span>
+          <span>Luxembourg (2)</span>
+        </button>
+        <button type="button" class="country-pill" data-country="Italy">
+          <span>🇮🇹</span>
+          <span>Italy (3)</span>
+        </button>
+        <button type="button" class="country-pill" data-country="France">
+          <span>🇫🇷</span>
+          <span>France (1)</span>
+        </button>
+        <button type="button" class="country-pill" data-country="Netherlands">
+          <span>🇳🇱</span>
+          <span>Netherlands (4)</span>
+        </button>
+        <button type="button" class="country-pill" data-country="Russia">
+          <span>🇷🇺</span>
+          <span>Russia (1)</span>
+        </button>
+        <button type="button" class="country-pill" data-country="Turkey">
+          <span>🇹🇷</span>
+          <span>Turkey (2)</span>
+        </button>
+        <button type="button" class="country-pill" data-country="China">
+          <span>🇨🇳</span>
+          <span>China (7)</span>
+        </button>
+      </div>
+
+      
+      <div class="cities-groups-cards-grid" id="citiesAccordion">
+
+        <div class="city-group-card" data-group-name="Brasil">
+          <div class="city-group-card-header" data-toggle="collapse" data-target="#group-collapse-0">
+            <div class="card-header-left">
+              <span class="group-flag">🇧🇷</span>
+              <span class="group-name">Brasil</span>
+              <span class="group-count-badge">46</span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn" data-group="Brasil"
+                title="Fit map to Brasil">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+              <svg class="group-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="city-group-card-body" id="group-collapse-0">
+            <div class="city-subgroup-item" data-subgroup-name="Santa Catarina">
+              <div class="city-subgroup-header">
+                <div class="subgroup-title">
+                  <span class="subgroup-dot"></span>
+                  <span class="subgroup-name">Santa Catarina</span>
+                  <span class="subgroup-badge">30</span>
+                </div>
+                <button type="button" class="subgroup-zoom-btn" data-group="Brasil"
+                  data-subgroup="Santa Catarina" title="Fit to Santa Catarina">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                  </svg>
+                </button>
+              </div>
+              <ul class="cities-list">
+                <li class="city-entry-item" data-name="florianópolis, santa catarina" data-lat="-27.59355" data-lon="-48.564151"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Florianópolis, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="são josé, santa catarina" data-lat="-27.6136" data-lon="-48.6367"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">São José, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="palhoça, santa catarina" data-lat="-27.6458" data-lon="-48.6691"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Palhoça, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="biguaçu, santa catarina" data-lat="-27.4956" data-lon="-48.659"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Biguaçu, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="santo amaro da imperatriz, santa catarina" data-lat="-27.6858" data-lon="-48.7817"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Santo Amaro da Imperatriz, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="alfredo wagner, santa catarina" data-lat="-28.6775" data-lon="-49.3697"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Alfredo Wagner, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="urubici, santa catarina" data-lat="-28.015" data-lon="-49.593"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Urubici, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="bom retiro, santa catarina" data-lat="-28.6775" data-lon="-49.3697"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Bom retiro, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="anitápolis, santa catarina" data-lat="-28.6775" data-lon="-49.3697"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Anitápolis, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="rancho queimado, santa catarina" data-lat="-28.6775" data-lon="-49.3697"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Rancho queimado, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="garopaba, santa catarina" data-lat="-28.6775" data-lon="-49.3697"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Garopaba, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="governador celso ramos, santa catarina" data-lat="-27.317161" data-lon="-48.557608"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Governador Celso Ramos, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="tijucas, santa catarina" data-lat="-27.239404" data-lon="-48.63537"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Tijucas, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="itapema, santa catarina" data-lat="-27.09472" data-lon="-48.613778"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Itapema, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="indaial, santa catarina" data-lat="-28.6775" data-lon="-49.3697"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Indaial, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="timbó, santa catarina" data-lat="-28.6775" data-lon="-49.3697"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Timbó, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="itajaí, santa catarina" data-lat="-26.904679" data-lon="-48.655298"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Itajaí, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="balneario barra do sul, santa catarina" data-lat="-28.6775" data-lon="-49.3697"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Balneario Barra do Sul, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="barra velha, santa catarina" data-lat="-28.6775" data-lon="-49.3697"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Barra Velha, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="chapecó, santa catarina" data-lat="-27.0964" data-lon="-52.6152"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Chapecó, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="joinville, santa catarina" data-lat="-26.3045" data-lon="-48.8451"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Joinville, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="blumenau, santa catarina" data-lat="-26.9155" data-lon="-49.0661"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Blumenau, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="jaraguá do sul, santa catarina" data-lat="-26.4851" data-lon="-49.0713"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Jaraguá do Sul, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="balneário camboriú, santa catarina" data-lat="-26.9926" data-lon="-48.6175"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Balneário Camboriú, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="lages, santa catarina" data-lat="-27.816" data-lon="-50.326"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Lages, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="criciúma, santa catarina" data-lat="-28.6775" data-lon="-49.3697"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Criciúma, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="brusque, santa catarina" data-lat="-27.098" data-lon="-48.911"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Brusque, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="imbituba, santa catarina" data-lat="-28.229" data-lon="-48.666"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Imbituba, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="penha, santa catarina" data-lat="-26.769" data-lon="-48.646"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Penha, Santa Catarina</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="são francisco do sul, santa catarina" data-lat="-26.243" data-lon="-48.638"
+                  data-group="Brasil" data-subgroup="Santa Catarina">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">São Francisco do Sul, Santa Catarina</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="city-subgroup-item" data-subgroup-name="Rio Grande do Sul">
+              <div class="city-subgroup-header">
+                <div class="subgroup-title">
+                  <span class="subgroup-dot"></span>
+                  <span class="subgroup-name">Rio Grande do Sul</span>
+                  <span class="subgroup-badge">1</span>
+                </div>
+                <button type="button" class="subgroup-zoom-btn" data-group="Brasil"
+                  data-subgroup="Rio Grande do Sul" title="Fit to Rio Grande do Sul">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                  </svg>
+                </button>
+              </div>
+              <ul class="cities-list">
+                <li class="city-entry-item" data-name="porto alegre, rio grande do sul" data-lat="-30.033" data-lon="-51.23"
+                  data-group="Brasil" data-subgroup="Rio Grande do Sul">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Porto Alegre, Rio Grande do Sul</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="city-subgroup-item" data-subgroup-name="Paraná">
+              <div class="city-subgroup-header">
+                <div class="subgroup-title">
+                  <span class="subgroup-dot"></span>
+                  <span class="subgroup-name">Paraná</span>
+                  <span class="subgroup-badge">5</span>
+                </div>
+                <button type="button" class="subgroup-zoom-btn" data-group="Brasil"
+                  data-subgroup="Paraná" title="Fit to Paraná">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                  </svg>
+                </button>
+              </div>
+              <ul class="cities-list">
+                <li class="city-entry-item" data-name="pinhais, paraná" data-lat="-25.440711" data-lon="-49.182948"
+                  data-group="Brasil" data-subgroup="Paraná">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Pinhais, Paraná</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="são josé dos pinhais, paraná" data-lat="-25.532864" data-lon="-49.201972"
+                  data-group="Brasil" data-subgroup="Paraná">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">São José dos Pinhais, Paraná</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="curitiba, paraná" data-lat="-25.4284" data-lon="-49.2775"
+                  data-group="Brasil" data-subgroup="Paraná">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Curitiba, Paraná</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="morretes, paraná" data-lat="-25.477" data-lon="-48.834"
+                  data-group="Brasil" data-subgroup="Paraná">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Morretes, Paraná</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="foz do iguaçu, paraná" data-lat="-25.5163" data-lon="-54.5881"
+                  data-group="Brasil" data-subgroup="Paraná">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Foz do Iguaçu, Paraná</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="city-subgroup-item" data-subgroup-name="São Paulo">
+              <div class="city-subgroup-header">
+                <div class="subgroup-title">
+                  <span class="subgroup-dot"></span>
+                  <span class="subgroup-name">São Paulo</span>
+                  <span class="subgroup-badge">7</span>
+                </div>
+                <button type="button" class="subgroup-zoom-btn" data-group="Brasil"
+                  data-subgroup="São Paulo" title="Fit to São Paulo">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                  </svg>
+                </button>
+              </div>
+              <ul class="cities-list">
+                <li class="city-entry-item" data-name="cananéia, são paulo" data-lat="-25.015" data-lon="-47.927"
+                  data-group="Brasil" data-subgroup="São Paulo">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Cananéia, São Paulo</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="são paulo, são paulo" data-lat="-23.5505" data-lon="-46.6333"
+                  data-group="Brasil" data-subgroup="São Paulo">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">São Paulo, São Paulo</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="guarulhos, são paulo" data-lat="-23.454" data-lon="-46.533"
+                  data-group="Brasil" data-subgroup="São Paulo">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Guarulhos, São Paulo</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="santana do parnaiba, são paulo" data-lat="-23.474367" data-lon="-46.867861"
+                  data-group="Brasil" data-subgroup="São Paulo">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Santana do Parnaiba, São Paulo</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="rio claro, são paulo" data-lat="-22.3988" data-lon="-47.556"
+                  data-group="Brasil" data-subgroup="São Paulo">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Rio Claro, São Paulo</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="piracicaba, são paulo" data-lat="-22.725" data-lon="-47.649"
+                  data-group="Brasil" data-subgroup="São Paulo">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Piracicaba, São Paulo</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="campinas, são paulo" data-lat="-22.9056" data-lon="-47.0626"
+                  data-group="Brasil" data-subgroup="São Paulo">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Campinas, São Paulo</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="city-subgroup-item" data-subgroup-name="Rio de Janeiro">
+              <div class="city-subgroup-header">
+                <div class="subgroup-title">
+                  <span class="subgroup-dot"></span>
+                  <span class="subgroup-name">Rio de Janeiro</span>
+                  <span class="subgroup-badge">2</span>
+                </div>
+                <button type="button" class="subgroup-zoom-btn" data-group="Brasil"
+                  data-subgroup="Rio de Janeiro" title="Fit to Rio de Janeiro">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                  </svg>
+                </button>
+              </div>
+              <ul class="cities-list">
+                <li class="city-entry-item" data-name="rio de janeiro, rio de janeiro" data-lat="-22.9068" data-lon="-43.1729"
+                  data-group="Brasil" data-subgroup="Rio de Janeiro">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Rio de Janeiro, Rio de Janeiro</span>
+                  </div>
+                </li>
+                <li class="city-entry-item" data-name="niterói, rio de janeiro" data-lat="-22.883" data-lon="-43.104"
+                  data-group="Brasil" data-subgroup="Rio de Janeiro">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Niterói, Rio de Janeiro</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="city-subgroup-item" data-subgroup-name="Distrito Federal">
+              <div class="city-subgroup-header">
+                <div class="subgroup-title">
+                  <span class="subgroup-dot"></span>
+                  <span class="subgroup-name">Distrito Federal</span>
+                  <span class="subgroup-badge">1</span>
+                </div>
+                <button type="button" class="subgroup-zoom-btn" data-group="Brasil"
+                  data-subgroup="Distrito Federal" title="Fit to Distrito Federal">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                  </svg>
+                </button>
+              </div>
+              <ul class="cities-list">
+                <li class="city-entry-item" data-name="brasília, distrito federal" data-lat="-15.7975" data-lon="-47.8928"
+                  data-group="Brasil" data-subgroup="Distrito Federal">
+                  <div class="city-entry-btn">
+                    <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span class="city-entry-label">Brasília, Distrito Federal</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="city-group-card" data-group-name="Argentina">
+          <div class="city-group-card-header" data-toggle="collapse" data-target="#group-collapse-1">
+            <div class="card-header-left">
+              <span class="group-flag">🇦🇷</span>
+              <span class="group-name">Argentina</span>
+              <span class="group-count-badge">1</span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn" data-group="Argentina"
+                title="Fit map to Argentina">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+              <svg class="group-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="city-group-card-body" id="group-collapse-1">
+            <ul class="cities-list">
+              <li class="city-entry-item" data-name="puerto iguazú, argentina" data-lat="-25.5991" data-lon="-54.5736"
+                data-group="Argentina" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Puerto Iguazú, Argentina</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="city-group-card" data-group-name="Paraguay">
+          <div class="city-group-card-header" data-toggle="collapse" data-target="#group-collapse-2">
+            <div class="card-header-left">
+              <span class="group-flag">🇵🇾</span>
+              <span class="group-name">Paraguay</span>
+              <span class="group-count-badge">2</span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn" data-group="Paraguay"
+                title="Fit map to Paraguay">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+              <svg class="group-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="city-group-card-body" id="group-collapse-2">
+            <ul class="cities-list">
+              <li class="city-entry-item" data-name="asunción, paraguay" data-lat="-25.2637" data-lon="-57.5759"
+                data-group="Paraguay" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Asunción, Paraguay</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="ciudad del este, paraguay" data-lat="-25.5097" data-lon="-54.6111"
+                data-group="Paraguay" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Ciudad del Este, Paraguay</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="city-group-card" data-group-name="Panama">
+          <div class="city-group-card-header" data-toggle="collapse" data-target="#group-collapse-3">
+            <div class="card-header-left">
+              <span class="group-flag">🇵🇦</span>
+              <span class="group-name">Panama</span>
+              <span class="group-count-badge">3</span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn" data-group="Panama"
+                title="Fit map to Panama">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+              <svg class="group-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="city-group-card-body" id="group-collapse-3">
+            <ul class="cities-list">
+              <li class="city-entry-item" data-name="panama city, panama" data-lat="8.9824" data-lon="-79.5199"
+                data-group="Panama" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Panama City, Panama</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="colón, panama" data-lat="9.356" data-lon="-79.9068"
+                data-group="Panama" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Colón, Panama</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="san miguelito, panama" data-lat="9.052" data-lon="-79.497"
+                data-group="Panama" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">San Miguelito, Panama</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="city-group-card" data-group-name="USA">
+          <div class="city-group-card-header" data-toggle="collapse" data-target="#group-collapse-4">
+            <div class="card-header-left">
+              <span class="group-flag">🇺🇸</span>
+              <span class="group-name">USA</span>
+              <span class="group-count-badge">3</span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn" data-group="USA"
+                title="Fit map to USA">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+              <svg class="group-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="city-group-card-body" id="group-collapse-4">
+            <ul class="cities-list">
+              <li class="city-entry-item" data-name="washington dc, usa" data-lat="38.9072" data-lon="-77.0369"
+                data-group="USA" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Washington DC, USA</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="dulles, virginia, usa" data-lat="38.958653" data-lon="-77.449531"
+                data-group="USA" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Dulles, Virginia, USA</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="mclean, virginia, usa" data-lat="38.931248" data-lon="-77.179292"
+                data-group="USA" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">McLean, Virginia, USA</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="city-group-card" data-group-name="Portugal">
+          <div class="city-group-card-header" data-toggle="collapse" data-target="#group-collapse-5">
+            <div class="card-header-left">
+              <span class="group-flag">🇵🇹</span>
+              <span class="group-name">Portugal</span>
+              <span class="group-count-badge">44</span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn" data-group="Portugal"
+                title="Fit map to Portugal">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+              <svg class="group-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="city-group-card-body" id="group-collapse-5">
+            <ul class="cities-list">
+              <li class="city-entry-item" data-name="lisbon, portugal" data-lat="38.7223" data-lon="-9.1393"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Lisbon, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="porto, portugal" data-lat="41.1496" data-lon="-8.6102"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Porto, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="loures, portugal" data-lat="38.8309" data-lon="-9.1689"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Loures, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="vila nova de gaia, portugal" data-lat="41.1336" data-lon="-8.611"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Vila Nova de Gaia, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="ericeira, portugal" data-lat="38.9667" data-lon="-9.4167"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Ericeira, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="estoril, portugal" data-lat="38.7057" data-lon="-9.3977"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Estoril, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="alcabideche, portugal" data-lat="38.7336" data-lon="-9.4197"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Alcabideche, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="amadora, portugal" data-lat="38.7597" data-lon="-9.2308"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Amadora, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="óbidos, portugal" data-lat="39.36" data-lon="-9.1567"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Óbidos, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="covilhã, portugal" data-lat="40.2833" data-lon="-7.5"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Covilhã, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="foz do arelho, portugal" data-lat="39.4333" data-lon="-9.2167"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Foz do Arelho, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="faro, portugal" data-lat="37.0194" data-lon="-7.9304"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Faro, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="coimbra, portugal" data-lat="40.2033" data-lon="-8.4265"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Coimbra, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="braga, portugal" data-lat="41.5331" data-lon="-8.4253"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Braga, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="aveiro, portugal" data-lat="40.6443" data-lon="-8.6455"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Aveiro, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="setúbal, portugal" data-lat="38.5244" data-lon="-8.8882"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Setúbal, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="vila real de santo antónio, portugal" data-lat="37.199" data-lon="-7.4208"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Vila Real de Santo António, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="elvas, portugal" data-lat="38.8815" data-lon="-7.1633"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Elvas, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="évora, portugal" data-lat="38.5714" data-lon="-7.9065"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Évora, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="guarda, portugal" data-lat="40.5364" data-lon="-7.2637"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Guarda, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="fundão, portugal" data-lat="40.141" data-lon="-7.5003"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Fundão, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="albufeira, portugal" data-lat="37.095" data-lon="-8.253"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Albufeira, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="almada, portugal" data-lat="38.679" data-lon="-9.161"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Almada, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="cascais, portugal" data-lat="38.697" data-lon="-9.422"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Cascais, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="oeiras, portugal" data-lat="38.691" data-lon="-9.311"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Oeiras, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="carcavelos, portugal" data-lat="38.683" data-lon="-9.333"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Carcavelos, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="parede, portugal" data-lat="38.693" data-lon="-9.354"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Parede, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="sintra, portugal" data-lat="38.797" data-lon="-9.381"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Sintra, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="peniche, portugal" data-lat="39.356" data-lon="-9.381"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Peniche, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="odivelas, portugal" data-lat="38.793" data-lon="-9.164"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Odivelas, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="caldas da rainha, portugal" data-lat="39.407" data-lon="-9.134"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Caldas da Rainha, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="manteigas, portugal" data-lat="40.402" data-lon="-7.539"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Manteigas, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="viseu, portugal" data-lat="40.661" data-lon="-7.912"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Viseu, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="matosinhos, portugal" data-lat="41.183" data-lon="-8.69"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Matosinhos, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="vila do conde, portugal" data-lat="41.351" data-lon="-8.748"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Vila do Conde, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="póvoa de varzim, portugal" data-lat="41.383" data-lon="-8.759"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Póvoa de Varzim, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="apúlia, portugal" data-lat="41.485" data-lon="-8.77"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Apúlia, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="fão, portugal" data-lat="41.51" data-lon="-8.768"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Fão, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="esposende, portugal" data-lat="41.533" data-lon="-8.781"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Esposende, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="viana do castelo, portugal" data-lat="41.701" data-lon="-8.835"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Viana do Castelo, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="caminha, portugal" data-lat="41.877" data-lon="-8.837"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Caminha, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="vila de mouros, portugal" data-lat="41.891" data-lon="-8.797"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Vila de Mouros, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="vila nova de cerveira, portugal" data-lat="41.938" data-lon="-8.744"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Vila Nova de Cerveira, Portugal</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="valença, portugal" data-lat="42.029" data-lon="-8.644"
+                data-group="Portugal" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Valença, Portugal</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="city-group-card" data-group-name="Spain">
+          <div class="city-group-card-header" data-toggle="collapse" data-target="#group-collapse-6">
+            <div class="card-header-left">
+              <span class="group-flag">🇪🇸</span>
+              <span class="group-name">Spain</span>
+              <span class="group-count-badge">40</span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn" data-group="Spain"
+                title="Fit map to Spain">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+              <svg class="group-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="city-group-card-body" id="group-collapse-6">
+            <ul class="cities-list">
+              <li class="city-entry-item" data-name="ayamonte, spain" data-lat="37.214" data-lon="-7.404"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Ayamonte, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="mérida, spain" data-lat="38.916" data-lon="-6.344"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Mérida, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="cáceres, spain" data-lat="39.476" data-lon="-6.372"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Cáceres, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="toledo, spain" data-lat="39.862" data-lon="-4.023"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Toledo, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="tarifa, spain" data-lat="36.013" data-lon="-5.606"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Tarifa, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="algeciras, spain" data-lat="36.14" data-lon="-5.441"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Algeciras, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="la línea de la concepción, spain" data-lat="36.168" data-lon="-5.348"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">La Línea de la Concepción, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="marbella, spain" data-lat="36.515" data-lon="-4.882"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Marbella, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="ronda, spain" data-lat="36.742" data-lon="-5.167"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Ronda, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="setenil de las bodegas, spain" data-lat="36.864" data-lon="-5.181"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Setenil de las Bodegas, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="madrid, spain" data-lat="40.4168" data-lon="-3.7038"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Madrid, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="barcelona, spain" data-lat="41.3851" data-lon="2.1734"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Barcelona, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="badajoz, spain" data-lat="38.8794" data-lon="-6.9707"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Badajoz, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="salamanca, spain" data-lat="40.9701" data-lon="-5.6631"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Salamanca, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="seville, spain" data-lat="37.3891" data-lon="-5.9845"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Seville, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="málaga, spain" data-lat="36.7213" data-lon="-4.4203"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Málaga, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="granada, spain" data-lat="37.1773" data-lon="-3.5986"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Granada, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="córdoba, spain" data-lat="37.8882" data-lon="-4.7794"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Córdoba, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="cádiz, spain" data-lat="36.5297" data-lon="-6.2946"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Cádiz, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="valencia, spain" data-lat="39.4699" data-lon="-0.3774"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Valencia, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="castellón de la plana, spain" data-lat="39.9864" data-lon="-0.0576"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Castellón de la Plana, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="donostia-san sebastian, spain" data-lat="43.317488" data-lon="-1.98011"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Donostia-San Sebastian, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="bilbao, spain" data-lat="43.263019" data-lon="-2.934997"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Bilbao, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="barakaldo, spain" data-lat="43.296864" data-lon="-2.98693"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Barakaldo, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="sestao, spain" data-lat="43.312023" data-lon="-3.003953"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Sestao, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="portugalete, spain" data-lat="43.320641" data-lon="-3.020275"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Portugalete, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="getxo, spain" data-lat="43.32759" data-lon="-3.010776"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Getxo, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="santander, spain" data-lat="43.472724" data-lon="-3.79315"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Santander, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="león, spain" data-lat="42.598104" data-lon="-5.571907"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">León, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="monforte de lemos, spain" data-lat="42.520561" data-lon="-7.514766"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Monforte de Lemos, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="vigo, spain" data-lat="42.234387" data-lon="-8.714817"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Vigo, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="tui, spain" data-lat="42.049" data-lon="-8.646"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Tui, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="o porriño, spain" data-lat="42.161" data-lon="-8.619"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">O Porriño, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="teis, spain" data-lat="42.251" data-lon="-8.692"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Teis, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="redondela, spain" data-lat="42.281" data-lon="-8.609"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Redondela, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="arcade, spain" data-lat="42.339" data-lon="-8.605"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Arcade, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="pontevedra, spain" data-lat="42.431" data-lon="-8.643"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Pontevedra, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="caldas de reis, spain" data-lat="42.604" data-lon="-8.641"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Caldas de Reis, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="padrón, spain" data-lat="42.739" data-lon="-8.659"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Padrón, Spain</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="santiago de compostela, spain" data-lat="42.88" data-lon="-8.545"
+                data-group="Spain" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Santiago de Compostela, Spain</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="city-group-card" data-group-name="United Kingdom">
+          <div class="city-group-card-header" data-toggle="collapse" data-target="#group-collapse-7">
+            <div class="card-header-left">
+              <span class="group-flag">🇬🇧</span>
+              <span class="group-name">United Kingdom</span>
+              <span class="group-count-badge">3</span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn" data-group="United Kingdom"
+                title="Fit map to United Kingdom">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+              <svg class="group-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="city-group-card-body" id="group-collapse-7">
+            <ul class="cities-list">
+              <li class="city-entry-item" data-name="gibraltar, united kingdom" data-lat="36.1408" data-lon="-5.3436"
+                data-group="United Kingdom" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Gibraltar, United Kingdom</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="london, england" data-lat="51.5074" data-lon="-0.1276"
+                data-group="United Kingdom" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">London, England</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="manchester, england" data-lat="53.4808" data-lon="-2.2426"
+                data-group="United Kingdom" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Manchester, England</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="city-group-card" data-group-name="Ireland">
+          <div class="city-group-card-header" data-toggle="collapse" data-target="#group-collapse-8">
+            <div class="card-header-left">
+              <span class="group-flag">🇮🇪</span>
+              <span class="group-name">Ireland</span>
+              <span class="group-count-badge">9</span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn" data-group="Ireland"
+                title="Fit map to Ireland">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+              <svg class="group-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="city-group-card-body" id="group-collapse-8">
+            <ul class="cities-list">
+              <li class="city-entry-item" data-name="dublin, ireland" data-lat="53.3498" data-lon="-6.2603"
+                data-group="Ireland" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Dublin, Ireland</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="cork, ireland" data-lat="51.8969" data-lon="-8.4761"
+                data-group="Ireland" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Cork, Ireland</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="belfast, ireland" data-lat="54.5973" data-lon="-5.9301"
+                data-group="Ireland" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Belfast, Ireland</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="limerick, ireland" data-lat="52.668" data-lon="-8.6291"
+                data-group="Ireland" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Limerick, Ireland</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="galway, ireland" data-lat="53.2707" data-lon="-9.0488"
+                data-group="Ireland" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Galway, Ireland</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="tallaght, ireland" data-lat="53.288164" data-lon="-6.357519"
+                data-group="Ireland" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Tallaght, Ireland</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="swords, ireland" data-lat="53.459258" data-lon="-6.219903"
+                data-group="Ireland" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Swords, Ireland</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="blanchardstown, ireland" data-lat="53.38278" data-lon="-6.370929"
+                data-group="Ireland" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Blanchardstown, Ireland</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="bray, ireland" data-lat="53.200765" data-lon="-6.111114"
+                data-group="Ireland" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Bray, Ireland</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="city-group-card" data-group-name="Scotland">
+          <div class="city-group-card-header" data-toggle="collapse" data-target="#group-collapse-9">
+            <div class="card-header-left">
+              <span class="group-flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
+              <span class="group-name">Scotland</span>
+              <span class="group-count-badge">1</span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn" data-group="Scotland"
+                title="Fit map to Scotland">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+              <svg class="group-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="city-group-card-body" id="group-collapse-9">
+            <ul class="cities-list">
+              <li class="city-entry-item" data-name="edinburgh, scotland" data-lat="55.953" data-lon="-3.1883"
+                data-group="Scotland" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Edinburgh, Scotland</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="city-group-card" data-group-name="Germany">
+          <div class="city-group-card-header" data-toggle="collapse" data-target="#group-collapse-10">
+            <div class="card-header-left">
+              <span class="group-flag">🇩🇪</span>
+              <span class="group-name">Germany</span>
+              <span class="group-count-badge">39</span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn" data-group="Germany"
+                title="Fit map to Germany">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+              <svg class="group-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="city-group-card-body" id="group-collapse-10">
+            <ul class="cities-list">
+              <li class="city-entry-item" data-name="münster, germany" data-lat="51.9607" data-lon="7.6261"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Münster, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="dortmund, germany" data-lat="51.5136" data-lon="7.4686"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Dortmund, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="bonn, germany" data-lat="50.7374" data-lon="7.0982"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Bonn, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="wesseling, germany" data-lat="50.827" data-lon="6.975"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Wesseling, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="wuppertal, germany" data-lat="51.2563" data-lon="7.1864"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Wuppertal, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="essen, germany" data-lat="51.4556" data-lon="7.0123"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Essen, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="duisburg, germany" data-lat="51.4344" data-lon="6.7735"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Duisburg, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="köln, germany" data-lat="50.9375" data-lon="6.9603"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Köln, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="aachen, germany" data-lat="50.7753" data-lon="6.0834"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Aachen, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="hamburg, germany" data-lat="53.5511" data-lon="9.9937"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Hamburg, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="munich, germany" data-lat="48.1351" data-lon="11.581"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Munich, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="berlin, germany" data-lat="52.52" data-lon="13.405"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Berlin, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="leipzig, germany" data-lat="51.3397" data-lon="12.3731"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Leipzig, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="jena, germany" data-lat="50.9277" data-lon="11.5886"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Jena, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="frankfurt am main, germany" data-lat="50.1109" data-lon="8.6821"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Frankfurt am Main, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="frankfurt an der oder, germany" data-lat="52.3411" data-lon="14.5501"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Frankfurt an der Oder, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="stuttgart, germany" data-lat="48.7758" data-lon="9.1829"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Stuttgart, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="erfurt, germany" data-lat="50.9848" data-lon="10.9847"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Erfurt, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="hanover, germany" data-lat="52.3759" data-lon="9.7332"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Hanover, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="osnabrück, germany" data-lat="52.2799" data-lon="8.0476"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Osnabrück, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="bremen, germany" data-lat="53.0793" data-lon="8.8017"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Bremen, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="nuremberg, germany" data-lat="49.4521" data-lon="11.0775"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Nuremberg, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="bielefeld, germany" data-lat="52.0302" data-lon="8.5325"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Bielefeld, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="emden, germany" data-lat="53.3667" data-lon="8.212"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Emden, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="hamm, germany" data-lat="51.6739" data-lon="7.199"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Hamm, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="würzburg, germany" data-lat="49.7903" data-lon="9.9333"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Würzburg, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="dresden, germany" data-lat="51.0504" data-lon="13.7373"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Dresden, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="chemnitz, germany" data-lat="50.8333" data-lon="12.92"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Chemnitz, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="zwickau, germany" data-lat="50.7167" data-lon="12.5"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Zwickau, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="cottbus, germany" data-lat="51.7667" data-lon="14.3333"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Cottbus, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="potsdam, germany" data-lat="52.4" data-lon="13.0667"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Potsdam, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="göttingen, germany" data-lat="51.5333" data-lon="9.9333"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Göttingen, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="wünsdorf, germany" data-lat="52.1667" data-lon="13.45"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Wünsdorf, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="magdeburg, germany" data-lat="52.13234" data-lon="11.622519"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Magdeburg, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="halle (saale), germany" data-lat="51.478539" data-lon="11.983618"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Halle (Saale), Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="gera, germany" data-lat="50.8833" data-lon="12.0833"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Gera, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="weimar, germany" data-lat="50.9667" data-lon="11.3333"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Weimar, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="dessau, germany" data-lat="51.8667" data-lon="12.2333"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Dessau, Germany</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="wernigerode, germany" data-lat="51.8667" data-lon="10.9667"
+                data-group="Germany" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Wernigerode, Germany</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="city-group-card" data-group-name="Austria">
+          <div class="city-group-card-header" data-toggle="collapse" data-target="#group-collapse-11">
+            <div class="card-header-left">
+              <span class="group-flag">🇦🇹</span>
+              <span class="group-name">Austria</span>
+              <span class="group-count-badge">2</span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn" data-group="Austria"
+                title="Fit map to Austria">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+              <svg class="group-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="city-group-card-body" id="group-collapse-11">
+            <ul class="cities-list">
+              <li class="city-entry-item" data-name="salzburg, austria" data-lat="47.8095" data-lon="13.0434"
+                data-group="Austria" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Salzburg, Austria</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="flachau, austria" data-lat="47.3333" data-lon="13.3833"
+                data-group="Austria" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Flachau, Austria</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="city-group-card" data-group-name="Czechia">
+          <div class="city-group-card-header" data-toggle="collapse" data-target="#group-collapse-12">
+            <div class="card-header-left">
+              <span class="group-flag">🇨🇿</span>
+              <span class="group-name">Czechia</span>
+              <span class="group-count-badge">1</span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn" data-group="Czechia"
+                title="Fit map to Czechia">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+              <svg class="group-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="city-group-card-body" id="group-collapse-12">
+            <ul class="cities-list">
+              <li class="city-entry-item" data-name="prague, czechia" data-lat="50.087858" data-lon="14.420489"
+                data-group="Czechia" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Prague, Czechia</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="city-group-card" data-group-name="Poland">
+          <div class="city-group-card-header" data-toggle="collapse" data-target="#group-collapse-13">
+            <div class="card-header-left">
+              <span class="group-flag">🇵🇱</span>
+              <span class="group-name">Poland</span>
+              <span class="group-count-badge">1</span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn" data-group="Poland"
+                title="Fit map to Poland">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+              <svg class="group-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="city-group-card-body" id="group-collapse-13">
+            <ul class="cities-list">
+              <li class="city-entry-item" data-name="słubice, poland" data-lat="52.35" data-lon="14.5667"
+                data-group="Poland" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Słubice, Poland</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="city-group-card" data-group-name="Luxembourg">
+          <div class="city-group-card-header" data-toggle="collapse" data-target="#group-collapse-14">
+            <div class="card-header-left">
+              <span class="group-flag">🇱🇺</span>
+              <span class="group-name">Luxembourg</span>
+              <span class="group-count-badge">2</span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn" data-group="Luxembourg"
+                title="Fit map to Luxembourg">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+              <svg class="group-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="city-group-card-body" id="group-collapse-14">
+            <ul class="cities-list">
+              <li class="city-entry-item" data-name="luxembourg city, luxembourg" data-lat="49.6118" data-lon="6.1296"
+                data-group="Luxembourg" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Luxembourg City, Luxembourg</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="esch-sur-alzette, luxembourg" data-lat="49.5" data-lon="6.0369"
+                data-group="Luxembourg" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Esch-sur-Alzette, Luxembourg</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="city-group-card" data-group-name="Italy">
+          <div class="city-group-card-header" data-toggle="collapse" data-target="#group-collapse-15">
+            <div class="card-header-left">
+              <span class="group-flag">🇮🇹</span>
+              <span class="group-name">Italy</span>
+              <span class="group-count-badge">3</span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn" data-group="Italy"
+                title="Fit map to Italy">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+              <svg class="group-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="city-group-card-body" id="group-collapse-15">
+            <ul class="cities-list">
+              <li class="city-entry-item" data-name="rome, italy" data-lat="41.9028" data-lon="12.4964"
+                data-group="Italy" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Rome, Italy</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="florence, italy" data-lat="43.7696" data-lon="11.2558"
+                data-group="Italy" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Florence, Italy</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="pisa, italy" data-lat="43.7228" data-lon="10.3966"
+                data-group="Italy" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Pisa, Italy</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="city-group-card" data-group-name="France">
+          <div class="city-group-card-header" data-toggle="collapse" data-target="#group-collapse-16">
+            <div class="card-header-left">
+              <span class="group-flag">🇫🇷</span>
+              <span class="group-name">France</span>
+              <span class="group-count-badge">1</span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn" data-group="France"
+                title="Fit map to France">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+              <svg class="group-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="city-group-card-body" id="group-collapse-16">
+            <ul class="cities-list">
+              <li class="city-entry-item" data-name="lyon, france" data-lat="45.767444" data-lon="4.833543"
+                data-group="France" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Lyon, France</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="city-group-card" data-group-name="Netherlands">
+          <div class="city-group-card-header" data-toggle="collapse" data-target="#group-collapse-17">
+            <div class="card-header-left">
+              <span class="group-flag">🇳🇱</span>
+              <span class="group-name">Netherlands</span>
+              <span class="group-count-badge">4</span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn" data-group="Netherlands"
+                title="Fit map to Netherlands">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+              <svg class="group-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="city-group-card-body" id="group-collapse-17">
+            <ul class="cities-list">
+              <li class="city-entry-item" data-name="amsterdam, netherlands" data-lat="52.3702" data-lon="4.8952"
+                data-group="Netherlands" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Amsterdam, Netherlands</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="enschede, netherlands" data-lat="52.2215" data-lon="6.8937"
+                data-group="Netherlands" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Enschede, Netherlands</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="eindhoven, netherlands" data-lat="51.4416" data-lon="5.4697"
+                data-group="Netherlands" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Eindhoven, Netherlands</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="hengelo, netherlands" data-lat="52.260579" data-lon="6.793619"
+                data-group="Netherlands" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Hengelo, Netherlands</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="city-group-card" data-group-name="Russia">
+          <div class="city-group-card-header" data-toggle="collapse" data-target="#group-collapse-18">
+            <div class="card-header-left">
+              <span class="group-flag">🇷🇺</span>
+              <span class="group-name">Russia</span>
+              <span class="group-count-badge">1</span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn" data-group="Russia"
+                title="Fit map to Russia">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+              <svg class="group-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="city-group-card-body" id="group-collapse-18">
+            <ul class="cities-list">
+              <li class="city-entry-item" data-name="moscow, russia" data-lat="55.7558" data-lon="37.6173"
+                data-group="Russia" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Moscow, Russia</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="city-group-card" data-group-name="Turkey">
+          <div class="city-group-card-header" data-toggle="collapse" data-target="#group-collapse-19">
+            <div class="card-header-left">
+              <span class="group-flag">🇹🇷</span>
+              <span class="group-name">Turkey</span>
+              <span class="group-count-badge">2</span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn" data-group="Turkey"
+                title="Fit map to Turkey">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+              <svg class="group-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="city-group-card-body" id="group-collapse-19">
+            <ul class="cities-list">
+              <li class="city-entry-item" data-name="istanbul, turkey" data-lat="41.036" data-lon="28.985"
+                data-group="Turkey" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Istanbul, Turkey</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="antalya, turkey" data-lat="36.896" data-lon="30.713"
+                data-group="Turkey" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Antalya, Turkey</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="city-group-card" data-group-name="China">
+          <div class="city-group-card-header" data-toggle="collapse" data-target="#group-collapse-20">
+            <div class="card-header-left">
+              <span class="group-flag">🇨🇳</span>
+              <span class="group-name">China</span>
+              <span class="group-count-badge">7</span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn" data-group="China"
+                title="Fit map to China">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+              <svg class="group-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="city-group-card-body" id="group-collapse-20">
+            <ul class="cities-list">
+              <li class="city-entry-item" data-name="beijing, china" data-lat="39.9042" data-lon="116.4074"
+                data-group="China" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Beijing, China</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="shenzhen, guangdong, china" data-lat="22.5431" data-lon="114.0579"
+                data-group="China" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Shenzhen, Guangdong, China</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="haikou, hainan, china" data-lat="20.044" data-lon="110.3492"
+                data-group="China" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Haikou, Hainan, China</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="qionghai, hainan, china" data-lat="19.2589" data-lon="110.4665"
+                data-group="China" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Qionghai, Hainan, China</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="laocheng, chengmai, hainan, china" data-lat="19.9339" data-lon="110.1132"
+                data-group="China" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Laocheng, Chengmai, Hainan, China</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="danzhou, hainan, china" data-lat="19.5209" data-lon="109.5768"
+                data-group="China" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Danzhou, Hainan, China</span>
+                </div>
+              </li>
+              <li class="city-entry-item" data-name="yangpu, danzhou, hainan, china" data-lat="19.760964" data-lon="109.205346"
+                data-group="China" data-subgroup="">
+                <div class="city-entry-btn">
+                  <svg class="city-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="city-entry-label">Yangpu, Danzhou, Hainan, China</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <main class="cities-map-viewport">
+      
+      <div class="cities-map-controls-bar">
+        
+        <div class="map-control-group">
+          <label for="countryJumpSelect" class="sr-only">Jump to Country</label>
+          <select id="countryJumpSelect" class="map-select-input" aria-label="Jump to Country">
+            <option value="all">🌍 Global View (All Countries)</option>
+            <option value="Brasil">🇧🇷 Brasil</option>
+            <option value="Argentina">🇦🇷 Argentina</option>
+            <option value="Paraguay">🇵🇾 Paraguay</option>
+            <option value="Panama">🇵🇦 Panama</option>
+            <option value="USA">🇺🇸 USA</option>
+            <option value="Portugal">🇵🇹 Portugal</option>
+            <option value="Spain">🇪🇸 Spain</option>
+            <option value="United Kingdom">🇬🇧 United Kingdom</option>
+            <option value="Ireland">🇮🇪 Ireland</option>
+            <option value="Scotland">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</option>
+            <option value="Germany">🇩🇪 Germany</option>
+            <option value="Austria">🇦🇹 Austria</option>
+            <option value="Czechia">🇨🇿 Czechia</option>
+            <option value="Poland">🇵🇱 Poland</option>
+            <option value="Luxembourg">🇱🇺 Luxembourg</option>
+            <option value="Italy">🇮🇹 Italy</option>
+            <option value="France">🇫🇷 France</option>
+            <option value="Netherlands">🇳🇱 Netherlands</option>
+            <option value="Russia">🇷🇺 Russia</option>
+            <option value="Turkey">🇹🇷 Turkey</option>
+            <option value="China">🇨🇳 China</option>
+          </select>
+        </div>
+
+        
+        <div class="map-control-group">
+          <label for="basemapSelect" class="sr-only">Basemap Style</label>
+          <select id="basemapSelect" class="map-select-input" aria-label="Select Basemap">
+            <option value="osm">🗺️ OpenStreetMap</option>
+            <option value="esri-light">☀️ Minimal Light (Esri)</option>
+            <option value="esri-dark">🌙 Dark Gray (Esri)</option>
+            <option value="satellite">🛰️ Satellite (Esri)</option>
+            <option value="topo">⛰️ Topographic (OpenTopoMap)</option>
+          </select>
+        </div>
+
+        
+        <button type="button" class="map-action-btn" id="toggleLabelsBtn" title="Toggle permanent city label pins">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 7V4h16v3M9 20h6M12 4v16" />
+          </svg>
+          <span class="btn-text">Labels</span>
+        </button>
+
+        
+        <button type="button" class="map-action-btn" id="resetMapBoundsBtn" title="Reset map to show all cities">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="1 4 1 10 7 10"></polyline>
+            <polyline points="23 20 23 14 17 14"></polyline>
+            <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
+          </svg>
+          <span class="btn-text">Reset</span>
+        </button>
+      </div>
+
+      
+      <div id="citiesMap" class="cities-leaflet-container" tabindex="0"
+        aria-label="Interactive map showing visited cities"></div>
+
+      
+      <div class="cities-map-legend-overlay">
+        <div class="legend-indicator">
+          <span class="legend-point-dot"></span>
+          <span><strong>215</strong> Visited Cities</span>
+        </div>
+        <div class="legend-hint">
+          Click any point or list item to zoom in. Zero API keys required.
+        </div>
+      </div>
+    </main>

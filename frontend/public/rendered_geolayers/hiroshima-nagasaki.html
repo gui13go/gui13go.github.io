@@ -1,0 +1,510 @@
+<main class="main">
+<link rel="stylesheet" href="/lib/leaflet/leaflet.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<div class="cities-page-container hiroshima-nagasaki-container">
+  
+  <div class="gallery-breadcrumbs">
+    <a href="http://localhost:1313/">Home</a> <span>/</span> <a href="/geolayers/">GeoLayers</a> <span>/</span> <span>Hiroshima-Nagasaki</span>
+  </div>
+
+  
+  <header class="cities-header">
+    <div class="cities-header-content">
+      <div class="cities-badge-pill">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+        <span>World War II &bull; Manhattan Project &bull; August 1945</span>
+      </div>
+      <h1 class="cities-title">Hiroshima-Nagasaki</h1>
+      <p class="cities-subtitle">
+        An interactive geospatial exploration of the atomic bombings of Hiroshima and Nagasaki in August 1945. Reconstructs the hypocenters, comparative weapon yields, and concentric damage blast radii across the Japanese urban landscape.
+      </p>
+    </div>
+
+    
+    <div class="cities-stats-bar">
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" id="statsTotalBombs">2</span>
+        <span class="cities-stat-label">Atomic Weapons</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number">36 KT</span>
+        <span class="cities-stat-label">Combined Yield (15 + 21)</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" style="color: #ef4444;">~214,000</span>
+        <span class="cities-stat-label">Fatalities by End of 1945</span>
+      </div>
+      <div class="cities-stat-card">
+        <span class="cities-stat-number" style="color: #f97316;">3 Tiers</span>
+        <span class="cities-stat-label">Concentric Blast Zones</span>
+      </div>
+      <div class="cities-stat-card active-city-card" id="activeBombCard" style="display:none;">
+        <span class="cities-stat-number active-city-name" id="activeBombName">-</span>
+        <span class="cities-stat-label" id="activeBombStatus">Selected Location</span>
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="cities-layout-stacked">
+
+    
+    <section class="cities-groups-row" id="nukesExplorerSection">
+      <div class="groups-row-header">
+        <div class="groups-header-info">
+          <div class="groups-title-wrap">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <h2 class="groups-title">Target Hypocenters &amp; Peace Memorials</h2>
+            <span class="groups-total-pill">4 Locations &bull; Hiroshima &amp; Nagasaki, Japan</span>
+          </div>
+
+          
+          <div class="cities-search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="bombSearchInput" placeholder="Filter by city, weapon, or landmark..." autocomplete="off" aria-label="Filter targets">
+            <button type="button" id="clearBombSearch" class="clear-search-btn" style="display:none;" aria-label="Clear filter">&times;</button>
+          </div>
+        </div>
+
+        <div class="groups-header-actions">
+          <button type="button" class="groups-btn-action" id="toggleBriefingBtn" title="Toggle Historical Briefing narrative">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span id="toggleBriefingText">Historical Briefing</span>
+          </button>
+          <button type="button" class="groups-btn-action toggle-cards-btn" id="toggleCardsBtn" title="Show or hide target cards">
+            <svg id="toggleCardsIcon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+            <span id="toggleCardsText">Minimize Cards</span>
+          </button>
+        </div>
+      </div>
+
+      
+      <div class="cities-pill-carousel" id="statusPills">
+        <button type="button" class="country-pill active" data-filter="all">All Locations (4)</button>
+        <button type="button" class="country-pill" data-filter="hiroshima">
+          <span style="color:#ef4444;">●</span> Hiroshima (Little Boy)
+        </button>
+        <button type="button" class="country-pill" data-filter="nagasaki">
+          <span style="color:#f97316;">●</span> Nagasaki (Fat Man)
+        </button>
+        <button type="button" class="country-pill" data-filter="memorial">
+          <span style="color:#06b6d4;">●</span> Peace Memorials (2)
+        </button>
+      </div>
+
+      
+      <div class="nukes-briefing-drawer show" id="briefingDrawer">
+        <div class="nukes-briefing-inner">
+          <div class="briefing-header">
+            <span class="briefing-tag">OPERATION CENTERBOARD • MANHATTAN PROJECT</span>
+            <h3 class="briefing-title">The Atomic Bombings of Japan (August 1945)</h3>
+          </div>
+          <div class="briefing-content-grid">
+            <div class="briefing-text-col">
+              <p>In August 1945, during the closing days of World War II, the United States dropped two atomic bombs over the Japanese cities of <strong>Hiroshima</strong> and <strong>Nagasaki</strong>. These operations, developed under the secretive <strong>Manhattan Project</strong>, marked the first and only instances of nuclear weapons used in warfare.</p>
+              <p>On August 6 at 08:15 JST, the B-29 bomber <em>Enola Gay</em> released <strong>Little Boy</strong> over Hiroshima's flat river delta, killing an estimated 140,000 residents by December 1945. Three days later, on August 9 at 11:02 JST, the B-29 <em>Bockscar</em> released <strong>Fat Man</strong> over Nagasaki's Urakami Valley, killing another 74,000. On August 15, Emperor Hirohito announced Japan's unconditional surrender, formally ending the Second World War.</p>
+            </div>
+            <div class="briefing-fates-col">
+              <div class="fate-mini-card">
+                <span class="fate-dot" style="background: #ef4444;"></span>
+                <div>
+                  <strong>Hiroshima: The Delta Firestorm</strong>: Because Hiroshima was situated on flat terrain, the 15-kiloton detonation initiated a massive thermal firestorm that consumed 4.4 square miles (11 km²) within hours.
+                </div>
+              </div>
+              <div class="fate-mini-card">
+                <span class="fate-dot" style="background: #f97316;"></span>
+                <div>
+                  <strong>Nagasaki: The Valley Confinement</strong>: The 21-kiloton Fat Man exploded with greater energy than Little Boy, but the surrounding hills of the Urakami basin contained the lateral shockwave, sparing downtown Nagasaki.
+                </div>
+              </div>
+              <div class="fate-mini-card">
+                <span class="fate-dot" style="background: #eab308;"></span>
+                <div>
+                  <strong>Concentric Blast Damage Tiers</strong>: Zone A (0–1.2 km) produced total annihilation; Zone B (1–2.2 km) created fatal burns and firestorms; Zone C (2–3.2 km) inflicted widespread thermal burns and acute radiation exposure.
+                </div>
+              </div>
+              <div class="fate-mini-card">
+                <span class="fate-dot" style="background: #06b6d4;"></span>
+                <div>
+                  <strong>The Dawn of the Atomic Age</strong>: The bombings precipitated the immediate conclusion of WWII and inaugurated the Cold War nuclear arms race, fundamentally altering international geopolitics.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="cities-groups-cards-grid nukes-cards-grid" id="bombCardsGrid">
+        
+        <div class="city-group-card nuke-bomb-card" data-bomb-id="hiroshima-little-boy" data-type="target" data-city="hiroshima" data-name="hiroshima (little boy)" data-lat="34.394594" data-lon="132.454797">
+          <div class="city-group-card-header">
+            <div class="card-header-left">
+              <span class="bomb-badge-dot" style="background-color: #ef4444; box-shadow: 0 0 10px #ef4444;"></span>
+              <span class="group-name">Hiroshima (Little Boy)</span>
+              <span class="nuke-status-badge" style="border-color: #ef444466; color: #ef4444; background: #ef444414;">
+                15 Kilotons
+              </span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn nuke-fly-btn" data-lat="34.394594" data-lon="132.454797" title="Fly camera to Hiroshima (Little Boy)">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="city-group-card-body show nuke-card-body">
+            <div class="nuke-location-title">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Shima Hospital (near Aioi Bridge)</span>
+              <span class="nuke-elevation">(580 m (1,900 ft) airburst)</span>
+            </div>
+
+            <p class="nuke-card-desc">First nuclear weapon deployed in armed conflict. Detonated 580 meters directly above Shima Hospital, triggering a catastrophic blast wave and massive firestorm that engulfed 11 km² of the city.</p>
+            <p class="nuke-tech-detail">Fired a hollow subcritical uranium-235 projectile into a target cylinder. Only approximately 1.4% of the 64 kg payload underwent nuclear fission. Ground temperature reached 3,000°C–4,000°C within milliseconds.</p>
+
+            
+            <div class="blast-zones-summary-grid">
+              <div class="blast-zone-mini-item" style="border-left: 3px solid #ef4444;">
+                <div class="zone-mini-header" style="color: #ef4444;">
+                  <strong>Zone A (0–1.0 km)</strong>
+                </div>
+                <div class="zone-mini-effect">100% of structures demolished or incinerated; instant vaporization at epicenter.</div>
+                <div class="zone-mini-casualties">90–100% fatality rate; ground temp 3,000°C&#43;</div>
+              </div>
+              <div class="blast-zone-mini-item" style="border-left: 3px solid #f97316;">
+                <div class="zone-mini-header" style="color: #f97316;">
+                  <strong>Zone B (1.0–2.0 km)</strong>
+                </div>
+                <div class="zone-mini-effect">Severe structural destruction; thousands of fires merged into an uncontrollable firestorm.</div>
+                <div class="zone-mini-casualties">Approx. 50% mortality rate; severe thermal burns</div>
+              </div>
+              <div class="blast-zone-mini-item" style="border-left: 3px solid #eab308;">
+                <div class="zone-mini-header" style="color: #eab308;">
+                  <strong>Zone C (2.0–3.0 km)</strong>
+                </div>
+                <div class="zone-mini-effect">Heavy flying glass hazards, residential roofs collapsed, intense flash heat.</div>
+                <div class="zone-mini-casualties">Widespread third-degree burns, blindness, acute radiation syndrome</div>
+              </div>
+            </div>
+
+            <div class="nuke-specs-row">
+              <div class="nuke-spec">
+                <span class="spec-dim">Delivery:</span>
+                <span class="spec-val">B-29 Superfortress Enola Gay</span>
+              </div>
+              <div class="nuke-spec">
+                <span class="spec-dim">Date &amp; Time:</span>
+                <span class="spec-val">August 6, 1945 &bull; 08:15 JST</span>
+              </div>
+            </div>
+
+            <button type="button" class="nuke-card-action-btn" data-lat="34.394594" data-lon="132.454797" data-id="hiroshima-little-boy">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Focus on Map</span>
+            </button>
+          </div>
+        </div>
+        <div class="city-group-card nuke-bomb-card" data-bomb-id="nagasaki-fat-man" data-type="target" data-city="nagasaki" data-name="nagasaki (fat man)" data-lat="32.773611" data-lon="129.863333">
+          <div class="city-group-card-header">
+            <div class="card-header-left">
+              <span class="bomb-badge-dot" style="background-color: #f97316; box-shadow: 0 0 10px #f97316;"></span>
+              <span class="group-name">Nagasaki (Fat Man)</span>
+              <span class="nuke-status-badge" style="border-color: #f9731666; color: #f97316; background: #f9731614;">
+                21 Kilotons
+              </span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn nuke-fly-btn" data-lat="32.773611" data-lon="129.863333" title="Fly camera to Nagasaki (Fat Man)">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="city-group-card-body show nuke-card-body">
+            <div class="nuke-location-title">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Matsuyama-machi (Urakami Basin)</span>
+              <span class="nuke-elevation">(503 m (1,650 ft) airburst)</span>
+            </div>
+
+            <p class="nuke-card-desc">Second wartime atomic detonation. Diverted from secondary target Kokura due to smoke cover, the plutonium weapon exploded over the Urakami industrial valley, devastating factories and residential districts.</p>
+            <p class="nuke-tech-detail">Utilized a 6.2 kg delta-phase plutonium core surrounded by high-explosive lenses generating symmetrical inward shockwaves. The steep surrounding Urakami mountains channeled the shockwave north-south while partially shielding the historic harbor.</p>
+
+            
+            <div class="blast-zones-summary-grid">
+              <div class="blast-zone-mini-item" style="border-left: 3px solid #ef4444;">
+                <div class="zone-mini-header" style="color: #ef4444;">
+                  <strong>Zone A (0–1.2 km)</strong>
+                </div>
+                <div class="zone-mini-effect">Complete obliteration; Urakami Cathedral and Mitsubishi arms plants leveled.</div>
+                <div class="zone-mini-casualties">100% fatalities at ground zero; catastrophic fireball</div>
+              </div>
+              <div class="blast-zone-mini-item" style="border-left: 3px solid #f97316;">
+                <div class="zone-mini-header" style="color: #f97316;">
+                  <strong>Zone B (1.2–2.2 km)</strong>
+                </div>
+                <div class="zone-mini-effect">Reinforced steel framing buckled, timber residences collapsed and burnt.</div>
+                <div class="zone-mini-casualties">High mortality; fatal flash burns and blast trauma</div>
+              </div>
+              <div class="blast-zone-mini-item" style="border-left: 3px solid #eab308;">
+                <div class="zone-mini-header" style="color: #eab308;">
+                  <strong>Zone C (2.2–3.2 km)</strong>
+                </div>
+                <div class="zone-mini-effect">Shattered windows and plaster damage across hillside terraces.</div>
+                <div class="zone-mini-casualties">Severe secondary burns, acute ionizing radiation sickness</div>
+              </div>
+            </div>
+
+            <div class="nuke-specs-row">
+              <div class="nuke-spec">
+                <span class="spec-dim">Delivery:</span>
+                <span class="spec-val">B-29 Superfortress Bockscar</span>
+              </div>
+              <div class="nuke-spec">
+                <span class="spec-dim">Date &amp; Time:</span>
+                <span class="spec-val">August 9, 1945 &bull; 11:02 JST</span>
+              </div>
+            </div>
+
+            <button type="button" class="nuke-card-action-btn" data-lat="32.773611" data-lon="129.863333" data-id="nagasaki-fat-man">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Focus on Map</span>
+            </button>
+          </div>
+        </div>
+
+        
+        <div class="city-group-card nuke-bomb-card" data-bomb-id="hiroshima-dome" data-type="memorial" data-city="hiroshima" data-name="hiroshima peace memorial (genbaku dome)" data-lat="34.3928" data-lon="132.4526">
+          <div class="city-group-card-header">
+            <div class="card-header-left">
+              <span class="bomb-badge-dot" style="background-color: #06b6d4; box-shadow: 0 0 10px #06b6d4;"></span>
+              <span class="group-name">Hiroshima Peace Memorial (Genbaku Dome)</span>
+              <span class="nuke-status-badge" style="border-color: #06b6d466; color: #06b6d4; background: #06b6d414;">
+                UNESCO World Heritage Site
+              </span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn nuke-fly-btn" data-lat="34.3928" data-lon="132.4526" title="Fly camera to Hiroshima Peace Memorial (Genbaku Dome)">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="city-group-card-body show nuke-card-body">
+            <div class="nuke-location-title">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Hiroshima, Japan</span>
+              <span class="nuke-elevation">(6 m above sea level)</span>
+            </div>
+
+            <p class="nuke-card-desc">Located only 160 meters from the hypocenter, the former Prefectural Industrial Promotion Hall was one of the few structures whose vertical brick skeleton withstood the downward blast. Preserved as a monument to international peace.</p>
+
+            <div class="nuke-specs-row" style="margin-top: auto;">
+              <div class="nuke-spec">
+                <span class="spec-dim">Coordinates:</span>
+                <span class="spec-val">34.3928&deg; N, 132.4526&deg; E</span>
+              </div>
+              <div class="nuke-spec">
+                <span class="spec-dim">Designation:</span>
+                <span class="spec-val">UNESCO World Heritage Site</span>
+              </div>
+            </div>
+
+            <button type="button" class="nuke-card-action-btn" data-lat="34.3928" data-lon="132.4526" data-id="hiroshima-dome">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Focus on Map</span>
+            </button>
+          </div>
+        </div>
+        <div class="city-group-card nuke-bomb-card" data-bomb-id="nagasaki-peace-park" data-type="memorial" data-city="nagasaki" data-name="nagasaki ground zero cenotaph &amp; peace park" data-lat="32.7738" data-lon="129.8631">
+          <div class="city-group-card-header">
+            <div class="card-header-left">
+              <span class="bomb-badge-dot" style="background-color: #06b6d4; box-shadow: 0 0 10px #06b6d4;"></span>
+              <span class="group-name">Nagasaki Ground Zero Cenotaph &amp; Peace Park</span>
+              <span class="nuke-status-badge" style="border-color: #06b6d466; color: #06b6d4; background: #06b6d414;">
+                National Memorial Park
+              </span>
+            </div>
+            <div class="card-header-right">
+              <button type="button" class="group-zoom-btn nuke-fly-btn" data-lat="32.7738" data-lon="129.8631" title="Fly camera to Nagasaki Ground Zero Cenotaph &amp; Peace Park">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="city-group-card-body show nuke-card-body">
+            <div class="nuke-location-title">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Nagasaki, Japan</span>
+              <span class="nuke-elevation">(14 m above sea level)</span>
+            </div>
+
+            <p class="nuke-card-desc">A quiet park marking the exact hypocenter where the plutonium bomb burst overhead. Features the black granite cenotaph, the iconic 10-meter Peace Statue, and remnants of the destroyed Urakami Cathedral.</p>
+
+            <div class="nuke-specs-row" style="margin-top: auto;">
+              <div class="nuke-spec">
+                <span class="spec-dim">Coordinates:</span>
+                <span class="spec-val">32.7738&deg; N, 129.8631&deg; E</span>
+              </div>
+              <div class="nuke-spec">
+                <span class="spec-dim">Designation:</span>
+                <span class="spec-val">National Memorial Park</span>
+              </div>
+            </div>
+
+            <button type="button" class="nuke-card-action-btn" data-lat="32.7738" data-lon="129.8631" data-id="nagasaki-peace-park">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Focus on Map</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <main class="cities-map-viewport nukes-map-viewport">
+      
+      <div class="cities-map-controls-bar">
+        
+        <div class="map-control-group">
+          <label for="bombJumpSelect" class="sr-only">Jump to Target or Memorial</label>
+          <select id="bombJumpSelect" class="map-select-input" aria-label="Jump to Target or Memorial">
+            <option value="all">🎯 Japan Overview (Both Targets)</option>
+            <optgroup label="Bomb Hypocenters">
+              <option value="hiroshima-little-boy" data-lat="34.394594" data-lon="132.454797">
+                🔴 Hiroshima &bull; Little Boy (15 Kilotons)
+              </option>
+              <option value="nagasaki-fat-man" data-lat="32.773611" data-lon="129.863333">
+                🔴 Nagasaki &bull; Fat Man (21 Kilotons)
+              </option>
+            </optgroup>
+            <optgroup label="Peace Memorials">
+              <option value="hiroshima-dome" data-lat="34.3928" data-lon="132.4526">
+                🕊️ Hiroshima Peace Memorial (Genbaku Dome)
+              </option>
+              <option value="nagasaki-peace-park" data-lat="32.7738" data-lon="129.8631">
+                🕊️ Nagasaki Ground Zero Cenotaph &amp; Peace Park
+              </option>
+            </optgroup>
+          </select>
+        </div>
+
+        
+        <div class="map-control-group">
+          <label for="basemapSelect" class="sr-only">Basemap Style</label>
+          <select id="basemapSelect" class="map-select-input" aria-label="Select Basemap">
+            <option value="satellite" selected>🛰️ Satellite (Esri)</option>
+            <option value="osm">🗺️ OpenStreetMap</option>
+            <option value="esri-dark">🌙 Dark Gray (Esri)</option>
+            <option value="carto-dark">🌌 CartoDB Dark</option>
+            <option value="esri-light">☀️ Minimal Light (Esri)</option>
+            <option value="topo">⛰️ Topographic (OpenTopoMap)</option>
+          </select>
+        </div>
+
+        
+        <button type="button" class="map-action-btn active" id="toggleZonesBtn"
+          title="Toggle concentric blast radius circles (Zone A, B, C)">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="9"></circle>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+          <span class="btn-text">Blast Zones</span>
+        </button>
+
+        
+        <button type="button" class="map-action-btn active" id="toggleLabelsBtn" title="Toggle location labels">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 7V4h16v3M9 20h6M12 4v16" />
+          </svg>
+          <span class="btn-text">Labels</span>
+        </button>
+
+        
+        <button type="button" class="map-action-btn" id="resetMapBoundsBtn" title="Reset map to show both Hiroshima and Nagasaki">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="1 4 1 10 7 10"></polyline>
+            <polyline points="23 20 23 14 17 14"></polyline>
+            <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
+          </svg>
+          <span class="btn-text">Recenter</span>
+        </button>
+      </div>
+
+      
+      <div id="hiroshimaNagasakiMap" class="cities-leaflet-container"
+        style="height: 650px; min-height: 520px; width: 100%; position: relative; background: #0f172a;" tabindex="0"
+        aria-label="Interactive map showing atomic bomb blast zones for Hiroshima and Nagasaki"></div>
+
+      
+      <div class="cities-map-legend-overlay nukes-legend-box">
+        <div class="legend-indicator">
+          <span class="legend-point-dot" style="background:#ef4444;"></span>
+          <span><strong>Zone A (0–1.2 km)</strong>: Total destruction &bull; 90–100% fatalities</span>
+        </div>
+        <div class="legend-indicator">
+          <span class="legend-point-dot" style="background:#f97316;"></span>
+          <span><strong>Zone B (1.0–2.2 km)</strong>: Structural collapse &bull; Severe firestorms</span>
+        </div>
+        <div class="legend-indicator">
+          <span class="legend-point-dot" style="background:#eab308;"></span>
+          <span><strong>Zone C (2.0–3.2 km)</strong>: Thermal flash burns &bull; Radiation sickness</span>
+        </div>
+        <div class="legend-indicator">
+          <span class="legend-point-dot" style="background:#06b6d4;"></span>
+          <span><strong>Peace Landmarks</strong>: Genbaku Dome &bull; Peace Cenotaph</span>
+        </div>
+        <div class="legend-hint">
+          Click any hypocenter marker or card above to fly camera &bull; Concentric blast rings rendered.
+        </div>
+      </div>
+    </main>

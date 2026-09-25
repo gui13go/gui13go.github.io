@@ -1,0 +1,35 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: local-ai-gateway
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      # Connects to host Ollama instance
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+      - DEFAULT_MODEL=llama3.2:latest
+      - ALLOWED_ORIGINS=https://gui13go.github.io,http://localhost:5173,http://127.0.0.1:5173
+    extra_hosts:
+      # Allows backend container to communicate with Ollama running on host OS
+      - "host.docker.internal:host-gateway"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared-tunnel
+    restart: unless-stopped
+    command: tunnel run
+    environment:
+      # Cloudflare Tunnel token configured in your Cloudflare Zero Trust Dashboard
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN}
+    depends_on:
+      backend:
+        condition: service_healthy

@@ -1,0 +1,601 @@
+<main class="main">
+<div class="publications-page-container">
+  <header class="gallery-header">
+    <div class="gallery-breadcrumbs">
+      <a href="http://localhost:1313/">Home</a> <span>/</span> <span>Publications</span>
+    </div>
+    <h1 class="gallery-title">Publications</h1>
+    <p class="gallery-subtitle">A rigorous archive of peer-reviewed research, academic theses, and technical papers dissecting migration dynamics, economic complexity, and spatial statistics.</p>
+  </header>
+
+  
+  <div class="publications-toolbar">
+    <div class="gallery-search-box publications-search-box">
+      <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="pubSearchInput" placeholder="Search publications by title, abstract, or keywords..." autocomplete="off" aria-label="Search publications">
+      <button type="button" id="pubClearSearch" class="clear-search-btn" style="display:none;" aria-label="Clear search">&times;</button>
+    </div>
+
+    <div class="gallery-count-badge publications-count-badge">
+      Showing <span id="pubVisibleCount">6</span> of 6 publications
+    </div>
+  </div>
+
+  
+  <div class="publications-tag-filter" id="pubTagFilter" role="group" aria-label="Filter by category">
+    <button type="button" class="pub-filter-btn active" data-tag="all">All</button>
+    <button type="button" class="pub-filter-btn" data-tag="thesis">Thesis</button>
+    <button type="button" class="pub-filter-btn" data-tag="research">Research</button>
+    <button type="button" class="pub-filter-btn" data-tag="data science">Data Science</button>
+    <button type="button" class="pub-filter-btn" data-tag="economy">Economy / Economics</button>
+    <button type="button" class="pub-filter-btn" data-tag="complexity">Complexity</button>
+    <button type="button" class="pub-filter-btn" data-tag="migration">Migration</button>
+  </div>
+
+  
+  <div class="publications-grid" id="publicationsGrid">
+    <article class="publication-card"
+             data-id="masters-thesis"
+             data-title="masters thesis: migration dynamics in brazil"
+             data-excerpt="a comprehensive decoding of human movement. my master&#39;s thesis investigates the complex socioeconomic drivers of migration in brazil, utilizing advanced spatial datasets and economic indicators."
+             data-availability="available"
+             data-path="https://run.unl.pt/handle/10362/180815"
+             data-tags="thesis migration economics brazil data science socioeconomics demographics ">
+      
+      <div class="pub-card-image-wrap">
+        <img src="/images/migSearchEngine.webp" alt="Masters Thesis: Migration Dynamics in Brazil thumbnail" loading="lazy" class="pub-card-img" onerror="this.onerror=null;this.classList.add('img-fallback');">
+        <div class="pub-card-overlay-indicator">
+          <span class="pub-open-icon" title="Open publication">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="pub-card-body">
+        <h2 class="pub-card-title">Masters Thesis: Migration Dynamics in Brazil</h2>
+        <p class="pub-card-excerpt">A comprehensive decoding of human movement. My Master&#39;s thesis investigates the complex socioeconomic drivers of migration in Brazil, utilizing advanced spatial datasets and economic indicators.</p>
+
+        <div class="pub-card-footer">
+          
+          <div class="pub-status-badge pub-status-available">
+            <span class="pub-status-dot-wrap">
+              <span class="pub-status-ping"></span>
+              <span class="pub-status-dot"></span>
+            </span>
+            <span class="pub-status-label">Available</span>
+          </div>
+
+          
+          <div class="pub-tags-list">
+            <span class="pub-tag-chip" style="--tag-color: #F59E0B;">
+              Thesis
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #EA580C;">
+              Migration
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #3B82F6;">
+              Economics
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #059669;">
+              Brazil
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #10B981;">
+              Data Science
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #D97706;">
+              Socioeconomics
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #EA580C;">
+              Demographics
+            </span>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="publication-card"
+             data-id="knowledge-spillovers-across-micro-regions-of-brazil"
+             data-title="knowledge spillovers across micro-regions of brazil"
+             data-excerpt="probing the spatiality of innovation. this research utilizes geographically weighted regression (gwr) to map the impact of education and economic complexity on regional growth."
+             data-availability="available"
+             data-path="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4549754"
+             data-tags="research economy brazil data science gwr knowledge spillovers complexity ">
+      
+      <div class="pub-card-image-wrap">
+        <img src="/images/peopleReading.webp" alt="Knowledge Spillovers Across Micro-Regions of Brazil thumbnail" loading="lazy" class="pub-card-img" onerror="this.onerror=null;this.classList.add('img-fallback');">
+        <div class="pub-card-overlay-indicator">
+          <span class="pub-open-icon" title="Open publication">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="pub-card-body">
+        <h2 class="pub-card-title">Knowledge Spillovers Across Micro-Regions of Brazil</h2>
+        <p class="pub-card-excerpt">Probing the spatiality of innovation. This research utilizes Geographically Weighted Regression (GWR) to map the impact of education and economic complexity on regional growth.</p>
+
+        <div class="pub-card-footer">
+          
+          <div class="pub-status-badge pub-status-available">
+            <span class="pub-status-dot-wrap">
+              <span class="pub-status-ping"></span>
+              <span class="pub-status-dot"></span>
+            </span>
+            <span class="pub-status-label">Available</span>
+          </div>
+
+          
+          <div class="pub-tags-list">
+            <span class="pub-tag-chip" style="--tag-color: #D97706;">
+              Research
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #D97706;">
+              Economy
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #059669;">
+              Brazil
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #10B981;">
+              Data Science
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #B45309;">
+              GWR
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #8B5CF6;">
+              Knowledge Spillovers
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #7C3AED;">
+              Complexity
+            </span>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="publication-card"
+             data-id="export-complexity-in-brazil"
+             data-title="export complexity, industrial complexity and regional economic growth in brazil"
+             data-excerpt="drivers of regional growth. a comparative analysis of economic complexity metrics (eci) derived from export and employment data to uncover hidden patterns in the brazilian industrial landscape."
+             data-availability="available"
+             data-path="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0313945"
+             data-tags="economy complexity brazil data analysis eci trade employment ">
+      
+      <div class="pub-card-image-wrap">
+        <img src="/images/boatContainer3.webp" alt="Export complexity, industrial complexity and regional economic growth in Brazil thumbnail" loading="lazy" class="pub-card-img" onerror="this.onerror=null;this.classList.add('img-fallback');">
+        <div class="pub-card-overlay-indicator">
+          <span class="pub-open-icon" title="Open publication">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="pub-card-body">
+        <h2 class="pub-card-title">Export complexity, industrial complexity and regional economic growth in Brazil</h2>
+        <p class="pub-card-excerpt">Drivers of regional growth. A comparative analysis of economic complexity metrics (ECI) derived from export and employment data to uncover hidden patterns in the Brazilian industrial landscape.</p>
+
+        <div class="pub-card-footer">
+          
+          <div class="pub-status-badge pub-status-available">
+            <span class="pub-status-dot-wrap">
+              <span class="pub-status-ping"></span>
+              <span class="pub-status-dot"></span>
+            </span>
+            <span class="pub-status-label">Available</span>
+          </div>
+
+          
+          <div class="pub-tags-list">
+            <span class="pub-tag-chip" style="--tag-color: #D97706;">
+              Economy
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #7C3AED;">
+              Complexity
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #059669;">
+              Brazil
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #0EA5E9;">
+              Data Analysis
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #3B82F6;">
+              ECI
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #D97706;">
+              Trade
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #10B981;">
+              Employment
+            </span>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="publication-card"
+             data-id="bachelor-thesis"
+             data-title="bachelor thesis: human capital, knowledge spillovers, and economic complexity"
+             data-excerpt="foundations of complexity. my bachelor&#39;s thesis explores the interplay between human capital and knowledge diffusion as primary catalysts for regional economic transformation."
+             data-availability="available"
+             data-path="https://repositorio.ufsc.br/handle/123456789/241843"
+             data-tags="thesis economy brazil human capital knowledge spillovers complexity regional growth ">
+      
+      <div class="pub-card-image-wrap">
+        <img src="/images/mindLetter.webp" alt="Bachelor Thesis: Human Capital, Knowledge Spillovers, and Economic Complexity thumbnail" loading="lazy" class="pub-card-img" onerror="this.onerror=null;this.classList.add('img-fallback');">
+        <div class="pub-card-overlay-indicator">
+          <span class="pub-open-icon" title="Open publication">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="pub-card-body">
+        <h2 class="pub-card-title">Bachelor Thesis: Human Capital, Knowledge Spillovers, and Economic Complexity</h2>
+        <p class="pub-card-excerpt">Foundations of complexity. My Bachelor&#39;s thesis explores the interplay between human capital and knowledge diffusion as primary catalysts for regional economic transformation.</p>
+
+        <div class="pub-card-footer">
+          
+          <div class="pub-status-badge pub-status-available">
+            <span class="pub-status-dot-wrap">
+              <span class="pub-status-ping"></span>
+              <span class="pub-status-dot"></span>
+            </span>
+            <span class="pub-status-label">Available</span>
+          </div>
+
+          
+          <div class="pub-tags-list">
+            <span class="pub-tag-chip" style="--tag-color: #F59E0B;">
+              Thesis
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #D97706;">
+              Economy
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #059669;">
+              Brazil
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #F59E0B;">
+              Human Capital
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #8B5CF6;">
+              Knowledge Spillovers
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #7C3AED;">
+              Complexity
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #10B981;">
+              Regional Growth
+            </span>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="publication-card is-coming-soon"
+             data-id="benchmarking-spatial-statistics"
+             data-title="benchmarking spatial statistics"
+             data-excerpt="pushing the limits of spatial computation. a rigorous technical benchmark of spatial statistics algorithms across diverse hardware architectures, focusing on performance and code optimization."
+             data-availability="coming_soon"
+             data-path="https://www.guigo.dev.br"
+             data-tags="data science performance spatial statistics benchmarking hardware optimization moran&#39;s i ">
+      
+      <div class="pub-card-image-wrap">
+        <img src="/images/spatialStatistic2.webp" alt="Benchmarking Spatial Statistics thumbnail" loading="lazy" class="pub-card-img" onerror="this.onerror=null;this.classList.add('img-fallback');">
+        <div class="pub-card-overlay-indicator">
+          <span class="pub-open-icon coming-soon-icon" title="Under development">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="pub-card-body">
+        <h2 class="pub-card-title">Benchmarking Spatial Statistics</h2>
+        <p class="pub-card-excerpt">Pushing the limits of spatial computation. A rigorous technical benchmark of spatial statistics algorithms across diverse hardware architectures, focusing on performance and code optimization.</p>
+
+        <div class="pub-card-footer">
+          
+          <div class="pub-status-badge pub-status-coming_soon">
+            <span class="pub-status-dot-wrap">
+              <span class="pub-status-ping"></span>
+              <span class="pub-status-dot"></span>
+            </span>
+            <span class="pub-status-label">Coming Soon</span>
+          </div>
+
+          
+          <div class="pub-tags-list">
+            <span class="pub-tag-chip" style="--tag-color: #10B981;">
+              Data Science
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #EAB308;">
+              Performance
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #0EA5E9;">
+              Spatial Statistics
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #64748B;">
+              Benchmarking
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #F59E0B;">
+              Hardware
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #43E58D;">
+              Optimization
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #3B82F6;">
+              Moran&#39;s I
+            </span>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="publication-card"
+             data-id="osesc"
+             data-title="socioeconomic observatory of santa catarina"
+             data-excerpt="monitoring regional development. a specialized dashboard designed to analyze and forecast socioeconomic trends in santa catarina, providing actionable insights for development planning."
+             data-availability="available"
+             data-path="/publications/poster_osesc.pdf"
+             data-tags="data economy brazil time series santa catarina forecasting dashboard ">
+      
+      <div class="pub-card-image-wrap">
+        <img src="/images/santaCatarina.webp" alt="Socioeconomic Observatory of Santa Catarina thumbnail" loading="lazy" class="pub-card-img" onerror="this.onerror=null;this.classList.add('img-fallback');">
+        <div class="pub-card-overlay-indicator">
+          <span class="pub-open-icon" title="Open publication">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="pub-card-body">
+        <h2 class="pub-card-title">Socioeconomic Observatory of Santa Catarina</h2>
+        <p class="pub-card-excerpt">Monitoring regional development. A specialized dashboard designed to analyze and forecast socioeconomic trends in Santa Catarina, providing actionable insights for development planning.</p>
+
+        <div class="pub-card-footer">
+          
+          <div class="pub-status-badge pub-status-available">
+            <span class="pub-status-dot-wrap">
+              <span class="pub-status-ping"></span>
+              <span class="pub-status-dot"></span>
+            </span>
+            <span class="pub-status-label">Available</span>
+          </div>
+
+          
+          <div class="pub-tags-list">
+            <span class="pub-tag-chip" style="--tag-color: #10B981;">
+              Data
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #D97706;">
+              Economy
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #059669;">
+              Brazil
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #B45309;">
+              Time Series
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #F59E0B;">
+              Santa Catarina
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #10B981;">
+              Forecasting
+            </span>
+            <span class="pub-tag-chip" style="--tag-color: #3B82F6;">
+              Dashboard
+            </span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  
+  <div class="gallery-empty-state" id="pubEmptyState" style="display: none;">
+    <p>No publications matched your search criteria.</p>
+    <button type="button" class="pub-filter-btn" id="pubResetFiltersBtn" style="margin-top: 12px;">Reset Filters</button>
+  </div>
+</div>
+
+
+<div class="pub-modal-backdrop" id="pubModalBackdrop" aria-hidden="true">
+  <div class="pub-modal" role="dialog" aria-modal="true" aria-labelledby="pubModalTitle">
+    <div class="pub-modal-header">
+      <div class="pub-modal-icon-badge">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+      </div>
+      <button type="button" class="pub-modal-close" id="pubModalCloseBtn" aria-label="Close dialog">&times;</button>
+    </div>
+    <div class="pub-modal-body">
+      <h3 class="pub-modal-title" id="pubModalTitle">Coming Soon</h3>
+      <p class="pub-modal-message" id="pubModalMessage">This publication and its benchmark datasets are currently under finalization and code optimization. Check back soon for the full release!</p>
+    </div>
+    <div class="pub-modal-footer">
+      <button type="button" class="pub-modal-action-btn" id="pubModalOkBtn">Got it</button>
+    </div>
+  </div>
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const searchInput = document.getElementById("pubSearchInput");
+  const clearBtn = document.getElementById("pubClearSearch");
+  const visibleCount = document.getElementById("pubVisibleCount");
+  const emptyState = document.getElementById("pubEmptyState");
+  const resetBtn = document.getElementById("pubResetFiltersBtn");
+  const cards = Array.from(document.querySelectorAll(".publication-card"));
+  const filterBtns = Array.from(document.querySelectorAll(".pub-filter-btn[data-tag]"));
+  
+  
+  const infoBtn = document.getElementById("publicationsInfoBtn");
+  const tooltip = document.getElementById("publicationsTooltip");
+  if (infoBtn && tooltip) {
+    infoBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      tooltip.classList.toggle("is-active");
+    });
+    document.addEventListener("click", function (e) {
+      if (!tooltip.contains(e.target) && e.target !== infoBtn) {
+        tooltip.classList.remove("is-active");
+      }
+    });
+  }
+
+  
+  const modalBackdrop = document.getElementById("pubModalBackdrop");
+  const modalCloseBtn = document.getElementById("pubModalCloseBtn");
+  const modalOkBtn = document.getElementById("pubModalOkBtn");
+
+  function openModal(title, msg) {
+    if (!modalBackdrop) return;
+    if (title) document.getElementById("pubModalTitle").textContent = title;
+    if (msg) document.getElementById("pubModalMessage").textContent = msg;
+    modalBackdrop.classList.add("is-visible");
+    modalBackdrop.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    if (!modalBackdrop) return;
+    modalBackdrop.classList.remove("is-visible");
+    modalBackdrop.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  if (modalCloseBtn) modalCloseBtn.addEventListener("click", closeModal);
+  if (modalOkBtn) modalOkBtn.addEventListener("click", closeModal);
+  if (modalBackdrop) {
+    modalBackdrop.addEventListener("click", function (e) {
+      if (e.target === modalBackdrop) closeModal();
+    });
+  }
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && modalBackdrop && modalBackdrop.classList.contains("is-visible")) {
+      closeModal();
+    }
+  });
+
+  
+  cards.forEach(function (card) {
+    card.addEventListener("click", function (e) {
+      const availability = card.getAttribute("data-availability");
+      const path = card.getAttribute("data-path");
+      const title = card.querySelector(".pub-card-title") ? card.querySelector(".pub-card-title").textContent : "Publication";
+
+      if (availability === "coming_soon") {
+        e.preventDefault();
+        openModal(
+          "Coming Soon: " + title,
+          "This technical benchmark and publication are currently undergoing final hardware verification and code optimization. Stay tuned for the public release!"
+        );
+        return;
+      }
+
+      if (path) {
+        if (path.startsWith("http")) {
+          window.open(path, "_blank", "noopener,noreferrer");
+        } else {
+          window.location.href = path;
+        }
+      }
+    });
+  });
+
+  
+  let currentTag = "all";
+
+  function filterCards() {
+    const query = (searchInput.value || "").trim().toLowerCase();
+    let count = 0;
+
+    cards.forEach(function (card) {
+      const title = card.getAttribute("data-title") || "";
+      const excerpt = card.getAttribute("data-excerpt") || "";
+      const tags = card.getAttribute("data-tags") || "";
+
+      let matchesTag = true;
+      if (currentTag !== "all") {
+        if (currentTag === "economy") {
+          matchesTag = tags.includes("economy") || tags.includes("economics");
+        } else {
+          matchesTag = tags.includes(currentTag);
+        }
+      }
+
+      let matchesQuery = true;
+      if (query) {
+        matchesQuery = title.includes(query) || excerpt.includes(query) || tags.includes(query);
+      }
+
+      if (matchesTag && matchesQuery) {
+        card.style.display = "";
+        count++;
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    if (visibleCount) visibleCount.textContent = count;
+    if (emptyState) emptyState.style.display = count === 0 ? "block" : "none";
+    if (clearBtn) clearBtn.style.display = query.length > 0 ? "block" : "none";
+  }
+
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      filterBtns.forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      currentTag = btn.getAttribute("data-tag") || "all";
+      filterCards();
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener("input", filterCards);
+  }
+
+  if (clearBtn) {
+    clearBtn.addEventListener("click", function () {
+      searchInput.value = "";
+      filterCards();
+      searchInput.focus();
+    });
+  }
+
+  if (resetBtn) {
+    resetBtn.addEventListener("click", function () {
+      if (searchInput) searchInput.value = "";
+      currentTag = "all";
+      filterBtns.forEach(function (b) {
+        if (b.getAttribute("data-tag") === "all") b.classList.add("active");
+        else b.classList.remove("active");
+      });
+      filterCards();
+    });
+  }
+});
+</script>
+    </main>
