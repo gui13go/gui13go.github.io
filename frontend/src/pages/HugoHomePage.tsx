@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Sparkles, Terminal, Activity, ArrowRight } from 'lucide-react'
+import { useBackendHealth } from '../hooks/useBackendHealth'
 
 interface FeaturedPost {
   title: string
@@ -46,12 +48,35 @@ const FEATURED_POSTS: FeaturedPost[] = [
 ]
 
 export const HugoHomePage: React.FC = () => {
+  const { isOnline, isOllamaConnected } = useBackendHealth()
+
   return (
     <main className="main">
       {/* Home Hero matching Hugo */}
       <div className="home-hero">
         <div className="hero-glow"></div>
         <div className="hero-content">
+          <div className="hero-badge" style={{ marginBottom: '16px' }}>
+            <span
+              className="badge-dot"
+              style={{
+                backgroundColor: isOnline ? (isOllamaConnected ? '#10b981' : '#f59e0b') : '#f43f5e',
+                boxShadow: isOnline
+                  ? isOllamaConnected
+                    ? '0 0 10px #10b981'
+                    : '0 0 10px #f59e0b'
+                  : '0 0 10px #f43f5e',
+              }}
+            />
+            <span>
+              {isOnline
+                ? isOllamaConnected
+                  ? 'Mini PC AI Inference Online'
+                  : 'Mini PC Workstation Active'
+                : 'Edge CDN Mode (Mini PC Offline)'}
+            </span>
+          </div>
+
           <h1 className="hero-title">
             Hi, I'm <span className="gradient-text">Guilherme <span className="chinese-accent">威廉</span> Viegas</span>
           </h1>
@@ -59,6 +84,22 @@ export const HugoHomePage: React.FC = () => {
             I engineer intelligent solutions that turn data into compelling digital narratives using creativity,
             technique, code, and AI.
           </p>
+
+          {/* Quick Action Navigation CTAs */}
+          <div className="hero-cta-group" style={{ marginTop: '28px' }}>
+            <Link to="/ai-chat/" className="hero-btn primary">
+              <Sparkles style={{ width: '16px', height: '16px' }} />
+              <span>Ask Local AI</span>
+            </Link>
+            <Link to="/blogs/" className="hero-btn secondary">
+              <Terminal style={{ width: '16px', height: '16px' }} />
+              <span>Explore Research</span>
+            </Link>
+            <Link to="/status/" className="hero-btn secondary">
+              <Activity style={{ width: '16px', height: '16px' }} />
+              <span>Node Telemetry</span>
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -128,18 +169,7 @@ export const HugoHomePage: React.FC = () => {
                     className="read-more-link"
                     aria-label={`Read ${post.title}`}
                   >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
+                    <ArrowRight style={{ width: '16px', height: '16px' }} />
                   </Link>
                 </div>
               </div>

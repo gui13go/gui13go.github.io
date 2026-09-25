@@ -1,50 +1,227 @@
 /* Import full custom PaperMod stylesheet from 03-gh_pages */
 @import "./papermod.css";
 
-/* Essential overrides for React SPA rendering */
+/* ==========================================================================
+   Modern Visual Excellence & Polish Overrides
+   ========================================================================== */
+
+:root {
+  --header-height: 64px;
+}
+
 html, body {
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--theme);
+  color: var(--primary);
+  font-family: var(--font-family);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 #root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
 }
 
-/* Ensure React Router container aligns with PaperMod main wrapper */
+/* Subtle background mesh glow effect */
+#root::before {
+  content: "";
+  position: fixed;
+  top: -10vw;
+  right: -10vw;
+  width: 50vw;
+  height: 50vw;
+  max-width: 600px;
+  max-height: 600px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, rgba(59, 130, 246, 0.04) 50%, transparent 75%);
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
 .main {
   flex: 1;
+  position: relative;
+  z-index: 1;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Header enhancements */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(13, 17, 23, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--theme-border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] .header {
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.header-nav {
+  max-width: 1080px;
+  height: var(--header-height);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Logo styling */
+.logo a {
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.logo a:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Navigation items */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--secondary);
+  padding: 8px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+}
+
+.menu li a:hover,
+.menu li a.active,
+.menu li a:has(.active) {
+  background: var(--tertiary);
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+/* AI Gateway live link badge */
+.ai-gateway-link {
+  background: rgba(99, 102, 241, 0.1) !important;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  font-weight: 600 !important;
+  box-shadow: 0 2px 10px rgba(99, 102, 241, 0.12);
+}
+
+.ai-gateway-link:hover {
+  background: rgba(99, 102, 241, 0.2) !important;
+  border-color: rgba(99, 102, 241, 0.45);
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.24);
 }
 
 /* Offline resilience notification banner matching PaperMod aesthetics */
 .resilience-banner {
-  background: rgba(180, 83, 9, 0.2);
-  border-bottom: 1px solid rgba(245, 158, 11, 0.4);
-  color: #fde68a;
-  padding: 8px 16px;
-  font-size: 0.8rem;
-  font-family: var(--code-font);
+  background: rgba(217, 119, 6, 0.12);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.35);
+  color: #fbbf24;
+  padding: 10px 24px;
+  font-size: 0.84rem;
+  font-family: var(--font-family);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
   z-index: 1000;
+  animation: bannerSlideDown 0.3s ease-out;
+}
+
+@keyframes bannerSlideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .resilience-banner button {
-  background: rgba(245, 158, 11, 0.25);
+  background: rgba(245, 158, 11, 0.2);
   border: 1px solid rgba(245, 158, 11, 0.4);
   color: #fef3c7;
-  padding: 3px 8px;
-  border-radius: 4px;
+  padding: 5px 12px;
+  border-radius: 6px;
   font-size: 0.75rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: all 0.2s ease;
+  font-family: inherit;
 }
 
 .resilience-banner button:hover {
-  background: rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Footer improvements */
+.footer {
+  border-top: 1px solid var(--theme-border);
+  background: rgba(13, 17, 23, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--secondary);
+}
+
+.footer a {
+  color: var(--theme-accent);
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: #60a5fa;
+}
+
+/* Featured card smooth transitions */
+.featured-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease !important;
+}
+
+.featured-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25) !important;
+  border-color: rgba(96, 165, 250, 0.5) !important;
 }
