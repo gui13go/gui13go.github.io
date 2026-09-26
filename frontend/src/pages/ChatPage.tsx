@@ -1,20 +1,52 @@
-import React, { useState } from 'react'
-import { Send, Square, Sparkles, AlertCircle, Bot, User, Trash2 } from 'lucide-react'
+import React, { useState, useRef, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import {
+  Send,
+  Square,
+  Sparkles,
+  AlertCircle,
+  Bot,
+  User,
+  Trash2,
+  Copy,
+  Check,
+  Activity,
+  ArrowRight,
+} from 'lucide-react'
 import { useStreamingChat } from '../hooks/useStreamingChat'
 import { useBackendHealth } from '../hooks/useBackendHealth'
 
+const SUGGESTED_PROMPTS = [
+  'How do eBPF probes trace Linux kernel syscalls without patching code?',
+  'Explain how Cloudflare Tunnel routes traffic without opening inbound firewall ports.',
+  'What are the trade-offs between Monolithic and Microservice architectures?',
+  'Summarize the key principles of the OSINT intelligence lifecycle.',
+]
+
 export const ChatPage: React.FC = () => {
   const [input, setInput] = useState('')
+  const [copiedIdx, setCopiedIdx] = useState<number | null>(null)
+  const messagesEndRef = useRef<HTMLDivElement>(null)
+  const inputRef = useRef<HTMLTextAreaElement>(null)
+
   const { isOnline, isOllamaConnected, health } = useBackendHealth()
-  const { messages, isStreaming, error, sendMessage, stopStreaming, clearMessages } =
+  const { messages, isStreaming, sendMessage, stopStreaming, clearMessages } =
     useStreamingChat({
-      systemPrompt: 'You are an intelligent AI assistant running locally on Guilherme Viegas\'s Linux Mini PC. You provide helpful, technical, concise, and accurate responses.',
+      systemPrompt:
+        "You are an intelligent AI assistant running locally on Guilherme Viegas's Linux Mini PC. You provide helpful, technical, concise, and accurate responses on Linux, systems engineering, security, and cloud architecture.",
     })
+
+  const visibleMessages = messages.filter((m) => m.role !== 'system')
+
+  // Auto-scroll to bottom of messages
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }, [visibleMessages, isStreaming])
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (!input.trim() || isStreaming) return
-    sendMessage(input)
+    sendMessage(input.trim())
     setInput('')
   }
 
@@ -25,159 +57,479 @@ export const ChatPage: React.FC = () => {
     }
   }
 
-  const visibleMessages = messages.filter((m) => m.role !== 'system')
+  const handleCopy = (text: string, idx: number) => {
+    navigator.clipboard.writeText(text).then(() => {
+      setCopiedIdx(idx)
+      setTimeout(() => setCopiedIdx(null), 2000)
+    })
+  }
 
   return (
-    <div className="max-w-4xl mx-auto py-4 flex flex-col h-[calc(100vh-8rem)]">
+    <main className="main" style={{ maxWidth: '960px', margin: '0 auto', padding: '24px 20px 60px' }}>
       {/* Header bar */}
-      <div className="flex items-center justify-between pb-4 border-b border-slate-800">
-        <div className="flex items-center gap-3">
-          <div className="p-2 rounded-lg bg-indigo-600/10 text-indigo-400 border border-indigo-500/20">
-            <Sparkles className="w-5 h-5" />
-          </div>
+      <header className="gallery-header" style={{ marginBottom: '20px' }}>
+        <div className="gallery-breadcrumbs">
+          <Link to="/">Home</Link> <span>/</span> <span>AI Gateway</span>
+        </div>
+        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '16px' }}>
           <div>
-            <h1 className="text-lg font-bold text-slate-100 flex items-center gap-2">
-              Mini PC Local AI Inference
+            <h1 className="gallery-title" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <Sparkles style={{ width: '28px', height: '28px', color: 'var(--theme-accent)' }} />
+              <span>Mini PC Local AI Inference</span>
             </h1>
-            <p className="text-xs text-slate-400">
-              Streaming directly from Ollama via FastAPI SSE gateway
+            <p className="gallery-subtitle">
+              Streaming inference from Ollama on your local Linux workstation via Cloudflare Tunnel.
             </p>
           </div>
-        </div>
 
-        <div className="flex items-center gap-2">
-          {visibleMessages.length > 0 && (
-            <button
-              onClick={clearMessages}
-              className="p-2 text-slate-400 hover:text-slate-200 hover:bg-slate-800/80 rounded-lg text-xs flex items-center gap-1.5 transition-colors cursor-pointer"
-              title="Clear chat history"
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <Link
+              to="/status/"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                padding: '6px 12px',
+                borderRadius: '8px',
+                background: 'var(--tertiary)',
+                border: '1px solid var(--theme-border)',
+                color: 'var(--secondary)',
+                fontSize: '0.8rem',
+                fontWeight: 600,
+                textDecoration: 'none',
+              }}
             >
-              <Trash2 className="w-4 h-4" />
-              <span className="hidden sm:inline">Clear</span>
-            </button>
-          )}
-        </div>
-      </div>
+              <Activity style={{ width: '13px', height: '13px' }} />
+              <span>Node Telemetry</span>
+            </Link>
 
-      {/* Offline Warning inside Chat */}
+            {visibleMessages.length > 0 && (
+              <button
+                onClick={clearMessages}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  padding: '6px 12px',
+                  borderRadius: '8px',
+                  background: 'var(--tertiary)',
+                  border: '1px solid var(--theme-border)',
+                  color: 'var(--secondary)',
+                  fontSize: '0.8rem',
+                  fontWeight: 600,
+                  cursor: 'pointer',
+                }}
+                title="Clear conversation"
+              >
+                <Trash2 style={{ width: '13px', height: '13px' }} />
+                <span>Clear</span>
+              </button>
+            )}
+          </div>
+        </div>
+      </header>
+
+      {/* Offline Alert Box */}
       {(!isOnline || !isOllamaConnected) && (
-        <div className="my-4 p-4 rounded-xl bg-amber-950/40 border border-amber-500/30 flex items-start gap-3 text-amber-200 text-xs sm:text-sm">
-          <AlertCircle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
-          <div className="space-y-1">
-            <p className="font-semibold text-amber-300">
-              Mini PC Hardware is Currently Offline or Unreachable
-            </p>
-            <p className="text-amber-200/80">
-              New chat prompts cannot be processed until the local server or Cloudflare Tunnel is started on your Mini PC. You can still read static pages and explore cached articles!
-            </p>
+        <div
+          style={{
+            background: 'rgba(217, 119, 6, 0.1)',
+            border: '1px solid rgba(245, 158, 11, 0.35)',
+            borderRadius: '12px',
+            padding: '16px 20px',
+            marginBottom: '20px',
+            display: 'flex',
+            alignItems: 'flex-start',
+            gap: '12px',
+          }}
+        >
+          <AlertCircle style={{ width: '20px', height: '20px', color: '#f59e0b', flexShrink: 0, marginTop: '2px' }} />
+          <div style={{ fontSize: '0.86rem', lineHeight: 1.5 }}>
+            <strong style={{ color: '#fbbf24', display: 'block', marginBottom: '2px' }}>
+              Mini PC Compute Node is Currently Offline
+            </strong>
+            <span style={{ color: 'var(--secondary)' }}>
+              Inference requests require the local FastAPI service and Ollama to be running on your Linux workstation. The static portfolio and all cached articles remain 100% accessible via GitHub Pages!
+            </span>
           </div>
         </div>
       )}
 
-      {/* Chat Messages Log */}
-      <div className="flex-1 overflow-y-auto py-4 space-y-4 pr-1">
-        {visibleMessages.length === 0 ? (
-          <div className="h-full flex flex-col items-center justify-center text-center p-8 text-slate-500 space-y-3">
-            <Bot className="w-12 h-12 text-slate-600" />
-            <div className="max-w-md space-y-1">
-              <p className="text-slate-300 font-medium text-sm">No messages yet</p>
-              <p className="text-xs text-slate-500">
-                Ask questions about Linux kernels, container architecture, or run code experiments against your local LLM weights.
-              </p>
-            </div>
-            {health?.models && health.models.length > 0 && (
-              <div className="pt-2">
-                <span className="text-[11px] font-mono text-indigo-400/80 bg-indigo-950/40 px-2.5 py-1 rounded-md border border-indigo-900/40">
-                  Active model: {health.models[0]}
-                </span>
-              </div>
-            )}
+      {/* Main Chat Container */}
+      <div
+        style={{
+          background: 'var(--entry)',
+          border: '1px solid var(--theme-border)',
+          borderRadius: 'var(--theme-card-radius)',
+          display: 'flex',
+          flexDirection: 'column',
+          height: '620px',
+          boxShadow: '0 8px 30px rgba(0, 0, 0, 0.1)',
+          overflow: 'hidden',
+        }}
+      >
+        {/* Model Indicator Sub-header */}
+        <div
+          style={{
+            padding: '10px 18px',
+            borderBottom: '1px solid var(--theme-border)',
+            background: 'var(--tertiary)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            fontSize: '0.78rem',
+            color: 'var(--secondary)',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <span
+              style={{
+                width: '7px',
+                height: '7px',
+                borderRadius: '50%',
+                backgroundColor: isOnline && isOllamaConnected ? '#10b981' : '#f59e0b',
+                display: 'inline-block',
+                boxShadow: isOnline && isOllamaConnected ? '0 0 6px #10b981' : 'none',
+              }}
+            />
+            <span style={{ fontWeight: 600, color: 'var(--primary)' }}>
+              {isOnline && isOllamaConnected
+                ? `Active Node • ${health?.models?.[0] || 'Llama 3.2'}`
+                : 'Demo Standby Mode'}
+            </span>
           </div>
-        ) : (
-          visibleMessages.map((msg, idx) => (
+          <span style={{ fontFamily: 'var(--code-font)' }}>SSE Streaming · Zero-Trust WireGuard</span>
+        </div>
+
+        {/* Message Log */}
+        <div
+          style={{
+            flex: 1,
+            overflowY: 'auto',
+            padding: '20px',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '16px',
+          }}
+        >
+          {visibleMessages.length === 0 ? (
             <div
-              key={idx}
-              className={`flex gap-3 text-sm leading-relaxed ${
-                msg.role === 'user' ? 'justify-end' : 'justify-start'
-              }`}
+              style={{
+                margin: 'auto',
+                maxWidth: '520px',
+                textAlign: 'center',
+                padding: '30px 10px',
+              }}
             >
-              {msg.role === 'assistant' && (
-                <div className="w-7 h-7 rounded-lg bg-indigo-600/20 text-indigo-400 border border-indigo-500/30 flex items-center justify-center shrink-0 mt-0.5">
-                  <Bot className="w-4 h-4" />
-                </div>
-              )}
               <div
-                className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm ${
-                  msg.role === 'user'
-                    ? 'bg-indigo-600 text-white rounded-br-none'
-                    : 'bg-slate-900 border border-slate-800 text-slate-200 rounded-bl-none shadow-md'
-                }`}
+                style={{
+                  width: '54px',
+                  height: '54px',
+                  borderRadius: '16px',
+                  background: 'rgba(99, 102, 241, 0.12)',
+                  color: 'var(--theme-accent)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 16px',
+                }}
               >
-                <div className="whitespace-pre-wrap font-sans">
-                  {msg.content || (isStreaming && idx === visibleMessages.length - 1 ? (
-                    <span className="inline-flex items-center gap-1 text-slate-400 italic">
-                      <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" />
-                      Generating tokens...
-                    </span>
-                  ) : null)}
-                </div>
+                <Bot style={{ width: '28px', height: '28px' }} />
               </div>
-              {msg.role === 'user' && (
-                <div className="w-7 h-7 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 flex items-center justify-center shrink-0 mt-0.5">
-                  <User className="w-4 h-4" />
-                </div>
-              )}
+              <h3 style={{ margin: '0 0 8px', fontSize: '1.2rem', color: 'var(--primary)', fontWeight: 700 }}>
+                Query Local AI Architecture
+              </h3>
+              <p style={{ margin: '0 0 20px', fontSize: '0.88rem', color: 'var(--secondary)', lineHeight: 1.5 }}>
+                Ask questions about Linux systems, eBPF kernel tracing, incident post-mortems, or explore topics covered across the portfolio.
+              </p>
+
+              {/* Prompt Suggestions */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', textAlign: 'left' }}>
+                <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  Suggested queries:
+                </span>
+                {SUGGESTED_PROMPTS.map((prompt, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => {
+                      setInput(prompt)
+                      inputRef.current?.focus()
+                    }}
+                    style={{
+                      padding: '10px 14px',
+                      borderRadius: '8px',
+                      background: 'var(--tertiary)',
+                      border: '1px solid var(--theme-border)',
+                      color: 'var(--primary)',
+                      fontSize: '0.82rem',
+                      textAlign: 'left',
+                      cursor: 'pointer',
+                      transition: 'border-color 0.2s ease, transform 0.15s ease',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.borderColor = 'var(--theme-accent)'
+                      e.currentTarget.style.transform = 'translateY(-1px)'
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.borderColor = 'var(--theme-border)'
+                      e.currentTarget.style.transform = 'none'
+                    }}
+                  >
+                    <span>{prompt}</span>
+                    <ArrowRight style={{ width: '13px', height: '13px', color: 'var(--theme-accent)', flexShrink: 0, marginLeft: '8px' }} />
+                  </button>
+                ))}
+              </div>
             </div>
-          ))
-        )}
+          ) : (
+            visibleMessages.map((msg, idx) => {
+              const isUser = msg.role === 'user'
+              return (
+                <div
+                  key={idx}
+                  style={{
+                    display: 'flex',
+                    gap: '12px',
+                    alignItems: 'flex-start',
+                    maxWidth: '85%',
+                    alignSelf: isUser ? 'flex-end' : 'flex-start',
+                  }}
+                >
+                  {!isUser && (
+                    <div
+                      style={{
+                        width: '32px',
+                        height: '32px',
+                        borderRadius: '8px',
+                        background: 'rgba(99, 102, 241, 0.15)',
+                        color: 'var(--theme-accent)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flexShrink: 0,
+                        marginTop: '2px',
+                      }}
+                    >
+                      <Bot style={{ width: '18px', height: '18px' }} />
+                    </div>
+                  )}
 
-        {error && (
-          <div className="p-3 rounded-lg bg-rose-950/40 border border-rose-900/50 text-rose-300 text-xs">
-            {error}
-          </div>
-        )}
-      </div>
+                  <div
+                    style={{
+                      background: isUser ? 'var(--theme-accent)' : 'var(--tertiary)',
+                      color: isUser ? '#fff' : 'var(--primary)',
+                      padding: '12px 16px',
+                      borderRadius: isUser ? '14px 14px 2px 14px' : '14px 14px 14px 2px',
+                      border: isUser ? 'none' : '1px solid var(--theme-border)',
+                      fontSize: '0.88rem',
+                      lineHeight: 1.6,
+                      wordBreak: 'break-word',
+                      position: 'relative',
+                      whiteSpace: 'pre-wrap',
+                    }}
+                  >
+                    {msg.content}
 
-      {/* Input box */}
-      <div className="pt-2 border-t border-slate-800">
-        <form onSubmit={handleSubmit} className="relative flex items-center">
+                    {!isUser && (
+                      <div
+                        style={{
+                          display: 'flex',
+                          justifyContent: 'flex-end',
+                          marginTop: '8px',
+                          paddingTop: '6px',
+                          borderTop: '1px solid var(--theme-border)',
+                        }}
+                      >
+                        <button
+                          onClick={() => handleCopy(msg.content, idx)}
+                          style={{
+                            background: 'none',
+                            border: 'none',
+                            color: 'var(--secondary)',
+                            fontSize: '0.72rem',
+                            cursor: 'pointer',
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '4px',
+                            padding: 0,
+                          }}
+                          title="Copy response"
+                        >
+                          {copiedIdx === idx ? (
+                            <>
+                              <Check style={{ width: '12px', height: '12px', color: '#10b981' }} />
+                              <span style={{ color: '#10b981' }}>Copied</span>
+                            </>
+                          ) : (
+                            <>
+                              <Copy style={{ width: '12px', height: '12px' }} />
+                              <span>Copy</span>
+                            </>
+                          )}
+                        </button>
+                      </div>
+                    )}
+                  </div>
+
+                  {isUser && (
+                    <div
+                      style={{
+                        width: '32px',
+                        height: '32px',
+                        borderRadius: '8px',
+                        background: 'var(--tertiary)',
+                        border: '1px solid var(--theme-border)',
+                        color: 'var(--primary)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flexShrink: 0,
+                        marginTop: '2px',
+                      }}
+                    >
+                      <User style={{ width: '18px', height: '18px' }} />
+                    </div>
+                  )}
+                </div>
+              )
+            })
+          )}
+          {isStreaming && (
+            <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+              <div
+                style={{
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: '8px',
+                  background: 'rgba(99, 102, 241, 0.15)',
+                  color: 'var(--theme-accent)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                }}
+              >
+                <Bot style={{ width: '18px', height: '18px' }} />
+              </div>
+              <div
+                style={{
+                  padding: '10px 14px',
+                  borderRadius: '12px',
+                  background: 'var(--tertiary)',
+                  border: '1px solid var(--theme-border)',
+                  fontSize: '0.82rem',
+                  color: 'var(--secondary)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                }}
+              >
+                <div
+                  style={{
+                    width: '6px',
+                    height: '6px',
+                    borderRadius: '50%',
+                    backgroundColor: 'var(--theme-accent)',
+                    animation: 'pulse 1s infinite',
+                  }}
+                />
+                <span>Streaming from local GPU...</span>
+              </div>
+            </div>
+          )}
+          <div ref={messagesEndRef} />
+        </div>
+
+        {/* Input box */}
+        <form
+          onSubmit={handleSubmit}
+          style={{
+            padding: '14px 18px',
+            borderTop: '1px solid var(--theme-border)',
+            background: 'var(--theme)',
+            display: 'flex',
+            gap: '12px',
+            alignItems: 'flex-end',
+          }}
+        >
           <textarea
+            ref={inputRef}
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            disabled={!isOnline || !isOllamaConnected}
-            placeholder={
-              !isOnline || !isOllamaConnected
-                ? 'Workstation offline - inference disabled'
-                : 'Type your prompt (Enter to send, Shift+Enter for new line)...'
-            }
             rows={2}
-            className="w-full rounded-xl bg-slate-900 border border-slate-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-slate-100 placeholder-slate-500 p-3 pr-24 text-sm resize-none disabled:opacity-50 disabled:cursor-not-allowed outline-none transition-colors"
+            placeholder={
+              isOnline && isOllamaConnected
+                ? 'Type your query (Press Enter to send, Shift+Enter for newline)...'
+                : 'Node is currently offline. Type to draft or test...'
+            }
+            style={{
+              flex: 1,
+              background: 'var(--entry)',
+              border: '1px solid var(--theme-border)',
+              borderRadius: '10px',
+              padding: '10px 14px',
+              fontSize: '0.88rem',
+              color: 'var(--primary)',
+              outline: 'none',
+              fontFamily: 'inherit',
+              resize: 'none',
+              lineHeight: 1.4,
+            }}
           />
 
-          <div className="absolute right-3 flex items-center gap-2">
-            {isStreaming ? (
-              <button
-                type="button"
-                onClick={stopStreaming}
-                className="p-2 rounded-lg bg-rose-600 hover:bg-rose-500 text-white transition-colors cursor-pointer"
-                title="Stop generation"
-              >
-                <Square className="w-4 h-4" />
-              </button>
-            ) : (
-              <button
-                type="submit"
-                disabled={!input.trim() || !isOnline || !isOllamaConnected}
-                className="p-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
-                title="Send message"
-              >
-                <Send className="w-4 h-4" />
-              </button>
-            )}
-          </div>
+          {isStreaming ? (
+            <button
+              type="button"
+              onClick={stopStreaming}
+              style={{
+                padding: '10px 16px',
+                borderRadius: '10px',
+                background: '#f43f5e',
+                color: '#fff',
+                border: 'none',
+                fontWeight: 600,
+                fontSize: '0.84rem',
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                height: '42px',
+              }}
+            >
+              <Square style={{ width: '14px', height: '14px' }} />
+              <span>Stop</span>
+            </button>
+          ) : (
+            <button
+              type="submit"
+              disabled={!input.trim()}
+              style={{
+                padding: '10px 18px',
+                borderRadius: '10px',
+                background: input.trim() ? 'var(--theme-accent-gradient)' : 'var(--tertiary)',
+                color: input.trim() ? '#fff' : 'var(--secondary)',
+                border: '1px solid var(--theme-border)',
+                fontWeight: 600,
+                fontSize: '0.84rem',
+                cursor: input.trim() ? 'pointer' : 'not-allowed',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                height: '42px',
+                transition: 'all 0.2s ease',
+                boxShadow: input.trim() ? '0 2px 10px var(--theme-accent-glow)' : 'none',
+              }}
+            >
+              <Send style={{ width: '14px', height: '14px' }} />
+              <span>Send</span>
+            </button>
+          )}
         </form>
       </div>
-    </div>
+    </main>
   )
 }

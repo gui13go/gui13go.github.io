@@ -17,7 +17,11 @@ import {
   Clock,
   Calendar,
   Layers,
-  Cpu
+  Cpu,
+  Flame,
+  Globe,
+  Timer,
+  LineChart,
 } from 'lucide-react'
 import { useBackendHealth } from '../hooks/useBackendHealth'
 import { API_BASE_URL } from '../config/api'
@@ -148,10 +152,99 @@ const PORTFOLIO_PILLARS = [
     to: '/gallery/',
     title: 'Gallery',
     icon: Grid,
-    count: '12 Collections',
-    desc: 'Curated technical reference collections: network protocols, computer languages, philosophies, and computing pioneers.',
+    count: '13 Collections',
+    desc: 'Curated technical reference collections: network protocols, computer languages, 115 versus battles, and computing pioneers.',
     color: '#f472b6',
   },
+]
+
+const FEATURED_TOOLS = [
+  {
+    title: 'Pomodoro Flow State Timer',
+    url: '/tools/pomodoro/',
+    desc: 'Audio chime synthesis, custom interval sets, and visual progress ring for deep work cycles.',
+    badge: 'Audio & Productivity',
+    color: '#818cf8',
+    icon: Timer,
+  },
+  {
+    title: 'Currency Exchange Charter',
+    url: '/tools/currency-chart/',
+    desc: 'Interactive historical exchange rate analytics across 30+ fiat currencies with D3 SVG charts.',
+    badge: 'Financial Analytics',
+    color: '#34d399',
+    icon: LineChart,
+  },
+  {
+    title: 'Egg Cooking Thermodynamic Simulator',
+    url: '/tools/egg-cooking-timer/',
+    desc: 'Physics-based heat transfer equations determining yolk coagulation by egg mass and altitude.',
+    badge: 'Thermodynamics',
+    color: '#f59e0b',
+    icon: Flame,
+  },
+  {
+    title: 'Solar Terminator & Earth Shadows',
+    url: '/geolayers/solar-terminator/',
+    desc: 'Real-time D3 orthographic projection calculating the solar declination line and day/night boundary.',
+    badge: 'Geospatial Cartography',
+    color: '#60a5fa',
+    icon: Globe,
+  },
+]
+
+const FEATURED_VERSUS = [
+  {
+    title: 'Monolith vs Microservices',
+    url: '/gallery/versus/monolith-vs-microservices/',
+    category: 'Architecture Wars',
+    sideA: 'Monolith',
+    sideB: 'Microservices',
+    summary: 'The Giant vs The Swarm. Operational simplicity vs independent scaling and deployment flexibility.',
+    image: '/images/monolith_vs_microservices_versus_1768962234300.png',
+  },
+  {
+    title: 'SQL vs NoSQL',
+    url: '/gallery/versus/sql-vs-nosql/',
+    category: 'Database Paradigms',
+    sideA: 'SQL (Relational)',
+    sideB: 'NoSQL (Non-Relational)',
+    summary: 'Rigid schema & ACID integrity vs horizontal sharding & high-velocity document storage.',
+    image: '/images/sql_nosql_versus_1768782039681.png',
+  },
+  {
+    title: 'REST vs GraphQL',
+    url: '/gallery/versus/rest-vs-graphql/',
+    category: 'API Design',
+    sideA: 'REST API',
+    sideB: 'GraphQL',
+    summary: 'Standard HTTP verbs & resource caching vs single-endpoint flexible query precision.',
+    image: '/images/rest_graphql_versus_1768782054786.png',
+  },
+  {
+    title: 'Edison vs Tesla',
+    url: '/gallery/versus/edison-vs-tesla/',
+    category: 'The War of Currents',
+    sideA: 'Thomas Edison (DC)',
+    sideB: 'Nikola Tesla (AC)',
+    summary: 'Direct current patent monopolies vs alternating current long-distance electrical grid transformation.',
+    image: '/images/edison_vs_tesla_versus_1769221673257.png',
+  },
+]
+
+const POPULAR_TAGS = [
+  'Linux',
+  'Security',
+  'OSINT',
+  'Architecture',
+  'Kernel',
+  'eBPF',
+  'SSH',
+  'Kubernetes',
+  'Incident Response',
+  'Observability',
+  'Productivity',
+  'Data Science',
 ]
 
 const FILTER_CATEGORIES = ['All', 'Security', 'Linux', 'OSINT', 'Architecture'] as const
@@ -301,6 +394,164 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
+      {/* Interactive Simulators & Engineering Tools */}
+      <section style={{ maxWidth: '960px', margin: '0 auto 56px', padding: '0 20px' }}>
+        <div className="section-header" style={{ marginBottom: '24px' }}>
+          <div className="section-title-wrap">
+            <h2 className="section-heading">Interactive Simulators & Engineering Tools</h2>
+            <p className="section-desc">Zero-dependency client-side tools running audio synthesis, thermodynamics, and D3 math.</p>
+          </div>
+          <Link to="/tools/" className="section-all-link">
+            <span>Explore all tools</span>
+            <ArrowRight style={{ width: '15px', height: '15px' }} />
+          </Link>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px' }}>
+          {FEATURED_TOOLS.map((tool) => {
+            const ToolIcon = tool.icon
+            return (
+              <Link
+                key={tool.url}
+                to={tool.url}
+                className="featured-card"
+                style={{
+                  background: 'var(--entry)',
+                  border: '1px solid var(--theme-border)',
+                  borderRadius: 'var(--theme-card-radius)',
+                  padding: '22px',
+                  textDecoration: 'none',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  gap: '12px',
+                }}
+              >
+                <div>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <div
+                      style={{
+                        width: '40px',
+                        height: '40px',
+                        borderRadius: '10px',
+                        background: `${tool.color}15`,
+                        color: tool.color,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                      }}
+                    >
+                      <ToolIcon style={{ width: '20px', height: '20px' }} />
+                    </div>
+                    <span
+                      style={{
+                        fontSize: '0.72rem',
+                        fontWeight: 700,
+                        padding: '2px 8px',
+                        borderRadius: '6px',
+                        background: 'var(--tertiary)',
+                        color: 'var(--secondary)',
+                        border: '1px solid var(--theme-border)',
+                      }}
+                    >
+                      {tool.badge}
+                    </span>
+                  </div>
+
+                  <h3 style={{ margin: '0 0 6px', fontSize: '1.05rem', fontWeight: 700, color: 'var(--primary)' }}>
+                    {tool.title}
+                  </h3>
+                  <p style={{ margin: 0, fontSize: '0.84rem', color: 'var(--secondary)', lineHeight: 1.5 }}>
+                    {tool.desc}
+                  </p>
+                </div>
+
+                <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '0.82rem', fontWeight: 600, color: tool.color }}>
+                  <span>Launch Simulator</span>
+                  <ArrowRight style={{ width: '13px', height: '13px' }} />
+                </div>
+              </Link>
+            )
+          })}
+        </div>
+      </section>
+
+      {/* Conceptual Clashes: Versus Battles */}
+      <section style={{ maxWidth: '960px', margin: '0 auto 56px', padding: '0 20px' }}>
+        <div className="section-header" style={{ marginBottom: '24px' }}>
+          <div className="section-title-wrap">
+            <h2 className="section-heading">Historical Clashes & Conceptual Versus Battles</h2>
+            <p className="section-desc">Rigorous side-by-side trade-off analyses of ideas, architectures, and philosophies.</p>
+          </div>
+          <Link to="/gallery/versus/" className="section-all-link">
+            <span>Explore all 115 battles</span>
+            <ArrowRight style={{ width: '15px', height: '15px' }} />
+          </Link>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px' }}>
+          {FEATURED_VERSUS.map((battle) => (
+            <Link
+              key={battle.url}
+              to={battle.url}
+              className="featured-card"
+              style={{
+                background: 'var(--entry)',
+                border: '1px solid var(--theme-border)',
+                borderRadius: 'var(--theme-card-radius)',
+                padding: '20px',
+                textDecoration: 'none',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '12px',
+                overflow: 'hidden',
+                position: 'relative',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <span
+                  style={{
+                    fontSize: '0.72rem',
+                    fontWeight: 700,
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.04em',
+                    color: '#fb923c',
+                    background: 'rgba(251, 146, 60, 0.12)',
+                    padding: '2px 8px',
+                    borderRadius: '4px',
+                    border: '1px solid rgba(251, 146, 60, 0.25)',
+                  }}
+                >
+                  {battle.category}
+                </span>
+                <span style={{ fontSize: '0.75rem', fontWeight: 800, color: 'var(--theme-accent)' }}>
+                  VS
+                </span>
+              </div>
+
+              <div>
+                <h3 style={{ margin: '0 0 6px', fontSize: '1.05rem', fontWeight: 700, color: 'var(--primary)' }}>
+                  {battle.title}
+                </h3>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.8rem', color: 'var(--primary)', marginBottom: '8px', fontWeight: 600 }}>
+                  <span style={{ color: 'var(--theme-accent)' }}>{battle.sideA}</span>
+                  <span style={{ color: 'var(--secondary)', fontSize: '0.7rem' }}>vs</span>
+                  <span style={{ color: '#f59e0b' }}>{battle.sideB}</span>
+                </div>
+                <p style={{ margin: 0, fontSize: '0.82rem', color: 'var(--secondary)', lineHeight: 1.5 }}>
+                  {battle.summary}
+                </p>
+              </div>
+
+              <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: '8px', borderTop: '1px solid var(--theme-border)' }}>
+                <span style={{ fontSize: '0.78rem', color: 'var(--secondary)' }}>Read breakdown</span>
+                <ArrowRight style={{ width: '13px', height: '13px', color: 'var(--theme-accent)' }} />
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* Highlighted Content with Interactive Category Filtering */}
       <div className="home-posts-section">
         <div className="section-header">
@@ -386,9 +637,14 @@ export const HomePage: React.FC = () => {
                 <div className="card-footer">
                   <div className="card-tags">
                     {post.tags.map((tag) => (
-                      <span key={tag} className="tag-pill">
+                      <Link
+                        key={tag}
+                        to={`/tags/${tag.toLowerCase()}/`}
+                        className="tag-pill"
+                        style={{ textDecoration: 'none' }}
+                      >
                         #{tag}
-                      </span>
+                      </Link>
                     ))}
                   </div>
 
@@ -405,6 +661,74 @@ export const HomePage: React.FC = () => {
           ))}
         </div>
       </div>
+
+      {/* Popular Research Tags Cloud */}
+      <section style={{ maxWidth: '960px', margin: '0 auto 56px', padding: '0 20px' }}>
+        <div
+          style={{
+            background: 'var(--entry)',
+            border: '1px solid var(--theme-border)',
+            borderRadius: 'var(--theme-card-radius)',
+            padding: '24px 28px',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <Terminal style={{ width: '18px', height: '18px', color: 'var(--theme-accent)' }} />
+              <h3 style={{ margin: 0, fontSize: '1rem', fontWeight: 700, color: 'var(--primary)' }}>
+                Research & Engineering Topics
+              </h3>
+            </div>
+            <Link
+              to="/search/"
+              style={{
+                fontSize: '0.8rem',
+                color: 'var(--theme-accent)',
+                textDecoration: 'none',
+                fontWeight: 600,
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '4px',
+              }}
+            >
+              <span>Full Search</span>
+              <ArrowRight style={{ width: '12px', height: '12px' }} />
+            </Link>
+          </div>
+
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+            {POPULAR_TAGS.map((tag) => (
+              <Link
+                key={tag}
+                to={`/tags/${tag.toLowerCase()}/`}
+                style={{
+                  padding: '5px 12px',
+                  borderRadius: '6px',
+                  background: 'var(--tertiary)',
+                  border: '1px solid var(--theme-border)',
+                  color: 'var(--secondary)',
+                  fontSize: '0.8rem',
+                  textDecoration: 'none',
+                  transition: 'all 0.2s ease',
+                  fontWeight: 500,
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = 'var(--theme-accent)'
+                  e.currentTarget.style.borderColor = 'var(--theme-accent)'
+                  e.currentTarget.style.transform = 'translateY(-1px)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = 'var(--secondary)'
+                  e.currentTarget.style.borderColor = 'var(--theme-border)'
+                  e.currentTarget.style.transform = 'none'
+                }}
+              >
+                #{tag}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Mini PC Architecture & Live Telemetry Card */}
       <section style={{ maxWidth: '960px', margin: '0 auto 40px', padding: '0 20px' }}>

@@ -2,7 +2,20 @@ import React, { useEffect, useState, useRef } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 
 interface DynamicItemProps {
-  section: 'rendered_posts' | 'rendered_tools' | 'rendered_gallery' | 'rendered_geolayers' | 'rendered_publications'
+  section: 'rendered_posts' | 'rendered_tools' | 'rendered_gallery' | 'rendered_geolayers' | 'rendered_publications' | 'rendered_versus'
+}
+
+const ALIASES: Record<string, string> = {
+  'pomodoro-timer': 'pomodoro',
+  'pomodoro-focus': 'pomodoro',
+  'currency-charter': 'currency-chart',
+  'egg-cooking': 'egg-cooking-timer',
+  'egg-timer': 'egg-cooking-timer',
+  'berlin-wall': 'berlin-wall-comparison',
+  'ecosystems-world': 'ecosystems-of-the-world',
+  'usa-nuked-greenland-1968': 'usa-dropped-nukes-on-greenland',
+  'usa-nuked-spain-1966': 'usa-dropped-nukes-on-spain',
+  'reveolution-os-review': 'revolution-os-review',
 }
 
 export const DynamicItemPage: React.FC<DynamicItemProps> = ({ section }) => {
@@ -15,11 +28,12 @@ export const DynamicItemPage: React.FC<DynamicItemProps> = ({ section }) => {
 
   useEffect(() => {
     if (!slug) return
+    const resolvedSlug = ALIASES[slug] || slug
     setLoading(true)
     setError(false)
     window.scrollTo({ top: 0, behavior: 'instant' })
 
-    fetch(`/${section}/${slug}.html`)
+    fetch(`/${section}/${resolvedSlug}.html`)
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`)
         return res.text()
@@ -32,7 +46,7 @@ export const DynamicItemPage: React.FC<DynamicItemProps> = ({ section }) => {
         setLoading(false)
       })
       .catch((err) => {
-        console.error(`Error loading item ${slug}:`, err)
+        console.error(`Error loading item ${slug} (${resolvedSlug}):`, err)
         setError(true)
         setLoading(false)
       })
@@ -45,6 +59,10 @@ export const DynamicItemPage: React.FC<DynamicItemProps> = ({ section }) => {
 
     const scripts = Array.from(container.querySelectorAll('script'))
     scripts.forEach((oldScript) => {
+      if (oldScript.type && oldScript.type.includes('json')) {
+        return
+      }
+
       const newScript = document.createElement('script')
       Array.from(oldScript.attributes).forEach((attr) => {
         newScript.setAttribute(attr.name, attr.value)
@@ -52,7 +70,13 @@ export const DynamicItemPage: React.FC<DynamicItemProps> = ({ section }) => {
       if (oldScript.src) {
         newScript.src = oldScript.src
       } else {
-        newScript.textContent = oldScript.textContent
+        let code = oldScript.textContent || ''
+        // Ensure DOMContentLoaded listeners execute in React SPA
+        code = code.replace(
+          /document\.addEventListener\(\s*["']DOMContentLoaded["']\s*,\s*(function|\()/g,
+          '(function(cb){ if(document.readyState !== "loading") { setTimeout(cb, 10); } else { document.addEventListener("DOMContentLoaded", cb); } })($1'
+        )
+        newScript.textContent = code
       }
       oldScript.parentNode?.replaceChild(newScript, oldScript)
     })
@@ -78,6 +102,15 @@ export const DynamicItemPage: React.FC<DynamicItemProps> = ({ section }) => {
       pre.style.position = 'relative'
       pre.appendChild(button)
     })
+
+    const timer = setTimeout(() => {
+      document.dispatchEvent(new Event('DOMContentLoaded'))
+      window.dispatchEvent(new Event('DOMContentLoaded'))
+      window.dispatchEvent(new Event('load'))
+      window.dispatchEvent(new Event('resize'))
+    }, 30)
+
+    return () => clearTimeout(timer)
   }, [htmlContent])
 
   useEffect(() => {

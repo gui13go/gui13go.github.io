@@ -51,6 +51,11 @@ export const StaticPage: React.FC<StaticPageProps> = ({ pageName }) => {
 
     const scripts = Array.from(container.querySelectorAll('script'))
     scripts.forEach((oldScript) => {
+      // Ignore JSON data payloads (e.g. versus-data-payload)
+      if (oldScript.type && oldScript.type.includes('json')) {
+        return
+      }
+
       const newScript = document.createElement('script')
       Array.from(oldScript.attributes).forEach((attr) => {
         newScript.setAttribute(attr.name, attr.value)
@@ -58,10 +63,26 @@ export const StaticPage: React.FC<StaticPageProps> = ({ pageName }) => {
       if (oldScript.src) {
         newScript.src = oldScript.src
       } else {
-        newScript.textContent = oldScript.textContent
+        let code = oldScript.textContent || ''
+        // Ensure DOMContentLoaded listeners execute in React SPA
+        code = code.replace(
+          /document\.addEventListener\(\s*["']DOMContentLoaded["']\s*,\s*(function|\()/g,
+          '(function(cb){ if(document.readyState !== "loading") { setTimeout(cb, 10); } else { document.addEventListener("DOMContentLoaded", cb); } })($1'
+        )
+        newScript.textContent = code
       }
       oldScript.parentNode?.replaceChild(newScript, oldScript)
     })
+
+    // Dispatch lifecycle events to wake up any lingering listeners
+    const timer = setTimeout(() => {
+      document.dispatchEvent(new Event('DOMContentLoaded'))
+      window.dispatchEvent(new Event('DOMContentLoaded'))
+      window.dispatchEvent(new Event('load'))
+      window.dispatchEvent(new Event('resize'))
+    }, 30)
+
+    return () => clearTimeout(timer)
   }, [htmlContent])
 
   // Intercept clicks on internal links to use React Router navigation

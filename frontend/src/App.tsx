@@ -7,6 +7,8 @@ import { DynamicItemPage } from './pages/DynamicItemPage'
 import { ChatPage } from './pages/ChatPage'
 import { StatusPage } from './pages/StatusPage'
 
+import { SearchPage } from './pages/SearchPage'
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -40,8 +42,18 @@ export function App() {
             <Route path="gallery/" element={<StaticPage pageName="gallery" />} />
             <Route path="tools" element={<StaticPage pageName="tools" />} />
             <Route path="tools/" element={<StaticPage pageName="tools" />} />
-            <Route path="search" element={<StaticPage pageName="search" />} />
-            <Route path="search/" element={<StaticPage pageName="search" />} />
+
+            {/* Dedicated Interactive Full-Text Search & Taxonomy */}
+            <Route path="search" element={<SearchPage />} />
+            <Route path="search/" element={<SearchPage />} />
+            <Route path="tags" element={<SearchPage />} />
+            <Route path="tags/" element={<SearchPage />} />
+            <Route path="tags/:tag" element={<SearchPage />} />
+            <Route path="tags/:tag/" element={<SearchPage />} />
+
+            {/* Versus Battles Gallery Sub-Routes */}
+            <Route path="gallery/versus/:slug" element={<DynamicItemPage section="rendered_versus" />} />
+            <Route path="gallery/versus/:slug/" element={<DynamicItemPage section="rendered_versus" />} />
 
             {/* Individual Interactive Items and Articles */}
             <Route path="blogs/:slug" element={<DynamicItemPage section="rendered_posts" />} />
@@ -62,7 +74,7 @@ export function App() {
             <Route path="status/" element={<StatusPage />} />
 
             {/* Fallback */}
-            <Route path="*" element={<StaticPage pageName="blogs" />} />
+            <Route path="*" element={<SearchPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
