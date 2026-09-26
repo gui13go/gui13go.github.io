@@ -56,6 +56,28 @@ export const DynamicItemPage: React.FC<DynamicItemProps> = ({ section }) => {
       }
       oldScript.parentNode?.replaceChild(newScript, oldScript)
     })
+
+    // Inject code copy buttons on code blocks
+    const preBlocks = container.querySelectorAll('pre')
+    preBlocks.forEach((pre) => {
+      if (pre.querySelector('.code-copy-btn')) return
+      const button = document.createElement('button')
+      button.className = 'code-copy-btn'
+      button.textContent = 'Copy'
+      button.setAttribute('aria-label', 'Copy code to clipboard')
+      button.addEventListener('click', (e) => {
+        e.stopPropagation()
+        const code = pre.querySelector('code')?.innerText || pre.innerText
+        navigator.clipboard.writeText(code).then(() => {
+          button.textContent = 'Copied!'
+          setTimeout(() => {
+            button.textContent = 'Copy'
+          }, 2000)
+        })
+      })
+      pre.style.position = 'relative'
+      pre.appendChild(button)
+    })
   }, [htmlContent])
 
   useEffect(() => {

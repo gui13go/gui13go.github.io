@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   Sparkles,
@@ -11,9 +11,16 @@ import {
   Compass,
   Wrench,
   Grid,
-  Server
+  Server,
+  Radio,
+  MapPin,
+  Clock,
+  Calendar,
+  Layers,
+  Cpu
 } from 'lucide-react'
 import { useBackendHealth } from '../hooks/useBackendHealth'
+import { API_BASE_URL } from '../config/api'
 
 interface FeaturedPost {
   title: string
@@ -23,6 +30,7 @@ interface FeaturedPost {
   summary: string
   image: string
   tags: string[]
+  category: 'Security' | 'Linux' | 'OSINT' | 'Architecture'
 }
 
 const FEATURED_POSTS: FeaturedPost[] = [
@@ -31,6 +39,7 @@ const FEATURED_POSTS: FeaturedPost[] = [
     url: '/blogs/the-osint-top10/',
     date: 'Sep 21, 2026',
     readingTime: '18 min read',
+    category: 'OSINT',
     summary:
       'A comprehensive architectural guide demystifying Open-Source Intelligence (OSINT). Exploring intelligence lifecycles, reconnaissance taxonomy, pivotal tooling, strict operational security (OPSEC), sock puppet tradecraft, and legal boundaries for security analysts.',
     image: '/images/osint-top-10-demystifying-intelligence.jpg',
@@ -41,6 +50,7 @@ const FEATURED_POSTS: FeaturedPost[] = [
     url: '/blogs/revolution-os-review/',
     date: 'Sep 19, 2026',
     readingTime: '38 min read',
+    category: 'Linux',
     summary:
       'A review and chronological dissection of 2001 documentary "Revolution OS". Exploring the 30-year collision between hacker ethics and corporate monopolies: Unix, Windows, GNU, the Linux Kernel, GNU Hurd, the FSF, the OSI, Red Hat, Debian, The Cathedral and the Bazaar, the GPL vs. MIT licenses, and the ideological clash between Richard Stallman, Linus Torvalds, Eric S. Raymond, and Bill Gates.',
     image: '/images/revolution-os-documentary-review.jpg',
@@ -52,10 +62,44 @@ const FEATURED_POSTS: FeaturedPost[] = [
     url: '/blogs/weaponizing-the-wordlist-how-automated-dictionary-attacks-probe-and-breach-authentication-endpoints/',
     date: 'Sep 18, 2026',
     readingTime: '41 min read',
+    category: 'Security',
     summary:
       'An exhaustive technical dissection of automated dictionary attacks, distributed password spraying, and offline cryptographic hash cracking. Analyzing how adversary botnets scan IPv4/IPv6 address spaces, probe network daemons (SSH, Web/APIs, Databases, FTP/Mail), weaponize GPU clusters against exfiltrated /etc/shadow hashes, and how systems engineers architect resilient defenses.',
     image: '/images/weaponizing-the-wordlist-automated-dictionary-attacks.jpg',
     tags: ['Security', 'Linux', 'Authentication'],
+  },
+  {
+    title: 'Blameless by Design: A Pragmatic Guide to Incident Response and Post-Mortems',
+    url: '/blogs/blameless-by-design-incident-response-post-mortems/',
+    date: 'Sep 15, 2026',
+    readingTime: '24 min read',
+    category: 'Architecture',
+    summary:
+      'Building fault-tolerant systems and cultural resilience through blameless post-mortems, rigorous incident triage, root cause identification, and observability automation for cloud infrastructure.',
+    image: '/images/blameless_by_design_cover.png',
+    tags: ['SRE', 'Observability', 'Resilience'],
+  },
+  {
+    title: 'Root Watch: Monitoring Privilege, Identity, and Kernel Integrity',
+    url: '/blogs/root-watch-monitoring-privilege-identity-kernel-integrity/',
+    date: 'Sep 12, 2026',
+    readingTime: '32 min read',
+    category: 'Security',
+    summary:
+      'Low-level auditing of UID transitions, sudo privileges, PAM authentication pipelines, eBPF probe tracing, and real-time kernel integrity monitoring on enterprise Linux servers.',
+    image: '/images/root_watch_cover.png',
+    tags: ['Kernel', 'Security', 'eBPF', 'Auditing'],
+  },
+  {
+    title: 'Locking the Gate: Hardening Linux Bastions, SSH, and Firewall Perimeter',
+    url: '/blogs/locking-the-gate/',
+    date: 'Sep 05, 2026',
+    readingTime: '28 min read',
+    category: 'Linux',
+    summary:
+      'Step-by-step cryptographic hardening of OpenSSH daemon configurations, ED25519 key-only authentication, nftables packet filtering, and zero-trust port knocking on Linux edge bastions.',
+    image: '/images/locking_the_gate_cover.png',
+    tags: ['Linux', 'SSH', 'Firewall', 'Hardening'],
   },
 ]
 
@@ -110,8 +154,40 @@ const PORTFOLIO_PILLARS = [
   },
 ]
 
+const FILTER_CATEGORIES = ['All', 'Security', 'Linux', 'OSINT', 'Architecture'] as const
+
 export const HomePage: React.FC = () => {
-  const { isOnline, isOllamaConnected, health } = useBackendHealth()
+  const { isOnline, isOllamaConnected, health, refetch, isFetching } = useBackendHealth()
+  const [selectedCategory, setSelectedCategory] = useState<string>('All')
+  const [pingLatency, setPingLatency] = useState<number | null>(null)
+  const [isPinging, setIsPinging] = useState(false)
+
+  const handlePingTest = async () => {
+    setIsPinging(true)
+    const start = performance.now()
+    try {
+      const res = await fetch(`${API_BASE_URL}/health?ping=${Date.now()}`, {
+        cache: 'no-store',
+        signal: AbortSignal.timeout(3000),
+      })
+      if (res.ok) {
+        const duration = Math.round(performance.now() - start)
+        setPingLatency(duration)
+        refetch()
+      } else {
+        setPingLatency(null)
+      }
+    } catch {
+      setPingLatency(null)
+    } finally {
+      setIsPinging(false)
+    }
+  }
+
+  const filteredPosts =
+    selectedCategory === 'All'
+      ? FEATURED_POSTS
+      : FEATURED_POSTS.filter((p) => p.category === selectedCategory)
 
   return (
     <main className="main">
@@ -119,6 +195,7 @@ export const HomePage: React.FC = () => {
       <div className="home-hero">
         <div className="hero-glow"></div>
         <div className="hero-content">
+          {/* Status Badge */}
           <div className="hero-badge" style={{ marginBottom: '18px' }}>
             <span
               className="badge-dot"
@@ -144,9 +221,38 @@ export const HomePage: React.FC = () => {
             Hi, I'm <span className="gradient-text">Guilherme <span className="chinese-accent">威廉</span> Viegas</span>
           </h1>
           <p className="hero-subtitle">
-            I engineer intelligent solutions that turn data into compelling digital narratives using creativity,
-            technique, code, and AI.
+            Systems Engineer & Strategic Data Architect bridging Linux systems, zero-trust cloud infrastructure,
+            reproducible data science, and self-hosted AI compute.
           </p>
+
+          {/* Bio Tags & Credentials */}
+          <div
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '10px',
+              marginTop: '16px',
+              fontSize: '0.85rem',
+              color: 'var(--secondary)',
+            }}
+          >
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+              <MapPin style={{ width: '14px', height: '14px', color: 'var(--theme-accent)' }} />
+              Lisbon, Portugal
+            </span>
+            <span>•</span>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+              <Cpu style={{ width: '14px', height: '14px', color: '#a78bfa' }} />
+              Linux & Virtualization
+            </span>
+            <span>•</span>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+              <Layers style={{ width: '14px', height: '14px', color: '#34d399' }} />
+              Data Architecture & AI
+            </span>
+          </div>
 
           {/* Quick Action Navigation CTAs */}
           <div className="hero-cta-group" style={{ marginTop: '28px' }}>
@@ -195,15 +301,15 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Highlighted Content */}
+      {/* Highlighted Content with Interactive Category Filtering */}
       <div className="home-posts-section">
         <div className="section-header">
           <div className="section-title-wrap">
             <h2 className="section-heading">Highlighted Content</h2>
-            <p className="section-desc">Here are some of the best contents from this website.</p>
+            <p className="section-desc">Deep-dive technical investigations, architecture reviews, and tutorials.</p>
           </div>
           <Link to="/blogs/" className="section-all-link">
-            <span>View all blogs</span>
+            <span>View all 20 blogs</span>
             <svg
               width="16"
               height="16"
@@ -219,8 +325,32 @@ export const HomePage: React.FC = () => {
           </Link>
         </div>
 
+        {/* Category Filter Pills */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '28px' }}>
+          {FILTER_CATEGORIES.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setSelectedCategory(cat)}
+              style={{
+                padding: '6px 14px',
+                borderRadius: '9999px',
+                fontSize: '0.82rem',
+                fontWeight: 600,
+                border: '1px solid',
+                borderColor: selectedCategory === cat ? 'var(--theme-accent)' : 'var(--theme-border)',
+                background: selectedCategory === cat ? 'var(--theme-accent)' : 'var(--entry)',
+                color: selectedCategory === cat ? '#fff' : 'var(--secondary)',
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+              }}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
         <div className="home-posts-grid">
-          {FEATURED_POSTS.map((post, idx) => (
+          {filteredPosts.map((post, idx) => (
             <article key={idx} className="featured-card">
               <Link to={post.url} className="card-cover-link">
                 <div className="card-cover-wrapper">
@@ -236,9 +366,15 @@ export const HomePage: React.FC = () => {
 
               <div className="card-body">
                 <div className="card-meta">
-                  <time>{post.date}</time>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                    <Calendar style={{ width: '13px', height: '13px' }} />
+                    <time>{post.date}</time>
+                  </span>
                   <span className="meta-dot">·</span>
-                  <span>{post.readingTime}</span>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                    <Clock style={{ width: '13px', height: '13px' }} />
+                    <span>{post.readingTime}</span>
+                  </span>
                 </div>
 
                 <h3 className="card-title">
@@ -270,7 +406,7 @@ export const HomePage: React.FC = () => {
         </div>
       </div>
 
-      {/* Mini PC Architecture & Telemetry Section */}
+      {/* Mini PC Architecture & Live Telemetry Card */}
       <section style={{ maxWidth: '960px', margin: '0 auto 40px', padding: '0 20px' }}>
         <div
           style={{
@@ -287,12 +423,12 @@ export const HomePage: React.FC = () => {
             overflow: 'hidden',
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', gap: '18px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '18px', maxWidth: '600px' }}>
             <div
               style={{
-                width: '48px',
-                height: '48px',
-                borderRadius: '12px',
+                width: '52px',
+                height: '52px',
+                borderRadius: '14px',
                 background: isOnline ? 'rgba(52, 211, 153, 0.12)' : 'rgba(244, 63, 94, 0.12)',
                 color: isOnline ? '#34d399' : '#f43f5e',
                 display: 'flex',
@@ -301,21 +437,68 @@ export const HomePage: React.FC = () => {
                 flexShrink: 0,
               }}
             >
-              <Server style={{ width: '24px', height: '24px' }} />
+              <Server style={{ width: '26px', height: '26px' }} />
             </div>
             <div>
-              <h3 style={{ margin: '0 0 4px', fontSize: '1.15rem', fontWeight: 700, color: 'var(--primary)' }}>
-                Hybrid Edge & Mini PC Infrastructure
-              </h3>
-              <p style={{ margin: 0, fontSize: '0.88rem', color: 'var(--secondary)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                <h3 style={{ margin: 0, fontSize: '1.15rem', fontWeight: 700, color: 'var(--primary)' }}>
+                  Hybrid Edge & Mini PC Node
+                </h3>
+                {pingLatency !== null && (
+                  <span
+                    style={{
+                      fontSize: '0.72rem',
+                      fontFamily: 'var(--code-font)',
+                      padding: '2px 8px',
+                      borderRadius: '4px',
+                      background: 'rgba(52, 211, 153, 0.15)',
+                      color: '#34d399',
+                      border: '1px solid rgba(52, 211, 153, 0.3)',
+                    }}
+                  >
+                    {pingLatency}ms
+                  </span>
+                )}
+              </div>
+              <p style={{ margin: 0, fontSize: '0.88rem', color: 'var(--secondary)', lineHeight: 1.5 }}>
                 {isOnline
-                  ? `Active connection to private Linux compute node (${health?.models?.length || 0} models loaded)`
-                  : 'Mini PC is currently powered off or disconnected. Static assets serve from GitHub Pages CDN.'}
+                  ? `Active encrypted link via Cloudflare Tunnel. Ollama running on local GPU (${health?.models?.length || 0} models ready).`
+                  : 'Mini PC is currently powered off. The frontend is operating in resilient CDN fallback mode via GitHub Pages.'}
               </p>
             </div>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <button
+              onClick={handlePingTest}
+              disabled={isPinging || isFetching}
+              title="Ping Mini PC gateway latency"
+              style={{
+                padding: '8px 14px',
+                borderRadius: '8px',
+                background: 'var(--tertiary)',
+                border: '1px solid var(--theme-border)',
+                color: 'var(--primary)',
+                fontSize: '0.84rem',
+                fontWeight: 600,
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                transition: 'all 0.2s ease',
+              }}
+            >
+              <Radio
+                style={{
+                  width: '14px',
+                  height: '14px',
+                  color: isOnline ? '#34d399' : '#f59e0b',
+                  animation: isPinging ? 'spin 1s linear infinite' : 'none',
+                }}
+              />
+              <span>{isPinging ? 'Pinging...' : pingLatency ? `${pingLatency}ms Ping` : 'Ping Node'}</span>
+            </button>
+
             <Link
               to="/status/"
               style={{
@@ -324,7 +507,7 @@ export const HomePage: React.FC = () => {
                 background: 'var(--tertiary)',
                 border: '1px solid var(--theme-border)',
                 color: 'var(--primary)',
-                fontSize: '0.85rem',
+                fontSize: '0.84rem',
                 fontWeight: 600,
                 textDecoration: 'none',
                 display: 'inline-flex',
@@ -335,6 +518,7 @@ export const HomePage: React.FC = () => {
               <Activity style={{ width: '14px', height: '14px' }} />
               <span>Diagnostics</span>
             </Link>
+
             <Link
               to="/ai-chat/"
               style={{
@@ -342,7 +526,7 @@ export const HomePage: React.FC = () => {
                 borderRadius: '8px',
                 background: 'var(--theme-accent-gradient)',
                 color: '#fff',
-                fontSize: '0.85rem',
+                fontSize: '0.84rem',
                 fontWeight: 600,
                 textDecoration: 'none',
                 display: 'inline-flex',

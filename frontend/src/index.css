@@ -225,3 +225,46 @@ html, body {
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25) !important;
   border-color: rgba(96, 165, 250, 0.5) !important;
 }
+
+/* Code block copy button */
+.code-copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 10px;
+  font-size: 0.72rem;
+  font-family: var(--code-font);
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--theme-border);
+  color: var(--secondary);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+  z-index: 10;
+}
+
+.code-copy-btn:hover {
+  background: var(--theme-accent);
+  color: #fff;
+  border-color: var(--theme-accent);
+  transform: translateY(-1px);
+}
+
+/* Smooth page fade transition */
+main {
+  animation: pageFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

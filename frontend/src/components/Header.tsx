@@ -117,6 +117,31 @@ export const Header: React.FC = () => {
     navigate(path)
   }
 
+  const searchInputRef = useRef<HTMLInputElement>(null)
+
+  // Global keyboard shortcuts (/ and Cmd+K / Ctrl+K)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const activeTag = document.activeElement ? document.activeElement.tagName : ''
+      const isInput =
+        activeTag === 'INPUT' ||
+        activeTag === 'TEXTAREA' ||
+        (document.activeElement as HTMLElement)?.isContentEditable
+
+      if (!isInput && (e.key === '/' || ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k'))) {
+        e.preventDefault()
+        searchInputRef.current?.focus()
+        searchInputRef.current?.select()
+      } else if (e.key === 'Escape') {
+        setIsSearching(false)
+        searchInputRef.current?.blur()
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [])
+
   // Close search when clicking outside
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -127,6 +152,25 @@ export const Header: React.FC = () => {
     document.addEventListener('click', handleClickOutside)
     return () => document.removeEventListener('click', handleClickOutside)
   }, [])
+
+  const handleInputKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'ArrowDown') {
+      if (searchResults.length > 0) {
+        e.preventDefault()
+        setSelectedIndex((prev) => (prev + 1) % searchResults.length)
+      }
+    } else if (e.key === 'ArrowUp') {
+      if (searchResults.length > 0) {
+        e.preventDefault()
+        setSelectedIndex((prev) => (prev - 1 + searchResults.length) % searchResults.length)
+      }
+    } else if (e.key === 'Enter') {
+      if (selectedIndex >= 0 && searchResults[selectedIndex]) {
+        e.preventDefault()
+        handleResultClick(searchResults[selectedIndex].permalink)
+      }
+    }
+  }
 
   const navLinks = [
     { to: '/about/', label: 'About' },
@@ -229,14 +273,16 @@ export const Header: React.FC = () => {
               </svg>
             </button>
             <input
+              ref={searchInputRef}
               type="search"
               name="q"
               className="header-search-input"
-              placeholder="Search..."
+              placeholder="Search (Press / or Ctrl+K)..."
               autoComplete="off"
               aria-label="Search site"
               value={searchQuery}
               onChange={(e) => handleSearchInput(e.target.value)}
+              onKeyDown={handleInputKeyDown}
               onFocus={() => {
                 loadSearchIndex()
                 if (searchQuery.trim()) setIsSearching(true)

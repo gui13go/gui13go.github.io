@@ -2,6 +2,9 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import { Header } from './Header'
 import { Footer } from './Footer'
+import { ScrollToTop } from './ScrollToTop'
+import { ReadingProgressBar } from './ReadingProgressBar'
+import { FloatingAIWidget } from './FloatingAIWidget'
 import { useBackendHealth } from '../hooks/useBackendHealth'
 
 export const Layout: React.FC = () => {
@@ -9,6 +12,9 @@ export const Layout: React.FC = () => {
 
   return (
     <>
+      {/* Top Reading Progress Indicator */}
+      <ReadingProgressBar />
+
       {/* Offline resilience banner with graceful notification */}
       {(!isOnline || !isOllamaConnected) && (
         <div className="resilience-banner" role="alert">
@@ -29,6 +35,10 @@ export const Layout: React.FC = () => {
 
       {/* Main Outlet */}
       <Outlet />
+
+      {/* Floating Utilities */}
+      <ScrollToTop />
+      <FloatingAIWidget />
 
       {/* Footer */}
       <Footer />
