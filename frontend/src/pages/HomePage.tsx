@@ -311,7 +311,9 @@ export const HomePage: React.FC = () => {
           </div>
 
           <h1 className="hero-title">
-            Hi, I'm <span className="gradient-text">Guilherme <span className="chinese-accent">威廉</span> Viegas</span>
+            Hi, I'm <span className="gradient-text">Guilherme</span>{' '}
+            <span className="chinese-accent" lang="zh">威廉</span>{' '}
+            <span className="gradient-text">Viegas</span>
           </h1>
           <p className="hero-subtitle">
             Systems Engineer & Strategic Data Architect bridging Linux systems, zero-trust cloud infrastructure,
