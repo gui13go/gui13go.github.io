@@ -1,112 +1,362 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Shield, Cpu, Cloud, ArrowRight, Activity, Sparkles, BookOpen } from 'lucide-react'
+import {
+  Sparkles,
+  Terminal,
+  Activity,
+  ArrowRight,
+  Bot,
+  BookOpen,
+  FileText,
+  Compass,
+  Wrench,
+  Grid,
+  Server
+} from 'lucide-react'
 import { useBackendHealth } from '../hooks/useBackendHealth'
+
+interface FeaturedPost {
+  title: string
+  url: string
+  date: string
+  readingTime: string
+  summary: string
+  image: string
+  tags: string[]
+}
+
+const FEATURED_POSTS: FeaturedPost[] = [
+  {
+    title: 'The OSINT Top 10: Key Concepts to Demystify Open-Source Intelligence',
+    url: '/blogs/the-osint-top10/',
+    date: 'Sep 21, 2026',
+    readingTime: '18 min read',
+    summary:
+      'A comprehensive architectural guide demystifying Open-Source Intelligence (OSINT). Exploring intelligence lifecycles, reconnaissance taxonomy, pivotal tooling, strict operational security (OPSEC), sock puppet tradecraft, and legal boundaries for security analysts.',
+    image: '/images/osint-top-10-demystifying-intelligence.jpg',
+    tags: ['OSINT', 'Security', 'Intelligence'],
+  },
+  {
+    title: 'Revolution OS: Documentary Review',
+    url: '/blogs/revolution-os-review/',
+    date: 'Sep 19, 2026',
+    readingTime: '38 min read',
+    summary:
+      'A review and chronological dissection of 2001 documentary "Revolution OS". Exploring the 30-year collision between hacker ethics and corporate monopolies: Unix, Windows, GNU, the Linux Kernel, GNU Hurd, the FSF, the OSI, Red Hat, Debian, The Cathedral and the Bazaar, the GPL vs. MIT licenses, and the ideological clash between Richard Stallman, Linus Torvalds, Eric S. Raymond, and Bill Gates.',
+    image: '/images/revolution-os-documentary-review.jpg',
+    tags: ['Linux', 'Open Source', 'GNU'],
+  },
+  {
+    title:
+      'Weaponizing the Wordlist: How automated dictionary attacks probe and breach authentication endpoints.',
+    url: '/blogs/weaponizing-the-wordlist-how-automated-dictionary-attacks-probe-and-breach-authentication-endpoints/',
+    date: 'Sep 18, 2026',
+    readingTime: '41 min read',
+    summary:
+      'An exhaustive technical dissection of automated dictionary attacks, distributed password spraying, and offline cryptographic hash cracking. Analyzing how adversary botnets scan IPv4/IPv6 address spaces, probe network daemons (SSH, Web/APIs, Databases, FTP/Mail), weaponize GPU clusters against exfiltrated /etc/shadow hashes, and how systems engineers architect resilient defenses.',
+    image: '/images/weaponizing-the-wordlist-automated-dictionary-attacks.jpg',
+    tags: ['Security', 'Linux', 'Authentication'],
+  },
+]
+
+const PORTFOLIO_PILLARS = [
+  {
+    to: '/agents/',
+    title: 'Agents',
+    icon: Bot,
+    count: 'Reasoning Systems',
+    desc: 'Autonomous agent architectures, cognitive pipelines, memory stores, and Model Context Protocol (MCP) integrations.',
+    color: '#818cf8',
+  },
+  {
+    to: '/blogs/',
+    title: 'Blogs',
+    icon: BookOpen,
+    count: '20 Articles',
+    desc: 'Technical investigations on GNU/Linux, virtualization, kernel security audits, incident response, and distributed systems.',
+    color: '#60a5fa',
+  },
+  {
+    to: '/publications/',
+    title: 'Publications',
+    icon: FileText,
+    count: 'Research Papers',
+    desc: 'Peer-reviewed academic research, reproducible computational pipelines, and technical posters (OSESC).',
+    color: '#f59e0b',
+  },
+  {
+    to: '/geolayers/',
+    title: 'GeoLayers',
+    icon: Compass,
+    count: '10 Interactive Maps',
+    desc: 'Geospatial intelligence, real-time solar terminators, global map projections, and spatial data science simulations.',
+    color: '#34d399',
+  },
+  {
+    to: '/tools/',
+    title: 'Tools',
+    icon: Wrench,
+    count: '5 Simulators',
+    desc: 'Interactive engineering simulators: Pomodoro flow state timer, currency exchange charter, and historical timelines.',
+    color: '#a78bfa',
+  },
+  {
+    to: '/gallery/',
+    title: 'Gallery',
+    icon: Grid,
+    count: '12 Collections',
+    desc: 'Curated technical reference collections: network protocols, computer languages, philosophies, and computing pioneers.',
+    color: '#f472b6',
+  },
+]
 
 export const HomePage: React.FC = () => {
   const { isOnline, isOllamaConnected, health } = useBackendHealth()
 
   return (
-    <div className="space-y-12 py-6">
+    <main className="main">
       {/* Hero Section */}
-      <section className="relative overflow-hidden rounded-2xl bg-gradient-to-b from-indigo-950/40 via-slate-900 to-slate-950 border border-indigo-900/40 p-8 sm:p-12 shadow-2xl">
-        <div className="absolute top-0 right-0 -mr-16 -mt-16 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="max-w-3xl space-y-5 relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-mono">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Hybrid Architecture: GitHub Pages + Local Mini PC</span>
-          </div>
-          <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
-            Guilherme Viegas <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400">
-              Systems Engineer & Researcher
-            </span>
-          </h1>
-          <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-            Exploring GNU/Linux systems, virtualization, Kubernetes, cloud architecture, and self-hosted AI compute nodes. Built with React, TypeScript, and a private zero-trust inference tunnel.
-          </p>
-
-          <div className="flex flex-wrap gap-4 pt-4">
-            <Link
-              to="/ai-chat"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm shadow-lg shadow-indigo-600/30 transition-all hover:translate-y-[-1px]"
-            >
-              <Sparkles className="w-4 h-4" />
-              <span>Launch Mini PC AI</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link
-              to="/blogs"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium text-sm border border-slate-700 transition-colors"
-            >
-              <BookOpen className="w-4 h-4" />
-              <span>Read Articles</span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Architecture Highlights */}
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="p-6 rounded-xl bg-slate-900/60 border border-slate-800 space-y-3">
-          <div className="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
-            <Cloud className="w-5 h-5" />
-          </div>
-          <h3 className="font-semibold text-slate-100 text-base">Static Edge Frontend</h3>
-          <p className="text-xs text-slate-400 leading-relaxed">
-            Vite, React 19, and Tailwind CSS compiled directly into static assets deployed instantly via GitHub Pages. Resilient to workstation offline cycles.
-          </p>
-        </div>
-
-        <div className="p-6 rounded-xl bg-slate-900/60 border border-slate-800 space-y-3">
-          <div className="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
-            <Cpu className="w-5 h-5" />
-          </div>
-          <h3 className="font-semibold text-slate-100 text-base">Self-Hosted Mini PC</h3>
-          <p className="text-xs text-slate-400 leading-relaxed">
-            FastAPI + Ollama server running locally on Linux. Streams real-time tokens over SSE and provides zero-cost private inference with local GPUs.
-          </p>
-        </div>
-
-        <div className="p-6 rounded-xl bg-slate-900/60 border border-slate-800 space-y-3">
-          <div className="w-10 h-10 rounded-lg bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400">
-            <Shield className="w-5 h-5" />
-          </div>
-          <h3 className="font-semibold text-slate-100 text-base">Cloudflare Tunnel</h3>
-          <p className="text-xs text-slate-400 leading-relaxed">
-            Outbound-only encrypted tunnel without opening router ports or exposing home IP addresses. Guarded by in-memory rate limiting.
-          </p>
-        </div>
-      </section>
-
-      {/* Real-time Workstation Card */}
-      <section className="p-6 rounded-xl bg-slate-900/40 border border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-4">
-          <div className={`p-3 rounded-xl ${isOnline ? 'bg-emerald-500/10 text-emerald-400' : 'bg-rose-500/10 text-rose-400'}`}>
-            <Activity className="w-6 h-6" />
-          </div>
-          <div>
-            <h4 className="font-semibold text-slate-200 text-sm">
-              Workstation Hardware Telemetry
-            </h4>
-            <p className="text-xs text-slate-400">
+      <div className="home-hero">
+        <div className="hero-glow"></div>
+        <div className="hero-content">
+          <div className="hero-badge" style={{ marginBottom: '18px' }}>
+            <span
+              className="badge-dot"
+              style={{
+                backgroundColor: isOnline ? (isOllamaConnected ? '#10b981' : '#f59e0b') : '#f43f5e',
+                boxShadow: isOnline
+                  ? isOllamaConnected
+                    ? '0 0 10px #10b981'
+                    : '0 0 10px #f59e0b'
+                  : '0 0 10px #f43f5e',
+              }}
+            />
+            <span>
               {isOnline
-                ? `Active • Connected to local Ollama runtime (${health?.models?.length || 0} models available)`
-                : 'Offline • Mini PC is either powered off or disconnected from Cloudflare Tunnel'}
-            </p>
-            {isOnline && isOllamaConnected && (
-              <span className="text-[11px] text-emerald-400 font-mono">Inference online & ready</span>
-            )}
+                ? isOllamaConnected
+                  ? `Mini PC AI Online • ${health?.models?.[0] || 'Llama 3.2'} Ready`
+                  : 'Mini PC Workstation Active'
+                : 'Edge CDN Mode • Mini PC Offline'}
+            </span>
+          </div>
+
+          <h1 className="hero-title">
+            Hi, I'm <span className="gradient-text">Guilherme <span className="chinese-accent">威廉</span> Viegas</span>
+          </h1>
+          <p className="hero-subtitle">
+            I engineer intelligent solutions that turn data into compelling digital narratives using creativity,
+            technique, code, and AI.
+          </p>
+
+          {/* Quick Action Navigation CTAs */}
+          <div className="hero-cta-group" style={{ marginTop: '28px' }}>
+            <Link to="/ai-chat/" className="hero-btn primary">
+              <Sparkles style={{ width: '16px', height: '16px' }} />
+              <span>Launch Local AI</span>
+            </Link>
+            <Link to="/blogs/" className="hero-btn secondary">
+              <Terminal style={{ width: '16px', height: '16px' }} />
+              <span>Explore Research</span>
+            </Link>
+            <Link to="/status/" className="hero-btn secondary">
+              <Activity style={{ width: '16px', height: '16px' }} />
+              <span>Node Telemetry</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Portfolio Pillars Hub */}
+      <section style={{ maxWidth: '960px', margin: '0 auto 56px', padding: '0 20px' }}>
+        <div className="section-header" style={{ marginBottom: '24px' }}>
+          <div className="section-title-wrap">
+            <h2 className="section-heading">Engineering & Research Portfolio</h2>
+            <p className="section-desc">Explore technical collections, interactive systems, and spatial intelligence.</p>
           </div>
         </div>
 
-        <Link
-          to="/status"
-          className="text-xs text-indigo-400 hover:text-indigo-300 font-mono inline-flex items-center gap-1.5 underline underline-offset-4"
-        >
-          View Live Diagnostics &rarr;
-        </Link>
+        <div className="gallery-hub-grid" style={{ marginTop: '0' }}>
+          {PORTFOLIO_PILLARS.map((pillar) => {
+            const Icon = pillar.icon
+            return (
+              <Link key={pillar.to} to={pillar.to} className="gallery-hub-card">
+                <div className="gallery-hub-icon" style={{ color: pillar.color, background: `${pillar.color}15` }}>
+                  <Icon style={{ width: '26px', height: '26px' }} />
+                </div>
+                <h2>{pillar.title}</h2>
+                <p>{pillar.desc}</p>
+                <div className="gallery-hub-meta" style={{ color: pillar.color }}>
+                  <span>{pillar.count}</span>
+                  <ArrowRight style={{ width: '14px', height: '14px', marginLeft: '4px' }} />
+                </div>
+              </Link>
+            )
+          })}
+        </div>
       </section>
-    </div>
+
+      {/* Highlighted Content */}
+      <div className="home-posts-section">
+        <div className="section-header">
+          <div className="section-title-wrap">
+            <h2 className="section-heading">Highlighted Content</h2>
+            <p className="section-desc">Here are some of the best contents from this website.</p>
+          </div>
+          <Link to="/blogs/" className="section-all-link">
+            <span>View all blogs</span>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </Link>
+        </div>
+
+        <div className="home-posts-grid">
+          {FEATURED_POSTS.map((post, idx) => (
+            <article key={idx} className="featured-card">
+              <Link to={post.url} className="card-cover-link">
+                <div className="card-cover-wrapper">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    loading="lazy"
+                    className="card-cover-img"
+                  />
+                  <div className="card-cover-gradient"></div>
+                </div>
+              </Link>
+
+              <div className="card-body">
+                <div className="card-meta">
+                  <time>{post.date}</time>
+                  <span className="meta-dot">·</span>
+                  <span>{post.readingTime}</span>
+                </div>
+
+                <h3 className="card-title">
+                  <Link to={post.url}>{post.title}</Link>
+                </h3>
+
+                <p className="card-summary">{post.summary}</p>
+
+                <div className="card-footer">
+                  <div className="card-tags">
+                    {post.tags.map((tag) => (
+                      <span key={tag} className="tag-pill">
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <Link
+                    to={post.url}
+                    className="read-more-link"
+                    aria-label={`Read ${post.title}`}
+                  >
+                    <ArrowRight style={{ width: '16px', height: '16px' }} />
+                  </Link>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      {/* Mini PC Architecture & Telemetry Section */}
+      <section style={{ maxWidth: '960px', margin: '0 auto 40px', padding: '0 20px' }}>
+        <div
+          style={{
+            background: 'var(--entry)',
+            border: '1px solid var(--theme-border)',
+            borderRadius: 'var(--theme-card-radius)',
+            padding: '28px 32px',
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: '20px',
+            position: 'relative',
+            overflow: 'hidden',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '18px' }}>
+            <div
+              style={{
+                width: '48px',
+                height: '48px',
+                borderRadius: '12px',
+                background: isOnline ? 'rgba(52, 211, 153, 0.12)' : 'rgba(244, 63, 94, 0.12)',
+                color: isOnline ? '#34d399' : '#f43f5e',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexShrink: 0,
+              }}
+            >
+              <Server style={{ width: '24px', height: '24px' }} />
+            </div>
+            <div>
+              <h3 style={{ margin: '0 0 4px', fontSize: '1.15rem', fontWeight: 700, color: 'var(--primary)' }}>
+                Hybrid Edge & Mini PC Infrastructure
+              </h3>
+              <p style={{ margin: 0, fontSize: '0.88rem', color: 'var(--secondary)' }}>
+                {isOnline
+                  ? `Active connection to private Linux compute node (${health?.models?.length || 0} models loaded)`
+                  : 'Mini PC is currently powered off or disconnected. Static assets serve from GitHub Pages CDN.'}
+              </p>
+            </div>
+          </div>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <Link
+              to="/status/"
+              style={{
+                padding: '8px 16px',
+                borderRadius: '8px',
+                background: 'var(--tertiary)',
+                border: '1px solid var(--theme-border)',
+                color: 'var(--primary)',
+                fontSize: '0.85rem',
+                fontWeight: 600,
+                textDecoration: 'none',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+              }}
+            >
+              <Activity style={{ width: '14px', height: '14px' }} />
+              <span>Diagnostics</span>
+            </Link>
+            <Link
+              to="/ai-chat/"
+              style={{
+                padding: '8px 16px',
+                borderRadius: '8px',
+                background: 'var(--theme-accent-gradient)',
+                color: '#fff',
+                fontSize: '0.85rem',
+                fontWeight: 600,
+                textDecoration: 'none',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                boxShadow: '0 2px 12px var(--theme-accent-glow)',
+              }}
+            >
+              <Sparkles style={{ width: '14px', height: '14px' }} />
+              <span>Open AI</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
   )
 }

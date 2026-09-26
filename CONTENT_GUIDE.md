@@ -1,22 +1,21 @@
-# Legacy Hugo Markdown Migration Guide
+# Content Management & Local AI Integration Guide
 
-This guide details two primary strategies for migrating your existing content from the legacy Hugo setup (`/home/guigo/Documents/03-gh_pages/content`) into this Vite + React + FastAPI monorepo (`/home/guigo/Documents/05-ghpages-gui13go`).
+This guide details how to add, manage, and extend content across your Vite + React + FastAPI monorepo (`/home/guigo/Documents/05-ghpages-gui13go`).
 
 ---
 
-## Strategy A: Client-Side Static Markdown Loading (Recommended for Offline-First)
+## 1. Client-Side Static Markdown Loading (Offline-First)
 
-Because GitHub Pages hosts static assets, importing Markdown files directly into the frontend ensures your articles remain readable even when your Mini PC is turned off.
+Because GitHub Pages hosts static assets, importing Markdown files directly into the frontend ensures your articles and tools remain readable even when your Mini PC is turned off.
 
-### 1. Structure the Content Folder
-Create a `frontend/src/content/posts/` directory and copy your Hugo markdown files:
+### Structure the Content Folder
+Create a `frontend/src/content/posts/` directory and add your Markdown files:
 
 ```bash
 mkdir -p frontend/src/content/posts
-cp -r /home/guigo/Documents/03-gh_pages/content/blogs/* frontend/src/content/posts/
 ```
 
-### 2. Add Frontmatter & Markdown Parsers
+### Add Frontmatter & Markdown Parsers
 Install lightweight markdown and frontmatter parsers in `frontend`:
 
 ```bash
@@ -24,7 +23,7 @@ cd frontend
 npm install gray-matter react-markdown remark-gfm rehype-highlight
 ```
 
-### 3. Import Markdown Using Vite Glob Imports
+### Import Markdown Using Vite Glob Imports
 Vite supports eager/lazy raw glob imports out of the box:
 
 ```typescript
@@ -57,7 +56,7 @@ export function getAllPosts(): BlogPost[] {
 }
 ```
 
-### 4. Render Inside React Components
+### Render Inside React Components
 ```tsx
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -76,11 +75,11 @@ export function PostDetail({ post }: { post: BlogPost }) {
 
 ---
 
-## Strategy B: Serving via Local FastAPI Backend (Dynamic Content & Search)
+## 2. Serving via Local FastAPI Backend (Dynamic Content & RAG)
 
 If you prefer keeping Markdown files centrally on your Mini PC or indexing them for Retrieval-Augmented Generation (RAG) with Ollama:
 
-### 1. Add Content Route in FastAPI (`backend/main.py`)
+### Add Content Route in FastAPI (`backend/main.py`)
 ```python
 import os
 import frontmatter
@@ -108,5 +107,6 @@ async def list_posts():
     return sorted(posts, key=lambda x: x["date"], reverse=True)
 ```
 
-### 2. Hybrid Recommendation
-- **Best Practice:** Keep static posts compiled on GitHub Pages (Strategy A) for high availability, and use the Mini PC API (Strategy B) for RAG querying (e.g. *"Ask questions about my blog posts using local LLM"*).
+### Hybrid Strategy
+- **High Availability**: Keep static posts compiled on GitHub Pages for guaranteed uptime.
+- **AI Intelligence**: Connect the Mini PC Ollama API (`/api/chat`) for local semantic search, question-answering, and code explanation directly from your documents.

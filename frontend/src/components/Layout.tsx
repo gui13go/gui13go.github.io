@@ -9,7 +9,7 @@ export const Layout: React.FC = () => {
 
   return (
     <>
-      {/* Offline resilience banner matching PaperMod theme */}
+      {/* Offline resilience banner with graceful notification */}
       {(!isOnline || !isOllamaConnected) && (
         <div className="resilience-banner" role="alert">
           <div>
@@ -24,13 +24,13 @@ export const Layout: React.FC = () => {
         </div>
       )}
 
-      {/* Header with Hugo Logo, Instant Search, Theme Toggle, and Navigation Tabs */}
+      {/* Header with Site Brand, Instant Search, Theme Toggle, and Navigation Tabs */}
       <Header />
 
       {/* Main Outlet */}
       <Outlet />
 
-      {/* Footer matching Hugo PaperMod */}
+      {/* Footer */}
       <Footer />
     </>
   )

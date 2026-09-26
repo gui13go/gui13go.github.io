@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { Layout } from './components/Layout'
-import { HugoHomePage } from './pages/HugoHomePage'
+import { HomePage } from './pages/HomePage'
 import { StaticPage } from './pages/StaticPage'
 import { DynamicItemPage } from './pages/DynamicItemPage'
 import { ChatPage } from './pages/ChatPage'
@@ -22,28 +22,28 @@ export function App() {
       <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
           <Route path="/" element={<Layout />}>
-            {/* Home matching exact Hugo Home Hero & Highlighted Content */}
-            <Route index element={<HugoHomePage />} />
+            {/* The Ultimate Portfolio Home Dashboard */}
+            <Route index element={<HomePage />} />
 
-            {/* Main Tabs matching 03-gh_pages */}
-            <Route path="about" element={<StaticPage pageName="about" title="About" />} />
-            <Route path="about/" element={<StaticPage pageName="about" title="About" />} />
-            <Route path="agents" element={<StaticPage pageName="agents" title="Agents" />} />
-            <Route path="agents/" element={<StaticPage pageName="agents" title="Agents" />} />
-            <Route path="blogs" element={<StaticPage pageName="blogs" title="Blogs" />} />
-            <Route path="blogs/" element={<StaticPage pageName="blogs" title="Blogs" />} />
-            <Route path="publications" element={<StaticPage pageName="publications" title="Publications" />} />
-            <Route path="publications/" element={<StaticPage pageName="publications" title="Publications" />} />
-            <Route path="geolayers" element={<StaticPage pageName="geolayers" title="GeoLayers" />} />
-            <Route path="geolayers/" element={<StaticPage pageName="geolayers" title="GeoLayers" />} />
-            <Route path="gallery" element={<StaticPage pageName="gallery" title="Gallery" />} />
-            <Route path="gallery/" element={<StaticPage pageName="gallery" title="Gallery" />} />
-            <Route path="tools" element={<StaticPage pageName="tools" title="Tools" />} />
-            <Route path="tools/" element={<StaticPage pageName="tools" title="Tools" />} />
-            <Route path="search" element={<StaticPage pageName="search" title="Search" />} />
-            <Route path="search/" element={<StaticPage pageName="search" title="Search" />} />
+            {/* Core Portfolio Sections */}
+            <Route path="about" element={<StaticPage pageName="about" />} />
+            <Route path="about/" element={<StaticPage pageName="about" />} />
+            <Route path="agents" element={<StaticPage pageName="agents" />} />
+            <Route path="agents/" element={<StaticPage pageName="agents" />} />
+            <Route path="blogs" element={<StaticPage pageName="blogs" />} />
+            <Route path="blogs/" element={<StaticPage pageName="blogs" />} />
+            <Route path="publications" element={<StaticPage pageName="publications" />} />
+            <Route path="publications/" element={<StaticPage pageName="publications" />} />
+            <Route path="geolayers" element={<StaticPage pageName="geolayers" />} />
+            <Route path="geolayers/" element={<StaticPage pageName="geolayers" />} />
+            <Route path="gallery" element={<StaticPage pageName="gallery" />} />
+            <Route path="gallery/" element={<StaticPage pageName="gallery" />} />
+            <Route path="tools" element={<StaticPage pageName="tools" />} />
+            <Route path="tools/" element={<StaticPage pageName="tools" />} />
+            <Route path="search" element={<StaticPage pageName="search" />} />
+            <Route path="search/" element={<StaticPage pageName="search" />} />
 
-            {/* Individual Item Subpaths */}
+            {/* Individual Interactive Items and Articles */}
             <Route path="blogs/:slug" element={<DynamicItemPage section="rendered_posts" />} />
             <Route path="blogs/:slug/" element={<DynamicItemPage section="rendered_posts" />} />
             <Route path="tools/:slug" element={<DynamicItemPage section="rendered_tools" />} />
@@ -55,14 +55,14 @@ export function App() {
             <Route path="publications/:slug" element={<DynamicItemPage section="rendered_publications" />} />
             <Route path="publications/:slug/" element={<DynamicItemPage section="rendered_publications" />} />
 
-            {/* Next-gen Local AI & Mini PC Diagnostics */}
+            {/* Local AI Gateway & Hardware Telemetry */}
             <Route path="ai-chat" element={<ChatPage />} />
             <Route path="ai-chat/" element={<ChatPage />} />
             <Route path="status" element={<StatusPage />} />
             <Route path="status/" element={<StatusPage />} />
 
             {/* Fallback */}
-            <Route path="*" element={<StaticPage pageName="blogs" title="Blogs" />} />
+            <Route path="*" element={<StaticPage pageName="blogs" />} />
           </Route>
         </Routes>
       </BrowserRouter>

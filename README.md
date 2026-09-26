@@ -1,8 +1,8 @@
 # Gui13go Monorepo: GitHub Pages Edge + Local Mini PC AI Gateway
 
-This monorepo splits your personal hub into:
-1. **Frontend (`frontend/`)**: Static SPA built with **Vite 8 + React 19 + TypeScript + Tailwind CSS**, hosted on **GitHub Pages**.
-2. **Backend (`backend/`)**: Asynchronous gateway built with **FastAPI + SlowAPI + Ollama**, self-hosted on your Linux Mini PC behind an encrypted **Cloudflare Tunnel**.
+A resilient, hybrid split-architecture portfolio & systems engineering platform:
+1. **Frontend (`frontend/`)**: Static SPA built with **Vite 8 + React 19 + TypeScript**, deployed via **GitHub Pages**.
+2. **Backend (`backend/`)**: Asynchronous gateway built with **FastAPI + SlowAPI + Ollama**, self-hosted on a private Linux Mini PC behind an encrypted **Cloudflare Tunnel**.
 
 ---
 
@@ -23,16 +23,16 @@ This monorepo splits your personal hub into:
 │   ├── .env.development           # Local dev endpoint (http://localhost:8000)
 │   ├── .env.production            # Cloudflare Tunnel endpoint (https://api.gui13go.dev)
 │   ├── src/
-│   │   ├── components/             # OfflineBanner, Navbar, Layout
+│   │   ├── components/             # Header, Footer, Layout, OfflineBanner
 │   │   ├── config/                 # Dynamic base URL and model constants
 │   │   ├── hooks/                  # useBackendHealth (30s poll), useStreamingChat (SSE)
-│   │   ├── pages/                  # HomePage, ChatPage, StatusPage, BlogsPage, AboutPage
+│   │   ├── pages/                  # HomePage, ChatPage, StatusPage, StaticPage, DynamicItemPage
 │   │   ├── types/                  # API and messaging types
 │   │   ├── App.tsx                 # Route registration & QueryClientProvider
 │   │   └── main.tsx
 │   ├── package.json
-│   └── vite.config.ts              # Configured base path & Tailwind v4
-├── MIGRATION_GUIDE.md              # Hugo Markdown import instructions
+│   └── vite.config.ts              # Configured base path & styling plugins
+├── CONTENT_GUIDE.md                # Content addition & Markdown guide
 └── README.md
 ```
 
@@ -87,7 +87,7 @@ npm run build
 
 ## 3. GitHub Pages Deployment
 
-The automated pipeline at [deploy.yml](file:///home/guigo/Documents/05-ghpages-gui13go/.github/workflows/deploy.yml) automatically:
+The automated pipeline at [.github/workflows/deploy.yml](.github/workflows/deploy.yml) automatically:
 1. Builds the static React SPA on push to `main`.
 2. Copies `dist/index.html` to `dist/404.html` for single-page client routing fallback.
 3. Deploys using official GitHub Pages actions.

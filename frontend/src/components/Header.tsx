@@ -386,7 +386,7 @@ export const Header: React.FC = () => {
           )}
         </button>
 
-        {/* Navigation list matching Hugo PaperMod exact URLs */}
+        {/* Primary navigation menu */}
         <ul id="menu" className={`menu ${mobileMenuOpen ? 'show-menu' : ''}`}>
           {navLinks.map((link) => {
             const isActive =

@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom'
 
 interface StaticPageProps {
   pageName: string
-  title?: string
 }
 
 export const StaticPage: React.FC<StaticPageProps> = ({ pageName }) => {
@@ -15,6 +14,7 @@ export const StaticPage: React.FC<StaticPageProps> = ({ pageName }) => {
   useEffect(() => {
     let isMounted = true
     setLoading(true)
+    window.scrollTo({ top: 0, behavior: 'instant' })
 
     // Fetch the pre-rendered HTML for this page
     fetch(`/rendered_pages/${pageName}.html`)
@@ -24,8 +24,10 @@ export const StaticPage: React.FC<StaticPageProps> = ({ pageName }) => {
       })
       .then((html) => {
         if (isMounted) {
-          // Replace absolute links like https://gui13go.github.io/blogs/... with relative /blogs/...
-          const cleaned = html.replace(/https:\/\/gui13go\.github\.io\//g, '/')
+          // Normalize links to use local SPA routes
+          const cleaned = html
+            .replace(/https:\/\/gui13go\.github\.io\//g, '/')
+            .replace(/http:\/\/localhost:1313\//g, '/')
           setHtmlContent(cleaned)
           setLoading(false)
         }
@@ -42,6 +44,26 @@ export const StaticPage: React.FC<StaticPageProps> = ({ pageName }) => {
     }
   }, [pageName])
 
+  // Execute embedded scripts when HTML updates (enables interactive galleries, filters, tools)
+  useEffect(() => {
+    const container = containerRef.current
+    if (!container || !htmlContent) return
+
+    const scripts = Array.from(container.querySelectorAll('script'))
+    scripts.forEach((oldScript) => {
+      const newScript = document.createElement('script')
+      Array.from(oldScript.attributes).forEach((attr) => {
+        newScript.setAttribute(attr.name, attr.value)
+      })
+      if (oldScript.src) {
+        newScript.src = oldScript.src
+      } else {
+        newScript.textContent = oldScript.textContent
+      }
+      oldScript.parentNode?.replaceChild(newScript, oldScript)
+    })
+  }, [htmlContent])
+
   // Intercept clicks on internal links to use React Router navigation
   useEffect(() => {
     const container = containerRef.current
@@ -54,7 +76,7 @@ export const StaticPage: React.FC<StaticPageProps> = ({ pageName }) => {
       const href = target.getAttribute('href')
       if (!href) return
 
-      // If it is an internal anchor / route, navigate smoothly
+      // Handle internal relative paths
       if (href.startsWith('/') && !href.startsWith('//')) {
         e.preventDefault()
         navigate(href)

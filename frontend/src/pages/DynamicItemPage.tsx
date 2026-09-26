@@ -17,6 +17,7 @@ export const DynamicItemPage: React.FC<DynamicItemProps> = ({ section }) => {
     if (!slug) return
     setLoading(true)
     setError(false)
+    window.scrollTo({ top: 0, behavior: 'instant' })
 
     fetch(`/${section}/${slug}.html`)
       .then((res) => {
@@ -24,7 +25,9 @@ export const DynamicItemPage: React.FC<DynamicItemProps> = ({ section }) => {
         return res.text()
       })
       .then((html) => {
-        const cleaned = html.replace(/https:\/\/gui13go\.github\.io\//g, '/')
+        const cleaned = html
+          .replace(/https:\/\/gui13go\.github\.io\//g, '/')
+          .replace(/http:\/\/localhost:1313\//g, '/')
         setHtmlContent(cleaned)
         setLoading(false)
       })
@@ -34,6 +37,26 @@ export const DynamicItemPage: React.FC<DynamicItemProps> = ({ section }) => {
         setLoading(false)
       })
   }, [section, slug])
+
+  // Execute embedded scripts when HTML updates (enables pomodoro, interactive timers, map renders, audio)
+  useEffect(() => {
+    const container = containerRef.current
+    if (!container || !htmlContent) return
+
+    const scripts = Array.from(container.querySelectorAll('script'))
+    scripts.forEach((oldScript) => {
+      const newScript = document.createElement('script')
+      Array.from(oldScript.attributes).forEach((attr) => {
+        newScript.setAttribute(attr.name, attr.value)
+      })
+      if (oldScript.src) {
+        newScript.src = oldScript.src
+      } else {
+        newScript.textContent = oldScript.textContent
+      }
+      oldScript.parentNode?.replaceChild(newScript, oldScript)
+    })
+  }, [htmlContent])
 
   useEffect(() => {
     const container = containerRef.current
