@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
-  Sparkles,
   Terminal,
   Activity,
   ArrowRight,
@@ -351,11 +350,7 @@ export const HomePage: React.FC = () => {
 
           {/* Quick Action Navigation CTAs */}
           <div className="hero-cta-group" style={{ marginTop: '28px' }}>
-            <Link to="/ai-chat/" className="hero-btn primary">
-              <Sparkles style={{ width: '16px', height: '16px' }} />
-              <span>Launch Local AI</span>
-            </Link>
-            <Link to="/blogs/" className="hero-btn secondary">
+            <Link to="/blogs/" className="hero-btn primary">
               <Terminal style={{ width: '16px', height: '16px' }} />
               <span>Explore Research</span>
             </Link>
@@ -842,27 +837,7 @@ export const HomePage: React.FC = () => {
               }}
             >
               <Activity style={{ width: '14px', height: '14px' }} />
-              <span>Diagnostics</span>
-            </Link>
-
-            <Link
-              to="/ai-chat/"
-              style={{
-                padding: '8px 16px',
-                borderRadius: '8px',
-                background: 'var(--theme-accent-gradient)',
-                color: '#fff',
-                fontSize: '0.84rem',
-                fontWeight: 600,
-                textDecoration: 'none',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '6px',
-                boxShadow: '0 2px 12px var(--theme-accent-glow)',
-              }}
-            >
-              <Sparkles style={{ width: '14px', height: '14px' }} />
-              <span>Open AI</span>
+              <span>Full Diagnostics</span>
             </Link>
           </div>
         </div>

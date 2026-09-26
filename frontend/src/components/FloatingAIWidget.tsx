@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { Sparkles, X, Send, Bot, Maximize2, RefreshCw } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Sparkles, X, Send, Bot, RefreshCw } from 'lucide-react'
 import { useBackendHealth } from '../hooks/useBackendHealth'
 import { useStreamingChat } from '../hooks/useStreamingChat'
 
@@ -124,20 +123,6 @@ export const FloatingAIWidget: React.FC = () => {
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <Link
-                to="/ai-chat/"
-                onClick={() => setIsOpen(false)}
-                title="Expand to Fullscreen Chat"
-                style={{
-                  padding: '4px',
-                  color: 'var(--secondary)',
-                  borderRadius: '6px',
-                  display: 'flex',
-                  alignItems: 'center',
-                }}
-              >
-                <Maximize2 style={{ width: '15px', height: '15px' }} />
-              </Link>
               <button
                 onClick={() => setIsOpen(false)}
                 aria-label="Close"

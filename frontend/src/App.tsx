@@ -4,7 +4,6 @@ import { Layout } from './components/Layout'
 import { HomePage } from './pages/HomePage'
 import { StaticPage } from './pages/StaticPage'
 import { DynamicItemPage } from './pages/DynamicItemPage'
-import { ChatPage } from './pages/ChatPage'
 import { StatusPage } from './pages/StatusPage'
 
 import { SearchPage } from './pages/SearchPage'
@@ -67,9 +66,7 @@ export function App() {
             <Route path="publications/:slug" element={<DynamicItemPage section="rendered_publications" />} />
             <Route path="publications/:slug/" element={<DynamicItemPage section="rendered_publications" />} />
 
-            {/* Local AI Gateway & Hardware Telemetry */}
-            <Route path="ai-chat" element={<ChatPage />} />
-            <Route path="ai-chat/" element={<ChatPage />} />
+            {/* Hardware Telemetry & Node Status */}
             <Route path="status" element={<StatusPage />} />
             <Route path="status/" element={<StatusPage />} />
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Terminal, Cpu, BookOpen, User, Sparkles, Activity } from 'lucide-react'
+import { Terminal, Cpu, BookOpen, User, Activity } from 'lucide-react'
 import { useBackendHealth } from '../hooks/useBackendHealth'
 
 export const Navbar: React.FC = () => {
@@ -10,7 +10,6 @@ export const Navbar: React.FC = () => {
   const navItems = [
     { path: '/', label: 'Home', icon: Terminal },
     { path: '/blogs', label: 'Blogs', icon: BookOpen },
-    { path: '/ai-chat', label: 'Local AI', icon: Sparkles },
     { path: '/status', label: 'Node Status', icon: Activity },
     { path: '/about', label: 'About', icon: User },
   ]

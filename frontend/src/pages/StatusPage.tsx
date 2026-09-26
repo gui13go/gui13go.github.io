@@ -11,7 +11,6 @@ import {
   ShieldCheck,
   Zap,
   Terminal,
-  Sparkles,
 } from 'lucide-react'
 import { useBackendHealth } from '../hooks/useBackendHealth'
 import { API_BASE_URL } from '../config/api'
@@ -498,25 +497,6 @@ export const StatusPage: React.FC = () => {
 
       {/* Quick Action Navigation */}
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
-        <Link
-          to="/ai-chat/"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '6px',
-            padding: '10px 20px',
-            borderRadius: '8px',
-            background: 'var(--theme-accent-gradient)',
-            color: '#fff',
-            textDecoration: 'none',
-            fontSize: '0.88rem',
-            fontWeight: 600,
-            boxShadow: '0 2px 12px var(--theme-accent-glow)',
-          }}
-        >
-          <Sparkles style={{ width: '16px', height: '16px' }} />
-          <span>Launch AI Inference Interface</span>
-        </Link>
         <Link
           to="/blogs/locking-the-gate/"
           style={{

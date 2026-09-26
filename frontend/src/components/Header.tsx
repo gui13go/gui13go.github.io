@@ -446,11 +446,11 @@ export const Header: React.FC = () => {
               </li>
             )
           })}
-          {/* Mini PC status badge / AI trigger link */}
+          {/* Mini PC status badge */}
           <li>
             <Link
-              to="/ai-chat/"
-              title="Local Mini PC AI Inference"
+              to="/status/"
+              title="Mini PC Diagnostics & Telemetry"
               className="ai-gateway-link"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -475,7 +475,7 @@ export const Header: React.FC = () => {
                     display: 'inline-block',
                   }}
                 />
-                AI Chat
+                Status
               </span>
             </Link>
           </li>
