@@ -223,6 +223,15 @@ footer.footer,
   color: var(--theme-accent) !important;
 }
 
+@media (max-width: 640px) {
+  .footer-inner {
+    flex-direction: column !important;
+    text-align: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
+  }
+}
+
 /* Featured card smooth transitions */
 .featured-card {
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease !important;
