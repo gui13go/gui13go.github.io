@@ -1,0 +1,194 @@
+[
+  {
+    "id": "facts-1",
+    "name": "the origins of airflow",
+    "title": "the origins of airflow",
+    "year": 2014,
+    "sortYear": 2014,
+    "sortName": "the origins of airflow",
+    "description": "airbnb developed the first version of apache airflow.",
+    "image": "/images/facts/airflow_airbnb.png",
+    "zoomSrc": "/images/facts/airflow_airbnb.png",
+    "zoomTitle": "The Origins of Airflow",
+    "zoomMeta": "Technology",
+    "zoomCaption": "Originally created by Maxime Beauchemin at Airbnb in 2014, Airflow was designed to manage the company's increasingly complex data pipelines. It was open-sourced in 2015 and became a top-level project at the Apache Software Foundation in 2019. It is now the industry standard for programmatic workflow orchestration.",
+    "dataset": {
+      "data-name": "the origins of airflow",
+      "data-content": "airbnb developed the first version of apache airflow.",
+      "data-details": "originally created by maxime beauchemin at airbnb in 2014, airflow was designed to manage the company's increasingly complex data pipelines. it was open-sourced in 2015 and became a top-level project at the apache software foundation in 2019. it is now the industry standard for programmatic workflow orchestration.",
+      "data-category": "technology"
+    },
+    "classes": [
+      "fact-card"
+    ],
+    "html": "<div class=\"fact-img-wrapper gallery-zoomable\" data-zoom-caption=\"Originally created by Maxime Beauchemin at Airbnb in 2014, Airflow was designed to manage the company's increasingly complex data pipelines. It was open-sourced in 2015 and became a top-level project at the Apache Software Foundation in 2019. It is now the industry standard for programmatic workflow orchestration.\" data-zoom-meta=\"Technology\" data-zoom-src=\"/images/facts/airflow_airbnb.png\" data-zoom-title=\"The Origins of Airflow\" title=\"Click to view full image\"><img alt=\"The Origins of Airflow\" loading=\"lazy\" onerror='this.onerror=null,this.parentElement.style.display=\"none\"' src=\"/images/facts/airflow_airbnb.png\"/><div class=\"fact-category-badge\">Technology</div><div class=\"fact-img-overlay\"><svg class=\"zoom-indicator-icon\" fill=\"none\" height=\"22\" stroke=\"currentColor\" stroke-width=\"2\" viewbox=\"0 0 24 24\" width=\"22\"><circle cx=\"11\" cy=\"11\" r=\"8\"></circle><line x1=\"21\" x2=\"16.65\" y1=\"21\" y2=\"16.65\"></line><line x1=\"11\" x2=\"11\" y1=\"8\" y2=\"14\"></line><line x1=\"8\" x2=\"14\" y1=\"11\" y2=\"11\"></line></svg></div></div><div class=\"fact-card-content\"><div class=\"fact-top-row\"><h2 class=\"fact-title\">The Origins of Airflow</h2><div class=\"fact-badges-row\"><span class=\"fact-year-badge\">2014</span></div></div><div class=\"fact-core-box\"><p class=\"fact-content-text\">Airbnb developed the first version of Apache Airflow.</p></div><div class=\"fact-details-box\"><span class=\"fact-section-label\">Deeper Insight:</span><p class=\"fact-details-text\">Originally created by Maxime Beauchemin at Airbnb in 2014, Airflow was designed to manage the company's increasingly complex data pipelines. It was open-sourced in 2015 and became a top-level project at the Apache Software Foundation in 2019. It is now the industry standard for programmatic workflow orchestration.</p></div></div>"
+  },
+  {
+    "id": "facts-2",
+    "name": "google's gift to the cloud",
+    "title": "google's gift to the cloud",
+    "year": 2014,
+    "sortYear": 2014,
+    "sortName": "google's gift to the cloud",
+    "description": "kubernetes was created by google.",
+    "image": "/images/facts/kubernetes_google.png",
+    "zoomSrc": "/images/facts/kubernetes_google.png",
+    "zoomTitle": "Google's Gift to the Cloud",
+    "zoomMeta": "Technology",
+    "zoomCaption": "Based on Google's internal container orchestrator, 'Borg', Kubernetes (often called K8s) was released as an open-source project in 2014. Google donated it to the Cloud Native Computing Foundation (CNCF) as a seed project. Today, it powers the infrastructure of almost every major tech company in the world.",
+    "dataset": {
+      "data-name": "google's gift to the cloud",
+      "data-content": "kubernetes was created by google.",
+      "data-details": "based on google's internal container orchestrator, 'borg', kubernetes (often called k8s) was released as an open-source project in 2014. google donated it to the cloud native computing foundation (cncf) as a seed project. today, it powers the infrastructure of almost every major tech company in the world.",
+      "data-category": "technology"
+    },
+    "classes": [
+      "fact-card"
+    ],
+    "html": "<div class=\"fact-img-wrapper gallery-zoomable\" data-zoom-caption=\"Based on Google's internal container orchestrator, 'Borg', Kubernetes (often called K8s) was released as an open-source project in 2014. Google donated it to the Cloud Native Computing Foundation (CNCF) as a seed project. Today, it powers the infrastructure of almost every major tech company in the world.\" data-zoom-meta=\"Technology\" data-zoom-src=\"/images/facts/kubernetes_google.png\" data-zoom-title=\"Google's Gift to the Cloud\" title=\"Click to view full image\"><img alt=\"Google's Gift to the Cloud\" loading=\"lazy\" onerror='this.onerror=null,this.parentElement.style.display=\"none\"' src=\"/images/facts/kubernetes_google.png\"/><div class=\"fact-category-badge\">Technology</div><div class=\"fact-img-overlay\"><svg class=\"zoom-indicator-icon\" fill=\"none\" height=\"22\" stroke=\"currentColor\" stroke-width=\"2\" viewbox=\"0 0 24 24\" width=\"22\"><circle cx=\"11\" cy=\"11\" r=\"8\"></circle><line x1=\"21\" x2=\"16.65\" y1=\"21\" y2=\"16.65\"></line><line x1=\"11\" x2=\"11\" y1=\"8\" y2=\"14\"></line><line x1=\"8\" x2=\"14\" y1=\"11\" y2=\"11\"></line></svg></div></div><div class=\"fact-card-content\"><div class=\"fact-top-row\"><h2 class=\"fact-title\">Google's Gift to the Cloud</h2><div class=\"fact-badges-row\"><span class=\"fact-year-badge\">2014</span></div></div><div class=\"fact-core-box\"><p class=\"fact-content-text\">Kubernetes was created by Google.</p></div><div class=\"fact-details-box\"><span class=\"fact-section-label\">Deeper Insight:</span><p class=\"fact-details-text\">Based on Google's internal container orchestrator, 'Borg', Kubernetes (often called K8s) was released as an open-source project in 2014. Google donated it to the Cloud Native Computing Foundation (CNCF) as a seed project. Today, it powers the infrastructure of almost every major tech company in the world.</p></div></div>"
+  },
+  {
+    "id": "facts-3",
+    "name": "coffee-monitoring webcam",
+    "title": "coffee-monitoring webcam",
+    "year": 1991,
+    "sortYear": 1991,
+    "sortName": "coffee-monitoring webcam",
+    "description": "the first webcam was created to monitor a coffee pot.",
+    "image": "/images/facts/first_webcam_coffee.png",
+    "zoomSrc": "/images/facts/first_webcam_coffee.png",
+    "zoomTitle": "Coffee-Monitoring Webcam",
+    "zoomMeta": "Technology",
+    "zoomCaption": "In 1991, researchers at the University of Cambridge's Computer Laboratory set up a camera pointed at the Trojan Room coffee pot. They wanted to see if the pot was full before making the trip to the breakroom. The camera provided a 128x128 grayscale image that was eventually broadcast to the web in 1993.",
+    "dataset": {
+      "data-name": "coffee-monitoring webcam",
+      "data-content": "the first webcam was created to monitor a coffee pot.",
+      "data-details": "in 1991, researchers at the university of cambridge's computer laboratory set up a camera pointed at the trojan room coffee pot. they wanted to see if the pot was full before making the trip to the breakroom. the camera provided a 128x128 grayscale image that was eventually broadcast to the web in 1993.",
+      "data-category": "technology"
+    },
+    "classes": [
+      "fact-card"
+    ],
+    "html": "<div class=\"fact-img-wrapper gallery-zoomable\" data-zoom-caption=\"In 1991, researchers at the University of Cambridge's Computer Laboratory set up a camera pointed at the Trojan Room coffee pot. They wanted to see if the pot was full before making the trip to the breakroom. The camera provided a 128x128 grayscale image that was eventually broadcast to the web in 1993.\" data-zoom-meta=\"Technology\" data-zoom-src=\"/images/facts/first_webcam_coffee.png\" data-zoom-title=\"Coffee-Monitoring Webcam\" title=\"Click to view full image\"><img alt=\"Coffee-Monitoring Webcam\" loading=\"lazy\" onerror='this.onerror=null,this.parentElement.style.display=\"none\"' src=\"/images/facts/first_webcam_coffee.png\"/><div class=\"fact-category-badge\">Technology</div><div class=\"fact-img-overlay\"><svg class=\"zoom-indicator-icon\" fill=\"none\" height=\"22\" stroke=\"currentColor\" stroke-width=\"2\" viewbox=\"0 0 24 24\" width=\"22\"><circle cx=\"11\" cy=\"11\" r=\"8\"></circle><line x1=\"21\" x2=\"16.65\" y1=\"21\" y2=\"16.65\"></line><line x1=\"11\" x2=\"11\" y1=\"8\" y2=\"14\"></line><line x1=\"8\" x2=\"14\" y1=\"11\" y2=\"11\"></line></svg></div></div><div class=\"fact-card-content\"><div class=\"fact-top-row\"><h2 class=\"fact-title\">Coffee-Monitoring Webcam</h2><div class=\"fact-badges-row\"><span class=\"fact-year-badge\">1991</span></div></div><div class=\"fact-core-box\"><p class=\"fact-content-text\">The first webcam was created to monitor a coffee pot.</p></div><div class=\"fact-details-box\"><span class=\"fact-section-label\">Deeper Insight:</span><p class=\"fact-details-text\">In 1991, researchers at the University of Cambridge's Computer Laboratory set up a camera pointed at the Trojan Room coffee pot. They wanted to see if the pot was full before making the trip to the breakroom. The camera provided a 128x128 grayscale image that was eventually broadcast to the web in 1993.</p></div></div>"
+  },
+  {
+    "id": "facts-4",
+    "name": "the first 'bug'",
+    "title": "the first 'bug'",
+    "year": 1947,
+    "sortYear": 1947,
+    "sortName": "the first 'bug'",
+    "description": "the first computer bug was an actual moth.",
+    "image": "/images/facts/first_bug_moth.png",
+    "zoomSrc": "/images/facts/first_bug_moth.png",
+    "zoomTitle": "The First 'Bug'",
+    "zoomMeta": "Computing History",
+    "zoomCaption": "On September 9, 1947, engineers working on the Harvard Mark II computer found a moth stuck in a relay, which was causing the machine to malfunction. They taped the moth into their logbook with the note: 'First actual case of bug being found.' While the term 'bug' had been used for mechanical flaws before, this popularized it in computing.",
+    "dataset": {
+      "data-name": "the first 'bug'",
+      "data-content": "the first computer bug was an actual moth.",
+      "data-details": "on september 9, 1947, engineers working on the harvard mark ii computer found a moth stuck in a relay, which was causing the machine to malfunction. they taped the moth into their logbook with the note: 'first actual case of bug being found.' while the term 'bug' had been used for mechanical flaws before, this popularized it in computing.",
+      "data-category": "computing history"
+    },
+    "classes": [
+      "fact-card"
+    ],
+    "html": "<div class=\"fact-img-wrapper gallery-zoomable\" data-zoom-caption=\"On September 9, 1947, engineers working on the Harvard Mark II computer found a moth stuck in a relay, which was causing the machine to malfunction. They taped the moth into their logbook with the note: 'First actual case of bug being found.' While the term 'bug' had been used for mechanical flaws before, this popularized it in computing.\" data-zoom-meta=\"Computing History\" data-zoom-src=\"/images/facts/first_bug_moth.png\" data-zoom-title=\"The First 'Bug'\" title=\"Click to view full image\"><img alt=\"The First 'Bug'\" loading=\"lazy\" onerror='this.onerror=null,this.parentElement.style.display=\"none\"' src=\"/images/facts/first_bug_moth.png\"/><div class=\"fact-category-badge\">Computing History</div><div class=\"fact-img-overlay\"><svg class=\"zoom-indicator-icon\" fill=\"none\" height=\"22\" stroke=\"currentColor\" stroke-width=\"2\" viewbox=\"0 0 24 24\" width=\"22\"><circle cx=\"11\" cy=\"11\" r=\"8\"></circle><line x1=\"21\" x2=\"16.65\" y1=\"21\" y2=\"16.65\"></line><line x1=\"11\" x2=\"11\" y1=\"8\" y2=\"14\"></line><line x1=\"8\" x2=\"14\" y1=\"11\" y2=\"11\"></line></svg></div></div><div class=\"fact-card-content\"><div class=\"fact-top-row\"><h2 class=\"fact-title\">The First 'Bug'</h2><div class=\"fact-badges-row\"><span class=\"fact-year-badge\">1947</span></div></div><div class=\"fact-core-box\"><p class=\"fact-content-text\">The first computer bug was an actual moth.</p></div><div class=\"fact-details-box\"><span class=\"fact-section-label\">Deeper Insight:</span><p class=\"fact-details-text\">On September 9, 1947, engineers working on the Harvard Mark II computer found a moth stuck in a relay, which was causing the machine to malfunction. They taped the moth into their logbook with the note: 'First actual case of bug being found.' While the term 'bug' had been used for mechanical flaws before, this popularized it in computing.</p></div></div>"
+  },
+  {
+    "id": "facts-5",
+    "name": "the first programmer",
+    "title": "the first programmer",
+    "year": 1843,
+    "sortYear": 1843,
+    "sortName": "the first programmer",
+    "description": "ada lovelace is considered the first computer programmer.",
+    "image": "/images/facts/ada_lovelace.png",
+    "zoomSrc": "/images/facts/ada_lovelace.png",
+    "zoomTitle": "The First Programmer",
+    "zoomMeta": "Mathematics & History",
+    "zoomCaption": "The daughter of Lord Byron, Ada Lovelace was a brilliant mathematician who worked with Charles Babbage on his 'Analytical Engine'. In 1843, she wrote an algorithm for the machine to calculate Bernoulli numbers, recognizing that the engine could do more than just pure calculation—it could manipulate any symbols according to rules.",
+    "dataset": {
+      "data-name": "the first programmer",
+      "data-content": "ada lovelace is considered the first computer programmer.",
+      "data-details": "the daughter of lord byron, ada lovelace was a brilliant mathematician who worked with charles babbage on his 'analytical engine'. in 1843, she wrote an algorithm for the machine to calculate bernoulli numbers, recognizing that the engine could do more than just pure calculation—it could manipulate any symbols according to rules.",
+      "data-category": "mathematics & history"
+    },
+    "classes": [
+      "fact-card"
+    ],
+    "html": "<div class=\"fact-img-wrapper gallery-zoomable\" data-zoom-caption=\"The daughter of Lord Byron, Ada Lovelace was a brilliant mathematician who worked with Charles Babbage on his 'Analytical Engine'. In 1843, she wrote an algorithm for the machine to calculate Bernoulli numbers, recognizing that the engine could do more than just pure calculation—it could manipulate any symbols according to rules.\" data-zoom-meta=\"Mathematics &amp; History\" data-zoom-src=\"/images/facts/ada_lovelace.png\" data-zoom-title=\"The First Programmer\" title=\"Click to view full image\"><img alt=\"The First Programmer\" loading=\"lazy\" onerror='this.onerror=null,this.parentElement.style.display=\"none\"' src=\"/images/facts/ada_lovelace.png\"/><div class=\"fact-category-badge\">Mathematics &amp; History</div><div class=\"fact-img-overlay\"><svg class=\"zoom-indicator-icon\" fill=\"none\" height=\"22\" stroke=\"currentColor\" stroke-width=\"2\" viewbox=\"0 0 24 24\" width=\"22\"><circle cx=\"11\" cy=\"11\" r=\"8\"></circle><line x1=\"21\" x2=\"16.65\" y1=\"21\" y2=\"16.65\"></line><line x1=\"11\" x2=\"11\" y1=\"8\" y2=\"14\"></line><line x1=\"8\" x2=\"14\" y1=\"11\" y2=\"11\"></line></svg></div></div><div class=\"fact-card-content\"><div class=\"fact-top-row\"><h2 class=\"fact-title\">The First Programmer</h2><div class=\"fact-badges-row\"><span class=\"fact-year-badge\">1843</span></div></div><div class=\"fact-core-box\"><p class=\"fact-content-text\">Ada Lovelace is considered the first computer programmer.</p></div><div class=\"fact-details-box\"><span class=\"fact-section-label\">Deeper Insight:</span><p class=\"fact-details-text\">The daughter of Lord Byron, Ada Lovelace was a brilliant mathematician who worked with Charles Babbage on his 'Analytical Engine'. In 1843, she wrote an algorithm for the machine to calculate Bernoulli numbers, recognizing that the engine could do more than just pure calculation—it could manipulate any symbols according to rules.</p></div></div>"
+  },
+  {
+    "id": "facts-6",
+    "name": "confoederatio helvetica",
+    "title": "confoederatio helvetica",
+    "year": null,
+    "sortYear": 3,
+    "sortName": "confoederatio helvetica",
+    "description": "the real name of switzerland is confoederatio helvetica.",
+    "image": "/images/facts/switzerland.png",
+    "zoomSrc": "/images/facts/switzerland.png",
+    "zoomTitle": "Confoederatio Helvetica",
+    "zoomMeta": "History & Geography",
+    "zoomCaption": "Often abbreviated as 'CH', this Latin name translates to 'Helvetic Confederation'. It was chosen to avoid favoring any of the country's four official languages (German, French, Italian, and Romansh). The name refers to the Helvetii, a Celtic tribe that inhabited the Swiss plateau in antiquity.",
+    "dataset": {
+      "data-name": "confoederatio helvetica",
+      "data-content": "the real name of switzerland is confoederatio helvetica.",
+      "data-details": "often abbreviated as 'ch', this latin name translates to 'helvetic confederation'. it was chosen to avoid favoring any of the country's four official languages (german, french, italian, and romansh). the name refers to the helvetii, a celtic tribe that inhabited the swiss plateau in antiquity.",
+      "data-category": "history & geography"
+    },
+    "classes": [
+      "fact-card"
+    ],
+    "html": "<div class=\"fact-img-wrapper gallery-zoomable\" data-zoom-caption=\"Often abbreviated as 'CH', this Latin name translates to 'Helvetic Confederation'. It was chosen to avoid favoring any of the country's four official languages (German, French, Italian, and Romansh). The name refers to the Helvetii, a Celtic tribe that inhabited the Swiss plateau in antiquity.\" data-zoom-meta=\"History &amp; Geography\" data-zoom-src=\"/images/facts/switzerland.png\" data-zoom-title=\"Confoederatio Helvetica\" title=\"Click to view full image\"><img alt=\"Confoederatio Helvetica\" loading=\"lazy\" onerror='this.onerror=null,this.parentElement.style.display=\"none\"' src=\"/images/facts/switzerland.png\"/><div class=\"fact-category-badge\">History &amp; Geography</div><div class=\"fact-img-overlay\"><svg class=\"zoom-indicator-icon\" fill=\"none\" height=\"22\" stroke=\"currentColor\" stroke-width=\"2\" viewbox=\"0 0 24 24\" width=\"22\"><circle cx=\"11\" cy=\"11\" r=\"8\"></circle><line x1=\"21\" x2=\"16.65\" y1=\"21\" y2=\"16.65\"></line><line x1=\"11\" x2=\"11\" y1=\"8\" y2=\"14\"></line><line x1=\"8\" x2=\"14\" y1=\"11\" y2=\"11\"></line></svg></div></div><div class=\"fact-card-content\"><div class=\"fact-top-row\"><h2 class=\"fact-title\">Confoederatio Helvetica</h2><div class=\"fact-badges-row\"><span class=\"fact-year-badge\">1291</span></div></div><div class=\"fact-core-box\"><p class=\"fact-content-text\">The real name of Switzerland is Confoederatio Helvetica.</p></div><div class=\"fact-details-box\"><span class=\"fact-section-label\">Deeper Insight:</span><p class=\"fact-details-text\">Often abbreviated as 'CH', this Latin name translates to 'Helvetic Confederation'. It was chosen to avoid favoring any of the country's four official languages (German, French, Italian, and Romansh). The name refers to the Helvetii, a Celtic tribe that inhabited the Swiss plateau in antiquity.</p></div></div>"
+  },
+  {
+    "id": "facts-7",
+    "name": "bluetooth's viking heritage",
+    "title": "bluetooth's viking heritage",
+    "year": null,
+    "sortYear": 2,
+    "sortName": "bluetooth's viking heritage",
+    "description": "bluetooth is named after a 10th-century viking king.",
+    "image": "/images/facts/bluetooth_viking.png",
+    "zoomSrc": "/images/facts/bluetooth_viking.png",
+    "zoomTitle": "Bluetooth's Viking Heritage",
+    "zoomMeta": "Technology",
+    "zoomCaption": "The technology is named after King Harald 'Bluetooth' Gormsson, who is famous for uniting Scandinavia—just as Bluetooth was designed to unite PC and cellular industries with a short-range wireless link. Even the Bluetooth logo is a combination of the Younger Futhark runes for his initials: ᚼ (Hagall) and ᛒ (Bjarkan).",
+    "dataset": {
+      "data-name": "bluetooth's viking heritage",
+      "data-content": "bluetooth is named after a 10th-century viking king.",
+      "data-details": "the technology is named after king harald 'bluetooth' gormsson, who is famous for uniting scandinavia—just as bluetooth was designed to unite pc and cellular industries with a short-range wireless link. even the bluetooth logo is a combination of the younger futhark runes for his initials: ᚼ (hagall) and ᛒ (bjarkan).",
+      "data-category": "technology"
+    },
+    "classes": [
+      "fact-card"
+    ],
+    "html": "<div class=\"fact-img-wrapper gallery-zoomable\" data-zoom-caption=\"The technology is named after King Harald 'Bluetooth' Gormsson, who is famous for uniting Scandinavia—just as Bluetooth was designed to unite PC and cellular industries with a short-range wireless link. Even the Bluetooth logo is a combination of the Younger Futhark runes for his initials: ᚼ (Hagall) and ᛒ (Bjarkan).\" data-zoom-meta=\"Technology\" data-zoom-src=\"/images/facts/bluetooth_viking.png\" data-zoom-title=\"Bluetooth's Viking Heritage\" title=\"Click to view full image\"><img alt=\"Bluetooth's Viking Heritage\" loading=\"lazy\" onerror='this.onerror=null,this.parentElement.style.display=\"none\"' src=\"/images/facts/bluetooth_viking.png\"/><div class=\"fact-category-badge\">Technology</div><div class=\"fact-img-overlay\"><svg class=\"zoom-indicator-icon\" fill=\"none\" height=\"22\" stroke=\"currentColor\" stroke-width=\"2\" viewbox=\"0 0 24 24\" width=\"22\"><circle cx=\"11\" cy=\"11\" r=\"8\"></circle><line x1=\"21\" x2=\"16.65\" y1=\"21\" y2=\"16.65\"></line><line x1=\"11\" x2=\"11\" y1=\"8\" y2=\"14\"></line><line x1=\"8\" x2=\"14\" y1=\"11\" y2=\"11\"></line></svg></div></div><div class=\"fact-card-content\"><div class=\"fact-top-row\"><h2 class=\"fact-title\">Bluetooth's Viking Heritage</h2><div class=\"fact-badges-row\"><span class=\"fact-year-badge\">958</span></div></div><div class=\"fact-core-box\"><p class=\"fact-content-text\">Bluetooth is named after a 10th-century Viking king.</p></div><div class=\"fact-details-box\"><span class=\"fact-section-label\">Deeper Insight:</span><p class=\"fact-details-text\">The technology is named after King Harald 'Bluetooth' Gormsson, who is famous for uniting Scandinavia—just as Bluetooth was designed to unite PC and cellular industries with a short-range wireless link. Even the Bluetooth logo is a combination of the Younger Futhark runes for his initials: ᚼ (Hagall) and ᛒ (Bjarkan).</p></div></div>"
+  },
+  {
+    "id": "facts-8",
+    "name": "thucydides trap",
+    "title": "thucydides trap",
+    "year": 2012,
+    "sortYear": 2012,
+    "sortName": "thucydides trap",
+    "description": "when a rising power threatens to displace an established hegemon, structural stress makes war the statistical norm.",
+    "image": "/images/facts/thucydides_trap.png",
+    "zoomSrc": "/images/facts/thucydides_trap.png",
+    "zoomTitle": "Thucydides Trap",
+    "zoomMeta": "History & Geopolitics",
+    "zoomCaption": "Coined by political scientist Graham T. Allison in 2012 from ancient Greek historian Thucydides' chronicle of the Peloponnesian War: 'What made war inevitable was the growth of Athenian power and the fear which this caused in Sparta.' A Harvard Belfer Center study analyzed 16 historical cases over the past 500 years where an emerging power rivaled a ruling power—finding that 12 culminated in catastrophic war.",
+    "dataset": {
+      "data-name": "thucydides trap",
+      "data-content": "when a rising power threatens to displace an established hegemon, structural stress makes war the statistical norm.",
+      "data-details": "coined by political scientist graham t. allison in 2012 from ancient greek historian thucydides' chronicle of the peloponnesian war: 'what made war inevitable was the growth of athenian power and the fear which this caused in sparta.' a harvard belfer center study analyzed 16 historical cases over the past 500 years where an emerging power rivaled a ruling power—finding that 12 culminated in catastrophic war.",
+      "data-category": "history & geopolitics"
+    },
+    "classes": [
+      "fact-card"
+    ],
+    "html": "<div class=\"fact-img-wrapper gallery-zoomable\" data-zoom-caption=\"Coined by political scientist Graham T. Allison in 2012 from ancient Greek historian Thucydides' chronicle of the Peloponnesian War: 'What made war inevitable was the growth of Athenian power and the fear which this caused in Sparta.' A Harvard Belfer Center study analyzed 16 historical cases over the past 500 years where an emerging power rivaled a ruling power—finding that 12 culminated in catastrophic war.\" data-zoom-meta=\"History &amp; Geopolitics\" data-zoom-src=\"/images/facts/thucydides_trap.png\" data-zoom-title=\"Thucydides Trap\" title=\"Click to view full image\"><img alt=\"Thucydides Trap\" loading=\"lazy\" onerror='this.onerror=null,this.parentElement.style.display=\"none\"' src=\"/images/facts/thucydides_trap.png\"/><div class=\"fact-category-badge\">History &amp; Geopolitics</div><div class=\"fact-img-overlay\"><svg class=\"zoom-indicator-icon\" fill=\"none\" height=\"22\" stroke=\"currentColor\" stroke-width=\"2\" viewbox=\"0 0 24 24\" width=\"22\"><circle cx=\"11\" cy=\"11\" r=\"8\"></circle><line x1=\"21\" x2=\"16.65\" y1=\"21\" y2=\"16.65\"></line><line x1=\"11\" x2=\"11\" y1=\"8\" y2=\"14\"></line><line x1=\"8\" x2=\"14\" y1=\"11\" y2=\"11\"></line></svg></div></div><div class=\"fact-card-content\"><div class=\"fact-top-row\"><h2 class=\"fact-title\">Thucydides Trap</h2><div class=\"fact-badges-row\"><span class=\"fact-year-badge\">431 BC</span></div></div><div class=\"fact-core-box\"><p class=\"fact-content-text\">When a rising power threatens to displace an established hegemon, structural stress makes war the statistical norm.</p></div><div class=\"fact-details-box\"><span class=\"fact-section-label\">Deeper Insight:</span><p class=\"fact-details-text\">Coined by political scientist Graham T. Allison in 2012 from ancient Greek historian Thucydides' chronicle of the Peloponnesian War: 'What made war inevitable was the growth of Athenian power and the fear which this caused in Sparta.' A Harvard Belfer Center study analyzed 16 historical cases over the past 500 years where an emerging power rivaled a ruling power—finding that 12 culminated in catastrophic war.</p></div></div>"
+  }
+]

@@ -28,7 +28,13 @@ export const StaticPage: React.FC<StaticPageProps> = ({ pageName }) => {
           const cleaned = html
             .replace(/https:\/\/gui13go\.github\.io\//g, '/')
             .replace(/http:\/\/localhost:1313\//g, '/')
-          setHtmlContent(cleaned)
+
+          const parser = new DOMParser()
+          const doc = parser.parseFromString(cleaned, 'text/html')
+          const mainElement = doc.querySelector('main')
+          const contentToInject = mainElement ? mainElement.innerHTML : cleaned
+
+          setHtmlContent(contentToInject)
           setLoading(false)
         }
       })
@@ -123,7 +129,8 @@ export const StaticPage: React.FC<StaticPageProps> = ({ pageName }) => {
   }
 
   return (
-    <div
+    <main
+      className="main"
       ref={containerRef}
       dangerouslySetInnerHTML={{ __html: htmlContent }}
     />

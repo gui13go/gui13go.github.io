@@ -5,9 +5,10 @@ import { API_BASE_URL } from '../config/api'
 
 export const OfflineBanner: React.FC = () => {
   const { isOnline, isOllamaConnected, refetch, isFetching } = useBackendHealth()
+  const [isDismissed, setIsDismissed] = React.useState(false)
 
-  // If online and inference engine is connected, display nothing
-  if (isOnline && isOllamaConnected) {
+  // If online and inference engine is connected, or dismissed, display nothing
+  if ((isOnline && isOllamaConnected) || isDismissed) {
     return null
   }
 
@@ -29,7 +30,7 @@ export const OfflineBanner: React.FC = () => {
             <>
               <ServerOff className="w-4 h-4 text-amber-400 shrink-0" />
               <span>
-                <strong>Workstation API is currently offline.</strong> AI features are unavailable.
+                <strong>Backend is currently offline.</strong> AI features are unavailable.
               </span>
             </>
           )}
@@ -47,6 +48,27 @@ export const OfflineBanner: React.FC = () => {
           >
             <RefreshCw className={`w-3 h-3 ${isFetching ? 'animate-spin' : ''}`} />
             <span>{isFetching ? 'Checking...' : 'Check Status'}</span>
+          </button>
+          <button
+            onClick={() => setIsDismissed(true)}
+            className="p-1 rounded hover:bg-amber-500/20 text-amber-400/80 hover:text-amber-200 transition-colors cursor-pointer"
+            aria-label="Dismiss offline warning"
+            title="Close notification"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
           </button>
         </div>
       </div>

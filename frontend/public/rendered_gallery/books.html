@@ -1,1750 +1,1439 @@
 <main class="main">
 <div class="gallery-page-container">
-  <header class="gallery-header">
-    <div class="gallery-breadcrumbs">
-      <a href="http://localhost:1313/">Home</a> <span>/</span> <a href="/gallery/">Gallery</a> <span>/</span> <span>Books</span>
-    </div>
-    <h1 class="gallery-title">Books</h1>
-    <p class="gallery-subtitle">A collection of books that have influenced my thinking and career.</p>
-    
-    <nav class="gallery-nav-pills" aria-label="Gallery Sections">
-  <a href="/gallery/personalities/" class="gallery-pill">Personalities</a>
-  <a href="/gallery/quotes/" class="gallery-pill">Quotes</a>
-  <a href="/gallery/arts/" class="gallery-pill">Arts</a>
-  <a href="/gallery/books/" class="gallery-pill active">Books</a>
-  <a href="/gallery/computer-languages/" class="gallery-pill">Languages</a>
-  <a href="/gallery/operating-systems/" class="gallery-pill">Operating Systems</a>
-  <a href="/gallery/network-protocols/" class="gallery-pill">Protocols</a>
-  <a href="/gallery/facts/" class="gallery-pill">Facts</a>
-  <a href="/gallery/laws/" class="gallery-pill">Laws</a>
-  <a href="/gallery/jokes/" class="gallery-pill">Jokes</a>
-  <a href="/gallery/versus/" class="gallery-pill">Versus</a>
-  <a href="/gallery/dictionary/" class="gallery-pill">Dictionary</a>
-  <a href="/gallery/gadgets/" class="gallery-pill">Gadgets</a>
+<header class="gallery-header">
+<div class="gallery-breadcrumbs">
+<a href="http://localhost:1313/">Home</a> <span>/</span> <a href="/gallery/">Gallery</a> <span>/</span> <span>Books</span>
+</div>
+<h1 class="gallery-title">Books</h1>
+<p class="gallery-subtitle">A collection of books that have influenced my thinking and career.</p>
+<nav aria-label="Gallery Sections" class="gallery-nav-pills">
+<a class="gallery-pill" href="/gallery/personalities/">Personalities</a>
+<a class="gallery-pill" href="/gallery/quotes/">Quotes</a>
+<a class="gallery-pill" href="/gallery/arts/">Arts</a>
+<a class="gallery-pill active" href="/gallery/books/">Books</a>
+<a class="gallery-pill" href="/gallery/computer-languages/">Languages</a>
+<a class="gallery-pill" href="/gallery/operating-systems/">Operating Systems</a>
+<a class="gallery-pill" href="/gallery/network-protocols/">Protocols</a>
+<a class="gallery-pill" href="/gallery/facts/">Facts</a>
+<a class="gallery-pill" href="/gallery/laws/">Laws</a>
+<a class="gallery-pill" href="/gallery/jokes/">Jokes</a>
+<a class="gallery-pill" href="/gallery/versus/">Versus</a>
+<a class="gallery-pill" href="/gallery/dictionary/">Dictionary</a>
+<a class="gallery-pill" href="/gallery/gadgets/">Gadgets</a>
 </nav>
+</header>
+<div class="gallery-toolbar">
+<div class="gallery-search-box">
+<svg class="search-icon" fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+</svg>
+<input autocomplete="off" id="bookSearch" placeholder="Search books by title, author, year, topic, or summary..." type="text"/>
+<button aria-label="Clear search" class="clear-search-btn" id="clearBookSearch" style="display:none;" type="button">×</button>
+</div>
 
-  </header>
-
-  
-  <div class="gallery-toolbar">
-    <div class="gallery-search-box">
-      <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-        <circle cx="11" cy="11" r="8"></circle>
-        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-      </svg>
-      <input type="text" id="bookSearch" placeholder="Search books by title, author, year, topic, or summary..." autocomplete="off">
-      <button type="button" id="clearBookSearch" class="clear-search-btn" style="display:none;" aria-label="Clear search">&times;</button>
-    </div>
-    <div class="gallery-count-badge">
+<div class="gallery-sort-box">
+<label class="gallery-sort-label" for="bookSort">
+<svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15">
+<line x1="12" x2="12" y1="5" y2="19"></line>
+<polyline points="19 12 12 19 5 12"></polyline>
+</svg>
+<span>Sort:</span>
+</label>
+<select aria-label="Sort" class="gallery-sort-select" id="bookSort">
+<option selected="" value="date-desc">Newest to Oldest</option>
+<option value="date-asc">Oldest to Newest</option>
+<option value="name-asc">A → Z</option>
+<option value="name-desc">Z → A</option>
+</select>
+</div><div class="gallery-count-badge">
       Showing <span id="visibleCount">32</span> of 32 books
     </div>
-  </div>
-
-  
-  <div class="books-grid" id="booksGrid">
-    <article class="book-card"
-             data-title="ai-driven cybersecurity and threat intelligence"
-             data-authors="iqbal h. sarker"
-             data-year="2024"
-             data-summary="covers ai and ml approaches for automated cybersecurity and threat intelligence."
-             data-keywords="ai cybersecurity threat intelligence machine learning ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/ai_cybersecurity.jpg"
-           data-zoom-title="AI-Driven Cybersecurity and Threat Intelligence"
-           data-zoom-authors="Iqbal H. Sarker"
-           data-zoom-year="2024"
-           data-zoom-caption="Covers AI and ML approaches for automated cybersecurity and threat intelligence.">
-        <img src="/images/books/ai_cybersecurity.jpg" alt="AI-Driven Cybersecurity and Threat Intelligence" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">2024</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">AI-Driven Cybersecurity and Threat Intelligence</h2>
-        <div class="book-authors">Iqbal H. Sarker</div>
-        <p class="book-summary">Covers AI and ML approaches for automated cybersecurity and threat intelligence.</p>
-        <div class="book-tags">
-          <span class="book-tag">#AI</span>
-          <span class="book-tag">#Cybersecurity</span>
-          <span class="book-tag">#Threat Intelligence</span>
-          <span class="book-tag">#Machine Learning</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/ai_cybersecurity.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="nexus: a brief history of information networks from the stone age to ai"
-             data-authors="yuval noah harari"
-             data-year="2024"
-             data-summary="explores the history of information networks and their influence on human societies, from the stone age to ai."
-             data-keywords="history information ai society ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/nexus.png"
-           data-zoom-title="Nexus: A Brief History of Information Networks from the Stone Age to AI"
-           data-zoom-authors="Yuval Noah Harari"
-           data-zoom-year="2024"
-           data-zoom-caption="Explores the history of information networks and their influence on human societies, from the Stone Age to AI.">
-        <img src="/images/books/nexus.png" alt="Nexus: A Brief History of Information Networks from the Stone Age to AI" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">2024</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">Nexus: A Brief History of Information Networks from the Stone Age to AI</h2>
-        <div class="book-authors">Yuval Noah Harari</div>
-        <p class="book-summary">Explores the history of information networks and their influence on human societies, from the Stone Age to AI.</p>
-        <div class="book-tags">
-          <span class="book-tag">#History</span>
-          <span class="book-tag">#Information</span>
-          <span class="book-tag">#AI</span>
-          <span class="book-tag">#Society</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/nexus.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="cloud penetration testing for red teamers"
-             data-authors="kim crawley"
-             data-year="2023"
-             data-summary="a guide to effectively pentesting aws, azure, and gcp applications."
-             data-keywords="cloud security penetration testing red teaming aws azure gcp ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/cloud_pentest.jpg"
-           data-zoom-title="Cloud Penetration Testing for Red Teamers"
-           data-zoom-authors="Kim Crawley"
-           data-zoom-year="2023"
-           data-zoom-caption="A guide to effectively pentesting AWS, Azure, and GCP applications.">
-        <img src="/images/books/cloud_pentest.jpg" alt="Cloud Penetration Testing for Red Teamers" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">2023</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">Cloud Penetration Testing for Red Teamers</h2>
-        <div class="book-authors">Kim Crawley</div>
-        <p class="book-summary">A guide to effectively pentesting AWS, Azure, and GCP applications.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Cloud Security</span>
-          <span class="book-tag">#Penetration Testing</span>
-          <span class="book-tag">#Red Teaming</span>
-          <span class="book-tag">#AWS</span>
-          <span class="book-tag">#Azure</span>
-          <span class="book-tag">#GCP</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/cloud_pentest.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="the coming wave"
-             data-authors="mustafa suleyman"
-             data-year="2023"
-             data-summary="discusses the risks and opportunities presented by ai and other emerging technologies."
-             data-keywords="ai technology future society ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/the_coming_wave.png"
-           data-zoom-title="The Coming Wave"
-           data-zoom-authors="Mustafa Suleyman"
-           data-zoom-year="2023"
-           data-zoom-caption="Discusses the risks and opportunities presented by AI and other emerging technologies.">
-        <img src="/images/books/the_coming_wave.png" alt="The Coming Wave" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">2023</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">The Coming Wave</h2>
-        <div class="book-authors">Mustafa Suleyman</div>
-        <p class="book-summary">Discusses the risks and opportunities presented by AI and other emerging technologies.</p>
-        <div class="book-tags">
-          <span class="book-tag">#AI</span>
-          <span class="book-tag">#Technology</span>
-          <span class="book-tag">#Future</span>
-          <span class="book-tag">#Society</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_coming_wave.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="hacking in the humanities"
-             data-authors="aaron mauro"
-             data-year="2022"
-             data-summary="explores the intersection of cybersecurity, speculative fiction, and the digital humanities."
-             data-keywords="digital humanities cybersecurity speculative fiction ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/hacking_humanities.jpg"
-           data-zoom-title="Hacking in the Humanities"
-           data-zoom-authors="Aaron Mauro"
-           data-zoom-year="2022"
-           data-zoom-caption="Explores the intersection of cybersecurity, speculative fiction, and the digital humanities.">
-        <img src="/images/books/hacking_humanities.jpg" alt="Hacking in the Humanities" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">2022</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">Hacking in the Humanities</h2>
-        <div class="book-authors">Aaron Mauro</div>
-        <p class="book-summary">Explores the intersection of cybersecurity, speculative fiction, and the digital humanities.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Digital Humanities</span>
-          <span class="book-tag">#Cybersecurity</span>
-          <span class="book-tag">#Speculative Fiction</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/hacking_humanities.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="cyberjutsu: cybersecurity for the modern ninja"
-             data-authors="ben mccarty"
-             data-year="2021"
-             data-summary="applies ancient ninja techniques to modern cybersecurity challenges."
-             data-keywords="cybersecurity ninja history strategy ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/cyberjutsu.jpg"
-           data-zoom-title="Cyberjutsu: Cybersecurity for the Modern Ninja"
-           data-zoom-authors="Ben McCarty"
-           data-zoom-year="2021"
-           data-zoom-caption="Applies ancient ninja techniques to modern cybersecurity challenges.">
-        <img src="/images/books/cyberjutsu.jpg" alt="Cyberjutsu: Cybersecurity for the Modern Ninja" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">2021</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">Cyberjutsu: Cybersecurity for the Modern Ninja</h2>
-        <div class="book-authors">Ben McCarty</div>
-        <p class="book-summary">Applies ancient ninja techniques to modern cybersecurity challenges.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Cybersecurity</span>
-          <span class="book-tag">#Ninja</span>
-          <span class="book-tag">#History</span>
-          <span class="book-tag">#Strategy</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/cyberjutsu.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="web security for developers"
-             data-authors="malcolm mcdonald"
-             data-year="2020"
-             data-summary="a practical guide to web security threats and how to defend against them."
-             data-keywords="web security cybersecurity development ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/web_security_for_developers.jpeg"
-           data-zoom-title="Web Security for Developers"
-           data-zoom-authors="Malcolm McDonald"
-           data-zoom-year="2020"
-           data-zoom-caption="A practical guide to web security threats and how to defend against them.">
-        <img src="/images/books/web_security_for_developers.jpeg" alt="Web Security for Developers" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">2020</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">Web Security for Developers</h2>
-        <div class="book-authors">Malcolm McDonald</div>
-        <p class="book-summary">A practical guide to web security threats and how to defend against them.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Web Security</span>
-          <span class="book-tag">#Cybersecurity</span>
-          <span class="book-tag">#Development</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/web_security.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="practical statistics for data scientists"
-             data-authors="peter bruce, andrew bruce, peter gedeck"
-             data-year="2020"
-             data-summary="a comprehensive guide to applying statistical methods to data science problems."
-             data-keywords="data science statistics machine learning python r ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/practical_statistics_for_data_scientists.png"
-           data-zoom-title="Practical Statistics for Data Scientists"
-           data-zoom-authors="Peter Bruce, Andrew Bruce, Peter Gedeck"
-           data-zoom-year="2020"
-           data-zoom-caption="A comprehensive guide to applying statistical methods to data science problems.">
-        <img src="/images/books/practical_statistics_for_data_scientists.png" alt="Practical Statistics for Data Scientists" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">2020</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">Practical Statistics for Data Scientists</h2>
-        <div class="book-authors">Peter Bruce, Andrew Bruce, Peter Gedeck</div>
-        <p class="book-summary">A comprehensive guide to applying statistical methods to data science problems.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Data Science</span>
-          <span class="book-tag">#Statistics</span>
-          <span class="book-tag">#Machine Learning</span>
-          <span class="book-tag">#Python</span>
-          <span class="book-tag">#R</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/practical_statistics_for_data_scientists.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="the art of statistics"
-             data-authors="david spiegelhalter"
-             data-year="2020"
-             data-summary="a guide to statistical thinking, showing how to apply statistical reasoning to real-world problems."
-             data-keywords="statistics data literacy reasoning ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/the_art_of_statistics.png"
-           data-zoom-title="The Art of Statistics"
-           data-zoom-authors="David Spiegelhalter"
-           data-zoom-year="2020"
-           data-zoom-caption="A guide to statistical thinking, showing how to apply statistical reasoning to real-world problems.">
-        <img src="/images/books/the_art_of_statistics.png" alt="The Art of Statistics" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">2020</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">The Art of Statistics</h2>
-        <div class="book-authors">David Spiegelhalter</div>
-        <p class="book-summary">A guide to statistical thinking, showing how to apply statistical reasoning to real-world problems.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Statistics</span>
-          <span class="book-tag">#Data Literacy</span>
-          <span class="book-tag">#Reasoning</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_art_of_statistics.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="the site reliability workbook"
-             data-authors="betsy beyer et al."
-             data-year="2018"
-             data-summary="practical ways to implement site reliability engineering (sre) principles."
-             data-keywords="sre devops reliability google ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/sre_workbook.jpg"
-           data-zoom-title="The Site Reliability Workbook"
-           data-zoom-authors="Betsy Beyer et al."
-           data-zoom-year="2018"
-           data-zoom-caption="Practical ways to implement Site Reliability Engineering (SRE) principles.">
-        <img src="/images/books/sre_workbook.jpg" alt="The Site Reliability Workbook" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">2018</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">The Site Reliability Workbook</h2>
-        <div class="book-authors">Betsy Beyer et al.</div>
-        <p class="book-summary">Practical ways to implement Site Reliability Engineering (SRE) principles.</p>
-        <div class="book-tags">
-          <span class="book-tag">#SRE</span>
-          <span class="book-tag">#DevOps</span>
-          <span class="book-tag">#Reliability</span>
-          <span class="book-tag">#Google</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/sre_workbook.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="life 3.0"
-             data-authors="max tegmark"
-             data-year="2017"
-             data-summary="explores the potential impact of artificial intelligence on the future of life on earth and beyond."
-             data-keywords="ai future technology philosophy ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/life_3_0.png"
-           data-zoom-title="Life 3.0"
-           data-zoom-authors="Max Tegmark"
-           data-zoom-year="2017"
-           data-zoom-caption="Explores the potential impact of artificial intelligence on the future of life on Earth and beyond.">
-        <img src="/images/books/life_3_0.png" alt="Life 3.0" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">2017</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">Life 3.0</h2>
-        <div class="book-authors">Max Tegmark</div>
-        <p class="book-summary">Explores the potential impact of artificial intelligence on the future of life on Earth and beyond.</p>
-        <div class="book-tags">
-          <span class="book-tag">#AI</span>
-          <span class="book-tag">#Future</span>
-          <span class="book-tag">#Technology</span>
-          <span class="book-tag">#Philosophy</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/life_3_0.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="the art of data science"
-             data-authors="roger d. peng, elizabeth matsui"
-             data-year="2016"
-             data-summary="a guide to the process of data analysis for practitioners and managers."
-             data-keywords="data science analysis statistics ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/the_art_of_data_science.png"
-           data-zoom-title="The Art of Data Science"
-           data-zoom-authors="Roger D. Peng, Elizabeth Matsui"
-           data-zoom-year="2016"
-           data-zoom-caption="A guide to the process of data analysis for practitioners and managers.">
-        <img src="/images/books/the_art_of_data_science.png" alt="The Art of Data Science" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">2016</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">The Art of Data Science</h2>
-        <div class="book-authors">Roger D. Peng, Elizabeth Matsui</div>
-        <p class="book-summary">A guide to the process of data analysis for practitioners and managers.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Data Science</span>
-          <span class="book-tag">#Analysis</span>
-          <span class="book-tag">#Statistics</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_art_of_data_science.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="weapons of math destruction"
-             data-authors="cathy o&#39;neil"
-             data-year="2016"
-             data-summary="examines how big data algorithms can reinforce inequality and harm society."
-             data-keywords="data science ethics algorithms society ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/weapons_of_math_destruction.png"
-           data-zoom-title="Weapons of Math Destruction"
-           data-zoom-authors="Cathy O&#39;Neil"
-           data-zoom-year="2016"
-           data-zoom-caption="Examines how big data algorithms can reinforce inequality and harm society.">
-        <img src="/images/books/weapons_of_math_destruction.png" alt="Weapons of Math Destruction" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">2016</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">Weapons of Math Destruction</h2>
-        <div class="book-authors">Cathy O&#39;Neil</div>
-        <p class="book-summary">Examines how big data algorithms can reinforce inequality and harm society.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Data Science</span>
-          <span class="book-tag">#Ethics</span>
-          <span class="book-tag">#Algorithms</span>
-          <span class="book-tag">#Society</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/weapons_of_math_destruction.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="naked statistics"
-             data-authors="charles wheelan"
-             data-year="2014"
-             data-summary="demystifies statistics for the general reader, focusing on the intuition behind statistical analysis."
-             data-keywords="statistics data analysis intuition ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/naked_statistics.png"
-           data-zoom-title="Naked Statistics"
-           data-zoom-authors="Charles Wheelan"
-           data-zoom-year="2014"
-           data-zoom-caption="Demystifies statistics for the general reader, focusing on the intuition behind statistical analysis.">
-        <img src="/images/books/naked_statistics.png" alt="Naked Statistics" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">2014</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">Naked Statistics</h2>
-        <div class="book-authors">Charles Wheelan</div>
-        <p class="book-summary">Demystifies statistics for the general reader, focusing on the intuition behind statistical analysis.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Statistics</span>
-          <span class="book-tag">#Data Analysis</span>
-          <span class="book-tag">#Intuition</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/naked_statistics.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="the functional art"
-             data-authors="alberto cairo"
-             data-year="2012"
-             data-summary="a practical introduction to understanding and utilizing information graphics and data visualization."
-             data-keywords="data visualization design infographics ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/the_functional_art.png"
-           data-zoom-title="The Functional Art"
-           data-zoom-authors="Alberto Cairo"
-           data-zoom-year="2012"
-           data-zoom-caption="A practical introduction to understanding and utilizing information graphics and data visualization.">
-        <img src="/images/books/the_functional_art.png" alt="The Functional Art" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">2012</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">The Functional Art</h2>
-        <div class="book-authors">Alberto Cairo</div>
-        <p class="book-summary">A practical introduction to understanding and utilizing information graphics and data visualization.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Data Visualization</span>
-          <span class="book-tag">#Design</span>
-          <span class="book-tag">#Infographics</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_functional_art.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="thinking, fast and slow"
-             data-authors="daniel kahneman"
-             data-year="2011"
-             data-summary="explores the two systems that drive the way we think: system 1 (fast and intuitive) and system 2 (slow and deliberative)."
-             data-keywords="psychology behavioral economics decision making ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/thinking_fast_and_slow.png"
-           data-zoom-title="Thinking, Fast and Slow"
-           data-zoom-authors="Daniel Kahneman"
-           data-zoom-year="2011"
-           data-zoom-caption="Explores the two systems that drive the way we think: System 1 (fast and intuitive) and System 2 (slow and deliberative).">
-        <img src="/images/books/thinking_fast_and_slow.png" alt="Thinking, Fast and Slow" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">2011</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">Thinking, Fast and Slow</h2>
-        <div class="book-authors">Daniel Kahneman</div>
-        <p class="book-summary">Explores the two systems that drive the way we think: System 1 (fast and intuitive) and System 2 (slow and deliberative).</p>
-        <div class="book-tags">
-          <span class="book-tag">#Psychology</span>
-          <span class="book-tag">#Behavioral Economics</span>
-          <span class="book-tag">#Decision Making</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/thinking_fast_and_slow.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="sapiens: a brief history of humankind"
-             data-authors="yuval noah harari"
-             data-year="2011"
-             data-summary="a survey of the history of humankind from the stone age to the 21st century."
-             data-keywords="history anthropology science ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/sapiens.png"
-           data-zoom-title="Sapiens: A Brief History of Humankind"
-           data-zoom-authors="Yuval Noah Harari"
-           data-zoom-year="2011"
-           data-zoom-caption="A survey of the history of humankind from the Stone Age to the 21st century.">
-        <img src="/images/books/sapiens.png" alt="Sapiens: A Brief History of Humankind" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">2011</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">Sapiens: A Brief History of Humankind</h2>
-        <div class="book-authors">Yuval Noah Harari</div>
-        <p class="book-summary">A survey of the history of humankind from the Stone Age to the 21st century.</p>
-        <div class="book-tags">
-          <span class="book-tag">#History</span>
-          <span class="book-tag">#Anthropology</span>
-          <span class="book-tag">#Science</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/sapiens.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="justice: what&#39;s the right thing to do?"
-             data-authors="michael sandel"
-             data-year="2009"
-             data-summary="explores the role of justice in society and individual lives through philosophical concepts and contemporary dilemmas."
-             data-keywords="philosophy justice ethics politics ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/justice.png"
-           data-zoom-title="Justice: What&#39;s the Right Thing to Do?"
-           data-zoom-authors="Michael Sandel"
-           data-zoom-year="2009"
-           data-zoom-caption="Explores the role of justice in society and individual lives through philosophical concepts and contemporary dilemmas.">
-        <img src="/images/books/justice.png" alt="Justice: What&#39;s the Right Thing to Do?" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">2009</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">Justice: What&#39;s the Right Thing to Do?</h2>
-        <div class="book-authors">Michael Sandel</div>
-        <p class="book-summary">Explores the role of justice in society and individual lives through philosophical concepts and contemporary dilemmas.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Philosophy</span>
-          <span class="book-tag">#Justice</span>
-          <span class="book-tag">#Ethics</span>
-          <span class="book-tag">#Politics</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/justice.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="kicking away the ladder"
-             data-authors="ha-joon chang"
-             data-year="2002"
-             data-summary="examines how developed countries often pressure developing nations to adopt policies different from those they used during their own growth."
-             data-keywords="economics development history politics ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/kicking_away_the_ladder.png"
-           data-zoom-title="Kicking Away the Ladder"
-           data-zoom-authors="Ha-Joon Chang"
-           data-zoom-year="2002"
-           data-zoom-caption="Examines how developed countries often pressure developing nations to adopt policies different from those they used during their own growth.">
-        <img src="/images/books/kicking_away_the_ladder.png" alt="Kicking Away the Ladder" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">2002</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">Kicking Away the Ladder</h2>
-        <div class="book-authors">Ha-Joon Chang</div>
-        <p class="book-summary">Examines how developed countries often pressure developing nations to adopt policies different from those they used during their own growth.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Economics</span>
-          <span class="book-tag">#Development</span>
-          <span class="book-tag">#History</span>
-          <span class="book-tag">#Politics</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/kicking_away_the_ladder.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="the sublime object of ideology"
-             data-authors="slavoj žižek"
-             data-year="1989"
-             data-summary="a psychoanalytic interpretation of ideology, drawing on hegel, marx, and lacan."
-             data-keywords="philosophy ideology psychoanalysis marxism ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/sublime_object_ideology.jpg"
-           data-zoom-title="The Sublime Object of Ideology"
-           data-zoom-authors="Slavoj Žižek"
-           data-zoom-year="1989"
-           data-zoom-caption="A psychoanalytic interpretation of ideology, drawing on Hegel, Marx, and Lacan.">
-        <img src="/images/books/sublime_object_ideology.jpg" alt="The Sublime Object of Ideology" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">1989</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">The Sublime Object of Ideology</h2>
-        <div class="book-authors">Slavoj Žižek</div>
-        <p class="book-summary">A psychoanalytic interpretation of ideology, drawing on Hegel, Marx, and Lacan.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Philosophy</span>
-          <span class="book-tag">#Ideology</span>
-          <span class="book-tag">#Psychoanalysis</span>
-          <span class="book-tag">#Marxism</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/sublime_object_ideology.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="the alchemist"
-             data-authors="paulo coelho"
-             data-year="1988"
-             data-summary="a fable about following one&#39;s dreams and listening to one&#39;s heart. "
-             data-keywords="fiction philosophy adventure ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/the_alchemist.png"
-           data-zoom-title="The Alchemist"
-           data-zoom-authors="Paulo Coelho"
-           data-zoom-year="1988"
-           data-zoom-caption="A fable about following one&#39;s dreams and listening to one&#39;s heart. ">
-        <img src="/images/books/the_alchemist.png" alt="The Alchemist" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">1988</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">The Alchemist</h2>
-        <div class="book-authors">Paulo Coelho</div>
-        <p class="book-summary">A fable about following one&#39;s dreams and listening to one&#39;s heart. </p>
-        <div class="book-tags">
-          <span class="book-tag">#Fiction</span>
-          <span class="book-tag">#Philosophy</span>
-          <span class="book-tag">#Adventure</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_alchemist.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="atlas shrugged"
-             data-authors="ayn rand"
-             data-year="1957"
-             data-summary="a dystopian novel exploring the role of the mind in man&#39;s existence and the morality of rational self-interest."
-             data-keywords="philosophy objectivism fiction dystopia ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/atlas_shrugged.jpg"
-           data-zoom-title="Atlas Shrugged"
-           data-zoom-authors="Ayn Rand"
-           data-zoom-year="1957"
-           data-zoom-caption="A dystopian novel exploring the role of the mind in man&#39;s existence and the morality of rational self-interest.">
-        <img src="/images/books/atlas_shrugged.jpg" alt="Atlas Shrugged" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">1957</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">Atlas Shrugged</h2>
-        <div class="book-authors">Ayn Rand</div>
-        <p class="book-summary">A dystopian novel exploring the role of the mind in man&#39;s existence and the morality of rational self-interest.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Philosophy</span>
-          <span class="book-tag">#Objectivism</span>
-          <span class="book-tag">#Fiction</span>
-          <span class="book-tag">#Dystopia</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/atlas_shrugged.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="how to lie with statistics"
-             data-authors="darrell huff"
-             data-year="1954"
-             data-summary="an introduction to statistics for the general reader, outlining the misuse of statistics and errors in their interpretation."
-             data-keywords="statistics data literacy critical thinking ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/how_to_lie_with_statistics.png"
-           data-zoom-title="How to Lie with Statistics"
-           data-zoom-authors="Darrell Huff"
-           data-zoom-year="1954"
-           data-zoom-caption="An introduction to statistics for the general reader, outlining the misuse of statistics and errors in their interpretation.">
-        <img src="/images/books/how_to_lie_with_statistics.png" alt="How to Lie with Statistics" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">1954</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">How to Lie with Statistics</h2>
-        <div class="book-authors">Darrell Huff</div>
-        <p class="book-summary">An introduction to statistics for the general reader, outlining the misuse of statistics and errors in their interpretation.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Statistics</span>
-          <span class="book-tag">#Data Literacy</span>
-          <span class="book-tag">#Critical Thinking</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/how_to_lie_with_statistics.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="1984"
-             data-authors="george orwell"
-             data-year="1949"
-             data-summary="a dystopian novel about totalitarianism, mass surveillance, and repressive regimentation."
-             data-keywords="fiction dystopia politics totalitarianism ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/1984.png"
-           data-zoom-title="1984"
-           data-zoom-authors="George Orwell"
-           data-zoom-year="1949"
-           data-zoom-caption="A dystopian novel about totalitarianism, mass surveillance, and repressive regimentation.">
-        <img src="/images/books/1984.png" alt="1984" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">1949</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">1984</h2>
-        <div class="book-authors">George Orwell</div>
-        <p class="book-summary">A dystopian novel about totalitarianism, mass surveillance, and repressive regimentation.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Fiction</span>
-          <span class="book-tag">#Dystopia</span>
-          <span class="book-tag">#Politics</span>
-          <span class="book-tag">#Totalitarianism</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/1984.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="man&#39;s search for meaning"
-             data-authors="viktor frankl"
-             data-year="1946"
-             data-summary="chronicles frankl&#39;s experiences in nazi concentration camps and introduces his psychotherapeutic method, logotherapy."
-             data-keywords="psychology philosophy holocaust meaning ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/man_s_search_for_meaning.png"
-           data-zoom-title="Man&#39;s Search for Meaning"
-           data-zoom-authors="Viktor Frankl"
-           data-zoom-year="1946"
-           data-zoom-caption="Chronicles Frankl&#39;s experiences in Nazi concentration camps and introduces his psychotherapeutic method, logotherapy.">
-        <img src="/images/books/man_s_search_for_meaning.png" alt="Man&#39;s Search for Meaning" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">1946</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">Man&#39;s Search for Meaning</h2>
-        <div class="book-authors">Viktor Frankl</div>
-        <p class="book-summary">Chronicles Frankl&#39;s experiences in Nazi concentration camps and introduces his psychotherapeutic method, logotherapy.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Psychology</span>
-          <span class="book-tag">#Philosophy</span>
-          <span class="book-tag">#Holocaust</span>
-          <span class="book-tag">#Meaning</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/man_s_search_for_meaning.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="animal farm"
-             data-authors="george orwell"
-             data-year="1945"
-             data-summary="a political satire and allegorical novella about a group of farm animals who rebel against their human farmer."
-             data-keywords="fiction satire politics allegory ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/animal_farm.jpg"
-           data-zoom-title="Animal Farm"
-           data-zoom-authors="George Orwell"
-           data-zoom-year="1945"
-           data-zoom-caption="A political satire and allegorical novella about a group of farm animals who rebel against their human farmer.">
-        <img src="/images/books/animal_farm.jpg" alt="Animal Farm" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">1945</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">Animal Farm</h2>
-        <div class="book-authors">George Orwell</div>
-        <p class="book-summary">A political satire and allegorical novella about a group of farm animals who rebel against their human farmer.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Fiction</span>
-          <span class="book-tag">#Satire</span>
-          <span class="book-tag">#Politics</span>
-          <span class="book-tag">#Allegory</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/animal_farm.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="the myth of sisyphus"
-             data-authors="albert camus"
-             data-year="1942"
-             data-summary="a philosophical essay introducing the philosophy of the absurd and the human need for meaning."
-             data-keywords="philosophy absurdism existentialism ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/the_myth_of_sisyphus.png"
-           data-zoom-title="The Myth of Sisyphus"
-           data-zoom-authors="Albert Camus"
-           data-zoom-year="1942"
-           data-zoom-caption="A philosophical essay introducing the philosophy of the absurd and the human need for meaning.">
-        <img src="/images/books/the_myth_of_sisyphus.png" alt="The Myth of Sisyphus" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">1942</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">The Myth of Sisyphus</h2>
-        <div class="book-authors">Albert Camus</div>
-        <p class="book-summary">A philosophical essay introducing the philosophy of the absurd and the human need for meaning.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Philosophy</span>
-          <span class="book-tag">#Absurdism</span>
-          <span class="book-tag">#Existentialism</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_myth_of_sisyphus.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="the great gatsby"
-             data-authors="f. scott fitzgerald"
-             data-year="1925"
-             data-summary="a novel set in the jazz age that explores themes of wealth, class, and the american dream."
-             data-keywords="fiction classic american dream ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/the_great_gatsby.png"
-           data-zoom-title="The Great Gatsby"
-           data-zoom-authors="F. Scott Fitzgerald"
-           data-zoom-year="1925"
-           data-zoom-caption="A novel set in the Jazz Age that explores themes of wealth, class, and the American Dream.">
-        <img src="/images/books/the_great_gatsby.png" alt="The Great Gatsby" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">1925</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">The Great Gatsby</h2>
-        <div class="book-authors">F. Scott Fitzgerald</div>
-        <p class="book-summary">A novel set in the Jazz Age that explores themes of wealth, class, and the American Dream.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Fiction</span>
-          <span class="book-tag">#Classic</span>
-          <span class="book-tag">#American Dream</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_great_gatsby.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="the crowd: a study of the popular mind"
-             data-authors="gustave le bon"
-             data-year="1895"
-             data-summary="a seminal work on crowd psychology and the behavior of the popular mind."
-             data-keywords="psychology sociology crowd behavior ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/the_crowd.jpg"
-           data-zoom-title="The Crowd: A Study of the Popular Mind"
-           data-zoom-authors="Gustave Le Bon"
-           data-zoom-year="1895"
-           data-zoom-caption="A seminal work on crowd psychology and the behavior of the popular mind.">
-        <img src="/images/books/the_crowd.jpg" alt="The Crowd: A Study of the Popular Mind" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">1895</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">The Crowd: A Study of the Popular Mind</h2>
-        <div class="book-authors">Gustave Le Bon</div>
-        <p class="book-summary">A seminal work on crowd psychology and the behavior of the popular mind.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Psychology</span>
-          <span class="book-tag">#Sociology</span>
-          <span class="book-tag">#Crowd Behavior</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_crowd.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="beyond good and evil"
-             data-authors="friedrich nietzsche"
-             data-year="1886"
-             data-summary="a critique of traditional morality, philosophy, religion, and science."
-             data-keywords="philosophy morality ethics ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/beyond_good_and_evil.png"
-           data-zoom-title="Beyond Good and Evil"
-           data-zoom-authors="Friedrich Nietzsche"
-           data-zoom-year="1886"
-           data-zoom-caption="A critique of traditional morality, philosophy, religion, and science.">
-        <img src="/images/books/beyond_good_and_evil.png" alt="Beyond Good and Evil" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">1886</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">Beyond Good and Evil</h2>
-        <div class="book-authors">Friedrich Nietzsche</div>
-        <p class="book-summary">A critique of traditional morality, philosophy, religion, and science.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Philosophy</span>
-          <span class="book-tag">#Morality</span>
-          <span class="book-tag">#Ethics</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/beyond_good_and_evil.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="critique of pure reason"
-             data-authors="immanuel kant"
-             data-year="1781"
-             data-summary="a seminal work in philosophy that seeks to define the limits and scope of metaphysics."
-             data-keywords="philosophy metaphysics epistemology reason ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/critique_of_pure_reason.png"
-           data-zoom-title="Critique of Pure Reason"
-           data-zoom-authors="Immanuel Kant"
-           data-zoom-year="1781"
-           data-zoom-caption="A seminal work in philosophy that seeks to define the limits and scope of metaphysics.">
-        <img src="/images/books/critique_of_pure_reason.png" alt="Critique of Pure Reason" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">1781</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">Critique of Pure Reason</h2>
-        <div class="book-authors">Immanuel Kant</div>
-        <p class="book-summary">A seminal work in philosophy that seeks to define the limits and scope of metaphysics.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Philosophy</span>
-          <span class="book-tag">#Metaphysics</span>
-          <span class="book-tag">#Epistemology</span>
-          <span class="book-tag">#Reason</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/critique_of_pure_reason.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article class="book-card"
-             data-title="the republic"
-             data-authors="plato"
-             data-year="375 bc"
-             data-summary="a socratic dialogue concerning justice, the ideal city-state, and the just man."
-             data-keywords="philosophy politics justice classics ">
-      
-      <div class="book-cover-wrapper gallery-zoomable"
-           title="Click to view full cover"
-           data-zoom-src="/images/books/the_republic.png"
-           data-zoom-title="The Republic"
-           data-zoom-authors="Plato"
-           data-zoom-year="375 BC"
-           data-zoom-caption="A Socratic dialogue concerning justice, the ideal city-state, and the just man.">
-        <img src="/images/books/the_republic.png" alt="The Republic" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');">
-        <div class="book-year-badge">375 BC</div>
-        <div class="book-img-overlay">
-          <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-        </div>
-      </div>
-
-      <div class="book-content">
-        <h2 class="book-title">The Republic</h2>
-        <div class="book-authors">Plato</div>
-        <p class="book-summary">A Socratic dialogue concerning justice, the ideal city-state, and the just man.</p>
-        <div class="book-tags">
-          <span class="book-tag">#Philosophy</span>
-          <span class="book-tag">#Politics</span>
-          <span class="book-tag">#Justice</span>
-          <span class="book-tag">#Classics</span>
-        </div>
-        <div class="book-actions">
-          <a href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_republic.pdf" target="_blank" rel="noopener noreferrer" class="book-pdf-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Read PDF</span>
-          </a>
-        </div>
-      </div>
-    </article>
-  </div>
-
-  <div id="noResultsMsg" class="gallery-empty-state" style="display: none;">
-    <p>No books matched your search query.</p>
-  </div>
+</div>
+<div class="books-grid" id="booksGrid">
+<article class="book-card" data-authors="iqbal h. sarker" data-keywords="ai cybersecurity threat intelligence machine learning " data-summary="covers ai and ml approaches for automated cybersecurity and threat intelligence." data-title="ai-driven cybersecurity and threat intelligence" data-year="2024">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Iqbal H. Sarker" data-zoom-caption="Covers AI and ML approaches for automated cybersecurity and threat intelligence." data-zoom-src="/images/books/ai_cybersecurity.jpg" data-zoom-title="AI-Driven Cybersecurity and Threat Intelligence" data-zoom-year="2024" title="Click to view full cover">
+<img alt="AI-Driven Cybersecurity and Threat Intelligence" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/ai_cybersecurity.jpg"/>
+<div class="book-year-badge">2024</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">AI-Driven Cybersecurity and Threat Intelligence</h2>
+<div class="book-authors">Iqbal H. Sarker</div>
+<p class="book-summary">Covers AI and ML approaches for automated cybersecurity and threat intelligence.</p>
+<div class="book-tags">
+<span class="book-tag">#AI</span>
+<span class="book-tag">#Cybersecurity</span>
+<span class="book-tag">#Threat Intelligence</span>
+<span class="book-tag">#Machine Learning</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/ai_cybersecurity.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="yuval noah harari" data-keywords="history information ai society " data-summary="explores the history of information networks and their influence on human societies, from the stone age to ai." data-title="nexus: a brief history of information networks from the stone age to ai" data-year="2024">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Yuval Noah Harari" data-zoom-caption="Explores the history of information networks and their influence on human societies, from the Stone Age to AI." data-zoom-src="/images/books/nexus.png" data-zoom-title="Nexus: A Brief History of Information Networks from the Stone Age to AI" data-zoom-year="2024" title="Click to view full cover">
+<img alt="Nexus: A Brief History of Information Networks from the Stone Age to AI" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/nexus.png"/>
+<div class="book-year-badge">2024</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">Nexus: A Brief History of Information Networks from the Stone Age to AI</h2>
+<div class="book-authors">Yuval Noah Harari</div>
+<p class="book-summary">Explores the history of information networks and their influence on human societies, from the Stone Age to AI.</p>
+<div class="book-tags">
+<span class="book-tag">#History</span>
+<span class="book-tag">#Information</span>
+<span class="book-tag">#AI</span>
+<span class="book-tag">#Society</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/nexus.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="kim crawley" data-keywords="cloud security penetration testing red teaming aws azure gcp " data-summary="a guide to effectively pentesting aws, azure, and gcp applications." data-title="cloud penetration testing for red teamers" data-year="2023">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Kim Crawley" data-zoom-caption="A guide to effectively pentesting AWS, Azure, and GCP applications." data-zoom-src="/images/books/cloud_pentest.jpg" data-zoom-title="Cloud Penetration Testing for Red Teamers" data-zoom-year="2023" title="Click to view full cover">
+<img alt="Cloud Penetration Testing for Red Teamers" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/cloud_pentest.jpg"/>
+<div class="book-year-badge">2023</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">Cloud Penetration Testing for Red Teamers</h2>
+<div class="book-authors">Kim Crawley</div>
+<p class="book-summary">A guide to effectively pentesting AWS, Azure, and GCP applications.</p>
+<div class="book-tags">
+<span class="book-tag">#Cloud Security</span>
+<span class="book-tag">#Penetration Testing</span>
+<span class="book-tag">#Red Teaming</span>
+<span class="book-tag">#AWS</span>
+<span class="book-tag">#Azure</span>
+<span class="book-tag">#GCP</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/cloud_pentest.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="mustafa suleyman" data-keywords="ai technology future society " data-summary="discusses the risks and opportunities presented by ai and other emerging technologies." data-title="the coming wave" data-year="2023">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Mustafa Suleyman" data-zoom-caption="Discusses the risks and opportunities presented by AI and other emerging technologies." data-zoom-src="/images/books/the_coming_wave.png" data-zoom-title="The Coming Wave" data-zoom-year="2023" title="Click to view full cover">
+<img alt="The Coming Wave" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/the_coming_wave.png"/>
+<div class="book-year-badge">2023</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">The Coming Wave</h2>
+<div class="book-authors">Mustafa Suleyman</div>
+<p class="book-summary">Discusses the risks and opportunities presented by AI and other emerging technologies.</p>
+<div class="book-tags">
+<span class="book-tag">#AI</span>
+<span class="book-tag">#Technology</span>
+<span class="book-tag">#Future</span>
+<span class="book-tag">#Society</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_coming_wave.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="aaron mauro" data-keywords="digital humanities cybersecurity speculative fiction " data-summary="explores the intersection of cybersecurity, speculative fiction, and the digital humanities." data-title="hacking in the humanities" data-year="2022">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Aaron Mauro" data-zoom-caption="Explores the intersection of cybersecurity, speculative fiction, and the digital humanities." data-zoom-src="/images/books/hacking_humanities.jpg" data-zoom-title="Hacking in the Humanities" data-zoom-year="2022" title="Click to view full cover">
+<img alt="Hacking in the Humanities" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/hacking_humanities.jpg"/>
+<div class="book-year-badge">2022</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">Hacking in the Humanities</h2>
+<div class="book-authors">Aaron Mauro</div>
+<p class="book-summary">Explores the intersection of cybersecurity, speculative fiction, and the digital humanities.</p>
+<div class="book-tags">
+<span class="book-tag">#Digital Humanities</span>
+<span class="book-tag">#Cybersecurity</span>
+<span class="book-tag">#Speculative Fiction</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/hacking_humanities.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="ben mccarty" data-keywords="cybersecurity ninja history strategy " data-summary="applies ancient ninja techniques to modern cybersecurity challenges." data-title="cyberjutsu: cybersecurity for the modern ninja" data-year="2021">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Ben McCarty" data-zoom-caption="Applies ancient ninja techniques to modern cybersecurity challenges." data-zoom-src="/images/books/cyberjutsu.jpg" data-zoom-title="Cyberjutsu: Cybersecurity for the Modern Ninja" data-zoom-year="2021" title="Click to view full cover">
+<img alt="Cyberjutsu: Cybersecurity for the Modern Ninja" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/cyberjutsu.jpg"/>
+<div class="book-year-badge">2021</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">Cyberjutsu: Cybersecurity for the Modern Ninja</h2>
+<div class="book-authors">Ben McCarty</div>
+<p class="book-summary">Applies ancient ninja techniques to modern cybersecurity challenges.</p>
+<div class="book-tags">
+<span class="book-tag">#Cybersecurity</span>
+<span class="book-tag">#Ninja</span>
+<span class="book-tag">#History</span>
+<span class="book-tag">#Strategy</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/cyberjutsu.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="malcolm mcdonald" data-keywords="web security cybersecurity development " data-summary="a practical guide to web security threats and how to defend against them." data-title="web security for developers" data-year="2020">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Malcolm McDonald" data-zoom-caption="A practical guide to web security threats and how to defend against them." data-zoom-src="/images/books/web_security_for_developers.jpeg" data-zoom-title="Web Security for Developers" data-zoom-year="2020" title="Click to view full cover">
+<img alt="Web Security for Developers" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/web_security_for_developers.jpeg"/>
+<div class="book-year-badge">2020</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">Web Security for Developers</h2>
+<div class="book-authors">Malcolm McDonald</div>
+<p class="book-summary">A practical guide to web security threats and how to defend against them.</p>
+<div class="book-tags">
+<span class="book-tag">#Web Security</span>
+<span class="book-tag">#Cybersecurity</span>
+<span class="book-tag">#Development</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/web_security.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="peter bruce, andrew bruce, peter gedeck" data-keywords="data science statistics machine learning python r " data-summary="a comprehensive guide to applying statistical methods to data science problems." data-title="practical statistics for data scientists" data-year="2020">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Peter Bruce, Andrew Bruce, Peter Gedeck" data-zoom-caption="A comprehensive guide to applying statistical methods to data science problems." data-zoom-src="/images/books/practical_statistics_for_data_scientists.png" data-zoom-title="Practical Statistics for Data Scientists" data-zoom-year="2020" title="Click to view full cover">
+<img alt="Practical Statistics for Data Scientists" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/practical_statistics_for_data_scientists.png"/>
+<div class="book-year-badge">2020</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">Practical Statistics for Data Scientists</h2>
+<div class="book-authors">Peter Bruce, Andrew Bruce, Peter Gedeck</div>
+<p class="book-summary">A comprehensive guide to applying statistical methods to data science problems.</p>
+<div class="book-tags">
+<span class="book-tag">#Data Science</span>
+<span class="book-tag">#Statistics</span>
+<span class="book-tag">#Machine Learning</span>
+<span class="book-tag">#Python</span>
+<span class="book-tag">#R</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/practical_statistics_for_data_scientists.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="david spiegelhalter" data-keywords="statistics data literacy reasoning " data-summary="a guide to statistical thinking, showing how to apply statistical reasoning to real-world problems." data-title="the art of statistics" data-year="2020">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="David Spiegelhalter" data-zoom-caption="A guide to statistical thinking, showing how to apply statistical reasoning to real-world problems." data-zoom-src="/images/books/the_art_of_statistics.png" data-zoom-title="The Art of Statistics" data-zoom-year="2020" title="Click to view full cover">
+<img alt="The Art of Statistics" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/the_art_of_statistics.png"/>
+<div class="book-year-badge">2020</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">The Art of Statistics</h2>
+<div class="book-authors">David Spiegelhalter</div>
+<p class="book-summary">A guide to statistical thinking, showing how to apply statistical reasoning to real-world problems.</p>
+<div class="book-tags">
+<span class="book-tag">#Statistics</span>
+<span class="book-tag">#Data Literacy</span>
+<span class="book-tag">#Reasoning</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_art_of_statistics.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="betsy beyer et al." data-keywords="sre devops reliability google " data-summary="practical ways to implement site reliability engineering (sre) principles." data-title="the site reliability workbook" data-year="2018">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Betsy Beyer et al." data-zoom-caption="Practical ways to implement Site Reliability Engineering (SRE) principles." data-zoom-src="/images/books/sre_workbook.jpg" data-zoom-title="The Site Reliability Workbook" data-zoom-year="2018" title="Click to view full cover">
+<img alt="The Site Reliability Workbook" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/sre_workbook.jpg"/>
+<div class="book-year-badge">2018</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">The Site Reliability Workbook</h2>
+<div class="book-authors">Betsy Beyer et al.</div>
+<p class="book-summary">Practical ways to implement Site Reliability Engineering (SRE) principles.</p>
+<div class="book-tags">
+<span class="book-tag">#SRE</span>
+<span class="book-tag">#DevOps</span>
+<span class="book-tag">#Reliability</span>
+<span class="book-tag">#Google</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/sre_workbook.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="max tegmark" data-keywords="ai future technology philosophy " data-summary="explores the potential impact of artificial intelligence on the future of life on earth and beyond." data-title="life 3.0" data-year="2017">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Max Tegmark" data-zoom-caption="Explores the potential impact of artificial intelligence on the future of life on Earth and beyond." data-zoom-src="/images/books/life_3_0.png" data-zoom-title="Life 3.0" data-zoom-year="2017" title="Click to view full cover">
+<img alt="Life 3.0" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/life_3_0.png"/>
+<div class="book-year-badge">2017</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">Life 3.0</h2>
+<div class="book-authors">Max Tegmark</div>
+<p class="book-summary">Explores the potential impact of artificial intelligence on the future of life on Earth and beyond.</p>
+<div class="book-tags">
+<span class="book-tag">#AI</span>
+<span class="book-tag">#Future</span>
+<span class="book-tag">#Technology</span>
+<span class="book-tag">#Philosophy</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/life_3_0.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="roger d. peng, elizabeth matsui" data-keywords="data science analysis statistics " data-summary="a guide to the process of data analysis for practitioners and managers." data-title="the art of data science" data-year="2016">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Roger D. Peng, Elizabeth Matsui" data-zoom-caption="A guide to the process of data analysis for practitioners and managers." data-zoom-src="/images/books/the_art_of_data_science.png" data-zoom-title="The Art of Data Science" data-zoom-year="2016" title="Click to view full cover">
+<img alt="The Art of Data Science" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/the_art_of_data_science.png"/>
+<div class="book-year-badge">2016</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">The Art of Data Science</h2>
+<div class="book-authors">Roger D. Peng, Elizabeth Matsui</div>
+<p class="book-summary">A guide to the process of data analysis for practitioners and managers.</p>
+<div class="book-tags">
+<span class="book-tag">#Data Science</span>
+<span class="book-tag">#Analysis</span>
+<span class="book-tag">#Statistics</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_art_of_data_science.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="cathy o'neil" data-keywords="data science ethics algorithms society " data-summary="examines how big data algorithms can reinforce inequality and harm society." data-title="weapons of math destruction" data-year="2016">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Cathy O'Neil" data-zoom-caption="Examines how big data algorithms can reinforce inequality and harm society." data-zoom-src="/images/books/weapons_of_math_destruction.png" data-zoom-title="Weapons of Math Destruction" data-zoom-year="2016" title="Click to view full cover">
+<img alt="Weapons of Math Destruction" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/weapons_of_math_destruction.png"/>
+<div class="book-year-badge">2016</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">Weapons of Math Destruction</h2>
+<div class="book-authors">Cathy O'Neil</div>
+<p class="book-summary">Examines how big data algorithms can reinforce inequality and harm society.</p>
+<div class="book-tags">
+<span class="book-tag">#Data Science</span>
+<span class="book-tag">#Ethics</span>
+<span class="book-tag">#Algorithms</span>
+<span class="book-tag">#Society</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/weapons_of_math_destruction.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="charles wheelan" data-keywords="statistics data analysis intuition " data-summary="demystifies statistics for the general reader, focusing on the intuition behind statistical analysis." data-title="naked statistics" data-year="2014">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Charles Wheelan" data-zoom-caption="Demystifies statistics for the general reader, focusing on the intuition behind statistical analysis." data-zoom-src="/images/books/naked_statistics.png" data-zoom-title="Naked Statistics" data-zoom-year="2014" title="Click to view full cover">
+<img alt="Naked Statistics" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/naked_statistics.png"/>
+<div class="book-year-badge">2014</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">Naked Statistics</h2>
+<div class="book-authors">Charles Wheelan</div>
+<p class="book-summary">Demystifies statistics for the general reader, focusing on the intuition behind statistical analysis.</p>
+<div class="book-tags">
+<span class="book-tag">#Statistics</span>
+<span class="book-tag">#Data Analysis</span>
+<span class="book-tag">#Intuition</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/naked_statistics.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="alberto cairo" data-keywords="data visualization design infographics " data-summary="a practical introduction to understanding and utilizing information graphics and data visualization." data-title="the functional art" data-year="2012">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Alberto Cairo" data-zoom-caption="A practical introduction to understanding and utilizing information graphics and data visualization." data-zoom-src="/images/books/the_functional_art.png" data-zoom-title="The Functional Art" data-zoom-year="2012" title="Click to view full cover">
+<img alt="The Functional Art" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/the_functional_art.png"/>
+<div class="book-year-badge">2012</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">The Functional Art</h2>
+<div class="book-authors">Alberto Cairo</div>
+<p class="book-summary">A practical introduction to understanding and utilizing information graphics and data visualization.</p>
+<div class="book-tags">
+<span class="book-tag">#Data Visualization</span>
+<span class="book-tag">#Design</span>
+<span class="book-tag">#Infographics</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_functional_art.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="daniel kahneman" data-keywords="psychology behavioral economics decision making " data-summary="explores the two systems that drive the way we think: system 1 (fast and intuitive) and system 2 (slow and deliberative)." data-title="thinking, fast and slow" data-year="2011">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Daniel Kahneman" data-zoom-caption="Explores the two systems that drive the way we think: System 1 (fast and intuitive) and System 2 (slow and deliberative)." data-zoom-src="/images/books/thinking_fast_and_slow.png" data-zoom-title="Thinking, Fast and Slow" data-zoom-year="2011" title="Click to view full cover">
+<img alt="Thinking, Fast and Slow" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/thinking_fast_and_slow.png"/>
+<div class="book-year-badge">2011</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">Thinking, Fast and Slow</h2>
+<div class="book-authors">Daniel Kahneman</div>
+<p class="book-summary">Explores the two systems that drive the way we think: System 1 (fast and intuitive) and System 2 (slow and deliberative).</p>
+<div class="book-tags">
+<span class="book-tag">#Psychology</span>
+<span class="book-tag">#Behavioral Economics</span>
+<span class="book-tag">#Decision Making</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/thinking_fast_and_slow.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="yuval noah harari" data-keywords="history anthropology science " data-summary="a survey of the history of humankind from the stone age to the 21st century." data-title="sapiens: a brief history of humankind" data-year="2011">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Yuval Noah Harari" data-zoom-caption="A survey of the history of humankind from the Stone Age to the 21st century." data-zoom-src="/images/books/sapiens.png" data-zoom-title="Sapiens: A Brief History of Humankind" data-zoom-year="2011" title="Click to view full cover">
+<img alt="Sapiens: A Brief History of Humankind" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/sapiens.png"/>
+<div class="book-year-badge">2011</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">Sapiens: A Brief History of Humankind</h2>
+<div class="book-authors">Yuval Noah Harari</div>
+<p class="book-summary">A survey of the history of humankind from the Stone Age to the 21st century.</p>
+<div class="book-tags">
+<span class="book-tag">#History</span>
+<span class="book-tag">#Anthropology</span>
+<span class="book-tag">#Science</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/sapiens.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="michael sandel" data-keywords="philosophy justice ethics politics " data-summary="explores the role of justice in society and individual lives through philosophical concepts and contemporary dilemmas." data-title="justice: what's the right thing to do?" data-year="2009">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Michael Sandel" data-zoom-caption="Explores the role of justice in society and individual lives through philosophical concepts and contemporary dilemmas." data-zoom-src="/images/books/justice.png" data-zoom-title="Justice: What's the Right Thing to Do?" data-zoom-year="2009" title="Click to view full cover">
+<img alt="Justice: What's the Right Thing to Do?" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/justice.png"/>
+<div class="book-year-badge">2009</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">Justice: What's the Right Thing to Do?</h2>
+<div class="book-authors">Michael Sandel</div>
+<p class="book-summary">Explores the role of justice in society and individual lives through philosophical concepts and contemporary dilemmas.</p>
+<div class="book-tags">
+<span class="book-tag">#Philosophy</span>
+<span class="book-tag">#Justice</span>
+<span class="book-tag">#Ethics</span>
+<span class="book-tag">#Politics</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/justice.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="ha-joon chang" data-keywords="economics development history politics " data-summary="examines how developed countries often pressure developing nations to adopt policies different from those they used during their own growth." data-title="kicking away the ladder" data-year="2002">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Ha-Joon Chang" data-zoom-caption="Examines how developed countries often pressure developing nations to adopt policies different from those they used during their own growth." data-zoom-src="/images/books/kicking_away_the_ladder.png" data-zoom-title="Kicking Away the Ladder" data-zoom-year="2002" title="Click to view full cover">
+<img alt="Kicking Away the Ladder" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/kicking_away_the_ladder.png"/>
+<div class="book-year-badge">2002</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">Kicking Away the Ladder</h2>
+<div class="book-authors">Ha-Joon Chang</div>
+<p class="book-summary">Examines how developed countries often pressure developing nations to adopt policies different from those they used during their own growth.</p>
+<div class="book-tags">
+<span class="book-tag">#Economics</span>
+<span class="book-tag">#Development</span>
+<span class="book-tag">#History</span>
+<span class="book-tag">#Politics</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/kicking_away_the_ladder.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="slavoj žižek" data-keywords="philosophy ideology psychoanalysis marxism " data-summary="a psychoanalytic interpretation of ideology, drawing on hegel, marx, and lacan." data-title="the sublime object of ideology" data-year="1989">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Slavoj Žižek" data-zoom-caption="A psychoanalytic interpretation of ideology, drawing on Hegel, Marx, and Lacan." data-zoom-src="/images/books/sublime_object_ideology.jpg" data-zoom-title="The Sublime Object of Ideology" data-zoom-year="1989" title="Click to view full cover">
+<img alt="The Sublime Object of Ideology" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/sublime_object_ideology.jpg"/>
+<div class="book-year-badge">1989</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">The Sublime Object of Ideology</h2>
+<div class="book-authors">Slavoj Žižek</div>
+<p class="book-summary">A psychoanalytic interpretation of ideology, drawing on Hegel, Marx, and Lacan.</p>
+<div class="book-tags">
+<span class="book-tag">#Philosophy</span>
+<span class="book-tag">#Ideology</span>
+<span class="book-tag">#Psychoanalysis</span>
+<span class="book-tag">#Marxism</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/sublime_object_ideology.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="paulo coelho" data-keywords="fiction philosophy adventure " data-summary="a fable about following one's dreams and listening to one's heart. " data-title="the alchemist" data-year="1988">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Paulo Coelho" data-zoom-caption="A fable about following one's dreams and listening to one's heart. " data-zoom-src="/images/books/the_alchemist.png" data-zoom-title="The Alchemist" data-zoom-year="1988" title="Click to view full cover">
+<img alt="The Alchemist" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/the_alchemist.png"/>
+<div class="book-year-badge">1988</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">The Alchemist</h2>
+<div class="book-authors">Paulo Coelho</div>
+<p class="book-summary">A fable about following one's dreams and listening to one's heart. </p>
+<div class="book-tags">
+<span class="book-tag">#Fiction</span>
+<span class="book-tag">#Philosophy</span>
+<span class="book-tag">#Adventure</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_alchemist.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="ayn rand" data-keywords="philosophy objectivism fiction dystopia " data-summary="a dystopian novel exploring the role of the mind in man's existence and the morality of rational self-interest." data-title="atlas shrugged" data-year="1957">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Ayn Rand" data-zoom-caption="A dystopian novel exploring the role of the mind in man's existence and the morality of rational self-interest." data-zoom-src="/images/books/atlas_shrugged.jpg" data-zoom-title="Atlas Shrugged" data-zoom-year="1957" title="Click to view full cover">
+<img alt="Atlas Shrugged" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/atlas_shrugged.jpg"/>
+<div class="book-year-badge">1957</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">Atlas Shrugged</h2>
+<div class="book-authors">Ayn Rand</div>
+<p class="book-summary">A dystopian novel exploring the role of the mind in man's existence and the morality of rational self-interest.</p>
+<div class="book-tags">
+<span class="book-tag">#Philosophy</span>
+<span class="book-tag">#Objectivism</span>
+<span class="book-tag">#Fiction</span>
+<span class="book-tag">#Dystopia</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/atlas_shrugged.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="darrell huff" data-keywords="statistics data literacy critical thinking " data-summary="an introduction to statistics for the general reader, outlining the misuse of statistics and errors in their interpretation." data-title="how to lie with statistics" data-year="1954">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Darrell Huff" data-zoom-caption="An introduction to statistics for the general reader, outlining the misuse of statistics and errors in their interpretation." data-zoom-src="/images/books/how_to_lie_with_statistics.png" data-zoom-title="How to Lie with Statistics" data-zoom-year="1954" title="Click to view full cover">
+<img alt="How to Lie with Statistics" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/how_to_lie_with_statistics.png"/>
+<div class="book-year-badge">1954</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">How to Lie with Statistics</h2>
+<div class="book-authors">Darrell Huff</div>
+<p class="book-summary">An introduction to statistics for the general reader, outlining the misuse of statistics and errors in their interpretation.</p>
+<div class="book-tags">
+<span class="book-tag">#Statistics</span>
+<span class="book-tag">#Data Literacy</span>
+<span class="book-tag">#Critical Thinking</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/how_to_lie_with_statistics.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="george orwell" data-keywords="fiction dystopia politics totalitarianism " data-summary="a dystopian novel about totalitarianism, mass surveillance, and repressive regimentation." data-title="1984" data-year="1949">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="George Orwell" data-zoom-caption="A dystopian novel about totalitarianism, mass surveillance, and repressive regimentation." data-zoom-src="/images/books/1984.png" data-zoom-title="1984" data-zoom-year="1949" title="Click to view full cover">
+<img alt="1984" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/1984.png"/>
+<div class="book-year-badge">1949</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">1984</h2>
+<div class="book-authors">George Orwell</div>
+<p class="book-summary">A dystopian novel about totalitarianism, mass surveillance, and repressive regimentation.</p>
+<div class="book-tags">
+<span class="book-tag">#Fiction</span>
+<span class="book-tag">#Dystopia</span>
+<span class="book-tag">#Politics</span>
+<span class="book-tag">#Totalitarianism</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/1984.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="viktor frankl" data-keywords="psychology philosophy holocaust meaning " data-summary="chronicles frankl's experiences in nazi concentration camps and introduces his psychotherapeutic method, logotherapy." data-title="man's search for meaning" data-year="1946">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Viktor Frankl" data-zoom-caption="Chronicles Frankl's experiences in Nazi concentration camps and introduces his psychotherapeutic method, logotherapy." data-zoom-src="/images/books/man_s_search_for_meaning.png" data-zoom-title="Man's Search for Meaning" data-zoom-year="1946" title="Click to view full cover">
+<img alt="Man's Search for Meaning" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/man_s_search_for_meaning.png"/>
+<div class="book-year-badge">1946</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">Man's Search for Meaning</h2>
+<div class="book-authors">Viktor Frankl</div>
+<p class="book-summary">Chronicles Frankl's experiences in Nazi concentration camps and introduces his psychotherapeutic method, logotherapy.</p>
+<div class="book-tags">
+<span class="book-tag">#Psychology</span>
+<span class="book-tag">#Philosophy</span>
+<span class="book-tag">#Holocaust</span>
+<span class="book-tag">#Meaning</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/man_s_search_for_meaning.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="george orwell" data-keywords="fiction satire politics allegory " data-summary="a political satire and allegorical novella about a group of farm animals who rebel against their human farmer." data-title="animal farm" data-year="1945">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="George Orwell" data-zoom-caption="A political satire and allegorical novella about a group of farm animals who rebel against their human farmer." data-zoom-src="/images/books/animal_farm.jpg" data-zoom-title="Animal Farm" data-zoom-year="1945" title="Click to view full cover">
+<img alt="Animal Farm" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/animal_farm.jpg"/>
+<div class="book-year-badge">1945</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">Animal Farm</h2>
+<div class="book-authors">George Orwell</div>
+<p class="book-summary">A political satire and allegorical novella about a group of farm animals who rebel against their human farmer.</p>
+<div class="book-tags">
+<span class="book-tag">#Fiction</span>
+<span class="book-tag">#Satire</span>
+<span class="book-tag">#Politics</span>
+<span class="book-tag">#Allegory</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/animal_farm.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="albert camus" data-keywords="philosophy absurdism existentialism " data-summary="a philosophical essay introducing the philosophy of the absurd and the human need for meaning." data-title="the myth of sisyphus" data-year="1942">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Albert Camus" data-zoom-caption="A philosophical essay introducing the philosophy of the absurd and the human need for meaning." data-zoom-src="/images/books/the_myth_of_sisyphus.png" data-zoom-title="The Myth of Sisyphus" data-zoom-year="1942" title="Click to view full cover">
+<img alt="The Myth of Sisyphus" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/the_myth_of_sisyphus.png"/>
+<div class="book-year-badge">1942</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">The Myth of Sisyphus</h2>
+<div class="book-authors">Albert Camus</div>
+<p class="book-summary">A philosophical essay introducing the philosophy of the absurd and the human need for meaning.</p>
+<div class="book-tags">
+<span class="book-tag">#Philosophy</span>
+<span class="book-tag">#Absurdism</span>
+<span class="book-tag">#Existentialism</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_myth_of_sisyphus.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="f. scott fitzgerald" data-keywords="fiction classic american dream " data-summary="a novel set in the jazz age that explores themes of wealth, class, and the american dream." data-title="the great gatsby" data-year="1925">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="F. Scott Fitzgerald" data-zoom-caption="A novel set in the Jazz Age that explores themes of wealth, class, and the American Dream." data-zoom-src="/images/books/the_great_gatsby.png" data-zoom-title="The Great Gatsby" data-zoom-year="1925" title="Click to view full cover">
+<img alt="The Great Gatsby" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/the_great_gatsby.png"/>
+<div class="book-year-badge">1925</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">The Great Gatsby</h2>
+<div class="book-authors">F. Scott Fitzgerald</div>
+<p class="book-summary">A novel set in the Jazz Age that explores themes of wealth, class, and the American Dream.</p>
+<div class="book-tags">
+<span class="book-tag">#Fiction</span>
+<span class="book-tag">#Classic</span>
+<span class="book-tag">#American Dream</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_great_gatsby.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="gustave le bon" data-keywords="psychology sociology crowd behavior " data-summary="a seminal work on crowd psychology and the behavior of the popular mind." data-title="the crowd: a study of the popular mind" data-year="1895">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Gustave Le Bon" data-zoom-caption="A seminal work on crowd psychology and the behavior of the popular mind." data-zoom-src="/images/books/the_crowd.jpg" data-zoom-title="The Crowd: A Study of the Popular Mind" data-zoom-year="1895" title="Click to view full cover">
+<img alt="The Crowd: A Study of the Popular Mind" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/the_crowd.jpg"/>
+<div class="book-year-badge">1895</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">The Crowd: A Study of the Popular Mind</h2>
+<div class="book-authors">Gustave Le Bon</div>
+<p class="book-summary">A seminal work on crowd psychology and the behavior of the popular mind.</p>
+<div class="book-tags">
+<span class="book-tag">#Psychology</span>
+<span class="book-tag">#Sociology</span>
+<span class="book-tag">#Crowd Behavior</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_crowd.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="friedrich nietzsche" data-keywords="philosophy morality ethics " data-summary="a critique of traditional morality, philosophy, religion, and science." data-title="beyond good and evil" data-year="1886">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Friedrich Nietzsche" data-zoom-caption="A critique of traditional morality, philosophy, religion, and science." data-zoom-src="/images/books/beyond_good_and_evil.png" data-zoom-title="Beyond Good and Evil" data-zoom-year="1886" title="Click to view full cover">
+<img alt="Beyond Good and Evil" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/beyond_good_and_evil.png"/>
+<div class="book-year-badge">1886</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">Beyond Good and Evil</h2>
+<div class="book-authors">Friedrich Nietzsche</div>
+<p class="book-summary">A critique of traditional morality, philosophy, religion, and science.</p>
+<div class="book-tags">
+<span class="book-tag">#Philosophy</span>
+<span class="book-tag">#Morality</span>
+<span class="book-tag">#Ethics</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/beyond_good_and_evil.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="immanuel kant" data-keywords="philosophy metaphysics epistemology reason " data-summary="a seminal work in philosophy that seeks to define the limits and scope of metaphysics." data-title="critique of pure reason" data-year="1781">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Immanuel Kant" data-zoom-caption="A seminal work in philosophy that seeks to define the limits and scope of metaphysics." data-zoom-src="/images/books/critique_of_pure_reason.png" data-zoom-title="Critique of Pure Reason" data-zoom-year="1781" title="Click to view full cover">
+<img alt="Critique of Pure Reason" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/critique_of_pure_reason.png"/>
+<div class="book-year-badge">1781</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">Critique of Pure Reason</h2>
+<div class="book-authors">Immanuel Kant</div>
+<p class="book-summary">A seminal work in philosophy that seeks to define the limits and scope of metaphysics.</p>
+<div class="book-tags">
+<span class="book-tag">#Philosophy</span>
+<span class="book-tag">#Metaphysics</span>
+<span class="book-tag">#Epistemology</span>
+<span class="book-tag">#Reason</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/critique_of_pure_reason.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+<article class="book-card" data-authors="plato" data-keywords="philosophy politics justice classics " data-summary="a socratic dialogue concerning justice, the ideal city-state, and the just man." data-title="the republic" data-year="375 bc">
+<div class="book-cover-wrapper gallery-zoomable" data-zoom-authors="Plato" data-zoom-caption="A Socratic dialogue concerning justice, the ideal city-state, and the just man." data-zoom-src="/images/books/the_republic.png" data-zoom-title="The Republic" data-zoom-year="375 BC" title="Click to view full cover">
+<img alt="The Republic" loading="lazy" onerror="this.onerror=null;this.parentElement.classList.add('book-cover-fallback');" src="/images/books/the_republic.png"/>
+<div class="book-year-badge">375 BC</div>
+<div class="book-img-overlay">
+<svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+<line x1="11" x2="11" y1="8" y2="14"></line>
+<line x1="8" x2="14" y1="11" y2="11"></line>
+</svg>
+</div>
+</div>
+<div class="book-content">
+<h2 class="book-title">The Republic</h2>
+<div class="book-authors">Plato</div>
+<p class="book-summary">A Socratic dialogue concerning justice, the ideal city-state, and the just man.</p>
+<div class="book-tags">
+<span class="book-tag">#Philosophy</span>
+<span class="book-tag">#Politics</span>
+<span class="book-tag">#Justice</span>
+<span class="book-tag">#Classics</span>
+</div>
+<div class="book-actions">
+<a class="book-pdf-btn" href="https://storage.googleapis.com/hub-34-dataw-dev-01-discovery-bucket/books/the_republic.pdf" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span>Read PDF</span>
+</a>
+</div>
+</div>
+</article>
+</div>
+<div class="gallery-empty-state" id="noResultsMsg" style="display: none;">
+<p>No books matched your search query.</p>
+</div>
+</div>
+<div aria-hidden="true" class="gallery-lightbox" id="galleryLightbox" role="dialog">
+<div class="lightbox-backdrop"></div>
+<div class="lightbox-dialog">
+<button aria-label="Close focused view" class="lightbox-close" type="button">×</button>
+<div class="lightbox-image-container">
+<img alt="" id="lightboxImg" src=""/>
+</div>
+<div class="lightbox-details">
+<h3 id="lightboxTitle"></h3>
+<div class="lightbox-meta" id="lightboxMeta"></div>
+<p id="lightboxCaption"></p>
+</div>
+</div>
 </div>
 
-
-<div id="galleryLightbox" class="gallery-lightbox" aria-hidden="true" role="dialog">
-  <div class="lightbox-backdrop"></div>
-  <div class="lightbox-dialog">
-    <button type="button" class="lightbox-close" aria-label="Close focused view">&times;</button>
-    <div class="lightbox-image-container">
-      <img id="lightboxImg" src="" alt="">
-    </div>
-    <div class="lightbox-details">
-      <h3 id="lightboxTitle"></h3>
-      <div id="lightboxMeta" class="lightbox-meta"></div>
-      <p id="lightboxCaption"></p>
-    </div>
-  </div>
-</div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const searchInput = document.getElementById('bookSearch');
-  const clearBtn = document.getElementById('clearBookSearch');
-  const cards = document.querySelectorAll('.book-card');
-  const visibleCount = document.getElementById('visibleCount');
-  const noResultsMsg = document.getElementById('noResultsMsg');
+(function() {
+  function initGallery() {
+    const gridContainer = document.getElementById('booksGrid');
+    const searchInput = document.getElementById('bookSearch');
+    const clearBtn = document.getElementById('clearBookSearch');
+    const visibleCount = document.getElementById('visibleCount');
+    const noResultsMsg = document.getElementById('noResultsMsg');
+    const sortSelect = document.getElementById('bookSort');
 
-  
-  function filterCards() {
-    const q = searchInput.value.trim().toLowerCase();
-    clearBtn.style.display = q.length > 0 ? 'block' : 'none';
-    let count = 0;
+    if (!gridContainer) return;
 
-    cards.forEach(card => {
-      const title = card.dataset.title || '';
-      const authors = card.dataset.authors || '';
-      const year = card.dataset.year || '';
-      const summary = card.dataset.summary || '';
-      const keywords = card.dataset.keywords || '';
-      
-      const match = !q || title.includes(q) || authors.includes(q) || year.includes(q) || summary.includes(q) || keywords.includes(q);
-      if (match) {
-        card.style.display = '';
-        count++;
-      } else {
-        card.style.display = 'none';
+    
+    const lightbox = document.getElementById('galleryLightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxMeta = document.getElementById('lightboxMeta');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const closeBtn = document.querySelector('.lightbox-close');
+    const backdrop = document.querySelector('.lightbox-backdrop');
+
+    function openLightbox(src, title, metaAuthor, metaYear, caption) {
+      if (!lightbox || !lightboxImg) return;
+      lightboxImg.src = src;
+      lightboxImg.alt = title;
+      if (lightboxTitle) lightboxTitle.textContent = title;
+      const metaStr = metaAuthor + (metaYear ? ' (' + metaYear + ')' : '');
+      if (lightboxMeta) lightboxMeta.textContent = metaStr;
+      if (lightboxCaption) lightboxCaption.textContent = caption || '';
+      lightbox.classList.add('active');
+      document.body.classList.add('modal-open');
+    }
+
+    function closeLightbox() {
+      if (!lightbox || !lightboxImg) return;
+      lightbox.classList.remove('active');
+      document.body.classList.remove('modal-open');
+      setTimeout(() => { lightboxImg.src = ''; }, 250);
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+    if (backdrop) backdrop.addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && lightbox && lightbox.classList.contains('active')) {
+        closeLightbox();
       }
     });
 
-    if (visibleCount) visibleCount.textContent = count;
-    if (noResultsMsg) noResultsMsg.style.display = count === 0 ? 'block' : 'none';
-  }
+    
 
-  if (searchInput) {
-    searchInput.addEventListener('input', filterCards);
-  }
+    let galleryData = [];
+    let currentSort = localStorage.getItem('books-sort-order') || 'date-desc';
+    if (sortSelect) sortSelect.value = currentSort;
 
-  if (clearBtn) {
-    clearBtn.addEventListener('click', function() {
-      searchInput.value = '';
-      filterCards();
-      searchInput.focus();
-    });
-  }
+    function createCardElement(item) {
+      const card = document.createElement('article');
+      card.className = 'book-card';
+      if (item.dataset) {
+        Object.entries(item.dataset).forEach(([k, v]) => card.setAttribute(k, v));
+      }
+      card.dataset.sortYear = item.sortYear != null ? item.sortYear : 0;
+      card.dataset.sortName = (item.sortName || item.name || item.title || '').toLowerCase();
+      card.innerHTML = item.html;
 
-  
-  const lightbox = document.getElementById('galleryLightbox');
-  const lightboxImg = document.getElementById('lightboxImg');
-  const lightboxTitle = document.getElementById('lightboxTitle');
-  const lightboxMeta = document.getElementById('lightboxMeta');
-  const lightboxCaption = document.getElementById('lightboxCaption');
-  const closeBtn = document.querySelector('.lightbox-close');
-  const backdrop = document.querySelector('.lightbox-backdrop');
+      
+      const zoom = card.querySelector('.gallery-zoomable');
+      if (zoom) {
+        zoom.addEventListener('click', function() {
+          const author = this.dataset.zoomCreator || this.dataset.zoomAuthors || '';
+          const yr = this.dataset.zoomYear || '';
+          openLightbox(this.dataset.zoomSrc, this.dataset.zoomTitle, author, yr, this.dataset.zoomCaption);
+        });
+      }
 
-  function openLightbox(src, title, authors, year, caption) {
-    lightboxImg.src = src;
-    lightboxImg.alt = title;
-    lightboxTitle.textContent = title;
-    lightboxMeta.textContent = authors + (year ? ' (' + year + ')' : '');
-    lightboxCaption.textContent = caption;
-    lightbox.classList.add('active');
-    document.body.classList.add('modal-open');
-  }
+      
 
-  function closeLightbox() {
-    lightbox.classList.remove('active');
-    document.body.classList.remove('modal-open');
-    setTimeout(() => {
-      lightboxImg.src = '';
-    }, 250);
-  }
-
-  document.querySelectorAll('.gallery-zoomable').forEach(wrapper => {
-    wrapper.addEventListener('click', function() {
-      const src = this.dataset.zoomSrc;
-      const title = this.dataset.zoomTitle;
-      const authors = this.dataset.zoomAuthors;
-      const year = this.dataset.zoomYear;
-      const caption = this.dataset.zoomCaption;
-      openLightbox(src, title, authors, year, caption);
-    });
-  });
-
-  if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
-  if (backdrop) backdrop.addEventListener('click', closeLightbox);
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-      closeLightbox();
+      return card;
     }
-  });
-});
+
+    function sortList(list, mode) {
+      return list.slice().sort((a, b) => {
+        const yearA = a.sortYear != null ? a.sortYear : 0;
+        const yearB = b.sortYear != null ? b.sortYear : 0;
+        const nameA = (a.sortName || a.name || a.title || '').toLowerCase();
+        const nameB = (b.sortName || b.name || b.title || '').toLowerCase();
+
+        switch (mode) {
+          case 'date-desc':
+          case 'year-desc':
+            return (yearB - yearA) || nameA.localeCompare(nameB);
+          case 'date-asc':
+          case 'year-asc':
+            return (yearA - yearB) || nameA.localeCompare(nameB);
+          case 'name-asc':
+            return nameA.localeCompare(nameB);
+          case 'name-desc':
+            return nameB.localeCompare(nameA);
+          case 'price-asc':
+            return ((parseFloat(a.dataset && a.dataset['data-numeric-cost']) || 0) - (parseFloat(b.dataset && b.dataset['data-numeric-cost']) || 0));
+          case 'price-desc':
+            return ((parseFloat(b.dataset && b.dataset['data-numeric-cost']) || 0) - (parseFloat(a.dataset && a.dataset['data-numeric-cost']) || 0));
+          default:
+            return (yearB - yearA) || nameA.localeCompare(nameB);
+        }
+      });
+    }
+
+    function renderCards(list) {
+      gridContainer.innerHTML = '';
+      const fragment = document.createDocumentFragment();
+      list.forEach(item => fragment.appendChild(createCardElement(item)));
+      gridContainer.appendChild(fragment);
+      filterCards();
+    }
+
+    function filterCards() {
+      const q = searchInput ? searchInput.value.trim().toLowerCase() : '';
+      if (clearBtn) clearBtn.style.display = q.length > 0 ? 'block' : 'none';
+      const allCards = gridContainer.querySelectorAll('.book-card');
+      let count = 0;
+
+      allCards.forEach(card => {
+        const title = (card.dataset.title || '').toLowerCase();
+        const authors = (card.dataset.authors || '').toLowerCase();
+        const year = (card.dataset.year || '').toLowerCase();
+        const summary = (card.dataset.summary || '').toLowerCase();
+        const keywords = (card.dataset.keywords || '').toLowerCase();
+        const textMatch = !q || title.includes(q) || authors.includes(q) || year.includes(q) || summary.includes(q) || keywords.includes(q);
+        let match = textMatch;
+        
+
+        if (match) {
+          card.style.display = '';
+          count++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (visibleCount) visibleCount.textContent = count;
+      if (noResultsMsg) noResultsMsg.style.display = count === 0 ? 'block' : 'none';
+    }
+
+    if (searchInput) searchInput.addEventListener('input', filterCards);
+    if (clearBtn) {
+      clearBtn.addEventListener('click', function() {
+        searchInput.value = '';
+        filterCards();
+        searchInput.focus();
+      });
+    }
+
+    if (sortSelect) {
+      sortSelect.addEventListener('change', function() {
+        currentSort = this.value;
+        localStorage.setItem('books-sort-order', currentSort);
+        renderCards(sortList(galleryData, currentSort));
+      });
+    }
+
+    fetch('/data/books.json')
+      .then(res => {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.json();
+      })
+      .then(data => {
+        galleryData = data;
+        renderCards(sortList(galleryData, currentSort));
+      })
+      .catch(err => {
+        console.warn('Could not fetch /data/books.json, using pre-rendered fallback:', err);
+        
+        gridContainer.querySelectorAll('.gallery-zoomable').forEach(zoom => {
+          zoom.addEventListener('click', function() {
+            const author = this.dataset.zoomCreator || this.dataset.zoomAuthors || '';
+            const yr = this.dataset.zoomYear || '';
+            openLightbox(this.dataset.zoomSrc, this.dataset.zoomTitle, author, yr, this.dataset.zoomCaption);
+          });
+        });
+
+        filterCards();
+      });
+  }
+
+  if (document.readyState !== 'loading') {
+    initGallery();
+  } else {
+    document.addEventListener('DOMContentLoaded', initGallery);
+  }
+})();
 </script>
-    </main>
+</main>

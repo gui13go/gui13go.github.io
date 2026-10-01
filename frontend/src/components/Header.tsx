@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { useBackendHealth } from '../hooks/useBackendHealth'
 
 interface SearchItem {
   title: string
@@ -12,7 +11,6 @@ interface SearchItem {
 export const Header: React.FC = () => {
   const location = useLocation()
   const navigate = useNavigate()
-  const { isOnline, isOllamaConnected } = useBackendHealth()
 
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
     return (localStorage.getItem('pref-theme') as 'dark' | 'light') || 'dark'
@@ -118,8 +116,15 @@ export const Header: React.FC = () => {
   }
 
   const searchInputRef = useRef<HTMLInputElement>(null)
+  const menuRef = useRef<HTMLUListElement>(null)
+  const menuToggleRef = useRef<HTMLButtonElement>(null)
 
-  // Global keyboard shortcuts (/ and Cmd+K / Ctrl+K)
+  // Automatically close mobile menu whenever route changes
+  useEffect(() => {
+    setMobileMenuOpen(false)
+  }, [location.pathname])
+
+  // Global keyboard shortcuts (/ and Cmd+K / Ctrl+K for search, Escape for search and mobile menu)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       const activeTag = document.activeElement ? document.activeElement.tagName : ''
@@ -134,6 +139,7 @@ export const Header: React.FC = () => {
         searchInputRef.current?.select()
       } else if (e.key === 'Escape') {
         setIsSearching(false)
+        setMobileMenuOpen(false)
         searchInputRef.current?.blur()
       }
     }
@@ -142,11 +148,20 @@ export const Header: React.FC = () => {
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [])
 
-  // Close search when clicking outside
+  // Close search and mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (searchRef.current && !searchRef.current.contains(e.target as Node)) {
+      const target = e.target as Node
+      if (searchRef.current && !searchRef.current.contains(target)) {
         setIsSearching(false)
+      }
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(target) &&
+        menuToggleRef.current &&
+        !menuToggleRef.current.contains(target)
+      ) {
+        setMobileMenuOpen(false)
       }
     }
     document.addEventListener('click', handleClickOutside)
@@ -312,9 +327,6 @@ export const Header: React.FC = () => {
                 <span className="header-search-count">
                   {searchResults.length} suggestion{searchResults.length === 1 ? '' : 's'}
                 </span>
-                <span className="header-search-tips">
-                  <kbd>↑↓</kbd> navigate <kbd>↵</kbd> select <kbd>esc</kbd> close
-                </span>
               </div>
               <ul className="header-search-results">
                 {searchResults.length === 0 ? (
@@ -391,10 +403,15 @@ export const Header: React.FC = () => {
 
         {/* Mobile menu toggle */}
         <button
+          id="menu-toggle"
+          ref={menuToggleRef}
           className="menu-toggle theme-toggle"
           aria-label="Toggle Menu"
           aria-expanded={mobileMenuOpen}
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          onClick={(e) => {
+            e.stopPropagation()
+            setMobileMenuOpen((prev) => !prev)
+          }}
         >
           {mobileMenuOpen ? (
             <svg
@@ -433,7 +450,11 @@ export const Header: React.FC = () => {
         </button>
 
         {/* Primary navigation menu */}
-        <ul id="menu" className={`menu ${mobileMenuOpen ? 'show-menu' : ''}`}>
+        <ul
+          id="menu"
+          ref={menuRef}
+          className={`menu ${mobileMenuOpen ? 'show show-menu' : ''}`}
+        >
           {navLinks.map((link) => {
             const isActive =
               location.pathname === link.to ||
@@ -446,39 +467,6 @@ export const Header: React.FC = () => {
               </li>
             )
           })}
-          {/* Mini PC status badge */}
-          <li>
-            <Link
-              to="/status/"
-              title="Mini PC Diagnostics & Telemetry"
-              className="ai-gateway-link"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <span
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '5px',
-                  color: isOnline ? (isOllamaConnected ? '#34d399' : '#fbbf24') : '#f87171',
-                }}
-              >
-                <span
-                  style={{
-                    width: '7px',
-                    height: '7px',
-                    borderRadius: '50%',
-                    backgroundColor: isOnline
-                      ? isOllamaConnected
-                        ? '#34d399'
-                        : '#fbbf24'
-                      : '#f87171',
-                    display: 'inline-block',
-                  }}
-                />
-                Status
-              </span>
-            </Link>
-          </li>
         </ul>
       </nav>
     </header>

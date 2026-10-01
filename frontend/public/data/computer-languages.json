@@ -1,0 +1,1094 @@
+[
+  {
+    "id": "computer-languages-1",
+    "name": "arcade",
+    "title": "arcade",
+    "year": 2016,
+    "sortYear": 2016,
+    "sortName": "arcade",
+    "description": "arcade is a portable, lightweight expression language written for use with the arcgis system. it is used to perform visualization, labeling, and popup calculations.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "arcade",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "arcade",
+      "data-creator": "esri",
+      "data-year": "2016",
+      "data-typing": "dynamically typed",
+      "data-compiled": "interpreted",
+      "data-paradigm": "scripting functional ",
+      "data-usage": "arcgis mapping labeling data visualization ",
+      "data-description": "arcade is a portable, lightweight expression language written for use with the arcgis system. it is used to perform visualization, labeling, and popup calculations."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">Arcade</h2>\n<span class=\"language-creator\">by Esri</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">2016</span>\n<span class=\"language-type-badge\">Interpreted</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Arcade is a portable, lightweight expression language written for use with the ArcGIS system. It is used to perform visualization, labeling, and popup calculations.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Dynamically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level (Scripting).</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">High (in Esri ecosystem)</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Scripting</span>\n<span class=\"meta-pill\">Functional</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">ArcGIS Mapping</span>\n<span class=\"meta-pill usage-pill\">Labeling</span>\n<span class=\"meta-pill usage-pill\">Data Visualization</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">Geometry Functions</span>\n<span class=\"meta-pill code-pill\">Text Functions</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Esri</span>\n<span class=\"language-tag\">#ArcGIS</span>\n<span class=\"language-tag\">#Scripting</span>\n<span class=\"language-tag\">#Maps</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-2",
+    "name": "terraform",
+    "title": "terraform",
+    "year": 2014,
+    "sortYear": 2014,
+    "sortName": "terraform",
+    "description": "terraform is an open-source infrastructure as code software tool that provides a consistent cli workflow to manage hundreds of cloud services.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "terraform",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "terraform",
+      "data-creator": "hashicorp",
+      "data-year": "2014",
+      "data-typing": "statically typed",
+      "data-compiled": "interpreted / applied by cli",
+      "data-paradigm": "declarative infrastructure as code ",
+      "data-usage": "infrastructure as code cloud provisioning devops ",
+      "data-description": "terraform is an open-source infrastructure as code software tool that provides a consistent cli workflow to manage hundreds of cloud services."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">Terraform</h2>\n<span class=\"language-creator\">by HashiCorp</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">2014</span>\n<span class=\"language-type-badge\">Interpreted / Applied by CLI</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Terraform is an open-source infrastructure as code software tool that provides a consistent CLI workflow to manage hundreds of cloud services.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Statically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level (Infrastructure).</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Very High (in DevOps)</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Declarative</span>\n<span class=\"meta-pill\">Infrastructure as Code</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Infrastructure as Code</span>\n<span class=\"meta-pill usage-pill\">Cloud Provisioning</span>\n<span class=\"meta-pill usage-pill\">DevOps</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">AWS Provider</span>\n<span class=\"meta-pill code-pill\">Azure Provider</span>\n<span class=\"meta-pill code-pill\">Google Provider</span>\n<span class=\"meta-pill code-pill\">Kubernetes Provider</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#IaC</span>\n<span class=\"language-tag\">#Cloud</span>\n<span class=\"language-tag\">#DevOps</span>\n<span class=\"language-tag\">#HCL</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-3",
+    "name": "swift",
+    "title": "swift",
+    "year": 2014,
+    "sortYear": 2014,
+    "sortName": "swift",
+    "description": "swift is a powerful and intuitive programming language for ios, ipados, macos, tvos, and watchos. writing swift code is interactive and fun, the syntax is concise yet expressive.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "swift",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "swift",
+      "data-creator": "chris lattner (apple)",
+      "data-year": "2014",
+      "data-typing": "statically typed",
+      "data-compiled": "compiled",
+      "data-paradigm": "protocol-oriented object-oriented functional imperative ",
+      "data-usage": "ios development macos development server-side swift ",
+      "data-description": "swift is a powerful and intuitive programming language for ios, ipados, macos, tvos, and watchos. writing swift code is interactive and fun, the syntax is concise yet expressive."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">Swift</h2>\n<span class=\"language-creator\">by Chris Lattner (Apple)</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">2014</span>\n<span class=\"language-type-badge\">Compiled</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Swift is a powerful and intuitive programming language for iOS, iPadOS, macOS, tvOS, and watchOS. Writing Swift code is interactive and fun, the syntax is concise yet expressive.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Statically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level.</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">High</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Protocol-oriented</span>\n<span class=\"meta-pill\">Object-Oriented</span>\n<span class=\"meta-pill\">Functional</span>\n<span class=\"meta-pill\">Imperative</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">iOS Development</span>\n<span class=\"meta-pill usage-pill\">macOS Development</span>\n<span class=\"meta-pill usage-pill\">Server-side Swift</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">SwiftUI</span>\n<span class=\"meta-pill code-pill\">UIKit</span>\n<span class=\"meta-pill code-pill\">Foundation</span>\n<span class=\"meta-pill code-pill\">Combine</span>\n<span class=\"meta-pill code-pill\">Vapor</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Apple</span>\n<span class=\"language-tag\">#iOS</span>\n<span class=\"language-tag\">#Safe</span>\n<span class=\"language-tag\">#Fast</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-4",
+    "name": "sqlx",
+    "title": "sqlx",
+    "year": 2013,
+    "sortYear": 2013,
+    "sortName": "sqlx",
+    "description": "sqlx is not a language but a modern sql toolkit for go and rust, providing type-safe, compile-time checked sql queries and async support.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "sqlx",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "sqlx",
+      "data-creator": "jmoiron (go) / launchbadge (rust)",
+      "data-year": "2013",
+      "data-typing": "statically typed (strong)",
+      "data-compiled": "compiled (part of rust/go binary)",
+      "data-paradigm": "asynchronous declarative (embedded) ",
+      "data-usage": "backend development database access ",
+      "data-description": "sqlx is not a language but a modern sql toolkit for go and rust, providing type-safe, compile-time checked sql queries and async support."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">SQLX</h2>\n<span class=\"language-creator\">by Jmoiron (Go) / LaunchBadge (Rust)</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">2013</span>\n<span class=\"language-type-badge\">Compiled (part of Rust/Go binary)</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">SQLX is not a language but a modern SQL toolkit for Go and Rust, providing type-safe, compile-time checked SQL queries and async support.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Statically Typed (Strong)</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">Low/Medium (SQL wrapper).</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">High (in Go/Rust ecosystems)</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Asynchronous</span>\n<span class=\"meta-pill\">Declarative (embedded)</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Backend Development</span>\n<span class=\"meta-pill usage-pill\">Database Access</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">Drivers for Postgres, MySQL, SQLite</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Rust</span>\n<span class=\"language-tag\">#Go</span>\n<span class=\"language-tag\">#SQL</span>\n<span class=\"language-tag\">#Async</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-5",
+    "name": "typescript",
+    "title": "typescript",
+    "year": 2012,
+    "sortYear": 2012,
+    "sortName": "typescript",
+    "description": "typescript is a free and open-source programming language developed and maintained by microsoft. it is a strict syntactical superset of javascript and adds optional static typing to the language.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "typescript",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "typescript",
+      "data-creator": "anders hejlsberg",
+      "data-year": "2012",
+      "data-typing": "statically typed",
+      "data-compiled": "transpiled to javascript",
+      "data-paradigm": "object-oriented functional imperative ",
+      "data-usage": "web development large scale js applications ",
+      "data-description": "typescript is a free and open-source programming language developed and maintained by microsoft. it is a strict syntactical superset of javascript and adds optional static typing to the language."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">TypeScript</h2>\n<span class=\"language-creator\">by Anders Hejlsberg</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">2012</span>\n<span class=\"language-type-badge\">Transpiled to JavaScript</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">TypeScript is a free and open-source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Statically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level.</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Very High</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Object-Oriented</span>\n<span class=\"meta-pill\">Functional</span>\n<span class=\"meta-pill\">Imperative</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Web Development</span>\n<span class=\"meta-pill usage-pill\">Large Scale JS Applications</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">All JavaScript Libraries</span>\n<span class=\"meta-pill code-pill\">TypeDefinitions</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Types</span>\n<span class=\"language-tag\">#Microsoft</span>\n<span class=\"language-tag\">#JavaScript Superset</span>\n<span class=\"language-tag\">#Scalable</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-6",
+    "name": "ansible",
+    "title": "ansible",
+    "year": 2012,
+    "sortYear": 2012,
+    "sortName": "ansible",
+    "description": "ansible is an open-source software provisioning, configuration management, and application-deployment tool enabling infrastructure as code.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "ansible",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "ansible",
+      "data-creator": "michael dehaan",
+      "data-year": "2012",
+      "data-typing": "dynamically typed",
+      "data-compiled": "interpreted",
+      "data-paradigm": "procedural imperative automation ",
+      "data-usage": "configuration management application deployment automation ",
+      "data-description": "ansible is an open-source software provisioning, configuration management, and application-deployment tool enabling infrastructure as code."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">Ansible</h2>\n<span class=\"language-creator\">by Michael DeHaan</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">2012</span>\n<span class=\"language-type-badge\">Interpreted</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Ansible is an open-source software provisioning, configuration management, and application-deployment tool enabling infrastructure as code.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Dynamically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level.</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Very High (in DevOps)</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Procedural</span>\n<span class=\"meta-pill\">Imperative</span>\n<span class=\"meta-pill\">Automation</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Configuration Management</span>\n<span class=\"meta-pill usage-pill\">Application Deployment</span>\n<span class=\"meta-pill usage-pill\">Automation</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">Built-in Modules (apt, yum, service, copy, etc.)</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Automation</span>\n<span class=\"language-tag\">#YAML</span>\n<span class=\"language-tag\">#DevOps</span>\n<span class=\"language-tag\">#Config Management</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-7",
+    "name": "julia",
+    "title": "julia",
+    "year": 2012,
+    "sortYear": 2012,
+    "sortName": "julia",
+    "description": "julia is a high-level, high-performance, dynamic programming language. it is well suited for numerical analysis and computational science.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "julia",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "julia",
+      "data-creator": "jeff bezanson et al.",
+      "data-year": "2012",
+      "data-typing": "dynamically typed",
+      "data-compiled": "just-in-time (jit) compiled (llvm)",
+      "data-paradigm": "multiple dispatch functional imperative ",
+      "data-usage": "scientific computing data science machine learning ",
+      "data-description": "julia is a high-level, high-performance, dynamic programming language. it is well suited for numerical analysis and computational science."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">Julia</h2>\n<span class=\"language-creator\">by Jeff Bezanson et al.</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">2012</span>\n<span class=\"language-type-badge\">Just-In-Time (JIT) Compiled (LLVM)</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Julia is a high-level, high-performance, dynamic programming language. It is well suited for numerical analysis and computational science.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Dynamically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level.</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Growing</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Multiple Dispatch</span>\n<span class=\"meta-pill\">Functional</span>\n<span class=\"meta-pill\">Imperative</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Scientific Computing</span>\n<span class=\"meta-pill usage-pill\">Data Science</span>\n<span class=\"meta-pill usage-pill\">Machine Learning</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">DataFrames.jl</span>\n<span class=\"meta-pill code-pill\">Flux.jl</span>\n<span class=\"meta-pill code-pill\">DifferentialEquations.jl</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Fast</span>\n<span class=\"language-tag\">#Science</span>\n<span class=\"language-tag\">#Math</span>\n<span class=\"language-tag\">#Performance</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-8",
+    "name": "kotlin",
+    "title": "kotlin",
+    "year": 2011,
+    "sortYear": 2011,
+    "sortName": "kotlin",
+    "description": "kotlin is a cross-platform, statically typed, general-purpose programming language with type inference. it is designed to interoperate fully with java.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "kotlin",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "kotlin",
+      "data-creator": "jetbrains",
+      "data-year": "2011",
+      "data-typing": "statically typed",
+      "data-compiled": "compiled to bytecode (jvm), js, or native",
+      "data-paradigm": "object-oriented functional imperative ",
+      "data-usage": "android development server-side development multiplatform mobile ",
+      "data-description": "kotlin is a cross-platform, statically typed, general-purpose programming language with type inference. it is designed to interoperate fully with java."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">Kotlin</h2>\n<span class=\"language-creator\">by JetBrains</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">2011</span>\n<span class=\"language-type-badge\">Compiled to Bytecode (JVM), JS, or Native</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Kotlin is a cross-platform, statically typed, general-purpose programming language with type inference. It is designed to interoperate fully with Java.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Statically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level.</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">High</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Object-Oriented</span>\n<span class=\"meta-pill\">Functional</span>\n<span class=\"meta-pill\">Imperative</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Android Development</span>\n<span class=\"meta-pill usage-pill\">Server-side Development</span>\n<span class=\"meta-pill usage-pill\">Multiplatform Mobile</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">Ktor</span>\n<span class=\"meta-pill code-pill\">Spring Boot</span>\n<span class=\"meta-pill code-pill\">Jetpack Compose</span>\n<span class=\"meta-pill code-pill\">Coroutines</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Android</span>\n<span class=\"language-tag\">#JVM</span>\n<span class=\"language-tag\">#Concise</span>\n<span class=\"language-tag\">#Safe</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-9",
+    "name": "dart",
+    "title": "dart",
+    "year": 2011,
+    "sortYear": 2011,
+    "sortName": "dart",
+    "description": "dart is a client-optimized language for fast apps on any platform. it is developed by google and is used to build mobile, desktop, server, and web applications.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "dart",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "dart",
+      "data-creator": "lars bak, kasper lund",
+      "data-year": "2011",
+      "data-typing": "statically typed",
+      "data-compiled": "compiled (aot for mobile, jit for dev) / transpiled to js",
+      "data-paradigm": "object-oriented functional imperative reflective ",
+      "data-usage": "cross-platform mobile apps (flutter) web apps ",
+      "data-description": "dart is a client-optimized language for fast apps on any platform. it is developed by google and is used to build mobile, desktop, server, and web applications."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">Dart</h2>\n<span class=\"language-creator\">by Lars Bak, Kasper Lund</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">2011</span>\n<span class=\"language-type-badge\">Compiled (AOT for mobile, JIT for dev) / Transpiled to JS</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Dart is a client-optimized language for fast apps on any platform. It is developed by Google and is used to build mobile, desktop, server, and web applications.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Statically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level.</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">High (due to Flutter)</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Object-Oriented</span>\n<span class=\"meta-pill\">Functional</span>\n<span class=\"meta-pill\">Imperative</span>\n<span class=\"meta-pill\">Reflective</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Cross-platform Mobile Apps (Flutter)</span>\n<span class=\"meta-pill usage-pill\">Web Apps</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">Flutter</span>\n<span class=\"meta-pill code-pill\">AngularDart</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Flutter</span>\n<span class=\"language-tag\">#Mobile</span>\n<span class=\"language-tag\">#UI</span>\n<span class=\"language-tag\">#Google</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-10",
+    "name": "rust",
+    "title": "rust",
+    "year": 2010,
+    "sortYear": 2010,
+    "sortName": "rust",
+    "description": "rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency. it enforces memory safety without garbage collection.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "rust",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "rust",
+      "data-creator": "graydon hoare",
+      "data-year": "2010",
+      "data-typing": "statically typed",
+      "data-compiled": "compiled",
+      "data-paradigm": "multi-paradigm concurrent functional imperative ",
+      "data-usage": "systems programming webassembly cli tools game engines ",
+      "data-description": "rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency. it enforces memory safety without garbage collection."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">Rust</h2>\n<span class=\"language-creator\">by Graydon Hoare</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">2010</span>\n<span class=\"language-type-badge\">Compiled</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency. It enforces memory safety without garbage collection.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Statically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">Medium-High (Zero-cost abstractions).</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Growing Fast</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Multi-paradigm</span>\n<span class=\"meta-pill\">Concurrent</span>\n<span class=\"meta-pill\">Functional</span>\n<span class=\"meta-pill\">Imperative</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Systems Programming</span>\n<span class=\"meta-pill usage-pill\">WebAssembly</span>\n<span class=\"meta-pill usage-pill\">CLI Tools</span>\n<span class=\"meta-pill usage-pill\">Game Engines</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">Serde</span>\n<span class=\"meta-pill code-pill\">Tokio</span>\n<span class=\"meta-pill code-pill\">Rocket</span>\n<span class=\"meta-pill code-pill\">Rayon</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Safety</span>\n<span class=\"language-tag\">#Performance</span>\n<span class=\"language-tag\">#Ownership</span>\n<span class=\"language-tag\">#Systems</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-11",
+    "name": "go",
+    "title": "go",
+    "year": 2009,
+    "sortYear": 2009,
+    "sortName": "go",
+    "description": "go is a statically typed, compiled programming language designed at google. it is syntactically similar to c, but with memory safety, garbage collection, structural typing, and csp-style concurrency.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "go",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "go",
+      "data-creator": "robert griesemer, rob pike, ken thompson",
+      "data-year": "2009",
+      "data-typing": "statically typed",
+      "data-compiled": "compiled",
+      "data-paradigm": "concurrent imperative structured ",
+      "data-usage": "cloud services microservices networking devops tools ",
+      "data-description": "go is a statically typed, compiled programming language designed at google. it is syntactically similar to c, but with memory safety, garbage collection, structural typing, and csp-style concurrency."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">Go</h2>\n<span class=\"language-creator\">by Robert Griesemer, Rob Pike, Ken Thompson</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">2009</span>\n<span class=\"language-type-badge\">Compiled</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Go is a statically typed, compiled programming language designed at Google. It is syntactically similar to C, but with memory safety, garbage collection, structural typing, and CSP-style concurrency.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Statically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">Medium-High.</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">High</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Concurrent</span>\n<span class=\"meta-pill\">Imperative</span>\n<span class=\"meta-pill\">Structured</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Cloud Services</span>\n<span class=\"meta-pill usage-pill\">Microservices</span>\n<span class=\"meta-pill usage-pill\">Networking</span>\n<span class=\"meta-pill usage-pill\">DevOps Tools</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">Standard Library</span>\n<span class=\"meta-pill code-pill\">Gin</span>\n<span class=\"meta-pill code-pill\">Gorm</span>\n<span class=\"meta-pill code-pill\">Cobra</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Concurrency</span>\n<span class=\"language-tag\">#Simple</span>\n<span class=\"language-tag\">#Google</span>\n<span class=\"language-tag\">#Fast</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-12",
+    "name": "scratch",
+    "title": "scratch",
+    "year": 2007,
+    "sortYear": 2007,
+    "sortName": "scratch",
+    "description": "scratch is a block-based visual programming language and website targeted primarily at children.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "scratch",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "scratch",
+      "data-creator": "mit media lab",
+      "data-year": "2007",
+      "data-typing": "dynamically typed",
+      "data-compiled": "interpreted",
+      "data-paradigm": "event-driven block-based object-oriented ",
+      "data-usage": "education introductory programming ",
+      "data-description": "scratch is a block-based visual programming language and website targeted primarily at children."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">Scratch</h2>\n<span class=\"language-creator\">by MIT Media Lab</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">2007</span>\n<span class=\"language-type-badge\">Interpreted</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Scratch is a block-based visual programming language and website targeted primarily at children.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Dynamically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">Visual.</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">High (Education)</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Event-driven</span>\n<span class=\"meta-pill\">Block-based</span>\n<span class=\"meta-pill\">Object-Oriented</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Education</span>\n<span class=\"meta-pill usage-pill\">Introductory Programming</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">Standard Blocks</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Kids</span>\n<span class=\"language-tag\">#Education</span>\n<span class=\"language-tag\">#Visual</span>\n<span class=\"language-tag\">#Blocks</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-13",
+    "name": "markdown",
+    "title": "markdown",
+    "year": 2004,
+    "sortYear": 2004,
+    "sortName": "markdown",
+    "description": "markdown is a lightweight markup language for creating formatted text using a plain-text editor.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "markdown",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "markdown",
+      "data-creator": "john gruber",
+      "data-year": "2004",
+      "data-typing": "n/a",
+      "data-compiled": "parsed to html",
+      "data-paradigm": "markup declarative ",
+      "data-usage": "documentation readme files static sites note-taking ",
+      "data-description": "markdown is a lightweight markup language for creating formatted text using a plain-text editor."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">Markdown</h2>\n<span class=\"language-creator\">by John Gruber</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">2004</span>\n<span class=\"language-type-badge\">Parsed to HTML</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Markdown is a lightweight markup language for creating formatted text using a plain-text editor.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">N/A</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level (Markup).</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Extremely High</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Markup</span>\n<span class=\"meta-pill\">Declarative</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Documentation</span>\n<span class=\"meta-pill usage-pill\">README files</span>\n<span class=\"meta-pill usage-pill\">Static Sites</span>\n<span class=\"meta-pill usage-pill\">Note-taking</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">Marked</span>\n<span class=\"meta-pill code-pill\">Remark</span>\n<span class=\"meta-pill code-pill\">Pandoc</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Markup</span>\n<span class=\"language-tag\">#Documentation</span>\n<span class=\"language-tag\">#Simple</span>\n<span class=\"language-tag\">#Web</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-14",
+    "name": "scala",
+    "title": "scala",
+    "year": 2004,
+    "sortYear": 2004,
+    "sortName": "scala",
+    "description": "scala is a strong statically typed general-purpose programming language which supports both object-oriented programming and functional programming.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "scala",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "scala",
+      "data-creator": "martin odersky",
+      "data-year": "2004",
+      "data-typing": "statically typed",
+      "data-compiled": "compiled to bytecode (jvm)",
+      "data-paradigm": "functional object-oriented imperative ",
+      "data-usage": "big data (spark) backend services distributed systems ",
+      "data-description": "scala is a strong statically typed general-purpose programming language which supports both object-oriented programming and functional programming."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">Scala</h2>\n<span class=\"language-creator\">by Martin Odersky</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">2004</span>\n<span class=\"language-type-badge\">Compiled to Bytecode (JVM)</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Scala is a strong statically typed general-purpose programming language which supports both object-oriented programming and functional programming.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Statically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level.</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Moderate</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Functional</span>\n<span class=\"meta-pill\">Object-Oriented</span>\n<span class=\"meta-pill\">Imperative</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Big Data (Spark)</span>\n<span class=\"meta-pill usage-pill\">Backend Services</span>\n<span class=\"meta-pill usage-pill\">Distributed Systems</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">Akka</span>\n<span class=\"meta-pill code-pill\">Play Framework</span>\n<span class=\"meta-pill code-pill\">Apache Spark</span>\n<span class=\"meta-pill code-pill\">Cats</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#JVM</span>\n<span class=\"language-tag\">#Functional</span>\n<span class=\"language-tag\">#Big Data</span>\n<span class=\"language-tag\">#Scalable</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-15",
+    "name": "postgis",
+    "title": "postgis",
+    "year": 2001,
+    "sortYear": 2001,
+    "sortName": "postgis",
+    "description": "postgis is a spatial database extender for postgresql object-relational database. it adds support for geographic objects allowing location queries to be run in sql.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "postgis",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "postgis",
+      "data-creator": "refractions research",
+      "data-year": "2001",
+      "data-typing": "statically typed (schema)",
+      "data-compiled": "interpreted (db extension)",
+      "data-paradigm": "declarative spatial ",
+      "data-usage": "gis spatial analysis mapping database ",
+      "data-description": "postgis is a spatial database extender for postgresql object-relational database. it adds support for geographic objects allowing location queries to be run in sql."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">PostGIS</h2>\n<span class=\"language-creator\">by Refractions Research</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">2001</span>\n<span class=\"language-type-badge\">Interpreted (DB Extension)</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">PostGIS is a spatial database extender for PostgreSQL object-relational database. It adds support for geographic objects allowing location queries to be run in SQL.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Statically Typed (Schema)</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level (Spatial).</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Standard for Open Source GIS</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Declarative</span>\n<span class=\"meta-pill\">Spatial</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">GIS</span>\n<span class=\"meta-pill usage-pill\">Spatial Analysis</span>\n<span class=\"meta-pill usage-pill\">Mapping</span>\n<span class=\"meta-pill usage-pill\">Database</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">GEOS</span>\n<span class=\"meta-pill code-pill\">GDAL</span>\n<span class=\"meta-pill code-pill\">PROJ</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#GIS</span>\n<span class=\"language-tag\">#Spatial</span>\n<span class=\"language-tag\">#SQL</span>\n<span class=\"language-tag\">#Maps</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-16",
+    "name": "c#",
+    "title": "c#",
+    "year": 2000,
+    "sortYear": 2000,
+    "sortName": "c#",
+    "description": "c# is a modern, object-oriented, and type-safe programming language. it enables developers to build many types of secure and robust applications that run in the .net ecosystem.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "c#",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "c#",
+      "data-creator": "anders hejlsberg",
+      "data-year": "2000",
+      "data-typing": "statically typed",
+      "data-compiled": "compiled to il, jit compiled by clr",
+      "data-paradigm": "object-oriented component-oriented functional imperative ",
+      "data-usage": "enterprise applications game development (unity) web development mobile apps ",
+      "data-description": "c# is a modern, object-oriented, and type-safe programming language. it enables developers to build many types of secure and robust applications that run in the .net ecosystem."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">C#</h2>\n<span class=\"language-creator\">by Anders Hejlsberg</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">2000</span>\n<span class=\"language-type-badge\">Compiled to IL, JIT compiled by CLR</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">C# is a modern, object-oriented, and type-safe programming language. It enables developers to build many types of secure and robust applications that run in the .NET ecosystem.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Statically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level.</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Very High</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Object-Oriented</span>\n<span class=\"meta-pill\">Component-oriented</span>\n<span class=\"meta-pill\">Functional</span>\n<span class=\"meta-pill\">Imperative</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Enterprise Applications</span>\n<span class=\"meta-pill usage-pill\">Game Development (Unity)</span>\n<span class=\"meta-pill usage-pill\">Web Development</span>\n<span class=\"meta-pill usage-pill\">Mobile Apps</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">.NET Core</span>\n<span class=\"meta-pill code-pill\">Entity Framework</span>\n<span class=\"meta-pill code-pill\">Newtonsoft.Json</span>\n<span class=\"meta-pill code-pill\">ASP.NET</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Microsoft</span>\n<span class=\"language-tag\">#.NET</span>\n<span class=\"language-tag\">#Enterprise</span>\n<span class=\"language-tag\">#Games</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-17",
+    "name": "gdal",
+    "title": "gdal",
+    "year": 1998,
+    "sortYear": 1998,
+    "sortName": "gdal",
+    "description": "the geospatial data abstraction library (gdal) is a translator library for raster and vector geospatial data formats.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "gdal",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "gdal",
+      "data-creator": "frank warmerdam",
+      "data-year": "1998",
+      "data-typing": "statically typed (c++)",
+      "data-compiled": "compiled (c++)",
+      "data-paradigm": "object-oriented procedural ",
+      "data-usage": "gis data conversion raster processing vector manipulation ",
+      "data-description": "the geospatial data abstraction library (gdal) is a translator library for raster and vector geospatial data formats."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">GDAL</h2>\n<span class=\"language-creator\">by Frank Warmerdam</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">1998</span>\n<span class=\"language-type-badge\">Compiled (C++)</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">The Geospatial Data Abstraction Library (GDAL) is a translator library for raster and vector geospatial data formats.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Statically Typed (C++)</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">Low-level (Data Access).</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Ubiquitous in GIS</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Object-Oriented</span>\n<span class=\"meta-pill\">Procedural</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">GIS Data Conversion</span>\n<span class=\"meta-pill usage-pill\">Raster Processing</span>\n<span class=\"meta-pill usage-pill\">Vector Manipulation</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">OGR</span>\n<span class=\"meta-pill code-pill\">PROJ</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#GIS</span>\n<span class=\"language-tag\">#Raster</span>\n<span class=\"language-tag\">#Vector</span>\n<span class=\"language-tag\">#Conversion</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-18",
+    "name": "css",
+    "title": "css",
+    "year": 1996,
+    "sortYear": 1996,
+    "sortName": "css",
+    "description": "cascading style sheets (css) is a style sheet language used for describing the presentation of a document written in a markup language such as html.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "css",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "css",
+      "data-creator": "håkon wium lie",
+      "data-year": "1996",
+      "data-typing": "n/a",
+      "data-compiled": "parsed by browser",
+      "data-paradigm": "declarative style sheet ",
+      "data-usage": "web design user interfaces animations ",
+      "data-description": "cascading style sheets (css) is a style sheet language used for describing the presentation of a document written in a markup language such as html."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">CSS</h2>\n<span class=\"language-creator\">by Håkon Wium Lie</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">1996</span>\n<span class=\"language-type-badge\">Parsed by Browser</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">N/A</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level (Styling).</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Extremely High</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Declarative</span>\n<span class=\"meta-pill\">Style Sheet</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Web Design</span>\n<span class=\"meta-pill usage-pill\">User Interfaces</span>\n<span class=\"meta-pill usage-pill\">Animations</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">Tailwind CSS</span>\n<span class=\"meta-pill code-pill\">Sass</span>\n<span class=\"meta-pill code-pill\">Bootstrap</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Design</span>\n<span class=\"language-tag\">#Web</span>\n<span class=\"language-tag\">#Style</span>\n<span class=\"language-tag\">#Layout</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-19",
+    "name": "javascript",
+    "title": "javascript",
+    "year": 1995,
+    "sortYear": 1995,
+    "sortName": "javascript",
+    "description": "javascript is a programming language that is one of the core technologies of the world wide web, alongside html and css.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "javascript",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "javascript",
+      "data-creator": "brendan eich",
+      "data-year": "1995",
+      "data-typing": "dynamically typed",
+      "data-compiled": "just-in-time compiled (often called interpreted)",
+      "data-paradigm": "event-driven functional imperative ",
+      "data-usage": "web development (frontend & backend) mobile app development game development ",
+      "data-description": "javascript is a programming language that is one of the core technologies of the world wide web, alongside html and css."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">JavaScript</h2>\n<span class=\"language-creator\">by Brendan Eich</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">1995</span>\n<span class=\"language-type-badge\">Just-In-Time Compiled (often called Interpreted)</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">JavaScript is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Dynamically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level.</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Extremely High</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Event-driven</span>\n<span class=\"meta-pill\">Functional</span>\n<span class=\"meta-pill\">Imperative</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Web Development (Frontend &amp; Backend)</span>\n<span class=\"meta-pill usage-pill\">Mobile App Development</span>\n<span class=\"meta-pill usage-pill\">Game Development</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">React</span>\n<span class=\"meta-pill code-pill\">Vue</span>\n<span class=\"meta-pill code-pill\">Angular</span>\n<span class=\"meta-pill code-pill\">Express</span>\n<span class=\"meta-pill code-pill\">Lodash</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Web</span>\n<span class=\"language-tag\">#Frontend</span>\n<span class=\"language-tag\">#Interactive</span>\n<span class=\"language-tag\">#Async</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-20",
+    "name": "java",
+    "title": "java",
+    "year": 1995,
+    "sortYear": 1995,
+    "sortName": "java",
+    "description": "java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "java",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "java",
+      "data-creator": "james gosling",
+      "data-year": "1995",
+      "data-typing": "statically typed",
+      "data-compiled": "compiled to bytecode, interpreted by jvm",
+      "data-paradigm": "object-oriented imperative concurrent ",
+      "data-usage": "enterprise applications android apps big data banking ",
+      "data-description": "java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">Java</h2>\n<span class=\"language-creator\">by James Gosling</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">1995</span>\n<span class=\"language-type-badge\">Compiled to Bytecode, Interpreted by JVM</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Statically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level.</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Very High</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Object-Oriented</span>\n<span class=\"meta-pill\">Imperative</span>\n<span class=\"meta-pill\">Concurrent</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Enterprise Applications</span>\n<span class=\"meta-pill usage-pill\">Android Apps</span>\n<span class=\"meta-pill usage-pill\">Big Data</span>\n<span class=\"meta-pill usage-pill\">Banking</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">Spring</span>\n<span class=\"meta-pill code-pill\">Hibernate</span>\n<span class=\"meta-pill code-pill\">Apache Commons</span>\n<span class=\"meta-pill code-pill\">JUnit</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#OOP</span>\n<span class=\"language-tag\">#Enterprise</span>\n<span class=\"language-tag\">#Robust</span>\n<span class=\"language-tag\">#JVM</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-21",
+    "name": "ruby",
+    "title": "ruby",
+    "year": 1995,
+    "sortYear": 1995,
+    "sortName": "ruby",
+    "description": "ruby is a dynamic, open source programming language with a focus on simplicity and productivity. it has an elegant syntax that is natural to read and easy to write.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "ruby",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "ruby",
+      "data-creator": "yukihiro matsumoto (matz)",
+      "data-year": "1995",
+      "data-typing": "dynamically typed",
+      "data-compiled": "interpreted",
+      "data-paradigm": "object-oriented functional imperative ",
+      "data-usage": "web development scripting prototyping ",
+      "data-description": "ruby is a dynamic, open source programming language with a focus on simplicity and productivity. it has an elegant syntax that is natural to read and easy to write."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">Ruby</h2>\n<span class=\"language-creator\">by Yukihiro Matsumoto (Matz)</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">1995</span>\n<span class=\"language-type-badge\">Interpreted</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Ruby is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Dynamically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">Very High-level.</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Moderate</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Object-Oriented</span>\n<span class=\"meta-pill\">Functional</span>\n<span class=\"meta-pill\">Imperative</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Web Development</span>\n<span class=\"meta-pill usage-pill\">Scripting</span>\n<span class=\"meta-pill usage-pill\">Prototyping</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">Ruby on Rails</span>\n<span class=\"meta-pill code-pill\">Sinatra</span>\n<span class=\"meta-pill code-pill\">RSpec</span>\n<span class=\"meta-pill code-pill\">Devise</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Rails</span>\n<span class=\"language-tag\">#Web</span>\n<span class=\"language-tag\">#Elegant</span>\n<span class=\"language-tag\">#Productivity</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-22",
+    "name": "php",
+    "title": "php",
+    "year": 1994,
+    "sortYear": 1994,
+    "sortName": "php",
+    "description": "php is a popular general-purpose scripting language that is especially suited to web development. it was originally created by danish-canadian programmer rasmus lerdorf.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "php",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "php",
+      "data-creator": "rasmus lerdorf",
+      "data-year": "1994",
+      "data-typing": "dynamically typed (with optional typing)",
+      "data-compiled": "interpreted",
+      "data-paradigm": "imperative functional object-oriented procedural ",
+      "data-usage": "web development (backend) cms (wordpress, drupal) e-commerce ",
+      "data-description": "php is a popular general-purpose scripting language that is especially suited to web development. it was originally created by danish-canadian programmer rasmus lerdorf."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">PHP</h2>\n<span class=\"language-creator\">by Rasmus Lerdorf</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">1994</span>\n<span class=\"language-type-badge\">Interpreted</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">PHP is a popular general-purpose scripting language that is especially suited to web development. It was originally created by Danish-Canadian programmer Rasmus Lerdorf.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Dynamically Typed (with optional typing)</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level.</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Very High</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Imperative</span>\n<span class=\"meta-pill\">Functional</span>\n<span class=\"meta-pill\">Object-Oriented</span>\n<span class=\"meta-pill\">Procedural</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Web Development (Backend)</span>\n<span class=\"meta-pill usage-pill\">CMS (WordPress, Drupal)</span>\n<span class=\"meta-pill usage-pill\">E-commerce</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">Laravel</span>\n<span class=\"meta-pill code-pill\">Symfony</span>\n<span class=\"meta-pill code-pill\">WordPress</span>\n<span class=\"meta-pill code-pill\">Composer</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Web</span>\n<span class=\"language-tag\">#Backend</span>\n<span class=\"language-tag\">#Easy Deployment</span>\n<span class=\"language-tag\">#CMS</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-23",
+    "name": "html",
+    "title": "html",
+    "year": 1993,
+    "sortYear": 1993,
+    "sortName": "html",
+    "description": "hypertext markup language (html) is the standard markup language for documents designed to be displayed in a web browser.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "html",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "html",
+      "data-creator": "tim berners-lee",
+      "data-year": "1993",
+      "data-typing": "n/a",
+      "data-compiled": "parsed by browser",
+      "data-paradigm": "markup declarative ",
+      "data-usage": "web development email templates web applications ",
+      "data-description": "hypertext markup language (html) is the standard markup language for documents designed to be displayed in a web browser."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">HTML</h2>\n<span class=\"language-creator\">by Tim Berners-Lee</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">1993</span>\n<span class=\"language-type-badge\">Parsed by Browser</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">HyperText Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">N/A</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level (Markup).</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Extremely High</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Markup</span>\n<span class=\"meta-pill\">Declarative</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Web Development</span>\n<span class=\"meta-pill usage-pill\">Email Templates</span>\n<span class=\"meta-pill usage-pill\">Web Applications</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">Standard HTML5</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Web</span>\n<span class=\"language-tag\">#Structure</span>\n<span class=\"language-tag\">#Frontend</span>\n<span class=\"language-tag\">#Standard</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-24",
+    "name": "r",
+    "title": "r",
+    "year": 1993,
+    "sortYear": 1993,
+    "sortName": "r",
+    "description": "r is a programming language and free software environment for statistical computing and graphics supported by the r core team and the r foundation for statistical computing.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "r",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "r",
+      "data-creator": "ross ihaka, robert gentleman",
+      "data-year": "1993",
+      "data-typing": "dynamically typed",
+      "data-compiled": "interpreted",
+      "data-paradigm": "functional procedural reflective imperative ",
+      "data-usage": "statistical analysis data visualization bioinformatics machine learning ",
+      "data-description": "r is a programming language and free software environment for statistical computing and graphics supported by the r core team and the r foundation for statistical computing."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">R</h2>\n<span class=\"language-creator\">by Ross Ihaka, Robert Gentleman</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">1993</span>\n<span class=\"language-type-badge\">Interpreted</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">R is a programming language and free software environment for statistical computing and graphics supported by the R Core Team and the R Foundation for Statistical Computing.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Dynamically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level.</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Moderate (High in Data Science)</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Functional</span>\n<span class=\"meta-pill\">Procedural</span>\n<span class=\"meta-pill\">Reflective</span>\n<span class=\"meta-pill\">Imperative</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Statistical Analysis</span>\n<span class=\"meta-pill usage-pill\">Data Visualization</span>\n<span class=\"meta-pill usage-pill\">Bioinformatics</span>\n<span class=\"meta-pill usage-pill\">Machine Learning</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">dplyr</span>\n<span class=\"meta-pill code-pill\">ggplot2</span>\n<span class=\"meta-pill code-pill\">Shiny</span>\n<span class=\"meta-pill code-pill\">tidyr</span>\n<span class=\"meta-pill code-pill\">caret</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Statistics</span>\n<span class=\"language-tag\">#Data</span>\n<span class=\"language-tag\">#Analysis</span>\n<span class=\"language-tag\">#Plots</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-25",
+    "name": "lua",
+    "title": "lua",
+    "year": 1993,
+    "sortYear": 1993,
+    "sortName": "lua",
+    "description": "lua is a lightweight, high-level, multi-paradigm programming language designed primarily for embedded use in applications.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "lua",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "lua",
+      "data-creator": "roberto ierusalimschy",
+      "data-year": "1993",
+      "data-typing": "dynamically typed",
+      "data-compiled": "interpreted (bytecode)",
+      "data-paradigm": "multi-paradigm scripting procedural functional ",
+      "data-usage": "game development (roblox, wow) embedded systems scripting ",
+      "data-description": "lua is a lightweight, high-level, multi-paradigm programming language designed primarily for embedded use in applications."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">Lua</h2>\n<span class=\"language-creator\">by Roberto Ierusalimschy</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">1993</span>\n<span class=\"language-type-badge\">Interpreted (Bytecode)</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Lua is a lightweight, high-level, multi-paradigm programming language designed primarily for embedded use in applications.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Dynamically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level.</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Moderate (High in Games)</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Multi-paradigm</span>\n<span class=\"meta-pill\">Scripting</span>\n<span class=\"meta-pill\">Procedural</span>\n<span class=\"meta-pill\">Functional</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Game Development (Roblox, WoW)</span>\n<span class=\"meta-pill usage-pill\">Embedded Systems</span>\n<span class=\"meta-pill usage-pill\">Scripting</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">LÖVE</span>\n<span class=\"meta-pill code-pill\">Corona SDK</span>\n<span class=\"meta-pill code-pill\">Torch (historic)</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Embedded</span>\n<span class=\"language-tag\">#Scripting</span>\n<span class=\"language-tag\">#Games</span>\n<span class=\"language-tag\">#Lightweight</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-26",
+    "name": "python",
+    "title": "python",
+    "year": 1991,
+    "sortYear": 1991,
+    "sortName": "python",
+    "description": "python is a high-level, general-purpose programming language. its design philosophy emphasizes code readability with the use of significant indentation.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "python",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "python",
+      "data-creator": "guido van rossum",
+      "data-year": "1991",
+      "data-typing": "dynamically typed",
+      "data-compiled": "interpreted",
+      "data-paradigm": "object-oriented procedural functional ",
+      "data-usage": "web development data science artificial intelligence scientific computing automation ",
+      "data-description": "python is a high-level, general-purpose programming language. its design philosophy emphasizes code readability with the use of significant indentation."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">Python</h2>\n<span class=\"language-creator\">by Guido van Rossum</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">1991</span>\n<span class=\"language-type-badge\">Interpreted</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Dynamically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level.</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Extremely High</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Object-Oriented</span>\n<span class=\"meta-pill\">Procedural</span>\n<span class=\"meta-pill\">Functional</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Web Development</span>\n<span class=\"meta-pill usage-pill\">Data Science</span>\n<span class=\"meta-pill usage-pill\">Artificial Intelligence</span>\n<span class=\"meta-pill usage-pill\">Scientific Computing</span>\n<span class=\"meta-pill usage-pill\">Automation</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">NumPy</span>\n<span class=\"meta-pill code-pill\">Pandas</span>\n<span class=\"meta-pill code-pill\">Requests</span>\n<span class=\"meta-pill code-pill\">Django</span>\n<span class=\"meta-pill code-pill\">FastAPI</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Simple</span>\n<span class=\"language-tag\">#Readable</span>\n<span class=\"language-tag\">#Versatile</span>\n<span class=\"language-tag\">#AI</span>\n<span class=\"language-tag\">#Data</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-27",
+    "name": "haskell",
+    "title": "haskell",
+    "year": 1990,
+    "sortYear": 1990,
+    "sortName": "haskell",
+    "description": "haskell is a general-purpose, statically typed, purely functional programming language with type inference and lazy evaluation.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "haskell",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "haskell",
+      "data-creator": "haskell committee",
+      "data-year": "1990",
+      "data-typing": "statically typed (strong)",
+      "data-compiled": "compiled",
+      "data-paradigm": "purely functional ",
+      "data-usage": "academic research fintech high-assurance systems ",
+      "data-description": "haskell is a general-purpose, statically typed, purely functional programming language with type inference and lazy evaluation."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">Haskell</h2>\n<span class=\"language-creator\">by Haskell Committee</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">1990</span>\n<span class=\"language-type-badge\">Compiled</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Haskell is a general-purpose, statically typed, purely functional programming language with type inference and lazy evaluation.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Statically Typed (Strong)</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">Very High-level.</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Niche</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Purely Functional</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Academic Research</span>\n<span class=\"meta-pill usage-pill\">Fintech</span>\n<span class=\"meta-pill usage-pill\">High-assurance Systems</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">Pandoc</span>\n<span class=\"meta-pill code-pill\">Lens</span>\n<span class=\"meta-pill code-pill\">Yesod</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Functional</span>\n<span class=\"language-tag\">#Pure</span>\n<span class=\"language-tag\">#Academic</span>\n<span class=\"language-tag\">#Lazy</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-28",
+    "name": "shell (bash)",
+    "title": "shell (bash)",
+    "year": 1989,
+    "sortYear": 1989,
+    "sortName": "shell (bash)",
+    "description": "unix shell is a command-line interpreter or shell that provides a command line user interface for unix-like operating systems. bash is the most common default shell.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "shell (bash)",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "shell (bash)",
+      "data-creator": "brian fox",
+      "data-year": "1989",
+      "data-typing": "untyped (everything is a string)",
+      "data-compiled": "interpreted",
+      "data-paradigm": "imperative scripting ",
+      "data-usage": "system administration devops automation scripts ",
+      "data-description": "unix shell is a command-line interpreter or shell that provides a command line user interface for unix-like operating systems. bash is the most common default shell."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">Shell (Bash)</h2>\n<span class=\"language-creator\">by Brian Fox</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">1989</span>\n<span class=\"language-type-badge\">Interpreted</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Unix shell is a command-line interpreter or shell that provides a command line user interface for Unix-like operating systems. Bash is the most common default shell.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Untyped (everything is a string)</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level (Command glue).</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">High</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Imperative</span>\n<span class=\"meta-pill\">Scripting</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">System Administration</span>\n<span class=\"meta-pill usage-pill\">DevOps</span>\n<span class=\"meta-pill usage-pill\">Automation Scripts</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">GNU Coreutils</span>\n<span class=\"meta-pill code-pill\">awk</span>\n<span class=\"meta-pill code-pill\">sed</span>\n<span class=\"meta-pill code-pill\">grep</span>\n<span class=\"meta-pill code-pill\">curl</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Automation</span>\n<span class=\"language-tag\">#Linux</span>\n<span class=\"language-tag\">#DevOps</span>\n<span class=\"language-tag\">#Scripting</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-29",
+    "name": "perl",
+    "title": "perl",
+    "year": 1987,
+    "sortYear": 1987,
+    "sortName": "perl",
+    "description": "perl is a family of high-level, general-purpose, interpreted, dynamic programming languages. 'perl 5' is the one in common use.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "perl",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "perl",
+      "data-creator": "larry wall",
+      "data-year": "1987",
+      "data-typing": "dynamically typed",
+      "data-compiled": "interpreted",
+      "data-paradigm": "multi-paradigm functional imperative ",
+      "data-usage": "system administration text processing legacy web ",
+      "data-description": "perl is a family of high-level, general-purpose, interpreted, dynamic programming languages. 'perl 5' is the one in common use."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">Perl</h2>\n<span class=\"language-creator\">by Larry Wall</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">1987</span>\n<span class=\"language-type-badge\">Interpreted</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Perl is a family of high-level, general-purpose, interpreted, dynamic programming languages. 'Perl 5' is the one in common use.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Dynamically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level.</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Declining</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Multi-paradigm</span>\n<span class=\"meta-pill\">Functional</span>\n<span class=\"meta-pill\">Imperative</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">System Administration</span>\n<span class=\"meta-pill usage-pill\">Text Processing</span>\n<span class=\"meta-pill usage-pill\">Legacy Web</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">CPAN</span>\n<span class=\"meta-pill code-pill\">Mojolicious</span>\n<span class=\"meta-pill code-pill\">Catalyst</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Scripting</span>\n<span class=\"language-tag\">#Text</span>\n<span class=\"language-tag\">#Regex</span>\n<span class=\"language-tag\">#Legacy</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-30",
+    "name": "c++",
+    "title": "c++",
+    "year": 1985,
+    "sortYear": 1985,
+    "sortName": "c++",
+    "description": "c++ is a high-level, general-purpose programming language created by bjarne stroustrup as an extension of the c programming language.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "c++",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "c++",
+      "data-creator": "bjarne stroustrup",
+      "data-year": "1985",
+      "data-typing": "statically typed",
+      "data-compiled": "compiled",
+      "data-paradigm": "procedural functional object-oriented generic ",
+      "data-usage": "game development system/software drivers client-server ",
+      "data-description": "c++ is a high-level, general-purpose programming language created by bjarne stroustrup as an extension of the c programming language."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">C++</h2>\n<span class=\"language-creator\">by Bjarne Stroustrup</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">1985</span>\n<span class=\"language-type-badge\">Compiled</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">C++ is a high-level, general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Statically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">Multi-level (Low to High).</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">High</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Procedural</span>\n<span class=\"meta-pill\">Functional</span>\n<span class=\"meta-pill\">Object-Oriented</span>\n<span class=\"meta-pill\">Generic</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Game Development</span>\n<span class=\"meta-pill usage-pill\">System/Software</span>\n<span class=\"meta-pill usage-pill\">Drivers</span>\n<span class=\"meta-pill usage-pill\">Client-Server</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">STL</span>\n<span class=\"meta-pill code-pill\">Boost</span>\n<span class=\"meta-pill code-pill\">Qt</span>\n<span class=\"meta-pill code-pill\">OpenCV</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Performance</span>\n<span class=\"language-tag\">#Systems</span>\n<span class=\"language-tag\">#Games</span>\n<span class=\"language-tag\">#Complex</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-31",
+    "name": "matlab",
+    "title": "matlab",
+    "year": 1984,
+    "sortYear": 1984,
+    "sortName": "matlab",
+    "description": "matlab is a proprietary multi-paradigm programming language and numeric computing environment developed by mathworks.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "matlab",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "matlab",
+      "data-creator": "cleve moler",
+      "data-year": "1984",
+      "data-typing": "dynamically typed",
+      "data-compiled": "interpreted",
+      "data-paradigm": "multi-paradigm functional imperative procedural ",
+      "data-usage": "engineering linear algebra signal processing control systems ",
+      "data-description": "matlab is a proprietary multi-paradigm programming language and numeric computing environment developed by mathworks."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">MATLAB</h2>\n<span class=\"language-creator\">by Cleve Moler</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">1984</span>\n<span class=\"language-type-badge\">Interpreted</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">MATLAB is a proprietary multi-paradigm programming language and numeric computing environment developed by MathWorks.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Dynamically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level.</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">High (Engineering/Academia)</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Multi-paradigm</span>\n<span class=\"meta-pill\">Functional</span>\n<span class=\"meta-pill\">Imperative</span>\n<span class=\"meta-pill\">Procedural</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Engineering</span>\n<span class=\"meta-pill usage-pill\">Linear Algebra</span>\n<span class=\"meta-pill usage-pill\">Signal Processing</span>\n<span class=\"meta-pill usage-pill\">Control Systems</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">Simulink</span>\n<span class=\"meta-pill code-pill\">Optimization Toolbox</span>\n<span class=\"meta-pill code-pill\">Signal Processing Toolbox</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Math</span>\n<span class=\"language-tag\">#Engineering</span>\n<span class=\"language-tag\">#Simulation</span>\n<span class=\"language-tag\">#Matrix</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-32",
+    "name": "proj",
+    "title": "proj",
+    "year": null,
+    "sortYear": 8,
+    "sortName": "proj",
+    "description": "proj is a generic coordinate transformation software that transforms geospatial coordinates from one coordinate reference system (crs) to another.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "proj",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "proj",
+      "data-creator": "gerald evenden",
+      "data-year": "1980s",
+      "data-typing": "statically typed",
+      "data-compiled": "compiled (c++)",
+      "data-paradigm": "mathematical transformation ",
+      "data-usage": "map projections coordinate transformation geodesy ",
+      "data-description": "proj is a generic coordinate transformation software that transforms geospatial coordinates from one coordinate reference system (crs) to another."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">PROJ</h2>\n<span class=\"language-creator\">by Gerald Evenden</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">1980s</span>\n<span class=\"language-type-badge\">Compiled (C++)</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">PROJ is a generic coordinate transformation software that transforms geospatial coordinates from one coordinate reference system (CRS) to another.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Statically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">Low-level (Math/Geodesy).</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Essential Infrastructure</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Mathematical</span>\n<span class=\"meta-pill\">Transformation</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Map Projections</span>\n<span class=\"meta-pill usage-pill\">Coordinate Transformation</span>\n<span class=\"meta-pill usage-pill\">Geodesy</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">libproj</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Projections</span>\n<span class=\"language-tag\">#Coordinates</span>\n<span class=\"language-tag\">#GPS</span>\n<span class=\"language-tag\">#Mapping</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-33",
+    "name": "sql",
+    "title": "sql",
+    "year": 1974,
+    "sortYear": 1974,
+    "sortName": "sql",
+    "description": "structured query language (sql) is a domain-specific language used in programming and designed for managing data held in a relational database management system (rdbms).",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "sql",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "sql",
+      "data-creator": "donald d. chamberlin, raymond f. boyce",
+      "data-year": "1974",
+      "data-typing": "statically typed (schema-based)",
+      "data-compiled": "interpreted by db engine",
+      "data-paradigm": "declarative set-based ",
+      "data-usage": "database management data analysis backend development ",
+      "data-description": "structured query language (sql) is a domain-specific language used in programming and designed for managing data held in a relational database management system (rdbms)."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">SQL</h2>\n<span class=\"language-creator\">by Donald D. Chamberlin, Raymond F. Boyce</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">1974</span>\n<span class=\"language-type-badge\">Interpreted by DB Engine</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Structured Query Language (SQL) is a domain-specific language used in programming and designed for managing data held in a relational database management system (RDBMS).</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Statically Typed (Schema-based)</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level (Declarative).</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Extremely High</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Declarative</span>\n<span class=\"meta-pill\">Set-based</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Database Management</span>\n<span class=\"meta-pill usage-pill\">Data Analysis</span>\n<span class=\"meta-pill usage-pill\">Backend Development</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">PostgreSQL</span>\n<span class=\"meta-pill code-pill\">MySQL</span>\n<span class=\"meta-pill code-pill\">SQLite</span>\n<span class=\"meta-pill code-pill\">Oracle</span>\n<span class=\"meta-pill code-pill\">SQL Server</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Database</span>\n<span class=\"language-tag\">#Data</span>\n<span class=\"language-tag\">#Query</span>\n<span class=\"language-tag\">#Declarative</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-34",
+    "name": "c",
+    "title": "c",
+    "year": 1972,
+    "sortYear": 1972,
+    "sortName": "c",
+    "description": "c is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion, with a static type system.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "c",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "c",
+      "data-creator": "dennis ritchie",
+      "data-year": "1972",
+      "data-typing": "statically typed",
+      "data-compiled": "compiled",
+      "data-paradigm": "imperative procedural structured ",
+      "data-usage": "operating systems embedded systems drivers kernels ",
+      "data-description": "c is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion, with a static type system."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">C</h2>\n<span class=\"language-creator\">by Dennis Ritchie</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">1972</span>\n<span class=\"language-type-badge\">Compiled</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">C is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion, with a static type system.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Statically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">Low-level.</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">High</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Imperative</span>\n<span class=\"meta-pill\">Procedural</span>\n<span class=\"meta-pill\">Structured</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Operating Systems</span>\n<span class=\"meta-pill usage-pill\">Embedded Systems</span>\n<span class=\"meta-pill usage-pill\">Drivers</span>\n<span class=\"meta-pill usage-pill\">Kernels</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">Standard C Library (libc)</span>\n<span class=\"meta-pill code-pill\">POSIX</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Low-level</span>\n<span class=\"language-tag\">#Fast</span>\n<span class=\"language-tag\">#OS</span>\n<span class=\"language-tag\">#Embedded</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-35",
+    "name": "prolog",
+    "title": "prolog",
+    "year": 1972,
+    "sortYear": 1972,
+    "sortName": "prolog",
+    "description": "prolog is a logic programming language associated with artificial intelligence and computational linguistics.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "prolog",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "prolog",
+      "data-creator": "alain colmerauer, robert kowalski",
+      "data-year": "1972",
+      "data-typing": "untyped / dynamic",
+      "data-compiled": "interpreted / compiled (wam)",
+      "data-paradigm": "logic declarative ",
+      "data-usage": "ai natural language processing expert systems ",
+      "data-description": "prolog is a logic programming language associated with artificial intelligence and computational linguistics."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">Prolog</h2>\n<span class=\"language-creator\">by Alain Colmerauer, Robert Kowalski</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">1972</span>\n<span class=\"language-type-badge\">Interpreted / Compiled (WAM)</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Prolog is a logic programming language associated with artificial intelligence and computational linguistics.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Untyped / Dynamic</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">Declarative (Logic).</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Niche</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Logic</span>\n<span class=\"meta-pill\">Declarative</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">AI</span>\n<span class=\"meta-pill usage-pill\">Natural Language Processing</span>\n<span class=\"meta-pill usage-pill\">Expert Systems</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">SWI-Prolog Libraries</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Logic</span>\n<span class=\"language-tag\">#AI</span>\n<span class=\"language-tag\">#Facts</span>\n<span class=\"language-tag\">#Rules</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-36",
+    "name": "cobol",
+    "title": "cobol",
+    "year": 1959,
+    "sortYear": 1959,
+    "sortName": "cobol",
+    "description": "cobol (common business-oriented language) is a compiled english-like computer programming language designed for business use.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "cobol",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "cobol",
+      "data-creator": "codasyl (grace hopper)",
+      "data-year": "1959",
+      "data-typing": "statically typed",
+      "data-compiled": "compiled",
+      "data-paradigm": "imperative procedural object-oriented (modern) ",
+      "data-usage": "banking insurance government systems ",
+      "data-description": "cobol (common business-oriented language) is a compiled english-like computer programming language designed for business use."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">COBOL</h2>\n<span class=\"language-creator\">by CODASYL (Grace Hopper)</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">1959</span>\n<span class=\"language-type-badge\">Compiled</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">COBOL (Common Business-Oriented Language) is a compiled English-like computer programming language designed for business use.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Statically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level (Business).</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Niche (Legacy)</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Imperative</span>\n<span class=\"meta-pill\">Procedural</span>\n<span class=\"meta-pill\">Object-Oriented (modern)</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">Banking</span>\n<span class=\"meta-pill usage-pill\">Insurance</span>\n<span class=\"meta-pill usage-pill\">Government Systems</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">CICS</span>\n<span class=\"meta-pill code-pill\">JCL</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Business</span>\n<span class=\"language-tag\">#Legacy</span>\n<span class=\"language-tag\">#Mainframe</span>\n<span class=\"language-tag\">#Verbose</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-37",
+    "name": "lisp",
+    "title": "lisp",
+    "year": 1958,
+    "sortYear": 1958,
+    "sortName": "lisp",
+    "description": "lisp (list processing) is a family of programming languages with a long history and a distinctive, fully parenthesized prefix notation.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "lisp",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "lisp",
+      "data-creator": "john mccarthy",
+      "data-year": "1958",
+      "data-typing": "dynamically typed",
+      "data-compiled": "interpreted / compiled",
+      "data-paradigm": "functional metaprogramming ",
+      "data-usage": "ai research emacs (elisp) autocad (autolisp) ",
+      "data-description": "lisp (list processing) is a family of programming languages with a long history and a distinctive, fully parenthesized prefix notation."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">Lisp</h2>\n<span class=\"language-creator\">by John McCarthy</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">1958</span>\n<span class=\"language-type-badge\">Interpreted / Compiled</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Lisp (List Processing) is a family of programming languages with a long history and a distinctive, fully parenthesized prefix notation.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Dynamically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">Very High-level.</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Niche</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Functional</span>\n<span class=\"meta-pill\">Metaprogramming</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">AI Research</span>\n<span class=\"meta-pill usage-pill\">Emacs (Elisp)</span>\n<span class=\"meta-pill usage-pill\">AutoCAD (AutoLISP)</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">Common Lisp Object System (CLOS)</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#AI</span>\n<span class=\"language-tag\">#Parentheses</span>\n<span class=\"language-tag\">#Macros</span>\n<span class=\"language-tag\">#Functional</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-38",
+    "name": "fortran",
+    "title": "fortran",
+    "year": 1957,
+    "sortYear": 1957,
+    "sortName": "fortran",
+    "description": "fortran (formula translation) is a general-purpose, compiled imperative programming language that is especially suited to numeric computation and scientific computing.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "fortran",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "fortran",
+      "data-creator": "john backus (ibm)",
+      "data-year": "1957",
+      "data-typing": "statically typed",
+      "data-compiled": "compiled",
+      "data-paradigm": "imperative procedural object-oriented (modern) ",
+      "data-usage": "high-performance computing physics simulations weather forecasting ",
+      "data-description": "fortran (formula translation) is a general-purpose, compiled imperative programming language that is especially suited to numeric computation and scientific computing."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">Fortran</h2>\n<span class=\"language-creator\">by John Backus (IBM)</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">1957</span>\n<span class=\"language-type-badge\">Compiled</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Fortran (Formula Translation) is a general-purpose, compiled imperative programming language that is especially suited to numeric computation and scientific computing.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Statically Typed</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">High-level (for its time).</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Niche (Scientific)</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Imperative</span>\n<span class=\"meta-pill\">Procedural</span>\n<span class=\"meta-pill\">Object-Oriented (modern)</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">High-performance Computing</span>\n<span class=\"meta-pill usage-pill\">Physics Simulations</span>\n<span class=\"meta-pill usage-pill\">Weather Forecasting</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">LAPACK</span>\n<span class=\"meta-pill code-pill\">BLAS</span>\n<span class=\"meta-pill code-pill\">MPI</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Science</span>\n<span class=\"language-tag\">#Math</span>\n<span class=\"language-tag\">#HPC</span>\n<span class=\"language-tag\">#Legacy</span>\n</div>\n</div>"
+  },
+  {
+    "id": "computer-languages-39",
+    "name": "assembly",
+    "title": "assembly",
+    "year": 1949,
+    "sortYear": 1949,
+    "sortName": "assembly",
+    "description": "assembly language is any low-level programming language in which there is a very strong correspondence between the instruction in the language and the architecture's machine code instructions.",
+    "image": "",
+    "zoomSrc": "",
+    "zoomTitle": "assembly",
+    "zoomMeta": "",
+    "zoomCaption": "",
+    "dataset": {
+      "data-name": "assembly",
+      "data-creator": "various (kathleen booth)",
+      "data-year": "1949",
+      "data-typing": "untyped",
+      "data-compiled": "assembled to machine code",
+      "data-paradigm": "imperative unstructured ",
+      "data-usage": "os kernels drivers embedded systems reverse engineering ",
+      "data-description": "assembly language is any low-level programming language in which there is a very strong correspondence between the instruction in the language and the architecture's machine code instructions."
+    },
+    "classes": [
+      "language-card"
+    ],
+    "html": "<div class=\"language-card-header\">\n<div class=\"language-title-group\">\n<h2 class=\"language-name\">Assembly</h2>\n<span class=\"language-creator\">by Various (Kathleen Booth)</span>\n</div>\n<div class=\"language-badges\">\n<span class=\"language-year-badge\">1949</span>\n<span class=\"language-type-badge\">Assembled to Machine Code</span>\n</div>\n</div>\n<div class=\"language-card-body\">\n<p class=\"language-desc\">Assembly language is any low-level programming language in which there is a very strong correspondence between the instruction in the language and the architecture's machine code instructions.</p>\n<div class=\"language-specs-grid\">\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Typing:</span>\n<span class=\"spec-value\">Untyped</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Level:</span>\n<span class=\"spec-value\">Very Low-level.</span>\n</div>\n<div class=\"language-spec-item\">\n<span class=\"spec-label\">Popularity:</span>\n<span class=\"spec-value\">Low (Specialized)</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Paradigms:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill\">Imperative</span>\n<span class=\"meta-pill\">Unstructured</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Primary Usage:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill usage-pill\">OS Kernels</span>\n<span class=\"meta-pill usage-pill\">Drivers</span>\n<span class=\"meta-pill usage-pill\">Embedded Systems</span>\n<span class=\"meta-pill usage-pill\">Reverse Engineering</span>\n</div>\n</div>\n<div class=\"language-meta-row\">\n<span class=\"meta-label\">Ecosystem / Libs:</span>\n<div class=\"meta-pills\">\n<span class=\"meta-pill code-pill\">None (OS Syscalls)</span>\n</div>\n</div>\n<div class=\"language-tags\">\n<span class=\"language-tag\">#Low-level</span>\n<span class=\"language-tag\">#Hardware</span>\n<span class=\"language-tag\">#Fast</span>\n<span class=\"language-tag\">#Machine Code</span>\n</div>\n</div>"
+  }
+]

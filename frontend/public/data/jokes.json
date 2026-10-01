@@ -1,0 +1,242 @@
+[
+  {
+    "id": "jokes-1",
+    "name": "the existential crisis of descartes",
+    "title": "the existential crisis of descartes",
+    "year": null,
+    "sortYear": 10,
+    "sortName": "the existential crisis of descartes",
+    "description": "rené descartes walks into a bar. the bartender asks, 'would you like a drink?' descartes replies, 'i think not,' and promptly disappears.",
+    "image": "/images/jokes/descartes.png",
+    "zoomSrc": "/images/jokes/descartes.png",
+    "zoomTitle": "The Existential Crisis of Descartes",
+    "zoomMeta": "Philosophy",
+    "zoomCaption": "René Descartes walks into a bar. The bartender asks, 'Would you like a drink?' Descartes replies, 'I think not,' and promptly disappears.",
+    "dataset": {
+      "data-name": "the existential crisis of descartes",
+      "data-content": "rené descartes walks into a bar. the bartender asks, 'would you like a drink?' descartes replies, 'i think not,' and promptly disappears.",
+      "data-history": "this joke is a play on descartes' famous philosophical proposition, 'cogito, ergo sum' (i think, therefore i am). in his meditations on first philosophy, descartes sought to find an indubitable foundation for knowledge, concluding that the very act of doubting one's existence serves as proof of the reality of one's mind. the joke inverts this logic: if thinking is the basis of existence, then the cessation of thought should logically result in non-existence.",
+      "data-discipline": "philosophy"
+    },
+    "classes": [
+      "joke-card"
+    ],
+    "html": "<div class=\"joke-img-wrapper gallery-zoomable\" data-zoom-caption=\"René Descartes walks into a bar. The bartender asks, 'Would you like a drink?' Descartes replies, 'I think not,' and promptly disappears.\" data-zoom-meta=\"Philosophy\" data-zoom-src=\"/images/jokes/descartes.png\" data-zoom-title=\"The Existential Crisis of Descartes\" title=\"Click to view full image\">\n<img alt=\"The Existential Crisis of Descartes\" loading=\"lazy\" onerror=\"this.onerror=null;this.parentElement.style.display='none';\" src=\"/images/jokes/descartes.png\"/>\n<div class=\"joke-discipline-badge\">Philosophy</div>\n<div class=\"joke-img-overlay\">\n<svg class=\"zoom-indicator-icon\" fill=\"none\" height=\"22\" stroke=\"currentColor\" stroke-width=\"2\" viewbox=\"0 0 24 24\" width=\"22\">\n<circle cx=\"11\" cy=\"11\" r=\"8\"></circle>\n<line x1=\"21\" x2=\"16.65\" y1=\"21\" y2=\"16.65\"></line>\n<line x1=\"11\" x2=\"11\" y1=\"8\" y2=\"14\"></line>\n<line x1=\"8\" x2=\"14\" y1=\"11\" y2=\"11\"></line>\n</svg>\n</div>\n</div>\n<div class=\"joke-card-content\">\n<div class=\"joke-top-row\">\n<h2 class=\"joke-title\">The Existential Crisis of Descartes</h2>\n</div>\n<div class=\"joke-punchline-box\">\n<p class=\"joke-content-text\">“René Descartes walks into a bar. The bartender asks, 'Would you like a drink?' Descartes replies, 'I think not,' and promptly disappears.”</p>\n</div>\n<div class=\"joke-history-box\">\n<span class=\"joke-section-label\">The Context &amp; Logic:</span>\n<p class=\"joke-history-text\">This joke is a play on Descartes' famous philosophical proposition, 'Cogito, ergo sum' (I think, therefore I am). In his Meditations on First Philosophy, Descartes sought to find an indubitable foundation for knowledge, concluding that the very act of doubting one's existence serves as proof of the reality of one's mind. The joke inverts this logic: if thinking is the basis of existence, then the cessation of thought should logically result in non-existence.</p>\n</div>\n</div>"
+  },
+  {
+    "id": "jokes-2",
+    "name": "heisenberg’s speeding ticket",
+    "title": "heisenberg’s speeding ticket",
+    "year": 1927,
+    "sortYear": 1927,
+    "sortName": "heisenberg’s speeding ticket",
+    "description": "werner heisenberg is speeding down the highway when a cop pulls him over. the officer asks, 'do you have any idea how fast you were going?' heisenberg replies, 'no, but i know exactly where i am!' the cop, now annoyed, says, 'you were doing 90 miles an hour!' heisenberg throws up his hands and yells, 'great! now i’m lost!'",
+    "image": "/images/jokes/heisenberg.png",
+    "zoomSrc": "/images/jokes/heisenberg.png",
+    "zoomTitle": "Heisenberg’s Speeding Ticket",
+    "zoomMeta": "Quantum Physics",
+    "zoomCaption": "Werner Heisenberg is speeding down the highway when a cop pulls him over. The officer asks, 'Do you have any idea how fast you were going?' Heisenberg replies, 'No, but I know exactly where I am!' The cop, now annoyed, says, 'You were doing 90 miles an hour!' Heisenberg throws up his hands and yells, 'Great! Now I’m lost!'",
+    "dataset": {
+      "data-name": "heisenberg’s speeding ticket",
+      "data-content": "werner heisenberg is speeding down the highway when a cop pulls him over. the officer asks, 'do you have any idea how fast you were going?' heisenberg replies, 'no, but i know exactly where i am!' the cop, now annoyed, says, 'you were doing 90 miles an hour!' heisenberg throws up his hands and yells, 'great! now i’m lost!'",
+      "data-history": "illustrates the heisenberg uncertainty principle, formulated in 1927. it states that the more precisely the position of some particle is determined, the less precisely its momentum (velocity) can be predicted, and vice versa. in the joke, being told his exact velocity makes his position (knowing where he is) completely uncertain.",
+      "data-discipline": "quantum physics"
+    },
+    "classes": [
+      "joke-card"
+    ],
+    "html": "<div class=\"joke-img-wrapper gallery-zoomable\" data-zoom-caption=\"Werner Heisenberg is speeding down the highway when a cop pulls him over. The officer asks, 'Do you have any idea how fast you were going?' Heisenberg replies, 'No, but I know exactly where I am!' The cop, now annoyed, says, 'You were doing 90 miles an hour!' Heisenberg throws up his hands and yells, 'Great! Now I’m lost!'\" data-zoom-meta=\"Quantum Physics\" data-zoom-src=\"/images/jokes/heisenberg.png\" data-zoom-title=\"Heisenberg’s Speeding Ticket\" title=\"Click to view full image\">\n<img alt=\"Heisenberg’s Speeding Ticket\" loading=\"lazy\" onerror=\"this.onerror=null;this.parentElement.style.display='none';\" src=\"/images/jokes/heisenberg.png\"/>\n<div class=\"joke-discipline-badge\">Quantum Physics</div>\n<div class=\"joke-img-overlay\">\n<svg class=\"zoom-indicator-icon\" fill=\"none\" height=\"22\" stroke=\"currentColor\" stroke-width=\"2\" viewbox=\"0 0 24 24\" width=\"22\">\n<circle cx=\"11\" cy=\"11\" r=\"8\"></circle>\n<line x1=\"21\" x2=\"16.65\" y1=\"21\" y2=\"16.65\"></line>\n<line x1=\"11\" x2=\"11\" y1=\"8\" y2=\"14\"></line>\n<line x1=\"8\" x2=\"14\" y1=\"11\" y2=\"11\"></line>\n</svg>\n</div>\n</div>\n<div class=\"joke-card-content\">\n<div class=\"joke-top-row\">\n<h2 class=\"joke-title\">Heisenberg’s Speeding Ticket</h2>\n</div>\n<div class=\"joke-punchline-box\">\n<p class=\"joke-content-text\">“Werner Heisenberg is speeding down the highway when a cop pulls him over. The officer asks, 'Do you have any idea how fast you were going?' Heisenberg replies, 'No, but I know exactly where I am!' The cop, now annoyed, says, 'You were doing 90 miles an hour!' Heisenberg throws up his hands and yells, 'Great! Now I’m lost!'”</p>\n</div>\n<div class=\"joke-history-box\">\n<span class=\"joke-section-label\">The Context &amp; Logic:</span>\n<p class=\"joke-history-text\">Illustrates the Heisenberg Uncertainty Principle, formulated in 1927. It states that the more precisely the position of some particle is determined, the less precisely its momentum (velocity) can be predicted, and vice versa. In the joke, being told his exact velocity makes his position (knowing where he is) completely uncertain.</p>\n</div>\n</div>"
+  },
+  {
+    "id": "jokes-3",
+    "name": "pavlov’s reflex",
+    "title": "pavlov’s reflex",
+    "year": null,
+    "sortYear": 8,
+    "sortName": "pavlov’s reflex",
+    "description": "ivan pavlov is sitting at a bar enjoying a pint. suddenly, the bell on the door rings. pavlov jumps up and screams, 'oh no! i forgot to feed the dogs!'",
+    "image": "/images/jokes/pavlov.png",
+    "zoomSrc": "/images/jokes/pavlov.png",
+    "zoomTitle": "Pavlov’s Reflex",
+    "zoomMeta": "Psychology",
+    "zoomCaption": "Ivan Pavlov is sitting at a bar enjoying a pint. Suddenly, the bell on the door rings. Pavlov jumps up and screams, 'Oh no! I forgot to feed the dogs!'",
+    "dataset": {
+      "data-name": "pavlov’s reflex",
+      "data-content": "ivan pavlov is sitting at a bar enjoying a pint. suddenly, the bell on the door rings. pavlov jumps up and screams, 'oh no! i forgot to feed the dogs!'",
+      "data-history": "ivan pavlov was a russian physiologist known for classical conditioning. his experiments involved ringing a bell every time he fed his dogs. eventually, the dogs began to salivate at the sound of the bell even when no food was present. the joke suggests pavlov himself became conditioned to the bell.",
+      "data-discipline": "psychology"
+    },
+    "classes": [
+      "joke-card"
+    ],
+    "html": "<div class=\"joke-img-wrapper gallery-zoomable\" data-zoom-caption=\"Ivan Pavlov is sitting at a bar enjoying a pint. Suddenly, the bell on the door rings. Pavlov jumps up and screams, 'Oh no! I forgot to feed the dogs!'\" data-zoom-meta=\"Psychology\" data-zoom-src=\"/images/jokes/pavlov.png\" data-zoom-title=\"Pavlov’s Reflex\" title=\"Click to view full image\">\n<img alt=\"Pavlov’s Reflex\" loading=\"lazy\" onerror=\"this.onerror=null;this.parentElement.style.display='none';\" src=\"/images/jokes/pavlov.png\"/>\n<div class=\"joke-discipline-badge\">Psychology</div>\n<div class=\"joke-img-overlay\">\n<svg class=\"zoom-indicator-icon\" fill=\"none\" height=\"22\" stroke=\"currentColor\" stroke-width=\"2\" viewbox=\"0 0 24 24\" width=\"22\">\n<circle cx=\"11\" cy=\"11\" r=\"8\"></circle>\n<line x1=\"21\" x2=\"16.65\" y1=\"21\" y2=\"16.65\"></line>\n<line x1=\"11\" x2=\"11\" y1=\"8\" y2=\"14\"></line>\n<line x1=\"8\" x2=\"14\" y1=\"11\" y2=\"11\"></line>\n</svg>\n</div>\n</div>\n<div class=\"joke-card-content\">\n<div class=\"joke-top-row\">\n<h2 class=\"joke-title\">Pavlov’s Reflex</h2>\n</div>\n<div class=\"joke-punchline-box\">\n<p class=\"joke-content-text\">“Ivan Pavlov is sitting at a bar enjoying a pint. Suddenly, the bell on the door rings. Pavlov jumps up and screams, 'Oh no! I forgot to feed the dogs!'”</p>\n</div>\n<div class=\"joke-history-box\">\n<span class=\"joke-section-label\">The Context &amp; Logic:</span>\n<p class=\"joke-history-text\">Ivan Pavlov was a Russian physiologist known for classical conditioning. His experiments involved ringing a bell every time he fed his dogs. Eventually, the dogs began to salivate at the sound of the bell even when no food was present. The joke suggests Pavlov himself became conditioned to the bell.</p>\n</div>\n</div>"
+  },
+  {
+    "id": "jokes-4",
+    "name": "schrödinger’s cat",
+    "title": "schrödinger’s cat",
+    "year": 1935,
+    "sortYear": 1935,
+    "sortName": "schrödinger’s cat",
+    "description": "a police officer pulls over erwin schrödinger and asks to see what's in the trunk. the officer looks inside and says, 'sir, did you know there's a dead cat in here?' schrödinger sighs and says, 'well, i do now!'",
+    "image": "/images/jokes/schrodinger.png",
+    "zoomSrc": "/images/jokes/schrodinger.png",
+    "zoomTitle": "Schrödinger’s Cat",
+    "zoomMeta": "Quantum Mechanics",
+    "zoomCaption": "A police officer pulls over Erwin Schrödinger and asks to see what's in the trunk. The officer looks inside and says, 'Sir, did you know there's a dead cat in here?' Schrödinger sighs and says, 'Well, I do now!'",
+    "dataset": {
+      "data-name": "schrödinger’s cat",
+      "data-content": "a police officer pulls over erwin schrödinger and asks to see what's in the trunk. the officer looks inside and says, 'sir, did you know there's a dead cat in here?' schrödinger sighs and says, 'well, i do now!'",
+      "data-history": "schrödinger's cat is a thought experiment from 1935 intended to illustrate the perceived absurdity of the copenhagen interpretation of quantum mechanics. a cat in a box is simultaneously alive and dead until observed. the act of looking into the trunk 'collapses the wave function' and forces a single reality.",
+      "data-discipline": "quantum mechanics"
+    },
+    "classes": [
+      "joke-card"
+    ],
+    "html": "<div class=\"joke-img-wrapper gallery-zoomable\" data-zoom-caption=\"A police officer pulls over Erwin Schrödinger and asks to see what's in the trunk. The officer looks inside and says, 'Sir, did you know there's a dead cat in here?' Schrödinger sighs and says, 'Well, I do now!'\" data-zoom-meta=\"Quantum Mechanics\" data-zoom-src=\"/images/jokes/schrodinger.png\" data-zoom-title=\"Schrödinger’s Cat\" title=\"Click to view full image\">\n<img alt=\"Schrödinger’s Cat\" loading=\"lazy\" onerror=\"this.onerror=null;this.parentElement.style.display='none';\" src=\"/images/jokes/schrodinger.png\"/>\n<div class=\"joke-discipline-badge\">Quantum Mechanics</div>\n<div class=\"joke-img-overlay\">\n<svg class=\"zoom-indicator-icon\" fill=\"none\" height=\"22\" stroke=\"currentColor\" stroke-width=\"2\" viewbox=\"0 0 24 24\" width=\"22\">\n<circle cx=\"11\" cy=\"11\" r=\"8\"></circle>\n<line x1=\"21\" x2=\"16.65\" y1=\"21\" y2=\"16.65\"></line>\n<line x1=\"11\" x2=\"11\" y1=\"8\" y2=\"14\"></line>\n<line x1=\"8\" x2=\"14\" y1=\"11\" y2=\"11\"></line>\n</svg>\n</div>\n</div>\n<div class=\"joke-card-content\">\n<div class=\"joke-top-row\">\n<h2 class=\"joke-title\">Schrödinger’s Cat</h2>\n</div>\n<div class=\"joke-punchline-box\">\n<p class=\"joke-content-text\">“A police officer pulls over Erwin Schrödinger and asks to see what's in the trunk. The officer looks inside and says, 'Sir, did you know there's a dead cat in here?' Schrödinger sighs and says, 'Well, I do now!'”</p>\n</div>\n<div class=\"joke-history-box\">\n<span class=\"joke-section-label\">The Context &amp; Logic:</span>\n<p class=\"joke-history-text\">Schrödinger's Cat is a thought experiment from 1935 intended to illustrate the perceived absurdity of the Copenhagen interpretation of quantum mechanics. A cat in a box is simultaneously alive and dead until observed. The act of looking into the trunk 'collapses the wave function' and forces a single reality.</p>\n</div>\n</div>"
+  },
+  {
+    "id": "jokes-5",
+    "name": "turing's halting problem",
+    "title": "turing's halting problem",
+    "year": 1936,
+    "sortYear": 1936,
+    "sortName": "turing's halting problem",
+    "description": "an engineer, a physicist, and alan turing are asked if a program will ever finish executing. the engineer profiles it, the physicist calculates the thermodynamic entropy of the processor, and alan turing proves it is mathematically impossible to know without waiting forever.",
+    "image": "/images/jokes/turing.png",
+    "zoomSrc": "/images/jokes/turing.png",
+    "zoomTitle": "Turing's Halting Problem",
+    "zoomMeta": "Computer Science",
+    "zoomCaption": "An engineer, a physicist, and Alan Turing are asked if a program will ever finish executing. The engineer profiles it, the physicist calculates the thermodynamic entropy of the processor, and Alan Turing proves it is mathematically impossible to know without waiting forever.",
+    "dataset": {
+      "data-name": "turing's halting problem",
+      "data-content": "an engineer, a physicist, and alan turing are asked if a program will ever finish executing. the engineer profiles it, the physicist calculates the thermodynamic entropy of the processor, and alan turing proves it is mathematically impossible to know without waiting forever.",
+      "data-history": "in 1936, alan turing proved the undecidability of the halting problem: there cannot exist a general algorithm that determines whether any arbitrary computer program will finish running or run forever. this laid the foundations of theoretical computer science and established fundamental boundaries on what computation can solve.",
+      "data-discipline": "computer science"
+    },
+    "classes": [
+      "joke-card"
+    ],
+    "html": "<div class=\"joke-img-wrapper gallery-zoomable\" data-zoom-caption=\"An engineer, a physicist, and Alan Turing are asked if a program will ever finish executing. The engineer profiles it, the physicist calculates the thermodynamic entropy of the processor, and Alan Turing proves it is mathematically impossible to know without waiting forever.\" data-zoom-meta=\"Computer Science\" data-zoom-src=\"/images/jokes/turing.png\" data-zoom-title=\"Turing's Halting Problem\" title=\"Click to view full image\">\n<img alt=\"Turing's Halting Problem\" loading=\"lazy\" onerror=\"this.onerror=null;this.parentElement.style.display='none';\" src=\"/images/jokes/turing.png\"/>\n<div class=\"joke-discipline-badge\">Computer Science</div>\n<div class=\"joke-img-overlay\">\n<svg class=\"zoom-indicator-icon\" fill=\"none\" height=\"22\" stroke=\"currentColor\" stroke-width=\"2\" viewbox=\"0 0 24 24\" width=\"22\">\n<circle cx=\"11\" cy=\"11\" r=\"8\"></circle>\n<line x1=\"21\" x2=\"16.65\" y1=\"21\" y2=\"16.65\"></line>\n<line x1=\"11\" x2=\"11\" y1=\"8\" y2=\"14\"></line>\n<line x1=\"8\" x2=\"14\" y1=\"11\" y2=\"11\"></line>\n</svg>\n</div>\n</div>\n<div class=\"joke-card-content\">\n<div class=\"joke-top-row\">\n<h2 class=\"joke-title\">Turing's Halting Problem</h2>\n</div>\n<div class=\"joke-punchline-box\">\n<p class=\"joke-content-text\">“An engineer, a physicist, and Alan Turing are asked if a program will ever finish executing. The engineer profiles it, the physicist calculates the thermodynamic entropy of the processor, and Alan Turing proves it is mathematically impossible to know without waiting forever.”</p>\n</div>\n<div class=\"joke-history-box\">\n<span class=\"joke-section-label\">The Context &amp; Logic:</span>\n<p class=\"joke-history-text\">In 1936, Alan Turing proved the undecidability of the Halting Problem: there cannot exist a general algorithm that determines whether any arbitrary computer program will finish running or run forever. This laid the foundations of theoretical computer science and established fundamental boundaries on what computation can solve.</p>\n</div>\n</div>"
+  },
+  {
+    "id": "jokes-6",
+    "name": "hilbert's infinite hotel checkout",
+    "title": "hilbert's infinite hotel checkout",
+    "year": null,
+    "sortYear": 5,
+    "sortName": "hilbert's infinite hotel checkout",
+    "description": "infinitely many mathematicians walk into david hilbert's fully booked hotel. the front desk clerk worries, but hilbert calmly shifts guest n to room 2n, instantly freeing up all odd-numbered rooms for infinity more guests.",
+    "image": "/images/jokes/hilbert.png",
+    "zoomSrc": "/images/jokes/hilbert.png",
+    "zoomTitle": "Hilbert's Infinite Hotel Checkout",
+    "zoomMeta": "Mathematics",
+    "zoomCaption": "Infinitely many mathematicians walk into David Hilbert's fully booked hotel. The front desk clerk worries, but Hilbert calmly shifts guest n to room 2n, instantly freeing up all odd-numbered rooms for infinity more guests.",
+    "dataset": {
+      "data-name": "hilbert's infinite hotel checkout",
+      "data-content": "infinitely many mathematicians walk into david hilbert's fully booked hotel. the front desk clerk worries, but hilbert calmly shifts guest n to room 2n, instantly freeing up all odd-numbered rooms for infinity more guests.",
+      "data-history": "hilbert's paradox of the grand hotel demonstrates the counter-intuitive properties of transfinite sets discovered by georg cantor. even when an infinite hotel is completely full, it can accommodate infinitely many new arrivals through a bijective mapping between countable infinite sets.",
+      "data-discipline": "mathematics"
+    },
+    "classes": [
+      "joke-card"
+    ],
+    "html": "<div class=\"joke-img-wrapper gallery-zoomable\" data-zoom-caption=\"Infinitely many mathematicians walk into David Hilbert's fully booked hotel. The front desk clerk worries, but Hilbert calmly shifts guest n to room 2n, instantly freeing up all odd-numbered rooms for infinity more guests.\" data-zoom-meta=\"Mathematics\" data-zoom-src=\"/images/jokes/hilbert.png\" data-zoom-title=\"Hilbert's Infinite Hotel Checkout\" title=\"Click to view full image\">\n<img alt=\"Hilbert's Infinite Hotel Checkout\" loading=\"lazy\" onerror=\"this.onerror=null;this.parentElement.style.display='none';\" src=\"/images/jokes/hilbert.png\"/>\n<div class=\"joke-discipline-badge\">Mathematics</div>\n<div class=\"joke-img-overlay\">\n<svg class=\"zoom-indicator-icon\" fill=\"none\" height=\"22\" stroke=\"currentColor\" stroke-width=\"2\" viewbox=\"0 0 24 24\" width=\"22\">\n<circle cx=\"11\" cy=\"11\" r=\"8\"></circle>\n<line x1=\"21\" x2=\"16.65\" y1=\"21\" y2=\"16.65\"></line>\n<line x1=\"11\" x2=\"11\" y1=\"8\" y2=\"14\"></line>\n<line x1=\"8\" x2=\"14\" y1=\"11\" y2=\"11\"></line>\n</svg>\n</div>\n</div>\n<div class=\"joke-card-content\">\n<div class=\"joke-top-row\">\n<h2 class=\"joke-title\">Hilbert's Infinite Hotel</h2>\n</div>\n<div class=\"joke-punchline-box\">\n<p class=\"joke-content-text\">“Infinitely many mathematicians walk into David Hilbert's fully booked hotel. The front desk clerk worries, but Hilbert calmly shifts guest n to room 2n, instantly freeing up all odd-numbered rooms for infinity more guests.”</p>\n</div>\n<div class=\"joke-history-box\">\n<span class=\"joke-section-label\">The Context &amp; Logic:</span>\n<p class=\"joke-history-text\">Hilbert's Paradox of the Grand Hotel demonstrates the counter-intuitive properties of transfinite sets discovered by Georg Cantor. Even when an infinite hotel is completely full, it can accommodate infinitely many new arrivals through a bijective mapping between countable infinite sets.</p>\n</div>\n</div>"
+  },
+  {
+    "id": "jokes-7",
+    "name": "logicians ordering drinks",
+    "title": "logicians ordering drinks",
+    "year": null,
+    "sortYear": 4,
+    "sortName": "logicians ordering drinks",
+    "description": "three logicians walk into a bar. the bartender asks, 'does everyone want a drink?' the first logician says, 'i don't know.' the second says, 'i don't know.' the third smiles and says, 'yes!'",
+    "image": "/images/jokes/logicians.png",
+    "zoomSrc": "/images/jokes/logicians.png",
+    "zoomTitle": "Three Logicians Walk into a Bar",
+    "zoomMeta": "Logic",
+    "zoomCaption": "Three logicians walk into a bar. The bartender asks, 'Does everyone want a drink?' The first logician says, 'I don't know.' The second says, 'I don't know.' The third smiles and says, 'Yes!'",
+    "dataset": {
+      "data-name": "logicians ordering drinks",
+      "data-content": "three logicians walk into a bar. the bartender asks, 'does everyone want a drink?' the first logician says, 'i don't know.' the second says, 'i don't know.' the third smiles and says, 'yes!'",
+      "data-history": "rooted in boolean logic and epistemic logic. the universal quantifier ('does everyone...') requires unanimous agreement. if the first or second logician did not want a drink, they would answer 'no' immediately. because they both want drinks but cannot speak for the others, they reply 'i don't know'. the third logician deduces their intent and concludes that all three desire a drink.",
+      "data-discipline": "logic"
+    },
+    "classes": [
+      "joke-card"
+    ],
+    "html": "<div class=\"joke-img-wrapper gallery-zoomable\" data-zoom-caption=\"Three logicians walk into a bar. The bartender asks, 'Does everyone want a drink?' The first logician says, 'I don't know.' The second says, 'I don't know.' The third smiles and says, 'Yes!'\" data-zoom-meta=\"Logic\" data-zoom-src=\"/images/jokes/logicians.png\" data-zoom-title=\"Three Logicians Walk into a Bar\" title=\"Click to view full image\">\n<img alt=\"Three Logicians Walk into a Bar\" loading=\"lazy\" onerror=\"this.onerror=null;this.parentElement.style.display='none';\" src=\"/images/jokes/logicians.png\"/>\n<div class=\"joke-discipline-badge\">Logic</div>\n<div class=\"joke-img-overlay\">\n<svg class=\"zoom-indicator-icon\" fill=\"none\" height=\"22\" stroke=\"currentColor\" stroke-width=\"2\" viewbox=\"0 0 24 24\" width=\"22\">\n<circle cx=\"11\" cy=\"11\" r=\"8\"></circle>\n<line x1=\"21\" x2=\"16.65\" y1=\"21\" y2=\"16.65\"></line>\n<line x1=\"11\" x2=\"11\" y1=\"8\" y2=\"14\"></line>\n<line x1=\"8\" x2=\"14\" y1=\"11\" y2=\"11\"></line>\n</svg>\n</div>\n</div>\n<div class=\"joke-card-content\">\n<div class=\"joke-top-row\">\n<h2 class=\"joke-title\">Three Logicians Walk into a Bar</h2>\n</div>\n<div class=\"joke-punchline-box\">\n<p class=\"joke-content-text\">“Three logicians walk into a bar. The bartender asks, 'Does everyone want a drink?' The first logician says, 'I don't know.' The second says, 'I don't know.' The third smiles and says, 'Yes!'”</p>\n</div>\n<div class=\"joke-history-box\">\n<span class=\"joke-section-label\">The Context &amp; Logic:</span>\n<p class=\"joke-history-text\">Rooted in Boolean logic and epistemic logic. The universal quantifier ('does everyone...') requires unanimous agreement. If the first or second logician did not want a drink, they would answer 'No' immediately. Because they both want drinks but cannot speak for the others, they reply 'I don't know'. The third logician deduces their intent and concludes that all three desire a drink.</p>\n</div>\n</div>"
+  },
+  {
+    "id": "jokes-8",
+    "name": "the photon checked baggage",
+    "title": "the photon checked baggage",
+    "year": null,
+    "sortYear": 3,
+    "sortName": "the photon checked baggage",
+    "description": "a photon checks into a hotel and heads toward the elevator. the bellhop rushes over and asks, 'can i help you with your luggage, sir?' the photon smiles and replies, 'no thanks, i'm travelling light!'",
+    "image": "/images/jokes/photon.png",
+    "zoomSrc": "/images/jokes/photon.png",
+    "zoomTitle": "The Photon Checked Baggage",
+    "zoomMeta": "Physics",
+    "zoomCaption": "A photon checks into a hotel and heads toward the elevator. The bellhop rushes over and asks, 'Can I help you with your luggage, sir?' The photon smiles and replies, 'No thanks, I'm travelling light!'",
+    "dataset": {
+      "data-name": "the photon checked baggage",
+      "data-content": "a photon checks into a hotel and heads toward the elevator. the bellhop rushes over and asks, 'can i help you with your luggage, sir?' the photon smiles and replies, 'no thanks, i'm travelling light!'",
+      "data-history": "in special relativity and quantum electrodynamics, a photon is an elementary particle and the quantum of the electromagnetic field. photons have strictly zero invariant rest mass (m = 0) and always travel at the speed of light c in vacuum, making 'travelling light' a clever double entendre on physical optics and luggage.",
+      "data-discipline": "physics"
+    },
+    "classes": [
+      "joke-card"
+    ],
+    "html": "<div class=\"joke-img-wrapper gallery-zoomable\" data-zoom-caption=\"A photon checks into a hotel and heads toward the elevator. The bellhop rushes over and asks, 'Can I help you with your luggage, sir?' The photon smiles and replies, 'No thanks, I'm travelling light!'\" data-zoom-meta=\"Physics\" data-zoom-src=\"/images/jokes/photon.png\" data-zoom-title=\"The Photon Checked Baggage\" title=\"Click to view full image\">\n<img alt=\"The Photon Checked Baggage\" loading=\"lazy\" onerror=\"this.onerror=null;this.parentElement.style.display='none';\" src=\"/images/jokes/photon.png\"/>\n<div class=\"joke-discipline-badge\">Physics</div>\n<div class=\"joke-img-overlay\">\n<svg class=\"zoom-indicator-icon\" fill=\"none\" height=\"22\" stroke=\"currentColor\" stroke-width=\"2\" viewbox=\"0 0 24 24\" width=\"22\">\n<circle cx=\"11\" cy=\"11\" r=\"8\"></circle>\n<line x1=\"21\" x2=\"16.65\" y1=\"21\" y2=\"16.65\"></line>\n<line x1=\"11\" x2=\"11\" y1=\"8\" y2=\"14\"></line>\n<line x1=\"8\" x2=\"14\" y1=\"11\" y2=\"11\"></line>\n</svg>\n</div>\n</div>\n<div class=\"joke-card-content\">\n<div class=\"joke-top-row\">\n<h2 class=\"joke-title\">The Photon's Baggage</h2>\n</div>\n<div class=\"joke-punchline-box\">\n<p class=\"joke-content-text\">“A photon checks into a hotel and heads toward the elevator. The bellhop rushes over and asks, 'Can I help you with your luggage, sir?' The photon smiles and replies, 'No thanks, I'm travelling light!'”</p>\n</div>\n<div class=\"joke-history-box\">\n<span class=\"joke-section-label\">The Context &amp; Logic:</span>\n<p class=\"joke-history-text\">In special relativity and quantum electrodynamics, a photon is an elementary particle with zero invariant rest mass (m = 0) that always travels at the speed of light c in vacuum. The punchline plays on 'light' both as electromagnetic radiation and the absence of physical weight.</p>\n</div>\n</div>"
+  },
+  {
+    "id": "jokes-9",
+    "name": "two hard problems in computer science",
+    "title": "two hard problems in computer science",
+    "year": null,
+    "sortYear": 2,
+    "sortName": "two hard problems in computer science",
+    "description": "there are only two hard things in computer science: cache invalidation, naming things, and off-by-one errors.",
+    "image": "/images/jokes/cache.png",
+    "zoomSrc": "/images/jokes/cache.png",
+    "zoomTitle": "The Two Hard Problems",
+    "zoomMeta": "Computer Science",
+    "zoomCaption": "There are only two hard things in Computer Science: cache invalidation, naming things, and off-by-one errors.",
+    "dataset": {
+      "data-name": "two hard problems in computer science",
+      "data-content": "there are only two hard things in computer science: cache invalidation, naming things, and off-by-one errors.",
+      "data-history": "originating from an aphorism famously attributed to phil karlton: 'there are only two hard problems in computer science: cache invalidation and naming things.' the tech community later appended the third clause, turning the aphorism itself into a self-referential off-by-one error.",
+      "data-discipline": "computer science"
+    },
+    "classes": [
+      "joke-card"
+    ],
+    "html": "<div class=\"joke-img-wrapper gallery-zoomable\" data-zoom-caption=\"There are only two hard things in Computer Science: cache invalidation, naming things, and off-by-one errors.\" data-zoom-meta=\"Computer Science\" data-zoom-src=\"/images/jokes/cache.png\" data-zoom-title=\"The Two Hard Problems\" title=\"Click to view full image\">\n<img alt=\"The Two Hard Problems\" loading=\"lazy\" onerror=\"this.onerror=null;this.parentElement.style.display='none';\" src=\"/images/jokes/cache.png\"/>\n<div class=\"joke-discipline-badge\">Computer Science</div>\n<div class=\"joke-img-overlay\">\n<svg class=\"zoom-indicator-icon\" fill=\"none\" height=\"22\" stroke=\"currentColor\" stroke-width=\"2\" viewbox=\"0 0 24 24\" width=\"22\">\n<circle cx=\"11\" cy=\"11\" r=\"8\"></circle>\n<line x1=\"21\" x2=\"16.65\" y1=\"21\" y2=\"16.65\"></line>\n<line x1=\"11\" x2=\"11\" y1=\"8\" y2=\"14\"></line>\n<line x1=\"8\" x2=\"14\" y1=\"11\" y2=\"11\"></line>\n</svg>\n</div>\n</div>\n<div class=\"joke-card-content\">\n<div class=\"joke-top-row\">\n<h2 class=\"joke-title\">The Hard Problems of Computing</h2>\n</div>\n<div class=\"joke-punchline-box\">\n<p class=\"joke-content-text\">“There are only two hard things in Computer Science: cache invalidation, naming things, and off-by-one errors.”</p>\n</div>\n<div class=\"joke-history-box\">\n<span class=\"joke-section-label\">The Context &amp; Logic:</span>\n<p class=\"joke-history-text\">Originating from an aphorism famously attributed to Netscape architect Phil Karlton ('There are only two hard problems in Computer Science: cache invalidation and naming things'). The tech community added the third item, making the statement an intentional, self-demonstrating off-by-one boundary error.</p>\n</div>\n</div>"
+  },
+  {
+    "id": "jokes-10",
+    "name": "the programmer and the grocery store",
+    "title": "the programmer and the grocery store",
+    "year": null,
+    "sortYear": 1,
+    "sortName": "the programmer and the grocery store",
+    "description": "a programmer's spouse tells them: 'please go to the grocery store and buy a loaf of bread. if they have eggs, buy a dozen.' the programmer returns with twelve loaves of bread. the spouse asks in shock: 'why did you buy twelve loaves of bread?!' the programmer replies: 'because they had eggs.'",
+    "image": "/images/jokes/programmer_groceries.png",
+    "zoomSrc": "/images/jokes/programmer_groceries.png",
+    "zoomTitle": "The Programmer at the Grocery Store",
+    "zoomMeta": "Computer Science",
+    "zoomCaption": "A programmer's spouse tells them: 'Please go to the grocery store and buy a loaf of bread. If they have eggs, buy a dozen.' The programmer returns with twelve loaves of bread. When asked why, the programmer answers: 'Because they had eggs.'",
+    "dataset": {
+      "data-name": "the programmer and the grocery store",
+      "data-content": "a programmer's spouse tells them: 'please go to the grocery store and buy a loaf of bread. if they have eggs, buy a dozen.' the programmer returns with twelve loaves of bread. the spouse asks in shock: 'why did you buy twelve loaves of bread?!' the programmer replies: 'because they had eggs.'",
+      "data-history": "highlights the strict literal semantics of procedural syntax and conditional control flow (if/else). humans infer implicit context ('buy a dozen eggs'), whereas a parser or compiler executes condition evaluation strictly over the previous variable context ('buy a dozen [loaves of bread]').",
+      "data-discipline": "computer science"
+    },
+    "classes": [
+      "joke-card"
+    ],
+    "html": "<div class=\"joke-img-wrapper gallery-zoomable\" data-zoom-caption=\"A programmer's spouse tells them: 'Please go to the grocery store and buy a loaf of bread. If they have eggs, buy a dozen.' The programmer returns with twelve loaves of bread. When asked why, the programmer answers: 'Because they had eggs.'\" data-zoom-meta=\"Computer Science\" data-zoom-src=\"/images/jokes/programmer_groceries.png\" data-zoom-title=\"The Programmer at the Grocery Store\" title=\"Click to view full image\">\n<img alt=\"The Programmer at the Grocery Store\" loading=\"lazy\" onerror=\"this.onerror=null;this.parentElement.style.display='none';\" src=\"/images/jokes/programmer_groceries.png\"/>\n<div class=\"joke-discipline-badge\">Computer Science</div>\n<div class=\"joke-img-overlay\">\n<svg class=\"zoom-indicator-icon\" fill=\"none\" height=\"22\" stroke=\"currentColor\" stroke-width=\"2\" viewbox=\"0 0 24 24\" width=\"22\">\n<circle cx=\"11\" cy=\"11\" r=\"8\"></circle>\n<line x1=\"21\" x2=\"16.65\" y1=\"21\" y2=\"16.65\"></line>\n<line x1=\"11\" x2=\"11\" y1=\"8\" y2=\"14\"></line>\n<line x1=\"8\" x2=\"14\" y1=\"11\" y2=\"11\"></line>\n</svg>\n</div>\n</div>\n<div class=\"joke-card-content\">\n<div class=\"joke-top-row\">\n<h2 class=\"joke-title\">Conditional Syntax in Real Life</h2>\n</div>\n<div class=\"joke-punchline-box\">\n<p class=\"joke-content-text\">“A programmer's spouse says: 'Please go to the store and buy a loaf of bread. If they have eggs, buy a dozen.' The programmer returns home with twelve loaves of bread. The spouse asks: 'Why did you buy twelve loaves of bread?!' The programmer responds: 'Because they had eggs.'”</p>\n</div>\n<div class=\"joke-history-box\">\n<span class=\"joke-section-label\">The Context &amp; Logic:</span>\n<p class=\"joke-history-text\">Highlights the strict literal interpretation of conditional branching statements in code. While human communication relies on pragmatic implicature (the noun 'eggs' becomes the implicit subject of 'dozen'), an imperative algorithm re-evaluates the quantity argument while keeping the object context ('bread') unchanged.</p>\n</div>\n</div>"
+  }
+]

@@ -42,7 +42,13 @@ export const DynamicItemPage: React.FC<DynamicItemProps> = ({ section }) => {
         const cleaned = html
           .replace(/https:\/\/gui13go\.github\.io\//g, '/')
           .replace(/http:\/\/localhost:1313\//g, '/')
-        setHtmlContent(cleaned)
+          
+        const parser = new DOMParser()
+        const doc = parser.parseFromString(cleaned, 'text/html')
+        const mainElement = doc.querySelector('main')
+        const contentToInject = mainElement ? mainElement.innerHTML : cleaned
+
+        setHtmlContent(contentToInject)
         setLoading(false)
       })
       .catch((err) => {
@@ -166,5 +172,5 @@ export const DynamicItemPage: React.FC<DynamicItemProps> = ({ section }) => {
     )
   }
 
-  return <div ref={containerRef} dangerouslySetInnerHTML={{ __html: htmlContent }} />
+  return <main className="main" ref={containerRef} dangerouslySetInnerHTML={{ __html: htmlContent }} />
 }
