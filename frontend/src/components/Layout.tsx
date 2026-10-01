@@ -9,14 +9,11 @@ import { useBackendHealth } from '../hooks/useBackendHealth'
 
 export const Layout: React.FC = () => {
   const { isOnline, isOllamaConnected, refetch, isFetching } = useBackendHealth()
-  const [isDismissed, setIsDismissed] = React.useState(false)
+  const [dismissedKey, setDismissedKey] = React.useState<string | null>(null)
 
-  // Reset dismissal if status transitions to healthy
-  React.useEffect(() => {
-    if (isOnline && isOllamaConnected) {
-      setIsDismissed(false)
-    }
-  }, [isOnline, isOllamaConnected])
+  const isHealthy = Boolean(isOnline && isOllamaConnected)
+  const offlineStateKey = `${!isOnline}-${!isOllamaConnected}`
+  const showBanner = !isHealthy && dismissedKey !== offlineStateKey
 
   return (
     <>
@@ -24,7 +21,7 @@ export const Layout: React.FC = () => {
       <ReadingProgressBar />
 
       {/* Offline resilience banner with graceful notification and dismiss button */}
-      {(!isOnline || !isOllamaConnected) && !isDismissed && (
+      {showBanner && (
         <div className="resilience-banner" role="alert">
           <div className="resilience-banner-content">
             <strong>Backend is currently offline.</strong> AI features are unavailable.
@@ -38,7 +35,7 @@ export const Layout: React.FC = () => {
               {isFetching ? 'Probing...' : 'Check Status'}
             </button>
             <button
-              onClick={() => setIsDismissed(true)}
+              onClick={() => setDismissedKey(offlineStateKey)}
               className="resilience-close-btn"
               aria-label="Dismiss offline warning"
               title="Close notification"
@@ -65,8 +62,36 @@ export const Layout: React.FC = () => {
       {/* Header with Site Brand, Instant Search, Theme Toggle, and Navigation Tabs */}
       <Header />
 
-      {/* Main Outlet */}
-      <Outlet />
+      {/* Main Outlet with Suspense for lazy route chunks */}
+      <React.Suspense
+        fallback={
+          <main
+            className="main"
+            style={{
+              minHeight: '60vh',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <div
+              style={{
+                color: 'var(--secondary)',
+                fontFamily: 'var(--code-font)',
+                fontSize: '0.875rem',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+              }}
+            >
+              <span className="loading-spinner" />
+              Loading...
+            </div>
+          </main>
+        }
+      >
+        <Outlet />
+      </React.Suspense>
 
       {/* Floating Utilities */}
       <ScrollToTop />

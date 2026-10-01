@@ -12,14 +12,8 @@ import {
   X,
   ArrowRight,
 } from 'lucide-react'
-
-interface SearchItem {
-  title: string
-  permalink: string
-  summary?: string
-  content?: string
-  tags?: string[]
-}
+import { useSearchIndex, type SearchItem } from '../hooks/useSearchIndex'
+import { useDocumentMeta } from '../hooks/useDocumentMeta'
 
 type ContentCategory = 'All' | 'Blogs' | 'Tools' | 'GeoLayers' | 'Gallery' | 'Versus' | 'Publications'
 
@@ -52,44 +46,17 @@ export const SearchPage: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams()
   const { tag: routeTag } = useParams<{ tag?: string }>()
 
-  const [query, setQuery] = useState(() => searchParams.get('q') || '')
+  const query = searchParams.get('q') || ''
+  const activeTag = routeTag || searchParams.get('tag') || ''
   const [selectedCategory, setSelectedCategory] = useState<ContentCategory>('All')
-  const [activeTag, setActiveTag] = useState<string>(() => routeTag || searchParams.get('tag') || '')
-  const [items, setItems] = useState<SearchItem[]>([])
-  const [loading, setLoading] = useState(true)
   const inputRef = useRef<HTMLInputElement>(null)
 
-  // Sync state if URL query params or route change
-  useEffect(() => {
-    const q = searchParams.get('q') || ''
-    const t = routeTag || searchParams.get('tag') || ''
-    setQuery(q)
-    setActiveTag(t)
-  }, [searchParams, routeTag])
+  const { data: items = [], isLoading: loading } = useSearchIndex()
 
-  // Fetch search index once
-  useEffect(() => {
-    let isMounted = true
-    fetch('/index.json')
-      .then((res) => {
-        if (!res.ok) throw new Error(`HTTP ${res.status}`)
-        return res.json()
-      })
-      .then((data: SearchItem[]) => {
-        if (isMounted) {
-          setItems(data)
-          setLoading(false)
-        }
-      })
-      .catch((err) => {
-        console.error('Failed to load search index:', err)
-        if (isMounted) setLoading(false)
-      })
-
-    return () => {
-      isMounted = false
-    }
-  }, [])
+  useDocumentMeta({
+    title: activeTag ? `Tag: ${activeTag}` : query ? `Search: ${query}` : 'Search',
+    description: 'Explore technical articles, interactive tools, geo-layers, and research publications.',
+  })
 
   // Auto-focus input on mount
   useEffect(() => {
@@ -98,7 +65,6 @@ export const SearchPage: React.FC = () => {
 
   // Update query and sync to URL
   const handleQueryChange = (val: string) => {
-    setQuery(val)
     const newParams = new URLSearchParams(searchParams)
     if (val.trim()) {
       newParams.set('q', val)
@@ -111,7 +77,6 @@ export const SearchPage: React.FC = () => {
   // Tag click handler
   const handleTagClick = (tag: string) => {
     const nextTag = activeTag.toLowerCase() === tag.toLowerCase() ? '' : tag
-    setActiveTag(nextTag)
     const newParams = new URLSearchParams(searchParams)
     if (nextTag) {
       newParams.set('tag', nextTag)
@@ -123,8 +88,6 @@ export const SearchPage: React.FC = () => {
 
   // Clear all filters
   const handleClearAll = () => {
-    setQuery('')
-    setActiveTag('')
     setSelectedCategory('All')
     setSearchParams({}, { replace: true })
     inputRef.current?.focus()
@@ -256,7 +219,7 @@ export const SearchPage: React.FC = () => {
 
   // Convert full URL to relative SPA path
   const formatUrl = (permalink: string) => {
-    return permalink.replace(/^https?:\/\/[^\/]+/, '')
+    return permalink.replace(/^https?:\/\/[^/]+/, '')
   }
 
   // Helper for text highlighting

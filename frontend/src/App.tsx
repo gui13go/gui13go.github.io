@@ -1,12 +1,21 @@
+import { lazy } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { Layout } from './components/Layout'
 import { HomePage } from './pages/HomePage'
 import { StaticPage } from './pages/StaticPage'
 import { DynamicItemPage } from './pages/DynamicItemPage'
-import { StatusPage } from './pages/StatusPage'
 
-import { SearchPage } from './pages/SearchPage'
+// Lazy-loaded routes for optimal initial bundle size
+const StatusPage = lazy(() =>
+  import('./pages/StatusPage').then((m) => ({ default: m.StatusPage }))
+)
+const SearchPage = lazy(() =>
+  import('./pages/SearchPage').then((m) => ({ default: m.SearchPage }))
+)
+const NotFoundPage = lazy(() =>
+  import('./pages/NotFoundPage').then((m) => ({ default: m.NotFoundPage }))
+)
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -55,8 +64,8 @@ export function App() {
             <Route path="gallery/versus/:slug/" element={<DynamicItemPage section="rendered_versus" />} />
 
             {/* Individual Interactive Items and Articles */}
-            <Route path="blogs/:slug" element={<DynamicItemPage section="rendered_posts" />} />
-            <Route path="blogs/:slug/" element={<DynamicItemPage section="rendered_posts" />} />
+            <Route path="blogs/:slug" element={<DynamicItemPage section="rendered_blogs" />} />
+            <Route path="blogs/:slug/" element={<DynamicItemPage section="rendered_blogs" />} />
             <Route path="tools/:slug" element={<DynamicItemPage section="rendered_tools" />} />
             <Route path="tools/:slug/" element={<DynamicItemPage section="rendered_tools" />} />
             <Route path="gallery/:slug" element={<DynamicItemPage section="rendered_gallery" />} />
@@ -70,8 +79,8 @@ export function App() {
             <Route path="status" element={<StatusPage />} />
             <Route path="status/" element={<StatusPage />} />
 
-            {/* Fallback */}
-            <Route path="*" element={<SearchPage />} />
+            {/* 404 Fallback */}
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

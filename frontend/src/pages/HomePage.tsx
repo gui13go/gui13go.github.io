@@ -10,6 +10,7 @@ import {
 } from 'lucide-react'
 import { useBackendHealth } from '../hooks/useBackendHealth'
 import { API_BASE_URL } from '../config/api'
+import { useDocumentMeta } from '../hooks/useDocumentMeta'
 
 interface FeaturedPost {
   title: string
@@ -96,6 +97,12 @@ const FEATURED_POSTS: FeaturedPost[] = [
 const FILTER_CATEGORIES = ['All', 'Security', 'Linux', 'OSINT', 'Architecture'] as const
 
 export const HomePage: React.FC = () => {
+  useDocumentMeta({
+    title: 'Dashboard',
+    description:
+      'Personal technical portfolio and systems research dashboard on GNU/Linux, Systems Engineering, Security, Virtualization, and Cloud Architecture.',
+  })
+
   const { isOnline, health, refetch, isFetching } = useBackendHealth()
   const [selectedCategory, setSelectedCategory] = useState<string>('All')
   const [pingLatency, setPingLatency] = useState<number | null>(null)

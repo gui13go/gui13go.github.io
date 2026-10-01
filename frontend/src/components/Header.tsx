@@ -1,12 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-
-interface SearchItem {
-  title: string
-  permalink: string
-  summary?: string
-  content?: string
-}
+import { useSearchIndex, type SearchItem } from '../hooks/useSearchIndex'
 
 export const Header: React.FC = () => {
   const location = useLocation()
@@ -15,9 +9,14 @@ export const Header: React.FC = () => {
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
     return (localStorage.getItem('pref-theme') as 'dark' | 'light') || 'dark'
   })
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [openMenuPath, setOpenMenuPath] = useState<string | null>(null)
+  const mobileMenuOpen = openMenuPath === location.pathname
+  const closeMobileMenu = () => setOpenMenuPath(null)
+  const toggleMobileMenu = () => {
+    setOpenMenuPath((prev) => (prev === location.pathname ? null : location.pathname))
+  }
   const [searchQuery, setSearchQuery] = useState('')
-  const [searchIndex, setSearchIndex] = useState<SearchItem[] | null>(null)
+  const { data: searchIndex = [] } = useSearchIndex()
   const [searchResults, setSearchResults] = useState<SearchItem[]>([])
   const [isSearching, setIsSearching] = useState(false)
   const [selectedIndex, setSelectedIndex] = useState(-1)
@@ -37,24 +36,8 @@ export const Header: React.FC = () => {
     setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))
   }
 
-  // Load search index lazily
-  const loadSearchIndex = async () => {
-    if (searchIndex) return searchIndex
-    try {
-      const res = await fetch('/index.json')
-      if (res.ok) {
-        const data = await res.json()
-        setSearchIndex(data)
-        return data as SearchItem[]
-      }
-    } catch (e) {
-      console.error('Failed to load search index:', e)
-    }
-    return null
-  }
-
   // Handle Search input
-  const handleSearchInput = async (val: string) => {
+  const handleSearchInput = (val: string) => {
     setSearchQuery(val)
     if (!val.trim()) {
       setIsSearching(false)
@@ -62,8 +45,8 @@ export const Header: React.FC = () => {
       return
     }
 
-    const index = await loadSearchIndex()
-    if (!index) return
+    const index = searchIndex
+    if (!index || index.length === 0) return
 
     const tokens = val.toLowerCase().split(/\s+/).filter(Boolean)
     const matches: { item: SearchItem; score: number }[] = []
@@ -111,18 +94,13 @@ export const Header: React.FC = () => {
     setIsSearching(false)
     setSearchQuery('')
     // Convert full URL or relative URL to React Router path
-    const path = permalink.replace(/^https?:\/\/[^\/]+/, '')
+    const path = permalink.replace(/^https?:\/\/[^/]+/, '')
     navigate(path)
   }
 
   const searchInputRef = useRef<HTMLInputElement>(null)
   const menuRef = useRef<HTMLUListElement>(null)
   const menuToggleRef = useRef<HTMLButtonElement>(null)
-
-  // Automatically close mobile menu whenever route changes
-  useEffect(() => {
-    setMobileMenuOpen(false)
-  }, [location.pathname])
 
   // Global keyboard shortcuts (/ and Cmd+K / Ctrl+K for search, Escape for search and mobile menu)
   useEffect(() => {
@@ -139,7 +117,7 @@ export const Header: React.FC = () => {
         searchInputRef.current?.select()
       } else if (e.key === 'Escape') {
         setIsSearching(false)
-        setMobileMenuOpen(false)
+        closeMobileMenu()
         searchInputRef.current?.blur()
       }
     }
@@ -161,7 +139,7 @@ export const Header: React.FC = () => {
         menuToggleRef.current &&
         !menuToggleRef.current.contains(target)
       ) {
-        setMobileMenuOpen(false)
+        closeMobileMenu()
       }
     }
     document.addEventListener('click', handleClickOutside)
@@ -190,11 +168,11 @@ export const Header: React.FC = () => {
   const navLinks = [
     { to: '/about/', label: 'About' },
     { to: '/agents/', label: 'Agents' },
-    { to: '/blogs/', label: 'Blogs' },
     { to: '/publications/', label: 'Publications' },
     { to: '/geolayers/', label: 'GeoLayers' },
-    { to: '/gallery/', label: 'Gallery' },
     { to: '/tools/', label: 'Tools' },
+    { to: '/gallery/', label: 'Gallery' },
+    { to: '/blogs/', label: 'Blogs' },
     { to: '/search/', label: 'Search' },
   ]
 
@@ -299,7 +277,6 @@ export const Header: React.FC = () => {
               onChange={(e) => handleSearchInput(e.target.value)}
               onKeyDown={handleInputKeyDown}
               onFocus={() => {
-                loadSearchIndex()
                 if (searchQuery.trim()) setIsSearching(true)
               }}
             />
@@ -410,7 +387,7 @@ export const Header: React.FC = () => {
           aria-expanded={mobileMenuOpen}
           onClick={(e) => {
             e.stopPropagation()
-            setMobileMenuOpen((prev) => !prev)
+            toggleMobileMenu()
           }}
         >
           {mobileMenuOpen ? (
@@ -461,7 +438,7 @@ export const Header: React.FC = () => {
               (link.to !== '/' && location.pathname.startsWith(link.to))
             return (
               <li key={link.to}>
-                <Link to={link.to} title={link.label} onClick={() => setMobileMenuOpen(false)}>
+                <Link to={link.to} title={link.label} onClick={closeMobileMenu}>
                   <span className={isActive ? 'active' : ''}>{link.label}</span>
                 </Link>
               </li>

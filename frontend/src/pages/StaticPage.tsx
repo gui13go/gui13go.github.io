@@ -1,138 +1,37 @@
-import React, { useEffect, useState, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { useRenderedContent } from '../hooks/useRenderedContent'
+import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { ContentRenderer } from '../components/ContentRenderer'
 
 interface StaticPageProps {
   pageName: string
 }
 
 export const StaticPage: React.FC<StaticPageProps> = ({ pageName }) => {
-  const [htmlContent, setHtmlContent] = useState<string>('')
-  const [loading, setLoading] = useState(true)
-  const containerRef = useRef<HTMLDivElement>(null)
-  const navigate = useNavigate()
-
   useEffect(() => {
-    let isMounted = true
-    setLoading(true)
     window.scrollTo({ top: 0, behavior: 'instant' })
-
-    // Fetch the pre-rendered HTML for this page
-    fetch(`/rendered_pages/${pageName}.html`)
-      .then((res) => {
-        if (!res.ok) throw new Error(`HTTP ${res.status}`)
-        return res.text()
-      })
-      .then((html) => {
-        if (isMounted) {
-          // Normalize links to use local SPA routes
-          const cleaned = html
-            .replace(/https:\/\/gui13go\.github\.io\//g, '/')
-            .replace(/http:\/\/localhost:1313\//g, '/')
-
-          const parser = new DOMParser()
-          const doc = parser.parseFromString(cleaned, 'text/html')
-          const mainElement = doc.querySelector('main')
-          const contentToInject = mainElement ? mainElement.innerHTML : cleaned
-
-          setHtmlContent(contentToInject)
-          setLoading(false)
-        }
-      })
-      .catch((err) => {
-        console.error(`Failed to load rendered page ${pageName}:`, err)
-        if (isMounted) {
-          setLoading(false)
-        }
-      })
-
-    return () => {
-      isMounted = false
-    }
   }, [pageName])
 
-  // Execute embedded scripts when HTML updates (enables interactive galleries, filters, tools)
-  useEffect(() => {
-    const container = containerRef.current
-    if (!container || !htmlContent) return
+  const { data, isLoading, isError, error } = useRenderedContent(
+    pageName ? `/rendered_pages/${pageName}.html` : null
+  )
 
-    const scripts = Array.from(container.querySelectorAll('script'))
-    scripts.forEach((oldScript) => {
-      // Ignore JSON data payloads (e.g. versus-data-payload)
-      if (oldScript.type && oldScript.type.includes('json')) {
-        return
-      }
+  const fallbackTitle = pageName
+    ? pageName.charAt(0).toUpperCase() + pageName.slice(1)
+    : undefined
 
-      const newScript = document.createElement('script')
-      Array.from(oldScript.attributes).forEach((attr) => {
-        newScript.setAttribute(attr.name, attr.value)
-      })
-      if (oldScript.src) {
-        newScript.src = oldScript.src
-      } else {
-        let code = oldScript.textContent || ''
-        // Ensure DOMContentLoaded listeners execute in React SPA
-        code = code.replace(
-          /document\.addEventListener\(\s*["']DOMContentLoaded["']\s*,\s*(function|\()/g,
-          '(function(cb){ if(document.readyState !== "loading") { setTimeout(cb, 10); } else { document.addEventListener("DOMContentLoaded", cb); } })($1'
-        )
-        newScript.textContent = code
-      }
-      oldScript.parentNode?.replaceChild(newScript, oldScript)
-    })
-
-    // Dispatch lifecycle events to wake up any lingering listeners
-    const timer = setTimeout(() => {
-      document.dispatchEvent(new Event('DOMContentLoaded'))
-      window.dispatchEvent(new Event('DOMContentLoaded'))
-      window.dispatchEvent(new Event('load'))
-      window.dispatchEvent(new Event('resize'))
-    }, 30)
-
-    return () => clearTimeout(timer)
-  }, [htmlContent])
-
-  // Intercept clicks on internal links to use React Router navigation
-  useEffect(() => {
-    const container = containerRef.current
-    if (!container) return
-
-    const handleLinkClick = (e: MouseEvent) => {
-      const target = (e.target as HTMLElement).closest('a')
-      if (!target) return
-
-      const href = target.getAttribute('href')
-      if (!href) return
-
-      // Handle internal relative paths
-      if (href.startsWith('/') && !href.startsWith('//')) {
-        e.preventDefault()
-        navigate(href)
-      } else if (href.startsWith('#')) {
-        e.preventDefault()
-        const el = document.getElementById(href.slice(1))
-        if (el) el.scrollIntoView({ behavior: 'smooth' })
-      }
-    }
-
-    container.addEventListener('click', handleLinkClick)
-    return () => container.removeEventListener('click', handleLinkClick)
-  }, [htmlContent, navigate])
-
-  if (loading) {
-    return (
-      <main className="main" style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <div style={{ color: 'var(--secondary)', fontFamily: 'var(--code-font)', fontSize: '0.875rem' }}>
-          Loading content...
-        </div>
-      </main>
-    )
-  }
+  useDocumentMeta({
+    title: data?.title || fallbackTitle,
+    description: data?.description,
+    image: data?.image,
+  })
 
   return (
-    <main
-      className="main"
-      ref={containerRef}
-      dangerouslySetInnerHTML={{ __html: htmlContent }}
+    <ContentRenderer
+      htmlContent={data?.htmlContent || ''}
+      loading={isLoading}
+      error={isError}
+      errorMessage={error?.message || `The requested page (${pageName}) could not be loaded.`}
     />
   )
 }

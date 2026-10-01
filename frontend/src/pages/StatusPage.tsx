@@ -14,8 +14,14 @@ import {
 } from 'lucide-react'
 import { useBackendHealth } from '../hooks/useBackendHealth'
 import { API_BASE_URL } from '../config/api'
+import { useDocumentMeta } from '../hooks/useDocumentMeta'
 
 export const StatusPage: React.FC = () => {
+  useDocumentMeta({
+    title: 'Hardware Telemetry & Node Status',
+    description: 'Real-time telemetry, GPU hardware sensors, and edge AI daemon status.',
+  })
+
   const { isOnline, isOllamaConnected, health, isFetching, refetch } = useBackendHealth()
   const [pingLatency, setPingLatency] = useState<number | null>(null)
   const [isPinging, setIsPinging] = useState(false)
