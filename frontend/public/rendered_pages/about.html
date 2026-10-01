@@ -1,1702 +1,1676 @@
 <main class="main">
-<div class="about-page-container">
-  
-  <div class="gallery-breadcrumbs" style="margin-bottom: 20px;">
-    <a href="http://localhost:1313/">Home</a> <span>/</span> <span>About</span>
+  <div class="about-page-container">
+
+    <div class="gallery-breadcrumbs" style="margin-bottom: 20px;">
+      <a href="http://localhost:1313/">Home</a> <span>/</span> <span>About</span>
+    </div>
+
+
+    <div class="about-hero-card" id="overview">
+      <div class="about-hero-banner">
+        <div class="about-cloud-bg" style="background-image: url('/images/celestial_cloud_banner.webp');"></div>
+        <div class="about-banner-overlay"></div>
+      </div>
+
+      <div class="about-avatar-container">
+        <div class="about-avatar-wrapper" title="Guilherme Viegas &bull; Human-in-the-loop">
+          <div class="about-avatar-frame">
+
+            <img src="/photos/guigo_avatar_bg.png" alt="" class="avatar-layer-bg" aria-hidden="true" />
+
+
+            <div class="avatar-center-raybeams" aria-hidden="true">
+              <div class="avatar-center-glow"></div>
+              <div class="avatar-center-rays-primary"></div>
+              <div class="avatar-center-rays-secondary"></div>
+              <div class="avatar-center-ambient-sweep"></div>
+            </div>
+
+
+            <div class="avatar-stars-layer" aria-hidden="true">
+              <span class="avatar-star" style="top:15%;left:22%;--delay:0s;--dur:3.2s;--sz:2px;"></span>
+              <span class="avatar-star gold" style="top:12%;left:36%;--delay:1.2s;--dur:3.8s;--sz:2px;"></span>
+              <span class="avatar-star" style="top:22%;left:26%;--delay:2.1s;--dur:4.2s;--sz:1.5px;"></span>
+              <span class="avatar-star gold" style="top:10%;left:50%;--delay:0.5s;--dur:3.5s;--sz:2px;"></span>
+              <span class="avatar-star" style="top:14%;left:64%;--delay:1.8s;--dur:4.0s;--sz:2px;"></span>
+              <span class="avatar-star gold" style="top:20%;left:76%;--delay:2.7s;--dur:3.6s;--sz:2px;"></span>
+              <span class="avatar-star" style="top:26%;left:72%;--delay:0.9s;--dur:4.4s;--sz:1.5px;"></span>
+              <span class="avatar-star gold" style="top:30%;left:18%;--delay:1.5s;--dur:3.9s;--sz:1.5px;"></span>
+              <span class="avatar-star" style="top:31%;left:82%;--delay:2.4s;--dur:4.1s;--sz:1.5px;"></span>
+            </div>
+
+
+            <img src="/photos/guigo_avatar_fg.png" alt="Guilherme Viegas" class="avatar-layer-fg" loading="eager" />
+          </div>
+        </div>
+      </div>
+
+      <div class="about-hero-content">
+        <h2 class="about-hero-name">Guilherme Viegas</h2>
+        <div class="about-hero-badges-stack">
+          <span class="about-status-pill">
+            <span class="about-status-dot"></span>
+            Human-in-the-loop
+          </span>
+          <span class="about-location-pill">
+            <span class="loc-icon">📍</span> Hainan, China
+          </span>
+        </div>
+
+        <div class="about-bio-box">
+          <p>I am a strategic data architect and systems engineer who designs and implements robust, scalable data
+            ecosystems, translating complex information into actionable insights. My expertise spans the entire data
+            lifecycle, from developing cloud-native infrastructure and automated pipelines to deploying advanced machine
+            learning and geospatial models. With a foundational understanding in economics, I consistently bridge
+            technical innovation with business objectives, empowering data-driven decisions that foster growth and
+            efficiency.</p>
+        </div>
+
+
+
+        <div class="about-stats-grid">
+          <div class="about-stat-card">
+            <div class="about-stat-value" data-target="8&#43;">8&#43;</div>
+            <div class="about-stat-label">Years Experience</div>
+          </div>
+          <div class="about-stat-card">
+            <div class="about-stat-value" data-target="50&#43;">50&#43;</div>
+            <div class="about-stat-label">Projects Completed</div>
+          </div>
+          <div class="about-stat-card">
+            <div class="about-stat-value" data-target="10&#43;">10&#43;</div>
+            <div class="about-stat-label">Technologies Mastered</div>
+          </div>
+          <div class="about-stat-card">
+            <div class="about-stat-value" data-target="∞">∞</div>
+            <div class="about-stat-label">Cups of Cola</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <section class="about-section about-toolkit-section" id="toolkit">
+      <div class="about-section-header">
+        <h2 class="about-section-title"><span class="title-accent-bar"></span>Technical Toolkit</h2>
+        <span class="about-count-badge"><span id="toolkitVisibleCount">67</span> / 67 technologies</span>
+      </div>
+
+
+      <div class="about-toolbar">
+        <div class="gallery-search-box about-search-box">
+          <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="toolkitSearchInput"
+            placeholder="Filter technologies (e.g. Python, GCP, BigQuery, Docker)..." autocomplete="off"
+            aria-label="Search toolkit">
+          <button type="button" id="toolkitClearSearch" class="clear-search-btn" style="display:none;"
+            aria-label="Clear search">&times;</button>
+        </div>
+
+        <div class="about-filter-chips" id="toolkitFilterGroup" role="group"
+          aria-label="Filter technologies by category">
+          <button type="button" class="about-filter-btn active" data-category="all">
+            All <span class="filter-count">(67)</span>
+          </button>
+          <button type="button" class="about-filter-btn" data-category="languages">
+            Languages <span class="filter-count">(6)</span>
+          </button>
+          <button type="button" class="about-filter-btn" data-category="ai">
+            AI <span class="filter-count">(14)</span>
+          </button>
+          <button type="button" class="about-filter-btn" data-category="data">
+            Data <span class="filter-count">(17)</span>
+          </button>
+          <button type="button" class="about-filter-btn" data-category="databases">
+            Databases <span class="filter-count">(9)</span>
+          </button>
+          <button type="button" class="about-filter-btn" data-category="cloud">
+            Cloud <span class="filter-count">(12)</span>
+          </button>
+          <button type="button" class="about-filter-btn" data-category="api">
+            API <span class="filter-count">(8)</span>
+          </button>
+          <button type="button" class="about-filter-btn" data-category="geospatial">
+            Geospatial <span class="filter-count">(5)</span>
+          </button>
+        </div>
+      </div>
+
+
+      <div class="about-toolkit-grid" id="toolkitGrid">
+        <div class="about-tech-card" data-name="python" data-category="languages" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🐍</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Python</span>
+            <span class="about-tech-cat">Languages</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="bash" data-category="languages" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🐧</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Bash</span>
+            <span class="about-tech-cat">Languages</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="powershell" data-category="languages"
+          title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🖥️</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">PowerShell</span>
+            <span class="about-tech-cat">Languages</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="r" data-category="languages" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">📈</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">R</span>
+            <span class="about-tech-cat">Languages</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="javascript" data-category="languages"
+          title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">📜</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">JavaScript</span>
+            <span class="about-tech-cat">Languages</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="typescript" data-category="languages"
+          title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">ʦ</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">TypeScript</span>
+            <span class="about-tech-cat">Languages</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="ollama" data-category="ai" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🦙</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Ollama</span>
+            <span class="about-tech-cat">AI</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="llama.cpp" data-category="ai" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">⚡</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">llama.cpp</span>
+            <span class="about-tech-cat">AI</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="vllm" data-category="ai" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🚀</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">vLLM</span>
+            <span class="about-tech-cat">AI</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="sglang" data-category="ai" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">⚡</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">SGLang</span>
+            <span class="about-tech-cat">AI</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="anythingllm" data-category="ai" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🤖</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">AnythingLLM</span>
+            <span class="about-tech-cat">AI</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="crewai" data-category="ai" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">👥</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">CrewAI</span>
+            <span class="about-tech-cat">AI</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="langgraph" data-category="ai" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🕸️</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">LangGraph</span>
+            <span class="about-tech-cat">AI</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="pytorch" data-category="ai" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🔥</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">PyTorch</span>
+            <span class="about-tech-cat">AI</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="tensorflow" data-category="ai" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🧠</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">TensorFlow</span>
+            <span class="about-tech-cat">AI</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="scikit-learn" data-category="ai" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🧪</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Scikit-learn</span>
+            <span class="about-tech-cat">AI</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="mlflow" data-category="ai" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">📤</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">MLflow</span>
+            <span class="about-tech-cat">AI</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="qdrant" data-category="ai databases"
+          title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🎯</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Qdrant</span>
+            <span class="about-tech-cat">AI</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="chromadb" data-category="ai databases"
+          title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🌈</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">ChromaDB</span>
+            <span class="about-tech-cat">AI</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="pgvector" data-category="ai databases"
+          title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🐘</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">pgvector</span>
+            <span class="about-tech-cat">AI</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="pandas" data-category="data" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🐼</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Pandas</span>
+            <span class="about-tech-cat">Data</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="jupyter" data-category="data" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">📓</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Jupyter</span>
+            <span class="about-tech-cat">Data</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="spark" data-category="data" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">✨</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Spark</span>
+            <span class="about-tech-cat">Data</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="airflow" data-category="data" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">💨</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Airflow</span>
+            <span class="about-tech-cat">Data</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="dbt" data-category="data" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🛠️</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">dbt</span>
+            <span class="about-tech-cat">Data</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="sqlmesh" data-category="data" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🧩</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">SQLMesh</span>
+            <span class="about-tech-cat">Data</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="kafka" data-category="data" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">⚙️</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Kafka</span>
+            <span class="about-tech-cat">Data</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="dataflow" data-category="data" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🌀</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Dataflow</span>
+            <span class="about-tech-cat">Data</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="bigquery" data-category="data" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🔍</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">BigQuery</span>
+            <span class="about-tech-cat">Data</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="databricks" data-category="data" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🧱</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Databricks</span>
+            <span class="about-tech-cat">Data</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="snowflake" data-category="data" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">❄️</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Snowflake</span>
+            <span class="about-tech-cat">Data</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="redshift" data-category="data" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🎯</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Redshift</span>
+            <span class="about-tech-cat">Data</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="hadoop" data-category="data" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🗄️</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Hadoop</span>
+            <span class="about-tech-cat">Data</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="hive" data-category="data" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🐝</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Hive</span>
+            <span class="about-tech-cat">Data</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="looker" data-category="data" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">👀</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Looker</span>
+            <span class="about-tech-cat">Data</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="tableau" data-category="data" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🖼️</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Tableau</span>
+            <span class="about-tech-cat">Data</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="power bi" data-category="data" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🖥️</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Power BI</span>
+            <span class="about-tech-cat">Data</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="postgresql" data-category="databases"
+          title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🐘</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">PostgreSQL</span>
+            <span class="about-tech-cat">Databases</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="sql" data-category="databases" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🗃️</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">SQL</span>
+            <span class="about-tech-cat">Databases</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="sqlite" data-category="databases" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🗃️</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">SQLite</span>
+            <span class="about-tech-cat">Databases</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="cloud sql" data-category="databases"
+          title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">💾</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Cloud SQL</span>
+            <span class="about-tech-cat">Databases</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="mongodb" data-category="databases"
+          title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🍃</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">MongoDB</span>
+            <span class="about-tech-cat">Databases</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="docker" data-category="cloud" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🐳</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Docker</span>
+            <span class="about-tech-cat">Cloud</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="kubernetes" data-category="cloud" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">☸️</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Kubernetes</span>
+            <span class="about-tech-cat">Cloud</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="git" data-category="cloud" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🌳</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Git</span>
+            <span class="about-tech-cat">Cloud</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="gcp" data-category="cloud" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">☁️</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">GCP</span>
+            <span class="about-tech-cat">Cloud</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="azure" data-category="cloud" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">☁️</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Azure</span>
+            <span class="about-tech-cat">Cloud</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="aws" data-category="cloud" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">☁️</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">AWS</span>
+            <span class="about-tech-cat">Cloud</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="terraform" data-category="cloud" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🏗️</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Terraform</span>
+            <span class="about-tech-cat">Cloud</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="ansible" data-category="cloud" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🤖</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Ansible</span>
+            <span class="about-tech-cat">Cloud</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="grafana" data-category="cloud" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">📊</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Grafana</span>
+            <span class="about-tech-cat">Cloud</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="prometheus" data-category="cloud" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">⏱️</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Prometheus</span>
+            <span class="about-tech-cat">Cloud</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="jenkins" data-category="cloud" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🤵</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Jenkins</span>
+            <span class="about-tech-cat">Cloud</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="github actions" data-category="cloud"
+          title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🚀</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">GitHub Actions</span>
+            <span class="about-tech-cat">Cloud</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="fastapi" data-category="api" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">⚡</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">FastAPI</span>
+            <span class="about-tech-cat">API</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="flask" data-category="api" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🍶</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Flask</span>
+            <span class="about-tech-cat">API</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="django" data-category="api" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🎶</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Django</span>
+            <span class="about-tech-cat">API</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="node.js" data-category="api" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🟢</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Node.js</span>
+            <span class="about-tech-cat">API</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="next.js" data-category="api" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">⏭️</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Next.js</span>
+            <span class="about-tech-cat">API</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="react" data-category="api" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">⚛️</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">React</span>
+            <span class="about-tech-cat">API</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="tailwind" data-category="api" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🌬️</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Tailwind</span>
+            <span class="about-tech-cat">API</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="selenium" data-category="api" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🌐</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">Selenium</span>
+            <span class="about-tech-cat">API</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="postgis" data-category="geospatial databases"
+          title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🌍</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">PostGIS</span>
+            <span class="about-tech-cat">Geospatial</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="gdal/ogr" data-category="geospatial"
+          title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🌐</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">GDAL/OGR</span>
+            <span class="about-tech-cat">Geospatial</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="qgis" data-category="geospatial" title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🗺️</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">QGIS</span>
+            <span class="about-tech-cat">Geospatial</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="arcgis" data-category="geospatial"
+          title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🧭</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">ArcGIS</span>
+            <span class="about-tech-cat">Geospatial</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+        <div class="about-tech-card" data-name="openlayers" data-category="geospatial"
+          title="Click to copy technology name">
+          <span class="about-tech-icon" aria-hidden="true">🛰️</span>
+          <div class="about-tech-info">
+            <span class="about-tech-name">OpenLayers</span>
+            <span class="about-tech-cat">Geospatial</span>
+          </div>
+          <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
+        </div>
+      </div>
+      <div class="gallery-empty-state" id="toolkitEmptyState" style="display:none;">
+        <p>No technologies matched your search.</p>
+        <button type="button" class="about-filter-btn" id="toolkitResetBtn" style="margin-top:12px;">Reset
+          Filters</button>
+      </div>
+    </section>
+
+
+    <section class="about-section about-journey-section" id="journey">
+      <div class="about-section-header">
+        <div>
+          <h2 class="about-section-title"><span class="title-accent-bar"></span>Professional Journey</h2>
+        </div>
+      </div>
+
+      <div class="about-timeline" id="journeyTimeline">
+        <div class="about-timeline-item" data-role-title="laboratory engineer of digital technologies"
+          data-role-type="full-time">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="about-timeline-card">
+            <div class="timeline-card-header">
+              <div>
+                <h3 class="timeline-role">Laboratory Engineer of Digital Technologies</h3>
+                <div class="timeline-company-row">
+                  <span class="timeline-company">BiUH (Bielefeld Hainan University of Applied Sciences)</span>
+                  <span class="timeline-sep">&bull;</span>
+                  <span class="timeline-location">Hainan, China</span>
+                </div>
+              </div>
+              <div class="timeline-meta-wrap">
+                <span class="timeline-period">2026 - Present</span>
+                <span class="timeline-type-pill">Full-time</span>
+              </div>
+            </div>
+
+            <ul class="timeline-bullets">
+              <li>Instruction and laboratory supervision in Artificial Intelligence, Modern Computing, and Cluster
+                Computing architectures;</li>
+              <li>Teaching applied quantitative coursework spanning Economics, Statistics, and Data Analytics;</li>
+              <li>Managing and maintaining digital technologies laboratory infrastructure and high-performance computing
+                clusters;</li>
+              <li>Mentoring students through hands-on technical labs, systems engineering, and cluster deployments;</li>
+            </ul>
+
+            <div class="timeline-tech-stack">
+              <span class="tech-stack-label">Key Stack:</span>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="AI"
+                title="Search AI in Toolkit">
+                AI
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Computing"
+                title="Search Computing in Toolkit">
+                Computing
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Cluster Computing"
+                title="Search Cluster Computing in Toolkit">
+                Cluster Computing
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Python"
+                title="Search Python in Toolkit">
+                Python
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Linux"
+                title="Search Linux in Toolkit">
+                Linux
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Economics"
+                title="Search Economics in Toolkit">
+                Economics
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Statistics"
+                title="Search Statistics in Toolkit">
+                Statistics
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Bash"
+                title="Search Bash in Toolkit">
+                Bash
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Docker"
+                title="Search Docker in Toolkit">
+                Docker
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="about-timeline-item" data-role-title="ai engineer" data-role-type="freelance">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="about-timeline-card">
+            <div class="timeline-card-header">
+              <div>
+                <h3 class="timeline-role">AI Engineer</h3>
+                <div class="timeline-company-row">
+                  <span class="timeline-company">Wayvant</span>
+                  <span class="timeline-sep">&bull;</span>
+                  <span class="timeline-location">Spain</span>
+                </div>
+              </div>
+              <div class="timeline-meta-wrap">
+                <span class="timeline-period">2025 - 2025</span>
+                <span class="timeline-type-pill">Freelance</span>
+              </div>
+            </div>
+
+            <ul class="timeline-bullets">
+              <li>Infrastructure as Code using GCP and Terraform;</li>
+              <li>IT Consultancy for Data Warehousing and Report Development;</li>
+              <li>AI Engineering with feedback loop;</li>
+              <li>Data Pipeline Development and Maintenance;</li>
+            </ul>
+
+            <div class="timeline-tech-stack">
+              <span class="tech-stack-label">Key Stack:</span>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="GCP"
+                title="Search GCP in Toolkit">
+                GCP
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Terraform"
+                title="Search Terraform in Toolkit">
+                Terraform
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="BQ"
+                title="Search BQ in Toolkit">
+                BQ
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="SQL"
+                title="Search SQL in Toolkit">
+                SQL
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="SQLX"
+                title="Search SQLX in Toolkit">
+                SQLX
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Dataform"
+                title="Search Dataform in Toolkit">
+                Dataform
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Gemini"
+                title="Search Gemini in Toolkit">
+                Gemini
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Python"
+                title="Search Python in Toolkit">
+                Python
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="JS"
+                title="Search JS in Toolkit">
+                JS
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="about-timeline-item" data-role-title="cloud data engineer"
+          data-role-type="worker student - werkstudent">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="about-timeline-card">
+            <div class="timeline-card-header">
+              <div>
+                <h3 class="timeline-role">Cloud Data Engineer</h3>
+                <div class="timeline-company-row">
+                  <span class="timeline-company">CloudPilots</span>
+                  <span class="timeline-sep">&bull;</span>
+                  <span class="timeline-location">Germany</span>
+                </div>
+              </div>
+              <div class="timeline-meta-wrap">
+                <span class="timeline-period">2024 - 2025</span>
+                <span class="timeline-type-pill">Worker Student - Werkstudent</span>
+              </div>
+            </div>
+
+            <ul class="timeline-bullets">
+              <li>Cloud Infrastructure using GCP and Terraform;</li>
+              <li>IT Consultancy for Databases and Report Development;</li>
+              <li>FinOps, Cloud Migration, ETL, and Reporting;</li>
+              <li>Data Pipeline Development and Maintenance;</li>
+            </ul>
+
+            <div class="timeline-tech-stack">
+              <span class="tech-stack-label">Key Stack:</span>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="GCP"
+                title="Search GCP in Toolkit">
+                GCP
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Terraform"
+                title="Search Terraform in Toolkit">
+                Terraform
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="BQ"
+                title="Search BQ in Toolkit">
+                BQ
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="SQL"
+                title="Search SQL in Toolkit">
+                SQL
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="SQLX"
+                title="Search SQLX in Toolkit">
+                SQLX
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Dataform"
+                title="Search Dataform in Toolkit">
+                Dataform
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="BigData"
+                title="Search BigData in Toolkit">
+                BigData
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="JS"
+                title="Search JS in Toolkit">
+                JS
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Python"
+                title="Search Python in Toolkit">
+                Python
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="about-timeline-item" data-role-title="data consultant" data-role-type="full-time">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="about-timeline-card">
+            <div class="timeline-card-header">
+              <div>
+                <h3 class="timeline-role">Data Consultant</h3>
+                <div class="timeline-company-row">
+                  <span class="timeline-company">Inetum / Noesis</span>
+                  <span class="timeline-sep">&bull;</span>
+                  <span class="timeline-location">Portugal</span>
+                </div>
+              </div>
+              <div class="timeline-meta-wrap">
+                <span class="timeline-period">2022 - 2024</span>
+                <span class="timeline-type-pill">Full-time</span>
+              </div>
+            </div>
+
+            <ul class="timeline-bullets">
+              <li>Cloud Infrastructure Development and Maintaining;</li>
+              <li>Database Administration;</li>
+              <li>Network Analysis and Spatial Data Visualization;</li>
+              <li>Training of Interns;</li>
+            </ul>
+
+            <div class="timeline-tech-stack">
+              <span class="tech-stack-label">Key Stack:</span>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Azure"
+                title="Search Azure in Toolkit">
+                Azure
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="GCP"
+                title="Search GCP in Toolkit">
+                GCP
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Terraform"
+                title="Search Terraform in Toolkit">
+                Terraform
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Bash"
+                title="Search Bash in Toolkit">
+                Bash
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Python"
+                title="Search Python in Toolkit">
+                Python
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Postgres"
+                title="Search Postgres in Toolkit">
+                Postgres
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="PostGIS"
+                title="Search PostGIS in Toolkit">
+                PostGIS
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="about-timeline-item" data-role-title="census agent of administration and informatics"
+          data-role-type="public service">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="about-timeline-card">
+            <div class="timeline-card-header">
+              <div>
+                <h3 class="timeline-role">Census Agent of Administration and Informatics</h3>
+                <div class="timeline-company-row">
+                  <span class="timeline-company">IBGE</span>
+                  <span class="timeline-sep">&bull;</span>
+                  <span class="timeline-location">Brazil</span>
+                </div>
+              </div>
+              <div class="timeline-meta-wrap">
+                <span class="timeline-period">2022</span>
+                <span class="timeline-type-pill">Public Service</span>
+              </div>
+            </div>
+
+            <ul class="timeline-bullets">
+              <li>Support Census Research in Assigned Areas/Regions;</li>
+              <li>Reviewing Field Sites and Research Reports;</li>
+              <li>Training of Census Agents to Conduct Interviews;</li>
+              <li>Data Collection and Supervision;</li>
+            </ul>
+
+            <div class="timeline-tech-stack">
+              <span class="tech-stack-label">Key Stack:</span>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Excel"
+                title="Search Excel in Toolkit">
+                Excel
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Proprietary Software"
+                title="Search Proprietary Software in Toolkit">
+                Proprietary Software
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="about-timeline-item" data-role-title="applied data scientist" data-role-type="full-time">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="about-timeline-card">
+            <div class="timeline-card-header">
+              <div>
+                <h3 class="timeline-role">Applied Data Scientist</h3>
+                <div class="timeline-company-row">
+                  <span class="timeline-company">4Intelligence</span>
+                  <span class="timeline-sep">&bull;</span>
+                  <span class="timeline-location">Brazil</span>
+                </div>
+              </div>
+              <div class="timeline-meta-wrap">
+                <span class="timeline-period">2021 - 2022</span>
+                <span class="timeline-type-pill">Full-time</span>
+              </div>
+            </div>
+
+            <ul class="timeline-bullets">
+              <li>Data Cleaning and Transformation;</li>
+              <li>Statistical and Machine Learning Modeling;</li>
+              <li>Time Series Forecasting and Anomaly Detection;</li>
+              <li>Development of Data Pipelines;</li>
+            </ul>
+
+            <div class="timeline-tech-stack">
+              <span class="tech-stack-label">Key Stack:</span>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Python"
+                title="Search Python in Toolkit">
+                Python
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="R"
+                title="Search R in Toolkit">
+                R
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Bash"
+                title="Search Bash in Toolkit">
+                Bash
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Postgres"
+                title="Search Postgres in Toolkit">
+                Postgres
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="SQL"
+                title="Search SQL in Toolkit">
+                SQL
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Azure"
+                title="Search Azure in Toolkit">
+                Azure
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Excel"
+                title="Search Excel in Toolkit">
+                Excel
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="about-timeline-item" data-role-title="junior data scientist" data-role-type="full-time">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="about-timeline-card">
+            <div class="timeline-card-header">
+              <div>
+                <h3 class="timeline-role">Junior Data Scientist</h3>
+                <div class="timeline-company-row">
+                  <span class="timeline-company">Aquarela</span>
+                  <span class="timeline-sep">&bull;</span>
+                  <span class="timeline-location">Brazil</span>
+                </div>
+              </div>
+              <div class="timeline-meta-wrap">
+                <span class="timeline-period">2019 - 2021</span>
+                <span class="timeline-type-pill">Full-time</span>
+              </div>
+            </div>
+
+            <ul class="timeline-bullets">
+              <li>Data Cleaning and Transformations;</li>
+              <li>Development of Analytical Dashboards;</li>
+              <li>Statistical Modeling and Machine Learning;</li>
+              <li>Deployment of Dashboards in Production;</li>
+            </ul>
+
+            <div class="timeline-tech-stack">
+              <span class="tech-stack-label">Key Stack:</span>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="R"
+                title="Search R in Toolkit">
+                R
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Python"
+                title="Search Python in Toolkit">
+                Python
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Docker"
+                title="Search Docker in Toolkit">
+                Docker
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="JS"
+                title="Search JS in Toolkit">
+                JS
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="CSS"
+                title="Search CSS in Toolkit">
+                CSS
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="GCP"
+                title="Search GCP in Toolkit">
+                GCP
+              </button>
+              <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="AWS"
+                title="Search AWS in Toolkit">
+                AWS
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="about-section about-education-section" id="education">
+      <div class="about-section-header">
+        <h2 class="about-section-title"><span class="title-accent-bar"></span>Education & Academic Honors</h2>
+      </div>
+
+      <div class="about-edu-grid">
+        <div class="about-edu-card">
+          <div class="edu-card-icon">🎓</div>
+          <div class="edu-card-content">
+            <h3 class="edu-degree">Master of Science in GeoSpatial Technologies</h3>
+            <div class="edu-institution">University of Münster</div>
+            <div class="edu-period">2023 - 2025</div>
+            <p class="edu-note">Erasmus Mundus Joint Master Degree (WWU Münster, Germany; UJI, Spain; NOVA IMS,
+              Portugal).</p>
+          </div>
+        </div>
+        <div class="about-edu-card">
+          <div class="edu-card-icon">🎓</div>
+          <div class="edu-card-content">
+            <h3 class="edu-degree">Bachelor of Science in Economics</h3>
+            <div class="edu-institution">Federal University of Santa Catarina</div>
+            <div class="edu-period">2018 - 2022</div>
+            <p class="edu-note">Focus on quantitative economics, econometrics, regional economics, and complexity
+              science.</p>
+          </div>
+        </div>
+        <div class="about-award-card">
+          <div class="award-card-icon">🏆</div>
+          <div class="award-card-content">
+            <span class="award-badge">Honors & Recognition</span>
+            <h3 class="award-title">Merit-based Fellowship</h3>
+            <p class="award-desc">Awarded for outstanding academic and research performance in the Master of Science in
+              GeoSpatial Technologies program.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="about-section about-certs-section" id="certifications">
+      <div class="about-section-header">
+        <h2 class="about-section-title"><span class="title-accent-bar"></span>Certifications & Credentials</h2>
+        <div class="about-filter-chips" id="certsFilterGroup" role="group"
+          aria-label="Filter certifications by provider">
+          <button type="button" class="about-filter-btn active" data-provider="all">All (14)</button>
+          <button type="button" class="about-filter-btn" data-provider="gcp">Google Cloud (7)</button>
+          <button type="button" class="about-filter-btn" data-provider="azure">Microsoft Azure (7)</button>
+        </div>
+      </div>
+
+      <div class="about-certs-grid" id="certsGrid">
+        <div class="about-cert-card" data-provider="gcp">
+          <span class="cert-card-icon" aria-hidden="true">☁️</span>
+          <div class="cert-card-body">
+            <div class="cert-provider-badge provider-gcp">Google Cloud</div>
+            <h3 class="cert-name">Google Professional Cloud Architect</h3>
+          </div>
+        </div>
+        <div class="about-cert-card" data-provider="gcp">
+          <span class="cert-card-icon" aria-hidden="true">🚀</span>
+          <div class="cert-card-body">
+            <div class="cert-provider-badge provider-gcp">Google Cloud</div>
+            <h3 class="cert-name">Google Professional Cloud DevOps Engineer</h3>
+          </div>
+        </div>
+        <div class="about-cert-card" data-provider="gcp">
+          <span class="cert-card-icon" aria-hidden="true">✨</span>
+          <div class="cert-card-body">
+            <div class="cert-provider-badge provider-gcp">Google Cloud</div>
+            <h3 class="cert-name">Google Generative AI Leader</h3>
+          </div>
+        </div>
+        <div class="about-cert-card" data-provider="gcp">
+          <span class="cert-card-icon" aria-hidden="true">🧠</span>
+          <div class="cert-card-body">
+            <div class="cert-provider-badge provider-gcp">Google Cloud</div>
+            <h3 class="cert-name">Google Professional Machine Learning Engineer</h3>
+          </div>
+        </div>
+        <div class="about-cert-card" data-provider="gcp">
+          <span class="cert-card-icon" aria-hidden="true">🛠️</span>
+          <div class="cert-card-body">
+            <div class="cert-provider-badge provider-gcp">Google Cloud</div>
+            <h3 class="cert-name">Google Associate Cloud Engineer</h3>
+          </div>
+        </div>
+        <div class="about-cert-card" data-provider="gcp">
+          <span class="cert-card-icon" aria-hidden="true">📊</span>
+          <div class="cert-card-body">
+            <div class="cert-provider-badge provider-gcp">Google Cloud</div>
+            <h3 class="cert-name">Google Associate Data Practitioner</h3>
+          </div>
+        </div>
+        <div class="about-cert-card" data-provider="gcp">
+          <span class="cert-card-icon" aria-hidden="true">🌐</span>
+          <div class="cert-card-body">
+            <div class="cert-provider-badge provider-gcp">Google Cloud</div>
+            <h3 class="cert-name">Google Cloud Digital Leader</h3>
+          </div>
+        </div>
+        <div class="about-cert-card" data-provider="azure">
+          <span class="cert-card-icon" aria-hidden="true">🧪</span>
+          <div class="cert-card-body">
+            <div class="cert-provider-badge provider-azure">Microsoft Azure</div>
+            <h3 class="cert-name">Azure Associate Data Scientist</h3>
+          </div>
+        </div>
+        <div class="about-cert-card" data-provider="azure">
+          <span class="cert-card-icon" aria-hidden="true">📐</span>
+          <div class="cert-card-body">
+            <div class="cert-provider-badge provider-azure">Microsoft Azure</div>
+            <h3 class="cert-name">Designing and Implementing a Data Science Solution on Azure (DP-100)</h3>
+          </div>
+        </div>
+        <div class="about-cert-card" data-provider="azure">
+          <span class="cert-card-icon" aria-hidden="true">🗃️</span>
+          <div class="cert-card-body">
+            <div class="cert-provider-badge provider-azure">Microsoft Azure</div>
+            <h3 class="cert-name">Microsoft Certified: Azure Data Fundamentals (DP-900)</h3>
+          </div>
+        </div>
+        <div class="about-cert-card" data-provider="azure">
+          <span class="cert-card-icon" aria-hidden="true">☁️</span>
+          <div class="cert-card-body">
+            <div class="cert-provider-badge provider-azure">Microsoft Azure</div>
+            <h3 class="cert-name">Microsoft Certified: Azure Fundamentals (AZ-900)</h3>
+          </div>
+        </div>
+        <div class="about-cert-card" data-provider="azure">
+          <span class="cert-card-icon" aria-hidden="true">🤖</span>
+          <div class="cert-card-body">
+            <div class="cert-provider-badge provider-azure">Microsoft Azure</div>
+            <h3 class="cert-name">Microsoft Certified: Azure AI Fundamentals (AI-900)</h3>
+          </div>
+        </div>
+        <div class="about-cert-card" data-provider="azure">
+          <span class="cert-card-icon" aria-hidden="true">🔒</span>
+          <div class="cert-card-body">
+            <div class="cert-provider-badge provider-azure">Microsoft Azure</div>
+            <h3 class="cert-name">Microsoft Certified: Security, Compliance, and Identity Fundamentals (SC-900)</h3>
+          </div>
+        </div>
+        <div class="about-cert-card" data-provider="azure">
+          <span class="cert-card-icon" aria-hidden="true">⚡</span>
+          <div class="cert-card-body">
+            <div class="cert-provider-badge provider-azure">Microsoft Azure</div>
+            <h3 class="cert-name">Microsoft Certified: Power Platform Fundamentals (PL-900)</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="about-section about-languages-section" id="languages">
+      <div class="about-section-header">
+        <h2 class="about-section-title"><span class="title-accent-bar"></span>Languages</h2>
+        <span class="about-count-badge">Multilingual Profile</span>
+      </div>
+
+      <div class="about-languages-grid">
+        <div class="about-lang-card">
+          <div class="lang-card-top">
+            <div class="lang-name-wrap">
+              <span class="lang-flag">🇧🇷</span>
+              <span class="lang-name">Portuguese</span>
+              <span class="lang-status">Native</span>
+            </div>
+            <span class="lang-cefr-badge">C2</span>
+          </div>
+          <div class="lang-progress-track">
+            <div class="lang-progress-bar" data-percent="100" style="width: 0%;"></div>
+          </div>
+          <div class="lang-percent-label">100% proficiency benchmark</div>
+        </div>
+        <div class="about-lang-card">
+          <div class="lang-card-top">
+            <div class="lang-name-wrap">
+              <span class="lang-flag">🇬🇧</span>
+              <span class="lang-name">English</span>
+              <span class="lang-status">Fluent</span>
+            </div>
+            <span class="lang-cefr-badge">C2</span>
+          </div>
+          <div class="lang-progress-track">
+            <div class="lang-progress-bar" data-percent="99" style="width: 0%;"></div>
+          </div>
+          <div class="lang-percent-label">98% proficiency benchmark</div>
+        </div>
+        <div class="about-lang-card">
+          <div class="lang-card-top">
+            <div class="lang-name-wrap">
+              <span class="lang-flag">🇪🇸</span>
+              <span class="lang-name">Spanish</span>
+              <span class="lang-status">Advanced</span>
+            </div>
+            <span class="lang-cefr-badge">C1</span>
+          </div>
+          <div class="lang-progress-track">
+            <div class="lang-progress-bar" data-percent="80" style="width: 0%;"></div>
+          </div>
+          <div class="lang-percent-label">80% proficiency benchmark</div>
+        </div>
+        <div class="about-lang-card">
+          <div class="lang-card-top">
+            <div class="lang-name-wrap">
+              <span class="lang-flag">🇩🇪</span>
+              <span class="lang-name">German</span>
+              <span class="lang-status">Upper Intermediate</span>
+            </div>
+            <span class="lang-cefr-badge">B2</span>
+          </div>
+          <div class="lang-progress-track">
+            <div class="lang-progress-bar" data-percent="55" style="width: 0%;"></div>
+          </div>
+          <div class="lang-percent-label">55% proficiency benchmark</div>
+        </div>
+        <div class="about-lang-card">
+          <div class="lang-card-top">
+            <div class="lang-name-wrap">
+              <span class="lang-flag">🇫🇷</span>
+              <span class="lang-name">French</span>
+              <span class="lang-status">Elementary</span>
+            </div>
+            <span class="lang-cefr-badge">A1</span>
+          </div>
+          <div class="lang-progress-track">
+            <div class="lang-progress-bar" data-percent="4" style="width: 0%;"></div>
+          </div>
+          <div class="lang-percent-label">4% proficiency benchmark</div>
+        </div>
+        <div class="about-lang-card">
+          <div class="lang-card-top">
+            <div class="lang-name-wrap">
+              <span class="lang-flag">🇨🇳</span>
+              <span class="lang-name">Mandarin</span>
+              <span class="lang-status">Intermediate</span>
+            </div>
+            <span class="lang-cefr-badge">HSK2</span>
+          </div>
+          <div class="lang-progress-track">
+            <div class="lang-progress-bar" data-percent="22" style="width: 0%;"></div>
+          </div>
+          <div class="lang-percent-label">22% proficiency benchmark</div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="about-section about-methodology-section" id="methodology">
+      <div class="about-section-header">
+        <div>
+          <h2 class="about-section-title"><span class="title-accent-bar"></span>Methodological Approach</h2>
+          <span class="about-methodology-tagline">Architecting with Human-in-the-Loop Integrity</span>
+        </div>
+      </div>
+
+      <div class="about-methodology-box">
+        <div class="methodology-quote-icon">“</div>
+        <p class="methodology-lead-text">I believe modern data architectures must place the &#39;Human-in-the-Loop&#39;
+          at the very center of technical innovation, grounding abstract algorithms in tangible human context. My
+          methodological approach begins with collaborative discovery, where I partner closely with domain experts to
+          translate complex business objectives into testable hypotheses, ensuring that our models capture real-world
+          causal dynamics rather than mere statistical correlations. This foundation transitions into a defensive
+          engineering strategy, where I architect automated, transparent pipelines that prioritize data integrity and
+          error handling over opaque complexity. To guarantee that every insight stands up to rigorous scrutiny, I
+          enforce a culture of radical reproducibility—leveraging containerized environments, comprehensive
+          documentation, and version-controlled infrastructure—to ensure that every result is traceable, auditable, and
+          scientifically valid. The lifecycle concludes not with deployment, but with active stewardship, utilizing
+          automated monitoring and continuous feedback loops to refine the system as market conditions evolve, thereby
+          securing long-term reliability and sustainable business value.</p>
+      </div>
+
+      <div class="about-pillars-grid">
+        <div class="about-pillar-card">
+          <div class="pillar-bullet-num">✦</div>
+          <h3 class="pillar-title">Human-in-the-Loop</h3>
+          <p class="pillar-desc">Grounding abstract algorithms in tangible context and human judgment.</p>
+        </div>
+        <div class="about-pillar-card">
+          <div class="pillar-bullet-num">✦</div>
+          <h3 class="pillar-title">Collaborative Discovery</h3>
+          <p class="pillar-desc">Partnering with domain experts to uncover true causal dynamics.</p>
+        </div>
+        <div class="about-pillar-card">
+          <div class="pillar-bullet-num">✦</div>
+          <h3 class="pillar-title">Defensive Engineering</h3>
+          <p class="pillar-desc">Architecting resilient, automated pipelines prioritizing data integrity.</p>
+        </div>
+        <div class="about-pillar-card">
+          <div class="pillar-bullet-num">✦</div>
+          <h3 class="pillar-title">Radical Reproducibility</h3>
+          <p class="pillar-desc">Containerized, version-controlled environments for verifiable results.</p>
+        </div>
+        <div class="about-pillar-card">
+          <div class="pillar-bullet-num">✦</div>
+          <h3 class="pillar-title">Active Stewardship</h3>
+          <p class="pillar-desc">Continuous feedback loops and monitoring for enduring reliability.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="about-section about-connect-section" id="connect">
+      <div class="about-connect-card">
+        <h2 class="connect-title">Let's Connect</h2>
+        <p class="connect-subtitle">Interested in data architecture, machine learning systems, or collaborative
+          engineering? Feel free to reach out.</p>
+
+        <div class="about-connect-links">
+          <a href="https://github.com/gui13go" target="_blank" rel="noopener noreferrer" class="about-connect-btn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+            </svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://linkedin.com/in/guilherme-viegas/" target="_blank" rel="noopener noreferrer"
+            class="about-connect-btn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://guilhermeviegas.substack.com" target="_blank" rel="noopener noreferrer"
+            class="about-connect-btn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path
+                d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z" />
+            </svg>
+            <span>Substack</span>
+          </a>
+          <a href="mailto:gui.viegas19@gmail.com" target="_blank" rel="noopener noreferrer" class="about-connect-btn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>Email</span>
+          </a>
+        </div>
+      </div>
+    </section>
   </div>
 
-  
-  <div class="about-hero-card" id="overview">
-    <div class="about-hero-banner">
-      <div class="about-cloud-bg" style="background-image: url('/images/celestial_cloud_banner.webp');"></div>
-      <div class="about-banner-overlay"></div>
-    </div>
 
-    <div class="about-avatar-container">
-      <div class="about-avatar-wrapper" title="Guilherme Viegas &bull; Human-in-the-loop">
-        <div class="about-avatar-frame">
-          
-          <img src="/photos/guigo_avatar_bg.png" alt="" class="avatar-layer-bg" aria-hidden="true" />
-
-          
-          <div class="avatar-center-raybeams" aria-hidden="true">
-            <div class="avatar-center-glow"></div>
-            <div class="avatar-center-rays-primary"></div>
-            <div class="avatar-center-rays-secondary"></div>
-            <div class="avatar-center-ambient-sweep"></div>
-          </div>
-
-          
-          <div class="avatar-stars-layer" aria-hidden="true">
-            <span class="avatar-star" style="top:15%;left:22%;--delay:0s;--dur:3.2s;--sz:2px;"></span>
-            <span class="avatar-star gold" style="top:12%;left:36%;--delay:1.2s;--dur:3.8s;--sz:2px;"></span>
-            <span class="avatar-star" style="top:22%;left:26%;--delay:2.1s;--dur:4.2s;--sz:1.5px;"></span>
-            <span class="avatar-star gold" style="top:10%;left:50%;--delay:0.5s;--dur:3.5s;--sz:2px;"></span>
-            <span class="avatar-star" style="top:14%;left:64%;--delay:1.8s;--dur:4.0s;--sz:2px;"></span>
-            <span class="avatar-star gold" style="top:20%;left:76%;--delay:2.7s;--dur:3.6s;--sz:2px;"></span>
-            <span class="avatar-star" style="top:26%;left:72%;--delay:0.9s;--dur:4.4s;--sz:1.5px;"></span>
-            <span class="avatar-star gold" style="top:30%;left:18%;--delay:1.5s;--dur:3.9s;--sz:1.5px;"></span>
-            <span class="avatar-star" style="top:31%;left:82%;--delay:2.4s;--dur:4.1s;--sz:1.5px;"></span>
-          </div>
-
-          
-          <img src="/photos/guigo_avatar_fg.png" alt="Guilherme Viegas" class="avatar-layer-fg"
-            loading="eager" />
-        </div>
-      </div>
-    </div>
-
-    <div class="about-hero-content">
-      <h2 class="about-hero-name">Guilherme Viegas</h2>
-      <div class="about-hero-badges-stack">
-        <span class="about-status-pill">
-          <span class="about-status-dot"></span>
-          Human-in-the-loop
-        </span>
-        <span class="about-location-pill">
-          <span class="loc-icon">📍</span> Hainan, China
-        </span>
-      </div>
-
-      <div class="about-bio-box">
-        <p>I am a strategic data architect and systems engineer who designs and implements robust, scalable data ecosystems, translating complex information into actionable insights. My expertise spans the entire data lifecycle, from developing cloud-native infrastructure and automated pipelines to deploying advanced machine learning and geospatial models. With a foundational understanding in economics, I consistently bridge technical innovation with business objectives, empowering data-driven decisions that foster growth and efficiency.</p>
-      </div>
+  <div class="about-toast" id="aboutToast" role="status" aria-live="polite"></div>
 
 
-      
-      <div class="about-stats-grid">
-        <div class="about-stat-card">
-          <div class="about-stat-value" data-target="8&#43;">8&#43;</div>
-          <div class="about-stat-label">Years Experience</div>
-        </div>
-        <div class="about-stat-card">
-          <div class="about-stat-value" data-target="50&#43;">50&#43;</div>
-          <div class="about-stat-label">Projects Completed</div>
-        </div>
-        <div class="about-stat-card">
-          <div class="about-stat-value" data-target="10&#43;">10&#43;</div>
-          <div class="about-stat-label">Technologies Mastered</div>
-        </div>
-        <div class="about-stat-card">
-          <div class="about-stat-value" data-target="∞">∞</div>
-          <div class="about-stat-label">Cups of Cola</div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
 
-  
-  <section class="about-section about-toolkit-section" id="toolkit">
-    <div class="about-section-header">
-      <h2 class="about-section-title"><span class="title-accent-bar"></span>Technical Toolkit</h2>
-      <span class="about-count-badge"><span id="toolkitVisibleCount">67</span> / 67 technologies</span>
-    </div>
-
-    
-    <div class="about-toolbar">
-      <div class="gallery-search-box about-search-box">
-        <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
-          stroke-width="2">
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-        <input type="text" id="toolkitSearchInput"
-          placeholder="Filter technologies (e.g. Python, GCP, BigQuery, Docker)..." autocomplete="off"
-          aria-label="Search toolkit">
-        <button type="button" id="toolkitClearSearch" class="clear-search-btn" style="display:none;"
-          aria-label="Clear search">&times;</button>
-      </div>
-
-      <div class="about-filter-chips" id="toolkitFilterGroup" role="group" aria-label="Filter technologies by category">
-        <button type="button" class="about-filter-btn active" data-category="all">
-          All <span class="filter-count">(67)</span>
-        </button>
-        <button type="button" class="about-filter-btn" data-category="languages">
-          Languages <span class="filter-count">(6)</span>
-        </button>
-        <button type="button" class="about-filter-btn" data-category="ai">
-          AI <span class="filter-count">(14)</span>
-        </button>
-        <button type="button" class="about-filter-btn" data-category="data">
-          Data <span class="filter-count">(17)</span>
-        </button>
-        <button type="button" class="about-filter-btn" data-category="databases">
-          Databases <span class="filter-count">(9)</span>
-        </button>
-        <button type="button" class="about-filter-btn" data-category="cloud">
-          Cloud <span class="filter-count">(12)</span>
-        </button>
-        <button type="button" class="about-filter-btn" data-category="api">
-          API <span class="filter-count">(8)</span>
-        </button>
-        <button type="button" class="about-filter-btn" data-category="geospatial">
-          Geospatial <span class="filter-count">(5)</span>
-        </button>
-      </div>
-    </div>
-
-    
-    <div class="about-toolkit-grid" id="toolkitGrid">
-      <div class="about-tech-card" data-name="python" data-category="languages"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🐍</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Python</span>
-          <span class="about-tech-cat">Languages</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="bash" data-category="languages"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🐧</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Bash</span>
-          <span class="about-tech-cat">Languages</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="powershell" data-category="languages"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🖥️</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">PowerShell</span>
-          <span class="about-tech-cat">Languages</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="r" data-category="languages"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">📈</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">R</span>
-          <span class="about-tech-cat">Languages</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="javascript" data-category="languages"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">📜</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">JavaScript</span>
-          <span class="about-tech-cat">Languages</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="typescript" data-category="languages"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">ʦ</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">TypeScript</span>
-          <span class="about-tech-cat">Languages</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="ollama" data-category="ai"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🦙</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Ollama</span>
-          <span class="about-tech-cat">AI</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="llama.cpp" data-category="ai"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">⚡</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">llama.cpp</span>
-          <span class="about-tech-cat">AI</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="vllm" data-category="ai"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🚀</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">vLLM</span>
-          <span class="about-tech-cat">AI</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="sglang" data-category="ai"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">⚡</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">SGLang</span>
-          <span class="about-tech-cat">AI</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="anythingllm" data-category="ai"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🤖</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">AnythingLLM</span>
-          <span class="about-tech-cat">AI</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="crewai" data-category="ai"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">👥</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">CrewAI</span>
-          <span class="about-tech-cat">AI</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="langgraph" data-category="ai"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🕸️</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">LangGraph</span>
-          <span class="about-tech-cat">AI</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="pytorch" data-category="ai"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🔥</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">PyTorch</span>
-          <span class="about-tech-cat">AI</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="tensorflow" data-category="ai"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🧠</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">TensorFlow</span>
-          <span class="about-tech-cat">AI</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="scikit-learn" data-category="ai"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🧪</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Scikit-learn</span>
-          <span class="about-tech-cat">AI</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="mlflow" data-category="ai"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">📤</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">MLflow</span>
-          <span class="about-tech-cat">AI</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="qdrant" data-category="ai databases"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🎯</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Qdrant</span>
-          <span class="about-tech-cat">AI</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="chromadb" data-category="ai databases"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🌈</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">ChromaDB</span>
-          <span class="about-tech-cat">AI</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="pgvector" data-category="ai databases"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🐘</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">pgvector</span>
-          <span class="about-tech-cat">AI</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="pandas" data-category="data"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🐼</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Pandas</span>
-          <span class="about-tech-cat">Data</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="jupyter" data-category="data"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">📓</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Jupyter</span>
-          <span class="about-tech-cat">Data</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="spark" data-category="data"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">✨</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Spark</span>
-          <span class="about-tech-cat">Data</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="airflow" data-category="data"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">💨</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Airflow</span>
-          <span class="about-tech-cat">Data</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="dbt" data-category="data"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🛠️</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">dbt</span>
-          <span class="about-tech-cat">Data</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="sqlmesh" data-category="data"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🧩</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">SQLMesh</span>
-          <span class="about-tech-cat">Data</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="kafka" data-category="data"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">⚙️</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Kafka</span>
-          <span class="about-tech-cat">Data</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="dataflow" data-category="data"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🌀</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Dataflow</span>
-          <span class="about-tech-cat">Data</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="bigquery" data-category="data"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🔍</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">BigQuery</span>
-          <span class="about-tech-cat">Data</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="databricks" data-category="data"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🧱</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Databricks</span>
-          <span class="about-tech-cat">Data</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="snowflake" data-category="data"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">❄️</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Snowflake</span>
-          <span class="about-tech-cat">Data</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="redshift" data-category="data"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🎯</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Redshift</span>
-          <span class="about-tech-cat">Data</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="hadoop" data-category="data"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🗄️</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Hadoop</span>
-          <span class="about-tech-cat">Data</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="hive" data-category="data"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🐝</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Hive</span>
-          <span class="about-tech-cat">Data</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="looker" data-category="data"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">👀</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Looker</span>
-          <span class="about-tech-cat">Data</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="tableau" data-category="data"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🖼️</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Tableau</span>
-          <span class="about-tech-cat">Data</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="power bi" data-category="data"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🖥️</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Power BI</span>
-          <span class="about-tech-cat">Data</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="postgresql" data-category="databases"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🐘</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">PostgreSQL</span>
-          <span class="about-tech-cat">Databases</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="sql" data-category="databases"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🗃️</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">SQL</span>
-          <span class="about-tech-cat">Databases</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="sqlite" data-category="databases"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🗃️</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">SQLite</span>
-          <span class="about-tech-cat">Databases</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="cloud sql" data-category="databases"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">💾</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Cloud SQL</span>
-          <span class="about-tech-cat">Databases</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="mongodb" data-category="databases"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🍃</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">MongoDB</span>
-          <span class="about-tech-cat">Databases</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="docker" data-category="cloud"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🐳</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Docker</span>
-          <span class="about-tech-cat">Cloud</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="kubernetes" data-category="cloud"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">☸️</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Kubernetes</span>
-          <span class="about-tech-cat">Cloud</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="git" data-category="cloud"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🌳</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Git</span>
-          <span class="about-tech-cat">Cloud</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="gcp" data-category="cloud"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">☁️</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">GCP</span>
-          <span class="about-tech-cat">Cloud</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="azure" data-category="cloud"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">☁️</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Azure</span>
-          <span class="about-tech-cat">Cloud</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="aws" data-category="cloud"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">☁️</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">AWS</span>
-          <span class="about-tech-cat">Cloud</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="terraform" data-category="cloud"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🏗️</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Terraform</span>
-          <span class="about-tech-cat">Cloud</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="ansible" data-category="cloud"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🤖</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Ansible</span>
-          <span class="about-tech-cat">Cloud</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="grafana" data-category="cloud"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">📊</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Grafana</span>
-          <span class="about-tech-cat">Cloud</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="prometheus" data-category="cloud"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">⏱️</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Prometheus</span>
-          <span class="about-tech-cat">Cloud</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="jenkins" data-category="cloud"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🤵</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Jenkins</span>
-          <span class="about-tech-cat">Cloud</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="github actions" data-category="cloud"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🚀</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">GitHub Actions</span>
-          <span class="about-tech-cat">Cloud</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="fastapi" data-category="api"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">⚡</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">FastAPI</span>
-          <span class="about-tech-cat">API</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="flask" data-category="api"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🍶</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Flask</span>
-          <span class="about-tech-cat">API</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="django" data-category="api"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🎶</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Django</span>
-          <span class="about-tech-cat">API</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="node.js" data-category="api"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🟢</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Node.js</span>
-          <span class="about-tech-cat">API</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="next.js" data-category="api"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">⏭️</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Next.js</span>
-          <span class="about-tech-cat">API</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="react" data-category="api"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">⚛️</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">React</span>
-          <span class="about-tech-cat">API</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="tailwind" data-category="api"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🌬️</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Tailwind</span>
-          <span class="about-tech-cat">API</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="selenium" data-category="api"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🌐</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">Selenium</span>
-          <span class="about-tech-cat">API</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="postgis" data-category="geospatial databases"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🌍</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">PostGIS</span>
-          <span class="about-tech-cat">Geospatial</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="gdal/ogr" data-category="geospatial"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🌐</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">GDAL/OGR</span>
-          <span class="about-tech-cat">Geospatial</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="qgis" data-category="geospatial"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🗺️</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">QGIS</span>
-          <span class="about-tech-cat">Geospatial</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="arcgis" data-category="geospatial"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🧭</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">ArcGIS</span>
-          <span class="about-tech-cat">Geospatial</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-      <div class="about-tech-card" data-name="openlayers" data-category="geospatial"
-        title="Click to copy technology name">
-        <span class="about-tech-icon" aria-hidden="true">🛰️</span>
-        <div class="about-tech-info">
-          <span class="about-tech-name">OpenLayers</span>
-          <span class="about-tech-cat">Geospatial</span>
-        </div>
-        <span class="about-tech-copy-hint" aria-hidden="true">📋</span>
-      </div>
-    </div>
-    <div class="gallery-empty-state" id="toolkitEmptyState" style="display:none;">
-      <p>No technologies matched your search.</p>
-      <button type="button" class="about-filter-btn" id="toolkitResetBtn" style="margin-top:12px;">Reset
-        Filters</button>
-    </div>
-  </section>
-
-  
-  <section class="about-section about-journey-section" id="journey">
-    <div class="about-section-header">
-      <div>
-        <h2 class="about-section-title"><span class="title-accent-bar"></span>Professional Journey</h2>
-      </div>
-    </div>
-
-    <div class="about-timeline" id="journeyTimeline">
-      <div class="about-timeline-item" data-role-title="laboratory engineer of digital technologies" data-role-type="full-time">
-        <div class="timeline-marker">
-          <div class="timeline-dot"></div>
-          <div class="timeline-line"></div>
-        </div>
-        <div class="about-timeline-card">
-          <div class="timeline-card-header">
-            <div>
-              <h3 class="timeline-role">Laboratory Engineer of Digital Technologies</h3>
-              <div class="timeline-company-row">
-                <span class="timeline-company">BiUH (Bielefeld Hainan University of Applied Sciences)</span>
-                <span class="timeline-sep">&bull;</span>
-                <span class="timeline-location">Hainan, China</span>
-              </div>
-            </div>
-            <div class="timeline-meta-wrap">
-              <span class="timeline-period">2026 - Present</span>
-              <span class="timeline-type-pill">Full-time</span>
-            </div>
-          </div>
-
-          <ul class="timeline-bullets">
-            <li>Instruction and laboratory supervision in Artificial Intelligence, Modern Computing, and Cluster Computing architectures;</li>
-            <li>Teaching applied quantitative coursework spanning Economics, Statistics, and Data Analytics;</li>
-            <li>Managing and maintaining digital technologies laboratory infrastructure and high-performance computing clusters;</li>
-            <li>Mentoring students through hands-on technical labs, systems engineering, and cluster deployments;</li>
-          </ul>
-
-          <div class="timeline-tech-stack">
-            <span class="tech-stack-label">Key Stack:</span>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="AI"
-              title="Search AI in Toolkit">
-              AI
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Computing"
-              title="Search Computing in Toolkit">
-              Computing
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Cluster Computing"
-              title="Search Cluster Computing in Toolkit">
-              Cluster Computing
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Python"
-              title="Search Python in Toolkit">
-              Python
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Linux"
-              title="Search Linux in Toolkit">
-              Linux
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Economics"
-              title="Search Economics in Toolkit">
-              Economics
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Statistics"
-              title="Search Statistics in Toolkit">
-              Statistics
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Bash"
-              title="Search Bash in Toolkit">
-              Bash
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Docker"
-              title="Search Docker in Toolkit">
-              Docker
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="about-timeline-item" data-role-title="ai engineer" data-role-type="freelance">
-        <div class="timeline-marker">
-          <div class="timeline-dot"></div>
-          <div class="timeline-line"></div>
-        </div>
-        <div class="about-timeline-card">
-          <div class="timeline-card-header">
-            <div>
-              <h3 class="timeline-role">AI Engineer</h3>
-              <div class="timeline-company-row">
-                <span class="timeline-company">Wayvant</span>
-                <span class="timeline-sep">&bull;</span>
-                <span class="timeline-location">Spain</span>
-              </div>
-            </div>
-            <div class="timeline-meta-wrap">
-              <span class="timeline-period">2025 - 2025</span>
-              <span class="timeline-type-pill">Freelance</span>
-            </div>
-          </div>
-
-          <ul class="timeline-bullets">
-            <li>Infrastructure as Code using GCP and Terraform;</li>
-            <li>IT Consultancy for Data Warehousing and Report Development;</li>
-            <li>AI Engineering with feedback loop;</li>
-            <li>Data Pipeline Development and Maintenance;</li>
-          </ul>
-
-          <div class="timeline-tech-stack">
-            <span class="tech-stack-label">Key Stack:</span>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="GCP"
-              title="Search GCP in Toolkit">
-              GCP
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Terraform"
-              title="Search Terraform in Toolkit">
-              Terraform
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="BQ"
-              title="Search BQ in Toolkit">
-              BQ
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="SQL"
-              title="Search SQL in Toolkit">
-              SQL
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="SQLX"
-              title="Search SQLX in Toolkit">
-              SQLX
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Dataform"
-              title="Search Dataform in Toolkit">
-              Dataform
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Gemini"
-              title="Search Gemini in Toolkit">
-              Gemini
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Python"
-              title="Search Python in Toolkit">
-              Python
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="JS"
-              title="Search JS in Toolkit">
-              JS
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="about-timeline-item" data-role-title="cloud data engineer" data-role-type="worker student - werkstudent">
-        <div class="timeline-marker">
-          <div class="timeline-dot"></div>
-          <div class="timeline-line"></div>
-        </div>
-        <div class="about-timeline-card">
-          <div class="timeline-card-header">
-            <div>
-              <h3 class="timeline-role">Cloud Data Engineer</h3>
-              <div class="timeline-company-row">
-                <span class="timeline-company">CloudPilots</span>
-                <span class="timeline-sep">&bull;</span>
-                <span class="timeline-location">Germany</span>
-              </div>
-            </div>
-            <div class="timeline-meta-wrap">
-              <span class="timeline-period">2024 - 2025</span>
-              <span class="timeline-type-pill">Worker Student - Werkstudent</span>
-            </div>
-          </div>
-
-          <ul class="timeline-bullets">
-            <li>Cloud Infrastructure using GCP and Terraform;</li>
-            <li>IT Consultancy for Databases and Report Development;</li>
-            <li>FinOps, Cloud Migration, ETL, and Reporting;</li>
-            <li>Data Pipeline Development and Maintenance;</li>
-          </ul>
-
-          <div class="timeline-tech-stack">
-            <span class="tech-stack-label">Key Stack:</span>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="GCP"
-              title="Search GCP in Toolkit">
-              GCP
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Terraform"
-              title="Search Terraform in Toolkit">
-              Terraform
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="BQ"
-              title="Search BQ in Toolkit">
-              BQ
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="SQL"
-              title="Search SQL in Toolkit">
-              SQL
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="SQLX"
-              title="Search SQLX in Toolkit">
-              SQLX
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Dataform"
-              title="Search Dataform in Toolkit">
-              Dataform
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="BigData"
-              title="Search BigData in Toolkit">
-              BigData
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="JS"
-              title="Search JS in Toolkit">
-              JS
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Python"
-              title="Search Python in Toolkit">
-              Python
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="about-timeline-item" data-role-title="data consultant" data-role-type="full-time">
-        <div class="timeline-marker">
-          <div class="timeline-dot"></div>
-          <div class="timeline-line"></div>
-        </div>
-        <div class="about-timeline-card">
-          <div class="timeline-card-header">
-            <div>
-              <h3 class="timeline-role">Data Consultant</h3>
-              <div class="timeline-company-row">
-                <span class="timeline-company">Inetum / Noesis</span>
-                <span class="timeline-sep">&bull;</span>
-                <span class="timeline-location">Portugal</span>
-              </div>
-            </div>
-            <div class="timeline-meta-wrap">
-              <span class="timeline-period">2022 - 2024</span>
-              <span class="timeline-type-pill">Full-time</span>
-            </div>
-          </div>
-
-          <ul class="timeline-bullets">
-            <li>Cloud Infrastructure Development and Maintaining;</li>
-            <li>Database Administration;</li>
-            <li>Network Analysis and Spatial Data Visualization;</li>
-            <li>Training of Interns;</li>
-          </ul>
-
-          <div class="timeline-tech-stack">
-            <span class="tech-stack-label">Key Stack:</span>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Azure"
-              title="Search Azure in Toolkit">
-              Azure
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="GCP"
-              title="Search GCP in Toolkit">
-              GCP
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Terraform"
-              title="Search Terraform in Toolkit">
-              Terraform
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Bash"
-              title="Search Bash in Toolkit">
-              Bash
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Python"
-              title="Search Python in Toolkit">
-              Python
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Postgres"
-              title="Search Postgres in Toolkit">
-              Postgres
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="PostGIS"
-              title="Search PostGIS in Toolkit">
-              PostGIS
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="about-timeline-item" data-role-title="census agent of administration and informatics" data-role-type="public service">
-        <div class="timeline-marker">
-          <div class="timeline-dot"></div>
-          <div class="timeline-line"></div>
-        </div>
-        <div class="about-timeline-card">
-          <div class="timeline-card-header">
-            <div>
-              <h3 class="timeline-role">Census Agent of Administration and Informatics</h3>
-              <div class="timeline-company-row">
-                <span class="timeline-company">IBGE</span>
-                <span class="timeline-sep">&bull;</span>
-                <span class="timeline-location">Brazil</span>
-              </div>
-            </div>
-            <div class="timeline-meta-wrap">
-              <span class="timeline-period">2022</span>
-              <span class="timeline-type-pill">Public Service</span>
-            </div>
-          </div>
-
-          <ul class="timeline-bullets">
-            <li>Support Census Research in Assigned Areas/Regions;</li>
-            <li>Reviewing Field Sites and Research Reports;</li>
-            <li>Training of Census Agents to Conduct Interviews;</li>
-            <li>Data Collection and Supervision;</li>
-          </ul>
-
-          <div class="timeline-tech-stack">
-            <span class="tech-stack-label">Key Stack:</span>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Excel"
-              title="Search Excel in Toolkit">
-              Excel
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Proprietary Software"
-              title="Search Proprietary Software in Toolkit">
-              Proprietary Software
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="about-timeline-item" data-role-title="applied data scientist" data-role-type="full-time">
-        <div class="timeline-marker">
-          <div class="timeline-dot"></div>
-          <div class="timeline-line"></div>
-        </div>
-        <div class="about-timeline-card">
-          <div class="timeline-card-header">
-            <div>
-              <h3 class="timeline-role">Applied Data Scientist</h3>
-              <div class="timeline-company-row">
-                <span class="timeline-company">4Intelligence</span>
-                <span class="timeline-sep">&bull;</span>
-                <span class="timeline-location">Brazil</span>
-              </div>
-            </div>
-            <div class="timeline-meta-wrap">
-              <span class="timeline-period">2021 - 2022</span>
-              <span class="timeline-type-pill">Full-time</span>
-            </div>
-          </div>
-
-          <ul class="timeline-bullets">
-            <li>Data Cleaning and Transformation;</li>
-            <li>Statistical and Machine Learning Modeling;</li>
-            <li>Time Series Forecasting and Anomaly Detection;</li>
-            <li>Development of Data Pipelines;</li>
-          </ul>
-
-          <div class="timeline-tech-stack">
-            <span class="tech-stack-label">Key Stack:</span>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Python"
-              title="Search Python in Toolkit">
-              Python
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="R"
-              title="Search R in Toolkit">
-              R
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Bash"
-              title="Search Bash in Toolkit">
-              Bash
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Postgres"
-              title="Search Postgres in Toolkit">
-              Postgres
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="SQL"
-              title="Search SQL in Toolkit">
-              SQL
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Azure"
-              title="Search Azure in Toolkit">
-              Azure
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Excel"
-              title="Search Excel in Toolkit">
-              Excel
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="about-timeline-item" data-role-title="junior data scientist" data-role-type="full-time">
-        <div class="timeline-marker">
-          <div class="timeline-dot"></div>
-          <div class="timeline-line"></div>
-        </div>
-        <div class="about-timeline-card">
-          <div class="timeline-card-header">
-            <div>
-              <h3 class="timeline-role">Junior Data Scientist</h3>
-              <div class="timeline-company-row">
-                <span class="timeline-company">Aquarela</span>
-                <span class="timeline-sep">&bull;</span>
-                <span class="timeline-location">Brazil</span>
-              </div>
-            </div>
-            <div class="timeline-meta-wrap">
-              <span class="timeline-period">2019 - 2021</span>
-              <span class="timeline-type-pill">Full-time</span>
-            </div>
-          </div>
-
-          <ul class="timeline-bullets">
-            <li>Data Cleaning and Transformations;</li>
-            <li>Development of Analytical Dashboards;</li>
-            <li>Statistical Modeling and Machine Learning;</li>
-            <li>Deployment of Dashboards in Production;</li>
-          </ul>
-
-          <div class="timeline-tech-stack">
-            <span class="tech-stack-label">Key Stack:</span>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="R"
-              title="Search R in Toolkit">
-              R
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Python"
-              title="Search Python in Toolkit">
-              Python
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="Docker"
-              title="Search Docker in Toolkit">
-              Docker
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="JS"
-              title="Search JS in Toolkit">
-              JS
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="CSS"
-              title="Search CSS in Toolkit">
-              CSS
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="GCP"
-              title="Search GCP in Toolkit">
-              GCP
-            </button>
-            <button type="button" class="timeline-tech-pill interactive-tech-pill" data-tech="AWS"
-              title="Search AWS in Toolkit">
-              AWS
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  
-  <section class="about-section about-education-section" id="education">
-    <div class="about-section-header">
-      <h2 class="about-section-title"><span class="title-accent-bar"></span>Education & Academic Honors</h2>
-    </div>
-
-    <div class="about-edu-grid">
-      <div class="about-edu-card">
-        <div class="edu-card-icon">🎓</div>
-        <div class="edu-card-content">
-          <h3 class="edu-degree">Master of Science in GeoSpatial Technologies</h3>
-          <div class="edu-institution">University of Münster</div>
-          <div class="edu-period">2023 - 2025</div>
-          <p class="edu-note">Erasmus Mundus Joint Master Degree (WWU Münster, Germany; UJI, Spain; NOVA IMS, Portugal).</p>
-        </div>
-      </div>
-      <div class="about-edu-card">
-        <div class="edu-card-icon">🎓</div>
-        <div class="edu-card-content">
-          <h3 class="edu-degree">Bachelor of Science in Economics</h3>
-          <div class="edu-institution">Federal University of Santa Catarina</div>
-          <div class="edu-period">2018 - 2022</div>
-          <p class="edu-note">Focus on quantitative economics, econometrics, regional economics, and complexity science.</p>
-        </div>
-      </div>
-      <div class="about-award-card">
-        <div class="award-card-icon">🏆</div>
-        <div class="award-card-content">
-          <span class="award-badge">Honors & Recognition</span>
-          <h3 class="award-title">Merit-based Fellowship</h3>
-          <p class="award-desc">Awarded for outstanding academic and research performance in the Master of Science in GeoSpatial Technologies program.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  
-  <section class="about-section about-certs-section" id="certifications">
-    <div class="about-section-header">
-      <h2 class="about-section-title"><span class="title-accent-bar"></span>Certifications & Credentials</h2>
-      <div class="about-filter-chips" id="certsFilterGroup" role="group" aria-label="Filter certifications by provider">
-        <button type="button" class="about-filter-btn active" data-provider="all">All (14)</button>
-        <button type="button" class="about-filter-btn" data-provider="gcp">Google Cloud (7)</button>
-        <button type="button" class="about-filter-btn" data-provider="azure">Microsoft Azure (7)</button>
-      </div>
-    </div>
-
-    <div class="about-certs-grid" id="certsGrid">
-      <div class="about-cert-card" data-provider="gcp">
-        <span class="cert-card-icon" aria-hidden="true">☁️</span>
-        <div class="cert-card-body">
-          <div class="cert-provider-badge provider-gcp">Google Cloud</div>
-          <h3 class="cert-name">Google Professional Cloud Architect</h3>
-        </div>
-      </div>
-      <div class="about-cert-card" data-provider="gcp">
-        <span class="cert-card-icon" aria-hidden="true">🚀</span>
-        <div class="cert-card-body">
-          <div class="cert-provider-badge provider-gcp">Google Cloud</div>
-          <h3 class="cert-name">Google Professional Cloud DevOps Engineer</h3>
-        </div>
-      </div>
-      <div class="about-cert-card" data-provider="gcp">
-        <span class="cert-card-icon" aria-hidden="true">✨</span>
-        <div class="cert-card-body">
-          <div class="cert-provider-badge provider-gcp">Google Cloud</div>
-          <h3 class="cert-name">Google Generative AI Leader</h3>
-        </div>
-      </div>
-      <div class="about-cert-card" data-provider="gcp">
-        <span class="cert-card-icon" aria-hidden="true">🧠</span>
-        <div class="cert-card-body">
-          <div class="cert-provider-badge provider-gcp">Google Cloud</div>
-          <h3 class="cert-name">Google Professional Machine Learning Engineer</h3>
-        </div>
-      </div>
-      <div class="about-cert-card" data-provider="gcp">
-        <span class="cert-card-icon" aria-hidden="true">🛠️</span>
-        <div class="cert-card-body">
-          <div class="cert-provider-badge provider-gcp">Google Cloud</div>
-          <h3 class="cert-name">Google Associate Cloud Engineer</h3>
-        </div>
-      </div>
-      <div class="about-cert-card" data-provider="gcp">
-        <span class="cert-card-icon" aria-hidden="true">📊</span>
-        <div class="cert-card-body">
-          <div class="cert-provider-badge provider-gcp">Google Cloud</div>
-          <h3 class="cert-name">Google Associate Data Practitioner</h3>
-        </div>
-      </div>
-      <div class="about-cert-card" data-provider="gcp">
-        <span class="cert-card-icon" aria-hidden="true">🌐</span>
-        <div class="cert-card-body">
-          <div class="cert-provider-badge provider-gcp">Google Cloud</div>
-          <h3 class="cert-name">Google Cloud Digital Leader</h3>
-        </div>
-      </div>
-      <div class="about-cert-card" data-provider="azure">
-        <span class="cert-card-icon" aria-hidden="true">🧪</span>
-        <div class="cert-card-body">
-          <div class="cert-provider-badge provider-azure">Microsoft Azure</div>
-          <h3 class="cert-name">Azure Associate Data Scientist</h3>
-        </div>
-      </div>
-      <div class="about-cert-card" data-provider="azure">
-        <span class="cert-card-icon" aria-hidden="true">📐</span>
-        <div class="cert-card-body">
-          <div class="cert-provider-badge provider-azure">Microsoft Azure</div>
-          <h3 class="cert-name">Designing and Implementing a Data Science Solution on Azure (DP-100)</h3>
-        </div>
-      </div>
-      <div class="about-cert-card" data-provider="azure">
-        <span class="cert-card-icon" aria-hidden="true">🗃️</span>
-        <div class="cert-card-body">
-          <div class="cert-provider-badge provider-azure">Microsoft Azure</div>
-          <h3 class="cert-name">Microsoft Certified: Azure Data Fundamentals (DP-900)</h3>
-        </div>
-      </div>
-      <div class="about-cert-card" data-provider="azure">
-        <span class="cert-card-icon" aria-hidden="true">☁️</span>
-        <div class="cert-card-body">
-          <div class="cert-provider-badge provider-azure">Microsoft Azure</div>
-          <h3 class="cert-name">Microsoft Certified: Azure Fundamentals (AZ-900)</h3>
-        </div>
-      </div>
-      <div class="about-cert-card" data-provider="azure">
-        <span class="cert-card-icon" aria-hidden="true">🤖</span>
-        <div class="cert-card-body">
-          <div class="cert-provider-badge provider-azure">Microsoft Azure</div>
-          <h3 class="cert-name">Microsoft Certified: Azure AI Fundamentals (AI-900)</h3>
-        </div>
-      </div>
-      <div class="about-cert-card" data-provider="azure">
-        <span class="cert-card-icon" aria-hidden="true">🔒</span>
-        <div class="cert-card-body">
-          <div class="cert-provider-badge provider-azure">Microsoft Azure</div>
-          <h3 class="cert-name">Microsoft Certified: Security, Compliance, and Identity Fundamentals (SC-900)</h3>
-        </div>
-      </div>
-      <div class="about-cert-card" data-provider="azure">
-        <span class="cert-card-icon" aria-hidden="true">⚡</span>
-        <div class="cert-card-body">
-          <div class="cert-provider-badge provider-azure">Microsoft Azure</div>
-          <h3 class="cert-name">Microsoft Certified: Power Platform Fundamentals (PL-900)</h3>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  
-  <section class="about-section about-languages-section" id="languages">
-    <div class="about-section-header">
-      <h2 class="about-section-title"><span class="title-accent-bar"></span>Languages</h2>
-      <span class="about-count-badge">Multilingual Profile</span>
-    </div>
-
-    <div class="about-languages-grid">
-      <div class="about-lang-card">
-        <div class="lang-card-top">
-          <div class="lang-name-wrap">
-            <span class="lang-flag">🇧🇷</span>
-            <span class="lang-name">Portuguese</span>
-            <span class="lang-status">Native</span>
-          </div>
-          <span class="lang-cefr-badge">C2</span>
-        </div>
-        <div class="lang-progress-track">
-          <div class="lang-progress-bar" data-percent="100" style="width: 0%;"></div>
-        </div>
-        <div class="lang-percent-label">100% proficiency benchmark</div>
-      </div>
-      <div class="about-lang-card">
-        <div class="lang-card-top">
-          <div class="lang-name-wrap">
-            <span class="lang-flag">🇬🇧</span>
-            <span class="lang-name">English</span>
-            <span class="lang-status">Fluent</span>
-          </div>
-          <span class="lang-cefr-badge">C2</span>
-        </div>
-        <div class="lang-progress-track">
-          <div class="lang-progress-bar" data-percent="99" style="width: 0%;"></div>
-        </div>
-        <div class="lang-percent-label">99% proficiency benchmark</div>
-      </div>
-      <div class="about-lang-card">
-        <div class="lang-card-top">
-          <div class="lang-name-wrap">
-            <span class="lang-flag">🇪🇸</span>
-            <span class="lang-name">Spanish</span>
-            <span class="lang-status">Advanced</span>
-          </div>
-          <span class="lang-cefr-badge">C1</span>
-        </div>
-        <div class="lang-progress-track">
-          <div class="lang-progress-bar" data-percent="80" style="width: 0%;"></div>
-        </div>
-        <div class="lang-percent-label">80% proficiency benchmark</div>
-      </div>
-      <div class="about-lang-card">
-        <div class="lang-card-top">
-          <div class="lang-name-wrap">
-            <span class="lang-flag">🇩🇪</span>
-            <span class="lang-name">German</span>
-            <span class="lang-status">Upper Intermediate</span>
-          </div>
-          <span class="lang-cefr-badge">B2</span>
-        </div>
-        <div class="lang-progress-track">
-          <div class="lang-progress-bar" data-percent="55" style="width: 0%;"></div>
-        </div>
-        <div class="lang-percent-label">55% proficiency benchmark</div>
-      </div>
-      <div class="about-lang-card">
-        <div class="lang-card-top">
-          <div class="lang-name-wrap">
-            <span class="lang-flag">🇫🇷</span>
-            <span class="lang-name">French</span>
-            <span class="lang-status">Elementary</span>
-          </div>
-          <span class="lang-cefr-badge">A1</span>
-        </div>
-        <div class="lang-progress-track">
-          <div class="lang-progress-bar" data-percent="4" style="width: 0%;"></div>
-        </div>
-        <div class="lang-percent-label">4% proficiency benchmark</div>
-      </div>
-      <div class="about-lang-card">
-        <div class="lang-card-top">
-          <div class="lang-name-wrap">
-            <span class="lang-flag">🇨🇳</span>
-            <span class="lang-name">Mandarin</span>
-            <span class="lang-status">Intermediate</span>
-          </div>
-          <span class="lang-cefr-badge">HSK2</span>
-        </div>
-        <div class="lang-progress-track">
-          <div class="lang-progress-bar" data-percent="22" style="width: 0%;"></div>
-        </div>
-        <div class="lang-percent-label">22% proficiency benchmark</div>
-      </div>
-    </div>
-  </section>
-
-  
-  <section class="about-section about-methodology-section" id="methodology">
-    <div class="about-section-header">
-      <div>
-        <h2 class="about-section-title"><span class="title-accent-bar"></span>Methodological Approach</h2>
-        <span class="about-methodology-tagline">Architecting with Human-in-the-Loop Integrity</span>
-      </div>
-    </div>
-
-    <div class="about-methodology-box">
-      <div class="methodology-quote-icon">“</div>
-      <p class="methodology-lead-text">I believe modern data architectures must place the &#39;Human-in-the-Loop&#39; at the very center of technical innovation, grounding abstract algorithms in tangible human context. My methodological approach begins with collaborative discovery, where I partner closely with domain experts to translate complex business objectives into testable hypotheses, ensuring that our models capture real-world causal dynamics rather than mere statistical correlations. This foundation transitions into a defensive engineering strategy, where I architect automated, transparent pipelines that prioritize data integrity and error handling over opaque complexity. To guarantee that every insight stands up to rigorous scrutiny, I enforce a culture of radical reproducibility—leveraging containerized environments, comprehensive documentation, and version-controlled infrastructure—to ensure that every result is traceable, auditable, and scientifically valid. The lifecycle concludes not with deployment, but with active stewardship, utilizing automated monitoring and continuous feedback loops to refine the system as market conditions evolve, thereby securing long-term reliability and sustainable business value.</p>
-    </div>
-
-    <div class="about-pillars-grid">
-      <div class="about-pillar-card">
-        <div class="pillar-bullet-num">✦</div>
-        <h3 class="pillar-title">Human-in-the-Loop</h3>
-        <p class="pillar-desc">Grounding abstract algorithms in tangible context and human judgment.</p>
-      </div>
-      <div class="about-pillar-card">
-        <div class="pillar-bullet-num">✦</div>
-        <h3 class="pillar-title">Collaborative Discovery</h3>
-        <p class="pillar-desc">Partnering with domain experts to uncover true causal dynamics.</p>
-      </div>
-      <div class="about-pillar-card">
-        <div class="pillar-bullet-num">✦</div>
-        <h3 class="pillar-title">Defensive Engineering</h3>
-        <p class="pillar-desc">Architecting resilient, automated pipelines prioritizing data integrity.</p>
-      </div>
-      <div class="about-pillar-card">
-        <div class="pillar-bullet-num">✦</div>
-        <h3 class="pillar-title">Radical Reproducibility</h3>
-        <p class="pillar-desc">Containerized, version-controlled environments for verifiable results.</p>
-      </div>
-      <div class="about-pillar-card">
-        <div class="pillar-bullet-num">✦</div>
-        <h3 class="pillar-title">Active Stewardship</h3>
-        <p class="pillar-desc">Continuous feedback loops and monitoring for enduring reliability.</p>
-      </div>
-    </div>
-  </section>
-
-  
-  <section class="about-section about-connect-section" id="connect">
-    <div class="about-connect-card">
-      <h2 class="connect-title">Let's Connect</h2>
-      <p class="connect-subtitle">Interested in data architecture, machine learning systems, or collaborative
-        engineering? Feel free to reach out.</p>
-
-      <div class="about-connect-links">
-        <a href="https://github.com/gui13go" target="_blank" rel="noopener noreferrer" class="about-connect-btn">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-            <path
-              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-          </svg>
-          <span>GitHub</span>
-        </a>
-        <a href="https://linkedin.com/in/guilherme-viegas/" target="_blank" rel="noopener noreferrer" class="about-connect-btn">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-            <path
-              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-          </svg>
-          <span>LinkedIn</span>
-        </a>
-        <a href="https://guilhermeviegas.substack.com" target="_blank" rel="noopener noreferrer" class="about-connect-btn">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-            <path
-              d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z" />
-          </svg>
-          <span>Substack</span>
-        </a>
-        <a href="mailto:gui.viegas19@gmail.com" target="_blank" rel="noopener noreferrer" class="about-connect-btn">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-            <polyline points="22,6 12,13 2,6"></polyline>
-          </svg>
-          <span>Email</span>
-        </a>
-      </div>
-    </div>
-  </section>
-</div>
+      const toast = document.getElementById("aboutToast");
+      let toastTimer = null;
+      function showToast(msg) {
+        if (!toast) return;
+        toast.textContent = msg;
+        toast.classList.add("is-visible");
+        if (toastTimer) clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () {
+          toast.classList.remove("is-visible");
+        }, 2400);
+      }
 
 
-<div class="about-toast" id="aboutToast" role="status" aria-live="polite"></div>
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    
-    const toast = document.getElementById("aboutToast");
-    let toastTimer = null;
-    function showToast(msg) {
-      if (!toast) return;
-      toast.textContent = msg;
-      toast.classList.add("is-visible");
-      if (toastTimer) clearTimeout(toastTimer);
-      toastTimer = setTimeout(function () {
-        toast.classList.remove("is-visible");
-      }, 2400);
-    }
-
-    
-    const langBars = Array.from(document.querySelectorAll(".lang-progress-bar"));
-    if ("IntersectionObserver" in window) {
-      const langObserver = new IntersectionObserver(function (entries, obs) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            const bar = entry.target;
-            const pct = bar.getAttribute("data-percent") || "0";
-            bar.style.width = pct + "%";
-            obs.unobserve(bar);
-          }
-        });
-      }, { threshold: 0.2 });
-
-      langBars.forEach(function (b) { langObserver.observe(b); });
-    } else {
-      langBars.forEach(function (b) {
-        b.style.width = (b.getAttribute("data-percent") || "0") + "%";
-      });
-    }
-
-    
-    const toolkitSearch = document.getElementById("toolkitSearchInput");
-    const toolkitClear = document.getElementById("toolkitClearSearch");
-    const toolkitCount = document.getElementById("toolkitVisibleCount");
-    const toolkitEmpty = document.getElementById("toolkitEmptyState");
-    const toolkitReset = document.getElementById("toolkitResetBtn");
-    const toolkitCards = Array.from(document.querySelectorAll(".about-tech-card"));
-    const toolkitFilterBtns = Array.from(document.querySelectorAll("#toolkitFilterGroup .about-filter-btn"));
-
-    let currentCategory = "all";
-
-    function filterToolkit() {
-      const query = (toolkitSearch.value || "").trim().toLowerCase();
-      let count = 0;
-
-      toolkitCards.forEach(function (card) {
-        const name = card.getAttribute("data-name") || "";
-        const cat = card.getAttribute("data-category") || "";
-        const cardCats = cat.toLowerCase().split(/\s+/);
-
-        let matchesCat = true;
-        if (currentCategory !== "all") {
-          matchesCat = cardCats.includes(currentCategory);
-        }
-
-        let matchesQuery = true;
-        if (query) {
-          matchesQuery = name.includes(query) || cat.includes(query);
-        }
-
-        if (matchesCat && matchesQuery) {
-          card.style.display = "";
-          count++;
-        } else {
-          card.style.display = "none";
-        }
-      });
-
-      if (toolkitCount) toolkitCount.textContent = count;
-      if (toolkitEmpty) toolkitEmpty.style.display = count === 0 ? "block" : "none";
-      if (toolkitClear) toolkitClear.style.display = query.length > 0 ? "block" : "none";
-    }
-
-    toolkitFilterBtns.forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        toolkitFilterBtns.forEach(function (b) { b.classList.remove("active"); });
-        btn.classList.add("active");
-        currentCategory = btn.getAttribute("data-category") || "all";
-        filterToolkit();
-      });
-    });
-
-    if (toolkitSearch) {
-      toolkitSearch.addEventListener("input", filterToolkit);
-    }
-
-    if (toolkitClear) {
-      toolkitClear.addEventListener("click", function () {
-        toolkitSearch.value = "";
-        filterToolkit();
-        toolkitSearch.focus();
-      });
-    }
-
-    if (toolkitReset) {
-      toolkitReset.addEventListener("click", function () {
-        if (toolkitSearch) toolkitSearch.value = "";
-        currentCategory = "all";
-        toolkitFilterBtns.forEach(function (b) {
-          if (b.getAttribute("data-category") === "all") b.classList.add("active");
-          else b.classList.remove("active");
-        });
-        filterToolkit();
-      });
-    }
-
-    
-    toolkitCards.forEach(function (card) {
-      card.addEventListener("click", function () {
-        const techName = card.querySelector(".about-tech-name") ? card.querySelector(".about-tech-name").textContent : "";
-        if (techName && navigator.clipboard) {
-          navigator.clipboard.writeText(techName).then(function () {
-            showToast("Copied technology: " + techName);
+      const langBars = Array.from(document.querySelectorAll(".lang-progress-bar"));
+      if ("IntersectionObserver" in window) {
+        const langObserver = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              const bar = entry.target;
+              const pct = bar.getAttribute("data-percent") || "0";
+              bar.style.width = pct + "%";
+              obs.unobserve(bar);
+            }
           });
-        }
-      });
-    });
+        }, { threshold: 0.2 });
 
-    
-    const techPills = Array.from(document.querySelectorAll(".interactive-tech-pill"));
-    techPills.forEach(function (pill) {
-      pill.addEventListener("click", function (e) {
-        e.stopPropagation();
-        const tech = (pill.getAttribute("data-tech") || "").toLowerCase();
-        if (!tech) return;
-
-        
-        currentCategory = "all";
-        toolkitFilterBtns.forEach(function (b) {
-          if (b.getAttribute("data-category") === "all") b.classList.add("active");
-          else b.classList.remove("active");
+        langBars.forEach(function (b) { langObserver.observe(b); });
+      } else {
+        langBars.forEach(function (b) {
+          b.style.width = (b.getAttribute("data-percent") || "0") + "%";
         });
-
-        if (toolkitSearch) {
-          toolkitSearch.value = tech;
-          filterToolkit();
-        }
-
-        const toolkitSec = document.getElementById("toolkit");
-        if (toolkitSec) {
-          toolkitSec.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-
-        showToast("Filtered toolkit for: " + tech);
-      });
-    });
+      }
 
 
-    
-    const certFilterBtns = Array.from(document.querySelectorAll("#certsFilterGroup .about-filter-btn"));
-    const certCards = Array.from(document.querySelectorAll(".about-cert-card"));
+      const toolkitSearch = document.getElementById("toolkitSearchInput");
+      const toolkitClear = document.getElementById("toolkitClearSearch");
+      const toolkitCount = document.getElementById("toolkitVisibleCount");
+      const toolkitEmpty = document.getElementById("toolkitEmptyState");
+      const toolkitReset = document.getElementById("toolkitResetBtn");
+      const toolkitCards = Array.from(document.querySelectorAll(".about-tech-card"));
+      const toolkitFilterBtns = Array.from(document.querySelectorAll("#toolkitFilterGroup .about-filter-btn"));
 
-    certFilterBtns.forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        certFilterBtns.forEach(function (b) { b.classList.remove("active"); });
-        btn.classList.add("active");
-        const provider = btn.getAttribute("data-provider") || "all";
+      let currentCategory = "all";
 
-        certCards.forEach(function (card) {
-          const cardProvider = card.getAttribute("data-provider");
-          if (provider === "all" || cardProvider === provider) {
+      function filterToolkit() {
+        const query = (toolkitSearch.value || "").trim().toLowerCase();
+        let count = 0;
+
+        toolkitCards.forEach(function (card) {
+          const name = card.getAttribute("data-name") || "";
+          const cat = card.getAttribute("data-category") || "";
+          const cardCats = cat.toLowerCase().split(/\s+/);
+
+          let matchesCat = true;
+          if (currentCategory !== "all") {
+            matchesCat = cardCats.includes(currentCategory);
+          }
+
+          let matchesQuery = true;
+          if (query) {
+            matchesQuery = name.includes(query) || cat.includes(query);
+          }
+
+          if (matchesCat && matchesQuery) {
             card.style.display = "";
+            count++;
           } else {
             card.style.display = "none";
           }
         });
+
+        if (toolkitCount) toolkitCount.textContent = count;
+        if (toolkitEmpty) toolkitEmpty.style.display = count === 0 ? "block" : "none";
+        if (toolkitClear) toolkitClear.style.display = query.length > 0 ? "block" : "none";
+      }
+
+      toolkitFilterBtns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          toolkitFilterBtns.forEach(function (b) { b.classList.remove("active"); });
+          btn.classList.add("active");
+          currentCategory = btn.getAttribute("data-category") || "all";
+          filterToolkit();
+        });
+      });
+
+      if (toolkitSearch) {
+        toolkitSearch.addEventListener("input", filterToolkit);
+      }
+
+      if (toolkitClear) {
+        toolkitClear.addEventListener("click", function () {
+          toolkitSearch.value = "";
+          filterToolkit();
+          toolkitSearch.focus();
+        });
+      }
+
+      if (toolkitReset) {
+        toolkitReset.addEventListener("click", function () {
+          if (toolkitSearch) toolkitSearch.value = "";
+          currentCategory = "all";
+          toolkitFilterBtns.forEach(function (b) {
+            if (b.getAttribute("data-category") === "all") b.classList.add("active");
+            else b.classList.remove("active");
+          });
+          filterToolkit();
+        });
+      }
+
+
+      toolkitCards.forEach(function (card) {
+        card.addEventListener("click", function () {
+          const techName = card.querySelector(".about-tech-name") ? card.querySelector(".about-tech-name").textContent : "";
+          if (techName && navigator.clipboard) {
+            navigator.clipboard.writeText(techName).then(function () {
+              showToast("Copied technology: " + techName);
+            });
+          }
+        });
+      });
+
+
+      const techPills = Array.from(document.querySelectorAll(".interactive-tech-pill"));
+      techPills.forEach(function (pill) {
+        pill.addEventListener("click", function (e) {
+          e.stopPropagation();
+          const tech = (pill.getAttribute("data-tech") || "").toLowerCase();
+          if (!tech) return;
+
+
+          currentCategory = "all";
+          toolkitFilterBtns.forEach(function (b) {
+            if (b.getAttribute("data-category") === "all") b.classList.add("active");
+            else b.classList.remove("active");
+          });
+
+          if (toolkitSearch) {
+            toolkitSearch.value = tech;
+            filterToolkit();
+          }
+
+          const toolkitSec = document.getElementById("toolkit");
+          if (toolkitSec) {
+            toolkitSec.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+
+          showToast("Filtered toolkit for: " + tech);
+        });
+      });
+
+
+
+      const certFilterBtns = Array.from(document.querySelectorAll("#certsFilterGroup .about-filter-btn"));
+      const certCards = Array.from(document.querySelectorAll(".about-cert-card"));
+
+      certFilterBtns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          certFilterBtns.forEach(function (b) { b.classList.remove("active"); });
+          btn.classList.add("active");
+          const provider = btn.getAttribute("data-provider") || "all";
+
+          certCards.forEach(function (card) {
+            const cardProvider = card.getAttribute("data-provider");
+            if (provider === "all" || cardProvider === provider) {
+              card.style.display = "";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
       });
     });
-  });
-</script>
-    </main>
+  </script>
+</main>
