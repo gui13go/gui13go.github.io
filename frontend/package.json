@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "images": "python3 ../scripts/generate_nextgen_images.py",
-    "build": "npm run images && tsc -b && vite build",
+    "prerender": "node scripts/prerender.mjs",
+    "build": "npm run images && tsc -b && vite build && npm run prerender",
     "lint": "oxlint",
     "preview": "vite preview"
   },
