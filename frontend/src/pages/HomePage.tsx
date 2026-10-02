@@ -11,6 +11,7 @@ import {
 import { useBackendHealth } from '../hooks/useBackendHealth'
 import { API_BASE_URL } from '../config/api'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { Picture } from '../components/Picture'
 
 interface FeaturedPost {
   title: string
@@ -210,7 +211,7 @@ export const HomePage: React.FC = () => {
             <article key={idx} className="featured-card">
               <Link to={post.url} className="card-cover-link">
                 <div className="card-cover-wrapper">
-                  <img
+                  <Picture
                     src={post.image}
                     alt={post.title}
                     loading="lazy"

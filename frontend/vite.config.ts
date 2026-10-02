@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
 
 // Base path configuration for GitHub Pages
 // Set to '/' for custom domains, or '/05-ghpages-gui13go/' if deploying as a repo project subpath.
@@ -10,8 +9,13 @@ export default defineConfig({
   base: basePath,
   plugins: [
     react(),
-    tailwindcss(),
   ],
+  css: {
+    transformer: 'lightningcss',
+  },
+  build: {
+    cssMinify: 'lightningcss',
+  },
   server: {
     port: 5173,
     host: true,

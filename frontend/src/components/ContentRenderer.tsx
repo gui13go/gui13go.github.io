@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 interface ContentRendererProps {
@@ -17,10 +17,24 @@ export const ContentRenderer: React.FC<ContentRendererProps> = ({
   const containerRef = useRef<HTMLDivElement>(null)
   const navigate = useNavigate()
 
+  // Automatically wrap local raster <img> elements in <picture> tags with AVIF and WebP sources
+  const processedHtml = useMemo(() => {
+    if (!htmlContent) return ''
+    return htmlContent.replace(
+      /(<picture[^>]*>[\s\S]*?<\/picture>)|(<img\b([^>]*\bsrc=["']((?:https?:\/\/[^/]+)?\/(?:images|photos)\/[^"']+\.(?:jpg|jpeg|png))["'][^>]*)>)/gi,
+      (_match, pictureTag, imgTag, _attrs, src) => {
+        if (pictureTag) return pictureTag
+        const avifSrc = src.replace(/\.(jpg|jpeg|png)$/i, '.avif')
+        const webpSrc = src.replace(/\.(jpg|jpeg|png)$/i, '.webp')
+        return `<picture><source type="image/avif" srcset="${avifSrc}"><source type="image/webp" srcset="${webpSrc}">${imgTag}</picture>`
+      }
+    )
+  }, [htmlContent])
+
   // Execute embedded scripts when HTML updates (enables interactive charts, timers, map renders, audio)
   useEffect(() => {
     const container = containerRef.current
-    if (!container || !htmlContent || loading || error) return
+    if (!container || !processedHtml || loading || error) return
 
     const scripts = Array.from(container.querySelectorAll('script'))
     scripts.forEach((oldScript) => {
@@ -78,7 +92,7 @@ export const ContentRenderer: React.FC<ContentRendererProps> = ({
     }, 30)
 
     return () => clearTimeout(timer)
-  }, [htmlContent, loading, error])
+  }, [processedHtml, loading, error])
 
   // Intercept internal navigation to keep SPA navigation smooth
   useEffect(() => {
@@ -104,7 +118,7 @@ export const ContentRenderer: React.FC<ContentRendererProps> = ({
 
     container.addEventListener('click', handleLinkClick)
     return () => container.removeEventListener('click', handleLinkClick)
-  }, [htmlContent, loading, error, navigate])
+  }, [processedHtml, loading, error, navigate])
 
   if (loading) {
     return (
@@ -165,7 +179,7 @@ export const ContentRenderer: React.FC<ContentRendererProps> = ({
     <main
       className="main"
       ref={containerRef}
-      dangerouslySetInnerHTML={{ __html: htmlContent }}
+      dangerouslySetInnerHTML={{ __html: processedHtml }}
     />
   )
 }

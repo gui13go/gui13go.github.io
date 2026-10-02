@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "images": "python3 ../scripts/generate_nextgen_images.py",
+    "build": "npm run images && tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview"
   },
