@@ -7,95 +7,179 @@ import {
   Radio,
   Clock,
   Calendar,
+  Swords,
+  BookOpen,
+  Wrench,
+  Bot,
+  Compass,
+  Sparkles,
 } from 'lucide-react'
 import { useBackendHealth } from '../hooks/useBackendHealth'
 import { API_BASE_URL } from '../config/api'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { Picture } from '../components/Picture'
 
-interface FeaturedPost {
+type HighlightBadge = 'Versus' | 'Blog' | 'Tool' | 'Agents' | 'GeoLayer' | 'Gallery'
+
+interface HighlightedItem {
+  id: string
   title: string
   url: string
-  date: string
-  readingTime: string
+  badge: HighlightBadge
+  metaLeft: string
+  metaRight: string
   summary: string
   image: string
   tags: string[]
-  category: 'Security' | 'Linux' | 'OSINT' | 'Architecture'
 }
 
-const FEATURED_POSTS: FeaturedPost[] = [
+const FEATURED_ITEMS: HighlightedItem[] = [
   {
+    id: 'versus-battles',
+    title: 'Versus Battles & Historical Debates',
+    url: '/gallery/versus/',
+    badge: 'Versus',
+    metaLeft: '116 Battles',
+    metaRight: 'Interactive Comparison',
+    image: '/images/versus_cover.webp',
+    summary:
+      'An interactive compendium of 116 historic and conceptual clashes: Linux vs. Windows, Vim vs. Emacs, Monolith vs. Microservices, Compiled vs. Interpreted, and classic philosophical and historical rivalries.',
+    tags: ['Versus', 'Architecture', 'History', 'Debate'],
+  },
+  {
+    id: 'osint-top-10',
     title: 'The OSINT Top 10: Key Concepts to Demystify Open-Source Intelligence',
     url: '/blogs/the-osint-top10/',
-    date: 'Sep 21, 2026',
-    readingTime: '18 min read',
-    category: 'OSINT',
+    badge: 'Blog',
+    metaLeft: 'Sep 21, 2026',
+    metaRight: '18 min read',
+    image: '/images/osint-top-10-demystifying-intelligence.jpg',
     summary:
       'A comprehensive architectural guide demystifying Open-Source Intelligence (OSINT). Exploring intelligence lifecycles, reconnaissance taxonomy, pivotal tooling, strict operational security (OPSEC), sock puppet tradecraft, and legal boundaries for security analysts.',
-    image: '/images/osint-top-10-demystifying-intelligence.jpg',
     tags: ['OSINT', 'Security', 'Intelligence'],
   },
   {
-    title: 'Revolution OS: Documentary Review',
-    url: '/blogs/revolution-os-review/',
-    date: 'Sep 19, 2026',
-    readingTime: '38 min read',
-    category: 'Linux',
+    id: 'revolution-os-timeline',
+    title: 'Revolution OS: 50-Year Historical Computing Timeline',
+    url: '/tools/revolution-os-timeline/',
+    badge: 'Tool',
+    metaLeft: '35 Milestones',
+    metaRight: 'Chronological Roadmap',
+    image: '/images/revolution-os-timeline.webp',
     summary:
-      'A review and chronological dissection of 2001 documentary "Revolution OS". Exploring the 30-year collision between hacker ethics and corporate monopolies: Unix, Windows, GNU, the Linux Kernel, GNU Hurd, the FSF, the OSI, Red Hat, Debian, The Cathedral and the Bazaar, the GPL vs. MIT licenses, and the ideological clash between Richard Stallman, Linus Torvalds, Eric S. Raymond, and Bill Gates.',
-    image: '/images/revolution-os-documentary-review.jpg',
-    tags: ['Linux', 'Open Source', 'GNU'],
+      'An interactive, chronological roadmap and simulator tracing the evolution of Unix, GNU, the Linux kernel, open-source licensing wars, and the ideological clash between the hacker movement and corporate monopolies.',
+    tags: ['Linux', 'History', 'Open Source', 'Tool'],
   },
   {
-    title:
-      'Weaponizing the Wordlist: How automated dictionary attacks probe and breach authentication endpoints.',
-    url: '/blogs/weaponizing-the-wordlist-how-automated-dictionary-attacks-probe-and-breach-authentication-endpoints/',
-    date: 'Sep 18, 2026',
-    readingTime: '41 min read',
-    category: 'Security',
+    id: 'autonomous-agents',
+    title: 'Autonomous AI Personas & Swarm Intelligence Chambers',
+    url: '/agents/',
+    badge: 'Agents',
+    metaLeft: '79 Personas',
+    metaRight: 'Multi-Agent Swarm',
+    image: '/images/agents/chamber_boardroom_1767720727673.webp',
     summary:
-      'An exhaustive technical dissection of automated dictionary attacks, distributed password spraying, and offline cryptographic hash cracking. Analyzing how adversary botnets scan IPv4/IPv6 address spaces, probe network daemons (SSH, Web/APIs, Databases, FTP/Mail), weaponize GPU clusters against exfiltrated /etc/shadow hashes, and how systems engineers architect resilient defenses.',
+      'A specialized portfolio of 79 autonomous AI personas, multi-agent coordination chambers (Agora, Boardroom, War Room), domain-expert reasoning workflows, and live LLM telemetry.',
+    tags: ['AI', 'Agents', 'Multi-Agent', 'LLM'],
+  },
+  {
+    id: 'cities-visited',
+    title: 'Cities I Have Visited: Geospatial Travel Intelligence',
+    url: '/geolayers/cities-i-have-visited/',
+    badge: 'GeoLayer',
+    metaLeft: 'Interactive Map',
+    metaRight: 'Global Telemetry',
+    image: '/images/geolayers/cities-i-have-visited.jpg',
+    summary:
+      'Interactive high-resolution cartographic visualization and spatial narrative tracking visited cities, flights, airport corridors, and geographic exploration across South America, Europe, Asia, and beyond.',
+    tags: ['GeoLayers', 'Geospatial', 'Travel', 'Interactive'],
+  },
+  {
+    id: 'thinkers-gallery',
+    title: 'Thinkers, Scientists & Philosophers Gallery',
+    url: '/gallery/personalities/',
+    badge: 'Gallery',
+    metaLeft: '266 Thinkers',
+    metaRight: 'Biographical Archive',
+    image: '/images/personalities/alan_turing_portrait_1769882603197.webp',
+    summary:
+      'A curated visual and intellectual archive of 266 thinkers, scientists, philosophers, and hackers who shaped human history, complete with verified quotes, notable treatises, and chronological timelines.',
+    tags: ['Philosophy', 'Science', 'History', 'Personalities'],
+  },
+  {
+    id: 'weaponizing-wordlist',
+    title: 'Weaponizing the Wordlist: Automated Dictionary Attacks & Perimeter Defense',
+    url: '/blogs/weaponizing-the-wordlist-how-automated-dictionary-attacks-probe-and-breach-authentication-endpoints/',
+    badge: 'Blog',
+    metaLeft: 'Sep 18, 2026',
+    metaRight: '41 min read',
     image: '/images/weaponizing-the-wordlist-automated-dictionary-attacks.jpg',
+    summary:
+      'An exhaustive technical dissection of automated dictionary attacks, distributed password spraying, and offline hash cracking against authentication endpoints with resilient Linux defense architectures.',
     tags: ['Security', 'Linux', 'Authentication'],
   },
   {
-    title: 'Blameless by Design: A Pragmatic Guide to Incident Response and Post-Mortems',
-    url: '/blogs/blameless-by-design-incident-response-post-mortems/',
-    date: 'Sep 15, 2026',
-    readingTime: '24 min read',
-    category: 'Architecture',
+    id: 'computer-languages',
+    title: 'Computer Languages: Evolution, Compilers & Typing Systems',
+    url: '/gallery/computer-languages/',
+    badge: 'Gallery',
+    metaLeft: '39 Languages',
+    metaRight: 'Execution Paradigms',
+    image: '/images/compiled_vs_interpreted_versus.webp',
     summary:
-      'Building fault-tolerant systems and cultural resilience through blameless post-mortems, rigorous incident triage, root cause identification, and observability automation for cloud infrastructure.',
-    image: '/images/blameless-incident-response-postmortems.jpg',
-    tags: ['SRE', 'Observability', 'Resilience'],
-  },
-  {
-    title: 'Root Watch: Monitoring Privilege, Identity, and Kernel Integrity',
-    url: '/blogs/root-watch-monitoring-privilege-identity-kernel-integrity/',
-    date: 'Sep 12, 2026',
-    readingTime: '32 min read',
-    category: 'Security',
-    summary:
-      'Low-level auditing of UID transitions, sudo privileges, PAM authentication pipelines, eBPF probe tracing, and real-time kernel integrity monitoring on enterprise Linux servers.',
-    image: '/images/root-watch-server-auditing.jpg',
-    tags: ['Kernel', 'Security', 'eBPF', 'Auditing'],
-  },
-  {
-    title: 'Locking the Gate: Hardening Linux Bastions, SSH, and Firewall Perimeter',
-    url: '/blogs/locking-the-gate/',
-    date: 'Sep 05, 2026',
-    readingTime: '28 min read',
-    category: 'Linux',
-    summary:
-      'Step-by-step cryptographic hardening of OpenSSH daemon configurations, ED25519 key-only authentication, nftables packet filtering, and zero-trust port knocking on Linux edge bastions.',
-    image: '/images/locking-the-gate-linux-hardening.jpg',
-    tags: ['Linux', 'SSH', 'Firewall', 'Hardening'],
+      'In-depth comparative analysis of 39 programming languages, ahead-of-time compilation, JIT runtimes, memory models, typing paradigms, and the historical lineage from C and Lisp to Rust and Go.',
+    tags: ['Languages', 'Compilers', 'Computer Science'],
   },
 ]
 
-
-const FILTER_CATEGORIES = ['All', 'Security', 'Linux', 'OSINT', 'Architecture'] as const
+const getBadgeConfig = (
+  badge: HighlightBadge
+): { bg: string; text: string; border: string; icon: React.ReactNode } => {
+  switch (badge) {
+    case 'Versus':
+      return {
+        bg: 'rgba(239, 68, 68, 0.12)',
+        text: '#ef4444',
+        border: 'rgba(239, 68, 68, 0.25)',
+        icon: <Swords size={12} />,
+      }
+    case 'Blog':
+      return {
+        bg: 'rgba(59, 130, 246, 0.12)',
+        text: '#3b82f6',
+        border: 'rgba(59, 130, 246, 0.25)',
+        icon: <BookOpen size={12} />,
+      }
+    case 'Tool':
+      return {
+        bg: 'rgba(245, 158, 11, 0.12)',
+        text: '#f59e0b',
+        border: 'rgba(245, 158, 11, 0.25)',
+        icon: <Wrench size={12} />,
+      }
+    case 'Agents':
+      return {
+        bg: 'rgba(168, 85, 247, 0.12)',
+        text: '#a855f7',
+        border: 'rgba(168, 85, 247, 0.25)',
+        icon: <Bot size={12} />,
+      }
+    case 'GeoLayer':
+      return {
+        bg: 'rgba(16, 185, 129, 0.12)',
+        text: '#10b981',
+        border: 'rgba(16, 185, 129, 0.25)',
+        icon: <Compass size={12} />,
+      }
+    case 'Gallery':
+      return {
+        bg: 'rgba(236, 72, 153, 0.12)',
+        text: '#ec4899',
+        border: 'rgba(236, 72, 153, 0.25)',
+        icon: <Sparkles size={12} />,
+      }
+  }
+}
 
 export const HomePage: React.FC = () => {
   useDocumentMeta({
@@ -105,7 +189,6 @@ export const HomePage: React.FC = () => {
   })
 
   const { isOnline, health, refetch, isFetching } = useBackendHealth()
-  const [selectedCategory, setSelectedCategory] = useState<string>('All')
   const [pingLatency, setPingLatency] = useState<number | null>(null)
   const [isPinging, setIsPinging] = useState(false)
 
@@ -131,11 +214,6 @@ export const HomePage: React.FC = () => {
     }
   }
 
-  const filteredPosts =
-    selectedCategory === 'All'
-      ? FEATURED_POSTS
-      : FEATURED_POSTS.filter((p) => p.category === selectedCategory)
-
   return (
     <main className="main">
       {/* Hero Section */}
@@ -158,113 +236,103 @@ export const HomePage: React.FC = () => {
       </div>
 
 
-      {/* Highlighted Content with Interactive Category Filtering */}
+      {/* Highlighted Content */}
       <div className="home-posts-section">
         <div className="section-header">
           <div className="section-title-wrap">
             <h2 className="section-heading">Highlighted Content</h2>
-            <p className="section-desc">Here are some of the best contents from this website.</p>
+            <p className="section-desc">Curated flagship highlights across interactive battles, deep-dive blogs, developer tools, and geospatial showcases.</p>
           </div>
-          <Link to="/blogs/" className="section-all-link">
-            <span>View all 20 blogs</span>
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </Link>
-        </div>
-
-        {/* Category Filter Pills */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '28px' }}>
-          {FILTER_CATEGORIES.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setSelectedCategory(cat)}
-              style={{
-                padding: '6px 14px',
-                borderRadius: '9999px',
-                fontSize: '0.82rem',
-                fontWeight: 600,
-                border: '1px solid',
-                borderColor: selectedCategory === cat ? 'var(--theme-accent)' : 'var(--theme-border)',
-                background: selectedCategory === cat ? 'var(--theme-accent)' : 'var(--entry)',
-                color: selectedCategory === cat ? '#fff' : 'var(--secondary)',
-                cursor: 'pointer',
-                transition: 'all 0.2s ease',
-              }}
-            >
-              {cat}
-            </button>
-          ))}
         </div>
 
         <div className="home-posts-grid">
-          {filteredPosts.map((post, idx) => (
-            <article key={idx} className="featured-card">
-              <Link to={post.url} className="card-cover-link">
-                <div className="card-cover-wrapper">
-                  <Picture
-                    src={post.image}
-                    alt={post.title}
-                    loading="lazy"
-                    className="card-cover-img"
-                  />
-                  <div className="card-cover-gradient"></div>
-                </div>
-              </Link>
+          {FEATURED_ITEMS.map((item) => {
+            const badgeConf = getBadgeConfig(item.badge)
+            return (
+              <article key={item.id} className="featured-card">
+                <Link to={item.url} className="card-cover-link">
+                  <div className="card-cover-wrapper">
+                    <Picture
+                      src={item.image}
+                      alt={item.title}
+                      loading="lazy"
+                      className="card-cover-img"
+                    />
+                    <div className="card-cover-gradient"></div>
+                  </div>
+                </Link>
 
-              <div className="card-body">
-                <div className="card-meta">
-                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                    <Calendar style={{ width: '13px', height: '13px' }} />
-                    <time>{post.date}</time>
-                  </span>
-                  <span className="meta-dot">·</span>
-                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                    <Clock style={{ width: '13px', height: '13px' }} />
-                    <span>{post.readingTime}</span>
-                  </span>
-                </div>
+                <div className="card-body">
+                  <div className="card-meta" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '8px' }}>
+                    <span
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '5px',
+                        padding: '2px 8px',
+                        borderRadius: '6px',
+                        fontSize: '0.74rem',
+                        fontWeight: 700,
+                        background: badgeConf.bg,
+                        color: badgeConf.text,
+                        border: `1px solid ${badgeConf.border}`,
+                      }}
+                    >
+                      {badgeConf.icon}
+                      <span>{item.badge}</span>
+                    </span>
 
-                <h3 className="card-title">
-                  <Link to={post.url}>{post.title}</Link>
-                </h3>
+                    <span className="meta-dot">·</span>
 
-                <p className="card-summary">{post.summary}</p>
+                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                      {item.badge === 'Blog' ? (
+                        <Calendar style={{ width: '13px', height: '13px' }} />
+                      ) : null}
+                      <span>{item.metaLeft}</span>
+                    </span>
 
-                <div className="card-footer">
-                  <div className="card-tags">
-                    {post.tags.map((tag) => (
-                      <Link
-                        key={tag}
-                        to={`/tags/${tag.toLowerCase()}/`}
-                        className="tag-pill"
-                        style={{ textDecoration: 'none' }}
-                      >
-                        #{tag}
-                      </Link>
-                    ))}
+                    <span className="meta-dot">·</span>
+
+                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                      {item.badge === 'Blog' ? (
+                        <Clock style={{ width: '13px', height: '13px' }} />
+                      ) : null}
+                      <span>{item.metaRight}</span>
+                    </span>
                   </div>
 
-                  <Link
-                    to={post.url}
-                    className="read-more-link"
-                    aria-label={`Read ${post.title}`}
-                  >
-                    <ArrowRight style={{ width: '16px', height: '16px' }} />
-                  </Link>
+                  <h3 className="card-title">
+                    <Link to={item.url}>{item.title}</Link>
+                  </h3>
+
+                  <p className="card-summary">{item.summary}</p>
+
+                  <div className="card-footer">
+                    <div className="card-tags">
+                      {item.tags.map((tag) => (
+                        <Link
+                          key={tag}
+                          to={`/tags/${tag.toLowerCase()}/`}
+                          className="tag-pill"
+                          style={{ textDecoration: 'none' }}
+                        >
+                          #{tag}
+                        </Link>
+                      ))}
+                    </div>
+
+                    <Link
+                      to={item.url}
+                      className="read-more-link"
+                      aria-label={`Explore ${item.title}`}
+                    >
+                      <ArrowRight style={{ width: '16px', height: '16px' }} />
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            )
+          })}
         </div>
       </div>
 
