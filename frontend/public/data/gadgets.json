@@ -13,19 +13,19 @@
     "zoomMeta": "Developed by Raspberry Pi Foundation • Released in 2023 • ~$60",
     "zoomCaption": "The latest iteration of the Raspberry Pi computer, featuring a 64-bit quad-core Arm Cortex-A76 processor, delivering substantial meaningful performance utilization.",
     "dataset": {
-      "data-name": "raspberry pi 5",
-      "data-developers": "raspberry pi foundation",
-      "data-year": "2023",
       "data-clean-year": "2023",
       "data-cost": "~$60",
+      "data-description": "the latest iteration of the raspberry pi computer, featuring a 64-bit quad-core arm cortex-a76 processor, delivering substantial meaningful performance utilization.",
+      "data-developers": "raspberry pi foundation",
+      "data-dimensions": "85 x 56 mm",
+      "data-features": "quad-core cortex-a76 videocore vii gpu dual 4kp60 hdmi pcie 2.0 interface",
+      "data-gpio": "40-pin gpio header",
+      "data-keywords": "sbc linux desktop iot ",
+      "data-legal": "none",
+      "data-name": "raspberry pi 5",
       "data-numeric-cost": "60",
       "data-systems": "broadcom bcm2712 linux",
-      "data-gpio": "40-pin gpio header",
-      "data-dimensions": "85 x 56 mm",
-      "data-legal": "none",
-      "data-features": "quad-core cortex-a76 videocore vii gpu dual 4kp60 hdmi pcie 2.0 interface",
-      "data-description": "the latest iteration of the raspberry pi computer, featuring a 64-bit quad-core arm cortex-a76 processor, delivering substantial meaningful performance utilization.",
-      "data-keywords": "sbc linux desktop iot "
+      "data-year": "2023"
     },
     "classes": [
       "gadget-card"
@@ -46,19 +46,19 @@
     "zoomMeta": "Developed by Flipper Devices Inc. • Released in 2020 • ~$169",
     "zoomCaption": "Multi-tool device for geeks in a toy-like body. It loves hacking digital stuff, such as radio protocols, access control systems, hardware, and more. It's fully open-source and customizable.",
     "dataset": {
-      "data-name": "flipper zero",
-      "data-developers": "flipper devices inc.",
-      "data-year": "2020",
       "data-clean-year": "2020",
       "data-cost": "~$169",
+      "data-description": "multi-tool device for geeks in a toy-like body. it loves hacking digital stuff, such as radio protocols, access control systems, hardware, and more. it's fully open-source and customizable.",
+      "data-developers": "flipper devices inc.",
+      "data-dimensions": "100 x 40 x 25 mm",
+      "data-features": "sub-1 ghz transceiver 125khz rfid nfc bluetooth le infrared transceiver ibutton gpio pins",
+      "data-gpio": "3.3v logic levels, 5v tolerant",
+      "data-keywords": "hacking pentesting rfid nfc sub-ghz ",
+      "data-legal": "legal to own, illegal to use for unauthorized access.",
+      "data-name": "flipper zero",
       "data-numeric-cost": "169",
       "data-systems": "arm cortex-m4 32-bit (stm32wb55)",
-      "data-gpio": "3.3v logic levels, 5v tolerant",
-      "data-dimensions": "100 x 40 x 25 mm",
-      "data-legal": "legal to own, illegal to use for unauthorized access.",
-      "data-features": "sub-1 ghz transceiver 125khz rfid nfc bluetooth le infrared transceiver ibutton gpio pins",
-      "data-description": "multi-tool device for geeks in a toy-like body. it loves hacking digital stuff, such as radio protocols, access control systems, hardware, and more. it's fully open-source and customizable.",
-      "data-keywords": "hacking pentesting rfid nfc sub-ghz "
+      "data-year": "2020"
     },
     "classes": [
       "gadget-card"
@@ -79,19 +79,19 @@
     "zoomMeta": "Developed by Arduino • Released in 2011 • ~$28",
     "zoomCaption": "The classic entry-level board for beginners and makers. Based on the ATmega328P microcontroller, it's robust, easy to use, and has a massive ecosystem of shields and libraries.",
     "dataset": {
-      "data-name": "arduino uno r3",
-      "data-developers": "arduino",
-      "data-year": "2011",
       "data-clean-year": "2011",
       "data-cost": "~$28",
+      "data-description": "the classic entry-level board for beginners and makers. based on the atmega328p microcontroller, it's robust, easy to use, and has a massive ecosystem of shields and libraries.",
+      "data-developers": "arduino",
+      "data-dimensions": "68.6 x 53.4 mm",
+      "data-features": "14 digital i/o pins (6 pwm) 6 analog inputs usb connection power jack icsp header",
+      "data-gpio": "5v logic",
+      "data-keywords": "microcontroller diy maker prototyping ",
+      "data-legal": "open source hardware",
+      "data-name": "arduino uno r3",
       "data-numeric-cost": "28",
       "data-systems": "atmega328p (8-bit avr)",
-      "data-gpio": "5v logic",
-      "data-dimensions": "68.6 x 53.4 mm",
-      "data-legal": "open source hardware",
-      "data-features": "14 digital i/o pins (6 pwm) 6 analog inputs usb connection power jack icsp header",
-      "data-description": "the classic entry-level board for beginners and makers. based on the atmega328p microcontroller, it's robust, easy to use, and has a massive ecosystem of shields and libraries.",
-      "data-keywords": "microcontroller diy maker prototyping "
+      "data-year": "2011"
     },
     "classes": [
       "gadget-card"
@@ -112,19 +112,19 @@
     "zoomMeta": "Developed by Espressif Systems • Released in 2016 • ~$5-10",
     "zoomCaption": "A feature-rich MCU with integrated Wi-Fi and dual-mode Bluetooth. Known for its low power consumption, high performance, and versatility for IoT applications.",
     "dataset": {
-      "data-name": "esp32",
-      "data-developers": "espressif systems",
-      "data-year": "2016",
       "data-clean-year": "2016",
       "data-cost": "~$5-10",
+      "data-description": "a feature-rich mcu with integrated wi-fi and dual-mode bluetooth. known for its low power consumption, high performance, and versatility for iot applications.",
+      "data-developers": "espressif systems",
+      "data-dimensions": "various (module dependent)",
+      "data-features": "wi-fi bluetooth/ble dual-core capacitive touch sensors hall sensor",
+      "data-gpio": "3.3v logic",
+      "data-keywords": "iot wi-fi bluetooth low power ",
+      "data-legal": "none specific",
+      "data-name": "esp32",
       "data-numeric-cost": "5",
       "data-systems": "xtensa® dual-core 32-bit lx6",
-      "data-gpio": "3.3v logic",
-      "data-dimensions": "various (module dependent)",
-      "data-legal": "none specific",
-      "data-features": "wi-fi bluetooth/ble dual-core capacitive touch sensors hall sensor",
-      "data-description": "a feature-rich mcu with integrated wi-fi and dual-mode bluetooth. known for its low power consumption, high performance, and versatility for iot applications.",
-      "data-keywords": "iot wi-fi bluetooth low power "
+      "data-year": "2016"
     },
     "classes": [
       "gadget-card"
@@ -145,19 +145,19 @@
     "zoomMeta": "Developed by STMicroelectronics, Various • Released in 2014 • ~$3-5",
     "zoomCaption": "A super affordable, powerful 32-bit ARM Cortex-M3 microcontroller development board. A step up from 8-bit controllers for performance-hungry tasks.",
     "dataset": {
-      "data-name": "stm32 blue pill",
-      "data-developers": "stmicroelectronics various",
-      "data-year": "2014",
       "data-clean-year": "2014",
       "data-cost": "~$3-5",
+      "data-description": "a super affordable, powerful 32-bit arm cortex-m3 microcontroller development board. a step up from 8-bit controllers for performance-hungry tasks.",
+      "data-developers": "stmicroelectronics various",
+      "data-dimensions": "53 x 22 mm",
+      "data-features": "usb interface swd debugging reset button user led",
+      "data-gpio": "3.3v logic (some 5v tolerant)",
+      "data-keywords": "arm stm32 affordable performance ",
+      "data-legal": "none",
+      "data-name": "stm32 blue pill",
       "data-numeric-cost": "3",
       "data-systems": "arm cortex-m3 (stm32f103c8t6)",
-      "data-gpio": "3.3v logic (some 5v tolerant)",
-      "data-dimensions": "53 x 22 mm",
-      "data-legal": "none",
-      "data-features": "usb interface swd debugging reset button user led",
-      "data-description": "a super affordable, powerful 32-bit arm cortex-m3 microcontroller development board. a step up from 8-bit controllers for performance-hungry tasks.",
-      "data-keywords": "arm stm32 affordable performance "
+      "data-year": "2014"
     },
     "classes": [
       "gadget-card"
@@ -178,19 +178,19 @@
     "zoomMeta": "Developed by Nordic Semiconductor • Released in 2018 • ~$50",
     "zoomCaption": "A versatile single-board development kit for Bluetooth Low Energy, Bluetooth mesh, NFC, Thread, and Zigbee applications.",
     "dataset": {
-      "data-name": "nrf52840 dk",
-      "data-developers": "nordic semiconductor",
-      "data-year": "2018",
       "data-clean-year": "2018",
       "data-cost": "~$50",
+      "data-description": "a versatile single-board development kit for bluetooth low energy, bluetooth mesh, nfc, thread, and zigbee applications.",
+      "data-developers": "nordic semiconductor",
+      "data-dimensions": "standard dk size",
+      "data-features": "bluetooth 5 nfc thread/zigbee usb buttons & leds",
+      "data-gpio": "3.3v logic",
+      "data-keywords": "ble bluetooth nordic iot ",
+      "data-legal": "none",
+      "data-name": "nrf52840 dk",
       "data-numeric-cost": "50",
       "data-systems": "arm cortex-m4",
-      "data-gpio": "3.3v logic",
-      "data-dimensions": "standard dk size",
-      "data-legal": "none",
-      "data-features": "bluetooth 5 nfc thread/zigbee usb buttons & leds",
-      "data-description": "a versatile single-board development kit for bluetooth low energy, bluetooth mesh, nfc, thread, and zigbee applications.",
-      "data-keywords": "ble bluetooth nordic iot "
+      "data-year": "2018"
     },
     "classes": [
       "gadget-card"
@@ -211,19 +211,19 @@
     "zoomMeta": "Developed by Nordic Semiconductor • Released in 2019 • ~$50+",
     "zoomCaption": "The world's first wireless System-on-Chip (SoC) with two Arm® Cortex®-M33 processors. Ideal for complex IoT applications involving LE Audio, professional lighting, and advanced wearables.",
     "dataset": {
-      "data-name": "nrf5340 dk",
-      "data-developers": "nordic semiconductor",
-      "data-year": "2019",
       "data-clean-year": "2019",
       "data-cost": "~$50+",
+      "data-description": "the world's first wireless system-on-chip (soc) with two arm® cortex®-m33 processors. ideal for complex iot applications involving le audio, professional lighting, and advanced wearables.",
+      "data-developers": "nordic semiconductor",
+      "data-dimensions": "standard dk size",
+      "data-features": "dual-core bluetooth 5.2 le audio direction finding nfc",
+      "data-gpio": "3.3v logic",
+      "data-keywords": "dual-core ble high performance audio ",
+      "data-legal": "none",
+      "data-name": "nrf5340 dk",
       "data-numeric-cost": "50",
       "data-systems": "dual arm cortex-m33",
-      "data-gpio": "3.3v logic",
-      "data-dimensions": "standard dk size",
-      "data-legal": "none",
-      "data-features": "dual-core bluetooth 5.2 le audio direction finding nfc",
-      "data-description": "the world's first wireless system-on-chip (soc) with two arm® cortex®-m33 processors. ideal for complex iot applications involving le audio, professional lighting, and advanced wearables.",
-      "data-keywords": "dual-core ble high performance audio "
+      "data-year": "2019"
     },
     "classes": [
       "gadget-card"
@@ -244,19 +244,19 @@
     "zoomMeta": "Developed by Raspberry Pi Foundation • Released in 2021 • ~$4",
     "zoomCaption": "A tiny, fast, and versatile board built using the RP2040, a brand-new microcontroller chip designed by Raspberry Pi in the UK.",
     "dataset": {
-      "data-name": "raspberry pi pico",
-      "data-developers": "raspberry pi foundation",
-      "data-year": "2021",
       "data-clean-year": "2021",
       "data-cost": "~$4",
+      "data-description": "a tiny, fast, and versatile board built using the rp2040, a brand-new microcontroller chip designed by raspberry pi in the uk.",
+      "data-developers": "raspberry pi foundation",
+      "data-dimensions": "51 x 21 mm",
+      "data-features": "dual-core pio (programmable i/o) usb 1.1 host/device drag-and-drop programming",
+      "data-gpio": "3.3v logic",
+      "data-keywords": "rp2040 micropython education low cost ",
+      "data-legal": "none",
+      "data-name": "raspberry pi pico",
       "data-numeric-cost": "4",
       "data-systems": "dual-core arm cortex-m0+ (rp2040)",
-      "data-gpio": "3.3v logic",
-      "data-dimensions": "51 x 21 mm",
-      "data-legal": "none",
-      "data-features": "dual-core pio (programmable i/o) usb 1.1 host/device drag-and-drop programming",
-      "data-description": "a tiny, fast, and versatile board built using the rp2040, a brand-new microcontroller chip designed by raspberry pi in the uk.",
-      "data-keywords": "rp2040 micropython education low cost "
+      "data-year": "2021"
     },
     "classes": [
       "gadget-card"
@@ -277,19 +277,19 @@
     "zoomMeta": "Developed by Espressif Systems, Open Source Community • Released in 2014 • ~$3-5",
     "zoomCaption": "A low-cost Wi-Fi microchip, with full TCP/IP stack and microcontroller capability but less powerful than the ESP32. Great for simple IoT nodes.",
     "dataset": {
-      "data-name": "nodemcu (esp8266)",
-      "data-developers": "espressif systems open source community",
-      "data-year": "2014",
       "data-clean-year": "2014",
       "data-cost": "~$3-5",
+      "data-description": "a low-cost wi-fi microchip, with full tcp/ip stack and microcontroller capability but less powerful than the esp32. great for simple iot nodes.",
+      "data-developers": "espressif systems open source community",
+      "data-dimensions": "49 x 24.5 mm",
+      "data-features": "wi-fi lua scripting usb-to-serial plug and play",
+      "data-gpio": "3.3v logic",
+      "data-keywords": "wi-fi iot lua cheap ",
+      "data-legal": "none",
+      "data-name": "nodemcu (esp8266)",
       "data-numeric-cost": "3",
       "data-systems": "tensilica l106 32-bit",
-      "data-gpio": "3.3v logic",
-      "data-dimensions": "49 x 24.5 mm",
-      "data-legal": "none",
-      "data-features": "wi-fi lua scripting usb-to-serial plug and play",
-      "data-description": "a low-cost wi-fi microchip, with full tcp/ip stack and microcontroller capability but less powerful than the esp32. great for simple iot nodes.",
-      "data-keywords": "wi-fi iot lua cheap "
+      "data-year": "2014"
     },
     "classes": [
       "gadget-card"
@@ -310,19 +310,19 @@
     "zoomMeta": "Developed by Meshtastic Community • Released in 2020 • ~$20-50",
     "zoomCaption": "An open-source, community-driven project that enables long-range, off-grid communication using inexpensive LoRa radios. Decentralized, encrypted mesh networking without central servers.",
     "dataset": {
-      "data-name": "meshtastic devices",
-      "data-developers": "meshtastic community",
-      "data-year": "2020",
       "data-clean-year": "2020",
       "data-cost": "~$20-50",
+      "data-description": "an open-source, community-driven project that enables long-range, off-grid communication using inexpensive lora radios. decentralized, encrypted mesh networking without central servers.",
+      "data-developers": "meshtastic community",
+      "data-dimensions": "various (e.g., 60 x 25 mm)",
+      "data-features": "long-range lora communication mesh networking encrypted messaging gps location sharing low power consumption",
+      "data-gpio": "varies by board (esp32/nrf52/rp2040)",
+      "data-keywords": "lora mesh off-grid communication ",
+      "data-legal": "uses ism bands (915mhz us / 868mhz eu). local regulations on duty cycle and power apply.",
+      "data-name": "meshtastic devices",
       "data-numeric-cost": "20",
       "data-systems": "esp32 nrf52 rp2040",
-      "data-gpio": "varies by board (esp32/nrf52/rp2040)",
-      "data-dimensions": "various (e.g., 60 x 25 mm)",
-      "data-legal": "uses ism bands (915mhz us / 868mhz eu). local regulations on duty cycle and power apply.",
-      "data-features": "long-range lora communication mesh networking encrypted messaging gps location sharing low power consumption",
-      "data-description": "an open-source, community-driven project that enables long-range, off-grid communication using inexpensive lora radios. decentralized, encrypted mesh networking without central servers.",
-      "data-keywords": "lora mesh off-grid communication "
+      "data-year": "2020"
     },
     "classes": [
       "gadget-card"
@@ -343,19 +343,19 @@
     "zoomMeta": "Developed by Hak5 • Released in 2020 • ~$140",
     "zoomCaption": "The gold standard for Wi-Fi auditing and penetration testing. It automates Wi-Fi auditing with a dedicated web interface and impressive suite of modules.",
     "dataset": {
-      "data-name": "wi-fi pineapple mark vii",
-      "data-developers": "hak5",
-      "data-year": "2020",
       "data-clean-year": "2020",
       "data-cost": "~$140",
+      "data-description": "the gold standard for wi-fi auditing and penetration testing. it automates wi-fi auditing with a dedicated web interface and impressive suite of modules.",
+      "data-developers": "hak5",
+      "data-dimensions": "107 x 93 x 21 mm",
+      "data-features": "pineap suite rogue access point emulation wpa handshake capture passive surveillance cloud c2 integration",
+      "data-gpio": "usb host, usb-c (module-based expansion)",
+      "data-keywords": "pentesting wi-fi auditing hak5 ",
+      "data-legal": "for authorized auditing only.",
+      "data-name": "wi-fi pineapple mark vii",
       "data-numeric-cost": "140",
       "data-systems": "openwrt (custom)",
-      "data-gpio": "usb host, usb-c (module-based expansion)",
-      "data-dimensions": "107 x 93 x 21 mm",
-      "data-legal": "for authorized auditing only.",
-      "data-features": "pineap suite rogue access point emulation wpa handshake capture passive surveillance cloud c2 integration",
-      "data-description": "the gold standard for wi-fi auditing and penetration testing. it automates wi-fi auditing with a dedicated web interface and impressive suite of modules.",
-      "data-keywords": "pentesting wi-fi auditing hak5 "
+      "data-year": "2020"
     },
     "classes": [
       "gadget-card"
@@ -376,19 +376,19 @@
     "zoomMeta": "Developed by Hak5 • Released in 2010 (Newer: 2022) • ~$60-80",
     "zoomCaption": "A keystroke injection tool masquerading as a USB flash drive. It types pre-programmed keystrokes at superhuman speeds to automate tasks or deploy payloads.",
     "dataset": {
-      "data-name": "usb rubber ducky",
-      "data-developers": "hak5",
-      "data-year": "2010 (Newer: 2022)",
       "data-clean-year": "2010",
       "data-cost": "~$60-80",
+      "data-description": "a keystroke injection tool masquerading as a usb flash drive. it types pre-programmed keystrokes at superhuman speeds to automate tasks or deploy payloads.",
+      "data-developers": "hak5",
+      "data-dimensions": "50 x 20 x 9 mm",
+      "data-features": "keystroke injection duckyscript stealthy form factor multi-os compatible",
+      "data-gpio": "n/a (hid interface)",
+      "data-keywords": "hid keystroke injection automation hak5 ",
+      "data-legal": "for authorized auditing only.",
+      "data-name": "usb rubber ducky",
       "data-numeric-cost": "60",
       "data-systems": "avr microcontroller",
-      "data-gpio": "n/a (hid interface)",
-      "data-dimensions": "50 x 20 x 9 mm",
-      "data-legal": "for authorized auditing only.",
-      "data-features": "keystroke injection duckyscript stealthy form factor multi-os compatible",
-      "data-description": "a keystroke injection tool masquerading as a usb flash drive. it types pre-programmed keystrokes at superhuman speeds to automate tasks or deploy payloads.",
-      "data-keywords": "hid keystroke injection automation hak5 "
+      "data-year": "2010 (Newer: 2022)"
     },
     "classes": [
       "gadget-card"
@@ -409,19 +409,19 @@
     "zoomMeta": "Developed by Hak5 • Released in 2017 • ~$60",
     "zoomCaption": "A covert System Administration and Penetration Testing tool aimed at Man-In-The-Middle attacks, network intelligence gathering, and surveillance.",
     "dataset": {
-      "data-name": "lan turtle",
-      "data-developers": "hak5",
-      "data-year": "2017",
       "data-clean-year": "2017",
       "data-cost": "~$60",
+      "data-description": "a covert system administration and penetration testing tool aimed at man-in-the-middle attacks, network intelligence gathering, and surveillance.",
+      "data-developers": "hak5",
+      "data-dimensions": "95 x 23 x 31 mm",
+      "data-features": "remote access (ssh/vpn) man-in-the-middle network scanning module support",
+      "data-gpio": "n/a (network interface)",
+      "data-keywords": "mitm network implant remote access hak5 ",
+      "data-legal": "for authorized auditing only.",
+      "data-name": "lan turtle",
       "data-numeric-cost": "60",
       "data-systems": "linux (openwrt base)",
-      "data-gpio": "n/a (network interface)",
-      "data-dimensions": "95 x 23 x 31 mm",
-      "data-legal": "for authorized auditing only.",
-      "data-features": "remote access (ssh/vpn) man-in-the-middle network scanning module support",
-      "data-description": "a covert system administration and penetration testing tool aimed at man-in-the-middle attacks, network intelligence gathering, and surveillance.",
-      "data-keywords": "mitm network implant remote access hak5 "
+      "data-year": "2017"
     },
     "classes": [
       "gadget-card"
@@ -442,19 +442,19 @@
     "zoomMeta": "Developed by Hak5 • Released in 2023 • ~$80",
     "zoomCaption": "A compact Ethernet multi-tool designed to provide covert remote access, painless packet captures, and secure VPN connections.",
     "dataset": {
-      "data-name": "packet squirrel mark ii",
-      "data-developers": "hak5",
-      "data-year": "2023",
       "data-clean-year": "2023",
       "data-cost": "~$80",
+      "data-description": "a compact ethernet multi-tool designed to provide covert remote access, painless packet captures, and secure vpn connections.",
+      "data-developers": "hak5",
+      "data-dimensions": "50 x 40 x 15 mm",
+      "data-features": "packet capture openvpn/wireguard support duckyscript payloads usb storage support",
+      "data-gpio": "assignable button & led",
+      "data-keywords": "packet capture vpn network analysis hak5 ",
+      "data-legal": "for authorized auditing only.",
+      "data-name": "packet squirrel mark ii",
       "data-numeric-cost": "80",
       "data-systems": "linux",
-      "data-gpio": "assignable button & led",
-      "data-dimensions": "50 x 40 x 15 mm",
-      "data-legal": "for authorized auditing only.",
-      "data-features": "packet capture openvpn/wireguard support duckyscript payloads usb storage support",
-      "data-description": "a compact ethernet multi-tool designed to provide covert remote access, painless packet captures, and secure vpn connections.",
-      "data-keywords": "packet capture vpn network analysis hak5 "
+      "data-year": "2023"
     },
     "classes": [
       "gadget-card"
@@ -475,19 +475,19 @@
     "zoomMeta": "Developed by Hak5 • Released in 2021 • ~$120",
     "zoomCaption": "A multi-function USB attack platform. It emulates trusted devices like keyboards, serial, Ethernet, and storage to execute payloads.",
     "dataset": {
-      "data-name": "bash bunny mark ii",
-      "data-developers": "hak5",
-      "data-year": "2021",
       "data-clean-year": "2021",
       "data-cost": "~$120",
+      "data-description": "a multi-function usb attack platform. it emulates trusted devices like keyboards, serial, ethernet, and storage to execute payloads.",
+      "data-developers": "hak5",
+      "data-dimensions": "portable usb form factor",
+      "data-features": "multiple attack vectors duckyscript + bash bluetooth le (mark ii) dedicated switch",
+      "data-gpio": "n/a (usb interface)",
+      "data-keywords": "usb attack multi-vector automation hak5 ",
+      "data-legal": "for authorized auditing only.",
+      "data-name": "bash bunny mark ii",
       "data-numeric-cost": "120",
       "data-systems": "linux (debian-based)",
-      "data-gpio": "n/a (usb interface)",
-      "data-dimensions": "portable usb form factor",
-      "data-legal": "for authorized auditing only.",
-      "data-features": "multiple attack vectors duckyscript + bash bluetooth le (mark ii) dedicated switch",
-      "data-description": "a multi-function usb attack platform. it emulates trusted devices like keyboards, serial, ethernet, and storage to execute payloads.",
-      "data-keywords": "usb attack multi-vector automation hak5 "
+      "data-year": "2021"
     },
     "classes": [
       "gadget-card"
@@ -508,19 +508,19 @@
     "zoomMeta": "Developed by Hak5 • Released in 2019 • ~$60",
     "zoomCaption": "A portable network attack tool for rapid reconnaissance and exfiltration. Plug it into a network and run payloads instantly.",
     "dataset": {
-      "data-name": "shark jack",
-      "data-developers": "hak5",
-      "data-year": "2019",
       "data-clean-year": "2019",
       "data-cost": "~$60",
+      "data-description": "a portable network attack tool for rapid reconnaissance and exfiltration. plug it into a network and run payloads instantly.",
+      "data-developers": "hak5",
+      "data-dimensions": "62 x 21 x 12 mm",
+      "data-features": "rapid network scanning instant payload execution ssh access rgb led feedback",
+      "data-gpio": "n/a (ethernet interface)",
+      "data-keywords": "network audit rapid recon ethernet hak5 ",
+      "data-legal": "for authorized auditing only.",
+      "data-name": "shark jack",
       "data-numeric-cost": "60",
       "data-systems": "linux (openwrt base)",
-      "data-gpio": "n/a (ethernet interface)",
-      "data-dimensions": "62 x 21 x 12 mm",
-      "data-legal": "for authorized auditing only.",
-      "data-features": "rapid network scanning instant payload execution ssh access rgb led feedback",
-      "data-description": "a portable network attack tool for rapid reconnaissance and exfiltration. plug it into a network and run payloads instantly.",
-      "data-keywords": "network audit rapid recon ethernet hak5 "
+      "data-year": "2019"
     },
     "classes": [
       "gadget-card"
@@ -541,19 +541,19 @@
     "zoomMeta": "Developed by Hak5 • Released in 2020 • ~$120",
     "zoomCaption": "An advanced keylogger with Wi-Fi and cloud management. It captures keystrokes and can inject payloads based on typed triggers.",
     "dataset": {
-      "data-name": "key croc",
-      "data-developers": "hak5",
-      "data-year": "2020",
       "data-clean-year": "2020",
       "data-cost": "~$120",
+      "data-description": "an advanced keylogger with wi-fi and cloud management. it captures keystrokes and can inject payloads based on typed triggers.",
+      "data-developers": "hak5",
+      "data-dimensions": "74 x 27 x 14 mm",
+      "data-features": "keylogging cloud c2 payload injection wi-fi connectivity",
+      "data-gpio": "n/a (usb passthrough)",
+      "data-keywords": "keylogger surveillance injection hak5 ",
+      "data-legal": "for authorized auditing only.",
+      "data-name": "key croc",
       "data-numeric-cost": "120",
       "data-systems": "linux",
-      "data-gpio": "n/a (usb passthrough)",
-      "data-dimensions": "74 x 27 x 14 mm",
-      "data-legal": "for authorized auditing only.",
-      "data-features": "keylogging cloud c2 payload injection wi-fi connectivity",
-      "data-description": "an advanced keylogger with wi-fi and cloud management. it captures keystrokes and can inject payloads based on typed triggers.",
-      "data-keywords": "keylogger surveillance injection hak5 "
+      "data-year": "2020"
     },
     "classes": [
       "gadget-card"
@@ -574,19 +574,19 @@
     "zoomMeta": "Developed by Hak5 • Released in 2019 • ~$200",
     "zoomCaption": "A stealthy HDMI man-in-the-middle device that intercepts and saves screenshots or video of the display signal.",
     "dataset": {
-      "data-name": "screen crab",
-      "data-developers": "hak5",
-      "data-year": "2019",
       "data-clean-year": "2019",
       "data-cost": "~$200",
+      "data-description": "a stealthy hdmi man-in-the-middle device that intercepts and saves screenshots or video of the display signal.",
+      "data-developers": "hak5",
+      "data-dimensions": "105 x 51 x 21 mm",
+      "data-features": "hdmi interception screenshot/video capture cloud c2 streaming passive operation",
+      "data-gpio": "n/a (hdmi interface)",
+      "data-keywords": "video interception hdmi surveillance hak5 ",
+      "data-legal": "for authorized auditing only.",
+      "data-name": "screen crab",
       "data-numeric-cost": "200",
       "data-systems": "embedded linux",
-      "data-gpio": "n/a (hdmi interface)",
-      "data-dimensions": "105 x 51 x 21 mm",
-      "data-legal": "for authorized auditing only.",
-      "data-features": "hdmi interception screenshot/video capture cloud c2 streaming passive operation",
-      "data-description": "a stealthy hdmi man-in-the-middle device that intercepts and saves screenshots or video of the display signal.",
-      "data-keywords": "video interception hdmi surveillance hak5 "
+      "data-year": "2019"
     },
     "classes": [
       "gadget-card"
@@ -607,19 +607,19 @@
     "zoomMeta": "Developed by Hak5 • Released in 2019 • ~$50",
     "zoomCaption": "A smart LAN tap that lets you listen to network traffic via USB-C. It operates as a passive tap or active USB-Ethernet adapter.",
     "dataset": {
-      "data-name": "plunder bug lan tap",
-      "data-developers": "hak5",
-      "data-year": "2019",
       "data-clean-year": "2019",
       "data-cost": "~$50",
+      "data-description": "a smart lan tap that lets you listen to network traffic via usb-c. it operates as a passive tap or active usb-ethernet adapter.",
+      "data-developers": "hak5",
+      "data-dimensions": "50 x 20 mm",
+      "data-features": "passive sniffing active scanning mode usb-c interface android compatible",
+      "data-gpio": "n/a",
+      "data-keywords": "lan tap sniffing network analysis hak5 ",
+      "data-legal": "for authorized auditing only.",
+      "data-name": "plunder bug lan tap",
       "data-numeric-cost": "50",
       "data-systems": "asix chipset",
-      "data-gpio": "n/a",
-      "data-dimensions": "50 x 20 mm",
-      "data-legal": "for authorized auditing only.",
-      "data-features": "passive sniffing active scanning mode usb-c interface android compatible",
-      "data-description": "a smart lan tap that lets you listen to network traffic via usb-c. it operates as a passive tap or active usb-ethernet adapter.",
-      "data-keywords": "lan tap sniffing network analysis hak5 "
+      "data-year": "2019"
     },
     "classes": [
       "gadget-card"
@@ -640,19 +640,19 @@
     "zoomMeta": "Developed by MG (distributed by Hak5) • Released in 2023 • ~$180",
     "zoomCaption": "A malicious USB cable that looks innocent but contains a wireless implant for keystroke injection framelogs, and more.",
     "dataset": {
-      "data-name": "o.mg cable elite",
-      "data-developers": "mg (distributed by hak5)",
-      "data-year": "2023",
       "data-clean-year": "2023",
       "data-cost": "~$180",
+      "data-description": "a malicious usb cable that looks innocent but contains a wireless implant for keystroke injection framelogs, and more.",
+      "data-developers": "mg (distributed by hak5)",
+      "data-dimensions": "standard cable length (1m)",
+      "data-features": "keystroke injection keylogging wi-fi c2 self-destruct",
+      "data-gpio": "internal microcontroller",
+      "data-keywords": "implant hid attack covert o.mg ",
+      "data-legal": "for authorized auditing only. illegal to use without consent.",
+      "data-name": "o.mg cable elite",
       "data-numeric-cost": "180",
       "data-systems": "embedded",
-      "data-gpio": "internal microcontroller",
-      "data-dimensions": "standard cable length (1m)",
-      "data-legal": "for authorized auditing only. illegal to use without consent.",
-      "data-features": "keystroke injection keylogging wi-fi c2 self-destruct",
-      "data-description": "a malicious usb cable that looks innocent but contains a wireless implant for keystroke injection framelogs, and more.",
-      "data-keywords": "implant hid attack covert o.mg "
+      "data-year": "2023"
     },
     "classes": [
       "gadget-card"
@@ -673,19 +673,19 @@
     "zoomMeta": "Developed by HakCat / Alex Lynd • Released in 2021 • ~$60",
     "zoomCaption": "A cute, accessible Wi-Fi hacking and development platform based on ESP8266 or ESP32-S3. Great for learning about deauth attacks and beacons.",
     "dataset": {
-      "data-name": "wi-fi nugget",
-      "data-developers": "hakcat / alex lynd",
-      "data-year": "2021",
       "data-clean-year": "2021",
       "data-cost": "~$60",
+      "data-description": "a cute, accessible wi-fi hacking and development platform based on esp8266 or esp32-s3. great for learning about deauth attacks and beacons.",
+      "data-developers": "hakcat / alex lynd",
+      "data-dimensions": "small (approx 40x40mm)",
+      "data-features": "deauth attacks beacon flooding oled display beginner friendly",
+      "data-gpio": "exposed gpio headers",
+      "data-keywords": "education wi-fi esp8266 nugget ",
+      "data-legal": "educational use only. deauth attacks are illegal on networks you don't own.",
+      "data-name": "wi-fi nugget",
       "data-numeric-cost": "60",
       "data-systems": "esp8266 esp32-s3",
-      "data-gpio": "exposed gpio headers",
-      "data-dimensions": "small (approx 40x40mm)",
-      "data-legal": "educational use only. deauth attacks are illegal on networks you don't own.",
-      "data-features": "deauth attacks beacon flooding oled display beginner friendly",
-      "data-description": "a cute, accessible wi-fi hacking and development platform based on esp8266 or esp32-s3. great for learning about deauth attacks and beacons.",
-      "data-keywords": "education wi-fi esp8266 nugget "
+      "data-year": "2021"
     },
     "classes": [
       "gadget-card"
@@ -706,19 +706,19 @@
     "zoomMeta": "Developed by RRG / Proxmark Community • Released in 2018/2021 • ~$300",
     "zoomCaption": "The industry standard for RFID/NFC research and cloning. It supports probing, reading, sniffing, and emulation of tags.",
     "dataset": {
-      "data-name": "proxmark 3 rdv4.01",
-      "data-developers": "rrg / proxmark community",
-      "data-year": "2018/2021",
       "data-clean-year": "2018/2021",
       "data-cost": "~$300",
+      "data-description": "the industry standard for rfid/nfc research and cloning. it supports probing, reading, sniffing, and emulation of tags.",
+      "data-developers": "rrg / proxmark community",
+      "data-dimensions": "54 x 87 x 10 mm",
+      "data-features": "hf/lf antenna support standalone mode mobile app support modular antennas",
+      "data-gpio": "expansion port",
+      "data-keywords": "rfid nfc cloning sdr ",
+      "data-legal": "cloning credentials without authorization is illegal.",
+      "data-name": "proxmark 3 rdv4.01",
       "data-numeric-cost": "300",
       "data-systems": "arm / fpga",
-      "data-gpio": "expansion port",
-      "data-dimensions": "54 x 87 x 10 mm",
-      "data-legal": "cloning credentials without authorization is illegal.",
-      "data-features": "hf/lf antenna support standalone mode mobile app support modular antennas",
-      "data-description": "the industry standard for rfid/nfc research and cloning. it supports probing, reading, sniffing, and emulation of tags.",
-      "data-keywords": "rfid nfc cloning sdr "
+      "data-year": "2018/2021"
     },
     "classes": [
       "gadget-card"
@@ -739,19 +739,19 @@
     "zoomMeta": "Developed by Raspberry Pi Foundation • Released in 2021 • ~$15",
     "zoomCaption": "A tiny, affordable single-board computer with quad-core power and Wi-Fi. A favorite for portable hacking projects and headless applications.",
     "dataset": {
-      "data-name": "raspberry pi zero 2 w",
-      "data-developers": "raspberry pi foundation",
-      "data-year": "2021",
       "data-clean-year": "2021",
       "data-cost": "~$15",
+      "data-description": "a tiny, affordable single-board computer with quad-core power and wi-fi. a favorite for portable hacking projects and headless applications.",
+      "data-developers": "raspberry pi foundation",
+      "data-dimensions": "65 x 30 mm",
+      "data-features": "quad-core cpu wi-fi & bluetooth csi camera connector mini hdmi",
+      "data-gpio": "40-pin gpio header (3.3v)",
+      "data-keywords": "sbc linux portable iot ",
+      "data-legal": "none",
+      "data-name": "raspberry pi zero 2 w",
       "data-numeric-cost": "15",
       "data-systems": "broadcom bcm2710a1 linux (raspberry pi os)",
-      "data-gpio": "40-pin gpio header (3.3v)",
-      "data-dimensions": "65 x 30 mm",
-      "data-legal": "none",
-      "data-features": "quad-core cpu wi-fi & bluetooth csi camera connector mini hdmi",
-      "data-description": "a tiny, affordable single-board computer with quad-core power and wi-fi. a favorite for portable hacking projects and headless applications.",
-      "data-keywords": "sbc linux portable iot "
+      "data-year": "2021"
     },
     "classes": [
       "gadget-card"
@@ -772,19 +772,19 @@
     "zoomMeta": "Developed by Great Scott Gadgets • Released in 2014 • ~$300",
     "zoomCaption": "An open-source Software Defined Radio (SDR) peripheral capable of transmission and reception of radio signals from 1 MHz to 6 GHz.",
     "dataset": {
-      "data-name": "hackrf one",
-      "data-developers": "great scott gadgets",
-      "data-year": "2014",
       "data-clean-year": "2014",
       "data-cost": "~$300",
+      "data-description": "an open-source software defined radio (sdr) peripheral capable of transmission and reception of radio signals from 1 mhz to 6 ghz.",
+      "data-developers": "great scott gadgets",
+      "data-dimensions": "120 x 75 mm",
+      "data-features": "1 mhz to 6 ghz range half-duplex transceiver up to 20 msps usb powered",
+      "data-gpio": "expansion headers",
+      "data-keywords": "sdr radio rf analysis open source ",
+      "data-legal": "transmitting on licensed bands without a license is illegal.",
+      "data-name": "hackrf one",
       "data-numeric-cost": "300",
       "data-systems": "cpld + arm cortex-m4",
-      "data-gpio": "expansion headers",
-      "data-dimensions": "120 x 75 mm",
-      "data-legal": "transmitting on licensed bands without a license is illegal.",
-      "data-features": "1 mhz to 6 ghz range half-duplex transceiver up to 20 msps usb powered",
-      "data-description": "an open-source software defined radio (sdr) peripheral capable of transmission and reception of radio signals from 1 mhz to 6 ghz.",
-      "data-keywords": "sdr radio rf analysis open source "
+      "data-year": "2014"
     },
     "classes": [
       "gadget-card"
@@ -805,19 +805,19 @@
     "zoomMeta": "Developed by Great Scott Gadgets • Released in 2019 • ~$90",
     "zoomCaption": "A hardware hacker's best friend. It is an extensible, open-source tool for USB hacking, logic analysis, and reverse engineering.",
     "dataset": {
-      "data-name": "greatfet one",
-      "data-developers": "great scott gadgets",
-      "data-year": "2019",
       "data-clean-year": "2019",
       "data-cost": "~$90",
+      "data-description": "a hardware hacker's best friend. it is an extensible, open-source tool for usb hacking, logic analysis, and reverse engineering.",
+      "data-developers": "great scott gadgets",
+      "data-dimensions": "100 x 100 mm",
+      "data-features": "usb analysis logic analysis versatile i/o python api",
+      "data-gpio": "100+ expansion pins",
+      "data-keywords": "hardware hacking usb reverse engineering debug ",
+      "data-legal": "none",
+      "data-name": "greatfet one",
       "data-numeric-cost": "90",
       "data-systems": "lpc4330 (arm cortex-m4)",
-      "data-gpio": "100+ expansion pins",
-      "data-dimensions": "100 x 100 mm",
-      "data-legal": "none",
-      "data-features": "usb analysis logic analysis versatile i/o python api",
-      "data-description": "a hardware hacker's best friend. it is an extensible, open-source tool for usb hacking, logic analysis, and reverse engineering.",
-      "data-keywords": "hardware hacking usb reverse engineering debug "
+      "data-year": "2019"
     },
     "classes": [
       "gadget-card"
@@ -838,19 +838,19 @@
     "zoomMeta": "Developed by Digistump • Released in 2012 • ~$2-5",
     "zoomCaption": "A tiny, Arduino-compatible development board that plugs directly into USB. Famous for being able to act as a BadUSB HID device cheaply.",
     "dataset": {
-      "data-name": "digispark (attiny85)",
-      "data-developers": "digistump",
-      "data-year": "2012",
       "data-clean-year": "2012",
       "data-cost": "~$2-5",
+      "data-description": "a tiny, arduino-compatible development board that plugs directly into usb. famous for being able to act as a badusb hid device cheaply.",
+      "data-developers": "digistump",
+      "data-dimensions": "25 x 18 mm",
+      "data-features": "usb compatible very low cost arduino compatible hid emulation",
+      "data-gpio": "6 i/o pins",
+      "data-keywords": "badusb cheap hid arduino ",
+      "data-legal": "use as badusb on unauthorized systems is illegal.",
+      "data-name": "digispark (attiny85)",
       "data-numeric-cost": "2",
       "data-systems": "attiny85",
-      "data-gpio": "6 i/o pins",
-      "data-dimensions": "25 x 18 mm",
-      "data-legal": "use as badusb on unauthorized systems is illegal.",
-      "data-features": "usb compatible very low cost arduino compatible hid emulation",
-      "data-description": "a tiny, arduino-compatible development board that plugs directly into usb. famous for being able to act as a badusb hid device cheaply.",
-      "data-keywords": "badusb cheap hid arduino "
+      "data-year": "2012"
     },
     "classes": [
       "gadget-card"
@@ -871,19 +871,19 @@
     "zoomMeta": "Developed by Travis Lin / Spacehuhn • Released in 2018+ (Multiple Versions) • ~$50",
     "zoomCaption": "A wearable ESP8266 development board that comes pre-flashed with the ESP8266 Deauther software. It allows you to test 2.4GHz Wi-Fi networks from your wrist.",
     "dataset": {
-      "data-name": "dstike deauther watch",
-      "data-developers": "travis lin / spacehuhn",
-      "data-year": "2018+ (Multiple Versions)",
       "data-clean-year": "2018",
       "data-cost": "~$50",
+      "data-description": "a wearable esp8266 development board that comes pre-flashed with the esp8266 deauther software. it allows you to test 2.4ghz wi-fi networks from your wrist.",
+      "data-developers": "travis lin / spacehuhn",
+      "data-dimensions": "wristwatch size",
+      "data-features": "deauth attacks packet monitoring oled display wearable",
+      "data-gpio": "internal esp8266 gpios",
+      "data-keywords": "deauther wearable wi-fi esp8266 ",
+      "data-legal": "deauth attacks are illegal on networks you don't own.",
+      "data-name": "dstike deauther watch",
       "data-numeric-cost": "50",
       "data-systems": "esp8266",
-      "data-gpio": "internal esp8266 gpios",
-      "data-dimensions": "wristwatch size",
-      "data-legal": "deauth attacks are illegal on networks you don't own.",
-      "data-features": "deauth attacks packet monitoring oled display wearable",
-      "data-description": "a wearable esp8266 development board that comes pre-flashed with the esp8266 deauther software. it allows you to test 2.4ghz wi-fi networks from your wrist.",
-      "data-keywords": "deauther wearable wi-fi esp8266 "
+      "data-year": "2018+ (Multiple Versions)"
     },
     "classes": [
       "gadget-card"

@@ -13,14 +13,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "arcade",
-      "data-creator": "esri",
-      "data-year": "2016",
-      "data-typing": "dynamically typed",
       "data-compiled": "interpreted",
+      "data-creator": "esri",
+      "data-description": "arcade is a portable, lightweight expression language written for use with the arcgis system. it is used to perform visualization, labeling, and popup calculations.",
+      "data-name": "arcade",
       "data-paradigm": "scripting functional ",
+      "data-typing": "dynamically typed",
       "data-usage": "arcgis mapping labeling data visualization ",
-      "data-description": "arcade is a portable, lightweight expression language written for use with the arcgis system. it is used to perform visualization, labeling, and popup calculations."
+      "data-year": "2016"
     },
     "classes": [
       "language-card"
@@ -41,14 +41,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "terraform",
-      "data-creator": "hashicorp",
-      "data-year": "2014",
-      "data-typing": "statically typed",
       "data-compiled": "interpreted / applied by cli",
+      "data-creator": "hashicorp",
+      "data-description": "terraform is an open-source infrastructure as code software tool that provides a consistent cli workflow to manage hundreds of cloud services.",
+      "data-name": "terraform",
       "data-paradigm": "declarative infrastructure as code ",
+      "data-typing": "statically typed",
       "data-usage": "infrastructure as code cloud provisioning devops ",
-      "data-description": "terraform is an open-source infrastructure as code software tool that provides a consistent cli workflow to manage hundreds of cloud services."
+      "data-year": "2014"
     },
     "classes": [
       "language-card"
@@ -69,14 +69,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "swift",
-      "data-creator": "chris lattner (apple)",
-      "data-year": "2014",
-      "data-typing": "statically typed",
       "data-compiled": "compiled",
+      "data-creator": "chris lattner (apple)",
+      "data-description": "swift is a powerful and intuitive programming language for ios, ipados, macos, tvos, and watchos. writing swift code is interactive and fun, the syntax is concise yet expressive.",
+      "data-name": "swift",
       "data-paradigm": "protocol-oriented object-oriented functional imperative ",
+      "data-typing": "statically typed",
       "data-usage": "ios development macos development server-side swift ",
-      "data-description": "swift is a powerful and intuitive programming language for ios, ipados, macos, tvos, and watchos. writing swift code is interactive and fun, the syntax is concise yet expressive."
+      "data-year": "2014"
     },
     "classes": [
       "language-card"
@@ -97,14 +97,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "sqlx",
-      "data-creator": "jmoiron (go) / launchbadge (rust)",
-      "data-year": "2013",
-      "data-typing": "statically typed (strong)",
       "data-compiled": "compiled (part of rust/go binary)",
+      "data-creator": "jmoiron (go) / launchbadge (rust)",
+      "data-description": "sqlx is not a language but a modern sql toolkit for go and rust, providing type-safe, compile-time checked sql queries and async support.",
+      "data-name": "sqlx",
       "data-paradigm": "asynchronous declarative (embedded) ",
+      "data-typing": "statically typed (strong)",
       "data-usage": "backend development database access ",
-      "data-description": "sqlx is not a language but a modern sql toolkit for go and rust, providing type-safe, compile-time checked sql queries and async support."
+      "data-year": "2013"
     },
     "classes": [
       "language-card"
@@ -125,14 +125,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "typescript",
-      "data-creator": "anders hejlsberg",
-      "data-year": "2012",
-      "data-typing": "statically typed",
       "data-compiled": "transpiled to javascript",
+      "data-creator": "anders hejlsberg",
+      "data-description": "typescript is a free and open-source programming language developed and maintained by microsoft. it is a strict syntactical superset of javascript and adds optional static typing to the language.",
+      "data-name": "typescript",
       "data-paradigm": "object-oriented functional imperative ",
+      "data-typing": "statically typed",
       "data-usage": "web development large scale js applications ",
-      "data-description": "typescript is a free and open-source programming language developed and maintained by microsoft. it is a strict syntactical superset of javascript and adds optional static typing to the language."
+      "data-year": "2012"
     },
     "classes": [
       "language-card"
@@ -153,14 +153,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "ansible",
-      "data-creator": "michael dehaan",
-      "data-year": "2012",
-      "data-typing": "dynamically typed",
       "data-compiled": "interpreted",
+      "data-creator": "michael dehaan",
+      "data-description": "ansible is an open-source software provisioning, configuration management, and application-deployment tool enabling infrastructure as code.",
+      "data-name": "ansible",
       "data-paradigm": "procedural imperative automation ",
+      "data-typing": "dynamically typed",
       "data-usage": "configuration management application deployment automation ",
-      "data-description": "ansible is an open-source software provisioning, configuration management, and application-deployment tool enabling infrastructure as code."
+      "data-year": "2012"
     },
     "classes": [
       "language-card"
@@ -181,14 +181,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "julia",
-      "data-creator": "jeff bezanson et al.",
-      "data-year": "2012",
-      "data-typing": "dynamically typed",
       "data-compiled": "just-in-time (jit) compiled (llvm)",
+      "data-creator": "jeff bezanson et al.",
+      "data-description": "julia is a high-level, high-performance, dynamic programming language. it is well suited for numerical analysis and computational science.",
+      "data-name": "julia",
       "data-paradigm": "multiple dispatch functional imperative ",
+      "data-typing": "dynamically typed",
       "data-usage": "scientific computing data science machine learning ",
-      "data-description": "julia is a high-level, high-performance, dynamic programming language. it is well suited for numerical analysis and computational science."
+      "data-year": "2012"
     },
     "classes": [
       "language-card"
@@ -209,14 +209,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "kotlin",
-      "data-creator": "jetbrains",
-      "data-year": "2011",
-      "data-typing": "statically typed",
       "data-compiled": "compiled to bytecode (jvm), js, or native",
+      "data-creator": "jetbrains",
+      "data-description": "kotlin is a cross-platform, statically typed, general-purpose programming language with type inference. it is designed to interoperate fully with java.",
+      "data-name": "kotlin",
       "data-paradigm": "object-oriented functional imperative ",
+      "data-typing": "statically typed",
       "data-usage": "android development server-side development multiplatform mobile ",
-      "data-description": "kotlin is a cross-platform, statically typed, general-purpose programming language with type inference. it is designed to interoperate fully with java."
+      "data-year": "2011"
     },
     "classes": [
       "language-card"
@@ -237,14 +237,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "dart",
-      "data-creator": "lars bak, kasper lund",
-      "data-year": "2011",
-      "data-typing": "statically typed",
       "data-compiled": "compiled (aot for mobile, jit for dev) / transpiled to js",
+      "data-creator": "lars bak, kasper lund",
+      "data-description": "dart is a client-optimized language for fast apps on any platform. it is developed by google and is used to build mobile, desktop, server, and web applications.",
+      "data-name": "dart",
       "data-paradigm": "object-oriented functional imperative reflective ",
+      "data-typing": "statically typed",
       "data-usage": "cross-platform mobile apps (flutter) web apps ",
-      "data-description": "dart is a client-optimized language for fast apps on any platform. it is developed by google and is used to build mobile, desktop, server, and web applications."
+      "data-year": "2011"
     },
     "classes": [
       "language-card"
@@ -265,14 +265,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "rust",
-      "data-creator": "graydon hoare",
-      "data-year": "2010",
-      "data-typing": "statically typed",
       "data-compiled": "compiled",
+      "data-creator": "graydon hoare",
+      "data-description": "rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency. it enforces memory safety without garbage collection.",
+      "data-name": "rust",
       "data-paradigm": "multi-paradigm concurrent functional imperative ",
+      "data-typing": "statically typed",
       "data-usage": "systems programming webassembly cli tools game engines ",
-      "data-description": "rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency. it enforces memory safety without garbage collection."
+      "data-year": "2010"
     },
     "classes": [
       "language-card"
@@ -293,14 +293,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "go",
-      "data-creator": "robert griesemer, rob pike, ken thompson",
-      "data-year": "2009",
-      "data-typing": "statically typed",
       "data-compiled": "compiled",
+      "data-creator": "robert griesemer, rob pike, ken thompson",
+      "data-description": "go is a statically typed, compiled programming language designed at google. it is syntactically similar to c, but with memory safety, garbage collection, structural typing, and csp-style concurrency.",
+      "data-name": "go",
       "data-paradigm": "concurrent imperative structured ",
+      "data-typing": "statically typed",
       "data-usage": "cloud services microservices networking devops tools ",
-      "data-description": "go is a statically typed, compiled programming language designed at google. it is syntactically similar to c, but with memory safety, garbage collection, structural typing, and csp-style concurrency."
+      "data-year": "2009"
     },
     "classes": [
       "language-card"
@@ -321,14 +321,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "scratch",
-      "data-creator": "mit media lab",
-      "data-year": "2007",
-      "data-typing": "dynamically typed",
       "data-compiled": "interpreted",
+      "data-creator": "mit media lab",
+      "data-description": "scratch is a block-based visual programming language and website targeted primarily at children.",
+      "data-name": "scratch",
       "data-paradigm": "event-driven block-based object-oriented ",
+      "data-typing": "dynamically typed",
       "data-usage": "education introductory programming ",
-      "data-description": "scratch is a block-based visual programming language and website targeted primarily at children."
+      "data-year": "2007"
     },
     "classes": [
       "language-card"
@@ -349,14 +349,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "markdown",
-      "data-creator": "john gruber",
-      "data-year": "2004",
-      "data-typing": "n/a",
       "data-compiled": "parsed to html",
+      "data-creator": "john gruber",
+      "data-description": "markdown is a lightweight markup language for creating formatted text using a plain-text editor.",
+      "data-name": "markdown",
       "data-paradigm": "markup declarative ",
+      "data-typing": "n/a",
       "data-usage": "documentation readme files static sites note-taking ",
-      "data-description": "markdown is a lightweight markup language for creating formatted text using a plain-text editor."
+      "data-year": "2004"
     },
     "classes": [
       "language-card"
@@ -377,14 +377,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "scala",
-      "data-creator": "martin odersky",
-      "data-year": "2004",
-      "data-typing": "statically typed",
       "data-compiled": "compiled to bytecode (jvm)",
+      "data-creator": "martin odersky",
+      "data-description": "scala is a strong statically typed general-purpose programming language which supports both object-oriented programming and functional programming.",
+      "data-name": "scala",
       "data-paradigm": "functional object-oriented imperative ",
+      "data-typing": "statically typed",
       "data-usage": "big data (spark) backend services distributed systems ",
-      "data-description": "scala is a strong statically typed general-purpose programming language which supports both object-oriented programming and functional programming."
+      "data-year": "2004"
     },
     "classes": [
       "language-card"
@@ -405,14 +405,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "postgis",
-      "data-creator": "refractions research",
-      "data-year": "2001",
-      "data-typing": "statically typed (schema)",
       "data-compiled": "interpreted (db extension)",
+      "data-creator": "refractions research",
+      "data-description": "postgis is a spatial database extender for postgresql object-relational database. it adds support for geographic objects allowing location queries to be run in sql.",
+      "data-name": "postgis",
       "data-paradigm": "declarative spatial ",
+      "data-typing": "statically typed (schema)",
       "data-usage": "gis spatial analysis mapping database ",
-      "data-description": "postgis is a spatial database extender for postgresql object-relational database. it adds support for geographic objects allowing location queries to be run in sql."
+      "data-year": "2001"
     },
     "classes": [
       "language-card"
@@ -433,14 +433,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "c#",
-      "data-creator": "anders hejlsberg",
-      "data-year": "2000",
-      "data-typing": "statically typed",
       "data-compiled": "compiled to il, jit compiled by clr",
+      "data-creator": "anders hejlsberg",
+      "data-description": "c# is a modern, object-oriented, and type-safe programming language. it enables developers to build many types of secure and robust applications that run in the .net ecosystem.",
+      "data-name": "c#",
       "data-paradigm": "object-oriented component-oriented functional imperative ",
+      "data-typing": "statically typed",
       "data-usage": "enterprise applications game development (unity) web development mobile apps ",
-      "data-description": "c# is a modern, object-oriented, and type-safe programming language. it enables developers to build many types of secure and robust applications that run in the .net ecosystem."
+      "data-year": "2000"
     },
     "classes": [
       "language-card"
@@ -461,14 +461,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "gdal",
-      "data-creator": "frank warmerdam",
-      "data-year": "1998",
-      "data-typing": "statically typed (c++)",
       "data-compiled": "compiled (c++)",
+      "data-creator": "frank warmerdam",
+      "data-description": "the geospatial data abstraction library (gdal) is a translator library for raster and vector geospatial data formats.",
+      "data-name": "gdal",
       "data-paradigm": "object-oriented procedural ",
+      "data-typing": "statically typed (c++)",
       "data-usage": "gis data conversion raster processing vector manipulation ",
-      "data-description": "the geospatial data abstraction library (gdal) is a translator library for raster and vector geospatial data formats."
+      "data-year": "1998"
     },
     "classes": [
       "language-card"
@@ -489,14 +489,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "css",
-      "data-creator": "håkon wium lie",
-      "data-year": "1996",
-      "data-typing": "n/a",
       "data-compiled": "parsed by browser",
+      "data-creator": "håkon wium lie",
+      "data-description": "cascading style sheets (css) is a style sheet language used for describing the presentation of a document written in a markup language such as html.",
+      "data-name": "css",
       "data-paradigm": "declarative style sheet ",
+      "data-typing": "n/a",
       "data-usage": "web design user interfaces animations ",
-      "data-description": "cascading style sheets (css) is a style sheet language used for describing the presentation of a document written in a markup language such as html."
+      "data-year": "1996"
     },
     "classes": [
       "language-card"
@@ -517,14 +517,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "javascript",
-      "data-creator": "brendan eich",
-      "data-year": "1995",
-      "data-typing": "dynamically typed",
       "data-compiled": "just-in-time compiled (often called interpreted)",
+      "data-creator": "brendan eich",
+      "data-description": "javascript is a programming language that is one of the core technologies of the world wide web, alongside html and css.",
+      "data-name": "javascript",
       "data-paradigm": "event-driven functional imperative ",
+      "data-typing": "dynamically typed",
       "data-usage": "web development (frontend & backend) mobile app development game development ",
-      "data-description": "javascript is a programming language that is one of the core technologies of the world wide web, alongside html and css."
+      "data-year": "1995"
     },
     "classes": [
       "language-card"
@@ -545,14 +545,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "java",
-      "data-creator": "james gosling",
-      "data-year": "1995",
-      "data-typing": "statically typed",
       "data-compiled": "compiled to bytecode, interpreted by jvm",
+      "data-creator": "james gosling",
+      "data-description": "java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.",
+      "data-name": "java",
       "data-paradigm": "object-oriented imperative concurrent ",
+      "data-typing": "statically typed",
       "data-usage": "enterprise applications android apps big data banking ",
-      "data-description": "java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible."
+      "data-year": "1995"
     },
     "classes": [
       "language-card"
@@ -573,14 +573,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "ruby",
-      "data-creator": "yukihiro matsumoto (matz)",
-      "data-year": "1995",
-      "data-typing": "dynamically typed",
       "data-compiled": "interpreted",
+      "data-creator": "yukihiro matsumoto (matz)",
+      "data-description": "ruby is a dynamic, open source programming language with a focus on simplicity and productivity. it has an elegant syntax that is natural to read and easy to write.",
+      "data-name": "ruby",
       "data-paradigm": "object-oriented functional imperative ",
+      "data-typing": "dynamically typed",
       "data-usage": "web development scripting prototyping ",
-      "data-description": "ruby is a dynamic, open source programming language with a focus on simplicity and productivity. it has an elegant syntax that is natural to read and easy to write."
+      "data-year": "1995"
     },
     "classes": [
       "language-card"
@@ -601,14 +601,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "php",
-      "data-creator": "rasmus lerdorf",
-      "data-year": "1994",
-      "data-typing": "dynamically typed (with optional typing)",
       "data-compiled": "interpreted",
+      "data-creator": "rasmus lerdorf",
+      "data-description": "php is a popular general-purpose scripting language that is especially suited to web development. it was originally created by danish-canadian programmer rasmus lerdorf.",
+      "data-name": "php",
       "data-paradigm": "imperative functional object-oriented procedural ",
+      "data-typing": "dynamically typed (with optional typing)",
       "data-usage": "web development (backend) cms (wordpress, drupal) e-commerce ",
-      "data-description": "php is a popular general-purpose scripting language that is especially suited to web development. it was originally created by danish-canadian programmer rasmus lerdorf."
+      "data-year": "1994"
     },
     "classes": [
       "language-card"
@@ -629,14 +629,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "html",
-      "data-creator": "tim berners-lee",
-      "data-year": "1993",
-      "data-typing": "n/a",
       "data-compiled": "parsed by browser",
+      "data-creator": "tim berners-lee",
+      "data-description": "hypertext markup language (html) is the standard markup language for documents designed to be displayed in a web browser.",
+      "data-name": "html",
       "data-paradigm": "markup declarative ",
+      "data-typing": "n/a",
       "data-usage": "web development email templates web applications ",
-      "data-description": "hypertext markup language (html) is the standard markup language for documents designed to be displayed in a web browser."
+      "data-year": "1993"
     },
     "classes": [
       "language-card"
@@ -657,14 +657,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "r",
-      "data-creator": "ross ihaka, robert gentleman",
-      "data-year": "1993",
-      "data-typing": "dynamically typed",
       "data-compiled": "interpreted",
+      "data-creator": "ross ihaka, robert gentleman",
+      "data-description": "r is a programming language and free software environment for statistical computing and graphics supported by the r core team and the r foundation for statistical computing.",
+      "data-name": "r",
       "data-paradigm": "functional procedural reflective imperative ",
+      "data-typing": "dynamically typed",
       "data-usage": "statistical analysis data visualization bioinformatics machine learning ",
-      "data-description": "r is a programming language and free software environment for statistical computing and graphics supported by the r core team and the r foundation for statistical computing."
+      "data-year": "1993"
     },
     "classes": [
       "language-card"
@@ -685,14 +685,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "lua",
-      "data-creator": "roberto ierusalimschy",
-      "data-year": "1993",
-      "data-typing": "dynamically typed",
       "data-compiled": "interpreted (bytecode)",
+      "data-creator": "roberto ierusalimschy",
+      "data-description": "lua is a lightweight, high-level, multi-paradigm programming language designed primarily for embedded use in applications.",
+      "data-name": "lua",
       "data-paradigm": "multi-paradigm scripting procedural functional ",
+      "data-typing": "dynamically typed",
       "data-usage": "game development (roblox, wow) embedded systems scripting ",
-      "data-description": "lua is a lightweight, high-level, multi-paradigm programming language designed primarily for embedded use in applications."
+      "data-year": "1993"
     },
     "classes": [
       "language-card"
@@ -713,14 +713,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "python",
-      "data-creator": "guido van rossum",
-      "data-year": "1991",
-      "data-typing": "dynamically typed",
       "data-compiled": "interpreted",
+      "data-creator": "guido van rossum",
+      "data-description": "python is a high-level, general-purpose programming language. its design philosophy emphasizes code readability with the use of significant indentation.",
+      "data-name": "python",
       "data-paradigm": "object-oriented procedural functional ",
+      "data-typing": "dynamically typed",
       "data-usage": "web development data science artificial intelligence scientific computing automation ",
-      "data-description": "python is a high-level, general-purpose programming language. its design philosophy emphasizes code readability with the use of significant indentation."
+      "data-year": "1991"
     },
     "classes": [
       "language-card"
@@ -741,14 +741,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "haskell",
-      "data-creator": "haskell committee",
-      "data-year": "1990",
-      "data-typing": "statically typed (strong)",
       "data-compiled": "compiled",
+      "data-creator": "haskell committee",
+      "data-description": "haskell is a general-purpose, statically typed, purely functional programming language with type inference and lazy evaluation.",
+      "data-name": "haskell",
       "data-paradigm": "purely functional ",
+      "data-typing": "statically typed (strong)",
       "data-usage": "academic research fintech high-assurance systems ",
-      "data-description": "haskell is a general-purpose, statically typed, purely functional programming language with type inference and lazy evaluation."
+      "data-year": "1990"
     },
     "classes": [
       "language-card"
@@ -769,14 +769,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "shell (bash)",
-      "data-creator": "brian fox",
-      "data-year": "1989",
-      "data-typing": "untyped (everything is a string)",
       "data-compiled": "interpreted",
+      "data-creator": "brian fox",
+      "data-description": "unix shell is a command-line interpreter or shell that provides a command line user interface for unix-like operating systems. bash is the most common default shell.",
+      "data-name": "shell (bash)",
       "data-paradigm": "imperative scripting ",
+      "data-typing": "untyped (everything is a string)",
       "data-usage": "system administration devops automation scripts ",
-      "data-description": "unix shell is a command-line interpreter or shell that provides a command line user interface for unix-like operating systems. bash is the most common default shell."
+      "data-year": "1989"
     },
     "classes": [
       "language-card"
@@ -797,14 +797,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "perl",
-      "data-creator": "larry wall",
-      "data-year": "1987",
-      "data-typing": "dynamically typed",
       "data-compiled": "interpreted",
+      "data-creator": "larry wall",
+      "data-description": "perl is a family of high-level, general-purpose, interpreted, dynamic programming languages. 'perl 5' is the one in common use.",
+      "data-name": "perl",
       "data-paradigm": "multi-paradigm functional imperative ",
+      "data-typing": "dynamically typed",
       "data-usage": "system administration text processing legacy web ",
-      "data-description": "perl is a family of high-level, general-purpose, interpreted, dynamic programming languages. 'perl 5' is the one in common use."
+      "data-year": "1987"
     },
     "classes": [
       "language-card"
@@ -825,14 +825,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "c++",
-      "data-creator": "bjarne stroustrup",
-      "data-year": "1985",
-      "data-typing": "statically typed",
       "data-compiled": "compiled",
+      "data-creator": "bjarne stroustrup",
+      "data-description": "c++ is a high-level, general-purpose programming language created by bjarne stroustrup as an extension of the c programming language.",
+      "data-name": "c++",
       "data-paradigm": "procedural functional object-oriented generic ",
+      "data-typing": "statically typed",
       "data-usage": "game development system/software drivers client-server ",
-      "data-description": "c++ is a high-level, general-purpose programming language created by bjarne stroustrup as an extension of the c programming language."
+      "data-year": "1985"
     },
     "classes": [
       "language-card"
@@ -853,14 +853,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "matlab",
-      "data-creator": "cleve moler",
-      "data-year": "1984",
-      "data-typing": "dynamically typed",
       "data-compiled": "interpreted",
+      "data-creator": "cleve moler",
+      "data-description": "matlab is a proprietary multi-paradigm programming language and numeric computing environment developed by mathworks.",
+      "data-name": "matlab",
       "data-paradigm": "multi-paradigm functional imperative procedural ",
+      "data-typing": "dynamically typed",
       "data-usage": "engineering linear algebra signal processing control systems ",
-      "data-description": "matlab is a proprietary multi-paradigm programming language and numeric computing environment developed by mathworks."
+      "data-year": "1984"
     },
     "classes": [
       "language-card"
@@ -881,14 +881,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "proj",
-      "data-creator": "gerald evenden",
-      "data-year": "1980s",
-      "data-typing": "statically typed",
       "data-compiled": "compiled (c++)",
+      "data-creator": "gerald evenden",
+      "data-description": "proj is a generic coordinate transformation software that transforms geospatial coordinates from one coordinate reference system (crs) to another.",
+      "data-name": "proj",
       "data-paradigm": "mathematical transformation ",
+      "data-typing": "statically typed",
       "data-usage": "map projections coordinate transformation geodesy ",
-      "data-description": "proj is a generic coordinate transformation software that transforms geospatial coordinates from one coordinate reference system (crs) to another."
+      "data-year": "1980s"
     },
     "classes": [
       "language-card"
@@ -909,14 +909,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "sql",
-      "data-creator": "donald d. chamberlin, raymond f. boyce",
-      "data-year": "1974",
-      "data-typing": "statically typed (schema-based)",
       "data-compiled": "interpreted by db engine",
+      "data-creator": "donald d. chamberlin, raymond f. boyce",
+      "data-description": "structured query language (sql) is a domain-specific language used in programming and designed for managing data held in a relational database management system (rdbms).",
+      "data-name": "sql",
       "data-paradigm": "declarative set-based ",
+      "data-typing": "statically typed (schema-based)",
       "data-usage": "database management data analysis backend development ",
-      "data-description": "structured query language (sql) is a domain-specific language used in programming and designed for managing data held in a relational database management system (rdbms)."
+      "data-year": "1974"
     },
     "classes": [
       "language-card"
@@ -937,14 +937,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "c",
-      "data-creator": "dennis ritchie",
-      "data-year": "1972",
-      "data-typing": "statically typed",
       "data-compiled": "compiled",
+      "data-creator": "dennis ritchie",
+      "data-description": "c is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion, with a static type system.",
+      "data-name": "c",
       "data-paradigm": "imperative procedural structured ",
+      "data-typing": "statically typed",
       "data-usage": "operating systems embedded systems drivers kernels ",
-      "data-description": "c is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion, with a static type system."
+      "data-year": "1972"
     },
     "classes": [
       "language-card"
@@ -965,14 +965,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "prolog",
-      "data-creator": "alain colmerauer, robert kowalski",
-      "data-year": "1972",
-      "data-typing": "untyped / dynamic",
       "data-compiled": "interpreted / compiled (wam)",
+      "data-creator": "alain colmerauer, robert kowalski",
+      "data-description": "prolog is a logic programming language associated with artificial intelligence and computational linguistics.",
+      "data-name": "prolog",
       "data-paradigm": "logic declarative ",
+      "data-typing": "untyped / dynamic",
       "data-usage": "ai natural language processing expert systems ",
-      "data-description": "prolog is a logic programming language associated with artificial intelligence and computational linguistics."
+      "data-year": "1972"
     },
     "classes": [
       "language-card"
@@ -993,14 +993,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "cobol",
-      "data-creator": "codasyl (grace hopper)",
-      "data-year": "1959",
-      "data-typing": "statically typed",
       "data-compiled": "compiled",
+      "data-creator": "codasyl (grace hopper)",
+      "data-description": "cobol (common business-oriented language) is a compiled english-like computer programming language designed for business use.",
+      "data-name": "cobol",
       "data-paradigm": "imperative procedural object-oriented (modern) ",
+      "data-typing": "statically typed",
       "data-usage": "banking insurance government systems ",
-      "data-description": "cobol (common business-oriented language) is a compiled english-like computer programming language designed for business use."
+      "data-year": "1959"
     },
     "classes": [
       "language-card"
@@ -1021,14 +1021,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "lisp",
-      "data-creator": "john mccarthy",
-      "data-year": "1958",
-      "data-typing": "dynamically typed",
       "data-compiled": "interpreted / compiled",
+      "data-creator": "john mccarthy",
+      "data-description": "lisp (list processing) is a family of programming languages with a long history and a distinctive, fully parenthesized prefix notation.",
+      "data-name": "lisp",
       "data-paradigm": "functional metaprogramming ",
+      "data-typing": "dynamically typed",
       "data-usage": "ai research emacs (elisp) autocad (autolisp) ",
-      "data-description": "lisp (list processing) is a family of programming languages with a long history and a distinctive, fully parenthesized prefix notation."
+      "data-year": "1958"
     },
     "classes": [
       "language-card"
@@ -1049,14 +1049,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "fortran",
-      "data-creator": "john backus (ibm)",
-      "data-year": "1957",
-      "data-typing": "statically typed",
       "data-compiled": "compiled",
+      "data-creator": "john backus (ibm)",
+      "data-description": "fortran (formula translation) is a general-purpose, compiled imperative programming language that is especially suited to numeric computation and scientific computing.",
+      "data-name": "fortran",
       "data-paradigm": "imperative procedural object-oriented (modern) ",
+      "data-typing": "statically typed",
       "data-usage": "high-performance computing physics simulations weather forecasting ",
-      "data-description": "fortran (formula translation) is a general-purpose, compiled imperative programming language that is especially suited to numeric computation and scientific computing."
+      "data-year": "1957"
     },
     "classes": [
       "language-card"
@@ -1077,14 +1077,14 @@
     "zoomMeta": "",
     "zoomCaption": "",
     "dataset": {
-      "data-name": "assembly",
-      "data-creator": "various (kathleen booth)",
-      "data-year": "1949",
-      "data-typing": "untyped",
       "data-compiled": "assembled to machine code",
+      "data-creator": "various (kathleen booth)",
+      "data-description": "assembly language is any low-level programming language in which there is a very strong correspondence between the instruction in the language and the architecture's machine code instructions.",
+      "data-name": "assembly",
       "data-paradigm": "imperative unstructured ",
+      "data-typing": "untyped",
       "data-usage": "os kernels drivers embedded systems reverse engineering ",
-      "data-description": "assembly language is any low-level programming language in which there is a very strong correspondence between the instruction in the language and the architecture's machine code instructions."
+      "data-year": "1949"
     },
     "classes": [
       "language-card"

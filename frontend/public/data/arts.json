@@ -13,10 +13,10 @@
     "zoomMeta": "",
     "zoomCaption": "A contemporary painting reflecting on modern themes through abstract or textural exploration.",
     "dataset": {
-      "data-title": "black ice 60",
       "data-creator": "benjamin joel wilkinson",
-      "data-year": "2025",
-      "data-summary": "a contemporary painting reflecting on modern themes through abstract or textural exploration."
+      "data-summary": "a contemporary painting reflecting on modern themes through abstract or textural exploration.",
+      "data-title": "black ice 60",
+      "data-year": "2025"
     },
     "classes": [
       "art-card"
@@ -37,10 +37,10 @@
     "zoomMeta": "",
     "zoomCaption": "A graphic work evoking the warmth and brightness of summer.",
     "dataset": {
-      "data-title": "the summeriest summer",
       "data-creator": "vladimir vasilyevich abaimov",
-      "data-year": "2025",
-      "data-summary": "a graphic work evoking the warmth and brightness of summer."
+      "data-summary": "a graphic work evoking the warmth and brightness of summer.",
+      "data-title": "the summeriest summer",
+      "data-year": "2025"
     },
     "classes": [
       "art-card"
@@ -61,10 +61,10 @@
     "zoomMeta": "",
     "zoomCaption": "A charming contemporary painting capturing the innocence and magic of childhood traditions.",
     "dataset": {
-      "data-title": "letter for santa",
       "data-creator": "catherine yurievna dombrovskaya",
-      "data-year": "2025",
-      "data-summary": "a charming contemporary painting capturing the innocence and magic of childhood traditions."
+      "data-summary": "a charming contemporary painting capturing the innocence and magic of childhood traditions.",
+      "data-title": "letter for santa",
+      "data-year": "2025"
     },
     "classes": [
       "art-card"
@@ -85,10 +85,10 @@
     "zoomMeta": "",
     "zoomCaption": "A contemporary work exploring themes of light, hope, or spiritual awakening.",
     "dataset": {
-      "data-title": "awakening of the light",
       "data-creator": "elena babicheva / eli devart",
-      "data-year": "2025",
-      "data-summary": "a contemporary work exploring themes of light, hope, or spiritual awakening."
+      "data-summary": "a contemporary work exploring themes of light, hope, or spiritual awakening.",
+      "data-title": "awakening of the light",
+      "data-year": "2025"
     },
     "classes": [
       "art-card"
@@ -109,10 +109,10 @@
     "zoomMeta": "",
     "zoomCaption": "A contemporary still life or whimsical scene featuring a bag of shrimps.",
     "dataset": {
-      "data-title": "shrimp bag",
       "data-creator": "catherine yurievna dombrovskaya",
-      "data-year": "2024",
-      "data-summary": "a contemporary still life or whimsical scene featuring a bag of shrimps."
+      "data-summary": "a contemporary still life or whimsical scene featuring a bag of shrimps.",
+      "data-title": "shrimp bag",
+      "data-year": "2024"
     },
     "classes": [
       "art-card"
@@ -133,10 +133,10 @@
     "zoomMeta": "",
     "zoomCaption": "A contemporary art piece reflecting on the lingering impact and cyclical nature of the pandemic.",
     "dataset": {
-      "data-title": "coronavirus. boomerang. part 2",
       "data-creator": "yana alexandrovna venedchuk",
-      "data-year": "2024",
-      "data-summary": "a contemporary art piece reflecting on the lingering impact and cyclical nature of the pandemic."
+      "data-summary": "a contemporary art piece reflecting on the lingering impact and cyclical nature of the pandemic.",
+      "data-title": "coronavirus. boomerang. part 2",
+      "data-year": "2024"
     },
     "classes": [
       "art-card"
@@ -157,10 +157,10 @@
     "zoomMeta": "",
     "zoomCaption": "A contemporary art piece, likely a still life or pop-art interpretation of the fruit.",
     "dataset": {
-      "data-title": "banana",
       "data-creator": "maria viktorovna turchanova",
-      "data-year": "2022",
-      "data-summary": "a contemporary art piece, likely a still life or pop-art interpretation of the fruit."
+      "data-summary": "a contemporary art piece, likely a still life or pop-art interpretation of the fruit.",
+      "data-title": "banana",
+      "data-year": "2022"
     },
     "classes": [
       "art-card"
@@ -181,10 +181,10 @@
     "zoomMeta": "",
     "zoomCaption": "A dynamic work by the 'Shadowman' street artist, capturing the energy of a horse and rider with splashed paint and expressive motion.",
     "dataset": {
-      "data-title": "december horse and rider",
       "data-creator": "richard hambleton",
-      "data-year": "2014",
-      "data-summary": "a dynamic work by the 'shadowman' street artist, capturing the energy of a horse and rider with splashed paint and expressive motion."
+      "data-summary": "a dynamic work by the 'shadowman' street artist, capturing the energy of a horse and rider with splashed paint and expressive motion.",
+      "data-title": "december horse and rider",
+      "data-year": "2014"
     },
     "classes": [
       "art-card"
@@ -205,10 +205,10 @@
     "zoomMeta": "",
     "zoomCaption": "A vibrant pop-art piece featuring Britto's signature bold patterns and colors, depicting children and hearts to convey optimism and joy.",
     "dataset": {
-      "data-title": "heart kids",
       "data-creator": "romero britto",
-      "data-year": "c. 2000",
-      "data-summary": "a vibrant pop-art piece featuring britto's signature bold patterns and colors, depicting children and hearts to convey optimism and joy."
+      "data-summary": "a vibrant pop-art piece featuring britto's signature bold patterns and colors, depicting children and hearts to convey optimism and joy.",
+      "data-title": "heart kids",
+      "data-year": "c. 2000"
     },
     "classes": [
       "art-card"
@@ -229,10 +229,10 @@
     "zoomMeta": "",
     "zoomCaption": "A series of pop art prints depicting skulls, exploring themes of death and fame in Warhol's signature repetitive style.",
     "dataset": {
-      "data-title": "skulls",
       "data-creator": "andy warhol",
-      "data-year": "1976",
-      "data-summary": "a series of pop art prints depicting skulls, exploring themes of death and fame in warhol's signature repetitive style."
+      "data-summary": "a series of pop art prints depicting skulls, exploring themes of death and fame in warhol's signature repetitive style.",
+      "data-title": "skulls",
+      "data-year": "1976"
     },
     "classes": [
       "art-card"
@@ -253,10 +253,10 @@
     "zoomMeta": "",
     "zoomCaption": "A monumental silkscreen painting of Marilyn Monroe, produced shortly after her death, contrasting her vibrant celebrity persona with her fading mortality.",
     "dataset": {
-      "data-title": "marilyn diptych",
       "data-creator": "andy warhol",
-      "data-year": "1962",
-      "data-summary": "a monumental silkscreen painting of marilyn monroe, produced shortly after her death, contrasting her vibrant celebrity persona with her fading mortality."
+      "data-summary": "a monumental silkscreen painting of marilyn monroe, produced shortly after her death, contrasting her vibrant celebrity persona with her fading mortality.",
+      "data-title": "marilyn diptych",
+      "data-year": "1962"
     },
     "classes": [
       "art-card"
@@ -277,10 +277,10 @@
     "zoomMeta": "",
     "zoomCaption": "A powerful abstract response to the Civil Rights Movement, using stark contrasts and jagged forms to convey the tension and struggle of the era.",
     "dataset": {
-      "data-title": "alabama",
       "data-creator": "norman lewis",
-      "data-year": "1960",
-      "data-summary": "a powerful abstract response to the civil rights movement, using stark contrasts and jagged forms to convey the tension and struggle of the era."
+      "data-summary": "a powerful abstract response to the civil rights movement, using stark contrasts and jagged forms to convey the tension and struggle of the era.",
+      "data-title": "alabama",
+      "data-year": "1960"
     },
     "classes": [
       "art-card"
@@ -301,10 +301,10 @@
     "zoomMeta": "",
     "zoomCaption": "A Soviet propaganda poster by the Kukryniksy collective, supporting African independence movements against colonial powers.",
     "dataset": {
-      "data-title": "the people of africa will curb colonizers!",
       "data-creator": "kukryniksy",
-      "data-year": "1960",
-      "data-summary": "a soviet propaganda poster by the kukryniksy collective, supporting african independence movements against colonial powers."
+      "data-summary": "a soviet propaganda poster by the kukryniksy collective, supporting african independence movements against colonial powers.",
+      "data-title": "the people of africa will curb colonizers!",
+      "data-year": "1960"
     },
     "classes": [
       "art-card"
@@ -325,10 +325,10 @@
     "zoomMeta": "",
     "zoomCaption": "One of Pollock's last paintings, featuring his famous drip technique but with a rare luminosity and lighter palette, suggesting a new direction in his chaotic energy.",
     "dataset": {
-      "data-title": "white light",
       "data-creator": "jackson pollock",
-      "data-year": "1954",
-      "data-summary": "one of pollock's last paintings, featuring his famous drip technique but with a rare luminosity and lighter palette, suggesting a new direction in his chaotic energy."
+      "data-summary": "one of pollock's last paintings, featuring his famous drip technique but with a rare luminosity and lighter palette, suggesting a new direction in his chaotic energy.",
+      "data-title": "white light",
+      "data-year": "1954"
     },
     "classes": [
       "art-card"
@@ -349,10 +349,10 @@
     "zoomMeta": "",
     "zoomCaption": "A powerful charcoal drawing depicting two agricultural workers, celebrating the dignity and strength of African American labor.",
     "dataset": {
-      "data-title": "harvest talk",
       "data-creator": "charles white",
-      "data-year": "1953",
-      "data-summary": "a powerful charcoal drawing depicting two agricultural workers, celebrating the dignity and strength of african american labor."
+      "data-summary": "a powerful charcoal drawing depicting two agricultural workers, celebrating the dignity and strength of african american labor.",
+      "data-title": "harvest talk",
+      "data-year": "1953"
     },
     "classes": [
       "art-card"
@@ -373,10 +373,10 @@
     "zoomMeta": "",
     "zoomCaption": "A disturbing and existential portrait by Bacon, featuring a screaming or distorted figure, reflecting post-war angst and the fragility of the human condition.",
     "dataset": {
-      "data-title": "study for a portrait",
       "data-creator": "francis bacon",
-      "data-year": "1952",
-      "data-summary": "a disturbing and existential portrait by bacon, featuring a screaming or distorted figure, reflecting post-war angst and the fragility of the human condition."
+      "data-summary": "a disturbing and existential portrait by bacon, featuring a screaming or distorted figure, reflecting post-war angst and the fragility of the human condition.",
+      "data-title": "study for a portrait",
+      "data-year": "1952"
     },
     "classes": [
       "art-card"
@@ -397,10 +397,10 @@
     "zoomMeta": "",
     "zoomCaption": "One of de Kooning's largest and most complex abstract expressionist works, featuring a rhythmic surface of interlocking shapes and lines.",
     "dataset": {
-      "data-title": "excavation",
       "data-creator": "willem de kooning",
-      "data-year": "1950",
-      "data-summary": "one of de kooning's largest and most complex abstract expressionist works, featuring a rhythmic surface of interlocking shapes and lines."
+      "data-summary": "one of de kooning's largest and most complex abstract expressionist works, featuring a rhythmic surface of interlocking shapes and lines.",
+      "data-title": "excavation",
+      "data-year": "1950"
     },
     "classes": [
       "art-card"
@@ -421,10 +421,10 @@
     "zoomMeta": "",
     "zoomCaption": "A satirical caricature depicting the final days of Hitler in his bunker, capturing the collapse of the Nazi regime with sharp irony and historical weight.",
     "dataset": {
-      "data-title": "the end",
       "data-creator": "kukryniksy",
-      "data-year": "1948",
-      "data-summary": "a satirical caricature depicting the final days of hitler in his bunker, capturing the collapse of the nazi regime with sharp irony and historical weight."
+      "data-summary": "a satirical caricature depicting the final days of hitler in his bunker, capturing the collapse of the nazi regime with sharp irony and historical weight.",
+      "data-title": "the end",
+      "data-year": "1948"
     },
     "classes": [
       "art-card"
@@ -445,10 +445,10 @@
     "zoomMeta": "",
     "zoomCaption": "An abstract expressionist work by Norman Lewis, using fluid lines and shapes to evoke the shifting rhythms of jazz music and urban life.",
     "dataset": {
-      "data-title": "changing moods",
       "data-creator": "norman lewis",
-      "data-year": "1947",
-      "data-summary": "an abstract expressionist work by norman lewis, using fluid lines and shapes to evoke the shifting rhythms of jazz music and urban life."
+      "data-summary": "an abstract expressionist work by norman lewis, using fluid lines and shapes to evoke the shifting rhythms of jazz music and urban life.",
+      "data-title": "changing moods",
+      "data-year": "1947"
     },
     "classes": [
       "art-card"
@@ -469,10 +469,10 @@
     "zoomMeta": "",
     "zoomCaption": "A vibrant abstraction suggesting the energy and movement of a city street, demonstrating Lewis's evolution towards Abstract Expressionism.",
     "dataset": {
-      "data-title": "title unknown (street scene)",
       "data-creator": "norman lewis",
-      "data-year": "1947",
-      "data-summary": "a vibrant abstraction suggesting the energy and movement of a city street, demonstrating lewis's evolution towards abstract expressionism."
+      "data-summary": "a vibrant abstraction suggesting the energy and movement of a city street, demonstrating lewis's evolution towards abstract expressionism.",
+      "data-title": "title unknown (street scene)",
+      "data-year": "1947"
     },
     "classes": [
       "art-card"
@@ -493,10 +493,10 @@
     "zoomMeta": "",
     "zoomCaption": "A profoundly impactful work that serves as a powerful social commentary on the harsh realities of poverty, drought, and high infant mortality in Brazil.",
     "dataset": {
-      "data-title": "criança morta",
       "data-creator": "candido portinari",
-      "data-year": "1944",
-      "data-summary": "a profoundly impactful work that serves as a powerful social commentary on the harsh realities of poverty, drought, and high infant mortality in brazil."
+      "data-summary": "a profoundly impactful work that serves as a powerful social commentary on the harsh realities of poverty, drought, and high infant mortality in brazil.",
+      "data-title": "criança morta",
+      "data-year": "1944"
     },
     "classes": [
       "art-card"
@@ -517,10 +517,10 @@
     "zoomMeta": "",
     "zoomCaption": "A surrealist painting featuring a giant sunflower and young girls in a hallway, evoking a dreamlike, unsettling atmosphere.",
     "dataset": {
-      "data-title": "a little night music",
       "data-creator": "dorothea tanning",
-      "data-year": "1943",
-      "data-summary": "a surrealist painting featuring a giant sunflower and young girls in a hallway, evoking a dreamlike, unsettling atmosphere."
+      "data-summary": "a surrealist painting featuring a giant sunflower and young girls in a hallway, evoking a dreamlike, unsettling atmosphere.",
+      "data-title": "a little night music",
+      "data-year": "1943"
     },
     "classes": [
       "art-card"
@@ -541,10 +541,10 @@
     "zoomMeta": "",
     "zoomCaption": "An iconic painting of American modernism, depicting four people in a downtown diner late at night, conveying urban isolation and loneliness.",
     "dataset": {
-      "data-title": "nighthawks",
       "data-creator": "edward hopper",
-      "data-year": "1942",
-      "data-summary": "an iconic painting of american modernism, depicting four people in a downtown diner late at night, conveying urban isolation and loneliness."
+      "data-summary": "an iconic painting of american modernism, depicting four people in a downtown diner late at night, conveying urban isolation and loneliness.",
+      "data-title": "nighthawks",
+      "data-year": "1942"
     },
     "classes": [
       "art-card"
@@ -565,10 +565,10 @@
     "zoomMeta": "",
     "zoomCaption": "Panel 49 from the Migration Series, illustrating the challenges of the Great Migration with Lawrence's distinctive dynamic cubism.",
     "dataset": {
-      "data-title": "they found discrimination in the north. it was a different kind",
       "data-creator": "jacob lawrence",
-      "data-year": "1940 – 1941",
-      "data-summary": "panel 49 from the migration series, illustrating the challenges of the great migration with lawrence's distinctive dynamic cubism."
+      "data-summary": "panel 49 from the migration series, illustrating the challenges of the great migration with lawrence's distinctive dynamic cubism.",
+      "data-title": "they found discrimination in the north. it was a different kind",
+      "data-year": "1940 – 1941"
     },
     "classes": [
       "art-card"
@@ -589,10 +589,10 @@
     "zoomMeta": "",
     "zoomCaption": "A Harlem Renaissance masterpiece, using geometric shapes and concentric circles to depict a spiritual vision based on James Weldon Johnson's poems.",
     "dataset": {
-      "data-title": "the judgment day",
       "data-creator": "aaron douglas",
-      "data-year": "1939",
-      "data-summary": "a harlem renaissance masterpiece, using geometric shapes and concentric circles to depict a spiritual vision based on james weldon johnson's poems."
+      "data-summary": "a harlem renaissance masterpiece, using geometric shapes and concentric circles to depict a spiritual vision based on james weldon johnson's poems.",
+      "data-title": "the judgment day",
+      "data-year": "1939"
     },
     "classes": [
       "art-card"
@@ -613,10 +613,10 @@
     "zoomMeta": "",
     "zoomCaption": "A powerful anti-war statement depicting the bombing of Guernica during the Spanish Civil War, using monochromatic tones to convey suffering and chaos.",
     "dataset": {
-      "data-title": "guernica",
       "data-creator": "pablo picasso",
-      "data-year": "1937",
-      "data-summary": "a powerful anti-war statement depicting the bombing of guernica during the spanish civil war, using monochromatic tones to convey suffering and chaos."
+      "data-summary": "a powerful anti-war statement depicting the bombing of guernica during the spanish civil war, using monochromatic tones to convey suffering and chaos.",
+      "data-title": "guernica",
+      "data-year": "1937"
     },
     "classes": [
       "art-card"
@@ -637,10 +637,10 @@
     "zoomMeta": "",
     "zoomCaption": "A powerful Cubist portrait of Dora Maar, depicting universal suffering and grief, often associated with the tragedy of Guernica.",
     "dataset": {
-      "data-title": "weeping woman",
       "data-creator": "pablo picasso",
-      "data-year": "1937",
-      "data-summary": "a powerful cubist portrait of dora maar, depicting universal suffering and grief, often associated with the tragedy of guernica."
+      "data-summary": "a powerful cubist portrait of dora maar, depicting universal suffering and grief, often associated with the tragedy of guernica.",
+      "data-title": "weeping woman",
+      "data-year": "1937"
     },
     "classes": [
       "art-card"
@@ -661,10 +661,10 @@
     "zoomMeta": "",
     "zoomCaption": "A powerful neo-realist portrayal of coffee plantation workers, emphasizing their strength and the physical toll of their labor.",
     "dataset": {
-      "data-title": "café",
       "data-creator": "candido portinari",
-      "data-year": "1935",
-      "data-summary": "a powerful neo-realist portrayal of coffee plantation workers, emphasizing their strength and the physical toll of their labor."
+      "data-summary": "a powerful neo-realist portrayal of coffee plantation workers, emphasizing their strength and the physical toll of their labor.",
+      "data-title": "café",
+      "data-year": "1935"
     },
     "classes": [
       "art-card"
@@ -685,10 +685,10 @@
     "zoomMeta": "",
     "zoomCaption": "A socially conscious work depicting the diverse faces of the working class industrializing Brazil, highlighting the massification and anonymity of labor.",
     "dataset": {
-      "data-title": "operários",
       "data-creator": "tarsila do amaral",
-      "data-year": "1933",
-      "data-summary": "a socially conscious work depicting the diverse faces of the working class industrializing brazil, highlighting the massification and anonymity of labor."
+      "data-summary": "a socially conscious work depicting the diverse faces of the working class industrializing brazil, highlighting the massification and anonymity of labor.",
+      "data-title": "operários",
+      "data-year": "1933"
     },
     "classes": [
       "art-card"
@@ -709,10 +709,10 @@
     "zoomMeta": "",
     "zoomCaption": "One of the most familiar images in 20th-century American art, depicting a farmer and his daughter. It is often interpreted as a satire or a glorification of rural American values.",
     "dataset": {
-      "data-title": "american gothic",
       "data-creator": "grant wood",
-      "data-year": "1930",
-      "data-summary": "one of the most familiar images in 20th-century american art, depicting a farmer and his daughter. it is often interpreted as a satire or a glorification of rural american values."
+      "data-summary": "one of the most familiar images in 20th-century american art, depicting a farmer and his daughter. it is often interpreted as a satire or a glorification of rural american values.",
+      "data-title": "american gothic",
+      "data-year": "1930"
     },
     "classes": [
       "art-card"
@@ -733,10 +733,10 @@
     "zoomMeta": "",
     "zoomCaption": "The most famous work of Brazilian modernism, its title means 'man who eats people'. The painting inspired the Anthropophagic Movement, symbolizing the digestion of foreign culture to create something uniquely Brazilian.",
     "dataset": {
-      "data-title": "abaporu",
       "data-creator": "tarsila do amaral",
-      "data-year": "1928",
-      "data-summary": "the most famous work of brazilian modernism, its title means 'man who eats people'. the painting inspired the anthropophagic movement, symbolizing the digestion of foreign culture to create something uniquely brazilian."
+      "data-summary": "the most famous work of brazilian modernism, its title means 'man who eats people'. the painting inspired the anthropophagic movement, symbolizing the digestion of foreign culture to create something uniquely brazilian.",
+      "data-title": "abaporu",
+      "data-year": "1928"
     },
     "classes": [
       "art-card"
@@ -757,10 +757,10 @@
     "zoomMeta": "",
     "zoomCaption": "A significant work of Brazilian Modernism that boldly depicts popular culture and celebrates elements of 'brasilidade', capturing the dynamism of Rio's samba scene.",
     "dataset": {
-      "data-title": "samba",
       "data-creator": "di cavalcanti",
-      "data-year": "1925",
-      "data-summary": "a significant work of brazilian modernism that boldly depicts popular culture and celebrates elements of 'brasilidade', capturing the dynamism of rio's samba scene."
+      "data-summary": "a significant work of brazilian modernism that boldly depicts popular culture and celebrates elements of 'brasilidade', capturing the dynamism of rio's samba scene.",
+      "data-title": "samba",
+      "data-year": "1925"
     },
     "classes": [
       "art-card"
@@ -781,10 +781,10 @@
     "zoomMeta": "",
     "zoomCaption": "A classic of the 'Pau-Brasil' phase, capturing the Brazilian urban landscape with simplified forms and tropical colors, celebrating the everyday life of the country.",
     "dataset": {
-      "data-title": "o mamoeiro",
       "data-creator": "tarsila do amaral",
-      "data-year": "1925",
-      "data-summary": "a classic of the 'pau-brasil' phase, capturing the brazilian urban landscape with simplified forms and tropical colors, celebrating the everyday life of the country."
+      "data-summary": "a classic of the 'pau-brasil' phase, capturing the brazilian urban landscape with simplified forms and tropical colors, celebrating the everyday life of the country.",
+      "data-title": "o mamoeiro",
+      "data-year": "1925"
     },
     "classes": [
       "art-card"
@@ -805,10 +805,10 @@
     "zoomMeta": "",
     "zoomCaption": "From the Kestner Portfolio, this lithograph exemplifies Lissitzky's 'Proun' style, bridging the gap between painting and architecture with geometric abstraction.",
     "dataset": {
-      "data-title": "proun 5",
       "data-creator": "el lissitzky",
-      "data-year": "1923",
-      "data-summary": "from the kestner portfolio, this lithograph exemplifies lissitzky's 'proun' style, bridging the gap between painting and architecture with geometric abstraction."
+      "data-summary": "from the kestner portfolio, this lithograph exemplifies lissitzky's 'proun' style, bridging the gap between painting and architecture with geometric abstraction.",
+      "data-title": "proun 5",
+      "data-year": "1923"
     },
     "classes": [
       "art-card"
@@ -829,10 +829,10 @@
     "zoomMeta": "",
     "zoomCaption": "Another work from the Kestner Portfolio, featuring dynamic geometric compositions that explore space, balance, and the utopia of constructivism.",
     "dataset": {
-      "data-title": "proun 3",
       "data-creator": "el lissitzky",
-      "data-year": "1923",
-      "data-summary": "another work from the kestner portfolio, featuring dynamic geometric compositions that explore space, balance, and the utopia of constructivism."
+      "data-summary": "another work from the kestner portfolio, featuring dynamic geometric compositions that explore space, balance, and the utopia of constructivism.",
+      "data-title": "proun 3",
+      "data-year": "1923"
     },
     "classes": [
       "art-card"
@@ -853,10 +853,10 @@
     "zoomMeta": "",
     "zoomCaption": "Also known as 'Boêmios', this early work captures the bohemian nightlife and urban social context of Rio de Janeiro with Di Cavalcanti's modernist touch.",
     "dataset": {
-      "data-title": "amigos (boêmios)",
       "data-creator": "di cavalcanti",
-      "data-year": "1921",
-      "data-summary": "also known as 'boêmios', this early work captures the bohemian nightlife and urban social context of rio de janeiro with di cavalcanti's modernist touch."
+      "data-summary": "also known as 'boêmios', this early work captures the bohemian nightlife and urban social context of rio de janeiro with di cavalcanti's modernist touch.",
+      "data-title": "amigos (boêmios)",
+      "data-year": "1921"
     },
     "classes": [
       "art-card"
@@ -877,10 +877,10 @@
     "zoomMeta": "",
     "zoomCaption": "An absurdist and surreal composition by Witkacy, featuring distorted faces and vivid colors, reflecting his theories on Pure Form in art.",
     "dataset": {
-      "data-title": "fantastic composition: vision with masks",
       "data-creator": "stanisław ignacy witkiewicz",
-      "data-year": "1920",
-      "data-summary": "an absurdist and surreal composition by witkacy, featuring distorted faces and vivid colors, reflecting his theories on pure form in art."
+      "data-summary": "an absurdist and surreal composition by witkacy, featuring distorted faces and vivid colors, reflecting his theories on pure form in art.",
+      "data-title": "fantastic composition: vision with masks",
+      "data-year": "1920"
     },
     "classes": [
       "art-card"
@@ -901,10 +901,10 @@
     "zoomMeta": "",
     "zoomCaption": "A dreamlike and colorful depiction of the mythic giant Polyphemus gazing at the sleeping Galatea, characteristic of Redon's unique Symbolist vision.",
     "dataset": {
-      "data-title": "the cyclops",
       "data-creator": "odilon redon",
-      "data-year": "1914",
-      "data-summary": "a dreamlike and colorful depiction of the mythic giant polyphemus gazing at the sleeping galatea, characteristic of redon's unique symbolist vision."
+      "data-summary": "a dreamlike and colorful depiction of the mythic giant polyphemus gazing at the sleeping galatea, characteristic of redon's unique symbolist vision.",
+      "data-title": "the cyclops",
+      "data-year": "1914"
     },
     "classes": [
       "art-card"
@@ -925,10 +925,10 @@
     "zoomMeta": "",
     "zoomCaption": "A complex arrangement of geometric shapes and lines. (Note: Commonly associated with Kandinsky, but here attributed to Braque as per collection records and potentially representing a Cubist study).",
     "dataset": {
-      "data-title": "composition viii",
       "data-creator": "georges braque",
-      "data-year": "1913",
-      "data-summary": "a complex arrangement of geometric shapes and lines. (note: commonly associated with kandinsky, but here attributed to braque as per collection records and potentially representing a cubist study)."
+      "data-summary": "a complex arrangement of geometric shapes and lines. (note: commonly associated with kandinsky, but here attributed to braque as per collection records and potentially representing a cubist study).",
+      "data-title": "composition viii",
+      "data-year": "1913"
     },
     "classes": [
       "art-card"
@@ -949,10 +949,10 @@
     "zoomMeta": "",
     "zoomCaption": "A Symbolist work depicting a fiery angel in a stylized landscape, evoking spiritual themes and Roerich's fascination with mysticism.",
     "dataset": {
-      "data-title": "the last angel",
       "data-creator": "nicholas roerich",
-      "data-year": "1912",
-      "data-summary": "a symbolist work depicting a fiery angel in a stylized landscape, evoking spiritual themes and roerich's fascination with mysticism."
+      "data-summary": "a symbolist work depicting a fiery angel in a stylized landscape, evoking spiritual themes and roerich's fascination with mysticism.",
+      "data-title": "the last angel",
+      "data-year": "1912"
     },
     "classes": [
       "art-card"
@@ -973,10 +973,10 @@
     "zoomMeta": "",
     "zoomCaption": "A poignant Symbolist work depicting the gentle but inevitable encounter between a young woman and the angel of death.",
     "dataset": {
-      "data-title": "death and the maiden",
       "data-creator": "marianne stokes",
-      "data-year": "1908",
-      "data-summary": "a poignant symbolist work depicting the gentle but inevitable encounter between a young woman and the angel of death."
+      "data-summary": "a poignant symbolist work depicting the gentle but inevitable encounter between a young woman and the angel of death.",
+      "data-title": "death and the maiden",
+      "data-year": "1908"
     },
     "classes": [
       "art-card"
@@ -997,10 +997,10 @@
     "zoomMeta": "",
     "zoomCaption": "A lush, colorful landscape by Klimt, emphasizing pattern and decoration over depth, turning the garden into a tapestry of flowers.",
     "dataset": {
-      "data-title": "farm garden with sunflowers",
       "data-creator": "gustav klimt",
-      "data-year": "1907",
-      "data-summary": "a lush, colorful landscape by klimt, emphasizing pattern and decoration over depth, turning the garden into a tapestry of flowers."
+      "data-summary": "a lush, colorful landscape by klimt, emphasizing pattern and decoration over depth, turning the garden into a tapestry of flowers.",
+      "data-title": "farm garden with sunflowers",
+      "data-year": "1907"
     },
     "classes": [
       "art-card"
@@ -1021,10 +1021,10 @@
     "zoomMeta": "",
     "zoomCaption": "Klimt's most famous work from his 'Golden Phase', depicting a couple embracing in a field of wildflowers, shrouded in gold leaf.",
     "dataset": {
-      "data-title": "the kiss",
       "data-creator": "gustav klimt",
-      "data-year": "1907 – 1908",
-      "data-summary": "klimt's most famous work from his 'golden phase', depicting a couple embracing in a field of wildflowers, shrouded in gold leaf."
+      "data-summary": "klimt's most famous work from his 'golden phase', depicting a couple embracing in a field of wildflowers, shrouded in gold leaf.",
+      "data-title": "the kiss",
+      "data-year": "1907 – 1908"
     },
     "classes": [
       "art-card"
@@ -1045,10 +1045,10 @@
     "zoomMeta": "",
     "zoomCaption": "A famous work from Picasso's Blue Period, depicting a blind, elderly musician, expressing themes of poverty, suffering, and the solitary nature of art.",
     "dataset": {
-      "data-title": "the old guitarist",
       "data-creator": "pablo picasso",
-      "data-year": "1903 – 1904",
-      "data-summary": "a famous work from picasso's blue period, depicting a blind, elderly musician, expressing themes of poverty, suffering, and the solitary nature of art."
+      "data-summary": "a famous work from picasso's blue period, depicting a blind, elderly musician, expressing themes of poverty, suffering, and the solitary nature of art.",
+      "data-title": "the old guitarist",
+      "data-year": "1903 – 1904"
     },
     "classes": [
       "art-card"
@@ -1069,10 +1069,10 @@
     "zoomMeta": "",
     "zoomCaption": "A historical canvas depicting the moment of contact between Portuguese explorers and indigenous people, becoming a standard representation of Brazil's 'discovery'.",
     "dataset": {
-      "data-title": "desembarque de pedro álvares cabral em porto seguro",
       "data-creator": "oscar pereira da silva",
-      "data-year": "1900",
-      "data-summary": "a historical canvas depicting the moment of contact between portuguese explorers and indigenous people, becoming a standard representation of brazil's 'discovery'."
+      "data-summary": "a historical canvas depicting the moment of contact between portuguese explorers and indigenous people, becoming a standard representation of brazil's 'discovery'.",
+      "data-title": "desembarque de pedro álvares cabral em porto seguro",
+      "data-year": "1900"
     },
     "classes": [
       "art-card"
@@ -1093,10 +1093,10 @@
     "zoomMeta": "",
     "zoomCaption": "A terrifying personification of the plague as a skeletal figure riding a beast through a town, capturing the fear and devastation of the disease.",
     "dataset": {
-      "data-title": "the plague",
       "data-creator": "arnold böcklin",
-      "data-year": "1898",
-      "data-summary": "a terrifying personification of the plague as a skeletal figure riding a beast through a town, capturing the fear and devastation of the disease."
+      "data-summary": "a terrifying personification of the plague as a skeletal figure riding a beast through a town, capturing the fear and devastation of the disease.",
+      "data-title": "the plague",
+      "data-year": "1898"
     },
     "classes": [
       "art-card"
@@ -1117,10 +1117,10 @@
     "zoomMeta": "",
     "zoomCaption": "A melancholic and atmospheric Symbolist painting, contrasting the permanence of death with the eternal motion of the sea.",
     "dataset": {
-      "data-title": "seaside cemetery",
       "data-creator": "adolf hirémy-hirschl",
-      "data-year": "1897",
-      "data-summary": "a melancholic and atmospheric symbolist painting, contrasting the permanence of death with the eternal motion of the sea."
+      "data-summary": "a melancholic and atmospheric symbolist painting, contrasting the permanence of death with the eternal motion of the sea.",
+      "data-title": "seaside cemetery",
+      "data-year": "1897"
     },
     "classes": [
       "art-card"
@@ -1141,10 +1141,10 @@
     "zoomMeta": "",
     "zoomCaption": "A surreal and poetic image of a lion pondering over a sleeping woman in the desert. Rousseau's naïve style lends the scene a dreamlike quality.",
     "dataset": {
-      "data-title": "the sleeping gypsy",
       "data-creator": "henri rousseau",
-      "data-year": "1897",
-      "data-summary": "a surreal and poetic image of a lion pondering over a sleeping woman in the desert. rousseau's naïve style lends the scene a dreamlike quality."
+      "data-summary": "a surreal and poetic image of a lion pondering over a sleeping woman in the desert. rousseau's naïve style lends the scene a dreamlike quality.",
+      "data-title": "the sleeping gypsy",
+      "data-year": "1897"
     },
     "classes": [
       "art-card"
@@ -1165,10 +1165,10 @@
     "zoomMeta": "",
     "zoomCaption": "A classic academic painting depicting Cupid carrying Psyche to heaven, characterized by Bouguereau's technical perfection and idealized beauty.",
     "dataset": {
-      "data-title": "the abduction of psyche",
       "data-creator": "william-adolphe bouguereau",
-      "data-year": "1895",
-      "data-summary": "a classic academic painting depicting cupid carrying psyche to heaven, characterized by bouguereau's technical perfection and idealized beauty."
+      "data-summary": "a classic academic painting depicting cupid carrying psyche to heaven, characterized by bouguereau's technical perfection and idealized beauty.",
+      "data-title": "the abduction of psyche",
+      "data-year": "1895"
     },
     "classes": [
       "art-card"
@@ -1189,10 +1189,10 @@
     "zoomMeta": "",
     "zoomCaption": "A haunting image echoing 'The Scream', featuring a crowd of ghostly faces staring out at the viewer, set against a similarly turbulent sky.",
     "dataset": {
-      "data-title": "anxiety",
       "data-creator": "edvard munch",
-      "data-year": "1894",
-      "data-summary": "a haunting image echoing 'the scream', featuring a crowd of ghostly faces staring out at the viewer, set against a similarly turbulent sky."
+      "data-summary": "a haunting image echoing 'the scream', featuring a crowd of ghostly faces staring out at the viewer, set against a similarly turbulent sky.",
+      "data-title": "anxiety",
+      "data-year": "1894"
     },
     "classes": [
       "art-card"
@@ -1213,10 +1213,10 @@
     "zoomMeta": "",
     "zoomCaption": "A somber depiction of a woman the morning after a night of excess, exploring themes of regret, exhaustion, and social realism.",
     "dataset": {
-      "data-title": "the day after",
       "data-creator": "edvard munch",
-      "data-year": "1894 – 1895",
-      "data-summary": "a somber depiction of a woman the morning after a night of excess, exploring themes of regret, exhaustion, and social realism."
+      "data-summary": "a somber depiction of a woman the morning after a night of excess, exploring themes of regret, exhaustion, and social realism.",
+      "data-title": "the day after",
+      "data-year": "1894 – 1895"
     },
     "classes": [
       "art-card"
@@ -1237,10 +1237,10 @@
     "zoomMeta": "",
     "zoomCaption": "The iconic version of the expressionist masterpiece, capturing the raw, existential terror of nature and the human soul.",
     "dataset": {
-      "data-title": "the scream",
       "data-creator": "edvard munch",
-      "data-year": "1893",
-      "data-summary": "the iconic version of the expressionist masterpiece, capturing the raw, existential terror of nature and the human soul."
+      "data-summary": "the iconic version of the expressionist masterpiece, capturing the raw, existential terror of nature and the human soul.",
+      "data-title": "the scream",
+      "data-year": "1893"
     },
     "classes": [
       "art-card"
@@ -1261,10 +1261,10 @@
     "zoomMeta": "",
     "zoomCaption": "A group portrait of the artist's friends and entertainers at the famous cabaret, capturing the artificial light and somewhat sinister atmosphere of Parisian nightlife.",
     "dataset": {
-      "data-title": "at the moulin rouge",
       "data-creator": "henri de toulouse-lautrec",
-      "data-year": "1892 – 1895",
-      "data-summary": "a group portrait of the artist's friends and entertainers at the famous cabaret, capturing the artificial light and somewhat sinister atmosphere of parisian nightlife."
+      "data-summary": "a group portrait of the artist's friends and entertainers at the famous cabaret, capturing the artificial light and somewhat sinister atmosphere of parisian nightlife.",
+      "data-title": "at the moulin rouge",
+      "data-year": "1892 – 1895"
     },
     "classes": [
       "art-card"
@@ -1285,10 +1285,10 @@
     "zoomMeta": "",
     "zoomCaption": "A Victorian interpretation of the Odyssey, showing the hero bound to the mast while seductive sirens (depicted as birds with women's heads) circle him.",
     "dataset": {
-      "data-title": "ulysses and the sirens",
       "data-creator": "john william waterhouse",
-      "data-year": "1891",
-      "data-summary": "a victorian interpretation of the odyssey, showing the hero bound to the mast while seductive sirens (depicted as birds with women's heads) circle him."
+      "data-summary": "a victorian interpretation of the odyssey, showing the hero bound to the mast while seductive sirens (depicted as birds with women's heads) circle him.",
+      "data-title": "ulysses and the sirens",
+      "data-year": "1891"
     },
     "classes": [
       "art-card"
@@ -1309,10 +1309,10 @@
     "zoomMeta": "",
     "zoomCaption": "A beautiful pastel capturing the grace and movement of ballet dancers backstage, a favorite subject of Degas.",
     "dataset": {
-      "data-title": "dancers in blue",
       "data-creator": "edgar degas",
-      "data-year": "1890",
-      "data-summary": "a beautiful pastel capturing the grace and movement of ballet dancers backstage, a favorite subject of degas."
+      "data-summary": "a beautiful pastel capturing the grace and movement of ballet dancers backstage, a favorite subject of degas.",
+      "data-title": "dancers in blue",
+      "data-year": "1890"
     },
     "classes": [
       "art-card"
@@ -1333,10 +1333,10 @@
     "zoomMeta": "",
     "zoomCaption": "A portrait painted in Auvers-sur-Oise, featuring a young peasant woman against a wheat background, known for its gentle expression.",
     "dataset": {
-      "data-title": "girl in white",
       "data-creator": "vincent van gogh",
-      "data-year": "1890",
-      "data-summary": "a portrait painted in auvers-sur-oise, featuring a young peasant woman against a wheat background, known for its gentle expression."
+      "data-summary": "a portrait painted in auvers-sur-oise, featuring a young peasant woman against a wheat background, known for its gentle expression.",
+      "data-title": "girl in white",
+      "data-year": "1890"
     },
     "classes": [
       "art-card"
@@ -1357,10 +1357,10 @@
     "zoomMeta": "",
     "zoomCaption": "A classic Van Gogh still life, painted just before his release from the asylum, showcasing fresh, vibrant colors and vigorous brushwork.",
     "dataset": {
-      "data-title": "roses",
       "data-creator": "vincent van gogh",
-      "data-year": "1890",
-      "data-summary": "a classic van gogh still life, painted just before his release from the asylum, showcasing fresh, vibrant colors and vigorous brushwork."
+      "data-summary": "a classic van gogh still life, painted just before his release from the asylum, showcasing fresh, vibrant colors and vigorous brushwork.",
+      "data-title": "roses",
+      "data-year": "1890"
     },
     "classes": [
       "art-card"
@@ -1381,10 +1381,10 @@
     "zoomMeta": "",
     "zoomCaption": "A striking 19th-century representation of a femme fatale or supernatural figure with bat wings, blending eroticism with the macabre.",
     "dataset": {
-      "data-title": "the bat woman",
       "data-creator": "albert joseph pénot",
-      "data-year": "1890",
-      "data-summary": "a striking 19th-century representation of a femme fatale or supernatural figure with bat wings, blending eroticism with the macabre."
+      "data-summary": "a striking 19th-century representation of a femme fatale or supernatural figure with bat wings, blending eroticism with the macabre.",
+      "data-title": "the bat woman",
+      "data-year": "1890"
     },
     "classes": [
       "art-card"
@@ -1405,10 +1405,10 @@
     "zoomMeta": "",
     "zoomCaption": "A painting based on a wood engraving by Honoré Daumier, depicting the stages of ages of man through drinking, painted in Van Gogh's expressive style.",
     "dataset": {
-      "data-title": "the drinkers",
       "data-creator": "vincent van gogh",
-      "data-year": "1890",
-      "data-summary": "a painting based on a wood engraving by honoré daumier, depicting the stages of ages of man through drinking, painted in van gogh's expressive style."
+      "data-summary": "a painting based on a wood engraving by honoré daumier, depicting the stages of ages of man through drinking, painted in van gogh's expressive style.",
+      "data-title": "the drinkers",
+      "data-year": "1890"
     },
     "classes": [
       "art-card"
@@ -1429,10 +1429,10 @@
     "zoomMeta": "",
     "zoomCaption": "Painted during Van Gogh's stay at the asylum in Saint-Rémy-de-Provence, this masterpiece expresses the turbulence of the artist's mind through swirling skies and a quiet village below.",
     "dataset": {
-      "data-title": "starry night",
       "data-creator": "vincent van gogh",
-      "data-year": "1889",
-      "data-summary": "painted during van gogh's stay at the asylum in saint-rémy-de-provence, this masterpiece expresses the turbulence of the artist's mind through swirling skies and a quiet village below."
+      "data-summary": "painted during van gogh's stay at the asylum in saint-rémy-de-provence, this masterpiece expresses the turbulence of the artist's mind through swirling skies and a quiet village below.",
+      "data-title": "starry night",
+      "data-year": "1889"
     },
     "classes": [
       "art-card"
@@ -1453,10 +1453,10 @@
     "zoomMeta": "",
     "zoomCaption": "A dynamic landscape featuring Van Gogh's signature swirling brushstrokes, capturing the movement of the wind through the wheat and the imposing presence of the cypress trees.",
     "dataset": {
-      "data-title": "wheat field with cypresses",
       "data-creator": "vincent van gogh",
-      "data-year": "1889",
-      "data-summary": "a dynamic landscape featuring van gogh's signature swirling brushstrokes, capturing the movement of the wind through the wheat and the imposing presence of the cypress trees."
+      "data-summary": "a dynamic landscape featuring van gogh's signature swirling brushstrokes, capturing the movement of the wind through the wheat and the imposing presence of the cypress trees.",
+      "data-title": "wheat field with cypresses",
+      "data-year": "1889"
     },
     "classes": [
       "art-card"
@@ -1477,10 +1477,10 @@
     "zoomMeta": "",
     "zoomCaption": "One of Van Gogh's last self-portraits, painted with intense, rhythmic brushstrokes that seem to vibrate with the artist's psychological state.",
     "dataset": {
-      "data-title": "self-portrait",
       "data-creator": "vincent van gogh",
-      "data-year": "1889",
-      "data-summary": "one of van gogh's last self-portraits, painted with intense, rhythmic brushstrokes that seem to vibrate with the artist's psychological state."
+      "data-summary": "one of van gogh's last self-portraits, painted with intense, rhythmic brushstrokes that seem to vibrate with the artist's psychological state.",
+      "data-title": "self-portrait",
+      "data-year": "1889"
     },
     "classes": [
       "art-card"
@@ -1501,10 +1501,10 @@
     "zoomMeta": "",
     "zoomCaption": "A Symbolist interpretation of the legend, marked by Moreau's intricate detail, rich jewel-like colors, and spiritual atmosphere.",
     "dataset": {
-      "data-title": "saint george and the dragon",
       "data-creator": "gustave moreau",
-      "data-year": "1889 – 1890",
-      "data-summary": "a symbolist interpretation of the legend, marked by moreau's intricate detail, rich jewel-like colors, and spiritual atmosphere."
+      "data-summary": "a symbolist interpretation of the legend, marked by moreau's intricate detail, rich jewel-like colors, and spiritual atmosphere.",
+      "data-title": "saint george and the dragon",
+      "data-year": "1889 – 1890"
     },
     "classes": [
       "art-card"
@@ -1525,10 +1525,10 @@
     "zoomMeta": "",
     "zoomCaption": "A poignant self-portrait painted after the ear-cutting incident, showing the artist in his studio with a Japanese print in the background.",
     "dataset": {
-      "data-title": "self-portrait with bandaged ear",
       "data-creator": "vincent van gogh",
-      "data-year": "1889",
-      "data-summary": "a poignant self-portrait painted after the ear-cutting incident, showing the artist in his studio with a japanese print in the background."
+      "data-summary": "a poignant self-portrait painted after the ear-cutting incident, showing the artist in his studio with a japanese print in the background.",
+      "data-title": "self-portrait with bandaged ear",
+      "data-year": "1889"
     },
     "classes": [
       "art-card"
@@ -1549,10 +1549,10 @@
     "zoomMeta": "",
     "zoomCaption": "One of the most famous still lifes in art history, demonstrating Van Gogh's mastery of the color yellow and his emotional intensity.",
     "dataset": {
-      "data-title": "sunflowers",
       "data-creator": "vincent van gogh",
-      "data-year": "1888",
-      "data-summary": "one of the most famous still lifes in art history, demonstrating van gogh's mastery of the color yellow and his emotional intensity."
+      "data-summary": "one of the most famous still lifes in art history, demonstrating van gogh's mastery of the color yellow and his emotional intensity.",
+      "data-title": "sunflowers",
+      "data-year": "1888"
     },
     "classes": [
       "art-card"
@@ -1573,10 +1573,10 @@
     "zoomMeta": "",
     "zoomCaption": "The definitive heroic representation of Brazil's proclamation of independence, depicting Dom Pedro I's decisive moment on the banks of the Ipiranga.",
     "dataset": {
-      "data-title": "independência ou morte",
       "data-creator": "pedro américo",
-      "data-year": "1888",
-      "data-summary": "the definitive heroic representation of brazil's proclamation of independence, depicting dom pedro i's decisive moment on the banks of the ipiranga."
+      "data-summary": "the definitive heroic representation of brazil's proclamation of independence, depicting dom pedro i's decisive moment on the banks of the ipiranga.",
+      "data-title": "independência ou morte",
+      "data-year": "1888"
     },
     "classes": [
       "art-card"
@@ -1597,10 +1597,10 @@
     "zoomMeta": "",
     "zoomCaption": "A gritty and realistic portrayal of a crucifixion, emphasizing the historical context and the indifference of the crowd, challenging traditional religious iconography.",
     "dataset": {
-      "data-title": "a crucifixion in the time of the romans",
       "data-creator": "vasily vereshchagin",
-      "data-year": "1887",
-      "data-summary": "a gritty and realistic portrayal of a crucifixion, emphasizing the historical context and the indifference of the crowd, challenging traditional religious iconography."
+      "data-summary": "a gritty and realistic portrayal of a crucifixion, emphasizing the historical context and the indifference of the crowd, challenging traditional religious iconography.",
+      "data-title": "a crucifixion in the time of the romans",
+      "data-year": "1887"
     },
     "classes": [
       "art-card"
@@ -1621,10 +1621,10 @@
     "zoomMeta": "",
     "zoomCaption": "A self-portrait showing Van Gogh experimenting with the pointillist technique of Seurat, using dots and dashes of color.",
     "dataset": {
-      "data-title": "self-portrait",
       "data-creator": "vincent van gogh",
-      "data-year": "1887",
-      "data-summary": "a self-portrait showing van gogh experimenting with the pointillist technique of seurat, using dots and dashes of color."
+      "data-summary": "a self-portrait showing van gogh experimenting with the pointillist technique of seurat, using dots and dashes of color.",
+      "data-title": "self-portrait",
+      "data-year": "1887"
     },
     "classes": [
       "art-card"
@@ -1645,10 +1645,10 @@
     "zoomMeta": "",
     "zoomCaption": "A macabre and humorous early work, possibly painted as an academic exercise, showing a skeleton smoking.",
     "dataset": {
-      "data-title": "head of a skeleton with a burning cigarette",
       "data-creator": "vincent van gogh",
-      "data-year": "1885 – 1886",
-      "data-summary": "a macabre and humorous early work, possibly painted as an academic exercise, showing a skeleton smoking."
+      "data-summary": "a macabre and humorous early work, possibly painted as an academic exercise, showing a skeleton smoking.",
+      "data-title": "head of a skeleton with a burning cigarette",
+      "data-year": "1885 – 1886"
     },
     "classes": [
       "art-card"
@@ -1669,10 +1669,10 @@
     "zoomMeta": "",
     "zoomCaption": "A charming and realist portrayal of street children in Paris, highlighting Bashkirtseff's ability to capture the nuance of social class and childhood.",
     "dataset": {
-      "data-title": "the meeting",
       "data-creator": "marie bashkirtseff",
-      "data-year": "1884",
-      "data-summary": "a charming and realist portrayal of street children in paris, highlighting bashkirtseff's ability to capture the nuance of social class and childhood."
+      "data-summary": "a charming and realist portrayal of street children in paris, highlighting bashkirtseff's ability to capture the nuance of social class and childhood.",
+      "data-title": "the meeting",
+      "data-year": "1884"
     },
     "classes": [
       "art-card"
@@ -1693,10 +1693,10 @@
     "zoomMeta": "",
     "zoomCaption": "Seurat's first large-scale painting, a monumental scene of leisure that predates pointillism but already shows his interest in color theory and formal composition.",
     "dataset": {
-      "data-title": "bathers at asnières",
       "data-creator": "georges seurat",
-      "data-year": "1884",
-      "data-summary": "seurat's first large-scale painting, a monumental scene of leisure that predates pointillism but already shows his interest in color theory and formal composition."
+      "data-summary": "seurat's first large-scale painting, a monumental scene of leisure that predates pointillism but already shows his interest in color theory and formal composition.",
+      "data-title": "bathers at asnières",
+      "data-year": "1884"
     },
     "classes": [
       "art-card"
@@ -1717,10 +1717,10 @@
     "zoomMeta": "",
     "zoomCaption": "The monumental manifesto of Pointillism, depicting Parisians relaxing by the Seine, constructed from millions of tiny dots of color.",
     "dataset": {
-      "data-title": "a sunday on la grande jatte",
       "data-creator": "georges seurat",
-      "data-year": "1884 – 1886",
-      "data-summary": "the monumental manifesto of pointillism, depicting parisians relaxing by the seine, constructed from millions of tiny dots of color."
+      "data-summary": "the monumental manifesto of pointillism, depicting parisians relaxing by the seine, constructed from millions of tiny dots of color.",
+      "data-title": "a sunday on la grande jatte",
+      "data-year": "1884 – 1886"
     },
     "classes": [
       "art-card"
@@ -1741,10 +1741,10 @@
     "zoomMeta": "",
     "zoomCaption": "A charcoal drawing of a spider with a human face, crying. A prime example of Redon's 'noirs', exploring the strange and the subconscious.",
     "dataset": {
-      "data-title": "the crying spider",
       "data-creator": "odilon redon",
-      "data-year": "1881",
-      "data-summary": "a charcoal drawing of a spider with a human face, crying. a prime example of redon's 'noirs', exploring the strange and the subconscious."
+      "data-summary": "a charcoal drawing of a spider with a human face, crying. a prime example of redon's 'noirs', exploring the strange and the subconscious.",
+      "data-title": "the crying spider",
+      "data-year": "1881"
     },
     "classes": [
       "art-card"
@@ -1765,10 +1765,10 @@
     "zoomMeta": "",
     "zoomCaption": "A vibrant snapshot of Parisian life, depicting a Sunday afternoon dance in Montmartre. It is celebrated for its dappled light and fluid brushstrokes.",
     "dataset": {
-      "data-title": "dance at the moulin de la galette",
       "data-creator": "pierre-auguste renoir",
-      "data-year": "1876",
-      "data-summary": "a vibrant snapshot of parisian life, depicting a sunday afternoon dance in montmartre. it is celebrated for its dappled light and fluid brushstrokes."
+      "data-summary": "a vibrant snapshot of parisian life, depicting a sunday afternoon dance in montmartre. it is celebrated for its dappled light and fluid brushstrokes.",
+      "data-title": "dance at the moulin de la galette",
+      "data-year": "1876"
     },
     "classes": [
       "art-card"
@@ -1789,10 +1789,10 @@
     "zoomMeta": "",
     "zoomCaption": "A moving and realistic depiction of the Virgin Mary mourning Christ, showcasing Bouguereau's academic skill and emotional depth.",
     "dataset": {
-      "data-title": "pieta",
       "data-creator": "william-adolphe bouguereau",
-      "data-year": "1876",
-      "data-summary": "a moving and realistic depiction of the virgin mary mourning christ, showcasing bouguereau's academic skill and emotional depth."
+      "data-summary": "a moving and realistic depiction of the virgin mary mourning christ, showcasing bouguereau's academic skill and emotional depth.",
+      "data-title": "pieta",
+      "data-year": "1876"
     },
     "classes": [
       "art-card"
@@ -1813,10 +1813,10 @@
     "zoomMeta": "",
     "zoomCaption": "A daringly abstract composition for its time, depicting fireworks over Battersea Park. It famously sparked a libel suit between Whistler and critic John Ruskin.",
     "dataset": {
-      "data-title": "nocturne in black and gold – the falling rocket",
       "data-creator": "james mcneill whistler",
-      "data-year": "1875",
-      "data-summary": "a daringly abstract composition for its time, depicting fireworks over battersea park. it famously sparked a libel suit between whistler and critic john ruskin."
+      "data-summary": "a daringly abstract composition for its time, depicting fireworks over battersea park. it famously sparked a libel suit between whistler and critic john ruskin.",
+      "data-title": "nocturne in black and gold – the falling rocket",
+      "data-year": "1875"
     },
     "classes": [
       "art-card"
@@ -1837,10 +1837,10 @@
     "zoomMeta": "",
     "zoomCaption": "A quintessential Impressionist work, capturing a fleeting moment of a stroll on a windy summer's day, emphasizing light and spontaneous brushwork.",
     "dataset": {
-      "data-title": "woman with a parasol",
       "data-creator": "claude monet",
-      "data-year": "1875",
-      "data-summary": "a quintessential impressionist work, capturing a fleeting moment of a stroll on a windy summer's day, emphasizing light and spontaneous brushwork."
+      "data-summary": "a quintessential impressionist work, capturing a fleeting moment of a stroll on a windy summer's day, emphasizing light and spontaneous brushwork.",
+      "data-title": "woman with a parasol",
+      "data-year": "1875"
     },
     "classes": [
       "art-card"
@@ -1861,10 +1861,10 @@
     "zoomMeta": "",
     "zoomCaption": "A somber depiction of two figures in a cafe, capturing the isolation and social alienation often found in modern urban life.",
     "dataset": {
-      "data-title": "l'absinthe",
       "data-creator": "edgar degas",
-      "data-year": "1875–1876",
-      "data-summary": "a somber depiction of two figures in a cafe, capturing the isolation and social alienation often found in modern urban life."
+      "data-summary": "a somber depiction of two figures in a cafe, capturing the isolation and social alienation often found in modern urban life.",
+      "data-title": "l'absinthe",
+      "data-year": "1875–1876"
     },
     "classes": [
       "art-card"
@@ -1885,10 +1885,10 @@
     "zoomMeta": "",
     "zoomCaption": "A memento mori portrait where death, playing a single-stringed violin, whispers into the artist's ear, reminding him of mortality.",
     "dataset": {
-      "data-title": "self-portrait with fiddling death",
       "data-creator": "arnold böcklin",
-      "data-year": "1872",
-      "data-summary": "a memento mori portrait where death, playing a single-stringed violin, whispers into the artist's ear, reminding him of mortality."
+      "data-summary": "a memento mori portrait where death, playing a single-stringed violin, whispers into the artist's ear, reminding him of mortality.",
+      "data-title": "self-portrait with fiddling death",
+      "data-year": "1872"
     },
     "classes": [
       "art-card"
@@ -1909,10 +1909,10 @@
     "zoomMeta": "",
     "zoomCaption": "A monumental and visceral depiction of the Battle of Avaí from the Paraguayan War, highlighting the chaos and suffering of conflict rather than just heroic glory.",
     "dataset": {
-      "data-title": "batalha do avaí",
       "data-creator": "pedro américo",
-      "data-year": "1872 – 1877",
-      "data-summary": "a monumental and visceral depiction of the battle of avaí from the paraguayan war, highlighting the chaos and suffering of conflict rather than just heroic glory."
+      "data-summary": "a monumental and visceral depiction of the battle of avaí from the paraguayan war, highlighting the chaos and suffering of conflict rather than just heroic glory.",
+      "data-title": "batalha do avaí",
+      "data-year": "1872 – 1877"
     },
     "classes": [
       "art-card"
@@ -1933,10 +1933,10 @@
     "zoomMeta": "",
     "zoomCaption": "A masterpiece of Russian Realism, depicting the grueling labor of burlaks, highlighting social injustice and the resilience of the human spirit.",
     "dataset": {
-      "data-title": "barge haulers on the volga",
       "data-creator": "ilya repin",
-      "data-year": "1870 – 1873",
-      "data-summary": "a masterpiece of russian realism, depicting the grueling labor of burlaks, highlighting social injustice and the resilience of the human spirit."
+      "data-summary": "a masterpiece of russian realism, depicting the grueling labor of burlaks, highlighting social injustice and the resilience of the human spirit.",
+      "data-title": "barge haulers on the volga",
+      "data-year": "1870 – 1873"
     },
     "classes": [
       "art-card"
@@ -1957,10 +1957,10 @@
     "zoomMeta": "",
     "zoomCaption": "A politically charged work depicting the execution of the puppet emperor of Mexico, noted for its detached, objective observation.",
     "dataset": {
-      "data-title": "the execution of emperor maximilian",
       "data-creator": "édouard manet",
-      "data-year": "1867",
-      "data-summary": "a politically charged work depicting the execution of the puppet emperor of mexico, noted for its detached, objective observation."
+      "data-summary": "a politically charged work depicting the execution of the puppet emperor of mexico, noted for its detached, objective observation.",
+      "data-title": "the execution of emperor maximilian",
+      "data-year": "1867"
     },
     "classes": [
       "art-card"
@@ -1981,10 +1981,10 @@
     "zoomMeta": "",
     "zoomCaption": "A famous painting of the jester Stańczyk, depicted in deep thought and sorrow while a royal ball takes place in the background, symbolizing clear-sightedness amidst political ignorance.",
     "dataset": {
-      "data-title": "stańczyk",
       "data-creator": "jan matejko",
-      "data-year": "1862",
-      "data-summary": "a famous painting of the jester stańczyk, depicted in deep thought and sorrow while a royal ball takes place in the background, symbolizing clear-sightedness amidst political ignorance."
+      "data-summary": "a famous painting of the jester stańczyk, depicted in deep thought and sorrow while a royal ball takes place in the background, symbolizing clear-sightedness amidst political ignorance.",
+      "data-title": "stańczyk",
+      "data-year": "1862"
     },
     "classes": [
       "art-card"
@@ -2005,10 +2005,10 @@
     "zoomMeta": "",
     "zoomCaption": "A Pre-Raphaelite interpretation of the classic myth, focusing on the psychological tension and the intricate labyrinth rather than just the action.",
     "dataset": {
-      "data-title": "theseus and the minotaur",
       "data-creator": "edward burne-jones",
-      "data-year": "1861",
-      "data-summary": "a pre-raphaelite interpretation of the classic myth, focusing on the psychological tension and the intricate labyrinth rather than just the action."
+      "data-summary": "a pre-raphaelite interpretation of the classic myth, focusing on the psychological tension and the intricate labyrinth rather than just the action.",
+      "data-title": "theseus and the minotaur",
+      "data-year": "1861"
     },
     "classes": [
       "art-card"
@@ -2029,10 +2029,10 @@
     "zoomMeta": "",
     "zoomCaption": "A monumental academic painting depicting the first Catholic Mass in Brazil, often seen as a visual birth certificate of the nation, celebrating the encounter between Portuguese and indigenous peoples.",
     "dataset": {
-      "data-title": "primeira missa do brasil",
       "data-creator": "victor meirelles",
-      "data-year": "1861",
-      "data-summary": "a monumental academic painting depicting the first catholic mass in brazil, often seen as a visual birth certificate of the nation, celebrating the encounter between portuguese and indigenous peoples."
+      "data-summary": "a monumental academic painting depicting the first catholic mass in brazil, often seen as a visual birth certificate of the nation, celebrating the encounter between portuguese and indigenous peoples.",
+      "data-title": "primeira missa do brasil",
+      "data-year": "1861"
     },
     "classes": [
       "art-card"
@@ -2053,10 +2053,10 @@
     "zoomMeta": "",
     "zoomCaption": "A stunning example of the Hudson River School, capturing the intense colors and spiritual grandeur of the American landscape at sunset.",
     "dataset": {
-      "data-title": "twilight in the wilderness",
       "data-creator": "frederic edwin church",
-      "data-year": "1860",
-      "data-summary": "a stunning example of the hudson river school, capturing the intense colors and spiritual grandeur of the american landscape at sunset."
+      "data-summary": "a stunning example of the hudson river school, capturing the intense colors and spiritual grandeur of the american landscape at sunset.",
+      "data-title": "twilight in the wilderness",
+      "data-year": "1860"
     },
     "classes": [
       "art-card"
@@ -2077,10 +2077,10 @@
     "zoomMeta": "",
     "zoomCaption": "An atmospheric Orientalist painting capturing the harsh conditions of the desert with a moody, hazy palette.",
     "dataset": {
-      "data-title": "man riding a camel in the desert during a sandstorm",
       "data-creator": "augustus osborne lamplough",
-      "data-year": "1860",
-      "data-summary": "an atmospheric orientalist painting capturing the harsh conditions of the desert with a moody, hazy palette."
+      "data-summary": "an atmospheric orientalist painting capturing the harsh conditions of the desert with a moody, hazy palette.",
+      "data-title": "man riding a camel in the desert during a sandstorm",
+      "data-year": "1860"
     },
     "classes": [
       "art-card"
@@ -2101,10 +2101,10 @@
     "zoomMeta": "",
     "zoomCaption": "A dynamic Ukiyo-e woodblock print depicting the legendary samurai Yoshitsune training with Tengu, showcasing Kuniyoshi's mastery of action and folklore.",
     "dataset": {
-      "data-title": "prince yoshitsune learning the art of swordsmanship",
       "data-creator": "utagawa kuniyoshi",
-      "data-year": "1858",
-      "data-summary": "a dynamic ukiyo-e woodblock print depicting the legendary samurai yoshitsune training with tengu, showcasing kuniyoshi's mastery of action and folklore."
+      "data-summary": "a dynamic ukiyo-e woodblock print depicting the legendary samurai yoshitsune training with tengu, showcasing kuniyoshi's mastery of action and folklore.",
+      "data-title": "prince yoshitsune learning the art of swordsmanship",
+      "data-year": "1858"
     },
     "classes": [
       "art-card"
@@ -2125,10 +2125,10 @@
     "zoomMeta": "",
     "zoomCaption": "A Realist masterpiece depicting the artist meeting his patron on a road, symbolizing the independence and confidence of the artist class.",
     "dataset": {
-      "data-title": "bonjour, monsieur courbet",
       "data-creator": "gustave courbet",
-      "data-year": "1854",
-      "data-summary": "a realist masterpiece depicting the artist meeting his patron on a road, symbolizing the independence and confidence of the artist class."
+      "data-summary": "a realist masterpiece depicting the artist meeting his patron on a road, symbolizing the independence and confidence of the artist class.",
+      "data-title": "bonjour, monsieur courbet",
+      "data-year": "1854"
     },
     "classes": [
       "art-card"
@@ -2149,10 +2149,10 @@
     "zoomMeta": "",
     "zoomCaption": "A famous example of Academic art, depicting a tearful Lucifer with a look of resentment and hurt pride, combining beauty with darker emotion.",
     "dataset": {
-      "data-title": "fallen angel",
       "data-creator": "alexandre cabanel",
-      "data-year": "1847",
-      "data-summary": "a famous example of academic art, depicting a tearful lucifer with a look of resentment and hurt pride, combining beauty with darker emotion."
+      "data-summary": "a famous example of academic art, depicting a tearful lucifer with a look of resentment and hurt pride, combining beauty with darker emotion.",
+      "data-title": "fallen angel",
+      "data-year": "1847"
     },
     "classes": [
       "art-card"
@@ -2173,10 +2173,10 @@
     "zoomMeta": "",
     "zoomCaption": "A historical painting portraying the coronation of Emperor Dom Pedro II, emphasizing the solemnity of the event and the consolidation of the Brazilian Empire.",
     "dataset": {
-      "data-title": "coroação de d. pedro ii",
       "data-creator": "manuel de araújo porto-alegre",
-      "data-year": "1845 – 1846",
-      "data-summary": "a historical painting portraying the coronation of emperor dom pedro ii, emphasizing the solemnity of the event and the consolidation of the brazilian empire."
+      "data-summary": "a historical painting portraying the coronation of emperor dom pedro ii, emphasizing the solemnity of the event and the consolidation of the brazilian empire.",
+      "data-title": "coroação de d. pedro ii",
+      "data-year": "1845 – 1846"
     },
     "classes": [
       "art-card"
@@ -2197,10 +2197,10 @@
     "zoomMeta": "",
     "zoomCaption": "A folk art masterpiece depicting the prophecy of Isaiah, where animals live in harmony. Hicks painted many versions, reflecting his Quaker beliefs.",
     "dataset": {
-      "data-title": "peaceable kingdom",
       "data-creator": "edward hicks",
-      "data-year": "1833–1834",
-      "data-summary": "a folk art masterpiece depicting the prophecy of isaiah, where animals live in harmony. hicks painted many versions, reflecting his quaker beliefs."
+      "data-summary": "a folk art masterpiece depicting the prophecy of isaiah, where animals live in harmony. hicks painted many versions, reflecting his quaker beliefs.",
+      "data-title": "peaceable kingdom",
+      "data-year": "1833–1834"
     },
     "classes": [
       "art-card"
@@ -2221,10 +2221,10 @@
     "zoomMeta": "",
     "zoomCaption": "The definitive symbol of the French Revolution, depicting the personification of Liberty marching forward over the barricades, leading the people to victory.",
     "dataset": {
-      "data-title": "liberty leading the people",
       "data-creator": "eugène delacroix",
-      "data-year": "1830",
-      "data-summary": "the definitive symbol of the french revolution, depicting the personification of liberty marching forward over the barricades, leading the people to victory."
+      "data-summary": "the definitive symbol of the french revolution, depicting the personification of liberty marching forward over the barricades, leading the people to victory.",
+      "data-title": "liberty leading the people",
+      "data-year": "1830"
     },
     "classes": [
       "art-card"
@@ -2245,10 +2245,10 @@
     "zoomMeta": "",
     "zoomCaption": "A romantic landscape featuring three figures watching the moon rise over the sea, evoking themes of longing and the sublime.",
     "dataset": {
-      "data-title": "moonrise over the sea",
       "data-creator": "caspar david friedrich",
-      "data-year": "1822",
-      "data-summary": "a romantic landscape featuring three figures watching the moon rise over the sea, evoking themes of longing and the sublime."
+      "data-summary": "a romantic landscape featuring three figures watching the moon rise over the sea, evoking themes of longing and the sublime.",
+      "data-title": "moonrise over the sea",
+      "data-year": "1822"
     },
     "classes": [
       "art-card"
@@ -2269,10 +2269,10 @@
     "zoomMeta": "",
     "zoomCaption": "Delacroix's first major success, depicting Dante and Virgil crossing the styx, filled with dramatic lighting and emotional turbulence.",
     "dataset": {
-      "data-title": "the barque of dante",
       "data-creator": "eugène delacroix",
-      "data-year": "1822",
-      "data-summary": "delacroix's first major success, depicting dante and virgil crossing the styx, filled with dramatic lighting and emotional turbulence."
+      "data-summary": "delacroix's first major success, depicting dante and virgil crossing the styx, filled with dramatic lighting and emotional turbulence.",
+      "data-title": "the barque of dante",
+      "data-year": "1822"
     },
     "classes": [
       "art-card"
@@ -2293,10 +2293,10 @@
     "zoomMeta": "",
     "zoomCaption": "One of Goya's disturbing 'Black Paintings', portraying the myth of Saturn eating his children to prevent them from overthrowing him, symbolizing the ravages of time and power.",
     "dataset": {
-      "data-title": "saturn devouring one of his sons",
       "data-creator": "francisco de goya",
-      "data-year": "c. 1821–1823",
-      "data-summary": "one of goya's disturbing 'black paintings', portraying the myth of saturn eating his children to prevent them from overthrowing him, symbolizing the ravages of time and power."
+      "data-summary": "one of goya's disturbing 'black paintings', portraying the myth of saturn eating his children to prevent them from overthrowing him, symbolizing the ravages of time and power.",
+      "data-title": "saturn devouring one of his sons",
+      "data-year": "c. 1821–1823"
     },
     "classes": [
       "art-card"
@@ -2317,10 +2317,10 @@
     "zoomMeta": "",
     "zoomCaption": "The quintessential Romantic painting, featuring a lone figure contemplating a vast, misty landscape, evoking themes of self-reflection, the sublime, and the unknown.",
     "dataset": {
-      "data-title": "the wanderer above a sea of mist",
       "data-creator": "caspar david friedrich",
-      "data-year": "1818",
-      "data-summary": "the quintessential romantic painting, featuring a lone figure contemplating a vast, misty landscape, evoking themes of self-reflection, the sublime, and the unknown."
+      "data-summary": "the quintessential romantic painting, featuring a lone figure contemplating a vast, misty landscape, evoking themes of self-reflection, the sublime, and the unknown.",
+      "data-title": "the wanderer above a sea of mist",
+      "data-year": "1818"
     },
     "classes": [
       "art-card"
@@ -2341,10 +2341,10 @@
     "zoomMeta": "",
     "zoomCaption": "A propaganda piece idealizing Napoleon Bonaparte's crossing of the Great St. Bernard Pass, symbolizing power, leadership, and the conquering of nature.",
     "dataset": {
-      "data-title": "napoleon crossing the alps",
       "data-creator": "jacques-louis david",
-      "data-year": "1812",
-      "data-summary": "a propaganda piece idealizing napoleon bonaparte's crossing of the great st. bernard pass, symbolizing power, leadership, and the conquering of nature."
+      "data-summary": "a propaganda piece idealizing napoleon bonaparte's crossing of the great st. bernard pass, symbolizing power, leadership, and the conquering of nature.",
+      "data-title": "napoleon crossing the alps",
+      "data-year": "1812"
     },
     "classes": [
       "art-card"
@@ -2365,10 +2365,10 @@
     "zoomMeta": "",
     "zoomCaption": "A dramatic and apocalyptic scene depicting the Fourth Horseman of the Apocalypse, showcasing West's ability to convey terror and divine power.",
     "dataset": {
-      "data-title": "death on the pale horse",
       "data-creator": "benjamin west",
-      "data-year": "1796",
-      "data-summary": "a dramatic and apocalyptic scene depicting the fourth horseman of the apocalypse, showcasing west's ability to convey terror and divine power."
+      "data-summary": "a dramatic and apocalyptic scene depicting the fourth horseman of the apocalypse, showcasing west's ability to convey terror and divine power.",
+      "data-title": "death on the pale horse",
+      "data-year": "1796"
     },
     "classes": [
       "art-card"
@@ -2389,10 +2389,10 @@
     "zoomMeta": "",
     "zoomCaption": "A highly unconventional self-portrait for its time, showing the artist mocking the viewer with a sarcastic grin, breaking the fourth wall of traditional portraiture.",
     "dataset": {
-      "data-title": "self-portrait in the guise of a mockingbird",
       "data-creator": "joseph ducreux",
-      "data-year": "1791",
-      "data-summary": "a highly unconventional self-portrait for its time, showing the artist mocking the viewer with a sarcastic grin, breaking the fourth wall of traditional portraiture."
+      "data-summary": "a highly unconventional self-portrait for its time, showing the artist mocking the viewer with a sarcastic grin, breaking the fourth wall of traditional portraiture.",
+      "data-title": "self-portrait in the guise of a mockingbird",
+      "data-year": "1791"
     },
     "classes": [
       "art-card"
@@ -2413,10 +2413,10 @@
     "zoomMeta": "",
     "zoomCaption": "A dramatic and theatrical composition typical of Fuseli, illustrating the tragic family conflict from Greek mythology with intense emotion.",
     "dataset": {
-      "data-title": "oedipus cursing his son polynices",
       "data-creator": "henry fuseli",
-      "data-year": "1786",
-      "data-summary": "a dramatic and theatrical composition typical of fuseli, illustrating the tragic family conflict from greek mythology with intense emotion."
+      "data-summary": "a dramatic and theatrical composition typical of fuseli, illustrating the tragic family conflict from greek mythology with intense emotion.",
+      "data-title": "oedipus cursing his son polynices",
+      "data-year": "1786"
     },
     "classes": [
       "art-card"
@@ -2437,10 +2437,10 @@
     "zoomMeta": "",
     "zoomCaption": "A dramatic and anatomically precise depiction of the sublime struggle between predator and prey, a recurring theme in Stubbs' work.",
     "dataset": {
-      "data-title": "horse attacked by a lion",
       "data-creator": "george stubbs",
-      "data-year": "1769",
-      "data-summary": "a dramatic and anatomically precise depiction of the sublime struggle between predator and prey, a recurring theme in stubbs' work."
+      "data-summary": "a dramatic and anatomically precise depiction of the sublime struggle between predator and prey, a recurring theme in stubbs' work.",
+      "data-title": "horse attacked by a lion",
+      "data-year": "1769"
     },
     "classes": [
       "art-card"
@@ -2461,10 +2461,10 @@
     "zoomMeta": "",
     "zoomCaption": "A masterpiece of the Rococo era, characterizing the frivolity and playfulness of the French aristocracy, featuring a young woman on a swing and her hidden lover.",
     "dataset": {
-      "data-title": "the swing",
       "data-creator": "jean-honoré fragonard",
-      "data-year": "1767",
-      "data-summary": "a masterpiece of the rococo era, characterizing the frivolity and playfulness of the french aristocracy, featuring a young woman on a swing and her hidden lover."
+      "data-summary": "a masterpiece of the rococo era, characterizing the frivolity and playfulness of the french aristocracy, featuring a young woman on a swing and her hidden lover.",
+      "data-title": "the swing",
+      "data-year": "1767"
     },
     "classes": [
       "art-card"
@@ -2485,10 +2485,10 @@
     "zoomMeta": "",
     "zoomCaption": "A vivid scientific illustration from Merian's studies in Suriname, depicting the struggle between a heron and a snake with biological accuracy.",
     "dataset": {
-      "data-title": "heron encircled by a snake",
       "data-creator": "maria sibylla merian",
-      "data-year": "1700",
-      "data-summary": "a vivid scientific illustration from merian's studies in suriname, depicting the struggle between a heron and a snake with biological accuracy."
+      "data-summary": "a vivid scientific illustration from merian's studies in suriname, depicting the struggle between a heron and a snake with biological accuracy.",
+      "data-title": "heron encircled by a snake",
+      "data-year": "1700"
     },
     "classes": [
       "art-card"
@@ -2509,10 +2509,10 @@
     "zoomMeta": "",
     "zoomCaption": "Often called the 'Mona Lisa of the North', this tronie (character study) is famous for the subject's luminous gaze, the exotic turban, and the masterful rendering of light.",
     "dataset": {
-      "data-title": "girl with a pearl earring",
       "data-creator": "johannes vermeer",
-      "data-year": "1665",
-      "data-summary": "often called the 'mona lisa of the north', this tronie (character study) is famous for the subject's luminous gaze, the exotic turban, and the masterful rendering of light."
+      "data-summary": "often called the 'mona lisa of the north', this tronie (character study) is famous for the subject's luminous gaze, the exotic turban, and the masterful rendering of light.",
+      "data-title": "girl with a pearl earring",
+      "data-year": "1665"
     },
     "classes": [
       "art-card"
@@ -2533,10 +2533,10 @@
     "zoomMeta": "",
     "zoomCaption": "Rembrandt's only seascape, depicting the biblical story of Jesus calming the storm, showcasing the artist's dramatic use of light and shadow (chiaroscuro) to convey intense emotion.",
     "dataset": {
-      "data-title": "storm on the sea of galilee",
       "data-creator": "rembrandt van rijn",
-      "data-year": "1633",
-      "data-summary": "rembrandt's only seascape, depicting the biblical story of jesus calming the storm, showcasing the artist's dramatic use of light and shadow (chiaroscuro) to convey intense emotion."
+      "data-summary": "rembrandt's only seascape, depicting the biblical story of jesus calming the storm, showcasing the artist's dramatic use of light and shadow (chiaroscuro) to convey intense emotion.",
+      "data-title": "storm on the sea of galilee",
+      "data-year": "1633"
     },
     "classes": [
       "art-card"
@@ -2557,10 +2557,10 @@
     "zoomMeta": "",
     "zoomCaption": "A group portrait of the Amsterdam Guild of Surgeons, revolutionizing the genre by creating a dynamic narrative scene rather than a static lineup.",
     "dataset": {
-      "data-title": "the anatomy lesson of dr. nicolaes tulp",
       "data-creator": "rembrandt van rijn",
-      "data-year": "1632",
-      "data-summary": "a group portrait of the amsterdam guild of surgeons, revolutionizing the genre by creating a dynamic narrative scene rather than a static lineup."
+      "data-summary": "a group portrait of the amsterdam guild of surgeons, revolutionizing the genre by creating a dynamic narrative scene rather than a static lineup.",
+      "data-title": "the anatomy lesson of dr. nicolaes tulp",
+      "data-year": "1632"
     },
     "classes": [
       "art-card"
@@ -2581,10 +2581,10 @@
     "zoomMeta": "",
     "zoomCaption": "A dramatic Baroque scene capturing the moment of Samson's betrayal, characterized by rich colors, emotional intensity, and Van Dyck's refined touch.",
     "dataset": {
-      "data-title": "samson and delilah",
       "data-creator": "anthony van dyck",
-      "data-year": "c. 1628–1630",
-      "data-summary": "a dramatic baroque scene capturing the moment of samson's betrayal, characterized by rich colors, emotional intensity, and van dyck's refined touch."
+      "data-summary": "a dramatic baroque scene capturing the moment of samson's betrayal, characterized by rich colors, emotional intensity, and van dyck's refined touch.",
+      "data-title": "samson and delilah",
+      "data-year": "c. 1628–1630"
     },
     "classes": [
       "art-card"
@@ -2605,10 +2605,10 @@
     "zoomMeta": "",
     "zoomCaption": "A terrifying and visceral depiction of the gorgon Medusa's severed head, with snakes writhing in death, showcasing Rubens' dramatic flair and attention to horror.",
     "dataset": {
-      "data-title": "head of medusa",
       "data-creator": "peter paul rubens",
-      "data-year": "c. 1617–1618",
-      "data-summary": "a terrifying and visceral depiction of the gorgon medusa's severed head, with snakes writhing in death, showcasing rubens' dramatic flair and attention to horror."
+      "data-summary": "a terrifying and visceral depiction of the gorgon medusa's severed head, with snakes writhing in death, showcasing rubens' dramatic flair and attention to horror.",
+      "data-title": "head of medusa",
+      "data-year": "c. 1617–1618"
     },
     "classes": [
       "art-card"
@@ -2629,10 +2629,10 @@
     "zoomMeta": "",
     "zoomCaption": "A chaotic and energetic hunting scene, displaying Rubens' ability to capture motion, violence, and the raw power of nature and animals.",
     "dataset": {
-      "data-title": "the wolf and fox hunt",
       "data-creator": "peter paul rubens",
-      "data-year": "1616",
-      "data-summary": "a chaotic and energetic hunting scene, displaying rubens' ability to capture motion, violence, and the raw power of nature and animals."
+      "data-summary": "a chaotic and energetic hunting scene, displaying rubens' ability to capture motion, violence, and the raw power of nature and animals.",
+      "data-title": "the wolf and fox hunt",
+      "data-year": "1616"
     },
     "classes": [
       "art-card"
@@ -2653,10 +2653,10 @@
     "zoomMeta": "",
     "zoomCaption": "A dynamic allegory featuring personifications of Europe, Asia, Africa, and America, highlighting Rubens' skill in composition and his energetic, fleshy style.",
     "dataset": {
-      "data-title": "the four continents",
       "data-creator": "peter paul rubens",
-      "data-year": "1615",
-      "data-summary": "a dynamic allegory featuring personifications of europe, asia, africa, and america, highlighting rubens' skill in composition and his energetic, fleshy style."
+      "data-summary": "a dynamic allegory featuring personifications of europe, asia, africa, and america, highlighting rubens' skill in composition and his energetic, fleshy style.",
+      "data-title": "the four continents",
+      "data-year": "1615"
     },
     "classes": [
       "art-card"
@@ -2677,10 +2677,10 @@
     "zoomMeta": "",
     "zoomCaption": "A dramatic Baroque painting showing the prophet Daniel praying amidst realistic, threatening lions, highlighting Rubens' skill in animal anatomy.",
     "dataset": {
-      "data-title": "daniel in the lions' den",
       "data-creator": "peter paul rubens",
-      "data-year": "1614 – 1616",
-      "data-summary": "a dramatic baroque painting showing the prophet daniel praying amidst realistic, threatening lions, highlighting rubens' skill in animal anatomy."
+      "data-summary": "a dramatic baroque painting showing the prophet daniel praying amidst realistic, threatening lions, highlighting rubens' skill in animal anatomy.",
+      "data-title": "daniel in the lions' den",
+      "data-year": "1614 – 1616"
     },
     "classes": [
       "art-card"
@@ -2701,10 +2701,10 @@
     "zoomMeta": "",
     "zoomCaption": "A dramatic and psychological interpretation of the biblical hero, where Goliath's severed head is believed to be a self-portrait of the remorseful artist.",
     "dataset": {
-      "data-title": "david with the head of goliath",
       "data-creator": "caravaggio",
-      "data-year": "1610",
-      "data-summary": "a dramatic and psychological interpretation of the biblical hero, where goliath's severed head is believed to be a self-portrait of the remorseful artist."
+      "data-summary": "a dramatic and psychological interpretation of the biblical hero, where goliath's severed head is believed to be a self-portrait of the remorseful artist.",
+      "data-title": "david with the head of goliath",
+      "data-year": "1610"
     },
     "classes": [
       "art-card"
@@ -2725,10 +2725,10 @@
     "zoomMeta": "",
     "zoomCaption": "A brooding and introspective portrayal of the saint, marked by Caravaggio's signature use of dramatic lighting (chiaroscuro) and psychological depth.",
     "dataset": {
-      "data-title": "john the baptist (john in the wilderness)",
       "data-creator": "caravaggio",
-      "data-year": "1610",
-      "data-summary": "a brooding and introspective portrayal of the saint, marked by caravaggio's signature use of dramatic lighting (chiaroscuro) and psychological depth."
+      "data-summary": "a brooding and introspective portrayal of the saint, marked by caravaggio's signature use of dramatic lighting (chiaroscuro) and psychological depth.",
+      "data-title": "john the baptist (john in the wilderness)",
+      "data-year": "1610"
     },
     "classes": [
       "art-card"
@@ -2749,10 +2749,10 @@
     "zoomMeta": "",
     "zoomCaption": "A devotional image of Christ, characterized by El Greco's signature elongated style and spiritual intensity.",
     "dataset": {
-      "data-title": "the saviour of the world (el salvador)",
       "data-creator": "el greco",
-      "data-year": "1610 – 1614",
-      "data-summary": "a devotional image of christ, characterized by el greco's signature elongated style and spiritual intensity."
+      "data-summary": "a devotional image of christ, characterized by el greco's signature elongated style and spiritual intensity.",
+      "data-title": "the saviour of the world (el salvador)",
+      "data-year": "1610 – 1614"
     },
     "classes": [
       "art-card"
@@ -2773,10 +2773,10 @@
     "zoomMeta": "",
     "zoomCaption": "An early Rubens masterpiece full of turbulence and energy, depicting the mythological fall of Phaeton from the sun chariot.",
     "dataset": {
-      "data-title": "the fall of phaeton",
       "data-creator": "peter paul rubens",
-      "data-year": "1604 – 1605",
-      "data-summary": "an early rubens masterpiece full of turbulence and energy, depicting the mythological fall of phaeton from the sun chariot."
+      "data-summary": "an early rubens masterpiece full of turbulence and energy, depicting the mythological fall of phaeton from the sun chariot.",
+      "data-title": "the fall of phaeton",
+      "data-year": "1604 – 1605"
     },
     "classes": [
       "art-card"
@@ -2797,10 +2797,10 @@
     "zoomMeta": "",
     "zoomCaption": "One of El Greco's first major commissions in Toledo, displaying his dynamic composition, brilliant color, and Michelangelo-esque figures.",
     "dataset": {
-      "data-title": "the holy trinity",
       "data-creator": "el greco",
-      "data-year": "1577 – 1579",
-      "data-summary": "one of el greco's first major commissions in toledo, displaying his dynamic composition, brilliant color, and michelangelo-esque figures."
+      "data-summary": "one of el greco's first major commissions in toledo, displaying his dynamic composition, brilliant color, and michelangelo-esque figures.",
+      "data-title": "the holy trinity",
+      "data-year": "1577 – 1579"
     },
     "classes": [
       "art-card"
@@ -2821,10 +2821,10 @@
     "zoomMeta": "",
     "zoomCaption": "A lively and detailed genre painting portraying a rustic wedding feast, celebrating various aspects of peasant life with humor and warm empathy.",
     "dataset": {
-      "data-title": "the peasant wedding",
       "data-creator": "pieter bruegel the elder",
-      "data-year": "1568",
-      "data-summary": "a lively and detailed genre painting portraying a rustic wedding feast, celebrating various aspects of peasant life with humor and warm empathy."
+      "data-summary": "a lively and detailed genre painting portraying a rustic wedding feast, celebrating various aspects of peasant life with humor and warm empathy.",
+      "data-title": "the peasant wedding",
+      "data-year": "1568"
     },
     "classes": [
       "art-card"
@@ -2845,10 +2845,10 @@
     "zoomMeta": "",
     "zoomCaption": "A moving depiction of the Passion, focusing on the emotional burden and physical weight of the cross, painted in Titian's late, expressive style.",
     "dataset": {
-      "data-title": "christ carrying the cross",
       "data-creator": "titian",
-      "data-year": "1565",
-      "data-summary": "a moving depiction of the passion, focusing on the emotional burden and physical weight of the cross, painted in titian's late, expressive style."
+      "data-summary": "a moving depiction of the passion, focusing on the emotional burden and physical weight of the cross, painted in titian's late, expressive style.",
+      "data-title": "christ carrying the cross",
+      "data-year": "1565"
     },
     "classes": [
       "art-card"
@@ -2869,10 +2869,10 @@
     "zoomMeta": "",
     "zoomCaption": "A grisaille painting depicting the biblical scene, emphasizing the hypocrisy of the accusers and the quiet dignity of Christ.",
     "dataset": {
-      "data-title": "christ and the woman taken in adultery",
       "data-creator": "pieter bruegel the elder",
-      "data-year": "1565",
-      "data-summary": "a grisaille painting depicting the biblical scene, emphasizing the hypocrisy of the accusers and the quiet dignity of christ."
+      "data-summary": "a grisaille painting depicting the biblical scene, emphasizing the hypocrisy of the accusers and the quiet dignity of christ.",
+      "data-title": "christ and the woman taken in adultery",
+      "data-year": "1565"
     },
     "classes": [
       "art-card"
@@ -2893,10 +2893,10 @@
     "zoomMeta": "",
     "zoomCaption": "An awe-inspiring and detailed depiction of the biblical tower, symbolizing human hubris and the confusion of tongues, set against a vast landscape.",
     "dataset": {
-      "data-title": "the tower of babel",
       "data-creator": "pieter bruegel the elder",
-      "data-year": "1563",
-      "data-summary": "an awe-inspiring and detailed depiction of the biblical tower, symbolizing human hubris and the confusion of tongues, set against a vast landscape."
+      "data-summary": "an awe-inspiring and detailed depiction of the biblical tower, symbolizing human hubris and the confusion of tongues, set against a vast landscape.",
+      "data-title": "the tower of babel",
+      "data-year": "1563"
     },
     "classes": [
       "art-card"
@@ -2917,10 +2917,10 @@
     "zoomMeta": "",
     "zoomCaption": "A panoramic landscape of death and destruction, where an army of skeletons overwhelms the living, symbolizing the inevitability of death.",
     "dataset": {
-      "data-title": "the triumph of death",
       "data-creator": "pieter bruegel the elder",
-      "data-year": "1562",
-      "data-summary": "a panoramic landscape of death and destruction, where an army of skeletons overwhelms the living, symbolizing the inevitability of death."
+      "data-summary": "a panoramic landscape of death and destruction, where an army of skeletons overwhelms the living, symbolizing the inevitability of death.",
+      "data-title": "the triumph of death",
+      "data-year": "1562"
     },
     "classes": [
       "art-card"
@@ -2941,10 +2941,10 @@
     "zoomMeta": "",
     "zoomCaption": "A late work by Titian, depicting the biblical scene with Jesus and the Pharisee. It is noted for its loose brushwork and psychological interplay.",
     "dataset": {
-      "data-title": "the tribute money",
       "data-creator": "titian",
-      "data-year": "1560 – 1568",
-      "data-summary": "a late work by titian, depicting the biblical scene with jesus and the pharisee. it is noted for its loose brushwork and psychological interplay."
+      "data-summary": "a late work by titian, depicting the biblical scene with jesus and the pharisee. it is noted for its loose brushwork and psychological interplay.",
+      "data-title": "the tribute money",
+      "data-year": "1560 – 1568"
     },
     "classes": [
       "art-card"
@@ -2965,10 +2965,10 @@
     "zoomMeta": "",
     "zoomCaption": "A powerful depiction of the Greek myth of Sisyphus, condemned to eternally push a boulder up a hill, showcasing Titian's mastery of anatomy and movement.",
     "dataset": {
-      "data-title": "sisyphus",
       "data-creator": "titian",
-      "data-year": "1548",
-      "data-summary": "a powerful depiction of the greek myth of sisyphus, condemned to eternally push a boulder up a hill, showcasing titian's mastery of anatomy and movement."
+      "data-summary": "a powerful depiction of the greek myth of sisyphus, condemned to eternally push a boulder up a hill, showcasing titian's mastery of anatomy and movement.",
+      "data-title": "sisyphus",
+      "data-year": "1548"
     },
     "classes": [
       "art-card"
@@ -2989,10 +2989,10 @@
     "zoomMeta": "",
     "zoomCaption": "A Venetian High Renaissance painting characterized by its serene atmosphere, soft light, and harmonious colors.",
     "dataset": {
-      "data-title": "virgin and child with saints john the baptist and joseph",
       "data-creator": "vincenzo catena",
-      "data-year": "1525",
-      "data-summary": "a venetian high renaissance painting characterized by its serene atmosphere, soft light, and harmonious colors."
+      "data-summary": "a venetian high renaissance painting characterized by its serene atmosphere, soft light, and harmonious colors.",
+      "data-title": "virgin and child with saints john the baptist and joseph",
+      "data-year": "1525"
     },
     "classes": [
       "art-card"
@@ -3013,10 +3013,10 @@
     "zoomMeta": "",
     "zoomCaption": "One of the most famous frescoes of the Renaissance, gathering the greatest philosophers of antiquity in an idealized architectural setting.",
     "dataset": {
-      "data-title": "the school of athens",
       "data-creator": "raphael sanzio",
-      "data-year": "c.1510/11",
-      "data-summary": "one of the most famous frescoes of the renaissance, gathering the greatest philosophers of antiquity in an idealized architectural setting."
+      "data-summary": "one of the most famous frescoes of the renaissance, gathering the greatest philosophers of antiquity in an idealized architectural setting.",
+      "data-title": "the school of athens",
+      "data-year": "c.1510/11"
     },
     "classes": [
       "art-card"
@@ -3037,10 +3037,10 @@
     "zoomMeta": "",
     "zoomCaption": "two life-sized panels depicting the biblical couple, showcasing Dürer's mastery of human proportion and the influence of Italian Renaissance art.",
     "dataset": {
-      "data-title": "adam and eve",
       "data-creator": "albrecht dürer",
-      "data-year": "1507",
-      "data-summary": "two life-sized panels depicting the biblical couple, showcasing dürer's mastery of human proportion and the influence of italian renaissance art."
+      "data-summary": "two life-sized panels depicting the biblical couple, showcasing dürer's mastery of human proportion and the influence of italian renaissance art.",
+      "data-title": "adam and eve",
+      "data-year": "1507"
     },
     "classes": [
       "art-card"
@@ -3061,10 +3061,10 @@
     "zoomMeta": "",
     "zoomCaption": "A graceful High Renaissance painting showing the saint looking upward in ecstasy, exemplifying Raphael's ideal of beauty and spiritual devotion.",
     "dataset": {
-      "data-title": "saint catherine of alexandria",
       "data-creator": "raphael sanzio",
-      "data-year": "1507",
-      "data-summary": "a graceful high renaissance painting showing the saint looking upward in ecstasy, exemplifying raphael's ideal of beauty and spiritual devotion."
+      "data-summary": "a graceful high renaissance painting showing the saint looking upward in ecstasy, exemplifying raphael's ideal of beauty and spiritual devotion.",
+      "data-title": "saint catherine of alexandria",
+      "data-year": "1507"
     },
     "classes": [
       "art-card"
@@ -3085,10 +3085,10 @@
     "zoomMeta": "",
     "zoomCaption": "Probably the most famous painting in the world, known for the subject's enigmatic expression and the mastery of sfumato, creating a soft transition between colors and tones.",
     "dataset": {
-      "data-title": "mona lisa (la gioconda)",
       "data-creator": "leonardo da vinci",
-      "data-year": "1503",
-      "data-summary": "probably the most famous painting in the world, known for the subject's enigmatic expression and the mastery of sfumato, creating a soft transition between colors and tones."
+      "data-summary": "probably the most famous painting in the world, known for the subject's enigmatic expression and the mastery of sfumato, creating a soft transition between colors and tones.",
+      "data-title": "mona lisa (la gioconda)",
+      "data-year": "1503"
     },
     "classes": [
       "art-card"
@@ -3109,10 +3109,10 @@
     "zoomMeta": "",
     "zoomCaption": "A triptych detailing the history of the world from creation to hell, filled with surreal, symbolic, and often grotesque imagery warning against the perils of life's temptations.",
     "dataset": {
-      "data-title": "the garden of earthly delights",
       "data-creator": "hieronymus bosch",
-      "data-year": "1503 – 1504",
-      "data-summary": "a triptych detailing the history of the world from creation to hell, filled with surreal, symbolic, and often grotesque imagery warning against the perils of life's temptations."
+      "data-summary": "a triptych detailing the history of the world from creation to hell, filled with surreal, symbolic, and often grotesque imagery warning against the perils of life's temptations.",
+      "data-title": "the garden of earthly delights",
+      "data-year": "1503 – 1504"
     },
     "classes": [
       "art-card"
@@ -3133,10 +3133,10 @@
     "zoomMeta": "",
     "zoomCaption": "An early work by Raphael, clearly showing the influence of his master Perugino in its symmetry, clarity, and peaceful landscape.",
     "dataset": {
-      "data-title": "mond crucifixion",
       "data-creator": "raphael sanzio",
-      "data-year": "1502",
-      "data-summary": "an early work by raphael, clearly showing the influence of his master perugino in its symmetry, clarity, and peaceful landscape."
+      "data-summary": "an early work by raphael, clearly showing the influence of his master perugino in its symmetry, clarity, and peaceful landscape.",
+      "data-title": "mond crucifixion",
+      "data-year": "1502"
     },
     "classes": [
       "art-card"
@@ -3157,10 +3157,10 @@
     "zoomMeta": "",
     "zoomCaption": "A Renaissance icon depicting the goddess Venus arriving at the shore after her birth, celebrating beauty and love with classical references and graceful composition.",
     "dataset": {
-      "data-title": "the birth of venus",
       "data-creator": "sandro botticelli",
-      "data-year": "1484",
-      "data-summary": "a renaissance icon depicting the goddess venus arriving at the shore after her birth, celebrating beauty and love with classical references and graceful composition."
+      "data-summary": "a renaissance icon depicting the goddess venus arriving at the shore after her birth, celebrating beauty and love with classical references and graceful composition.",
+      "data-title": "the birth of venus",
+      "data-year": "1484"
     },
     "classes": [
       "art-card"
@@ -3181,10 +3181,10 @@
     "zoomMeta": "",
     "zoomCaption": "Mantegna's masterpiece showcases his fascination with classical antiquity, featuring a sculptural St. Sebastian amidst Roman ruins, emphasizing strength over suffering.",
     "dataset": {
-      "data-title": "martyrdom of saint sebastian",
       "data-creator": "andrea mantegna",
-      "data-year": "1480",
-      "data-summary": "mantegna's masterpiece showcases his fascination with classical antiquity, featuring a sculptural st. sebastian amidst roman ruins, emphasizing strength over suffering."
+      "data-summary": "mantegna's masterpiece showcases his fascination with classical antiquity, featuring a sculptural st. sebastian amidst roman ruins, emphasizing strength over suffering.",
+      "data-title": "martyrdom of saint sebastian",
+      "data-year": "1480"
     },
     "classes": [
       "art-card"
@@ -3205,10 +3205,10 @@
     "zoomMeta": "",
     "zoomCaption": "A Renaissance work illustrating a scene from the life of Saint Anthony, emphasizing the rejection of worldly wealth for spiritual purity.",
     "dataset": {
-      "data-title": "saint anthony tempted by a lump of gold",
       "data-creator": "fra angelico",
-      "data-year": "1436",
-      "data-summary": "a renaissance work illustrating a scene from the life of saint anthony, emphasizing the rejection of worldly wealth for spiritual purity."
+      "data-summary": "a renaissance work illustrating a scene from the life of saint anthony, emphasizing the rejection of worldly wealth for spiritual purity.",
+      "data-title": "saint anthony tempted by a lump of gold",
+      "data-year": "1436"
     },
     "classes": [
       "art-card"
@@ -3229,10 +3229,10 @@
     "zoomMeta": "",
     "zoomCaption": "A seminal work of the Northern Renaissance, famous for its complex iconography, use of oil paint, and the convex mirror reflecting the artist.",
     "dataset": {
-      "data-title": "arnolfini portrait",
       "data-creator": "jan van eyck",
-      "data-year": "1434",
-      "data-summary": "a seminal work of the northern renaissance, famous for its complex iconography, use of oil paint, and the convex mirror reflecting the artist."
+      "data-summary": "a seminal work of the northern renaissance, famous for its complex iconography, use of oil paint, and the convex mirror reflecting the artist.",
+      "data-title": "arnolfini portrait",
+      "data-year": "1434"
     },
     "classes": [
       "art-card"
@@ -3253,10 +3253,10 @@
     "zoomMeta": "",
     "zoomCaption": "A foundational work of the Early Renaissance, demonstrating Masaccio's revolutionary use of perspective and emotional realism in depicting two martyrdoms.",
     "dataset": {
-      "data-title": "crucifixion of st. peter and beheading of st. john the baptist",
       "data-creator": "masaccio",
-      "data-year": "1426",
-      "data-summary": "a foundational work of the early renaissance, demonstrating masaccio's revolutionary use of perspective and emotional realism in depicting two martyrdoms."
+      "data-summary": "a foundational work of the early renaissance, demonstrating masaccio's revolutionary use of perspective and emotional realism in depicting two martyrdoms.",
+      "data-title": "crucifixion of st. peter and beheading of st. john the baptist",
+      "data-year": "1426"
     },
     "classes": [
       "art-card"

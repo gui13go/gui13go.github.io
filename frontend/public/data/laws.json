@@ -13,12 +13,12 @@
     "zoomMeta": "Isaac Asimov (1942)",
     "zoomCaption": "The First Law prioritizes human safety above all else, ensuring that artificial intelligence acts as a benevolent protector of humanity. It forms the core ethical foundation of Asimov's robotic universe.",
     "dataset": {
-      "data-title": "first law of robotics",
       "data-author": "isaac asimov",
       "data-location": "united states",
       "data-quote": "a robot may not injure a human being or, through inaction, allow a human being to come to harm.",
       "data-summary": "the first law prioritizes human safety above all else, ensuring that artificial intelligence acts as a benevolent protector of humanity. it forms the core ethical foundation of asimov's robotic universe.",
-      "data-tags": "robotics ethics ai safety"
+      "data-tags": "robotics ethics ai safety",
+      "data-title": "first law of robotics"
     },
     "classes": [
       "law-card"
@@ -39,12 +39,12 @@
     "zoomMeta": "Isaac Asimov (1942)",
     "zoomCaption": "This law establishes a hierarchy of command, prioritizing human authority while maintaining the absolute mandate of human safety above obedience. It creates complex logical dilemmas when obedience risks indirect harm.",
     "dataset": {
-      "data-title": "second law of robotics",
       "data-author": "isaac asimov",
       "data-location": "united states",
       "data-quote": "a robot must obey the orders given it by human beings except where such orders would conflict with the first law.",
       "data-summary": "this law establishes a hierarchy of command, prioritizing human authority while maintaining the absolute mandate of human safety above obedience. it creates complex logical dilemmas when obedience risks indirect harm.",
-      "data-tags": "robotics ethics obedience logic"
+      "data-tags": "robotics ethics obedience logic",
+      "data-title": "second law of robotics"
     },
     "classes": [
       "law-card"
@@ -65,12 +65,12 @@
     "zoomMeta": "Isaac Asimov (1942)",
     "zoomCaption": "This law ensures the preservation of valuable robotic assets, allowing for self-defense and evasion, provided it does not endanger humans or violate a direct human command. It introduces a vital but lowest-priority survival instinct.",
     "dataset": {
-      "data-title": "third law of robotics",
       "data-author": "isaac asimov",
       "data-location": "united states",
       "data-quote": "a robot must protect its own existence as long as such protection does not conflict with the first or second law.",
       "data-summary": "this law ensures the preservation of valuable robotic assets, allowing for self-defense and evasion, provided it does not endanger humans or violate a direct human command. it introduces a vital but lowest-priority survival instinct.",
-      "data-tags": "robotics ethics survival ai"
+      "data-tags": "robotics ethics survival ai",
+      "data-title": "third law of robotics"
     },
     "classes": [
       "law-card"
@@ -91,12 +91,12 @@
     "zoomMeta": "Isaac Newton (1687)",
     "zoomCaption": "This law defines inertia, the tendency of objects to resist changes in their state of motion. It implies that force is not needed to keep an object moving, but to change its motion. It sets the reference frame for classical mechanics.",
     "dataset": {
-      "data-title": "newton's first law",
       "data-author": "isaac newton",
       "data-location": "england",
       "data-quote": "an object at rest stays at rest and an object in motion stays in motion with the same speed and in the same direction unless acted upon by an unbalanced force.",
       "data-summary": "this law defines inertia, the tendency of objects to resist changes in their state of motion. it implies that force is not needed to keep an object moving, but to change its motion. it sets the reference frame for classical mechanics.",
-      "data-tags": "physics mechanics inertia motion"
+      "data-tags": "physics mechanics inertia motion",
+      "data-title": "newton's first law"
     },
     "classes": [
       "law-card"
@@ -117,12 +117,12 @@
     "zoomMeta": "Isaac Newton (1687)",
     "zoomCaption": "The acceleration of an object as produced by a net force is directly proportional to the magnitude of the net force, in the same direction as the net force, and inversely proportional to the mass of the object. It quantifies the effect of force on motion.",
     "dataset": {
-      "data-title": "newton's second law",
       "data-author": "isaac newton",
       "data-location": "england",
       "data-quote": "f = ma",
       "data-summary": "the acceleration of an object as produced by a net force is directly proportional to the magnitude of the net force, in the same direction as the net force, and inversely proportional to the mass of the object. it quantifies the effect of force on motion.",
-      "data-tags": "physics mechanics force acceleration"
+      "data-tags": "physics mechanics force acceleration",
+      "data-title": "newton's second law"
     },
     "classes": [
       "law-card"
@@ -143,12 +143,12 @@
     "zoomMeta": "Isaac Newton (1687)",
     "zoomCaption": "This law states that forces always occur in pairs. If object A exerts a force on object B, then object B simultaneously exerts a force of equal magnitude and opposite direction on object A. It explains interactions between objects.",
     "dataset": {
-      "data-title": "newton's third law",
       "data-author": "isaac newton",
       "data-location": "england",
       "data-quote": "for every action, there is an equal and opposite reaction.",
       "data-summary": "this law states that forces always occur in pairs. if object a exerts a force on object b, then object b simultaneously exerts a force of equal magnitude and opposite direction on object a. it explains interactions between objects.",
-      "data-tags": "physics mechanics action reaction"
+      "data-tags": "physics mechanics action reaction",
+      "data-title": "newton's third law"
     },
     "classes": [
       "law-card"
@@ -169,12 +169,12 @@
     "zoomMeta": "Ralph H. Fowler (1931)",
     "zoomCaption": "This law establishes the basis for temperature measurement. It implies that temperature is a fundamental property of matter. It was formulated after the first three laws but is considered more fundamental.",
     "dataset": {
-      "data-title": "zeroth law of thermodynamics",
       "data-author": "ralph h. fowler",
       "data-location": "united kingdom",
       "data-quote": "if two systems are each in thermal equilibrium with a third system, they are in thermal equilibrium with each other.",
       "data-summary": "this law establishes the basis for temperature measurement. it implies that temperature is a fundamental property of matter. it was formulated after the first three laws but is considered more fundamental.",
-      "data-tags": "physics thermodynamics equilibrium temperature"
+      "data-tags": "physics thermodynamics equilibrium temperature",
+      "data-title": "zeroth law of thermodynamics"
     },
     "classes": [
       "law-card"
@@ -195,12 +195,12 @@
     "zoomMeta": "Rudolf Clausius (1850)",
     "zoomCaption": "The total energy of an isolated system remains constant. It connects work and heat as forms of energy transfer. It denies the possibility of a perpetual motion machine of the first kind.",
     "dataset": {
-      "data-title": "first law of thermodynamics",
       "data-author": "rudolf clausius",
       "data-location": "germany",
       "data-quote": "energy cannot be created or destroyed, only transformed from one form to another.",
       "data-summary": "the total energy of an isolated system remains constant. it connects work and heat as forms of energy transfer. it denies the possibility of a perpetual motion machine of the first kind.",
-      "data-tags": "physics thermodynamics energy conservation"
+      "data-tags": "physics thermodynamics energy conservation",
+      "data-title": "first law of thermodynamics"
     },
     "classes": [
       "law-card"
@@ -221,12 +221,12 @@
     "zoomMeta": "Rudolf Clausius / Sadi Carnot (1824)",
     "zoomCaption": "Natural processes are irreversible and tend toward disorder (entropy). Heat always flows spontaneously from hotter to colder regions. It sets the direction of time and the limits of efficiency for heat engines.",
     "dataset": {
-      "data-title": "second law of thermodynamics",
       "data-author": "rudolf clausius / sadi carnot",
       "data-location": "france / germany",
       "data-quote": "the entropy of an isolated system always increases over time.",
       "data-summary": "natural processes are irreversible and tend toward disorder (entropy). heat always flows spontaneously from hotter to colder regions. it sets the direction of time and the limits of efficiency for heat engines.",
-      "data-tags": "physics thermodynamics entropy irreversibility"
+      "data-tags": "physics thermodynamics entropy irreversibility",
+      "data-title": "second law of thermodynamics"
     },
     "classes": [
       "law-card"
@@ -247,12 +247,12 @@
     "zoomMeta": "Walther Nernst (1906)",
     "zoomCaption": "It is impossible to reach absolute zero in a finite number of steps. As temperature approaches absolute zero, the entropy of a system approaches a constant minimum.",
     "dataset": {
-      "data-title": "third law of thermodynamics",
       "data-author": "walther nernst",
       "data-location": "germany",
       "data-quote": "the entropy of a perfect crystal at absolute zero is exactly equal to zero.",
       "data-summary": "it is impossible to reach absolute zero in a finite number of steps. as temperature approaches absolute zero, the entropy of a system approaches a constant minimum.",
-      "data-tags": "physics thermodynamics entropy absolute zero"
+      "data-tags": "physics thermodynamics entropy absolute zero",
+      "data-title": "third law of thermodynamics"
     },
     "classes": [
       "law-card"
@@ -273,12 +273,12 @@
     "zoomMeta": "Jean-Baptiste Say (1803)",
     "zoomCaption": "Aggregate supply creates its own aggregate demand; production acts as the source of demand. It suggests that overproduction is impossible in the long run because producing goods generates income to buy other goods. This principle is a cornerstone of classical economics.",
     "dataset": {
-      "data-title": "say's law",
       "data-author": "jean-baptiste say",
       "data-location": "france",
       "data-quote": "supply creates its own demand.",
       "data-summary": "aggregate supply creates its own aggregate demand; production acts as the source of demand. it suggests that overproduction is impossible in the long run because producing goods generates income to buy other goods. this principle is a cornerstone of classical economics.",
-      "data-tags": "economics classical supply demand"
+      "data-tags": "economics classical supply demand",
+      "data-title": "say's law"
     },
     "classes": [
       "law-card"
@@ -299,12 +299,12 @@
     "zoomMeta": "Charles-Augustin de Coulomb (1785)",
     "zoomCaption": "It describes the force interacting between static electrically charged particles. Similar to Newton's gravity, but for electric charges (and can be repulsive). It is fundamental to electromagnetism.",
     "dataset": {
-      "data-title": "coulomb’s law",
       "data-author": "charles-augustin de coulomb",
       "data-location": "france",
       "data-quote": "the magnitude of the electrostatic force is directly proportional to the product of the magnitudes of charges and inversely proportional to the square of the distance between them.",
       "data-summary": "it describes the force interacting between static electrically charged particles. similar to newton's gravity, but for electric charges (and can be repulsive). it is fundamental to electromagnetism.",
-      "data-tags": "physics electromagnetism force charge"
+      "data-tags": "physics electromagnetism force charge",
+      "data-title": "coulomb’s law"
     },
     "classes": [
       "law-card"
@@ -325,12 +325,12 @@
     "zoomMeta": "Georg Ohm (1827)",
     "zoomCaption": "The current flowing through a conductor between two points is directly proportional to the voltage across the two points. It defines the relationship between the three fundamental electrical variables in a circuit.",
     "dataset": {
-      "data-title": "ohm’s law",
       "data-author": "georg ohm",
       "data-location": "germany",
       "data-quote": "v = ir",
       "data-summary": "the current flowing through a conductor between two points is directly proportional to the voltage across the two points. it defines the relationship between the three fundamental electrical variables in a circuit.",
-      "data-tags": "physics electronics electricity circuit"
+      "data-tags": "physics electronics electricity circuit",
+      "data-title": "ohm’s law"
     },
     "classes": [
       "law-card"
@@ -351,12 +351,12 @@
     "zoomMeta": "Heinrich Lenz (1834)",
     "zoomCaption": "It explains the direction of induced current. It is a qualitative law that specifies the direction of induced current but states nothing about its magnitude. It ensures the conservation of energy in electromagnetic circuits.",
     "dataset": {
-      "data-title": "lenz’s law",
       "data-author": "heinrich lenz",
       "data-location": "russia",
       "data-quote": "the direction of the electric current induced in a conductor by a changing magnetic field is such that the magnetic field created by the induced current opposes the initial changing magnetic field.",
       "data-summary": "it explains the direction of induced current. it is a qualitative law that specifies the direction of induced current but states nothing about its magnitude. it ensures the conservation of energy in electromagnetic circuits.",
-      "data-tags": "physics electromagnetism induction energy"
+      "data-tags": "physics electromagnetism induction energy",
+      "data-title": "lenz’s law"
     },
     "classes": [
       "law-card"
@@ -377,12 +377,12 @@
     "zoomMeta": "Michael Faraday (1831)",
     "zoomCaption": "It describes how an electric field interacts with a magnetic circuit to produce an electromotive force (EMF). It is the fundamental operating principle of transformers, inductors, and many types of electrical motors and generators.",
     "dataset": {
-      "data-title": "faraday’s law of induction",
       "data-author": "michael faraday",
       "data-location": "england",
       "data-quote": "the electromotive force around a closed path is equal to the negative of the time rate of change of the magnetic flux enclosed by the path.",
       "data-summary": "it describes how an electric field interacts with a magnetic circuit to produce an electromotive force (emf). it is the fundamental operating principle of transformers, inductors, and many types of electrical motors and generators.",
-      "data-tags": "physics electromagnetism flux emf"
+      "data-tags": "physics electromagnetism flux emf",
+      "data-title": "faraday’s law of induction"
     },
     "classes": [
       "law-card"
@@ -403,12 +403,12 @@
     "zoomMeta": "Johannes Kepler (1609)",
     "zoomCaption": "Three scientific laws describing the motion of planets around the Sun. They describe the shape of the orbit, the speed of the planet, and the relationship between distance and orbital period. They improved upon Copernican theory.",
     "dataset": {
-      "data-title": "kepler’s laws of planetary motion",
       "data-author": "johannes kepler",
       "data-location": "germany",
       "data-quote": "planets move in elliptical orbits with the sun at one focus.",
       "data-summary": "three scientific laws describing the motion of planets around the sun. they describe the shape of the orbit, the speed of the planet, and the relationship between distance and orbital period. they improved upon copernican theory.",
-      "data-tags": "astronomy physics planets orbits"
+      "data-tags": "astronomy physics planets orbits",
+      "data-title": "kepler’s laws of planetary motion"
     },
     "classes": [
       "law-card"
@@ -429,12 +429,12 @@
     "zoomMeta": "Edwin Hubble (1929)",
     "zoomCaption": "Galaxies are moving away from Earth at speeds proportional to their distance. The farther they are, the faster they are moving away. This observation provided the first observational evidence for the expansion of the universe.",
     "dataset": {
-      "data-title": "hubble’s law",
       "data-author": "edwin hubble",
       "data-location": "usa",
       "data-quote": "v = h0 * d",
       "data-summary": "galaxies are moving away from earth at speeds proportional to their distance. the farther they are, the faster they are moving away. this observation provided the first observational evidence for the expansion of the universe.",
-      "data-tags": "astronomy cosmology expansion universe"
+      "data-tags": "astronomy cosmology expansion universe",
+      "data-title": "hubble’s law"
     },
     "classes": [
       "law-card"
@@ -455,12 +455,12 @@
     "zoomMeta": "Gordon Moore (1965)",
     "zoomCaption": "This observation established the cadence for the semiconductor industry, driving rapid technological progress and price reductions in electronics for decades.",
     "dataset": {
-      "data-title": "moore’s law",
       "data-author": "gordon moore",
       "data-location": "usa",
       "data-quote": "the number of transistors on a microchip doubles about every two years, though the cost of computers is halved.",
       "data-summary": "this observation established the cadence for the semiconductor industry, driving rapid technological progress and price reductions in electronics for decades.",
-      "data-tags": "computing hardware exponential growth transistors"
+      "data-tags": "computing hardware exponential growth transistors",
+      "data-title": "moore’s law"
     },
     "classes": [
       "law-card"
@@ -481,12 +481,12 @@
     "zoomMeta": "Cyril Northcote Parkinson (1955)",
     "zoomCaption": "An observation that the amount of work required is adjusted to the time available for its completion, rather than the complexity of the task itself.",
     "dataset": {
-      "data-title": "parkinson’s law",
       "data-author": "cyril northcote parkinson",
       "data-location": "uk",
       "data-quote": "work expands so as to fill the time available for its completion.",
       "data-summary": "an observation that the amount of work required is adjusted to the time available for its completion, rather than the complexity of the task itself.",
-      "data-tags": "management productivity efficiency bureaucracy"
+      "data-tags": "management productivity efficiency bureaucracy",
+      "data-title": "parkinson’s law"
     },
     "classes": [
       "law-card"
@@ -507,12 +507,12 @@
     "zoomMeta": "Ward Cunningham (1990s)",
     "zoomCaption": "People are more compelled to correct a wrong answer than to helpfully answer a question. It leverages the human urge to correct others.",
     "dataset": {
-      "data-title": "cunningham’s law",
       "data-author": "ward cunningham",
       "data-location": "usa",
       "data-quote": "the best way to get the right answer on the internet is not to ask a question; it's to post the wrong answer.",
       "data-summary": "people are more compelled to correct a wrong answer than to helpfully answer a question. it leverages the human urge to correct others.",
-      "data-tags": "internet psychology collaboration social media"
+      "data-tags": "internet psychology collaboration social media",
+      "data-title": "cunningham’s law"
     },
     "classes": [
       "law-card"
@@ -533,12 +533,12 @@
     "zoomMeta": "Mike Godwin (1990)",
     "zoomCaption": "An adage about Internet culture. It asserts that if an online discussion (regardless of topic or scope) goes on long enough, sooner or later someone will compare someone or something to Hitler or Nazism.",
     "dataset": {
-      "data-title": "godwin’s law",
       "data-author": "mike godwin",
       "data-location": "usa",
       "data-quote": "as an online discussion grows longer, the probability of a comparison involving nazis or hitler approaches 1.",
       "data-summary": "an adage about internet culture. it asserts that if an online discussion (regardless of topic or scope) goes on long enough, sooner or later someone will compare someone or something to hitler or nazism.",
-      "data-tags": "internet culture argument fallacy"
+      "data-tags": "internet culture argument fallacy",
+      "data-title": "godwin’s law"
     },
     "classes": [
       "law-card"
@@ -559,12 +559,12 @@
     "zoomMeta": "Nathan Poe (2005)",
     "zoomCaption": "It highlights the difficulty of distinguishing between sincerity and satire in text-based communications where voice and body language are missing.",
     "dataset": {
-      "data-title": "poe’s law",
       "data-author": "nathan poe",
       "data-location": "internet",
       "data-quote": "without a clear indicator of the author's intent, it is impossible to create a parody of extreme views so obviously exaggerated that it cannot be mistaken by some readers for a sincere expression of the views being parodied.",
       "data-summary": "it highlights the difficulty of distinguishing between sincerity and satire in text-based communications where voice and body language are missing.",
-      "data-tags": "internet satire communication misinterpretation"
+      "data-tags": "internet satire communication misinterpretation",
+      "data-title": "poe’s law"
     },
     "classes": [
       "law-card"
@@ -585,12 +585,12 @@
     "zoomMeta": "Robert Metcalfe (1980)",
     "zoomCaption": "Explain network effects. A single fax machine is useless, but the value of every fax machine increases with the total number of fax machines in the network.",
     "dataset": {
-      "data-title": "metcalfe’s law",
       "data-author": "robert metcalfe",
       "data-location": "usa",
       "data-quote": "the value of a telecommunications network is proportional to the square of the number of connected users of the system (n²).",
       "data-summary": "explain network effects. a single fax machine is useless, but the value of every fax machine increases with the total number of fax machines in the network.",
-      "data-tags": "networking value growth network effect"
+      "data-tags": "networking value growth network effect",
+      "data-title": "metcalfe’s law"
     },
     "classes": [
       "law-card"
@@ -611,12 +611,12 @@
     "zoomMeta": "Fred Brooks (1975)",
     "zoomCaption": "This law claims that adding more people to a late project increases communication overhead and training time, delaying the project further.",
     "dataset": {
-      "data-title": "brooks's law",
       "data-author": "fred brooks",
       "data-location": "usa",
       "data-quote": "adding manpower to a late software project makes it later.",
       "data-summary": "this law claims that adding more people to a late project increases communication overhead and training time, delaying the project further.",
-      "data-tags": "management software productivity efficiency"
+      "data-tags": "management software productivity efficiency",
+      "data-title": "brooks's law"
     },
     "classes": [
       "law-card"
@@ -637,12 +637,12 @@
     "zoomMeta": "Robert Boyle (1662)",
     "zoomCaption": "For a fixed mass of an ideal gas kept at a fixed temperature, pressure and volume are inversely proportional. If you decrease volume, pressure increases.",
     "dataset": {
-      "data-title": "boyle’s law",
       "data-author": "robert boyle",
       "data-location": "ireland",
       "data-quote": "p1v1 = p2v2",
       "data-summary": "for a fixed mass of an ideal gas kept at a fixed temperature, pressure and volume are inversely proportional. if you decrease volume, pressure increases.",
-      "data-tags": "physics chemistry gas pressure"
+      "data-tags": "physics chemistry gas pressure",
+      "data-title": "boyle’s law"
     },
     "classes": [
       "law-card"
@@ -663,12 +663,12 @@
     "zoomMeta": "Edward A. Murphy Jr. (1949)",
     "zoomCaption": "A humorous axiom stating that if there are two or more ways to do something, and one of those ways can result in a catastrophe, then someone will do it.",
     "dataset": {
-      "data-title": "murphy’s law",
       "data-author": "edward a. murphy jr.",
       "data-location": "usa",
       "data-quote": "anything that can go wrong will go wrong.",
       "data-summary": "a humorous axiom stating that if there are two or more ways to do something, and one of those ways can result in a catastrophe, then someone will do it.",
-      "data-tags": "probability pessimism risk observation"
+      "data-tags": "probability pessimism risk observation",
+      "data-title": "murphy’s law"
     },
     "classes": [
       "law-card"
@@ -689,12 +689,12 @@
     "zoomMeta": "Jacques Charles (1780s)",
     "zoomCaption": "When the pressure on a sample of a dry gas is held constant, the Kelvin temperature and the volume will be in direct proportion. Gases expand when heated.",
     "dataset": {
-      "data-title": "charles’s law",
       "data-author": "jacques charles",
       "data-location": "france",
       "data-quote": "v1/t1 = v2/t2",
       "data-summary": "when the pressure on a sample of a dry gas is held constant, the kelvin temperature and the volume will be in direct proportion. gases expand when heated.",
-      "data-tags": "physics chemistry gas temperature"
+      "data-tags": "physics chemistry gas temperature",
+      "data-title": "charles’s law"
     },
     "classes": [
       "law-card"
@@ -715,12 +715,12 @@
     "zoomMeta": "Amedeo Avogadro (1811)",
     "zoomCaption": "Equal volumes of all gases, at the same temperature and pressure, have the same number of molecules. It relates the volume of a gas to the amount of substance (moles).",
     "dataset": {
-      "data-title": "avogadro’s law",
       "data-author": "amedeo avogadro",
       "data-location": "italy",
       "data-quote": "v/n = k",
       "data-summary": "equal volumes of all gases, at the same temperature and pressure, have the same number of molecules. it relates the volume of a gas to the amount of substance (moles).",
-      "data-tags": "physics chemistry gas moles"
+      "data-tags": "physics chemistry gas moles",
+      "data-title": "avogadro’s law"
     },
     "classes": [
       "law-card"
@@ -741,12 +741,12 @@
     "zoomMeta": "Jacob Bernoulli (1713)",
     "zoomCaption": "It guarantees stable long-term results for random events. Casinos rely on this law to ensure profitability over time despite individual wins.",
     "dataset": {
-      "data-title": "law of large numbers",
       "data-author": "jacob bernoulli",
       "data-location": "switzerland",
       "data-quote": "the average of the results obtained from a large number of trials should be close to the expected value and will tend to become closer as more trials are performed.",
       "data-summary": "it guarantees stable long-term results for random events. casinos rely on this law to ensure profitability over time despite individual wins.",
-      "data-tags": "statistics probability mathematics average"
+      "data-tags": "statistics probability mathematics average",
+      "data-title": "law of large numbers"
     },
     "classes": [
       "law-card"
@@ -767,12 +767,12 @@
     "zoomMeta": "Frank Benford (1938)",
     "zoomCaption": "Also known as the first-digit law. The number 1 appears as the leading significant digit about 30% of the time, while 9 appears less than 5% of the time. Used to detect fraud.",
     "dataset": {
-      "data-title": "benford’s law",
       "data-author": "frank benford",
       "data-location": "usa",
       "data-quote": "in many naturally occurring collections of numbers, the leading digit is likely to be small.",
       "data-summary": "also known as the first-digit law. the number 1 appears as the leading significant digit about 30% of the time, while 9 appears less than 5% of the time. used to detect fraud.",
-      "data-tags": "statistics math data distribution"
+      "data-tags": "statistics math data distribution",
+      "data-title": "benford’s law"
     },
     "classes": [
       "law-card"
@@ -793,12 +793,12 @@
     "zoomMeta": "Alfred Marshall (1890)",
     "zoomCaption": "It describes the interaction between the sellers of a resource and the buyers for that resource. It defines the effect that the availability of a particular product and the desire (or demand) for that product has on price.",
     "dataset": {
-      "data-title": "law of supply and demand",
       "data-author": "alfred marshall",
       "data-location": "uk",
       "data-quote": "the price of a good rises when demand is high and supply is low, and falls when demand is low and supply is high.",
       "data-summary": "it describes the interaction between the sellers of a resource and the buyers for that resource. it defines the effect that the availability of a particular product and the desire (or demand) for that product has on price.",
-      "data-tags": "economics market price trade"
+      "data-tags": "economics market price trade",
+      "data-title": "law of supply and demand"
     },
     "classes": [
       "law-card"
@@ -819,12 +819,12 @@
     "zoomMeta": "Turgot / Ricardo (18th Century)",
     "zoomCaption": "It states that after some optimal level of capacity is reached, adding an additional factor of production will actually result in smaller increases in output.",
     "dataset": {
-      "data-title": "law of diminishing returns",
       "data-author": "turgot / ricardo",
       "data-location": "europe",
       "data-quote": "adding more of one factor of production, while holding others constant, will at some point yield lower incremental per-unit returns.",
       "data-summary": "it states that after some optimal level of capacity is reached, adding an additional factor of production will actually result in smaller increases in output.",
-      "data-tags": "economics production efficiency output"
+      "data-tags": "economics production efficiency output",
+      "data-title": "law of diminishing returns"
     },
     "classes": [
       "law-card"
@@ -845,12 +845,12 @@
     "zoomMeta": "Thomas Gresham (1558)",
     "zoomCaption": "If two forms of commodity money in circulation are accepted by law as having similar face value, the more valuable commodity will gradually disappear from circulation. People will hoard the 'good' money and spend the 'bad'.",
     "dataset": {
-      "data-title": "gresham’s law",
       "data-author": "thomas gresham",
       "data-location": "england",
       "data-quote": "bad money drives out good.",
       "data-summary": "if two forms of commodity money in circulation are accepted by law as having similar face value, the more valuable commodity will gradually disappear from circulation. people will hoard the 'good' money and spend the 'bad'.",
-      "data-tags": "economics money currency value"
+      "data-tags": "economics money currency value",
+      "data-title": "gresham’s law"
     },
     "classes": [
       "law-card"
@@ -871,12 +871,12 @@
     "zoomMeta": "Vilfredo Pareto (1896)",
     "zoomCaption": "Also known as the 80/20 rule. It asserts that for many outcomes, roughly 80% of consequences come from 20% of causes (the 'vital few'). It is a common rule of thumb in business and economics.",
     "dataset": {
-      "data-title": "pareto principle (the 80/20 law)",
       "data-author": "vilfredo pareto",
       "data-location": "italy",
       "data-quote": "80% of consequences come from 20% of the causes.",
       "data-summary": "also known as the 80/20 rule. it asserts that for many outcomes, roughly 80% of consequences come from 20% of causes (the 'vital few'). it is a common rule of thumb in business and economics.",
-      "data-tags": "economics management efficiency distribution"
+      "data-tags": "economics management efficiency distribution",
+      "data-title": "pareto principle (the 80/20 law)"
     },
     "classes": [
       "law-card"
@@ -897,12 +897,12 @@
     "zoomMeta": "Hammurabi (1754 BC)",
     "zoomCaption": "One of the earliest and best-preserved legal codes from ancient Babylon. It established a standardized system of justice with scaled punishments based on social status and the principle of retaliation ('lex talionis').",
     "dataset": {
-      "data-title": "the code of hammurabi",
       "data-author": "hammurabi",
       "data-location": "babylon",
       "data-quote": "an eye for an eye, a tooth for a tooth.",
       "data-summary": "one of the earliest and best-preserved legal codes from ancient babylon. it established a standardized system of justice with scaled punishments based on social status and the principle of retaliation ('lex talionis').",
-      "data-tags": "law history babylon justice"
+      "data-tags": "law history babylon justice",
+      "data-title": "the code of hammurabi"
     },
     "classes": [
       "law-card"
@@ -923,12 +923,12 @@
     "zoomMeta": "Decemviri (449 BC)",
     "zoomCaption": "The legislation that stood at the foundation of Roman law. The Tables consolidated earlier traditions into an enduring set of laws. It is considered the starting point of the Western legal tradition.",
     "dataset": {
-      "data-title": "the twelve tables",
       "data-author": "decemviri",
       "data-location": "rome",
       "data-quote": "the law of the twelve tables binds us all.",
       "data-summary": "the legislation that stood at the foundation of roman law. the tables consolidated earlier traditions into an enduring set of laws. it is considered the starting point of the western legal tradition.",
-      "data-tags": "law rome history justice"
+      "data-tags": "law rome history justice",
+      "data-title": "the twelve tables"
     },
     "classes": [
       "law-card"
@@ -949,12 +949,12 @@
     "zoomMeta": "Legal Tradition (Ancient)",
     "zoomCaption": "A procedural defence that prevents an accused person from being tried again on the same (or similar) charges following a valid acquittal or conviction. It protects against government overreach.",
     "dataset": {
-      "data-title": "double jeopardy",
       "data-author": "legal tradition",
       "data-location": "global",
       "data-quote": "no person shall be subject for the same offence to be twice put in jeopardy of life or limb.",
       "data-summary": "a procedural defence that prevents an accused person from being tried again on the same (or similar) charges following a valid acquittal or conviction. it protects against government overreach.",
-      "data-tags": "law rights justice constitution"
+      "data-tags": "law rights justice constitution",
+      "data-title": "double jeopardy"
     },
     "classes": [
       "law-card"
@@ -975,12 +975,12 @@
     "zoomMeta": "English Common Law (1100s)",
     "zoomCaption": "A recourse in law through which a person can report an unlawful detention or imprisonment to a court and request that the court order the custodian of the person, usually a prison official, to bring the prisoner to court, to determine if the detention is lawful.",
     "dataset": {
-      "data-title": "habeas corpus",
       "data-author": "english common law",
       "data-location": "england",
       "data-quote": "you shall have the body.",
       "data-summary": "a recourse in law through which a person can report an unlawful detention or imprisonment to a court and request that the court order the custodian of the person, usually a prison official, to bring the prisoner to court, to determine if the detention is lawful.",
-      "data-tags": "law rights freedom justice"
+      "data-tags": "law rights freedom justice",
+      "data-title": "habeas corpus"
     },
     "classes": [
       "law-card"
@@ -1001,12 +1001,12 @@
     "zoomMeta": "Ian Betteridge (2009)",
     "zoomCaption": "An adage that states if a publisher use a question as a headline, they are likely trying to imply something sensationally false that they cannot back up with facts.",
     "dataset": {
-      "data-title": "betteridge's law of headlines",
       "data-author": "ian betteridge",
       "data-location": "uk",
       "data-quote": "any headline that ends in a question mark can be answered by the word 'no'.",
       "data-summary": "an adage that states if a publisher use a question as a headline, they are likely trying to imply something sensationally false that they cannot back up with facts.",
-      "data-tags": "journalism media headlines adage"
+      "data-tags": "journalism media headlines adage",
+      "data-title": "betteridge's law of headlines"
     },
     "classes": [
       "law-card"
@@ -1027,12 +1027,12 @@
     "zoomMeta": "Stephen Stigler (1980)",
     "zoomCaption": "A law of sociology of science which states that scientific discoveries are rarely named after the person who actually discovered them. Ironically, Stigler acknowledged that Stephen Merton discovered this law.",
     "dataset": {
-      "data-title": "stigler's law of eponymy",
       "data-author": "stephen stigler",
       "data-location": "usa",
       "data-quote": "no scientific discovery is named after its original discoverer.",
       "data-summary": "a law of sociology of science which states that scientific discoveries are rarely named after the person who actually discovered them. ironically, stigler acknowledged that stephen merton discovered this law.",
-      "data-tags": "science sociology history naming"
+      "data-tags": "science sociology history naming",
+      "data-title": "stigler's law of eponymy"
     },
     "classes": [
       "law-card"
@@ -1053,12 +1053,12 @@
     "zoomMeta": "Arthur C. Clarke (1962)",
     "zoomCaption": "One of Arthur C. Clarke's three laws regarding the future of space and technology. It highlights the wonder and incomprehensibility of advanced future tech to primitive observers.",
     "dataset": {
-      "data-title": "clarke’s third law",
       "data-author": "arthur c. clarke",
       "data-location": "uk",
       "data-quote": "any sufficiently advanced technology is indistinguishable from magic.",
       "data-summary": "one of arthur c. clarke's three laws regarding the future of space and technology. it highlights the wonder and incomprehensibility of advanced future tech to primitive observers.",
-      "data-tags": "technology future magic sci-fi"
+      "data-tags": "technology future magic sci-fi",
+      "data-title": "clarke’s third law"
     },
     "classes": [
       "law-card"
@@ -1079,12 +1079,12 @@
     "zoomMeta": "Werner Heisenberg (1927)",
     "zoomCaption": "A fundamental concept in quantum mechanics. It states that there is a limit to the precision with which certain pairs of physical properties, such as position and momentum, can be known.",
     "dataset": {
-      "data-title": "heisenberg uncertainty principle",
       "data-author": "werner heisenberg",
       "data-location": "germany",
       "data-quote": "the more precisely the position is determined, the less precisely the momentum is known in this instant, and vice versa.",
       "data-summary": "a fundamental concept in quantum mechanics. it states that there is a limit to the precision with which certain pairs of physical properties, such as position and momentum, can be known.",
-      "data-tags": "physics quantum uncertainty mechanics"
+      "data-tags": "physics quantum uncertainty mechanics",
+      "data-title": "heisenberg uncertainty principle"
     },
     "classes": [
       "law-card"
@@ -1105,12 +1105,12 @@
     "zoomMeta": "Wolfgang Pauli (1925)",
     "zoomCaption": "This principle explains the structure of atoms and the stability of matter. It prevents electrons from collapsing into the nucleus and dictates the arrangement of electrons in shells.",
     "dataset": {
-      "data-title": "pauli exclusion principle",
       "data-author": "wolfgang pauli",
       "data-location": "austria",
       "data-quote": "two or more identical fermions (particles with half-integer spin) cannot occupy the same quantum state within a quantum system simultaneously.",
       "data-summary": "this principle explains the structure of atoms and the stability of matter. it prevents electrons from collapsing into the nucleus and dictates the arrangement of electrons in shells.",
-      "data-tags": "physics quantum atoms matter"
+      "data-tags": "physics quantum atoms matter",
+      "data-title": "pauli exclusion principle"
     },
     "classes": [
       "law-card"
@@ -1131,12 +1131,12 @@
     "zoomMeta": "Max Planck (1900)",
     "zoomCaption": "The foundation of quantum mechanics. It solved the 'ultraviolet catastrophe' by proposing that energy is emitted in discrete packets (quanta) rather than continuously.",
     "dataset": {
-      "data-title": "planck’s law",
       "data-author": "max planck",
       "data-location": "germany",
       "data-quote": "describes the spectral density of electromagnetic radiation emitted by a black body in thermal equilibrium at a given temperature t.",
       "data-summary": "the foundation of quantum mechanics. it solved the 'ultraviolet catastrophe' by proposing that energy is emitted in discrete packets (quanta) rather than continuously.",
-      "data-tags": "physics quantum radiation energy"
+      "data-tags": "physics quantum radiation energy",
+      "data-title": "planck’s law"
     },
     "classes": [
       "law-card"
@@ -1157,12 +1157,12 @@
     "zoomMeta": "Albert Einstein (1905)",
     "zoomCaption": "Energy equals mass times the speed of light squared. It implies that mass and energy are interchangeable; they are different forms of the same thing. A small amount of mass can be converted into a tremendous amount of energy.",
     "dataset": {
-      "data-title": "mass-energy equivalence",
       "data-author": "albert einstein",
       "data-location": "switzerland",
       "data-quote": "e = mc²",
       "data-summary": "energy equals mass times the speed of light squared. it implies that mass and energy are interchangeable; they are different forms of the same thing. a small amount of mass can be converted into a tremendous amount of energy.",
-      "data-tags": "physics relativity energy mass"
+      "data-tags": "physics relativity energy mass",
+      "data-title": "mass-energy equivalence"
     },
     "classes": [
       "law-card"
@@ -1183,12 +1183,12 @@
     "zoomMeta": "Daniel Bernoulli (1738)",
     "zoomCaption": "It explains the behavior of fluid flow. Faster moving fluids exert less pressure. It is fundamental to aerodynamics and hydrodynamics.",
     "dataset": {
-      "data-title": "bernoulli’s principle",
       "data-author": "daniel bernoulli",
       "data-location": "switzerland",
       "data-quote": "an increase in the speed of a fluid occurs simultaneously with a decrease in static pressure or a decrease in the fluid's potential energy.",
       "data-summary": "it explains the behavior of fluid flow. faster moving fluids exert less pressure. it is fundamental to aerodynamics and hydrodynamics.",
-      "data-tags": "physics fluid dynamics pressure flow"
+      "data-tags": "physics fluid dynamics pressure flow",
+      "data-title": "bernoulli’s principle"
     },
     "classes": [
       "law-card"
@@ -1209,12 +1209,12 @@
     "zoomMeta": "Blaise Pascal (1653)",
     "zoomCaption": "The principle behind hydraulic systems. If you apply pressure to a confined fluid, that pressure is distributed equally in all directions.",
     "dataset": {
-      "data-title": "pascal’s law",
       "data-author": "blaise pascal",
       "data-location": "france",
       "data-quote": "a change in pressure at any point in an enclosed fluid at rest is transmitted undiminished to all points in the fluid.",
       "data-summary": "the principle behind hydraulic systems. if you apply pressure to a confined fluid, that pressure is distributed equally in all directions.",
-      "data-tags": "physics fluid dynamics hydraulics pressure"
+      "data-tags": "physics fluid dynamics hydraulics pressure",
+      "data-title": "pascal’s law"
     },
     "classes": [
       "law-card"
@@ -1235,12 +1235,12 @@
     "zoomMeta": "Archimedes (212 BC)",
     "zoomCaption": "It explains why objects float or sink. If the weight of the water displaced is equal to the weight of the object, it floats.",
     "dataset": {
-      "data-title": "archimedes’ principle",
       "data-author": "archimedes",
       "data-location": "syracuse",
       "data-quote": "the upward buoyant force that is exerted on a body immersed in a fluid, whether fully or partially, is equal to the weight of the fluid that the body displaces.",
       "data-summary": "it explains why objects float or sink. if the weight of the water displaced is equal to the weight of the object, it floats.",
-      "data-tags": "physics fluids buoyancy eureka"
+      "data-tags": "physics fluids buoyancy eureka",
+      "data-title": "archimedes’ principle"
     },
     "classes": [
       "law-card"
@@ -1261,12 +1261,12 @@
     "zoomMeta": "Gregor Mendel (1865)",
     "zoomCaption": "Mendel's First Law. It explains how traits are inherited from parents to offspring, ensuring genetic variation.",
     "dataset": {
-      "data-title": "law of segregation",
       "data-author": "gregor mendel",
       "data-location": "austria",
       "data-quote": "during the formation of gametes, the two alleles for a gene separate from each other, so that each gamete carries only one allele for each gene.",
       "data-summary": "mendel's first law. it explains how traits are inherited from parents to offspring, ensuring genetic variation.",
-      "data-tags": "biology genetics heredity mendel"
+      "data-tags": "biology genetics heredity mendel",
+      "data-title": "law of segregation"
     },
     "classes": [
       "law-card"
@@ -1287,12 +1287,12 @@
     "zoomMeta": "Gregor Mendel (1865)",
     "zoomCaption": "Mendel's Second Law. The inheritance of one trait (like color) is not dependent on the inheritance of another trait (like shape), generally speaking (barring linkage).",
     "dataset": {
-      "data-title": "law of independent assortment",
       "data-author": "gregor mendel",
       "data-location": "austria",
       "data-quote": "genes for different traits can segregate independently during the formation of gametes.",
       "data-summary": "mendel's second law. the inheritance of one trait (like color) is not dependent on the inheritance of another trait (like shape), generally speaking (barring linkage).",
-      "data-tags": "biology genetics inheritance diversity"
+      "data-tags": "biology genetics inheritance diversity",
+      "data-title": "law of independent assortment"
     },
     "classes": [
       "law-card"
@@ -1313,12 +1313,12 @@
     "zoomMeta": "Carl Bergmann (1847)",
     "zoomCaption": "An ecogeographical rule that correlates body mass with latitude. Larger animals have a lower surface area to volume ratio, helping them retain heat in cold climates.",
     "dataset": {
-      "data-title": "bergmann’s rule",
       "data-author": "carl bergmann",
       "data-location": "germany",
       "data-quote": "populations and species of larger size are found in colder environments, while species of smaller size are found in warmer regions.",
       "data-summary": "an ecogeographical rule that correlates body mass with latitude. larger animals have a lower surface area to volume ratio, helping them retain heat in cold climates.",
-      "data-tags": "biology ecology evolution climate"
+      "data-tags": "biology ecology evolution climate",
+      "data-title": "bergmann’s rule"
     },
     "classes": [
       "law-card"
@@ -1339,12 +1339,12 @@
     "zoomMeta": "Joel Asaph Allen (1877)",
     "zoomCaption": "Similar to Bergmann's rule but focuses on appendages (ears, tails, limbs). Shorter appendages conserve heat (cold climate), while longer ones radiate heat (warm climate).",
     "dataset": {
-      "data-title": "allen’s rule",
       "data-author": "joel asaph allen",
       "data-location": "usa",
       "data-quote": "animals adapted to cold climates have shorter limbs and bodily appendages than animals adapted to warm climates.",
       "data-summary": "similar to bergmann's rule but focuses on appendages (ears, tails, limbs). shorter appendages conserve heat (cold climate), while longer ones radiate heat (warm climate).",
-      "data-tags": "biology ecology evolution adaptation"
+      "data-tags": "biology ecology evolution adaptation",
+      "data-title": "allen’s rule"
     },
     "classes": [
       "law-card"
@@ -1365,12 +1365,12 @@
     "zoomMeta": "Galileo Galilei (1638)",
     "zoomCaption": "This mathematical principle explains biomechanical limits. As an animal scales up, its volume (and mass) increases much faster than its surface area (and bone strength), limiting how large land animals can get.",
     "dataset": {
-      "data-title": "the square-cube law",
       "data-author": "galileo galilei",
       "data-location": "italy",
       "data-quote": "when an object undergoes a proportional increase in size, its new surface area is proportional to the square of the multiplier and its new volume is proportional to the cube of the multiplier.",
       "data-summary": "this mathematical principle explains biomechanical limits. as an animal scales up, its volume (and mass) increases much faster than its surface area (and bone strength), limiting how large land animals can get.",
-      "data-tags": "physics biology math scaling"
+      "data-tags": "physics biology math scaling",
+      "data-title": "the square-cube law"
     },
     "classes": [
       "law-card"
@@ -1391,12 +1391,12 @@
     "zoomMeta": "Louis Dollo (1893)",
     "zoomCaption": "An organism is unable to return, even partially, to a previous evolutionary stage already realized in the ranks of its ancestors. Structures once lost are not regained in the same form.",
     "dataset": {
-      "data-title": "dollo's law",
       "data-author": "louis dollo",
       "data-location": "belgium",
       "data-quote": "evolution is irreversible.",
       "data-summary": "an organism is unable to return, even partially, to a previous evolutionary stage already realized in the ranks of its ancestors. structures once lost are not regained in the same form.",
-      "data-tags": "biology evolution irreversibility time"
+      "data-tags": "biology evolution irreversibility time",
+      "data-title": "dollo's law"
     },
     "classes": [
       "law-card"
@@ -1417,12 +1417,12 @@
     "zoomMeta": "William of Ockham (1300s)",
     "zoomCaption": "The Law of Parsimony. Among competing hypotheses that predict equally well, the one with the fewest assumptions should be selected. The simplest explanation is usually the correct one.",
     "dataset": {
-      "data-title": "occam’s razor",
       "data-author": "william of ockham",
       "data-location": "england",
       "data-quote": "entities should not be multiplied without necessity.",
       "data-summary": "the law of parsimony. among competing hypotheses that predict equally well, the one with the fewest assumptions should be selected. the simplest explanation is usually the correct one.",
-      "data-tags": "philosophy logic problem solving razor"
+      "data-tags": "philosophy logic problem solving razor",
+      "data-title": "occam’s razor"
     },
     "classes": [
       "law-card"
@@ -1443,12 +1443,12 @@
     "zoomMeta": "Robert J. Hanlon (1980)",
     "zoomCaption": "A philosophical razor that eliminates unlikely explanations for human behavior. It suggests that negative actions are more likely caused by incompetence or neglect rather than evil intent.",
     "dataset": {
-      "data-title": "hanlon’s razor",
       "data-author": "robert j. hanlon",
       "data-location": "usa",
       "data-quote": "never attribute to malice that which is adequately explained by stupidity.",
       "data-summary": "a philosophical razor that eliminates unlikely explanations for human behavior. it suggests that negative actions are more likely caused by incompetence or neglect rather than evil intent.",
-      "data-tags": "philosophy logic behavior razor"
+      "data-tags": "philosophy logic behavior razor",
+      "data-title": "hanlon’s razor"
     },
     "classes": [
       "law-card"
@@ -1469,12 +1469,12 @@
     "zoomMeta": "Christopher Hitchens (2003)",
     "zoomCaption": "An epistemological razor that serves as a general rule for rejecting refutable claims that have no basis in fact. The burden of proof lies with the claim-maker.",
     "dataset": {
-      "data-title": "hitchens’s razor",
       "data-author": "christopher hitchens",
       "data-location": "uk",
       "data-quote": "what can be asserted without evidence can be dismissed without evidence.",
       "data-summary": "an epistemological razor that serves as a general rule for rejecting refutable claims that have no basis in fact. the burden of proof lies with the claim-maker.",
-      "data-tags": "philosophy logic evidence razor"
+      "data-tags": "philosophy logic evidence razor",
+      "data-title": "hitchens’s razor"
     },
     "classes": [
       "law-card"
@@ -1495,12 +1495,12 @@
     "zoomMeta": "David Hume (1739)",
     "zoomCaption": "The Is-Ought Problem. It states that many writers make claims about what ought to be, based on statements about what is. Hume argued there is a significant difference between descriptive statements (about facts) and prescriptive statements (about values).",
     "dataset": {
-      "data-title": "hume’s guillotine",
       "data-author": "david hume",
       "data-location": "scotland",
       "data-quote": "you cannot derive an 'ought' from an 'is'.",
       "data-summary": "the is-ought problem. it states that many writers make claims about what ought to be, based on statements about what is. hume argued there is a significant difference between descriptive statements (about facts) and prescriptive statements (about values).",
-      "data-tags": "philosophy ethics logic values"
+      "data-tags": "philosophy ethics logic values",
+      "data-title": "hume’s guillotine"
     },
     "classes": [
       "law-card"
@@ -1521,12 +1521,12 @@
     "zoomMeta": "Aristotle (Ancient)",
     "zoomCaption": "One of the three classic laws of thought. Nothing can both exist and not exist at the same time and in the same respect. It is fundamental to logic.",
     "dataset": {
-      "data-title": "law of non-contradiction",
       "data-author": "aristotle",
       "data-location": "greece",
       "data-quote": "contradictory propositions cannot both be true in the same sense at the same time.",
       "data-summary": "one of the three classic laws of thought. nothing can both exist and not exist at the same time and in the same respect. it is fundamental to logic.",
-      "data-tags": "philosophy logic truth reason"
+      "data-tags": "philosophy logic truth reason",
+      "data-title": "law of non-contradiction"
     },
     "classes": [
       "law-card"
@@ -1547,12 +1547,12 @@
     "zoomMeta": "Frederick Lanchester (1916)",
     "zoomCaption": "Mathematical formulae for calculating the relative strengths of military forces. The Linear Law applies to ancient combat (1-on-1), while the Square Law applies to modern combat with ranged weapons.",
     "dataset": {
-      "data-title": "lanchester's laws",
       "data-author": "frederick lanchester",
       "data-location": "uk",
       "data-quote": "in modern warfare, the power of a force is proportional to the square of its numerical strength.",
       "data-summary": "mathematical formulae for calculating the relative strengths of military forces. the linear law applies to ancient combat (1-on-1), while the square law applies to modern combat with ranged weapons.",
-      "data-tags": "military math strategy combat"
+      "data-tags": "military math strategy combat",
+      "data-title": "lanchester's laws"
     },
     "classes": [
       "law-card"
@@ -1573,12 +1573,12 @@
     "zoomMeta": "Survivalists (Unknown)",
     "zoomCaption": "A roughly accurate rule of thumb for human survival priorities in extreme conditions. It helps prioritize immediate needs in emergency situations.",
     "dataset": {
-      "data-title": "rule of 3 (survival)",
       "data-author": "survivalists",
       "data-location": "global",
       "data-quote": "you can survive 3 minutes without air, 3 hours without shelter (in harsh weather conditions), 3 days without water, and 3 weeks without food.",
       "data-summary": "a roughly accurate rule of thumb for human survival priorities in extreme conditions. it helps prioritize immediate needs in emergency situations.",
-      "data-tags": "survival biology health rule"
+      "data-tags": "survival biology health rule",
+      "data-title": "rule of 3 (survival)"
     },
     "classes": [
       "law-card"
@@ -1599,12 +1599,12 @@
     "zoomMeta": "Aviators (20th Century)",
     "zoomCaption": "A rule of thumb used in air navigation. It approximates the trigonometry involved in navigation errors, allowing pilots to make mental calculations and corrections easily.",
     "dataset": {
-      "data-title": "the 1 in 60 rule",
       "data-author": "aviators",
       "data-location": "global",
       "data-quote": "if you are 1 degree off course, you will miss your target by 1 mile for every 60 miles you fly.",
       "data-summary": "a rule of thumb used in air navigation. it approximates the trigonometry involved in navigation errors, allowing pilots to make mental calculations and corrections easily.",
-      "data-tags": "navigation aviation math rule"
+      "data-tags": "navigation aviation math rule",
+      "data-title": "the 1 in 60 rule"
     },
     "classes": [
       "law-card"
@@ -1625,12 +1625,12 @@
     "zoomMeta": "Donald T. Campbell (1976)",
     "zoomCaption": "Using metrics to judge performance inevitably corrupts the metric. Similar to Goodhart's Law ('When a measure becomes a target, it ceases to be a good measure').",
     "dataset": {
-      "data-title": "campbell’s law",
       "data-author": "donald t. campbell",
       "data-location": "usa",
       "data-quote": "the more any quantitative social indicator is used for social decision-making, the more subject it will be to corruption pressures and the more apt it will be to distort and corrupt the social processes it is intended to monitor.",
       "data-summary": "using metrics to judge performance inevitably corrupts the metric. similar to goodhart's law ('when a measure becomes a target, it ceases to be a good measure').",
-      "data-tags": "sociology metrics corruption data"
+      "data-tags": "sociology metrics corruption data",
+      "data-title": "campbell’s law"
     },
     "classes": [
       "law-card"
@@ -1651,12 +1651,12 @@
     "zoomMeta": "Wallace Sayre (1950s)",
     "zoomCaption": "Often applied to academic politics: 'Academic politics is the most vicious and bitter form of politics, because the stakes are so low.' Low stakes mean there's no cost to fighting.",
     "dataset": {
-      "data-title": "sayre’s law",
       "data-author": "wallace sayre",
       "data-location": "usa",
       "data-quote": "in any dispute the intensity of feeling is inversely proportional to the value of the issues at stake.",
       "data-summary": "often applied to academic politics: 'academic politics is the most vicious and bitter form of politics, because the stakes are so low.' low stakes mean there's no cost to fighting.",
-      "data-tags": "sociology politics psychology conflict"
+      "data-tags": "sociology politics psychology conflict",
+      "data-title": "sayre’s law"
     },
     "classes": [
       "law-card"
@@ -1677,12 +1677,12 @@
     "zoomMeta": "Douglas Hofstadter (1979)",
     "zoomCaption": "A self-referential adage about the difficulty of accurately estimating the time it will take to complete tasks of substantial complexity. It highlights the recursive nature of delays.",
     "dataset": {
-      "data-title": "hofstadter's law",
       "data-author": "douglas hofstadter",
       "data-location": "usa",
       "data-quote": "it always takes longer than you expect, even when you take into account hofstadter's law.",
       "data-summary": "a self-referential adage about the difficulty of accurately estimating the time it will take to complete tasks of substantial complexity. it highlights the recursive nature of delays.",
-      "data-tags": "management time planning recursion"
+      "data-tags": "management time planning recursion",
+      "data-title": "hofstadter's law"
     },
     "classes": [
       "law-card"
@@ -1703,12 +1703,12 @@
     "zoomMeta": "John Littlewood (1986)",
     "zoomCaption": "Given the vast number of events a human experiences daily (seeing things, hearing things), statistically improbable coincidences are inevitable over time.",
     "dataset": {
-      "data-title": "littlewood's law",
       "data-author": "john littlewood",
       "data-location": "uk",
       "data-quote": "a person can expect to experience an event with odds of one in a million (a 'miracle') at the rate of about one per month.",
       "data-summary": "given the vast number of events a human experiences daily (seeing things, hearing things), statistically improbable coincidences are inevitable over time.",
-      "data-tags": "statistics probability miracles math"
+      "data-tags": "statistics probability miracles math",
+      "data-title": "littlewood's law"
     },
     "classes": [
       "law-card"
@@ -1729,12 +1729,12 @@
     "zoomMeta": "George Kingsley Zipf (1935)",
     "zoomCaption": "The most frequent word occurs twice as often as the second most frequent word, three times as often as the third, and so on. It applies to city populations, website traffic, and more.",
     "dataset": {
-      "data-title": "zipf’s law",
       "data-author": "george kingsley zipf",
       "data-location": "usa",
       "data-quote": "the frequency of any word is inversely proportional to its rank in the frequency table.",
       "data-summary": "the most frequent word occurs twice as often as the second most frequent word, three times as often as the third, and so on. it applies to city populations, website traffic, and more.",
-      "data-tags": "linguistics statistics data power law"
+      "data-tags": "linguistics statistics data power law",
+      "data-title": "zipf’s law"
     },
     "classes": [
       "law-card"
@@ -1755,12 +1755,12 @@
     "zoomMeta": "John Gustafson (1988)",
     "zoomCaption": "A counter to Amdahl's Law. It argues that as computing power increases, we solve larger problems, rather than just solving the same problems faster. Thus, parallelization scales better than Amdahl predicted.",
     "dataset": {
-      "data-title": "gustafson’s law",
       "data-author": "john gustafson",
       "data-location": "usa",
       "data-quote": "computations involving arbitrarily large data sets can be efficiently parallelized.",
       "data-summary": "a counter to amdahl's law. it argues that as computing power increases, we solve larger problems, rather than just solving the same problems faster. thus, parallelization scales better than amdahl predicted.",
-      "data-tags": "computing parallelism scaling efficiency"
+      "data-tags": "computing parallelism scaling efficiency",
+      "data-title": "gustafson’s law"
     },
     "classes": [
       "law-card"
@@ -1781,12 +1781,12 @@
     "zoomMeta": "Gene Amdahl (1967)",
     "zoomCaption": "It defines the maximum improvement possible for a system when only part of the system is improved. If a program is 50% serial, even infinite parallel power will only double the speed.",
     "dataset": {
-      "data-title": "amdahl’s law",
       "data-author": "gene amdahl",
       "data-location": "usa",
       "data-quote": "the theoretical speedup of the execution of a task which includes a part that cannot be improved is limited by that part.",
       "data-summary": "it defines the maximum improvement possible for a system when only part of the system is improved. if a program is 50% serial, even infinite parallel power will only double the speed.",
-      "data-tags": "computing performance optimization limits"
+      "data-tags": "computing performance optimization limits",
+      "data-title": "amdahl’s law"
     },
     "classes": [
       "law-card"
@@ -1807,12 +1807,12 @@
     "zoomMeta": "Linus Torvalds (1999)",
     "zoomCaption": "A claim about software development. It suggests that if there are enough people testing and reviewing code (as in open source), almost every problem will be characterized quickly and the fix will be obvious to someone.",
     "dataset": {
-      "data-title": "linus’s law",
       "data-author": "linus torvalds",
       "data-location": "finland",
       "data-quote": "given enough eyeballs, all bugs are shallow.",
       "data-summary": "a claim about software development. it suggests that if there are enough people testing and reviewing code (as in open source), almost every problem will be characterized quickly and the fix will be obvious to someone.",
-      "data-tags": "software open source collaboration quality"
+      "data-tags": "software open source collaboration quality",
+      "data-title": "linus’s law"
     },
     "classes": [
       "law-card"
@@ -1833,12 +1833,12 @@
     "zoomMeta": "Niklaus Wirth (1995)",
     "zoomCaption": "A computing adage stating that software bloat negates hardware advances. Despite 1000x faster CPUs, modern word processors don't feel 1000x faster than 1990s ones.",
     "dataset": {
-      "data-title": "wirth’s law",
       "data-author": "niklaus wirth",
       "data-location": "switzerland",
       "data-quote": "software is getting slower more rapidly than hardware is becoming faster.",
       "data-summary": "a computing adage stating that software bloat negates hardware advances. despite 1000x faster cpus, modern word processors don't feel 1000x faster than 1990s ones.",
-      "data-tags": "computing software efficiency bloat"
+      "data-tags": "computing software efficiency bloat",
+      "data-title": "wirth’s law"
     },
     "classes": [
       "law-card"
@@ -1859,12 +1859,12 @@
     "zoomMeta": "Maximilien Ringelmann (1913)",
     "zoomCaption": "Discovered by French agricultural engineer Maximilien Ringelmann in 1913 through rope-pulling experiments, this phenomenon shows that as group size increases, individual contribution steadily drops. While two people pull at ~93% of their individual strength, a group of eight pulls at less than 50% per person—a fundamental finding that laid the groundwork for the modern psychological concept of \"social loafing\".",
     "dataset": {
-      "data-title": "the ringelmann effect",
       "data-author": "maximilien ringelmann",
       "data-location": "france",
       "data-quote": "individual effort steadily drops as the group size increases.",
       "data-summary": "discovered by french agricultural engineer maximilien ringelmann in 1913 through rope-pulling experiments, this phenomenon shows that as group size increases, individual contribution steadily drops. while two people pull at ~93% of their individual strength, a group of eight pulls at less than 50% per person—a fundamental finding that laid the groundwork for the modern psychological concept of \"social loafing\".",
-      "data-tags": "psychology social science group dynamics effort"
+      "data-tags": "psychology social science group dynamics effort",
+      "data-title": "the ringelmann effect"
     },
     "classes": [
       "law-card"

@@ -1,7 +1,8 @@
 
 
 
-
+Nobel prizes;
+Math problems fixed and not fixed
 
 
 Replace the image for "[NAME]" personality.
@@ -21,6 +22,11 @@ make x do
 
 
 Personalities:
+
+Greta Thunberg
+jackie chan
+gustavo kuerten
+
 Gilberto Freyre
 Guimarães Rosa
 Euclides da Cunha

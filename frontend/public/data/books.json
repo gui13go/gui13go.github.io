@@ -13,11 +13,11 @@
     "zoomMeta": "",
     "zoomCaption": "Covers AI and ML approaches for automated cybersecurity and threat intelligence.",
     "dataset": {
-      "data-title": "ai-driven cybersecurity and threat intelligence",
       "data-authors": "iqbal h. sarker",
-      "data-year": "2024",
+      "data-keywords": "ai cybersecurity threat intelligence machine learning ",
       "data-summary": "covers ai and ml approaches for automated cybersecurity and threat intelligence.",
-      "data-keywords": "ai cybersecurity threat intelligence machine learning "
+      "data-title": "ai-driven cybersecurity and threat intelligence",
+      "data-year": "2024"
     },
     "classes": [
       "book-card"
@@ -38,11 +38,11 @@
     "zoomMeta": "",
     "zoomCaption": "Explores the history of information networks and their influence on human societies, from the Stone Age to AI.",
     "dataset": {
-      "data-title": "nexus: a brief history of information networks from the stone age to ai",
       "data-authors": "yuval noah harari",
-      "data-year": "2024",
+      "data-keywords": "history information ai society ",
       "data-summary": "explores the history of information networks and their influence on human societies, from the stone age to ai.",
-      "data-keywords": "history information ai society "
+      "data-title": "nexus: a brief history of information networks from the stone age to ai",
+      "data-year": "2024"
     },
     "classes": [
       "book-card"
@@ -63,11 +63,11 @@
     "zoomMeta": "",
     "zoomCaption": "A guide to effectively pentesting AWS, Azure, and GCP applications.",
     "dataset": {
-      "data-title": "cloud penetration testing for red teamers",
       "data-authors": "kim crawley",
-      "data-year": "2023",
+      "data-keywords": "cloud security penetration testing red teaming aws azure gcp ",
       "data-summary": "a guide to effectively pentesting aws, azure, and gcp applications.",
-      "data-keywords": "cloud security penetration testing red teaming aws azure gcp "
+      "data-title": "cloud penetration testing for red teamers",
+      "data-year": "2023"
     },
     "classes": [
       "book-card"
@@ -88,11 +88,11 @@
     "zoomMeta": "",
     "zoomCaption": "Discusses the risks and opportunities presented by AI and other emerging technologies.",
     "dataset": {
-      "data-title": "the coming wave",
       "data-authors": "mustafa suleyman",
-      "data-year": "2023",
+      "data-keywords": "ai technology future society ",
       "data-summary": "discusses the risks and opportunities presented by ai and other emerging technologies.",
-      "data-keywords": "ai technology future society "
+      "data-title": "the coming wave",
+      "data-year": "2023"
     },
     "classes": [
       "book-card"
@@ -113,11 +113,11 @@
     "zoomMeta": "",
     "zoomCaption": "Explores the intersection of cybersecurity, speculative fiction, and the digital humanities.",
     "dataset": {
-      "data-title": "hacking in the humanities",
       "data-authors": "aaron mauro",
-      "data-year": "2022",
+      "data-keywords": "digital humanities cybersecurity speculative fiction ",
       "data-summary": "explores the intersection of cybersecurity, speculative fiction, and the digital humanities.",
-      "data-keywords": "digital humanities cybersecurity speculative fiction "
+      "data-title": "hacking in the humanities",
+      "data-year": "2022"
     },
     "classes": [
       "book-card"
@@ -138,11 +138,11 @@
     "zoomMeta": "",
     "zoomCaption": "Applies ancient ninja techniques to modern cybersecurity challenges.",
     "dataset": {
-      "data-title": "cyberjutsu: cybersecurity for the modern ninja",
       "data-authors": "ben mccarty",
-      "data-year": "2021",
+      "data-keywords": "cybersecurity ninja history strategy ",
       "data-summary": "applies ancient ninja techniques to modern cybersecurity challenges.",
-      "data-keywords": "cybersecurity ninja history strategy "
+      "data-title": "cyberjutsu: cybersecurity for the modern ninja",
+      "data-year": "2021"
     },
     "classes": [
       "book-card"
@@ -163,11 +163,11 @@
     "zoomMeta": "",
     "zoomCaption": "A practical guide to web security threats and how to defend against them.",
     "dataset": {
-      "data-title": "web security for developers",
       "data-authors": "malcolm mcdonald",
-      "data-year": "2020",
+      "data-keywords": "web security cybersecurity development ",
       "data-summary": "a practical guide to web security threats and how to defend against them.",
-      "data-keywords": "web security cybersecurity development "
+      "data-title": "web security for developers",
+      "data-year": "2020"
     },
     "classes": [
       "book-card"
@@ -188,11 +188,11 @@
     "zoomMeta": "",
     "zoomCaption": "A comprehensive guide to applying statistical methods to data science problems.",
     "dataset": {
-      "data-title": "practical statistics for data scientists",
       "data-authors": "peter bruce, andrew bruce, peter gedeck",
-      "data-year": "2020",
+      "data-keywords": "data science statistics machine learning python r ",
       "data-summary": "a comprehensive guide to applying statistical methods to data science problems.",
-      "data-keywords": "data science statistics machine learning python r "
+      "data-title": "practical statistics for data scientists",
+      "data-year": "2020"
     },
     "classes": [
       "book-card"
@@ -213,11 +213,11 @@
     "zoomMeta": "",
     "zoomCaption": "A guide to statistical thinking, showing how to apply statistical reasoning to real-world problems.",
     "dataset": {
-      "data-title": "the art of statistics",
       "data-authors": "david spiegelhalter",
-      "data-year": "2020",
+      "data-keywords": "statistics data literacy reasoning ",
       "data-summary": "a guide to statistical thinking, showing how to apply statistical reasoning to real-world problems.",
-      "data-keywords": "statistics data literacy reasoning "
+      "data-title": "the art of statistics",
+      "data-year": "2020"
     },
     "classes": [
       "book-card"
@@ -238,11 +238,11 @@
     "zoomMeta": "",
     "zoomCaption": "Practical ways to implement Site Reliability Engineering (SRE) principles.",
     "dataset": {
-      "data-title": "the site reliability workbook",
       "data-authors": "betsy beyer et al.",
-      "data-year": "2018",
+      "data-keywords": "sre devops reliability google ",
       "data-summary": "practical ways to implement site reliability engineering (sre) principles.",
-      "data-keywords": "sre devops reliability google "
+      "data-title": "the site reliability workbook",
+      "data-year": "2018"
     },
     "classes": [
       "book-card"
@@ -263,11 +263,11 @@
     "zoomMeta": "",
     "zoomCaption": "Explores the potential impact of artificial intelligence on the future of life on Earth and beyond.",
     "dataset": {
-      "data-title": "life 3.0",
       "data-authors": "max tegmark",
-      "data-year": "2017",
+      "data-keywords": "ai future technology philosophy ",
       "data-summary": "explores the potential impact of artificial intelligence on the future of life on earth and beyond.",
-      "data-keywords": "ai future technology philosophy "
+      "data-title": "life 3.0",
+      "data-year": "2017"
     },
     "classes": [
       "book-card"
@@ -288,11 +288,11 @@
     "zoomMeta": "",
     "zoomCaption": "A guide to the process of data analysis for practitioners and managers.",
     "dataset": {
-      "data-title": "the art of data science",
       "data-authors": "roger d. peng, elizabeth matsui",
-      "data-year": "2016",
+      "data-keywords": "data science analysis statistics ",
       "data-summary": "a guide to the process of data analysis for practitioners and managers.",
-      "data-keywords": "data science analysis statistics "
+      "data-title": "the art of data science",
+      "data-year": "2016"
     },
     "classes": [
       "book-card"
@@ -313,11 +313,11 @@
     "zoomMeta": "",
     "zoomCaption": "Examines how big data algorithms can reinforce inequality and harm society.",
     "dataset": {
-      "data-title": "weapons of math destruction",
       "data-authors": "cathy o'neil",
-      "data-year": "2016",
+      "data-keywords": "data science ethics algorithms society ",
       "data-summary": "examines how big data algorithms can reinforce inequality and harm society.",
-      "data-keywords": "data science ethics algorithms society "
+      "data-title": "weapons of math destruction",
+      "data-year": "2016"
     },
     "classes": [
       "book-card"
@@ -338,11 +338,11 @@
     "zoomMeta": "",
     "zoomCaption": "Demystifies statistics for the general reader, focusing on the intuition behind statistical analysis.",
     "dataset": {
-      "data-title": "naked statistics",
       "data-authors": "charles wheelan",
-      "data-year": "2014",
+      "data-keywords": "statistics data analysis intuition ",
       "data-summary": "demystifies statistics for the general reader, focusing on the intuition behind statistical analysis.",
-      "data-keywords": "statistics data analysis intuition "
+      "data-title": "naked statistics",
+      "data-year": "2014"
     },
     "classes": [
       "book-card"
@@ -363,11 +363,11 @@
     "zoomMeta": "",
     "zoomCaption": "A practical introduction to understanding and utilizing information graphics and data visualization.",
     "dataset": {
-      "data-title": "the functional art",
       "data-authors": "alberto cairo",
-      "data-year": "2012",
+      "data-keywords": "data visualization design infographics ",
       "data-summary": "a practical introduction to understanding and utilizing information graphics and data visualization.",
-      "data-keywords": "data visualization design infographics "
+      "data-title": "the functional art",
+      "data-year": "2012"
     },
     "classes": [
       "book-card"
@@ -388,11 +388,11 @@
     "zoomMeta": "",
     "zoomCaption": "Explores the two systems that drive the way we think: System 1 (fast and intuitive) and System 2 (slow and deliberative).",
     "dataset": {
-      "data-title": "thinking, fast and slow",
       "data-authors": "daniel kahneman",
-      "data-year": "2011",
+      "data-keywords": "psychology behavioral economics decision making ",
       "data-summary": "explores the two systems that drive the way we think: system 1 (fast and intuitive) and system 2 (slow and deliberative).",
-      "data-keywords": "psychology behavioral economics decision making "
+      "data-title": "thinking, fast and slow",
+      "data-year": "2011"
     },
     "classes": [
       "book-card"
@@ -413,11 +413,11 @@
     "zoomMeta": "",
     "zoomCaption": "A survey of the history of humankind from the Stone Age to the 21st century.",
     "dataset": {
-      "data-title": "sapiens: a brief history of humankind",
       "data-authors": "yuval noah harari",
-      "data-year": "2011",
+      "data-keywords": "history anthropology science ",
       "data-summary": "a survey of the history of humankind from the stone age to the 21st century.",
-      "data-keywords": "history anthropology science "
+      "data-title": "sapiens: a brief history of humankind",
+      "data-year": "2011"
     },
     "classes": [
       "book-card"
@@ -438,11 +438,11 @@
     "zoomMeta": "",
     "zoomCaption": "Explores the role of justice in society and individual lives through philosophical concepts and contemporary dilemmas.",
     "dataset": {
-      "data-title": "justice: what's the right thing to do?",
       "data-authors": "michael sandel",
-      "data-year": "2009",
+      "data-keywords": "philosophy justice ethics politics ",
       "data-summary": "explores the role of justice in society and individual lives through philosophical concepts and contemporary dilemmas.",
-      "data-keywords": "philosophy justice ethics politics "
+      "data-title": "justice: what's the right thing to do?",
+      "data-year": "2009"
     },
     "classes": [
       "book-card"
@@ -463,11 +463,11 @@
     "zoomMeta": "",
     "zoomCaption": "Examines how developed countries often pressure developing nations to adopt policies different from those they used during their own growth.",
     "dataset": {
-      "data-title": "kicking away the ladder",
       "data-authors": "ha-joon chang",
-      "data-year": "2002",
+      "data-keywords": "economics development history politics ",
       "data-summary": "examines how developed countries often pressure developing nations to adopt policies different from those they used during their own growth.",
-      "data-keywords": "economics development history politics "
+      "data-title": "kicking away the ladder",
+      "data-year": "2002"
     },
     "classes": [
       "book-card"
@@ -488,11 +488,11 @@
     "zoomMeta": "",
     "zoomCaption": "A psychoanalytic interpretation of ideology, drawing on Hegel, Marx, and Lacan.",
     "dataset": {
-      "data-title": "the sublime object of ideology",
       "data-authors": "slavoj žižek",
-      "data-year": "1989",
+      "data-keywords": "philosophy ideology psychoanalysis marxism ",
       "data-summary": "a psychoanalytic interpretation of ideology, drawing on hegel, marx, and lacan.",
-      "data-keywords": "philosophy ideology psychoanalysis marxism "
+      "data-title": "the sublime object of ideology",
+      "data-year": "1989"
     },
     "classes": [
       "book-card"
@@ -513,11 +513,11 @@
     "zoomMeta": "",
     "zoomCaption": "A fable about following one's dreams and listening to one's heart. ",
     "dataset": {
-      "data-title": "the alchemist",
       "data-authors": "paulo coelho",
-      "data-year": "1988",
+      "data-keywords": "fiction philosophy adventure ",
       "data-summary": "a fable about following one's dreams and listening to one's heart. ",
-      "data-keywords": "fiction philosophy adventure "
+      "data-title": "the alchemist",
+      "data-year": "1988"
     },
     "classes": [
       "book-card"
@@ -538,11 +538,11 @@
     "zoomMeta": "",
     "zoomCaption": "A dystopian novel exploring the role of the mind in man's existence and the morality of rational self-interest.",
     "dataset": {
-      "data-title": "atlas shrugged",
       "data-authors": "ayn rand",
-      "data-year": "1957",
+      "data-keywords": "philosophy objectivism fiction dystopia ",
       "data-summary": "a dystopian novel exploring the role of the mind in man's existence and the morality of rational self-interest.",
-      "data-keywords": "philosophy objectivism fiction dystopia "
+      "data-title": "atlas shrugged",
+      "data-year": "1957"
     },
     "classes": [
       "book-card"
@@ -563,11 +563,11 @@
     "zoomMeta": "",
     "zoomCaption": "An introduction to statistics for the general reader, outlining the misuse of statistics and errors in their interpretation.",
     "dataset": {
-      "data-title": "how to lie with statistics",
       "data-authors": "darrell huff",
-      "data-year": "1954",
+      "data-keywords": "statistics data literacy critical thinking ",
       "data-summary": "an introduction to statistics for the general reader, outlining the misuse of statistics and errors in their interpretation.",
-      "data-keywords": "statistics data literacy critical thinking "
+      "data-title": "how to lie with statistics",
+      "data-year": "1954"
     },
     "classes": [
       "book-card"
@@ -588,11 +588,11 @@
     "zoomMeta": "",
     "zoomCaption": "A dystopian novel about totalitarianism, mass surveillance, and repressive regimentation.",
     "dataset": {
-      "data-title": "1984",
       "data-authors": "george orwell",
-      "data-year": "1949",
+      "data-keywords": "fiction dystopia politics totalitarianism ",
       "data-summary": "a dystopian novel about totalitarianism, mass surveillance, and repressive regimentation.",
-      "data-keywords": "fiction dystopia politics totalitarianism "
+      "data-title": "1984",
+      "data-year": "1949"
     },
     "classes": [
       "book-card"
@@ -613,11 +613,11 @@
     "zoomMeta": "",
     "zoomCaption": "Chronicles Frankl's experiences in Nazi concentration camps and introduces his psychotherapeutic method, logotherapy.",
     "dataset": {
-      "data-title": "man's search for meaning",
       "data-authors": "viktor frankl",
-      "data-year": "1946",
+      "data-keywords": "psychology philosophy holocaust meaning ",
       "data-summary": "chronicles frankl's experiences in nazi concentration camps and introduces his psychotherapeutic method, logotherapy.",
-      "data-keywords": "psychology philosophy holocaust meaning "
+      "data-title": "man's search for meaning",
+      "data-year": "1946"
     },
     "classes": [
       "book-card"
@@ -638,11 +638,11 @@
     "zoomMeta": "",
     "zoomCaption": "A political satire and allegorical novella about a group of farm animals who rebel against their human farmer.",
     "dataset": {
-      "data-title": "animal farm",
       "data-authors": "george orwell",
-      "data-year": "1945",
+      "data-keywords": "fiction satire politics allegory ",
       "data-summary": "a political satire and allegorical novella about a group of farm animals who rebel against their human farmer.",
-      "data-keywords": "fiction satire politics allegory "
+      "data-title": "animal farm",
+      "data-year": "1945"
     },
     "classes": [
       "book-card"
@@ -663,11 +663,11 @@
     "zoomMeta": "",
     "zoomCaption": "A philosophical essay introducing the philosophy of the absurd and the human need for meaning.",
     "dataset": {
-      "data-title": "the myth of sisyphus",
       "data-authors": "albert camus",
-      "data-year": "1942",
+      "data-keywords": "philosophy absurdism existentialism ",
       "data-summary": "a philosophical essay introducing the philosophy of the absurd and the human need for meaning.",
-      "data-keywords": "philosophy absurdism existentialism "
+      "data-title": "the myth of sisyphus",
+      "data-year": "1942"
     },
     "classes": [
       "book-card"
@@ -688,11 +688,11 @@
     "zoomMeta": "",
     "zoomCaption": "A novel set in the Jazz Age that explores themes of wealth, class, and the American Dream.",
     "dataset": {
-      "data-title": "the great gatsby",
       "data-authors": "f. scott fitzgerald",
-      "data-year": "1925",
+      "data-keywords": "fiction classic american dream ",
       "data-summary": "a novel set in the jazz age that explores themes of wealth, class, and the american dream.",
-      "data-keywords": "fiction classic american dream "
+      "data-title": "the great gatsby",
+      "data-year": "1925"
     },
     "classes": [
       "book-card"
@@ -713,11 +713,11 @@
     "zoomMeta": "",
     "zoomCaption": "A seminal work on crowd psychology and the behavior of the popular mind.",
     "dataset": {
-      "data-title": "the crowd: a study of the popular mind",
       "data-authors": "gustave le bon",
-      "data-year": "1895",
+      "data-keywords": "psychology sociology crowd behavior ",
       "data-summary": "a seminal work on crowd psychology and the behavior of the popular mind.",
-      "data-keywords": "psychology sociology crowd behavior "
+      "data-title": "the crowd: a study of the popular mind",
+      "data-year": "1895"
     },
     "classes": [
       "book-card"
@@ -738,11 +738,11 @@
     "zoomMeta": "",
     "zoomCaption": "A critique of traditional morality, philosophy, religion, and science.",
     "dataset": {
-      "data-title": "beyond good and evil",
       "data-authors": "friedrich nietzsche",
-      "data-year": "1886",
+      "data-keywords": "philosophy morality ethics ",
       "data-summary": "a critique of traditional morality, philosophy, religion, and science.",
-      "data-keywords": "philosophy morality ethics "
+      "data-title": "beyond good and evil",
+      "data-year": "1886"
     },
     "classes": [
       "book-card"
@@ -763,11 +763,11 @@
     "zoomMeta": "",
     "zoomCaption": "A seminal work in philosophy that seeks to define the limits and scope of metaphysics.",
     "dataset": {
-      "data-title": "critique of pure reason",
       "data-authors": "immanuel kant",
-      "data-year": "1781",
+      "data-keywords": "philosophy metaphysics epistemology reason ",
       "data-summary": "a seminal work in philosophy that seeks to define the limits and scope of metaphysics.",
-      "data-keywords": "philosophy metaphysics epistemology reason "
+      "data-title": "critique of pure reason",
+      "data-year": "1781"
     },
     "classes": [
       "book-card"
@@ -788,11 +788,11 @@
     "zoomMeta": "",
     "zoomCaption": "A Socratic dialogue concerning justice, the ideal city-state, and the just man.",
     "dataset": {
-      "data-title": "the republic",
       "data-authors": "plato",
-      "data-year": "375 bc",
+      "data-keywords": "philosophy politics justice classics ",
       "data-summary": "a socratic dialogue concerning justice, the ideal city-state, and the just man.",
-      "data-keywords": "philosophy politics justice classics "
+      "data-title": "the republic",
+      "data-year": "375 bc"
     },
     "classes": [
       "book-card"

@@ -13,10 +13,10 @@
     "zoomMeta": "Technology",
     "zoomCaption": "Originally created by Maxime Beauchemin at Airbnb in 2014, Airflow was designed to manage the company's increasingly complex data pipelines. It was open-sourced in 2015 and became a top-level project at the Apache Software Foundation in 2019. It is now the industry standard for programmatic workflow orchestration.",
     "dataset": {
-      "data-name": "the origins of airflow",
+      "data-category": "technology",
       "data-content": "airbnb developed the first version of apache airflow.",
       "data-details": "originally created by maxime beauchemin at airbnb in 2014, airflow was designed to manage the company's increasingly complex data pipelines. it was open-sourced in 2015 and became a top-level project at the apache software foundation in 2019. it is now the industry standard for programmatic workflow orchestration.",
-      "data-category": "technology"
+      "data-name": "the origins of airflow"
     },
     "classes": [
       "fact-card"
@@ -37,10 +37,10 @@
     "zoomMeta": "Technology",
     "zoomCaption": "Based on Google's internal container orchestrator, 'Borg', Kubernetes (often called K8s) was released as an open-source project in 2014. Google donated it to the Cloud Native Computing Foundation (CNCF) as a seed project. Today, it powers the infrastructure of almost every major tech company in the world.",
     "dataset": {
-      "data-name": "google's gift to the cloud",
+      "data-category": "technology",
       "data-content": "kubernetes was created by google.",
       "data-details": "based on google's internal container orchestrator, 'borg', kubernetes (often called k8s) was released as an open-source project in 2014. google donated it to the cloud native computing foundation (cncf) as a seed project. today, it powers the infrastructure of almost every major tech company in the world.",
-      "data-category": "technology"
+      "data-name": "google's gift to the cloud"
     },
     "classes": [
       "fact-card"
@@ -61,10 +61,10 @@
     "zoomMeta": "Technology",
     "zoomCaption": "In 1991, researchers at the University of Cambridge's Computer Laboratory set up a camera pointed at the Trojan Room coffee pot. They wanted to see if the pot was full before making the trip to the breakroom. The camera provided a 128x128 grayscale image that was eventually broadcast to the web in 1993.",
     "dataset": {
-      "data-name": "coffee-monitoring webcam",
+      "data-category": "technology",
       "data-content": "the first webcam was created to monitor a coffee pot.",
       "data-details": "in 1991, researchers at the university of cambridge's computer laboratory set up a camera pointed at the trojan room coffee pot. they wanted to see if the pot was full before making the trip to the breakroom. the camera provided a 128x128 grayscale image that was eventually broadcast to the web in 1993.",
-      "data-category": "technology"
+      "data-name": "coffee-monitoring webcam"
     },
     "classes": [
       "fact-card"
@@ -85,10 +85,10 @@
     "zoomMeta": "Computing History",
     "zoomCaption": "On September 9, 1947, engineers working on the Harvard Mark II computer found a moth stuck in a relay, which was causing the machine to malfunction. They taped the moth into their logbook with the note: 'First actual case of bug being found.' While the term 'bug' had been used for mechanical flaws before, this popularized it in computing.",
     "dataset": {
-      "data-name": "the first 'bug'",
+      "data-category": "computing history",
       "data-content": "the first computer bug was an actual moth.",
       "data-details": "on september 9, 1947, engineers working on the harvard mark ii computer found a moth stuck in a relay, which was causing the machine to malfunction. they taped the moth into their logbook with the note: 'first actual case of bug being found.' while the term 'bug' had been used for mechanical flaws before, this popularized it in computing.",
-      "data-category": "computing history"
+      "data-name": "the first 'bug'"
     },
     "classes": [
       "fact-card"
@@ -109,10 +109,10 @@
     "zoomMeta": "Mathematics & History",
     "zoomCaption": "The daughter of Lord Byron, Ada Lovelace was a brilliant mathematician who worked with Charles Babbage on his 'Analytical Engine'. In 1843, she wrote an algorithm for the machine to calculate Bernoulli numbers, recognizing that the engine could do more than just pure calculation—it could manipulate any symbols according to rules.",
     "dataset": {
-      "data-name": "the first programmer",
+      "data-category": "mathematics & history",
       "data-content": "ada lovelace is considered the first computer programmer.",
       "data-details": "the daughter of lord byron, ada lovelace was a brilliant mathematician who worked with charles babbage on his 'analytical engine'. in 1843, she wrote an algorithm for the machine to calculate bernoulli numbers, recognizing that the engine could do more than just pure calculation—it could manipulate any symbols according to rules.",
-      "data-category": "mathematics & history"
+      "data-name": "the first programmer"
     },
     "classes": [
       "fact-card"
@@ -133,10 +133,10 @@
     "zoomMeta": "History & Geography",
     "zoomCaption": "Often abbreviated as 'CH', this Latin name translates to 'Helvetic Confederation'. It was chosen to avoid favoring any of the country's four official languages (German, French, Italian, and Romansh). The name refers to the Helvetii, a Celtic tribe that inhabited the Swiss plateau in antiquity.",
     "dataset": {
-      "data-name": "confoederatio helvetica",
+      "data-category": "history & geography",
       "data-content": "the real name of switzerland is confoederatio helvetica.",
       "data-details": "often abbreviated as 'ch', this latin name translates to 'helvetic confederation'. it was chosen to avoid favoring any of the country's four official languages (german, french, italian, and romansh). the name refers to the helvetii, a celtic tribe that inhabited the swiss plateau in antiquity.",
-      "data-category": "history & geography"
+      "data-name": "confoederatio helvetica"
     },
     "classes": [
       "fact-card"
@@ -157,10 +157,10 @@
     "zoomMeta": "Technology",
     "zoomCaption": "The technology is named after King Harald 'Bluetooth' Gormsson, who is famous for uniting Scandinavia—just as Bluetooth was designed to unite PC and cellular industries with a short-range wireless link. Even the Bluetooth logo is a combination of the Younger Futhark runes for his initials: ᚼ (Hagall) and ᛒ (Bjarkan).",
     "dataset": {
-      "data-name": "bluetooth's viking heritage",
+      "data-category": "technology",
       "data-content": "bluetooth is named after a 10th-century viking king.",
       "data-details": "the technology is named after king harald 'bluetooth' gormsson, who is famous for uniting scandinavia—just as bluetooth was designed to unite pc and cellular industries with a short-range wireless link. even the bluetooth logo is a combination of the younger futhark runes for his initials: ᚼ (hagall) and ᛒ (bjarkan).",
-      "data-category": "technology"
+      "data-name": "bluetooth's viking heritage"
     },
     "classes": [
       "fact-card"
@@ -181,10 +181,10 @@
     "zoomMeta": "History & Geopolitics",
     "zoomCaption": "Coined by political scientist Graham T. Allison in 2012 from ancient Greek historian Thucydides' chronicle of the Peloponnesian War: 'What made war inevitable was the growth of Athenian power and the fear which this caused in Sparta.' A Harvard Belfer Center study analyzed 16 historical cases over the past 500 years where an emerging power rivaled a ruling power—finding that 12 culminated in catastrophic war.",
     "dataset": {
-      "data-name": "thucydides trap",
+      "data-category": "history & geopolitics",
       "data-content": "when a rising power threatens to displace an established hegemon, structural stress makes war the statistical norm.",
       "data-details": "coined by political scientist graham t. allison in 2012 from ancient greek historian thucydides' chronicle of the peloponnesian war: 'what made war inevitable was the growth of athenian power and the fear which this caused in sparta.' a harvard belfer center study analyzed 16 historical cases over the past 500 years where an emerging power rivaled a ruling power—finding that 12 culminated in catastrophic war.",
-      "data-category": "history & geopolitics"
+      "data-name": "thucydides trap"
     },
     "classes": [
       "fact-card"

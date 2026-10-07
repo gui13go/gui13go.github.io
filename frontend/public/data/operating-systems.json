@@ -13,13 +13,13 @@
     "zoomMeta": "Proprietary OS • Based on Darwin (BSD-derivative)",
     "zoomCaption": "Apple's operating system for Mac computers, named after the famous wine region in California. Sonoma brings interactive widgets to the desktop, stunning new screen savers that transition to wallpapers, and significant updates to Safari and Video Conferencing. Built on the XNU hybrid kernel (Darwin), it offers unmatched integration with the Apple ecosystem and a robust Unix foundation for developers.",
     "dataset": {
+      "data-based": "darwin (bsd-derivative)",
+      "data-description": "apple's operating system for mac computers, named after the famous wine region in california. sonoma brings interactive widgets to the desktop, stunning new screen savers that transition to wallpapers, and significant updates to safari and video conferencing. built on the xnu hybrid kernel (darwin), it offers unmatched integration with the apple ecosystem and a robust unix foundation for developers.",
+      "data-features": "seamless iphone/ipad continuity metal graphics api apfs file system strict privacy & security controls ",
+      "data-kernel": "xnu (hybrid)",
       "data-name": "macos sonoma",
       "data-type": "proprietary os",
-      "data-based": "darwin (bsd-derivative)",
-      "data-usecase": "creative professional, development, general",
-      "data-kernel": "xnu (hybrid)",
-      "data-features": "seamless iphone/ipad continuity metal graphics api apfs file system strict privacy & security controls ",
-      "data-description": "apple's operating system for mac computers, named after the famous wine region in california. sonoma brings interactive widgets to the desktop, stunning new screen savers that transition to wallpapers, and significant updates to safari and video conferencing. built on the xnu hybrid kernel (darwin), it offers unmatched integration with the apple ecosystem and a robust unix foundation for developers."
+      "data-usecase": "creative professional, development, general"
     },
     "classes": [
       "os-card"
@@ -40,13 +40,13 @@
     "zoomMeta": "Proprietary OS • Based on Windows NT",
     "zoomCaption": "The latest major release of Microsoft's operating system, featuring a redesigned interface with a centered taskbar, Snap Layouts for enhanced multitasking, and native support for Android apps via the Amazon Appstore. It builds on the Windows NT kernel, offering improved security with TPM 2.0 requirements and better performance for gaming with DirectStorage and Auto HDR.",
     "dataset": {
+      "data-based": "windows nt",
+      "data-description": "the latest major release of microsoft's operating system, featuring a redesigned interface with a centered taskbar, snap layouts for enhanced multitasking, and native support for android apps via the amazon appstore. it builds on the windows nt kernel, offering improved security with tpm 2.0 requirements and better performance for gaming with directstorage and auto hdr.",
+      "data-features": "snap layouts for multitasking directstorage for gaming integrated microsoft teams wsl 2 (linux subsystem) ",
+      "data-kernel": "windows nt (hybrid)",
       "data-name": "windows 11",
       "data-type": "proprietary os",
-      "data-based": "windows nt",
-      "data-usecase": "general purpose, gaming, enterprise",
-      "data-kernel": "windows nt (hybrid)",
-      "data-features": "snap layouts for multitasking directstorage for gaming integrated microsoft teams wsl 2 (linux subsystem) ",
-      "data-description": "the latest major release of microsoft's operating system, featuring a redesigned interface with a centered taskbar, snap layouts for enhanced multitasking, and native support for android apps via the amazon appstore. it builds on the windows nt kernel, offering improved security with tpm 2.0 requirements and better performance for gaming with directstorage and auto hdr."
+      "data-usecase": "general purpose, gaming, enterprise"
     },
     "classes": [
       "os-card"
@@ -67,13 +67,13 @@
     "zoomMeta": "Linux Distribution • Based on Debian Testing",
     "zoomCaption": "The ultimate toolkit for security professionals, Kali Linux is a Debian-derived distribution designed for penetration testing and digital forensics. It comes pre-installed with hundreds of specialized tools for hacking, reverse engineering, and wireless security, making it the industry standard for ethical hacking and security audits.",
     "dataset": {
+      "data-based": "debian testing",
+      "data-description": "the ultimate toolkit for security professionals, kali linux is a debian-derived distribution designed for penetration testing and digital forensics. it comes pre-installed with hundreds of specialized tools for hacking, reverse engineering, and wireless security, making it the industry standard for ethical hacking and security audits.",
+      "data-features": "600+ pre-installed security tools security-audited kernel forensics mode for data recovery arm and mobile versions (nethunter) ",
+      "data-kernel": "linux",
       "data-name": "kali linux",
       "data-type": "linux distribution",
-      "data-based": "debian testing",
-      "data-usecase": "cyber security & penetration testing",
-      "data-kernel": "linux",
-      "data-features": "600+ pre-installed security tools security-audited kernel forensics mode for data recovery arm and mobile versions (nethunter) ",
-      "data-description": "the ultimate toolkit for security professionals, kali linux is a debian-derived distribution designed for penetration testing and digital forensics. it comes pre-installed with hundreds of specialized tools for hacking, reverse engineering, and wireless security, making it the industry standard for ethical hacking and security audits."
+      "data-usecase": "cyber security & penetration testing"
     },
     "classes": [
       "os-card"
@@ -94,13 +94,13 @@
     "zoomMeta": "Web OS • Based on Gentoo Linux",
     "zoomCaption": "A cloud-centric OS from Google that turns the browser into the primary interface. It is highly secure, lightweight, and perfect for education and web-based workflows. ChromeOS leverages verified boot and a read-only root filesystem to provide a nearly unhackable environment. It has expanded beyond the browser to run native Android apps and even full Linux containers.",
     "dataset": {
+      "data-based": "gentoo linux",
+      "data-description": "a cloud-centric os from google that turns the browser into the primary interface. it is highly secure, lightweight, and perfect for education and web-based workflows. chromeos leverages verified boot and a read-only root filesystem to provide a nearly unhackable environment. it has expanded beyond the browser to run native android apps and even full linux containers.",
+      "data-features": "runs android apps runs linux containers (crostini) cloud-centric verified boot security ",
+      "data-kernel": "linux",
       "data-name": "chromeos",
       "data-type": "web os",
-      "data-based": "gentoo linux",
-      "data-usecase": "education, web browsing, lightweight",
-      "data-kernel": "linux",
-      "data-features": "runs android apps runs linux containers (crostini) cloud-centric verified boot security ",
-      "data-description": "a cloud-centric os from google that turns the browser into the primary interface. it is highly secure, lightweight, and perfect for education and web-based workflows. chromeos leverages verified boot and a read-only root filesystem to provide a nearly unhackable environment. it has expanded beyond the browser to run native android apps and even full linux containers."
+      "data-usecase": "education, web browsing, lightweight"
     },
     "classes": [
       "os-card"
@@ -121,13 +121,13 @@
     "zoomMeta": "Linux Distribution • Based on Arch Linux",
     "zoomCaption": "A professionally made Linux based operating system that is a suitable replacement for Windows or macOS. Built on Arch Linux, Manjaro provides all the benefits of Arch combined with user-friendliness and accessibility.",
     "dataset": {
+      "data-based": "arch linux",
+      "data-description": "a professionally made linux based operating system that is a suitable replacement for windows or macos. built on arch linux, manjaro provides all the benefits of arch combined with user-friendliness and accessibility.",
+      "data-features": "user-friendly arch experience easy hardware configuration access to the arch user repository (aur) multiple official desktop environments ",
+      "data-kernel": "linux",
       "data-name": "manjaro",
       "data-type": "linux distribution",
-      "data-based": "arch linux",
-      "data-usecase": "desktop computing / gaming",
-      "data-kernel": "linux",
-      "data-features": "user-friendly arch experience easy hardware configuration access to the arch user repository (aur) multiple official desktop environments ",
-      "data-description": "a professionally made linux based operating system that is a suitable replacement for windows or macos. built on arch linux, manjaro provides all the benefits of arch combined with user-friendliness and accessibility."
+      "data-usecase": "desktop computing / gaming"
     },
     "classes": [
       "os-card"
@@ -148,13 +148,13 @@
     "zoomMeta": "Linux Distribution • Based on Debian",
     "zoomCaption": "The Amnesic Incognito Live System. Designed for ultimate privacy and anonymity, Tails runs entirely from a USB stick and leaves no trace on the computer it's used on. It forces all outgoing connections through the Tor network and includes top-tier encryption tools, making it the preferred OS for whistleblowers and journalists.",
     "dataset": {
+      "data-based": "debian",
+      "data-description": "the amnesic incognito live system. designed for ultimate privacy and anonymity, tails runs entirely from a usb stick and leaves no trace on the computer it's used on. it forces all outgoing connections through the tor network and includes top-tier encryption tools, making it the preferred os for whistleblowers and journalists.",
+      "data-features": "amnesic (forgets everything after shutdown) tor browser pre-configured with security levels encryption tools included (luks, pgp) windows camouflage mode ",
+      "data-kernel": "linux",
       "data-name": "tails",
       "data-type": "linux distribution",
-      "data-based": "debian",
-      "data-usecase": "anonymity & privacy",
-      "data-kernel": "linux",
-      "data-features": "amnesic (forgets everything after shutdown) tor browser pre-configured with security levels encryption tools included (luks, pgp) windows camouflage mode ",
-      "data-description": "the amnesic incognito live system. designed for ultimate privacy and anonymity, tails runs entirely from a usb stick and leaves no trace on the computer it's used on. it forces all outgoing connections through the tor network and includes top-tier encryption tools, making it the preferred os for whistleblowers and journalists."
+      "data-usecase": "anonymity & privacy"
     },
     "classes": [
       "os-card"
@@ -175,13 +175,13 @@
     "zoomMeta": "Mobile OS • Based on Linux Kernel",
     "zoomCaption": "The world's most ubiquitous mobile operating system, developed by Google and based on a modified Linux kernel. Android powers billions of devices from smartphones to TVs and car dashboards. It features a highly customizable interface with 'Material You' design, a massive app ecosystem through Google Play, and robust multitasking capabilities. As an open-source project (AOSP), it allows manufacturers to create diverse hardware experiences.",
     "dataset": {
+      "data-based": "linux kernel",
+      "data-description": "the world's most ubiquitous mobile operating system, developed by google and based on a modified linux kernel. android powers billions of devices from smartphones to tvs and car dashboards. it features a highly customizable interface with 'material you' design, a massive app ecosystem through google play, and robust multitasking capabilities. as an open-source project (aosp), it allows manufacturers to create diverse hardware experiences.",
+      "data-features": "open source ecosystem (aosp) massive app ecosystem highly customizable ui intelligent battery management ",
+      "data-kernel": "linux (modified)",
       "data-name": "android",
       "data-type": "mobile os",
-      "data-based": "linux kernel",
-      "data-usecase": "mobile devices, iot, tv, auto",
-      "data-kernel": "linux (modified)",
-      "data-features": "open source ecosystem (aosp) massive app ecosystem highly customizable ui intelligent battery management ",
-      "data-description": "the world's most ubiquitous mobile operating system, developed by google and based on a modified linux kernel. android powers billions of devices from smartphones to tvs and car dashboards. it features a highly customizable interface with 'material you' design, a massive app ecosystem through google play, and robust multitasking capabilities. as an open-source project (aosp), it allows manufacturers to create diverse hardware experiences."
+      "data-usecase": "mobile devices, iot, tv, auto"
     },
     "classes": [
       "os-card"
@@ -202,13 +202,13 @@
     "zoomMeta": "Mobile OS • Based on Darwin",
     "zoomCaption": "Apple's mobile operating system that powers the iPhone, known for its focus on security, fluidity, and a tightly integrated app ecosystem. Built on the Darwin foundation, iOS delivers a premium user experience with features like FaceID, iMessage, and seamless continuity across the Apple ecosystem. Its strict App Store guidelines and proactive privacy features, such as App Tracking Transparency, have set industry standards for mobile security.",
     "dataset": {
+      "data-based": "darwin",
+      "data-description": "apple's mobile operating system that powers the iphone, known for its focus on security, fluidity, and a tightly integrated app ecosystem. built on the darwin foundation, ios delivers a premium user experience with features like faceid, imessage, and seamless continuity across the apple ecosystem. its strict app store guidelines and proactive privacy features, such as app tracking transparency, have set industry standards for mobile security.",
+      "data-features": "faceid biometric security imessage ecosystem privacy transparency features airdrop file sharing ",
+      "data-kernel": "xnu",
       "data-name": "ios",
       "data-type": "mobile os",
-      "data-based": "darwin",
-      "data-usecase": "mobile devices (iphone)",
-      "data-kernel": "xnu",
-      "data-features": "faceid biometric security imessage ecosystem privacy transparency features airdrop file sharing ",
-      "data-description": "apple's mobile operating system that powers the iphone, known for its focus on security, fluidity, and a tightly integrated app ecosystem. built on the darwin foundation, ios delivers a premium user experience with features like faceid, imessage, and seamless continuity across the apple ecosystem. its strict app store guidelines and proactive privacy features, such as app tracking transparency, have set industry standards for mobile security."
+      "data-usecase": "mobile devices (iphone)"
     },
     "classes": [
       "os-card"
@@ -229,13 +229,13 @@
     "zoomMeta": "Research / Education • Based on Independent",
     "zoomCaption": "A highly reliable microkernel-based operating system designed for high availability and education. Unlike monolithic kernels where a single bug can crash the whole system, Minix 3 runs most system services (like drivers) as user-space processes that can be automatically restarted if they fail. It famously served as the inspiration for Linus Torvalds when he began writing Linux.",
     "dataset": {
+      "data-based": "independent",
+      "data-description": "a highly reliable microkernel-based operating system designed for high availability and education. unlike monolithic kernels where a single bug can crash the whole system, minix 3 runs most system services (like drivers) as user-space processes that can be automatically restarted if they fail. it famously served as the inspiration for linus torvalds when he began writing linux.",
+      "data-features": "self-healing drivers tiny kernel footprint posix compliant inspiration for linux (historically) ",
+      "data-kernel": "microkernel",
       "data-name": "minix 3",
       "data-type": "research / education",
-      "data-based": "independent",
-      "data-usecase": "education, high reliability",
-      "data-kernel": "microkernel",
-      "data-features": "self-healing drivers tiny kernel footprint posix compliant inspiration for linux (historically) ",
-      "data-description": "a highly reliable microkernel-based operating system designed for high availability and education. unlike monolithic kernels where a single bug can crash the whole system, minix 3 runs most system services (like drivers) as user-space processes that can be automatically restarted if they fail. it famously served as the inspiration for linus torvalds when he began writing linux."
+      "data-usecase": "education, high reliability"
     },
     "classes": [
       "os-card"
@@ -256,13 +256,13 @@
     "zoomMeta": "Linux Distribution • Based on Independent",
     "zoomCaption": "A security-oriented, lightweight Linux distribution that has become the de facto standard for Docker containers. By using musl libc and busybox instead of the larger GNU tools, Alpine achieves an incredibly small footprint (~5MB for a base image). Its small size and focus on security (with stack smashing protection by default) make it ideal for modern, cloud-native deployments.",
     "dataset": {
+      "data-based": "independent",
+      "data-description": "a security-oriented, lightweight linux distribution that has become the de facto standard for docker containers. by using musl libc and busybox instead of the larger gnu tools, alpine achieves an incredibly small footprint (~5mb for a base image). its small size and focus on security (with stack smashing protection by default) make it ideal for modern, cloud-native deployments.",
+      "data-features": "extremely small footprint (~5mb) security-oriented (stack smashing protection) uses musl libc instead of glibc simple and functional ",
+      "data-kernel": "linux (pax patched)",
       "data-name": "alpine linux",
       "data-type": "linux distribution",
-      "data-based": "independent",
-      "data-usecase": "containers, servers, routers",
-      "data-kernel": "linux (pax patched)",
-      "data-features": "extremely small footprint (~5mb) security-oriented (stack smashing protection) uses musl libc instead of glibc simple and functional ",
-      "data-description": "a security-oriented, lightweight linux distribution that has become the de facto standard for docker containers. by using musl libc and busybox instead of the larger gnu tools, alpine achieves an incredibly small footprint (~5mb for a base image). its small size and focus on security (with stack smashing protection by default) make it ideal for modern, cloud-native deployments."
+      "data-usecase": "containers, servers, routers"
     },
     "classes": [
       "os-card"
@@ -283,13 +283,13 @@
     "zoomMeta": "Custom OS • Based on Independent",
     "zoomCaption": "A fascinating piece of outsider art in OS form. Created entirely by Terry A. Davis over a decade, TempleOS is a 64-bit, non-preemptive multitasking, ring-0-only OS designed to be a digital 'temple.' Written in HolyC, it features a unique interface and built-in flight simulator, serving as a testament to one person's brilliance and perseverance.",
     "dataset": {
+      "data-based": "independent",
+      "data-description": "a fascinating piece of outsider art in os form. created entirely by terry a. davis over a decade, templeos is a 64-bit, non-preemptive multitasking, ring-0-only os designed to be a digital 'temple.' written in holyc, it features a unique interface and built-in flight simulator, serving as a testament to one person's brilliance and perseverance.",
+      "data-features": "everything runs in ring 0 (kernel mode) no memory protection 640x480 16-color graphics integrated flight simulator and oracle ",
+      "data-kernel": "custom (ring-0-only)",
       "data-name": "templeos",
       "data-type": "custom os",
-      "data-based": "independent",
-      "data-usecase": "recreational / religious / education",
-      "data-kernel": "custom (ring-0-only)",
-      "data-features": "everything runs in ring 0 (kernel mode) no memory protection 640x480 16-color graphics integrated flight simulator and oracle ",
-      "data-description": "a fascinating piece of outsider art in os form. created entirely by terry a. davis over a decade, templeos is a 64-bit, non-preemptive multitasking, ring-0-only os designed to be a digital 'temple.' written in holyc, it features a unique interface and built-in flight simulator, serving as a testament to one person's brilliance and perseverance."
+      "data-usecase": "recreational / religious / education"
     },
     "classes": [
       "os-card"
@@ -310,13 +310,13 @@
     "zoomMeta": "Linux Distribution • Based on Debian",
     "zoomCaption": "The most popular Linux distribution for the desktop, Ubuntu is based on Debian but designed to be as user-friendly as possible. It features a stunning interface, an easy-to-use software store, and the best hardware compatibility in the Linux world. It is the perfect starting point for anyone looking to switch from Windows or macOS, offering a seamless and modern experience.",
     "dataset": {
+      "data-based": "debian",
+      "data-description": "the most popular linux distribution for the desktop, ubuntu is based on debian but designed to be as user-friendly as possible. it features a stunning interface, an easy-to-use software store, and the best hardware compatibility in the linux world. it is the perfect starting point for anyone looking to switch from windows or macos, offering a seamless and modern experience.",
+      "data-features": "excellent hardware support large community and support easy installation of proprietary drivers snap package integration ",
+      "data-kernel": "linux",
       "data-name": "ubuntu",
       "data-type": "linux distribution",
-      "data-based": "debian",
-      "data-usecase": "desktop, server, cloud",
-      "data-kernel": "linux",
-      "data-features": "excellent hardware support large community and support easy installation of proprietary drivers snap package integration ",
-      "data-description": "the most popular linux distribution for the desktop, ubuntu is based on debian but designed to be as user-friendly as possible. it features a stunning interface, an easy-to-use software store, and the best hardware compatibility in the linux world. it is the perfect starting point for anyone looking to switch from windows or macos, offering a seamless and modern experience."
+      "data-usecase": "desktop, server, cloud"
     },
     "classes": [
       "os-card"
@@ -337,13 +337,13 @@
     "zoomMeta": "Linux Distribution • Based on Independent",
     "zoomCaption": "A revolutionary Linux distribution built on the Nix package manager. NixOS treats the entire system configuration as a functional expression, allowing for completely reproducible builds and atomic upgrades. If a configuration change breaks something, you can instantly roll back to a previous working state. It is the ultimate OS for DevOps and users seeking absolute control over their environment.",
     "dataset": {
+      "data-based": "independent",
+      "data-description": "a revolutionary linux distribution built on the nix package manager. nixos treats the entire system configuration as a functional expression, allowing for completely reproducible builds and atomic upgrades. if a configuration change breaks something, you can instantly roll back to a previous working state. it is the ultimate os for devops and users seeking absolute control over their environment.",
+      "data-features": "atomic upgrades and rollbacks reproducible system configuration declarative system management multi-user package management ",
+      "data-kernel": "linux",
       "data-name": "nixos",
       "data-type": "linux distribution",
-      "data-based": "independent",
-      "data-usecase": "devops, reproducible builds",
-      "data-kernel": "linux",
-      "data-features": "atomic upgrades and rollbacks reproducible system configuration declarative system management multi-user package management ",
-      "data-description": "a revolutionary linux distribution built on the nix package manager. nixos treats the entire system configuration as a functional expression, allowing for completely reproducible builds and atomic upgrades. if a configuration change breaks something, you can instantly roll back to a previous working state. it is the ultimate os for devops and users seeking absolute control over their environment."
+      "data-usecase": "devops, reproducible builds"
     },
     "classes": [
       "os-card"
@@ -364,13 +364,13 @@
     "zoomMeta": "Linux Distribution • Based on Independent",
     "zoomCaption": "A cutting-edge Linux distribution developed by the Fedora Project and sponsored by Red Hat. Fedora is the testing ground for new technologies that eventually make their way into RHEL. It is known for its pure, vanilla GNOME experience and for being one of the first to adopt new innovations like Wayland and PipeWire, making it a favorite for developers who want the future, today.",
     "dataset": {
+      "data-based": "independent",
+      "data-description": "a cutting-edge linux distribution developed by the fedora project and sponsored by red hat. fedora is the testing ground for new technologies that eventually make their way into rhel. it is known for its pure, vanilla gnome experience and for being one of the first to adopt new innovations like wayland and pipewire, making it a favorite for developers who want the future, today.",
+      "data-features": "cutting-edge software versions focus on free software selinux security out of the box smooth upgrades ",
+      "data-kernel": "linux",
       "data-name": "fedora",
       "data-type": "linux distribution",
-      "data-based": "independent",
-      "data-usecase": "workstation, development, innovation",
-      "data-kernel": "linux",
-      "data-features": "cutting-edge software versions focus on free software selinux security out of the box smooth upgrades ",
-      "data-description": "a cutting-edge linux distribution developed by the fedora project and sponsored by red hat. fedora is the testing ground for new technologies that eventually make their way into rhel. it is known for its pure, vanilla gnome experience and for being one of the first to adopt new innovations like wayland and pipewire, making it a favorite for developers who want the future, today."
+      "data-usecase": "workstation, development, innovation"
     },
     "classes": [
       "os-card"
@@ -391,13 +391,13 @@
     "zoomMeta": "Linux Distribution • Based on Independent",
     "zoomCaption": "A lightweight and flexible Linux distribution that follows the K.I.S.S. (Keep It Simple, Stupid) principle. Unlike most mainstream OSes, Arch provides a minimal base system and expects the user to configure and build their environment from the ground up. Its 'rolling release' model ensures users always have the latest software, while the Arch User Repository (AUR) provides access to thousands of community-maintained packages.",
     "dataset": {
+      "data-based": "independent",
+      "data-description": "a lightweight and flexible linux distribution that follows the k.i.s.s. (keep it simple, stupid) principle. unlike most mainstream oses, arch provides a minimal base system and expects the user to configure and build their environment from the ground up. its 'rolling release' model ensures users always have the latest software, while the arch user repository (aur) provides access to thousands of community-maintained packages.",
+      "data-features": "rolling release (always latest software) arch user repository (aur) minimal base installation excellent documentation (arch wiki) ",
+      "data-kernel": "linux",
       "data-name": "arch linux",
       "data-type": "linux distribution",
-      "data-based": "independent",
-      "data-usecase": "advanced users, development, customization",
-      "data-kernel": "linux",
-      "data-features": "rolling release (always latest software) arch user repository (aur) minimal base installation excellent documentation (arch wiki) ",
-      "data-description": "a lightweight and flexible linux distribution that follows the k.i.s.s. (keep it simple, stupid) principle. unlike most mainstream oses, arch provides a minimal base system and expects the user to configure and build their environment from the ground up. its 'rolling release' model ensures users always have the latest software, while the arch user repository (aur) provides access to thousands of community-maintained packages."
+      "data-usecase": "advanced users, development, customization"
     },
     "classes": [
       "os-card"
@@ -418,13 +418,13 @@
     "zoomMeta": "Linux Distribution • Based on Arch Linux",
     "zoomCaption": "An Arch Linux-based penetration testing distribution for penetration testers and security researchers. It provides a massive repository of cybersecurity tools and can be installed on top of existing Arch Linux.",
     "dataset": {
+      "data-based": "arch linux",
+      "data-description": "an arch linux-based penetration testing distribution for penetration testers and security researchers. it provides a massive repository of cybersecurity tools and can be installed on top of existing arch linux.",
+      "data-features": "over 2800 security tools lightweight window managers compatible with arch linux installations designed for advanced users ",
+      "data-kernel": "linux",
       "data-name": "blackarch linux",
       "data-type": "linux distribution",
-      "data-based": "arch linux",
-      "data-usecase": "security research",
-      "data-kernel": "linux",
-      "data-features": "over 2800 security tools lightweight window managers compatible with arch linux installations designed for advanced users ",
-      "data-description": "an arch linux-based penetration testing distribution for penetration testers and security researchers. it provides a massive repository of cybersecurity tools and can be installed on top of existing arch linux."
+      "data-usecase": "security research"
     },
     "classes": [
       "os-card"
@@ -445,13 +445,13 @@
     "zoomMeta": "Independent OS • Based on BeOS",
     "zoomCaption": "A community-driven, open-source project that aims to recreate the BeOS experience for modern hardware. Haiku is binary-compatible with the original BeOS and maintains its focus on personal computing with a clean, unified design and low system latency. It provides a unique alternative to mainstream OSes, proving that a fast, responsive desktop environment can still be built today.",
     "dataset": {
+      "data-based": "beos",
+      "data-description": "a community-driven, open-source project that aims to recreate the beos experience for modern hardware. haiku is binary-compatible with the original beos and maintains its focus on personal computing with a clean, unified design and low system latency. it provides a unique alternative to mainstream oses, proving that a fast, responsive desktop environment can still be built today.",
+      "data-features": "beos binary compatibility modular architecture very low latency clean, unified design ",
+      "data-kernel": "hybrid (newos fork)",
       "data-name": "haiku",
       "data-type": "independent os",
-      "data-based": "beos",
-      "data-usecase": "desktop computing, revival",
-      "data-kernel": "hybrid (newos fork)",
-      "data-features": "beos binary compatibility modular architecture very low latency clean, unified design ",
-      "data-description": "a community-driven, open-source project that aims to recreate the beos experience for modern hardware. haiku is binary-compatible with the original beos and maintains its focus on personal computing with a clean, unified design and low system latency. it provides a unique alternative to mainstream oses, proving that a fast, responsive desktop environment can still be built today."
+      "data-usecase": "desktop computing, revival"
     },
     "classes": [
       "os-card"
@@ -472,13 +472,13 @@
     "zoomMeta": "Independent OS • Based on Windows NT Architecture",
     "zoomCaption": "An ambitious open-source project to create a binary-compatible reimplementation of the Windows NT architecture (specifically Server 2003). ReactOS is not Linux; it is written from scratch to run Windows drivers and applications natively. It serves as a vital effort in digital preservation and provides a lightweight, free alternative for running legacy Windows software.",
     "dataset": {
+      "data-based": "windows nt architecture",
+      "data-description": "an ambitious open-source project to create a binary-compatible reimplementation of the windows nt architecture (specifically server 2003). reactos is not linux; it is written from scratch to run windows drivers and applications natively. it serves as a vital effort in digital preservation and provides a lightweight, free alternative for running legacy windows software.",
+      "data-features": "runs windows drivers and apps reverse-engineered from nt behavior lightweight written effectively from scratch ",
+      "data-kernel": "hybrid (nt-like)",
       "data-name": "reactos",
       "data-type": "independent os",
-      "data-based": "windows nt architecture",
-      "data-usecase": "legacy windows software",
-      "data-kernel": "hybrid (nt-like)",
-      "data-features": "runs windows drivers and apps reverse-engineered from nt behavior lightweight written effectively from scratch ",
-      "data-description": "an ambitious open-source project to create a binary-compatible reimplementation of the windows nt architecture (specifically server 2003). reactos is not linux; it is written from scratch to run windows drivers and applications natively. it serves as a vital effort in digital preservation and provides a lightweight, free alternative for running legacy windows software."
+      "data-usecase": "legacy windows software"
     },
     "classes": [
       "os-card"
@@ -499,13 +499,13 @@
     "zoomMeta": "BSD • Based on Berkeley Software Distribution",
     "zoomCaption": "Renowned for its proactive security and obsession with correct, clean code. OpenBSD's developers conduct continuous source code audits and have pioneered many security technologies used in other systems today, such as OpenSSH and LibreSSL. It is the gold standard for firewalls and secure gateway systems, with an incredible record of minimal remote holes in the default installation over decades.",
     "dataset": {
+      "data-based": "berkeley software distribution",
+      "data-description": "renowned for its proactive security and obsession with correct, clean code. openbsd's developers conduct continuous source code audits and have pioneered many security technologies used in other systems today, such as openssh and libressl. it is the gold standard for firewalls and secure gateway systems, with an incredible record of minimal remote holes in the default installation over decades.",
+      "data-features": "secure by default configuration libressl (tls implementation) openssh (developed here) randomized memory layout ",
+      "data-kernel": "monolithic",
       "data-name": "openbsd",
       "data-type": "bsd",
-      "data-based": "berkeley software distribution",
-      "data-usecase": "security, firewalls, servers",
-      "data-kernel": "monolithic",
-      "data-features": "secure by default configuration libressl (tls implementation) openssh (developed here) randomized memory layout ",
-      "data-description": "renowned for its proactive security and obsession with correct, clean code. openbsd's developers conduct continuous source code audits and have pioneered many security technologies used in other systems today, such as openssh and libressl. it is the gold standard for firewalls and secure gateway systems, with an incredible record of minimal remote holes in the default installation over decades."
+      "data-usecase": "security, firewalls, servers"
     },
     "classes": [
       "os-card"
@@ -526,13 +526,13 @@
     "zoomMeta": "Historical OS • Based on MS-DOS",
     "zoomCaption": "A watershed moment in computing history, Windows 95 shifted Microsoft's focus from DOS to a more advanced, 32-bit graphical environment. It introduced the iconic Start menu, Taskbar, and Windows Explorer—elements that define the Windows user experience to this day. It brought 'Plug and Play' hardware support and long filenames to the masses, forever changing how we interact with PCs.",
     "dataset": {
+      "data-based": "ms-dos",
+      "data-description": "a watershed moment in computing history, windows 95 shifted microsoft's focus from dos to a more advanced, 32-bit graphical environment. it introduced the iconic start menu, taskbar, and windows explorer—elements that define the windows user experience to this day. it brought 'plug and play' hardware support and long filenames to the masses, forever changing how we interact with pcs.",
+      "data-features": "plug and play support long filenames (vfat) pre-emptive multitasking (32-bit) dial-up networking ",
+      "data-kernel": "monolithic (vmm)",
       "data-name": "windows 95",
       "data-type": "historical os",
-      "data-based": "ms-dos",
-      "data-usecase": "historical consumer",
-      "data-kernel": "monolithic (vmm)",
-      "data-features": "plug and play support long filenames (vfat) pre-emptive multitasking (32-bit) dial-up networking ",
-      "data-description": "a watershed moment in computing history, windows 95 shifted microsoft's focus from dos to a more advanced, 32-bit graphical environment. it introduced the iconic start menu, taskbar, and windows explorer—elements that define the windows user experience to this day. it brought 'plug and play' hardware support and long filenames to the masses, forever changing how we interact with pcs."
+      "data-usecase": "historical consumer"
     },
     "classes": [
       "os-card"
@@ -553,13 +553,13 @@
     "zoomMeta": "Historical OS • Based on Proprietary",
     "zoomCaption": "Engineered from the ground up in the 1990s specifically for digital media and high-performance multitasking. BeOS featured a pervasive multithreading architecture where almost every system component ran in its own thread, resulting in incredible responsiveness. It used the 64-bit journaling BFS filesystem and treated file attributes like a database, a concept that still feels modern today.",
     "dataset": {
+      "data-based": "proprietary",
+      "data-description": "engineered from the ground up in the 1990s specifically for digital media and high-performance multitasking. beos featured a pervasive multithreading architecture where almost every system component ran in its own thread, resulting in incredible responsiveness. it used the 64-bit journaling bfs filesystem and treated file attributes like a database, a concept that still feels modern today.",
+      "data-features": "pervasive multithreading 64-bit journaling filesystem (bfs) database-like attributes for files extremely fast responsiveness ",
+      "data-kernel": "hybrid / microkernel",
       "data-name": "beos",
       "data-type": "historical os",
-      "data-based": "proprietary",
-      "data-usecase": "multimedia, historical",
-      "data-kernel": "hybrid / microkernel",
-      "data-features": "pervasive multithreading 64-bit journaling filesystem (bfs) database-like attributes for files extremely fast responsiveness ",
-      "data-description": "engineered from the ground up in the 1990s specifically for digital media and high-performance multitasking. beos featured a pervasive multithreading architecture where almost every system component ran in its own thread, resulting in incredible responsiveness. it used the 64-bit journaling bfs filesystem and treated file attributes like a database, a concept that still feels modern today."
+      "data-usecase": "multimedia, historical"
     },
     "classes": [
       "os-card"
@@ -580,13 +580,13 @@
     "zoomMeta": "Linux Distribution • Based on Independent",
     "zoomCaption": "A pioneer in the free software movement, Debian is often called the 'Universal Operating System.' Known for its rock-solid stability and strict adherence to open-source principles, it serves as the rock-bottom foundation for numerous other distributions like Ubuntu, Linux Mint, and Kali. Debian's massive package repository and support for multiple hardware architectures make it a favorite for servers and enthusiasts alike.",
     "dataset": {
+      "data-based": "independent",
+      "data-description": "a pioneer in the free software movement, debian is often called the 'universal operating system.' known for its rock-solid stability and strict adherence to open-source principles, it serves as the rock-bottom foundation for numerous other distributions like ubuntu, linux mint, and kali. debian's massive package repository and support for multiple hardware architectures make it a favorite for servers and enthusiasts alike.",
+      "data-features": "rock-solid stability strict adherence to free software guidelines massive package repository (59,000+ packages) supports huge range of architectures ",
+      "data-kernel": "linux",
       "data-name": "debian",
       "data-type": "linux distribution",
-      "data-based": "independent",
-      "data-usecase": "server, workstation, stability",
-      "data-kernel": "linux",
-      "data-features": "rock-solid stability strict adherence to free software guidelines massive package repository (59,000+ packages) supports huge range of architectures ",
-      "data-description": "a pioneer in the free software movement, debian is often called the 'universal operating system.' known for its rock-solid stability and strict adherence to open-source principles, it serves as the rock-bottom foundation for numerous other distributions like ubuntu, linux mint, and kali. debian's massive package repository and support for multiple hardware architectures make it a favorite for servers and enthusiasts alike."
+      "data-usecase": "server, workstation, stability"
     },
     "classes": [
       "os-card"
@@ -607,13 +607,13 @@
     "zoomMeta": "BSD • Based on Berkeley Software Distribution",
     "zoomCaption": "An advanced operating system used to power modern servers, desktops, and embedded platforms. Derived from BSD (the version of UNIX developed at the University of California, Berkeley), it is known for its legendary stability, performance, and advanced features like the ZFS file system and Jails virtualization. It is a complete operating system (kernel and userland developed together), not just a kernel.",
     "dataset": {
+      "data-based": "berkeley software distribution",
+      "data-description": "an advanced operating system used to power modern servers, desktops, and embedded platforms. derived from bsd (the version of unix developed at the university of california, berkeley), it is known for its legendary stability, performance, and advanced features like the zfs file system and jails virtualization. it is a complete operating system (kernel and userland developed together), not just a kernel.",
+      "data-features": "zfs file system integration jails (lightweight virtualization) linux binary compatibility advanced networking stack ",
+      "data-kernel": "monolithic (freebsd kernel)",
       "data-name": "freebsd",
       "data-type": "bsd",
-      "data-based": "berkeley software distribution",
-      "data-usecase": "server, networking, storage (nas)",
-      "data-kernel": "monolithic (freebsd kernel)",
-      "data-features": "zfs file system integration jails (lightweight virtualization) linux binary compatibility advanced networking stack ",
-      "data-description": "an advanced operating system used to power modern servers, desktops, and embedded platforms. derived from bsd (the version of unix developed at the university of california, berkeley), it is known for its legendary stability, performance, and advanced features like the zfs file system and jails virtualization. it is a complete operating system (kernel and userland developed together), not just a kernel."
+      "data-usecase": "server, networking, storage (nas)"
     },
     "classes": [
       "os-card"
@@ -634,13 +634,13 @@
     "zoomMeta": "Linux Distribution • Based on Independent",
     "zoomCaption": "The oldest maintained Linux distribution, Slackware is for purists who want a system that is as 'Unix-like' as possible. It avoids automatic dependency resolution and complex configuration tools, requiring users to understand the underlying system components. It is legendary for its simplicity, stability, and its refusal to follow industry trends like systemd, staying true to its roots.",
     "dataset": {
+      "data-based": "independent",
+      "data-description": "the oldest maintained linux distribution, slackware is for purists who want a system that is as 'unix-like' as possible. it avoids automatic dependency resolution and complex configuration tools, requiring users to understand the underlying system components. it is legendary for its simplicity, stability, and its refusal to follow industry trends like systemd, staying true to its roots.",
+      "data-features": "no automatic dependency resolution (historically) text-based installer very little upstream patching kiss philosophy ",
+      "data-kernel": "linux",
       "data-name": "slackware",
       "data-type": "linux distribution",
-      "data-based": "independent",
-      "data-usecase": "server, education, purists",
-      "data-kernel": "linux",
-      "data-features": "no automatic dependency resolution (historically) text-based installer very little upstream patching kiss philosophy ",
-      "data-description": "the oldest maintained linux distribution, slackware is for purists who want a system that is as 'unix-like' as possible. it avoids automatic dependency resolution and complex configuration tools, requiring users to understand the underlying system components. it is legendary for its simplicity, stability, and its refusal to follow industry trends like systemd, staying true to its roots."
+      "data-usecase": "server, education, purists"
     },
     "classes": [
       "os-card"
@@ -661,13 +661,13 @@
     "zoomMeta": "Unix • Based on System V",
     "zoomCaption": "Originally developed by Sun Microsystems, Solaris is a proprietary Unix OS synonymous with enterprise-grade reliability and scalability. It introduced groundbreaking technologies like ZFS (Zettabyte File System) for data integrity, DTrace for system-wide observability, and Solaris Zones for lightweight containerization. It remains a powerhouse for large-scale databases and mission-critical enterprise applications.",
     "dataset": {
+      "data-based": "system v",
+      "data-description": "originally developed by sun microsystems, solaris is a proprietary unix os synonymous with enterprise-grade reliability and scalability. it introduced groundbreaking technologies like zfs (zettabyte file system) for data integrity, dtrace for system-wide observability, and solaris zones for lightweight containerization. it remains a powerhouse for large-scale databases and mission-critical enterprise applications.",
+      "data-features": "zfs (zettabyte file system) dtrace (dynamic tracing) solaris zones (containerization) fault management ",
+      "data-kernel": "monolithic",
       "data-name": "solaris (oracle)",
       "data-type": "unix",
-      "data-based": "system v",
-      "data-usecase": "enterprise server, database",
-      "data-kernel": "monolithic",
-      "data-features": "zfs (zettabyte file system) dtrace (dynamic tracing) solaris zones (containerization) fault management ",
-      "data-description": "originally developed by sun microsystems, solaris is a proprietary unix os synonymous with enterprise-grade reliability and scalability. it introduced groundbreaking technologies like zfs (zettabyte file system) for data integrity, dtrace for system-wide observability, and solaris zones for lightweight containerization. it remains a powerhouse for large-scale databases and mission-critical enterprise applications."
+      "data-usecase": "enterprise server, database"
     },
     "classes": [
       "os-card"
@@ -688,13 +688,13 @@
     "zoomMeta": "Research OS • Based on Unix concepts (Evolution)",
     "zoomCaption": "The spiritual successor to Unix, developed by the same legendary team at Bell Labs. Plan 9 takes the 'everything is a file' philosophy to its absolute extreme using the 9P protocol. In Plan 9, resources (files, networks, devices) are represented as filesystems that can be seamlessly distributed across a network, providing a unified view of the entire computing environment.",
     "dataset": {
+      "data-based": "unix concepts (evolution)",
+      "data-description": "the spiritual successor to unix, developed by the same legendary team at bell labs. plan 9 takes the 'everything is a file' philosophy to its absolute extreme using the 9p protocol. in plan 9, resources (files, networks, devices) are represented as filesystems that can be seamlessly distributed across a network, providing a unified view of the entire computing environment.",
+      "data-features": "9p protocol (everything is a file system) per-process namespaces unified view of the network utf-8 (invented for plan 9) ",
+      "data-kernel": "hybrid",
       "data-name": "plan 9 from bell labs",
       "data-type": "research os",
-      "data-based": "unix concepts (evolution)",
-      "data-usecase": "research, distributed computing",
-      "data-kernel": "hybrid",
-      "data-features": "9p protocol (everything is a file system) per-process namespaces unified view of the network utf-8 (invented for plan 9) ",
-      "data-description": "the spiritual successor to unix, developed by the same legendary team at bell labs. plan 9 takes the 'everything is a file' philosophy to its absolute extreme using the 9p protocol. in plan 9, resources (files, networks, devices) are represented as filesystems that can be seamlessly distributed across a network, providing a unified view of the entire computing environment."
+      "data-usecase": "research, distributed computing"
     },
     "classes": [
       "os-card"
@@ -715,13 +715,13 @@
     "zoomMeta": "Historical OS • Based on TripOS",
     "zoomCaption": "Far ahead of its time in 1985, AmigaOS was the first mainstream operating system to feature true pre-emptive multitasking and high-performance color graphics. Built on a microkernel (Exec), it leveraged specialized custom chips to provide smooth multimedia performance that PCs and Macs wouldn't match for years. It remains a cult favorite for its efficiency and unique design.",
     "dataset": {
+      "data-based": "tripos",
+      "data-description": "far ahead of its time in 1985, amigaos was the first mainstream operating system to feature true pre-emptive multitasking and high-performance color graphics. built on a microkernel (exec), it leveraged specialized custom chips to provide smooth multimedia performance that pcs and macs wouldn't match for years. it remains a cult favorite for its efficiency and unique design.",
+      "data-features": "pre-emptive multitasking in 256kb ram custom chipset acceleration fast filesystem datatypes system ",
+      "data-kernel": "microkernel (exec)",
       "data-name": "amigaos",
       "data-type": "historical os",
-      "data-based": "tripos",
-      "data-usecase": "creative, gaming, historical",
-      "data-kernel": "microkernel (exec)",
-      "data-features": "pre-emptive multitasking in 256kb ram custom chipset acceleration fast filesystem datatypes system ",
-      "data-description": "far ahead of its time in 1985, amigaos was the first mainstream operating system to feature true pre-emptive multitasking and high-performance color graphics. built on a microkernel (exec), it leveraged specialized custom chips to provide smooth multimedia performance that pcs and macs wouldn't match for years. it remains a cult favorite for its efficiency and unique design."
+      "data-usecase": "creative, gaming, historical"
     },
     "classes": [
       "os-card"
@@ -742,13 +742,13 @@
     "zoomMeta": "Historical OS • Based on 86-DOS",
     "zoomCaption": "The legendary command-line operating system that powered the PC revolution of the 1980s. MS-DOS (Microsoft Disk Operating System) provided the foundation for early versions of Windows and introduced millions to personal computing. While simple and single-tasking by modern standards, its legacy persists in the BIOS and low-level system utilities that still exist today.",
     "dataset": {
+      "data-based": "86-dos",
+      "data-description": "the legendary command-line operating system that powered the pc revolution of the 1980s. ms-dos (microsoft disk operating system) provided the foundation for early versions of windows and introduced millions to personal computing. while simple and single-tasking by modern standards, its legacy persists in the bios and low-level system utilities that still exist today.",
+      "data-features": "fat16 file system single-tasking batch file scripting direct hardware access ",
+      "data-kernel": "monolithic",
       "data-name": "ms-dos",
       "data-type": "historical os",
-      "data-based": "86-dos",
-      "data-usecase": "historical, legacy business",
-      "data-kernel": "monolithic",
-      "data-features": "fat16 file system single-tasking batch file scripting direct hardware access ",
-      "data-description": "the legendary command-line operating system that powered the pc revolution of the 1980s. ms-dos (microsoft disk operating system) provided the foundation for early versions of windows and introduced millions to personal computing. while simple and single-tasking by modern standards, its legacy persists in the bios and low-level system utilities that still exist today."
+      "data-usecase": "historical, legacy business"
     },
     "classes": [
       "os-card"
@@ -769,13 +769,13 @@
     "zoomMeta": "RTOS • Based on Microkernel",
     "zoomCaption": "A commercial real-time operating system (RTOS) that powers everything from car infotainment systems to medical devices and nuclear power plants. Its microkernel architecture ensures that even if a component fails, the rest of the system remains operational—a critical requirement for its many safety-critical applications. It is the silent engine behind much of our modern infrastructure.",
     "dataset": {
+      "data-based": "microkernel",
+      "data-description": "a commercial real-time operating system (rtos) that powers everything from car infotainment systems to medical devices and nuclear power plants. its microkernel architecture ensures that even if a component fails, the rest of the system remains operational—a critical requirement for its many safety-critical applications. it is the silent engine behind much of our modern infrastructure.",
+      "data-features": "true microkernel architecture hard real-time guarantees fault isolation posiv-certified ",
+      "data-kernel": "microkernel",
       "data-name": "qnx",
       "data-type": "rtos",
-      "data-based": "microkernel",
-      "data-usecase": "automotive, industrial, medical",
-      "data-kernel": "microkernel",
-      "data-features": "true microkernel architecture hard real-time guarantees fault isolation posiv-certified ",
-      "data-description": "a commercial real-time operating system (rtos) that powers everything from car infotainment systems to medical devices and nuclear power plants. its microkernel architecture ensures that even if a component fails, the rest of the system remains operational—a critical requirement for its many safety-critical applications. it is the silent engine behind much of our modern infrastructure."
+      "data-usecase": "automotive, industrial, medical"
     },
     "classes": [
       "os-card"
@@ -796,13 +796,13 @@
     "zoomMeta": "RTOS • Based on Monolithic / Microkernel options",
     "zoomCaption": "Perhaps the most famous OS beyond Earth, VxWorks is the real-time operating system that has powered every Mars Rover from Pathfinder to Perseverance. Developed by Wind River, it is designed for deterministic performance and extreme reliability in harsh environments where failure is not an option. It remains the industry leader for aerospace and defense applications.",
     "dataset": {
+      "data-based": "monolithic / microkernel options",
+      "data-description": "perhaps the most famous os beyond earth, vxworks is the real-time operating system that has powered every mars rover from pathfinder to perseverance. developed by wind river, it is designed for deterministic performance and extreme reliability in harsh environments where failure is not an option. it remains the industry leader for aerospace and defense applications.",
+      "data-features": "determinism and speed safety critical certifications (do-178c) multi-core support mars rover os ",
+      "data-kernel": "real-time kernel",
       "data-name": "vxworks",
       "data-type": "rtos",
-      "data-based": "monolithic / microkernel options",
-      "data-usecase": "aerospace, defense, robotics",
-      "data-kernel": "real-time kernel",
-      "data-features": "determinism and speed safety critical certifications (do-178c) multi-core support mars rover os ",
-      "data-description": "perhaps the most famous os beyond earth, vxworks is the real-time operating system that has powered every mars rover from pathfinder to perseverance. developed by wind river, it is designed for deterministic performance and extreme reliability in harsh environments where failure is not an option. it remains the industry leader for aerospace and defense applications."
+      "data-usecase": "aerospace, defense, robotics"
     },
     "classes": [
       "os-card"
@@ -823,13 +823,13 @@
     "zoomMeta": "Linux Distribution • Based on Independent",
     "zoomCaption": "Built on the Portage package management system, Gentoo is for users who want complete control over their hardware. It compiles software from source code locally, allowing for extreme optimization tailored to specific hardware. Its legendary 'USE flags' system provides a level of dependency control that is unmatched in other distributions, letting users choose exactly which features to include in every package.",
     "dataset": {
+      "data-based": "independent",
+      "data-description": "built on the portage package management system, gentoo is for users who want complete control over their hardware. it compiles software from source code locally, allowing for extreme optimization tailored to specific hardware. its legendary 'use flags' system provides a level of dependency control that is unmatched in other distributions, letting users choose exactly which features to include in every package.",
+      "data-features": "use flags for granular dependency control optimized for specific hardware steep learning curve maximum control ",
+      "data-kernel": "linux (user compiled)",
       "data-name": "gentoo",
       "data-type": "linux distribution",
-      "data-based": "independent",
-      "data-usecase": "high performance, customization",
-      "data-kernel": "linux (user compiled)",
-      "data-features": "use flags for granular dependency control optimized for specific hardware steep learning curve maximum control ",
-      "data-description": "built on the portage package management system, gentoo is for users who want complete control over their hardware. it compiles software from source code locally, allowing for extreme optimization tailored to specific hardware. its legendary 'use flags' system provides a level of dependency control that is unmatched in other distributions, letting users choose exactly which features to include in every package."
+      "data-usecase": "high performance, customization"
     },
     "classes": [
       "os-card"
@@ -850,13 +850,13 @@
     "zoomMeta": "Linux Distribution • Based on Fedora",
     "zoomCaption": "Red Hat Enterprise Linux is the gold standard for corporate Linux environments globally. It offers a 10-year support lifecycle and military-grade security certifications, making it the preferred choice for mission-critical servers, mainframes, and cloud infrastructure. RHEL provides a stable, predictable platform for enterprise applications with extensive certification across hardware and software vendors.",
     "dataset": {
+      "data-based": "fedora",
+      "data-description": "red hat enterprise linux is the gold standard for corporate linux environments globally. it offers a 10-year support lifecycle and military-grade security certifications, making it the preferred choice for mission-critical servers, mainframes, and cloud infrastructure. rhel provides a stable, predictable platform for enterprise applications with extensive certification across hardware and software vendors.",
+      "data-features": "10-year support lifecycle live kernel patching (kpatch) military-grade security certifications extensive support ecosystem ",
+      "data-kernel": "linux",
       "data-name": "red hat enterprise linux (rhel)",
       "data-type": "linux distribution",
-      "data-based": "fedora",
-      "data-usecase": "enterprise server, cloud, mainframe",
-      "data-kernel": "linux",
-      "data-features": "10-year support lifecycle live kernel patching (kpatch) military-grade security certifications extensive support ecosystem ",
-      "data-description": "red hat enterprise linux is the gold standard for corporate linux environments globally. it offers a 10-year support lifecycle and military-grade security certifications, making it the preferred choice for mission-critical servers, mainframes, and cloud infrastructure. rhel provides a stable, predictable platform for enterprise applications with extensive certification across hardware and software vendors."
+      "data-usecase": "enterprise server, cloud, mainframe"
     },
     "classes": [
       "os-card"
@@ -877,13 +877,13 @@
     "zoomMeta": "Gaming OS • Based on Arch Linux (formerly Debian)",
     "zoomCaption": "The gaming-focused OS that powers the Steam Deck and other gaming handhelds. Based on Arch Linux, it uses the Proton compatibility layer to run Windows games on Linux with incredible performance. It features a custom handheld interface designed for controllers, but can also switch to a full KDE Plasma desktop mode for a complete PC experience.",
     "dataset": {
+      "data-based": "arch linux (formerly debian)",
+      "data-description": "the gaming-focused os that powers the steam deck and other gaming handhelds. based on arch linux, it uses the proton compatibility layer to run windows games on linux with incredible performance. it features a custom handheld interface designed for controllers, but can also switch to a full kde plasma desktop mode for a complete pc experience.",
+      "data-features": "proton compatibility layer for windows games game mode and desktop mode immutable root for system stability direct hardware access for performance ",
+      "data-kernel": "linux",
       "data-name": "steamos",
       "data-type": "gaming os",
-      "data-based": "arch linux (formerly debian)",
-      "data-usecase": "gaming, handhelds",
-      "data-kernel": "linux",
-      "data-features": "proton compatibility layer for windows games game mode and desktop mode immutable root for system stability direct hardware access for performance ",
-      "data-description": "the gaming-focused os that powers the steam deck and other gaming handhelds. based on arch linux, it uses the proton compatibility layer to run windows games on linux with incredible performance. it features a custom handheld interface designed for controllers, but can also switch to a full kde plasma desktop mode for a complete pc experience."
+      "data-usecase": "gaming, handhelds"
     },
     "classes": [
       "os-card"
@@ -904,13 +904,13 @@
     "zoomMeta": "Linux Distribution • Based on Ubuntu LTS",
     "zoomCaption": "An Ubuntu-based Linux distribution aimed at penetration testing and security assessment. It provides a minimal yet complete environment.",
     "dataset": {
+      "data-based": "ubuntu lts",
+      "data-description": "an ubuntu-based linux distribution aimed at penetration testing and security assessment. it provides a minimal yet complete environment.",
+      "data-features": "includes a curated set of the most used security analysis tools launchpad repository integration lightweight and fast anonymous mode ",
+      "data-kernel": "linux (monolithic)",
       "data-name": "backbox",
       "data-type": "linux distribution",
-      "data-based": "ubuntu lts",
-      "data-usecase": "security assessment",
-      "data-kernel": "linux (monolithic)",
-      "data-features": "includes a curated set of the most used security analysis tools launchpad repository integration lightweight and fast anonymous mode ",
-      "data-description": "an ubuntu-based linux distribution aimed at penetration testing and security assessment. it provides a minimal yet complete environment."
+      "data-usecase": "security assessment"
     },
     "classes": [
       "os-card"
@@ -931,13 +931,13 @@
     "zoomMeta": "Linux Distribution • Based on Debian (Kicksecure)",
     "zoomCaption": "A security-focused OS that achieves advanced anonymity through isolation. It consists of two virtual machines: a 'Gateway' that runs Tor and a 'Workstation' that sits behind it. This setup ensures that even if the workstation is compromised, the user's real IP address is never leaked, providing a multi-layered defense against surveillance.",
     "dataset": {
+      "data-based": "debian (kicksecure)",
+      "data-description": "a security-focused os that achieves advanced anonymity through isolation. it consists of two virtual machines: a 'gateway' that runs tor and a 'workstation' that sits behind it. this setup ensures that even if the workstation is compromised, the user's real ip address is never leaked, providing a multi-layered defense against surveillance.",
+      "data-features": "splits system into gateway and workstation vms all traffic forced through tor dns leak protection stream isolation ",
+      "data-kernel": "linux (hardened)",
       "data-name": "whonix",
       "data-type": "linux distribution",
-      "data-based": "debian (kicksecure)",
-      "data-usecase": "anonymity & privacy",
-      "data-kernel": "linux (hardened)",
-      "data-features": "splits system into gateway and workstation vms all traffic forced through tor dns leak protection stream isolation ",
-      "data-description": "a security-focused os that achieves advanced anonymity through isolation. it consists of two virtual machines: a 'gateway' that runs tor and a 'workstation' that sits behind it. this setup ensures that even if the workstation is compromised, the user's real ip address is never leaked, providing a multi-layered defense against surveillance."
+      "data-usecase": "anonymity & privacy"
     },
     "classes": [
       "os-card"
@@ -958,13 +958,13 @@
     "zoomMeta": "Linux Distribution • Based on Kubuntu",
     "zoomCaption": "A Kubuntu-based distribution themed around the Disney character Hannah Montana. It is a famous example of the flexibility of Linux theming.",
     "dataset": {
+      "data-based": "kubuntu",
+      "data-description": "a kubuntu-based distribution themed around the disney character hannah montana. it is a famous example of the flexibility of linux theming.",
+      "data-features": "custom hannah montana icons and boot screen purple color scheme based on a very old version of kubuntu ",
+      "data-kernel": "linux",
       "data-name": "hannah montana linux",
       "data-type": "linux distribution",
-      "data-based": "kubuntu",
-      "data-usecase": "recreational / meme",
-      "data-kernel": "linux",
-      "data-features": "custom hannah montana icons and boot screen purple color scheme based on a very old version of kubuntu ",
-      "data-description": "a kubuntu-based distribution themed around the disney character hannah montana. it is a famous example of the flexibility of linux theming."
+      "data-usecase": "recreational / meme"
     },
     "classes": [
       "os-card"
@@ -985,13 +985,13 @@
     "zoomMeta": "Linux Distribution • Based on Debian",
     "zoomCaption": "A Linux distribution based on Debian with a focus on security, privacy, and development. It is designed for penetration testing, vulnerability assessment, computer forensics, and anonymous web browsing.",
     "dataset": {
+      "data-based": "debian",
+      "data-description": "a linux distribution based on debian with a focus on security, privacy, and development. it is designed for penetration testing, vulnerability assessment, computer forensics, and anonymous web browsing.",
+      "data-features": "pre-installed security & forensics tools sandboxing technologies lightweight environment privacy and anonymity tools ",
+      "data-kernel": "linux",
       "data-name": "parrot os",
       "data-type": "linux distribution",
-      "data-based": "debian",
-      "data-usecase": "security & penetration testing",
-      "data-kernel": "linux",
-      "data-features": "pre-installed security & forensics tools sandboxing technologies lightweight environment privacy and anonymity tools ",
-      "data-description": "a linux distribution based on debian with a focus on security, privacy, and development. it is designed for penetration testing, vulnerability assessment, computer forensics, and anonymous web browsing."
+      "data-usecase": "security & penetration testing"
     },
     "classes": [
       "os-card"
@@ -1012,13 +1012,13 @@
     "zoomMeta": "Linux Distribution • Based on Ubuntu",
     "zoomCaption": "A Linux distribution made for computer forensics, with the purpose of running live without affecting devices attached to the computer. It comes with a vast array of forensic tools.",
     "dataset": {
+      "data-based": "ubuntu",
+      "data-description": "a linux distribution made for computer forensics, with the purpose of running live without affecting devices attached to the computer. it comes with a vast array of forensic tools.",
+      "data-features": "forensics focused dart (digital advanced response toolkit) live system incident response tools ",
+      "data-kernel": "linux",
       "data-name": "deft linux",
       "data-type": "linux distribution",
-      "data-based": "ubuntu",
-      "data-usecase": "digital forensics",
-      "data-kernel": "linux",
-      "data-features": "forensics focused dart (digital advanced response toolkit) live system incident response tools ",
-      "data-description": "a linux distribution made for computer forensics, with the purpose of running live without affecting devices attached to the computer. it comes with a vast array of forensic tools."
+      "data-usecase": "digital forensics"
     },
     "classes": [
       "os-card"
@@ -1039,13 +1039,13 @@
     "zoomMeta": "Linux Distribution • Based on Ubuntu",
     "zoomCaption": "A live Linux environment pre-configured to function as a web pen-testing environment. It contains the best of the open source and free tools that focus on testing and attacking websites.",
     "dataset": {
+      "data-based": "ubuntu",
+      "data-description": "a live linux environment pre-configured to function as a web pen-testing environment. it contains the best of the open source and free tools that focus on testing and attacking websites.",
+      "data-features": "pre-configured web attack tools step-by-step pen-testing workflow targeted specifically at web applications vulnerable targets included for training ",
+      "data-kernel": "linux",
       "data-name": "samurai web testing framework os",
       "data-type": "linux distribution",
-      "data-based": "ubuntu",
-      "data-usecase": "web penetration testing",
-      "data-kernel": "linux",
-      "data-features": "pre-configured web attack tools step-by-step pen-testing workflow targeted specifically at web applications vulnerable targets included for training ",
-      "data-description": "a live linux environment pre-configured to function as a web pen-testing environment. it contains the best of the open source and free tools that focus on testing and attacking websites."
+      "data-usecase": "web penetration testing"
     },
     "classes": [
       "os-card"
@@ -1066,13 +1066,13 @@
     "zoomMeta": "Linux Distribution • Based on Ubuntu",
     "zoomCaption": "An Ubuntu-based Linux distribution designed for ethical hackers and penetration testers, providing a large collection of over 700 security tools.",
     "dataset": {
+      "data-based": "ubuntu",
+      "data-description": "an ubuntu-based linux distribution designed for ethical hackers and penetration testers, providing a large collection of over 700 security tools.",
+      "data-features": "700+ penetration testing tools hardware support live environment focus on wireless security ",
+      "data-kernel": "linux",
       "data-name": "cyborg hawk linux",
       "data-type": "linux distribution",
-      "data-based": "ubuntu",
-      "data-usecase": "penetration testing",
-      "data-kernel": "linux",
-      "data-features": "700+ penetration testing tools hardware support live environment focus on wireless security ",
-      "data-description": "an ubuntu-based linux distribution designed for ethical hackers and penetration testers, providing a large collection of over 700 security tools."
+      "data-usecase": "penetration testing"
     },
     "classes": [
       "os-card"
@@ -1093,13 +1093,13 @@
     "zoomMeta": "Linux Distribution • Based on Ubuntu",
     "zoomCaption": "An operating system for STEM and creative professionals who use their computer as a tool to discover and create. Developed by hardware manufacturer System76, it provides a highly customized GNOME desktop.",
     "dataset": {
+      "data-based": "ubuntu",
+      "data-description": "an operating system for stem and creative professionals who use their computer as a tool to discover and create. developed by hardware manufacturer system76, it provides a highly customized gnome desktop.",
+      "data-features": "auto-tiling window manager out-of-the-box nvidia support built-in keyboard shortcuts for workflow system76 hardware optimization ",
+      "data-kernel": "linux",
       "data-name": "pop!_os",
       "data-type": "linux distribution",
-      "data-based": "ubuntu",
-      "data-usecase": "development, creatives, gaming",
-      "data-kernel": "linux",
-      "data-features": "auto-tiling window manager out-of-the-box nvidia support built-in keyboard shortcuts for workflow system76 hardware optimization ",
-      "data-description": "an operating system for stem and creative professionals who use their computer as a tool to discover and create. developed by hardware manufacturer system76, it provides a highly customized gnome desktop."
+      "data-usecase": "development, creatives, gaming"
     },
     "classes": [
       "os-card"
@@ -1120,13 +1120,13 @@
     "zoomMeta": "Mobile OS • Based on AOSP (Android Open Source Project)",
     "zoomCaption": "A privacy and security focused open-source mobile operating system with Android app compatibility. Designed to prevent exploitation of zero-day vulnerabilities and to mitigate the impact of successful bugs.",
     "dataset": {
+      "data-based": "aosp (android open source project)",
+      "data-description": "a privacy and security focused open-source mobile operating system with android app compatibility. designed to prevent exploitation of zero-day vulnerabilities and to mitigate the impact of successful bugs.",
+      "data-features": "hardened memory allocation sandboxed google play functionality strict permissions and network access toggles verified boot security ",
+      "data-kernel": "linux (hardened)",
       "data-name": "grapheneos",
       "data-type": "mobile os",
-      "data-based": "aosp (android open source project)",
-      "data-usecase": "secure mobile devices",
-      "data-kernel": "linux (hardened)",
-      "data-features": "hardened memory allocation sandboxed google play functionality strict permissions and network access toggles verified boot security ",
-      "data-description": "a privacy and security focused open-source mobile operating system with android app compatibility. designed to prevent exploitation of zero-day vulnerabilities and to mitigate the impact of successful bugs."
+      "data-usecase": "secure mobile devices"
     },
     "classes": [
       "os-card"

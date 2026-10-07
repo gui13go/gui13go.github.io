@@ -13,10 +13,10 @@
     "zoomMeta": "Philosophy",
     "zoomCaption": "René Descartes walks into a bar. The bartender asks, 'Would you like a drink?' Descartes replies, 'I think not,' and promptly disappears.",
     "dataset": {
-      "data-name": "the existential crisis of descartes",
       "data-content": "rené descartes walks into a bar. the bartender asks, 'would you like a drink?' descartes replies, 'i think not,' and promptly disappears.",
+      "data-discipline": "philosophy",
       "data-history": "this joke is a play on descartes' famous philosophical proposition, 'cogito, ergo sum' (i think, therefore i am). in his meditations on first philosophy, descartes sought to find an indubitable foundation for knowledge, concluding that the very act of doubting one's existence serves as proof of the reality of one's mind. the joke inverts this logic: if thinking is the basis of existence, then the cessation of thought should logically result in non-existence.",
-      "data-discipline": "philosophy"
+      "data-name": "the existential crisis of descartes"
     },
     "classes": [
       "joke-card"
@@ -37,10 +37,10 @@
     "zoomMeta": "Quantum Physics",
     "zoomCaption": "Werner Heisenberg is speeding down the highway when a cop pulls him over. The officer asks, 'Do you have any idea how fast you were going?' Heisenberg replies, 'No, but I know exactly where I am!' The cop, now annoyed, says, 'You were doing 90 miles an hour!' Heisenberg throws up his hands and yells, 'Great! Now I’m lost!'",
     "dataset": {
-      "data-name": "heisenberg’s speeding ticket",
       "data-content": "werner heisenberg is speeding down the highway when a cop pulls him over. the officer asks, 'do you have any idea how fast you were going?' heisenberg replies, 'no, but i know exactly where i am!' the cop, now annoyed, says, 'you were doing 90 miles an hour!' heisenberg throws up his hands and yells, 'great! now i’m lost!'",
+      "data-discipline": "quantum physics",
       "data-history": "illustrates the heisenberg uncertainty principle, formulated in 1927. it states that the more precisely the position of some particle is determined, the less precisely its momentum (velocity) can be predicted, and vice versa. in the joke, being told his exact velocity makes his position (knowing where he is) completely uncertain.",
-      "data-discipline": "quantum physics"
+      "data-name": "heisenberg’s speeding ticket"
     },
     "classes": [
       "joke-card"
@@ -61,10 +61,10 @@
     "zoomMeta": "Psychology",
     "zoomCaption": "Ivan Pavlov is sitting at a bar enjoying a pint. Suddenly, the bell on the door rings. Pavlov jumps up and screams, 'Oh no! I forgot to feed the dogs!'",
     "dataset": {
-      "data-name": "pavlov’s reflex",
       "data-content": "ivan pavlov is sitting at a bar enjoying a pint. suddenly, the bell on the door rings. pavlov jumps up and screams, 'oh no! i forgot to feed the dogs!'",
+      "data-discipline": "psychology",
       "data-history": "ivan pavlov was a russian physiologist known for classical conditioning. his experiments involved ringing a bell every time he fed his dogs. eventually, the dogs began to salivate at the sound of the bell even when no food was present. the joke suggests pavlov himself became conditioned to the bell.",
-      "data-discipline": "psychology"
+      "data-name": "pavlov’s reflex"
     },
     "classes": [
       "joke-card"
@@ -85,10 +85,10 @@
     "zoomMeta": "Quantum Mechanics",
     "zoomCaption": "A police officer pulls over Erwin Schrödinger and asks to see what's in the trunk. The officer looks inside and says, 'Sir, did you know there's a dead cat in here?' Schrödinger sighs and says, 'Well, I do now!'",
     "dataset": {
-      "data-name": "schrödinger’s cat",
       "data-content": "a police officer pulls over erwin schrödinger and asks to see what's in the trunk. the officer looks inside and says, 'sir, did you know there's a dead cat in here?' schrödinger sighs and says, 'well, i do now!'",
+      "data-discipline": "quantum mechanics",
       "data-history": "schrödinger's cat is a thought experiment from 1935 intended to illustrate the perceived absurdity of the copenhagen interpretation of quantum mechanics. a cat in a box is simultaneously alive and dead until observed. the act of looking into the trunk 'collapses the wave function' and forces a single reality.",
-      "data-discipline": "quantum mechanics"
+      "data-name": "schrödinger’s cat"
     },
     "classes": [
       "joke-card"
@@ -109,10 +109,10 @@
     "zoomMeta": "Computer Science",
     "zoomCaption": "An engineer, a physicist, and Alan Turing are asked if a program will ever finish executing. The engineer profiles it, the physicist calculates the thermodynamic entropy of the processor, and Alan Turing proves it is mathematically impossible to know without waiting forever.",
     "dataset": {
-      "data-name": "turing's halting problem",
       "data-content": "an engineer, a physicist, and alan turing are asked if a program will ever finish executing. the engineer profiles it, the physicist calculates the thermodynamic entropy of the processor, and alan turing proves it is mathematically impossible to know without waiting forever.",
+      "data-discipline": "computer science",
       "data-history": "in 1936, alan turing proved the undecidability of the halting problem: there cannot exist a general algorithm that determines whether any arbitrary computer program will finish running or run forever. this laid the foundations of theoretical computer science and established fundamental boundaries on what computation can solve.",
-      "data-discipline": "computer science"
+      "data-name": "turing's halting problem"
     },
     "classes": [
       "joke-card"
@@ -133,10 +133,10 @@
     "zoomMeta": "Mathematics",
     "zoomCaption": "Infinitely many mathematicians walk into David Hilbert's fully booked hotel. The front desk clerk worries, but Hilbert calmly shifts guest n to room 2n, instantly freeing up all odd-numbered rooms for infinity more guests.",
     "dataset": {
-      "data-name": "hilbert's infinite hotel checkout",
       "data-content": "infinitely many mathematicians walk into david hilbert's fully booked hotel. the front desk clerk worries, but hilbert calmly shifts guest n to room 2n, instantly freeing up all odd-numbered rooms for infinity more guests.",
+      "data-discipline": "mathematics",
       "data-history": "hilbert's paradox of the grand hotel demonstrates the counter-intuitive properties of transfinite sets discovered by georg cantor. even when an infinite hotel is completely full, it can accommodate infinitely many new arrivals through a bijective mapping between countable infinite sets.",
-      "data-discipline": "mathematics"
+      "data-name": "hilbert's infinite hotel checkout"
     },
     "classes": [
       "joke-card"
@@ -157,10 +157,10 @@
     "zoomMeta": "Logic",
     "zoomCaption": "Three logicians walk into a bar. The bartender asks, 'Does everyone want a drink?' The first logician says, 'I don't know.' The second says, 'I don't know.' The third smiles and says, 'Yes!'",
     "dataset": {
-      "data-name": "logicians ordering drinks",
       "data-content": "three logicians walk into a bar. the bartender asks, 'does everyone want a drink?' the first logician says, 'i don't know.' the second says, 'i don't know.' the third smiles and says, 'yes!'",
+      "data-discipline": "logic",
       "data-history": "rooted in boolean logic and epistemic logic. the universal quantifier ('does everyone...') requires unanimous agreement. if the first or second logician did not want a drink, they would answer 'no' immediately. because they both want drinks but cannot speak for the others, they reply 'i don't know'. the third logician deduces their intent and concludes that all three desire a drink.",
-      "data-discipline": "logic"
+      "data-name": "logicians ordering drinks"
     },
     "classes": [
       "joke-card"
@@ -181,10 +181,10 @@
     "zoomMeta": "Physics",
     "zoomCaption": "A photon checks into a hotel and heads toward the elevator. The bellhop rushes over and asks, 'Can I help you with your luggage, sir?' The photon smiles and replies, 'No thanks, I'm travelling light!'",
     "dataset": {
-      "data-name": "the photon checked baggage",
       "data-content": "a photon checks into a hotel and heads toward the elevator. the bellhop rushes over and asks, 'can i help you with your luggage, sir?' the photon smiles and replies, 'no thanks, i'm travelling light!'",
+      "data-discipline": "physics",
       "data-history": "in special relativity and quantum electrodynamics, a photon is an elementary particle and the quantum of the electromagnetic field. photons have strictly zero invariant rest mass (m = 0) and always travel at the speed of light c in vacuum, making 'travelling light' a clever double entendre on physical optics and luggage.",
-      "data-discipline": "physics"
+      "data-name": "the photon checked baggage"
     },
     "classes": [
       "joke-card"
@@ -205,10 +205,10 @@
     "zoomMeta": "Computer Science",
     "zoomCaption": "There are only two hard things in Computer Science: cache invalidation, naming things, and off-by-one errors.",
     "dataset": {
-      "data-name": "two hard problems in computer science",
       "data-content": "there are only two hard things in computer science: cache invalidation, naming things, and off-by-one errors.",
+      "data-discipline": "computer science",
       "data-history": "originating from an aphorism famously attributed to phil karlton: 'there are only two hard problems in computer science: cache invalidation and naming things.' the tech community later appended the third clause, turning the aphorism itself into a self-referential off-by-one error.",
-      "data-discipline": "computer science"
+      "data-name": "two hard problems in computer science"
     },
     "classes": [
       "joke-card"
@@ -229,10 +229,10 @@
     "zoomMeta": "Computer Science",
     "zoomCaption": "A programmer's spouse tells them: 'Please go to the grocery store and buy a loaf of bread. If they have eggs, buy a dozen.' The programmer returns with twelve loaves of bread. When asked why, the programmer answers: 'Because they had eggs.'",
     "dataset": {
-      "data-name": "the programmer and the grocery store",
       "data-content": "a programmer's spouse tells them: 'please go to the grocery store and buy a loaf of bread. if they have eggs, buy a dozen.' the programmer returns with twelve loaves of bread. the spouse asks in shock: 'why did you buy twelve loaves of bread?!' the programmer replies: 'because they had eggs.'",
+      "data-discipline": "computer science",
       "data-history": "highlights the strict literal semantics of procedural syntax and conditional control flow (if/else). humans infer implicit context ('buy a dozen eggs'), whereas a parser or compiler executes condition evaluation strictly over the previous variable context ('buy a dozen [loaves of bread]').",
-      "data-discipline": "computer science"
+      "data-name": "the programmer and the grocery store"
     },
     "classes": [
       "joke-card"
