@@ -10,7 +10,13 @@ import sys
 import subprocess
 import time
 from concurrent.futures import ProcessPoolExecutor, as_completed
-from PIL import Image
+
+try:
+    from PIL import Image
+except ImportError:
+    print("Notice: Pillow (PIL) is not installed in this environment.")
+    print("Skipping automatic image generation step (pre-converted assets in git repository will be used).")
+    sys.exit(0)
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 PUBLIC_DIR = os.path.join(REPO_ROOT, 'frontend', 'public')
