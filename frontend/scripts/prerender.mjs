@@ -128,9 +128,12 @@ function stripTags(html) {
 function upgradeImagesToPicture(html) {
   if (!html) return ''
   return html.replace(
-    /(<picture[^>]*>[\s\S]*?<\/picture>)|(<img\b([^>]*\bsrc=["']?((?:https?:\/\/[^/"'\s>]+)?\/(?:images|photos)\/[^"'\s>]+\.(?:jpg|jpeg|png))["']?[^>]*)>)/gi,
-    (match, pictureTag, imgTag, _attrs, src) => {
+    /(<picture[^>]*>[\s\S]*?<\/picture>)|(<img\b[^>]*>)/gi,
+    (match, pictureTag, imgTag) => {
       if (pictureTag) return pictureTag
+      const srcMatch = imgTag.match(/(?:\s|^)src=["']((?:https?:\/\/[^/'"\s>]+)?\/(?:images|photos)\/[^'"\s>]+\.(?:jpg|jpeg|png))["']/i)
+      if (!srcMatch) return imgTag
+      const src = srcMatch[1]
       const avifSrc = src.replace(/\.(jpg|jpeg|png)$/i, '.avif')
       const webpSrc = src.replace(/\.(jpg|jpeg|png)$/i, '.webp')
       return `<picture><source type="image/avif" srcset="${avifSrc}"><source type="image/webp" srcset="${webpSrc}">${imgTag}</picture>`

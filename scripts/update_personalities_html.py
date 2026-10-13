@@ -279,13 +279,14 @@ def main():
     else:
         print("Warning: Could not match getQuotesList/createCardElement pattern, check manual replacement.")
 
-    # Also update totalCount and visibleCount logic in fetch
-    fetch_pattern = r'(\.then\(data => \{\s*personalitiesData = data;)'
-    fetch_replacement = r'''\1
+    # Also update totalCount and visibleCount logic in fetch if not already present
+    if 'const totalCountElem' not in new_html:
+        fetch_pattern = r'(\.then\(data => \{\s*personalitiesData = data;)'
+        fetch_replacement = r'''\1
         const totalCountElem = document.getElementById("totalCount");
         if (totalCountElem) totalCountElem.textContent = personalitiesData.length;
         if (visibleCount) visibleCount.textContent = personalitiesData.length;'''
-    new_html = re.sub(fetch_pattern, fetch_replacement, new_html)
+        new_html = re.sub(fetch_pattern, fetch_replacement, new_html)
 
     with open('frontend/public/rendered_gallery/personalities.html', 'w', encoding='utf-8') as f:
         f.write(new_html)

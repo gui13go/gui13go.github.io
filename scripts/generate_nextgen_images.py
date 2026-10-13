@@ -43,7 +43,20 @@ def convert_single_image(img_path):
             print(f"Error WebP {img_path}: {e}", file=sys.stderr)
 
     # 2. Generate AVIF via ffmpeg with SVT-AV1
-    if not os.path.exists(avif_path) or os.path.getsize(avif_path) == 0 or os.path.getmtime(avif_path) < orig_mtime:
+    # Note: SVT-AV1 with yuv420p does not preserve alpha channel transparency.
+    # Skip AVIF generation for images with alpha transparency (WebP handles transparency seamlessly).
+    is_transparent = False
+    if ext_lower == '.png':
+        try:
+            with Image.open(img_path) as im_check:
+                if im_check.mode in ('RGBA', 'LA') or (im_check.mode == 'P' and 'transparency' in im_check.info):
+                    extrema = im_check.getextrema()
+                    if im_check.mode == 'RGBA' and extrema[3][0] < 255:
+                        is_transparent = True
+        except Exception:
+            pass
+
+    if not is_transparent and (not os.path.exists(avif_path) or os.path.getsize(avif_path) == 0 or os.path.getmtime(avif_path) < orig_mtime):
         try:
             cmd = [
                 'ffmpeg', '-y', '-i', img_path,

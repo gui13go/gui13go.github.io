@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad_format-flatbuffers" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050814"/>
+      <stop offset="50%" stop-color="#0B132B"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+
+    <!-- Mesh Grid Glow -->
+    <radialGradient id="mesh_format-flatbuffers" cx="75%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.20"/>
+      <stop offset="60%" stop-color="#4F46E5" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="gridPattern_format-flatbuffers" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="100%" height="100%" fill="#030712"/>
+  <rect width="100%" height="100%" fill="url(#bgGrad_format-flatbuffers)"/>
+  <rect width="100%" height="100%" fill="url(#gridPattern_format-flatbuffers)"/>
+  <rect width="100%" height="100%" fill="url(#mesh_format-flatbuffers)"/>
+
+  <!-- Top Accent Banner Line -->
+  <rect x="0" y="0" width="100%" height="4" fill="#818CF8"/>
+
+  <!-- Top Header Metadata Bar -->
+  <g transform="translate(48, 44)">
+    <!-- Symbol Shield -->
+    <rect x="0" y="0" width="56" height="56" rx="12" fill="#0F172A" stroke="#818CF8" stroke-width="2"/>
+    <text x="28" y="36" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="16" text-anchor="middle">FBS</text>
+
+    <!-- Subtitle Category Badge -->
+    <rect x="68" y="4" width="280" height="26" rx="6" fill="#0F172A" stroke="rgba(255,255,255,0.15)"/>
+    <circle cx="82" cy="17" r="4.5" fill="#818CF8"/>
+    <text x="96" y="21" fill="#818CF8" font-family="monospace" font-size="11" font-weight="700" letter-spacing="0.05em">BINARY SPECIFICATION</text>
+  </g>
+
+  <!-- Format Title -->
+  <text x="48" y="165" fill="#F8FAFC" font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-weight="900" font-size="34" letter-spacing="-0.03em">FLATBUFFERS</text>
+
+  <!-- Architectural Internals Specification List -->
+  <g transform="translate(48, 205)">
+    <rect x="0" y="0" width="390" height="180" rx="12" fill="#0F172A" stroke="rgba(255,255,255,0.12)" stroke-width="1.4"/>
+    <text x="18" y="28" fill="#818CF8" font-family="monospace" font-size="11" font-weight="700" letter-spacing="0.06em">PHYSICAL ARCHITECTURE &amp; WIRE SPEC</text>
+    <line x1="18" y1="38" x2="372" y2="38" stroke="rgba(255,255,255,0.1)"/>
+
+    <g transform="translate(18, 58)">
+      <circle cx="5" cy="5" r="4" fill="#818CF8"/>
+      <text x="18" y="9" fill="#F1F5F9" font-family="monospace" font-size="11" font-weight="600">ZERO-COPY MEMORY-MAPPED BINARY</text>
+    </g>
+    <g transform="translate(18, 86)">
+      <circle cx="5" cy="5" r="4" fill="#818CF8"/>
+      <text x="18" y="9" fill="#F1F5F9" font-family="monospace" font-size="11" font-weight="600">SCHEMA: STRONGLY SCHEMA-FIRST (.FBS ID</text>
+    </g>
+    <g transform="translate(18, 114)">
+      <circle cx="5" cy="5" r="4" fill="#818CF8"/>
+      <text x="18" y="9" fill="#F1F5F9" font-family="monospace" font-size="11" font-weight="600">MAGIC: INTERNAL VTABLE OFFSETS</text>
+    </g>
+    <g transform="translate(18, 142)">
+      <circle cx="5" cy="5" r="4" fill="#818CF8"/>
+      <text x="18" y="9" fill="#F1F5F9" font-family="monospace" font-size="11" font-weight="600">OPTIMIZED BUFFER STREAM</text>
+    </g>
+  </g>
+
+  <!-- Right Side Interactive Blueprint Diagram -->
+  
+    <g transform="translate(460, 90)">
+      <rect x="0" y="0" width="300" height="300" rx="14" fill="#0A0F1D" stroke="#818CF8" stroke-width="1.8"/>
+      <rect x="15" y="15" width="270" height="35" rx="6" fill="#111827" stroke="rgba(255,255,255,0.1)"/>
+      <text x="150" y="38" fill="#F8FAFC" font-family="monospace" font-size="12" font-weight="700" text-anchor="middle">FLATBUFFERS ARCHITECTURE</text>
+      
+      <rect x="25" y="65" width="250" height="50" rx="6" fill="#1E293B" stroke="#818CF8" stroke-width="1"/>
+      <text x="35" y="88" fill="#818CF8" font-family="monospace" font-size="11" font-weight="700">1. HEADER / WIRE SPEC</text>
+      <text x="35" y="104" fill="#CBD5E1" font-family="monospace" font-size="9">Internal vtable offsets</text>
+
+      <rect x="25" y="125" width="250" height="65" rx="6" fill="#1E293B" stroke="#818CF8" stroke-width="1"/>
+      <text x="35" y="148" fill="#818CF8" font-family="monospace" font-size="11" font-weight="700">2. CORE ENCODING &amp; DATA MODEL</text>
+      <text x="35" y="165" fill="#CBD5E1" font-family="monospace" font-size="9">Strongly Schema-First (.fbs IDL comp</text>
+      <text x="35" y="180" fill="#94A3B8" font-family="monospace" font-size="9">True zero-copy reads: fastest data a</text>
+
+      <rect x="25" y="200" width="250" height="50" rx="6" fill="#1E293B" stroke="#818CF8" stroke-width="1"/>
+      <text x="35" y="222" fill="#818CF8" font-family="monospace" font-size="11" font-weight="700">3. DESERIALIZATION TARGET</text>
+      <text x="35" y="238" fill="#CBD5E1" font-family="monospace" font-size="9">Game engines, TensorFlow Lite models</text>
+
+      <!-- Bottom Status Indicators -->
+      <g transform="translate(25, 265)">
+        <circle cx="5" cy="5" r="4" fill="#818CF8"/>
+        <text x="16" y="9" fill="#F8FAFC" font-family="monospace" font-size="10" font-weight="700">YEAR: 2014</text>
+        <circle cx="130" cy="5" r="4" fill="#818CF8"/>
+        <text x="142" y="9" fill="#F8FAFC" font-family="monospace" font-size="10" font-weight="700">EXT: .fbs</text>
+      </g>
+    </g>
+
+  <!-- Bottom Brand Signature -->
+  <g transform="translate(48, 435)">
+    <text x="0" y="0" fill="#94A3B8" font-family="monospace" font-size="11">FORMAT SPEC: .FBS / .BIN // OPEN TECHNICAL TAXONOMY</text>
+    <text x="704" y="0" fill="#818CF8" font-family="monospace" font-size="11" font-weight="700" text-anchor="end">Gui13go Data Formats Gallery →</text>
+  </g>
+</svg>

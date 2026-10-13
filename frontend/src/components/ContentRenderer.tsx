@@ -18,12 +18,20 @@ export const ContentRenderer: React.FC<ContentRendererProps> = ({
   const navigate = useNavigate()
 
   // Automatically wrap local raster <img> elements in <picture> tags with AVIF and WebP sources
+  // Note: Skip avatar layers with custom cutout transparency/stacking classes so their original source and attributes remain intact
   const processedHtml = useMemo(() => {
     if (!htmlContent) return ''
     return htmlContent.replace(
-      /(<picture[^>]*>[\s\S]*?<\/picture>)|(<img\b([^>]*\bsrc=["']((?:https?:\/\/[^/]+)?\/(?:images|photos)\/[^"']+\.(?:jpg|jpeg|png))["'][^>]*)>)/gi,
-      (_match, pictureTag, imgTag, _attrs, src) => {
+      /(<picture[^>]*>[\s\S]*?<\/picture>)|(<img\b[^>]*>)/gi,
+      (_match, pictureTag, imgTag) => {
         if (pictureTag) return pictureTag
+        // Do not wrap avatar cutout layers or transparent overlay images
+        if (imgTag.includes('avatar-layer-') || imgTag.includes('class="avatar')) {
+          return imgTag
+        }
+        const srcMatch = imgTag.match(/(?:\s|^)src=["']((?:https?:\/\/[^/'"\s>]+)?\/(?:images|photos)\/[^'"\s>]+\.(?:jpg|jpeg|png))["']/i)
+        if (!srcMatch) return imgTag
+        const src = srcMatch[1]
         const avifSrc = src.replace(/\.(jpg|jpeg|png)$/i, '.avif')
         const webpSrc = src.replace(/\.(jpg|jpeg|png)$/i, '.webp')
         return `<picture><source type="image/avif" srcset="${avifSrc}"><source type="image/webp" srcset="${webpSrc}">${imgTag}</picture>`
@@ -172,6 +180,18 @@ export const ContentRenderer: React.FC<ContentRendererProps> = ({
           Return Home
         </button>
       </main>
+    )
+  }
+
+  const hasMainTag = processedHtml.trim().startsWith('<main')
+
+  if (hasMainTag) {
+    return (
+      <div
+        className="content-renderer-wrapper"
+        ref={containerRef}
+        dangerouslySetInnerHTML={{ __html: processedHtml }}
+      />
     )
   }
 

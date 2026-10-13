@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad_format-tar-zip" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050814"/>
+      <stop offset="50%" stop-color="#0B132B"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+
+    <!-- Mesh Grid Glow -->
+    <radialGradient id="mesh_format-tar-zip" cx="75%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.20"/>
+      <stop offset="60%" stop-color="#B45309" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="gridPattern_format-tar-zip" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="100%" height="100%" fill="#030712"/>
+  <rect width="100%" height="100%" fill="url(#bgGrad_format-tar-zip)"/>
+  <rect width="100%" height="100%" fill="url(#gridPattern_format-tar-zip)"/>
+  <rect width="100%" height="100%" fill="url(#mesh_format-tar-zip)"/>
+
+  <!-- Top Accent Banner Line -->
+  <rect x="0" y="0" width="100%" height="4" fill="#F59E0B"/>
+
+  <!-- Top Header Metadata Bar -->
+  <g transform="translate(48, 44)">
+    <!-- Symbol Shield -->
+    <rect x="0" y="0" width="56" height="56" rx="12" fill="#0F172A" stroke="#F59E0B" stroke-width="2"/>
+    <text x="28" y="36" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="16" text-anchor="middle">TARG</text>
+
+    <!-- Subtitle Category Badge -->
+    <rect x="68" y="4" width="280" height="26" rx="6" fill="#0F172A" stroke="rgba(255,255,255,0.15)"/>
+    <circle cx="82" cy="17" r="4.5" fill="#F59E0B"/>
+    <text x="96" y="21" fill="#F59E0B" font-family="monospace" font-size="11" font-weight="700" letter-spacing="0.05em">ARCHIVE SPECIFICATION</text>
+  </g>
+
+  <!-- Format Title -->
+  <text x="48" y="165" fill="#F8FAFC" font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-weight="900" font-size="34" letter-spacing="-0.03em">TAR / ZIP / 7Z</text>
+
+  <!-- Architectural Internals Specification List -->
+  <g transform="translate(48, 205)">
+    <rect x="0" y="0" width="390" height="180" rx="12" fill="#0F172A" stroke="rgba(255,255,255,0.12)" stroke-width="1.4"/>
+    <text x="18" y="28" fill="#F59E0B" font-family="monospace" font-size="11" font-weight="700" letter-spacing="0.06em">PHYSICAL ARCHITECTURE &amp; WIRE SPEC</text>
+    <line x1="18" y1="38" x2="372" y2="38" stroke="rgba(255,255,255,0.1)"/>
+
+    <g transform="translate(18, 58)">
+      <circle cx="5" cy="5" r="4" fill="#F59E0B"/>
+      <text x="18" y="9" fill="#F1F5F9" font-family="monospace" font-size="11" font-weight="600">FILE COLLECTION BUNDLING, STREAM ARCHI</text>
+    </g>
+    <g transform="translate(18, 86)">
+      <circle cx="5" cy="5" r="4" fill="#F59E0B"/>
+      <text x="18" y="9" fill="#F1F5F9" font-family="monospace" font-size="11" font-weight="600">SCHEMA: FIXED BINARY FILE HEADER RECOR</text>
+    </g>
+    <g transform="translate(18, 114)">
+      <circle cx="5" cy="5" r="4" fill="#F59E0B"/>
+      <text x="18" y="9" fill="#F1F5F9" font-family="monospace" font-size="11" font-weight="600">MAGIC: 0X504B0304 ('PK\X03\X04' IN ZIP</text>
+    </g>
+    <g transform="translate(18, 142)">
+      <circle cx="5" cy="5" r="4" fill="#F59E0B"/>
+      <text x="18" y="9" fill="#F1F5F9" font-family="monospace" font-size="11" font-weight="600">OPTIMIZED BUFFER STREAM</text>
+    </g>
+  </g>
+
+  <!-- Right Side Interactive Blueprint Diagram -->
+  
+    <g transform="translate(460, 90)">
+      <rect x="0" y="0" width="300" height="300" rx="14" fill="#0A0F1D" stroke="#F59E0B" stroke-width="1.8"/>
+      <rect x="15" y="15" width="270" height="35" rx="6" fill="#111827" stroke="rgba(255,255,255,0.1)"/>
+      <text x="150" y="38" fill="#F8FAFC" font-family="monospace" font-size="12" font-weight="700" text-anchor="middle">TAR / ZIP / 7Z ARCHITECTURE</text>
+      
+      <rect x="25" y="65" width="250" height="50" rx="6" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+      <text x="35" y="88" fill="#F59E0B" font-family="monospace" font-size="11" font-weight="700">1. HEADER / WIRE SPEC</text>
+      <text x="35" y="104" fill="#CBD5E1" font-family="monospace" font-size="9">0x504B0304 ('PK\x03\x04' in ZIP) / </text>
+
+      <rect x="25" y="125" width="250" height="65" rx="6" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+      <text x="35" y="148" fill="#F59E0B" font-family="monospace" font-size="11" font-weight="700">2. CORE ENCODING &amp; DATA MODEL</text>
+      <text x="35" y="165" fill="#CBD5E1" font-family="monospace" font-size="9">Fixed Binary File Header Records &amp; A</text>
+      <text x="35" y="180" fill="#94A3B8" font-family="monospace" font-size="9">Ubiquitous operating system support </text>
+
+      <rect x="25" y="200" width="250" height="50" rx="6" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+      <text x="35" y="222" fill="#F59E0B" font-family="monospace" font-size="11" font-weight="700">3. DESERIALIZATION TARGET</text>
+      <text x="35" y="238" fill="#CBD5E1" font-family="monospace" font-size="9">Software distribution (NPM, Debian .</text>
+
+      <!-- Bottom Status Indicators -->
+      <g transform="translate(25, 265)">
+        <circle cx="5" cy="5" r="4" fill="#F59E0B"/>
+        <text x="16" y="9" fill="#F8FAFC" font-family="monospace" font-size="10" font-weight="700">YEAR: 1979</text>
+        <circle cx="130" cy="5" r="4" fill="#F59E0B"/>
+        <text x="142" y="9" fill="#F8FAFC" font-family="monospace" font-size="10" font-weight="700">EXT: .tar.gz</text>
+      </g>
+    </g>
+
+  <!-- Bottom Brand Signature -->
+  <g transform="translate(48, 435)">
+    <text x="0" y="0" fill="#94A3B8" font-family="monospace" font-size="11">FORMAT SPEC: .TAR.GZ / .ZIP / .7Z // OPEN TECHNICAL TAXONOMY</text>
+    <text x="704" y="0" fill="#F59E0B" font-family="monospace" font-size="11" font-weight="700" text-anchor="end">Gui13go Data Formats Gallery →</text>
+  </g>
+</svg>

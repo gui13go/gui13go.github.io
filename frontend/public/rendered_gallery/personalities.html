@@ -254,6 +254,8 @@
 <a class="gallery-pill" href="/gallery/computer-languages/">Languages</a>
 <a class="gallery-pill" href="/gallery/operating-systems/">Operating Systems</a>
 <a class="gallery-pill" href="/gallery/network-protocols/">Protocols</a>
+<a class="gallery-pill" href="/gallery/databases/">Databases</a>
+<a class="gallery-pill" href="/gallery/data-formats/">Data Formats</a>
 <a class="gallery-pill" href="/gallery/facts/">Facts</a>
 <a class="gallery-pill" href="/gallery/laws/">Laws</a>
 <a class="gallery-pill" href="/gallery/jokes/">Jokes</a>
@@ -19027,6 +19029,43 @@
       if (noResultsMsg) noResultsMsg.style.display = count === 0 ? 'block' : 'none';
     }
 
+    function sortDomCards(mode) {
+      const cards = Array.from(gridContainer.querySelectorAll('.personality-card'));
+      if (cards.length === 0) return;
+      cards.sort((a, b) => {
+        const rawYearA = a.dataset.birthYear;
+        const rawYearB = b.dataset.birthYear;
+        const hasYearA = rawYearA !== undefined && rawYearA !== '' && rawYearA !== 'null' && rawYearA !== '9999';
+        const hasYearB = rawYearB !== undefined && rawYearB !== '' && rawYearB !== 'null' && rawYearB !== '9999';
+        const yearA = hasYearA ? parseFloat(rawYearA) : 0;
+        const yearB = hasYearB ? parseFloat(rawYearB) : 0;
+        const nameA = (a.dataset.name || '').toLowerCase();
+        const nameB = (b.dataset.name || '').toLowerCase();
+
+        if (mode.startsWith('date')) {
+          if (hasYearA && !hasYearB) return -1;
+          if (!hasYearA && hasYearB) return 1;
+        }
+
+        switch (mode) {
+          case 'date-asc':
+            return yearA - yearB || nameA.localeCompare(nameB);
+          case 'date-desc':
+            return yearB - yearA || nameA.localeCompare(nameB);
+          case 'name-asc':
+            return nameA.localeCompare(nameB);
+          case 'name-desc':
+            return nameB.localeCompare(nameA);
+          default:
+            return yearA - yearB;
+        }
+      });
+      const fragment = document.createDocumentFragment();
+      cards.forEach(card => fragment.appendChild(card));
+      gridContainer.appendChild(fragment);
+      filterCards();
+    }
+
     if (searchInput) searchInput.addEventListener('input', filterCards);
     if (clearBtn) {
       clearBtn.addEventListener('click', function() {
@@ -19040,9 +19079,25 @@
       sortSelect.addEventListener('change', function() {
         currentSort = this.value;
         localStorage.setItem('personalities-sort-order', currentSort);
-        const sorted = sortList(personalitiesData, currentSort);
-        renderCards(sorted);
+        if (personalitiesData && personalitiesData.length > 0) {
+          const sorted = sortList(personalitiesData, currentSort);
+          renderCards(sorted);
+        } else {
+          sortDomCards(currentSort);
+        }
       });
+    }
+
+    // Attach initial zoom event handlers to pre-rendered cards
+    gridContainer.querySelectorAll('.gallery-zoomable').forEach(wrapper => {
+      wrapper.addEventListener('click', function() {
+        openLightbox(this.dataset.zoomSrc, this.dataset.zoomTitle, this.dataset.zoomCaption);
+      });
+    });
+
+    // If initial sort is different from pre-rendered DOM, sort immediately
+    if (currentSort !== 'date-asc') {
+      sortDomCards(currentSort);
     }
 
     // Fetch personalities from JSON
@@ -19056,29 +19111,11 @@
         const totalCountElem = document.getElementById("totalCount");
         if (totalCountElem) totalCountElem.textContent = personalitiesData.length;
         if (visibleCount) visibleCount.textContent = personalitiesData.length;
-        const totalCountElem = document.getElementById("totalCount");
-        if (totalCountElem) totalCountElem.textContent = personalitiesData.length;
-        if (visibleCount) visibleCount.textContent = personalitiesData.length;
-        const totalCountElem = document.getElementById("totalCount");
-        if (totalCountElem) totalCountElem.textContent = personalitiesData.length;
-        if (visibleCount) visibleCount.textContent = personalitiesData.length;
-        const totalCountElem = document.getElementById("totalCount");
-        if (totalCountElem) totalCountElem.textContent = personalitiesData.length;
-        if (visibleCount) visibleCount.textContent = personalitiesData.length;
-        const totalCountElem = document.getElementById("totalCount");
-        if (totalCountElem) totalCountElem.textContent = personalitiesData.length;
-        if (visibleCount) visibleCount.textContent = personalitiesData.length;
         const sorted = sortList(personalitiesData, currentSort);
         renderCards(sorted);
       })
       .catch(err => {
         console.warn('Could not fetch /data/personalities.json, using pre-rendered fallback:', err);
-        // Fallback: bind search and zoom on pre-rendered HTML cards
-        document.querySelectorAll('.gallery-zoomable').forEach(wrapper => {
-          wrapper.addEventListener('click', function() {
-            openLightbox(this.dataset.zoomSrc, this.dataset.zoomTitle, this.dataset.zoomCaption);
-          });
-        });
         filterCards();
       });
   }

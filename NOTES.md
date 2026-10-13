@@ -4,6 +4,14 @@
 Nobel prizes;
 Math problems fixed and not fixed
 
+Seneca - practicing poverty - is this what i was afraid of?
+benjamin franklim effect
+Leitner system
+Law of the instrument
+Baseline trap
+
+Robert Greene - The 46 of Power - Law 46: Never Appear Too Perfect
+Robert Greene’s book The 48 Laws of Power
 
 Replace the image for "[NAME]" personality.
 
@@ -23,6 +31,13 @@ make x do
 
 Personalities:
 
+
+Lin Zexu, Grand Guardian of the Heir Apparent, opositor of the opium war
+William Jardine (1784–1843) was a Scottish physician and merchant who co-founded Jardine, Matheson & Co., one of Asia's most powerful trading conglomerates.
+Muammar Gaddafi
+bob marley
+
+Emil Cioran
 Greta Thunberg
 jackie chan
 gustavo kuerten
