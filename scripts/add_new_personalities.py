@@ -76,7 +76,7 @@ for name in names:
     <picture>
       <source srcset="/images/personalities/{img_filename.replace('.jpg', '.avif')}" type="image/avif">
       <source srcset="/images/personalities/{img_filename.replace('.jpg', '.webp')}" type="image/webp">
-      <img src="/images/personalities/{img_filename}" alt="{p_data['name']}" loading="lazy" onerror="this.onerror=null;this.src='/images/placeholder-avatar.png';">
+      <img src="/images/personalities/{img_filename}" alt="{p_data['name']}" loading="lazy" onerror="this.onerror=null;this.src='/images/personalities/placeholder-avatar.png';">
     </picture>
     <div class="personality-img-overlay">
       <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">

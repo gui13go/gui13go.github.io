@@ -78,7 +78,7 @@ def generate_card_html(p):
 <picture>
 <source srcset="{avif_src}" type="image/avif"/>
 <source srcset="{webp_src}" type="image/webp"/>
-<img alt="{name}" loading="lazy" onerror="this.onerror=null;this.src='/images/placeholder-avatar.png';" src="{image}"/>
+<img alt="{name}" loading="lazy" onerror="this.onerror=null;this.src='/images/personalities/placeholder-avatar.png';" src="{image}"/>
 </picture>
 <div class="personality-img-overlay">
 <svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="22">
@@ -237,7 +237,7 @@ def main():
           <picture>
             <source type="image/avif" srcset="${escapeHtml(p.image).replace(/\\.(jpg|jpeg|png)$/i, '.avif')}">
             <source type="image/webp" srcset="${escapeHtml(p.image).replace(/\\.(jpg|jpeg|png)$/i, '.webp')}">
-            <img src="${escapeHtml(p.image)}" alt="${escapeHtml(p.name)}" loading="lazy" onerror="this.onerror=null;this.src='/images/placeholder-avatar.png';">
+            <img src="${escapeHtml(p.image)}" alt="${escapeHtml(p.name)}" loading="lazy" onerror="this.onerror=null;this.src='/images/personalities/placeholder-avatar.png';">
           </picture>
           <div class="personality-img-overlay">
             <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">

@@ -41,7 +41,7 @@ const FEATURED_ITEMS: HighlightedItem[] = [
     badge: 'Versus',
     metaLeft: '116 Battles',
     metaRight: 'Interactive Comparison',
-    image: '/images/versus_cover.webp',
+    image: '/images/versus/versus_cover.webp',
     summary:
       'An interactive compendium of 116 historic and conceptual clashes: Linux vs. Windows, Vim vs. Emacs, Monolith vs. Microservices, Compiled vs. Interpreted, and classic philosophical and historical rivalries.',
     tags: ['Versus', 'Architecture', 'History', 'Debate'],
@@ -53,7 +53,7 @@ const FEATURED_ITEMS: HighlightedItem[] = [
     badge: 'Blog',
     metaLeft: 'Sep 21, 2026',
     metaRight: '18 min read',
-    image: '/images/osint-top-10-demystifying-intelligence.jpg',
+    image: '/images/blogs/osint-top-10-demystifying-intelligence.jpg',
     summary:
       'A comprehensive architectural guide demystifying Open-Source Intelligence (OSINT). Exploring intelligence lifecycles, reconnaissance taxonomy, pivotal tooling, strict operational security (OPSEC), sock puppet tradecraft, and legal boundaries for security analysts.',
     tags: ['OSINT', 'Security', 'Intelligence'],
@@ -65,7 +65,7 @@ const FEATURED_ITEMS: HighlightedItem[] = [
     badge: 'Tool',
     metaLeft: '35 Milestones',
     metaRight: 'Chronological Roadmap',
-    image: '/images/revolution-os-timeline.webp',
+    image: '/images/blogs/revolution-os-timeline.webp',
     summary:
       'An interactive, chronological roadmap and simulator tracing the evolution of Unix, GNU, the Linux kernel, open-source licensing wars, and the ideological clash between the hacker movement and corporate monopolies.',
     tags: ['Linux', 'History', 'Open Source', 'Tool'],
@@ -113,7 +113,7 @@ const FEATURED_ITEMS: HighlightedItem[] = [
     badge: 'Blog',
     metaLeft: 'Sep 18, 2026',
     metaRight: '41 min read',
-    image: '/images/weaponizing-the-wordlist-automated-dictionary-attacks.jpg',
+    image: '/images/blogs/weaponizing-the-wordlist-automated-dictionary-attacks.jpg',
     summary:
       'An exhaustive technical dissection of automated dictionary attacks, distributed password spraying, and offline hash cracking against authentication endpoints with resilient Linux defense architectures.',
     tags: ['Security', 'Linux', 'Authentication'],
@@ -125,7 +125,7 @@ const FEATURED_ITEMS: HighlightedItem[] = [
     badge: 'Gallery',
     metaLeft: '39 Languages',
     metaRight: 'Execution Paradigms',
-    image: '/images/compiled_vs_interpreted_versus.webp',
+    image: '/images/versus/compiled_vs_interpreted_versus.webp',
     summary:
       'In-depth comparative analysis of 39 programming languages, ahead-of-time compilation, JIT runtimes, memory models, typing paradigms, and the historical lineage from C and Lisp to Rust and Go.',
     tags: ['Languages', 'Compilers', 'Computer Science'],

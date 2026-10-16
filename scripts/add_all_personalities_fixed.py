@@ -61,7 +61,7 @@ for p in new_personalities:
        data-zoom-src="{p['img']}"
        data-zoom-title="{p['name']}"
        data-zoom-caption="{p['summary']}">
-    <img src="{p['img']}" alt="{p['name']}" loading="lazy" onerror="this.onerror=null;this.src='/images/placeholder-avatar.png';">
+    <img src="{p['img']}" alt="{p['name']}" loading="lazy" onerror="this.onerror=null;this.src='/images/personalities/placeholder-avatar.png';">
     <div class="personality-img-overlay">
       <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="11" cy="11" r="8"></circle>

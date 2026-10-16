@@ -25,12 +25,19 @@ A distinguished environmental artistic portrait of [NAME] in an expressive semi-
 Versus:
 for x to
 make x do
+carpe diem
 
 
 
 
 Personalities:
 
+Rosa Parks
+
+Tupac Shakur
+
+Alfred Adler
+Ted Kaczynski
 
 Lin Zexu, Grand Guardian of the Heir Apparent, opositor of the opium war
 William Jardine (1784–1843) was a Scottish physician and merchant who co-founded Jardine, Matheson & Co., one of Asia's most powerful trading conglomerates.

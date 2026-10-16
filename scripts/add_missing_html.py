@@ -45,7 +45,7 @@ for name in names:
        data-zoom-src="{img}"
        data-zoom-title="{name}"
        data-zoom-caption="Historical figure">
-    <img src="{img}" alt="{name}" loading="lazy" onerror="this.onerror=null;this.src='/images/placeholder-avatar.png';">
+    <img src="{img}" alt="{name}" loading="lazy" onerror="this.onerror=null;this.src='/images/personalities/placeholder-avatar.png';">
     <div class="personality-img-overlay">
       <svg class="zoom-indicator-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="11" cy="11" r="8"></circle>
