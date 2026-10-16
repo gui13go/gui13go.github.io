@@ -3,18 +3,39 @@ import { API_BASE_URL } from '../config/api'
 import type { BackendHealthResponse } from '../types/api'
 
 /**
- * Periodically polls the self-hosted backend /health endpoint every 30 seconds.
- * Tracks online/offline status, GPU acceleration availability, and Ollama connectivity.
+ * Periodically polls the self-hosted backend health or Ollama endpoints every 30 seconds.
+ * Tracks online/offline status, model availability, and Ollama connectivity.
  */
 export function useBackendHealth() {
   const query = useQuery<BackendHealthResponse, Error>({
-    queryKey: ['backend-health'],
+    queryKey: ['backend-health', API_BASE_URL],
     queryFn: async ({ signal }) => {
+      // First try standard Ollama /api/tags (works when pointed directly to Ollama)
+      try {
+        const tagsRes = await fetch(`${API_BASE_URL}/api/tags`, {
+          method: 'GET',
+          headers: { Accept: 'application/json' },
+          signal,
+        })
+        if (tagsRes.ok) {
+          const tagsData = await tagsRes.json()
+          const modelNames = (tagsData.models || []).map((m: { name?: string }) => m.name || '')
+          return {
+            status: 'ok',
+            service: 'Ollama Edge Workstation Node',
+            gpu: true,
+            ollama_connected: true,
+            models: modelNames,
+            timestamp: Date.now() / 1000,
+          }
+        }
+      } catch {
+        // Fallback to /health check if using a custom gateway
+      }
+
       const response = await fetch(`${API_BASE_URL}/health`, {
         method: 'GET',
-        headers: {
-          Accept: 'application/json',
-        },
+        headers: { Accept: 'application/json' },
         signal,
       })
 

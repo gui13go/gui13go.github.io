@@ -196,9 +196,13 @@ export const HomePage: React.FC = () => {
     setIsPinging(true)
     const start = performance.now()
     try {
-      const res = await fetch(`${API_BASE_URL}/health?ping=${Date.now()}`, {
+      const pingUrl = API_BASE_URL.includes('ollama')
+        ? `${API_BASE_URL}/api/tags?t=${Date.now()}`
+        : `${API_BASE_URL}/health?ping=${Date.now()}`
+
+      const res = await fetch(pingUrl, {
         cache: 'no-store',
-        signal: AbortSignal.timeout(3000),
+        signal: AbortSignal.timeout(4000),
       })
       if (res.ok) {
         const duration = Math.round(performance.now() - start)

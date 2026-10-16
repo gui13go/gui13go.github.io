@@ -43,16 +43,19 @@ export function useStreamingChat(options: UseStreamingChatOptions = {}) {
       abortControllerRef.current = controller
 
       try {
+        // Try native Ollama endpoint /api/chat first, fallback to gateway /api/chat
         const response = await fetch(`${API_BASE_URL}/api/chat`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            Accept: 'text/event-stream',
+            Accept: 'application/json, text/event-stream',
           },
           body: JSON.stringify({
             model: options.model || DEFAULT_MODEL,
             messages: updatedMessages,
-            temperature: 0.7,
+            options: {
+              temperature: 0.7,
+            },
             stream: true,
           }),
           signal: controller.signal,
@@ -84,54 +87,57 @@ export function useStreamingChat(options: UseStreamingChatOptions = {}) {
             if (!trimmed || trimmed.startsWith(':')) continue
 
             if (trimmed.startsWith('event: error')) {
-              // Wait for subsequent data line
               continue
             }
 
-            if (trimmed.startsWith('data:')) {
-              const rawData = trimmed.replace(/^data:\s*/, '')
-              if (rawData === '[DONE]') {
+            // Could be SSE 'data: {...}' or direct Ollama NDJSON '{"model":...}'
+            const rawData = trimmed.startsWith('data:')
+              ? trimmed.replace(/^data:\s*/, '')
+              : trimmed
+
+            if (rawData === '[DONE]') {
+              break
+            }
+
+            try {
+              const parsed = JSON.parse(rawData)
+              if (parsed.error) {
+                setError(typeof parsed.error === 'string' ? parsed.error : JSON.stringify(parsed.error))
                 break
               }
 
-              try {
-                const parsed = JSON.parse(rawData)
-                if (parsed.error) {
-                  setError(parsed.error)
-                  break
-                }
+              // Direct Ollama chunk: parsed.message.content
+              // OpenAI chunk: parsed.choices[0].delta.content
+              // Completion chunk: parsed.response
+              const contentChunk =
+                parsed.message?.content ||
+                parsed.choices?.[0]?.delta?.content ||
+                parsed.response ||
+                ''
 
-                // OpenAI-compatible chunk format or direct content chunk
-                const contentChunk =
-                  parsed.choices?.[0]?.delta?.content ||
-                  parsed.message?.content ||
-                  parsed.response ||
-                  ''
-
-                if (contentChunk) {
-                  assistantReply += contentChunk
-                  setMessages((prev) => {
-                    const next = [...prev]
-                    const lastIdx = next.length - 1
-                    if (lastIdx >= 0 && next[lastIdx].role === 'assistant') {
-                      next[lastIdx] = { role: 'assistant', content: assistantReply }
-                    }
-                    return next
-                  })
-                }
-              } catch {
-                // If not valid JSON, treat raw text as content chunk
-                if (rawData && rawData !== '[DONE]') {
-                  assistantReply += rawData
-                  setMessages((prev) => {
-                    const next = [...prev]
-                    const lastIdx = next.length - 1
-                    if (lastIdx >= 0 && next[lastIdx].role === 'assistant') {
-                      next[lastIdx] = { role: 'assistant', content: assistantReply }
-                    }
-                    return next
-                  })
-                }
+              if (contentChunk) {
+                assistantReply += contentChunk
+                setMessages((prev) => {
+                  const next = [...prev]
+                  const lastIdx = next.length - 1
+                  if (lastIdx >= 0 && next[lastIdx].role === 'assistant') {
+                    next[lastIdx] = { role: 'assistant', content: assistantReply }
+                  }
+                  return next
+                })
+              }
+            } catch {
+              // If not valid JSON, treat raw text as content chunk
+              if (rawData && rawData !== '[DONE]') {
+                assistantReply += rawData
+                setMessages((prev) => {
+                  const next = [...prev]
+                  const lastIdx = next.length - 1
+                  if (lastIdx >= 0 && next[lastIdx].role === 'assistant') {
+                    next[lastIdx] = { role: 'assistant', content: assistantReply }
+                  }
+                  return next
+                })
               }
             }
           }
