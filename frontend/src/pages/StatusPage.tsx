@@ -187,7 +187,8 @@ export const StatusPage: React.FC = () => {
               padding: '16px',
               borderRadius: '10px',
               background: 'var(--tertiary)',
-              border: '1px solid var(--theme-border)',
+              border: `1px solid ${isOnline ? 'rgba(52, 211, 153, 0.4)' : 'var(--theme-border)'}`,
+              transition: 'border-color 0.3s ease',
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
@@ -217,22 +218,23 @@ export const StatusPage: React.FC = () => {
               )}
             </span>
             <p style={{ margin: '6px 0 0', fontSize: '0.75rem', color: 'var(--secondary)' }}>
-              Zero open inbound ports. Encrypted wireguard tunnel.
+              Zero open inbound ports. Encrypted Argo QUIC tunnel.
             </p>
           </div>
 
-          {/* Step 3: Local FastAPI Gateway */}
+          {/* Step 3: Mini PC Host */}
           <div
             style={{
               padding: '16px',
               borderRadius: '10px',
               background: 'var(--tertiary)',
-              border: '1px solid var(--theme-border)',
+              border: `1px solid ${isOnline ? 'rgba(52, 211, 153, 0.4)' : 'var(--theme-border)'}`,
+              transition: 'border-color 0.3s ease',
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
               <Server style={{ width: '16px', height: '16px', color: '#34d399' }} />
-              <span style={{ fontSize: '0.82rem', fontWeight: 700 }}>Mini PC Gateway</span>
+              <span style={{ fontSize: '0.82rem', fontWeight: 700 }}>Mini PC Workstation (mss1)</span>
             </div>
             <span
               style={{
@@ -247,7 +249,7 @@ export const StatusPage: React.FC = () => {
               {isOnline ? (
                 <>
                   <CheckCircle2 style={{ width: '12px', height: '12px' }} />
-                  FASTAPI ONLINE
+                  ONLINE & REACHABLE
                 </>
               ) : (
                 <>
@@ -257,21 +259,27 @@ export const StatusPage: React.FC = () => {
               )}
             </span>
             <p style={{ margin: '6px 0 0', fontSize: '0.75rem', color: 'var(--secondary)' }}>
-              Dockerized FastAPI service with rate limiting & CORS.
+              Linux host running native Ollama and Docker microservices.
             </p>
           </div>
 
-          {/* Step 4: Ollama Local GPU Engine */}
+          {/* Step 4: Ollama Local GPU Engine (Dynamically updates when online) */}
           <div
             style={{
               padding: '16px',
               borderRadius: '10px',
-              background: 'var(--tertiary)',
-              border: '1px solid var(--theme-border)',
+              background: isOllamaConnected
+                ? 'linear-gradient(135deg, rgba(52, 211, 153, 0.08) 0%, rgba(167, 139, 250, 0.08) 100%)'
+                : 'var(--tertiary)',
+              border: isOllamaConnected
+                ? '1px solid rgba(52, 211, 153, 0.45)'
+                : '1px solid var(--theme-border)',
+              boxShadow: isOllamaConnected ? '0 4px 16px rgba(52, 211, 153, 0.12)' : 'none',
+              transition: 'all 0.3s ease',
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-              <Cpu style={{ width: '16px', height: '16px', color: '#f59e0b' }} />
+              <Cpu style={{ width: '16px', height: '16px', color: isOllamaConnected ? '#34d399' : '#f59e0b' }} />
               <span style={{ fontSize: '0.82rem', fontWeight: 700 }}>Ollama AI Engine</span>
             </div>
             <span
@@ -287,7 +295,7 @@ export const StatusPage: React.FC = () => {
               {isOllamaConnected ? (
                 <>
                   <CheckCircle2 style={{ width: '12px', height: '12px' }} />
-                  MODELS READY
+                  ONLINE ({health?.models?.length || 0} MODELS READY)
                 </>
               ) : isOnline ? (
                 <>
@@ -302,7 +310,9 @@ export const StatusPage: React.FC = () => {
               )}
             </span>
             <p style={{ margin: '6px 0 0', fontSize: '0.75rem', color: 'var(--secondary)' }}>
-              Self-hosted weights with local GPU offloading.
+              {isOllamaConnected
+                ? 'Live inference active with local GPU acceleration.'
+                : 'Self-hosted weights with local GPU offloading.'}
             </p>
           </div>
         </div>
@@ -322,7 +332,7 @@ export const StatusPage: React.FC = () => {
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <Server style={{ width: '20px', height: '20px', color: 'var(--theme-accent)' }} />
-              <h3 style={{ margin: 0, fontSize: '1.05rem', fontWeight: 700 }}>Gateway API Link</h3>
+              <h3 style={{ margin: 0, fontSize: '1.05rem', fontWeight: 700 }}>Cloudflare Edge & Gateway</h3>
             </div>
             {isOnline ? (
               <span
@@ -370,7 +380,7 @@ export const StatusPage: React.FC = () => {
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', padding: '6px 0', borderBottom: '1px solid var(--theme-border)' }}>
               <span style={{ color: 'var(--secondary)' }}>Service:</span>
-              <span style={{ color: 'var(--primary)' }}>{health?.service || 'FastAPI Workstation Gateway'}</span>
+              <span style={{ color: 'var(--primary)' }}>{health?.service || 'Ollama Cloudflare Tunnel'}</span>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', padding: '6px 0', borderBottom: '1px solid var(--theme-border)' }}>
               <span style={{ color: 'var(--secondary)' }}>Latency:</span>
