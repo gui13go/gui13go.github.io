@@ -151,13 +151,16 @@
 
     formatMarkdown(text) {
       if (!text) return '';
-      // Escape HTML tags to prevent XSS
-      let html = text
+      // Strip any raw HTML tags the LLM tries to emit (e.g. <span ...>, <div ...>, <p>, etc.)
+      let clean = text.replace(/<\/?[a-z][a-z0-9_-]*(?:\s+[^>]*)?>/gi, '');
+
+      // Escape remaining sensitive HTML entities to prevent accidental markup injection
+      let html = clean
         .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;');
 
-      // Code blocks ```code```
+      // Code blocks ```lang\ncode```
       html = html.replace(/```([a-z0-9_-]*)\n([\s\S]*?)```/g, function (_, lang, code) {
         return `<pre class="agent-code-block"><code class="language-${lang}">${code}</code></pre>`;
       });
@@ -187,7 +190,7 @@
       return html;
     }
 
-    appendMessageElement({ role, content, isGreeting = false }) {
+    appendMessageElement({ role, content, isGreeting = false, isHtml = false }) {
       if (!this.messagesContainer) return null;
 
       const msgRow = document.createElement('div');
@@ -228,7 +231,11 @@
 
       const bubbleDiv = document.createElement('div');
       bubbleDiv.className = `agent-msg-bubble ${role === 'user' ? 'user-bubble' : 'agent-bubble'}`;
-      bubbleDiv.innerHTML = this.formatMarkdown(content);
+      if (isHtml) {
+        bubbleDiv.innerHTML = content;
+      } else {
+        bubbleDiv.innerHTML = this.formatMarkdown(content);
+      }
 
       bodyCol.appendChild(headerDiv);
       bodyCol.appendChild(bubbleDiv);
@@ -263,7 +270,8 @@
       // 2. Prepare placeholder for assistant
       const assistantBubble = this.appendMessageElement({
         role: 'assistant',
-        content: '<span class="agent-thinking-dots"><span>.</span><span>.</span><span>.</span></span>'
+        content: '<span class="agent-thinking-dots"><span>.</span><span>.</span><span>.</span></span>',
+        isHtml: true
       });
       assistantBubble.classList.add('streaming');
 
