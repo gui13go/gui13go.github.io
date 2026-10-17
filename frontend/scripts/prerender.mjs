@@ -440,6 +440,7 @@ export async function prerenderAll() {
     { dir: 'rendered_geolayers', prefix: '/geolayers/' },
     { dir: 'rendered_publications', prefix: '/publications/' },
     { dir: 'rendered_versus', prefix: '/gallery/versus/' },
+    { dir: 'rendered_personalities', prefix: '/gallery/personalities/' },
   ]
 
   for (const { dir, prefix } of sectionConfigs) {

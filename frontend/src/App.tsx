@@ -63,6 +63,10 @@ export function App() {
             <Route path="gallery/versus/:slug" element={<DynamicItemPage section="rendered_versus" />} />
             <Route path="gallery/versus/:slug/" element={<DynamicItemPage section="rendered_versus" />} />
 
+            {/* Personalities Roleplay AI Chat Sub-Routes */}
+            <Route path="gallery/personalities/:slug" element={<DynamicItemPage section="rendered_personalities" />} />
+            <Route path="gallery/personalities/:slug/" element={<DynamicItemPage section="rendered_personalities" />} />
+
             {/* Individual Interactive Items and Articles */}
             <Route path="agents/:slug" element={<DynamicItemPage section="rendered_agents" />} />
             <Route path="agents/:slug/" element={<DynamicItemPage section="rendered_agents" />} />

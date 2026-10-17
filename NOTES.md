@@ -11,6 +11,7 @@ Law of the instrument
 Baseline trap
 bystander effect
 torquemada
+OpenWRT1
 
 
 Robert Greene - The 46 of Power - Law 46: Never Appear Too Perfect

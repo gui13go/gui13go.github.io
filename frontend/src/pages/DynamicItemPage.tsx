@@ -13,6 +13,7 @@ interface DynamicItemProps {
     | 'rendered_geolayers'
     | 'rendered_publications'
     | 'rendered_versus'
+    | 'rendered_personalities'
 }
 
 const ALIASES: Record<string, string> = {
