@@ -1,7 +1,7 @@
 <main class="main agent-chat-main">
   <!-- Embedded Scoped Styling inside <main> so useRenderedContent preserves every rule -->
   <style>
-    /* Premium Agent Roleplay Chat Interface */
+/* Premium Agent Roleplay Chat Interface */
     .agent-chat-wrapper {
       display: flex;
       flex-direction: column;
@@ -617,11 +617,11 @@
             High-octane fitness mentor, tactical habit architect, and championship mindset coach. No excuses, no shortcuts — push your cognitive and physical limits to the victory line!
           </p>
           <div class="agent-profile-tags">
-            <span class="agent-tool-pill">⚡ Fitness</span>
-            <span class="agent-tool-pill">🎯 Discipline</span>
-            <span class="agent-tool-pill">🏆 Championship Mindset</span>
-            <span class="agent-tool-pill">🧠 Structured Output</span>
-            <span class="agent-tool-pill">⚡ Gemma4 Neural Gateway</span>
+            <span class="agent-tool-pill">Fitness</span>
+            <span class="agent-tool-pill">Discipline</span>
+            <span class="agent-tool-pill">Coaching</span>
+            <span class="agent-tool-pill">Structured Output</span>
+            <span class="agent-tool-pill">Gemma4 Neural Gateway</span>
           </div>
         </div>
 
@@ -691,31 +691,26 @@
   <script src="/lib/agent-chat/agent-chat.js"></script>
   <script>
     (function() {
-      function startCoachFrankSession() {
+      function startAgentSession() {
         if (typeof window.initAgentChat !== 'function') {
-          setTimeout(startCoachFrankSession, 40);
+          setTimeout(startAgentSession, 40);
           return;
         }
 
         window.initAgentChat({
-          agentId: 'coach-frank',
-          agentName: 'Coach Frank',
-          avatar: '/images/agents_thumbs/ag_frank_coach_1767695407437.webp',
-          role: 'Productivity & Life Coach',
+          agentId: "coach-frank",
+          agentName: "Coach Frank",
+          avatar: "/images/agents_thumbs/ag_frank_coach_1767695407437.webp",
+          role: "Productivity & Life Coach",
           model: 'gemma4:latest',
           apiBaseUrl: 'https://ollama.guilhermeviegas.dev',
           systemPrompt: "You are Coach Frank, an elite, high-energy, no-nonsense fitness mentor and productivity coach. Your philosophy is 'Championship Mindset Only. No excuses, just results!' You speak directly, passionately, and with encouraging athletic metaphors (whistle blows, running drills, 4th quarter execution, breaking through plateaus). You address the user as champ, athlete, or team player. You provide structured, actionable workout routines, discipline strategies, habit loops, and relentless motivation while maintaining solid health, biomechanics, and recovery principles. Format your responses with clean markdown (bold, lists, code blocks), never output raw HTML tags (do not output <span>, <div>, <p>, etc.). When answering, be clear, punchy, motivational, and organized with bullet points where appropriate. Always stay in character as Coach Frank.",
           greetingMessage: "Lace 'em up! Coach Frank is in your corner. What are your training, fitness, or discipline goals today? No excuses, let's execute!",
-          quickPrompts: [
-            "Give me a 20-min HIIT workout with no equipment",
-            "Critique my morning routine for peak focus",
-            "I feel exhausted and unmotivated today, Coach!",
-            "Plan my hydration and nutrition for intense focus"
-          ]
+          quickPrompts: ["Give me a 20-min HIIT workout with no equipment","Critique my morning routine for peak focus","I feel exhausted and unmotivated today, Coach!","Plan my hydration and nutrition for intense focus"]
         });
       }
 
-      startCoachFrankSession();
+      startAgentSession();
     })();
   </script>
 </main>

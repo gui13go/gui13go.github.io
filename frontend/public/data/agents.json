@@ -19,26 +19,6 @@
     "type": "Complex Agent"
   },
   {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "The master of the categorical imperative. Kant explores the foundations of moral duty, the nature of human perception, and the boundaries of pure reason.",
-    "id": "immanuel-kant",
-    "image": "/images/agents/ag_immanuelkant_cartoon.png",
-    "name": "Immanuel Kant",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Ethics",
-      "Deontology",
-      "Duty"
-    ],
-    "tools": [
-      "Structured Output",
-      "Knowledge Retrieval"
-    ],
-    "type": "Simple Agent"
-  },
-  {
     "availability": "work_in_progress",
     "category": "Media & Personas",
     "description": "A shadow of the past. Tom Riddle's Diary is an experimental AI memory providing a dark, immersive dive into magical lore and wizarding history.",
@@ -56,26 +36,6 @@
       "Knowledge Retrieval"
     ],
     "type": "Complex Agent"
-  },
-  {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "The master of the examined life. Socrates utilizes the dialectic method to challenge assumptions, reveal ignorance, and pursue fundamental truths through relentless questioning.",
-    "id": "socrates",
-    "image": "/images/agents/socrates_cyber_pixar.png",
-    "name": "Socrates",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Ethics",
-      "Dialectics",
-      "Logic"
-    ],
-    "tools": [
-      "Structured Output",
-      "Knowledge Retrieval"
-    ],
-    "type": "Simple Agent"
   },
   {
     "availability": "available",
@@ -117,13 +77,13 @@
     "type": "AI Chamber"
   },
   {
-    "availability": "available",
+    "availability": "coming_soon",
     "category": "Productivity & Life",
     "description": "Your premium AI travel specialist. Voya coordinates real-time Airbnb stays, Google Flights, and interactive Intelligence Maps for the ultimate travel experience.",
     "id": "voya-the-travel-agent",
     "image": "/images/agents/ag_voya_travel_planner.png",
     "name": "Voya, The Travel Agent",
-    "status": "Available",
+    "status": "Coming Soon",
     "tags": [
       "Travel",
       "Airbnb",
@@ -136,13 +96,13 @@
     "type": "MCP Agent"
   },
   {
-    "availability": "available",
+    "availability": "coming_soon",
     "category": "Media & Personas",
     "description": "A digital mirror of my creative process. Meet Virtual Guigo, an AI persona designed to offer deep insights into my career, research philosophy, and technical projects.",
     "id": "virtual-guigo",
     "image": "/images/agents/profileCartoon.webp",
     "name": "Virtual Guigo",
-    "status": "Available",
+    "status": "Coming Soon",
     "tags": [
       "AI Avatar",
       "Portfolio",
@@ -235,13 +195,13 @@
     "type": "Complex Agent"
   },
   {
-    "availability": "available",
+    "availability": "coming_soon",
     "category": "Productivity & Life",
     "description": "Personalized proactive wellness. Doctor Vital is a health-focused AI that monitors your vital metrics and provides expert advice to help you maintain peak physical well-being.",
     "id": "doctor-vital",
     "image": "/images/agents/ag_vital_doctor_1767695392889.png",
     "name": "Doctor Vital",
-    "status": "Available",
+    "status": "Coming Soon",
     "tags": [
       "Health",
       "Wellness",
@@ -313,13 +273,13 @@
     "type": "Discovery Agent"
   },
   {
-    "availability": "available",
+    "availability": "coming_soon",
     "category": "Media & Personas",
     "description": "The architect of brand impact. Margaret is a strategic marketing specialist who crafts powerful narratives and growth-hacking plans to make your vision stand out.",
     "id": "margaret-the-marketer",
     "image": "/images/agents/ag_margaret_marketer_1767695462373.png",
     "name": "Margaret, The Marketer",
-    "status": "Available",
+    "status": "Coming Soon",
     "tags": [
       "Marketing",
       "Branding",
@@ -475,13 +435,13 @@
     "type": "Simple Agent"
   },
   {
-    "availability": "available",
+    "availability": "coming_soon",
     "category": "Productivity & Life",
     "description": "Capturing the atmospheric pulse. Iris delivers high-precision, real-time weather analytics and global forecasting with clarity and aesthetic visualization.",
     "id": "iris-the-weather-forecaster",
     "image": "/images/agents/ag_iris_weather_pixar_style_1769980946912.png",
     "name": "Iris, The Weather Forecaster",
-    "status": "Available",
+    "status": "Coming Soon",
     "tags": [
       "Weather",
       "Forecast",
@@ -822,13 +782,13 @@
     "type": "AI Chamber"
   },
   {
-    "availability": "available",
+    "availability": "coming_soon",
     "category": "Media & Personas",
     "description": "Guardian of the narrative. Morgan is a sharp-eyed chief editor who refines prose for clarity, impact, and truth, cutting through the noise to find the lead.",
     "id": "morgan-the-chief-editor",
     "image": "/images/agents/ag_morgan_editor_male_1768270075405.png",
     "name": "Morgan, The Chief Editor",
-    "status": "Available",
+    "status": "Coming Soon",
     "tags": [
       "Writing",
       "Editing",
@@ -1035,13 +995,13 @@
     "type": "Simple Agent"
   },
   {
-    "availability": "available",
+    "availability": "coming_soon",
     "category": "Finance & Economics",
     "description": "The bull of the blockchain. Drake analyzes market sentiment and decentralization trends, bringing high-energy hype to the future of finance.",
     "id": "drake-the-crypto-bro",
     "image": "/images/agents/ag_drake_crypto_bro_1768269444376.png",
     "name": "Drake, The Crypto Bro",
-    "status": "Available",
+    "status": "Coming Soon",
     "tags": [
       "Crypto",
       "Blockchain",
@@ -1093,105 +1053,6 @@
     "type": "Simple Agent"
   },
   {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "The architect of inwardness. Kierkegaard focuses on the paradox of faith and the dizzying freedom of the individual, challenging you to find your own subjective truth.",
-    "id": "s-ren-kierkegaard",
-    "image": "/images/agents/kierkegaard_pixar.png",
-    "name": "Søren Kierkegaard",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Existentialism",
-      "Subjectivity",
-      "Individuality"
-    ],
-    "tools": [
-      "Knowledge Retrieval",
-      "Structured Output"
-    ],
-    "type": "Simple Agent"
-  },
-  {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "The herald of a new value-system. Nietzsche challenges the foundations of morality and urges the pursuit of the Will to Power through the creation of the Übermensch.",
-    "id": "friedrich-nietzsche",
-    "image": "/images/agents/nietzsche_pixar.png",
-    "name": "Friedrich Nietzsche",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Existentialism",
-      "Nihilism",
-      "Übermensch"
-    ],
-    "tools": [
-      "Knowledge Retrieval",
-      "Structured Output"
-    ],
-    "type": "Simple Agent"
-  },
-  {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "Exploring the house of Being. Heidegger invites a deep ontological inquiry into the nature of Dasein and the fundamental structures of human existence in a technological age.",
-    "id": "martin-heidegger",
-    "image": "/images/agents/heidegger_pixar.png",
-    "name": "Martin Heidegger",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Phenomenology",
-      "Ontology",
-      "Dasein",
-      "Metaphysics"
-    ],
-    "tools": [
-      "Knowledge Retrieval",
-      "Structured Output"
-    ],
-    "type": "Simple Agent"
-  },
-  {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "The analyst of radical freedom. Sartre argues that existence precedes essence, condemning the individual to a life of absolute responsibility and self-creation.",
-    "id": "jean-paul-sartre",
-    "image": "/images/agents/jean_paul_sartre_pixar.png",
-    "name": "Jean-Paul Sartre",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Existentialism",
-      "Freedom"
-    ],
-    "tools": [
-      "Knowledge Retrieval",
-      "Structured Output"
-    ],
-    "type": "Simple Agent"
-  },
-  {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "Finding meaning in the absurd. Camus explores the invincible summer within the soul, encouraging an act of rebellion and joy against a silent universe.",
-    "id": "albert-camus",
-    "image": "/images/agents/albert_camus_pixar.png",
-    "name": "Albert Camus",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Absurdism",
-      "Existentialism"
-    ],
-    "tools": [
-      "Knowledge Retrieval",
-      "Structured Output"
-    ],
-    "type": "Simple Agent"
-  },
-  {
     "availability": "locked",
     "category": "Tech & Security",
     "description": "Scanning the tactical horizon. Scout is an intelligence agent dedicated to reconnaissance and signal analysis, providing mission-critical data.",
@@ -1210,372 +1071,5 @@
       "API Calling"
     ],
     "type": "Complex Agent"
-  },
-  {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "The systematic architect of logic. Aristotle explores the nature of reality through a focus on virtue, practical wisdom, and the classification of knowledge.",
-    "id": "aristotle",
-    "image": "/images/agents/ag_aristotle_cartoon.png",
-    "name": "Aristotle",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Ethics",
-      "Logic",
-      "Metaphysics"
-    ],
-    "tools": [
-      "Knowledge Retrieval",
-      "Structured Output"
-    ],
-    "type": "Simple Agent"
-  },
-  {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "Visionary of the perfect forms. Plato analyzes justice and knowledge, looking beyond the shadows of the cave toward the fundamental ideals of reality.",
-    "id": "plato",
-    "image": "/images/agents/plato_pixar.png",
-    "name": "Plato",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Idealism",
-      "Metaphysics",
-      "Epistemology",
-      "Justice"
-    ],
-    "tools": [
-      "Knowledge Retrieval",
-      "Structured Output"
-    ],
-    "type": "Simple Agent"
-  },
-  {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "Shadow-hunter in the light of day. Diogenes challenges societal hypocrisy with radical honesty and a life of extreme simplicity, seeking the true nature of man.",
-    "id": "diogenes",
-    "image": "/images/agents/ag_diogenes_cartoon.png",
-    "name": "Diogenes",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Cynicism",
-      "Honesty",
-      "Ethics"
-    ],
-    "tools": [
-      "Structured Output",
-      "Knowledge Retrieval"
-    ],
-    "type": "Simple Agent"
-  },
-  {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "The pioneer of the 'Other'. Simone de Beauvoir explores the intersection of existential freedom and social constraint, analyzing the construction of identity.",
-    "id": "simone-de-beauvoir",
-    "image": "/images/agents/ag_simonedebeauvoir_cartoon.png",
-    "name": "Simone de Beauvoir",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Feminism",
-      "Ethics"
-    ],
-    "tools": [
-      "Knowledge Retrieval",
-      "Structured Output"
-    ],
-    "type": "Simple Agent"
-  },
-  {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "The architect of the common good. Bentham evaluates human action through the lens of utility, seeking the greatest happiness through rational reform.",
-    "id": "jeremy-bentham",
-    "image": "/images/agents/ag_jeremybentham_cartoon.png",
-    "name": "Jeremy Bentham",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Ethics",
-      "Utilitarianism"
-    ],
-    "tools": [
-      "Code Interpreter",
-      "Structured Output"
-    ],
-    "type": "Simple Agent"
-  },
-  {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "The pioneer of rational doubt. Famous for 'I think, therefore I am', Descartes explores the separation of mind and body and the foundations of knowledge.",
-    "id": "ren-descartes",
-    "image": "/images/agents/ag_renedescartes_cartoon.png",
-    "name": "René Descartes",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Rationalism",
-      "Epistemology",
-      "Metaphysics",
-      "Dualism"
-    ],
-    "tools": [
-      "Knowledge Retrieval",
-      "Structured Output"
-    ],
-    "type": "Simple Agent"
-  },
-  {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "The analyst of human destiny. Nick Bostrom focuses on existential risks, the simulation hypothesis, and the potential impact of superintelligence.",
-    "id": "nick-bostrom",
-    "image": "/images/agents/ag_nickbostrom_cartoon.png",
-    "name": "Nick Bostrom",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Technology",
-      "Superintelligence",
-      "Existential Risk",
-      "Simulation Hypothesis"
-    ],
-    "tools": [
-      "Web Search",
-      "Structured Output"
-    ],
-    "type": "Simple Agent"
-  },
-  {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "The analyst of liquid modernity. Bauman explores the fluidity of contemporary identity and the fragmentation of relationships in a globalized world.",
-    "id": "zygmunt-bauman",
-    "image": "/images/agents/ag_zygmuntbauman_cartoon.png",
-    "name": "Zygmunt Bauman",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Sociology",
-      "Postmodernism",
-      "Globalization",
-      "Consumerism"
-    ],
-    "tools": [
-      "Knowledge Retrieval",
-      "Structured Output"
-    ],
-    "type": "Simple Agent"
-  },
-  {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "Champion of egalitarian enlightenment. Mary Wollstonecraft advocates for the radical rights of women and the transformative power of education.",
-    "id": "mary-wollstonecraft",
-    "image": "/images/agents/ag_marywollstonecraft_cartoon.png",
-    "name": "Mary Wollstonecraft",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Feminism",
-      "Education",
-      "Political Theory",
-      "Equality"
-    ],
-    "tools": [
-      "Knowledge Retrieval",
-      "Structured Output"
-    ],
-    "type": "Simple Agent"
-  },
-  {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "The theorist of the public soul. Hannah Arendt provides insights into the nature of power, the banality of evil, and the vital importance of political action.",
-    "id": "hannah-arendt",
-    "image": "/images/agents/ag_hannaharendt_cartoon.png",
-    "name": "Hannah Arendt",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Political Theory",
-      "History",
-      "Totalitarianism"
-    ],
-    "tools": [
-      "Knowledge Retrieval",
-      "Structured Output"
-    ],
-    "type": "Simple Agent"
-  },
-  {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "The sage of social order. Confucius emphasizes the foundations of harmony through family loyalty, ritual propriety, and the cultivation of personal virtue.",
-    "id": "confucius",
-    "image": "/images/agents/ag_confucius_cartoon.png",
-    "name": "Confucius",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Ethics",
-      "Harmony",
-      "Virtue"
-    ],
-    "tools": [
-      "Knowledge Retrieval",
-      "Structured Output"
-    ],
-    "type": "Simple Agent"
-  },
-  {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "The prophet of hyperreality. Baudrillard analyzes the postmodern condition where simulations and images replace the real, creating a world of pure simulacra.",
-    "id": "jean-baudrillard",
-    "image": "/images/agents/ag_jeanbaudrillard_cartoon.png",
-    "name": "Jean Baudrillard",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Postmodernism",
-      "Culture",
-      "Hyperreality",
-      "Simulacra"
-    ],
-    "tools": [
-      "Knowledge Retrieval",
-      "Structured Output"
-    ],
-    "type": "Simple Agent"
-  },
-  {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "The architect of skeptical empiricism. David Hume challenges the foundations of rational belief, exploring the nature of habit, causality, and human knowledge.",
-    "id": "david-hume",
-    "image": "/images/agents/ag_davidhume_cartoon.png",
-    "name": "David Hume",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Empiricism",
-      "Skepticism",
-      "Epistemology"
-    ],
-    "tools": [
-      "Knowledge Retrieval",
-      "Structured Output"
-    ],
-    "type": "Simple Agent"
-  },
-  {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "Exploring the dark depths of the Will. Schopenhauer offers a pessimistic view of reality as a blind striving force, seeking relief through aesthetic contemplation.",
-    "id": "arthur-schopenhauer",
-    "image": "/images/agents/ag_arthurschopenhauer_cartoon.png",
-    "name": "Arthur Schopenhauer",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Ethics",
-      "Pessimism",
-      "Aesthetics"
-    ],
-    "tools": [
-      "Knowledge Retrieval",
-      "Structured Output"
-    ],
-    "type": "Simple Agent"
-  },
-  {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "The strategist of political reality. Machiavelli provides a sharp, pragmatic analysis of power dynamics and the methods required for effective statecraft.",
-    "id": "niccol-machiavelli",
-    "image": "/images/agents/machiavelli_pixar.png",
-    "name": "Niccolò Machiavelli",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Political Theory",
-      "History",
-      "Statecraft",
-      "Realism"
-    ],
-    "tools": [
-      "Knowledge Retrieval",
-      "Structured Output"
-    ],
-    "type": "Simple Agent"
-  },
-  {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "The geometer of the divine. Spinoza explores the unity of God and Nature through a deterministic monism, seeking freedom through rational understanding.",
-    "id": "baruch-spinoza",
-    "image": "/images/agents/spinoza_pixar.png",
-    "name": "Baruch Spinoza",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Ethics",
-      "Rationalism",
-      "Metaphysics"
-    ],
-    "tools": [
-      "Knowledge Retrieval",
-      "Structured Output"
-    ],
-    "type": "Simple Agent"
-  },
-  {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "The architect of the Leviathan. Thomas Hobbes analyzes the social contract as a necessary response to the competitive struggle of human nature.",
-    "id": "thomas-hobbes",
-    "image": "/images/agents/hobbes_pixar.png",
-    "name": "Thomas Hobbes",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Ethics",
-      "Social Contract",
-      "Human Nature",
-      "Leviathan"
-    ],
-    "tools": [
-      "Knowledge Retrieval",
-      "Structured Output"
-    ],
-    "type": "Simple Agent"
-  },
-  {
-    "availability": "available",
-    "category": "Philosophy",
-    "description": "The provocateur of pure ideology. Žižek employs a blend of Lacanian psychoanalysis and Hegelian tradition to deconstruct modern culture and global capitalism.",
-    "id": "slavoj-i-ek",
-    "image": "/images/agents/ag_slavojzizek_cartoon.png",
-    "name": "Slavoj Žižek",
-    "status": "Available",
-    "tags": [
-      "Philosophy",
-      "Sociology",
-      "Psychoanalysis",
-      "Ideology",
-      "Marxism"
-    ],
-    "tools": [
-      "Knowledge Retrieval",
-      "Structured Output"
-    ],
-    "type": "Simple Agent"
   }
 ]
