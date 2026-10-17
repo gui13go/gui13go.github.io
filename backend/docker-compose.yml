@@ -11,7 +11,7 @@ services:
       # Connects to host Ollama instance
       - OLLAMA_BASE_URL=http://host.docker.internal:11434
       - DEFAULT_MODEL=llama3.2:latest
-      - ALLOWED_ORIGINS=https://gui13go.github.io,http://localhost:5173,http://127.0.0.1:5173
+      - ALLOWED_ORIGINS=https://gui13go.github.io,https://www.guilhermeviegas.dev,https://guilhermeviegas.dev,http://localhost:5173,http://127.0.0.1:5173,http://localhost:8000
     extra_hosts:
       # Allows backend container to communicate with Ollama running on host OS
       - "host.docker.internal:host-gateway"

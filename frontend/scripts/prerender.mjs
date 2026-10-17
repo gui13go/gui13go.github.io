@@ -97,6 +97,9 @@ const ALIASES = {
   'usa-nuked-greenland-1968': 'usa-dropped-nukes-on-greenland',
   'usa-nuked-spain-1966': 'usa-dropped-nukes-on-spain',
   'reveolution-os-review': 'revolution-os-review',
+  'turing-test': 'turing-eva-test',
+  'eva-test': 'turing-eva-test',
+  'turing-eva': 'turing-eva-test',
 }
 
 function escapeHtml(str) {
