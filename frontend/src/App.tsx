@@ -64,6 +64,8 @@ export function App() {
             <Route path="gallery/versus/:slug/" element={<DynamicItemPage section="rendered_versus" />} />
 
             {/* Individual Interactive Items and Articles */}
+            <Route path="agents/:slug" element={<DynamicItemPage section="rendered_agents" />} />
+            <Route path="agents/:slug/" element={<DynamicItemPage section="rendered_agents" />} />
             <Route path="blogs/:slug" element={<DynamicItemPage section="rendered_blogs" />} />
             <Route path="blogs/:slug/" element={<DynamicItemPage section="rendered_blogs" />} />
             <Route path="tools/:slug" element={<DynamicItemPage section="rendered_tools" />} />

@@ -4850,8 +4850,43 @@
           applyFilters();
           scrollToToolbar();
         });
-        modalTags.appendChild(chip);
+      modalTags.appendChild(chip);
       });
+
+      // Roleplay Agent Chat Dynamic Link
+      if (modalExternalLink) {
+        // List of agents enabled with dedicated roleplay chat pages
+        const roleplayEnabledAgents = new Set(['coach-frank']);
+        if (roleplayEnabledAgents.has(agent.id)) {
+          modalExternalLink.href = '/agents/' + agent.id + '/';
+          modalExternalLink.removeAttribute('target');
+          modalExternalLink.removeAttribute('rel');
+          modalExternalLink.innerHTML = `
+            <span>Talk with ${agent.name}</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          `;
+          modalExternalLink.title = `Launch interactive roleplay session with ${agent.name}`;
+          modalExternalLink.onclick = () => {
+            closeModal();
+          };
+        } else {
+          modalExternalLink.href = 'https://www.guilhermeviegas.dev/agents';
+          modalExternalLink.setAttribute('target', '_blank');
+          modalExternalLink.setAttribute('rel', 'noopener noreferrer');
+          modalExternalLink.onclick = null;
+          modalExternalLink.innerHTML = `
+            <span>View on Live Hub</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          `;
+          modalExternalLink.title = 'View on Live Hub';
+        }
+      }
 
       if (modal && typeof modal.showModal === 'function') {
         modal.showModal();

@@ -433,6 +433,7 @@ export async function prerenderAll() {
 
   // 3. Dynamic Section Collections
   const sectionConfigs = [
+    { dir: 'rendered_agents', prefix: '/agents/' },
     { dir: 'rendered_blogs', prefix: '/blogs/' },
     { dir: 'rendered_tools', prefix: '/tools/' },
     { dir: 'rendered_gallery', prefix: '/gallery/' },

@@ -6,6 +6,7 @@ import { ContentRenderer } from '../components/ContentRenderer'
 
 interface DynamicItemProps {
   section:
+    | 'rendered_agents'
     | 'rendered_blogs'
     | 'rendered_tools'
     | 'rendered_gallery'
