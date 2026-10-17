@@ -2523,10 +2523,8 @@
   // =========================================================================
   function connectWebSocket(roomCode, isSoloAi = false) {
     const protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
-    // Determine target host: test localhost:8000 or current host
-    const host = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
-      ? "localhost:8000"
-      : window.location.host;
+    // Use current host (proxied via Vite on 5173, or direct on 8000)
+    const host = window.location.host;
     const wsUrl = `${protocol}//${host}/ws/turing-test/${roomCode}`;
 
     updateNetStatus("Connecting to " + wsUrl + "...", "amber");
