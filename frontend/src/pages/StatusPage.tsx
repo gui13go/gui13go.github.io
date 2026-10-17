@@ -10,7 +10,6 @@ import {
   Radio,
   ShieldCheck,
   Zap,
-  Terminal,
 } from 'lucide-react'
 import { useBackendHealth } from '../hooks/useBackendHealth'
 import { API_BASE_URL } from '../config/api'
@@ -516,28 +515,6 @@ export const StatusPage: React.FC = () => {
         </section>
       )}
 
-      {/* Quick Action Navigation */}
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
-        <Link
-          to="/blogs/locking-the-gate/"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '6px',
-            padding: '10px 20px',
-            borderRadius: '8px',
-            background: 'var(--tertiary)',
-            border: '1px solid var(--theme-border)',
-            color: 'var(--primary)',
-            textDecoration: 'none',
-            fontSize: '0.88rem',
-            fontWeight: 600,
-          }}
-        >
-          <Terminal style={{ width: '16px', height: '16px' }} />
-          <span>Read Zero-Trust Edge Bastion Architecture</span>
-        </Link>
-      </div>
     </main>
   )
 }
