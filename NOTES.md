@@ -9,6 +9,9 @@ benjamin franklim effect
 Leitner system
 Law of the instrument
 Baseline trap
+bystander effect
+torquemada
+
 
 Robert Greene - The 46 of Power - Law 46: Never Appear Too Perfect
 Robert Greene’s book The 48 Laws of Power

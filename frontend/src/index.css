@@ -2682,5 +2682,16 @@ html[data-theme="light"] .fmt-filter-chip.active,
   color: #ffffff !important;
   border-color: #0284c7 !important;
 }
+/* ==========================================================================
+   High-Performance Rendering Optimizations (Galleries & Agents)
+   ========================================================================== */
 
+.personality-card {
+  content-visibility: auto;
+  contain-intrinsic-size: 320px 480px;
+}
 
+.agent-card {
+  content-visibility: auto;
+  contain-intrinsic-size: 300px 420px;
+}
