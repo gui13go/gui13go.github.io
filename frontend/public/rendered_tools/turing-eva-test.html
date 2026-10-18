@@ -2592,6 +2592,7 @@
       if (el.lobbyQueueRadar) el.lobbyQueueRadar.style.display = "block";
     } else if (type === "match_started") {
       state.currentSessionId = data.session_id;
+      state.isSoloSimulation = data.is_ai_match === true;
       if (el.lobbyQueueRadar) el.lobbyQueueRadar.style.display = "none";
       startInterrogationStage(data.chamber || "Observation Chamber #EVA");
     } else if (type === "message") {
@@ -2967,24 +2968,22 @@
     connectWebSocket(state.roomCode, false);
 
     // If WebSocket connected, send join_queue
+    let queueAttempts = 0;
     const checkInterval = setInterval(() => {
+      queueAttempts++;
       if (state.ws && state.ws.readyState === WebSocket.OPEN) {
         state.ws.send(JSON.stringify({
           type: "join_queue",
           player_name: state.playerAlias
         }));
         clearInterval(checkInterval);
+      } else if (queueAttempts > 60) { // 9 seconds without opening WS
+        clearInterval(checkInterval);
+        if (el.radarStatusMsg && !state.wsConnected) {
+          el.radarStatusMsg.textContent = "Connecting to classroom server... Ensure backend is online.";
+        }
       }
     }, 150);
-
-    // Safety fallback only if gateway fails to connect within 6 seconds
-    setTimeout(() => {
-      clearInterval(checkInterval);
-      if (state.activeStage === "stageLobby" && !state.wsConnected && !state.currentSessionId) {
-        if (el.lobbyQueueRadar) el.lobbyQueueRadar.style.display = "none";
-        startInterrogationStage("Chamber #EVA (Autonomous Practice)");
-      }
-    }, 6000);
   });
 
   // Radar "Pair with AI now" button

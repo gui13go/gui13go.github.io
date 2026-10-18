@@ -493,6 +493,12 @@ async def websocket_turing_endpoint(websocket: WebSocket, room_code: str):
                     partner_name = partner_info["player_name"]
                     partner_id = partner_info["player_id"]
 
+                    # Cancel any pending timer task for partner
+                    if partner_id in room.members and "match_task" in room.members[partner_id]:
+                        task = room.members[partner_id].get("match_task")
+                        if task and not task.done():
+                            task.cancel()
+
                     # Create Human vs Human session
                     session_id = str(uuid.uuid4())[:8]
                     session = TuringSession(
@@ -550,45 +556,10 @@ async def websocket_turing_endpoint(websocket: WebSocket, room_code: str):
                 await websocket.send_json({
                     "type": "queue_status",
                     "status": "waiting",
-                    "message": "Searching for an observation chamber... awaiting classmate or synthetic subject."
+                    "message": f"Waiting for another student to connect to room {room.room_code}... Standing by in observation corridor."
                 })
                 await room.broadcast_lobby_state()
-
-                # Start graceful fallback timer: if no classmate joins within 15s, pair with AI so they aren't stuck forever
-                async def fallback_to_ai(p_id: str, ws: WebSocket, p_name: str):
-                    await asyncio.sleep(15.0)
-                    # Check if still in waiting queue
-                    found = [q for q in room.waiting_queue if q["player_id"] == p_id]
-                    if found and p_id in room.members and room.members[p_id]["status"] == "waiting":
-                        room.waiting_queue = [q for q in room.waiting_queue if q["player_id"] != p_id]
-                        s_id = str(uuid.uuid4())[:8]
-                        nonlocal current_session
-                        current_session = TuringSession(
-                            session_id=s_id,
-                            is_ai_match=True,
-                            player1_ws=ws,
-                            player1_name=p_name,
-                            room_code=room.room_code
-                        )
-                        room.active_sessions[s_id] = current_session
-                        room.members[p_id]["status"] = "in_match"
-                        try:
-                            await ws.send_json({
-                                "type": "match_started",
-                                "session_id": s_id,
-                                "duration_seconds": current_session.duration_seconds,
-                                "role": "interrogator",
-                                "partner_alias": "Subject",
-                                "is_ai_match": True,
-                                "chamber": f"Chamber #{s_id.upper()}",
-                                "message": "Acoustic link established. An unverified consciousness sits behind the glass."
-                            })
-                            await room.broadcast_lobby_state()
-                            logger.info(f"Room [{room.room_code}]: Auto-paired HUMAN ({p_name}) vs AI (Eva Unit) after timeout.")
-                        except Exception:
-                            pass
-
-                match_task = asyncio.create_task(fallback_to_ai(player_id, websocket, player_name))
+                logger.info(f"Room [{room.room_code}]: Player {player_name} ({player_id}) waiting in queue. Queue depth: {len(room.waiting_queue)}")
 
             # Command to force-start an AI session if student prefers immediate test
             elif msg_type == "force_ai_match":
