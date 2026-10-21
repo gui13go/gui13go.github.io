@@ -4561,20 +4561,6 @@
     "expectedImage": "/images/personalities/robin_williams_portrait.jpg"
   },
   {
-    "name": "Ailton Krenak",
-    "dates": "1953–present",
-    "birthYear": 1953,
-    "summary": "Brazilian indigenous leader, environmentalist, philosopher, and writer from the Krenak nation, and the first Indigenous person elected to the Brazilian Academy of Letters (ABL).",
-    "tags": [
-      "Indigenous Rights",
-      "Philosophy",
-      "Brazil",
-      "Ecology",
-      "Literature"
-    ],
-    "expectedImage": "/images/personalities/ailton_krenak_portrait.jpg"
-  },
-  {
     "name": "Benazir Bhutto",
     "dates": "1953–2007",
     "birthYear": 1953,
@@ -4587,34 +4573,6 @@
       "Human Rights"
     ],
     "expectedImage": "/images/personalities/benazir_bhutto_portrait.jpg"
-  },
-  {
-    "name": "Angela Merkel",
-    "dates": "1954–present",
-    "birthYear": 1954,
-    "summary": "German politician and quantum chemist who served as Chancellor of Germany from 2005 to 2021, widely regarded as the de facto leader of the European Union during critical crises.",
-    "tags": [
-      "Politics",
-      "Germany",
-      "European Union",
-      "Leadership",
-      "Diplomacy"
-    ],
-    "expectedImage": "/images/personalities/angela_merkel_portrait.jpg"
-  },
-  {
-    "name": "Davi Kopenawa",
-    "dates": "c. 1956–present",
-    "birthYear": 1956,
-    "summary": "Yanomami shaman, activist, and author celebrated for his international fight against illegal mining and deforestation in the Amazon, co-author of 'The Falling Sky'.",
-    "tags": [
-      "Indigenous Rights",
-      "Amazon Rainforest",
-      "Yanomami",
-      "Ecology",
-      "Shamanism"
-    ],
-    "expectedImage": "/images/personalities/davi_kopenawa_portrait.jpg"
   },
   {
     "name": "El Chapo (Joaquín Guzmán)",
@@ -4630,34 +4588,6 @@
     "expectedImage": "/images/personalities/el_chapo_joaquín_guzmán_portrait.jpg"
   },
   {
-    "name": "Michael Jackson",
-    "dates": "1958–2009",
-    "birthYear": 1958,
-    "summary": "American singer, songwriter, and dancer acclaimed as the 'King of Pop', whose monumental album 'Thriller' remains the best-selling album of all time, transforming modern popular culture.",
-    "tags": [
-      "Music",
-      "Pop",
-      "Dance",
-      "King of Pop",
-      "Thriller"
-    ],
-    "expectedImage": "/images/personalities/michael_jackson_portrait.jpg"
-  },
-  {
-    "name": "Diego Maradona",
-    "dates": "1960–2020",
-    "birthYear": 1960,
-    "summary": "Argentine professional footballer and cultural deity celebrated as one of the greatest players in the history of the sport, leading Argentina to World Cup victory in 1986.",
-    "tags": [
-      "Sports",
-      "Football",
-      "Argentina",
-      "World Cup",
-      "Napoli"
-    ],
-    "expectedImage": "/images/personalities/diego_maradona_portrait.jpg"
-  },
-  {
     "name": "Jeffrey Dahmer",
     "dates": "1960–1994",
     "birthYear": 1960,
@@ -4669,75 +4599,5 @@
       "Psychiatry"
     ],
     "expectedImage": "/images/personalities/jeffrey_dahmer_portrait.jpg"
-  },
-  {
-    "name": "Yanis Varoufakis",
-    "dates": "1961–present",
-    "birthYear": 1961,
-    "summary": "Greek economist, author, game theorist, and former Minister of Finance who analyzes European debt crises, global capitalism, and the rise of cloud-based technofeudalism.",
-    "tags": [
-      "Economics",
-      "Political Economy",
-      "Technofeudalism",
-      "Greece",
-      "Game Theory"
-    ],
-    "expectedImage": "/images/personalities/yanis_varoufakis_portrait.jpg"
-  },
-  {
-    "name": "David Graeber",
-    "dates": "1961–2020",
-    "birthYear": 1961,
-    "summary": "American anthropologist, anarchist activist, and author who challenged conventional narratives of money, work, and social hierarchy with seminal anthropological studies.",
-    "tags": [
-      "Anthropology",
-      "Economics",
-      "Anarchism",
-      "Debt",
-      "Philosophy"
-    ],
-    "expectedImage": "/images/personalities/david_graeber_portrait.jpg"
-  },
-  {
-    "name": "Marcos Pontes",
-    "dates": "1963–present",
-    "birthYear": 1963,
-    "summary": "Brazilian Air Force pilot and astronaut who became the first Brazilian and first South American in space during the Missão Centenário aboard Soyuz TMA-8 in 2006.",
-    "tags": [
-      "Space Exploration",
-      "Astronaut",
-      "Brazil",
-      "Aviation",
-      "Engineering"
-    ],
-    "expectedImage": "/images/personalities/marcos_pontes_portrait.jpg"
-  },
-  {
-    "name": "Michael Jordan",
-    "dates": "1963–present",
-    "birthYear": 1963,
-    "summary": "American professional basketball player and entrepreneur widely acclaimed as the greatest basketball player of all time, winning six NBA championships with the Chicago Bulls.",
-    "tags": [
-      "Sports",
-      "Basketball",
-      "NBA",
-      "Chicago Bulls",
-      "Athletics"
-    ],
-    "expectedImage": "/images/personalities/michael_jordan_portrait.jpg"
-  },
-  {
-    "name": "Garry Kasparov",
-    "dates": "1963–present",
-    "birthYear": 1963,
-    "summary": "Russian-Croatian chess grandmaster and former World Chess Champion (1985–2000), widely considered the greatest chess player of all time and pioneer of human-computer chess.",
-    "tags": [
-      "Chess",
-      "Grandmaster",
-      "Strategy",
-      "Artificial Intelligence",
-      "World Champion"
-    ],
-    "expectedImage": "/images/personalities/garry_kasparov_portrait.jpg"
   }
 ]

@@ -36,6 +36,8 @@ carpe diem
 
 Personalities:
 
+Jose Maria Canlas Sison (1939–2022)
+
 Rosa Parks
 Mozi, personal name Mo Di, was a Chinese philosopher, logician, and the founder of the Mohist school of thought, making him one of the most important figures of the Warring
 
