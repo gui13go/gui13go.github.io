@@ -1,0 +1,4743 @@
+[
+  {
+    "name": "Zoroaster (Zarathustra)",
+    "dates": "c. 1000–600 BC",
+    "birthYear": -1000,
+    "summary": "Ancient Iranian spiritual leader and prophet who founded Zoroastrianism, articulating the cosmic struggle between good (Asha) and evil (Druj) under Ahura Mazda.",
+    "tags": [
+      "Religion",
+      "Zoroastrianism",
+      "Persia",
+      "Philosophy",
+      "Antiquity"
+    ],
+    "expectedImage": "/images/personalities/zoroaster_zarathustra_portrait.jpg"
+  },
+  {
+    "name": "King Solomon",
+    "dates": "c. 990–931 BC",
+    "birthYear": -990,
+    "summary": "Third king of Israel, celebrated for legendary wisdom, immense wealth, building the First Temple in Jerusalem, and biblical writings including Proverbs and Ecclesiastes.",
+    "tags": [
+      "Religion",
+      "Wisdom",
+      "Monarchy",
+      "Ancient Israel",
+      "Philosophy"
+    ],
+    "expectedImage": "/images/personalities/king_solomon_portrait.jpg"
+  },
+  {
+    "name": "Elijah",
+    "dates": "c. 9th century BC",
+    "birthYear": -900,
+    "summary": "Hebrew prophet who defended the worship of Yahweh against the Phoenician cult of Baal, triumphing at Mount Carmel and taken to heaven in a whirlwind by a chariot of fire.",
+    "tags": [
+      "Religion",
+      "Prophet",
+      "Ancient Israel",
+      "Faith",
+      "Miracles"
+    ],
+    "expectedImage": "/images/personalities/elijah_portrait.jpg"
+  },
+  {
+    "name": "Homer",
+    "dates": "c. 8th Century BCE",
+    "birthYear": -800,
+    "summary": "Legendary ancient Greek epic poet traditionally credited with composing the 'Iliad' and the 'Odyssey', the foundational literary masterpieces of Western culture.",
+    "tags": [
+      "Literature",
+      "Ancient Greece",
+      "Epic Poetry",
+      "Iliad",
+      "Odyssey"
+    ],
+    "expectedImage": "/images/personalities/homer_portrait.jpg"
+  },
+  {
+    "name": "Isaiah",
+    "dates": "c. 8th century BC",
+    "birthYear": -765,
+    "summary": "Major Hebrew prophet of the Kingdom of Judah renowned for poetic majesty, profound moral vision, and prophetic passages celebrating peace and messianic redemption.",
+    "tags": [
+      "Religion",
+      "Prophet",
+      "Judah",
+      "Peace",
+      "Literature"
+    ],
+    "expectedImage": "/images/personalities/isaiah_portrait.jpg"
+  },
+  {
+    "name": "Nebuchadnezzar II",
+    "dates": "c. 634–562 BC",
+    "birthYear": -634,
+    "summary": "King of the Neo-Babylonian Empire who reconstructed Babylon as an imperial jewel, built the Ishtar Gate and legendary Hanging Gardens, and captured Jerusalem initiating the Babylonian Exile.",
+    "tags": [
+      "Babylon",
+      "Mesopotamia",
+      "Ancient History",
+      "Architecture",
+      "Monarchy"
+    ],
+    "expectedImage": "/images/personalities/nebuchadnezzar_ii_portrait.jpg"
+  },
+  {
+    "name": "Daniel",
+    "dates": "c. 6th century BC",
+    "birthYear": -620,
+    "summary": "Hebrew prophet and court official in Babylon whose unwavering faith delivered him from the lions' den, and whose visions provide foundational apocalyptic prophecy in biblical literature.",
+    "tags": [
+      "Religion",
+      "Prophet",
+      "Babylon",
+      "Faith",
+      "Apocalypse"
+    ],
+    "expectedImage": "/images/personalities/daniel_portrait.jpg"
+  },
+  {
+    "name": "Cyrus the Great",
+    "dates": "c. 600–530 BCE",
+    "birthYear": -600,
+    "summary": "Founder of the Achaemenid Persian Empire whose governance pioneered cultural tolerance, local autonomy, and an early charter of human rights via the Cyrus Cylinder.",
+    "tags": [
+      "Persia",
+      "Ancient History",
+      "Human Rights",
+      "Leadership",
+      "Empire"
+    ],
+    "expectedImage": "/images/personalities/cyrus_the_great_portrait.jpg"
+  },
+  {
+    "name": "Mahavira",
+    "dates": "c. 599–527 BC",
+    "birthYear": -599,
+    "summary": "Twenty-fourth and last Tirthankara of Jainism who revitalized Jain philosophy, establishing the supreme ethic of non-violence (Ahimsa) and ascetic self-discipline.",
+    "tags": [
+      "Jainism",
+      "Ahimsa",
+      "Non-Violence",
+      "Philosophy",
+      "Ancient India"
+    ],
+    "expectedImage": "/images/personalities/mahavira_portrait.jpg"
+  },
+  {
+    "name": "Gautama Buddha",
+    "dates": "c. 563–483 BCE",
+    "birthYear": -563,
+    "summary": "Ancient Indian ascetic, sage, and philosopher on whose teachings Buddhism was founded, expounding the Four Noble Truths and the Eightfold Path to liberation from suffering.",
+    "tags": [
+      "Buddhism",
+      "Enlightenment",
+      "Philosophy",
+      "Spirituality",
+      "Ancient India"
+    ],
+    "expectedImage": "/images/personalities/gautama_buddha_portrait.jpg"
+  },
+  {
+    "name": "Darius the Great",
+    "dates": "c. 550–486 BC",
+    "birthYear": -550,
+    "summary": "Third monarch of the Persian Achaemenid Empire who centralized empire governance through twenty satrapies, standard coinage (darics), the Royal Road, and the palaces of Persepolis.",
+    "tags": [
+      "Persia",
+      "Achaemenid Empire",
+      "Persepolis",
+      "Monarchy",
+      "Ancient History"
+    ],
+    "expectedImage": "/images/personalities/darius_the_great_portrait.jpg"
+  },
+  {
+    "name": "Leonidas I",
+    "dates": "c. 540–480 BC",
+    "birthYear": -540,
+    "summary": "Spartan king of the Agiad line who led the heroic stand of 300 Spartans and allied Greeks at the Battle of Thermopylae in 480 BC against the massive Persian invasion.",
+    "tags": [
+      "Ancient Greece",
+      "Sparta",
+      "Thermopylae",
+      "Warfare",
+      "Courage"
+    ],
+    "expectedImage": "/images/personalities/leonidas_i_portrait.jpg"
+  },
+  {
+    "name": "Esther",
+    "dates": "c. 5th century BC",
+    "birthYear": -500,
+    "summary": "Jewish queen of Persian King Ahasuerus (Xerxes I) who risked her life to thwart Haman's plot to annihilate the Jewish people, commemorated in the holiday of Purim.",
+    "tags": [
+      "Religion",
+      "Biblical Figure",
+      "Courage",
+      "Persia",
+      "Judaism"
+    ],
+    "expectedImage": "/images/personalities/esther_portrait.jpg"
+  },
+  {
+    "name": "Pericles",
+    "dates": "c. 495–429 BC",
+    "birthYear": -495,
+    "summary": "Prominent Athenian statesman and general who presided over Athens's Golden Age, championing direct democracy and commissioning the Parthenon on the Acropolis.",
+    "tags": [
+      "Ancient Greece",
+      "Democracy",
+      "Athens",
+      "Parthenon",
+      "Statesmanship"
+    ],
+    "expectedImage": "/images/personalities/pericles_portrait.jpg"
+  },
+  {
+    "name": "Herodotus",
+    "dates": "c. 484–c. 425 BC",
+    "birthYear": -484,
+    "summary": "Ancient Greek writer from Halicarnassus acclaimed as the 'Father of History', who authored The Histories chronicling the origins and events of the Greco-Persian Wars.",
+    "tags": [
+      "History",
+      "Ancient Greece",
+      "Literature",
+      "Historiography",
+      "Antiquity"
+    ],
+    "expectedImage": "/images/personalities/herodotus_portrait.jpg"
+  },
+  {
+    "name": "Thucydides",
+    "dates": "c. 460–c. 400 BC",
+    "birthYear": -460,
+    "summary": "Athenian general and historian known as the father of scientific history and political realism for his impartial, evidence-based History of the Peloponnesian War.",
+    "tags": [
+      "History",
+      "Ancient Greece",
+      "Political Realism",
+      "Historiography",
+      "Athens"
+    ],
+    "expectedImage": "/images/personalities/thucydides_portrait.jpg"
+  },
+  {
+    "name": "Hippocrates",
+    "dates": "c. 460–c. 370 BC",
+    "birthYear": -460,
+    "summary": "Ancient Greek physician of the Island of Kos revered as the 'Father of Medicine', who separated medicine from superstition, established clinical ethics, and inspired the Hippocratic Oath.",
+    "tags": [
+      "Medicine",
+      "Ancient Greece",
+      "Ethics",
+      "Healthcare",
+      "Science"
+    ],
+    "expectedImage": "/images/personalities/hippocrates_portrait.jpg"
+  },
+  {
+    "name": "Chanakya (Kautilya)",
+    "dates": "c. 375–283 BC",
+    "birthYear": -375,
+    "summary": "Ancient Indian philosopher, jurist, and prime minister who engineered the rise of the Maurya Empire under Chandragupta Maurya and authored the foundational treatise Arthashastra.",
+    "tags": [
+      "Statecraft",
+      "Philosophy",
+      "Maurya Empire",
+      "Arthashastra",
+      "Ancient India"
+    ],
+    "expectedImage": "/images/personalities/chanakya_kautilya_portrait.jpg"
+  },
+  {
+    "name": "Zhuangzi",
+    "dates": "c. 369–286 BCE",
+    "birthYear": -369,
+    "summary": "Influential Chinese Taoist philosopher of the Warring States period celebrated for his paradoxical parables, philosophical skepticism, and the butterfly dream paradox.",
+    "tags": [
+      "Taoism",
+      "Chinese Philosophy",
+      "Epistemology",
+      "Metaphysics"
+    ],
+    "expectedImage": "/images/personalities/zhuangzi_portrait.jpg"
+  },
+  {
+    "name": "Alexander the Great",
+    "dates": "356–323 BCE",
+    "birthYear": -356,
+    "summary": "King of Macedonia and undefeated military strategist who conquered the Persian Empire, creating an empire spanning three continents and ushering in the Hellenistic era.",
+    "tags": [
+      "Ancient Greece",
+      "Military Strategy",
+      "Hellenism",
+      "History",
+      "Macedonia"
+    ],
+    "expectedImage": "/images/personalities/alexander_the_great_portrait.jpg"
+  },
+  {
+    "name": "Ashoka the Great",
+    "dates": "c. 304–232 BCE",
+    "birthYear": -304,
+    "summary": "Third Emperor of the Maurya Empire of India who, moved by remorse over the bloodshed of the Kalinga War, embraced Buddhism and governed through non-violence and moral edicts.",
+    "tags": [
+      "Ancient India",
+      "Maurya Empire",
+      "Buddhism",
+      "Ahimsa",
+      "Tolerance"
+    ],
+    "expectedImage": "/images/personalities/ashoka_the_great_portrait.jpg"
+  },
+  {
+    "name": "Archimedes",
+    "dates": "c. 287–c. 212 BCE",
+    "birthYear": -287,
+    "summary": "Ancient Greek mathematician, physicist, engineer, and astronomer of Syracuse, regarded as the greatest scientist of antiquity (buoyancy principle, levers, pi calculation).",
+    "tags": [
+      "Mathematics",
+      "Physics",
+      "Engineering",
+      "Ancient Greece",
+      "Invention"
+    ],
+    "expectedImage": "/images/personalities/archimedes_portrait.jpg"
+  },
+  {
+    "name": "Han Feizi",
+    "dates": "c. 280–233 BC",
+    "birthYear": -280,
+    "summary": "Warring States Chinese philosopher who synthesized Chinese Legalism (Fajia), advocating strict codified law, statecraft methods (Shu), and sovereign power (Shi) which guided the Qin Dynasty.",
+    "tags": [
+      "Philosophy",
+      "Legalism",
+      "Warring States",
+      "China",
+      "Political Science"
+    ],
+    "expectedImage": "/images/personalities/han_feizi_portrait.jpg"
+  },
+  {
+    "name": "Eratosthenes",
+    "dates": "c. 276–c. 195 BC",
+    "birthYear": -276,
+    "summary": "Greek polymath and chief librarian of the Library of Alexandria who accurately calculated the Earth's circumference using solar shadows, invented the term geography, and created the Sieve of Eratosthenes.",
+    "tags": [
+      "Geography",
+      "Astronomy",
+      "Mathematics",
+      "Alexandria",
+      "Ancient Greece"
+    ],
+    "expectedImage": "/images/personalities/eratosthenes_portrait.jpg"
+  },
+  {
+    "name": "Qin Shi Huang",
+    "dates": "259–210 BCE",
+    "birthYear": -259,
+    "summary": "Founder of the Qin dynasty and first emperor of a unified China, who standardized currency, weights, measures, and Chinese script, and commissioned the Terracotta Army and Great Wall.",
+    "tags": [
+      "Ancient China",
+      "Qin Dynasty",
+      "Imperial China",
+      "Terracotta Army",
+      "Great Wall"
+    ],
+    "expectedImage": "/images/personalities/qin_shi_huang_portrait.jpg"
+  },
+  {
+    "name": "Hannibal Barca",
+    "dates": "247–c. 181 BC",
+    "birthYear": -247,
+    "summary": "Carthaginian general revered as one of history's greatest military strategists, who led an army with war elephants across the Alps into Italy and crushed Rome at Cannae.",
+    "tags": [
+      "Carthage",
+      "Military Tactics",
+      "Punic Wars",
+      "Antiquity",
+      "Warfare"
+    ],
+    "expectedImage": "/images/personalities/hannibal_barca_portrait.jpg"
+  },
+  {
+    "name": "Scipio Africanus",
+    "dates": "236–183 BC",
+    "birthYear": -236,
+    "summary": "Roman general and statesman of the Second Punic War who outmatched Carthaginian armies in Hispania and decisively defeated Hannibal Barca at the Battle of Zama in 202 BC.",
+    "tags": [
+      "Rome",
+      "Punic Wars",
+      "Military",
+      "Battle of Zama",
+      "Antiquity"
+    ],
+    "expectedImage": "/images/personalities/scipio_africanus_portrait.jpg"
+  },
+  {
+    "name": "Sima Qian",
+    "dates": "c. 145–c. 86 BC",
+    "birthYear": -145,
+    "summary": "Han Dynasty Chinese court official and scholar revered as the 'Grand Historian' (Taishigong), who chose castration over execution to finish the Records of the Grand Historian (Shiji).",
+    "tags": [
+      "History",
+      "Han Dynasty",
+      "Imperial China",
+      "Literature",
+      "Historiography"
+    ],
+    "expectedImage": "/images/personalities/sima_qian_portrait.jpg"
+  },
+  {
+    "name": "Hillel the Elder",
+    "dates": "c. 110 BC–10 AD",
+    "birthYear": -110,
+    "summary": "Influential Jewish religious leader, sage, and scholar whose teachings formed the basis of rabbinic Judaism and the Mishnah, celebrated for gentleness and ethical clarity.",
+    "tags": [
+      "Judaism",
+      "Ethics",
+      "Rabbinic Sage",
+      "Philosophy",
+      "Antiquity"
+    ],
+    "expectedImage": "/images/personalities/hillel_the_elder_portrait.jpg"
+  },
+  {
+    "name": "Julius Caesar",
+    "dates": "100–44 BCE",
+    "birthYear": -100,
+    "summary": "Roman general, statesman, and dictator whose conquests of Gaul and victory in civil war precipitated the fall of the Roman Republic and emergence of the Roman Empire.",
+    "tags": [
+      "Roman Republic",
+      "Military Strategy",
+      "History",
+      "Leadership",
+      "Rome"
+    ],
+    "expectedImage": "/images/personalities/julius_caesar_portrait.jpg"
+  },
+  {
+    "name": "Virgil",
+    "dates": "70–19 BC",
+    "birthYear": -70,
+    "summary": "Augustan Roman poet whose twelve-book epic masterpiece The Aeneid created the national myth of Rome's founding by Trojan hero Aeneas, profoundly shaping European literature.",
+    "tags": [
+      "Literature",
+      "Poetry",
+      "Rome",
+      "Classics",
+      "The Aeneid"
+    ],
+    "expectedImage": "/images/personalities/virgil_portrait.jpg"
+  },
+  {
+    "name": "Cleopatra VII",
+    "dates": "69–30 BCE",
+    "birthYear": -69,
+    "summary": "Last active ruler of the Ptolemaic Kingdom of Egypt, renowned for her brilliant political acumen, multilingual diplomacy, and strategic alliances with Julius Caesar and Mark Antony.",
+    "tags": [
+      "Ancient Egypt",
+      "Leadership",
+      "Diplomacy",
+      "Hellenism",
+      "History"
+    ],
+    "expectedImage": "/images/personalities/cleopatra_vii_portrait.jpg"
+  },
+  {
+    "name": "Caesar Augustus",
+    "dates": "63 BC–14 AD",
+    "birthYear": -63,
+    "summary": "First Emperor of the Roman Empire (r. 27 BC–14 AD) whose political reorganization transformed the fallen Republic into the Principate, inaugurating two centuries of Pax Romana.",
+    "tags": [
+      "Rome",
+      "Roman Empire",
+      "Monarchy",
+      "Pax Romana",
+      "Statesmanship"
+    ],
+    "expectedImage": "/images/personalities/caesar_augustus_portrait.jpg"
+  },
+  {
+    "name": "Mary (Mother of Jesus)",
+    "dates": "c. 18 BC–c. 48 AD",
+    "birthYear": -18,
+    "summary": "Mother of Jesus Christ, revered in Christianity as the Virgin Mary (Theotokos / Mother of God), exemplary in her humble obedience, maternal devotion, and faith.",
+    "tags": [
+      "Religion",
+      "Christianity",
+      "Motherhood",
+      "Devotion",
+      "Theology"
+    ],
+    "expectedImage": "/images/personalities/mary_mother_of_jesus_portrait.jpg"
+  },
+  {
+    "name": "Pontius Pilate",
+    "dates": "c. 12 BC–c. 39 AD",
+    "birthYear": -12,
+    "summary": "Fifth prefect of the Roman province of Judaea who presided over the trial of Jesus of Nazareth and reluctantly ordered his crucifixion.",
+    "tags": [
+      "History",
+      "Rome",
+      "Religion",
+      "Law",
+      "Antiquity"
+    ],
+    "expectedImage": "/images/personalities/pontius_pilate_portrait.jpg"
+  },
+  {
+    "name": "Jesus of Nazareth",
+    "dates": "c. 4 BCE–c. 30/33 CE",
+    "birthYear": -4,
+    "summary": "First-century Jewish preacher and religious leader whose life, teachings, crucifixion, and resurrection form the central core of Christianity and reshaped world civilization.",
+    "tags": [
+      "Christianity",
+      "Religion",
+      "Ethics",
+      "Theology",
+      "Ancient History"
+    ],
+    "expectedImage": "/images/personalities/jesus_of_nazareth_portrait.jpg"
+  },
+  {
+    "name": "Simon Peter",
+    "dates": "c. 1 BC–64 AD",
+    "birthYear": -1,
+    "summary": "First among Jesus's Twelve Apostles, prominent early Christian leader in Jerusalem and Rome, regarded by Catholic tradition as the first Bishop of Rome (Pope).",
+    "tags": [
+      "Religion",
+      "Christianity",
+      "Papacy",
+      "Apostle",
+      "Leadership"
+    ],
+    "expectedImage": "/images/personalities/simon_peter_portrait.jpg"
+  },
+  {
+    "name": "Mary Magdalene",
+    "dates": "1st century AD",
+    "birthYear": 1,
+    "summary": "Devoted disciple of Jesus Christ who witnessed the Crucifixion, accompanied his burial, and was the first recorded witness to the Resurrection (Apostola Apostolorum).",
+    "tags": [
+      "Religion",
+      "Christianity",
+      "Disciple",
+      "Resurrection",
+      "Faith"
+    ],
+    "expectedImage": "/images/personalities/mary_magdalene_portrait.jpg"
+  },
+  {
+    "name": "Judas Iscariot",
+    "dates": "1st century AD",
+    "birthYear": 1,
+    "summary": "One of the Twelve Apostles of Jesus infamous for betraying Christ to the Sanhedrin for thirty pieces of silver with a kiss in Gethsemane.",
+    "tags": [
+      "Religion",
+      "Christianity",
+      "Biblical Figure",
+      "Tragedy",
+      "History"
+    ],
+    "expectedImage": "/images/personalities/judas_iscariot_portrait.jpg"
+  },
+  {
+    "name": "Paul the Apostle",
+    "dates": "c. 5–64 AD",
+    "birthYear": 5,
+    "summary": "Apostle to the Gentiles and foundational theologian of early Christianity whose missionary journeys and Epistles shaped Christian doctrine, ethics, and world history.",
+    "tags": [
+      "Religion",
+      "Christianity",
+      "Theology",
+      "Missionary",
+      "Philosophy"
+    ],
+    "expectedImage": "/images/personalities/paul_the_apostle_portrait.jpg"
+  },
+  {
+    "name": "Caligula",
+    "dates": "12–41 CE",
+    "birthYear": 12,
+    "summary": "Third Roman Emperor whose brief four-year reign became legendary in Roman historiography for cruelty, extravagance, despotism, and alleged insanity.",
+    "tags": [
+      "Roman Empire",
+      "Ancient Rome",
+      "Emperors",
+      "History",
+      "Classics"
+    ],
+    "expectedImage": "/images/personalities/caligula_portrait.jpg"
+  },
+  {
+    "name": "Nero",
+    "dates": "37–68 AD",
+    "birthYear": 37,
+    "summary": "Fifth Roman emperor of the Julio-Claudian dynasty, remembered for extravagant theatricality, the Great Fire of Rome in 64 AD, building the Domus Aurea, and initiating Christian persecution.",
+    "tags": [
+      "Roman Empire",
+      "Julio-Claudian",
+      "Monarchy",
+      "History",
+      "Antiquity"
+    ],
+    "expectedImage": "/images/personalities/nero_portrait.jpg"
+  },
+  {
+    "name": "Trajan",
+    "dates": "53–117 AD",
+    "birthYear": 53,
+    "summary": "Second of the 'Five Good Emperors', under whose military leadership and civic welfare programs (Alimenta) the Roman Empire reached its maximum territorial extent.",
+    "tags": [
+      "Roman Empire",
+      "Monarchy",
+      "Architecture",
+      "Conquest",
+      "Statesmanship"
+    ],
+    "expectedImage": "/images/personalities/trajan_portrait.jpg"
+  },
+  {
+    "name": "Hadrian",
+    "dates": "76–138 AD",
+    "birthYear": 76,
+    "summary": "Third of the 'Five Good Emperors' of Rome, noted for consolidating imperial frontiers, commissioning Hadrian's Wall across Britain, rebuilding the Pantheon, and patronizing the arts.",
+    "tags": [
+      "Roman Empire",
+      "Architecture",
+      "Pantheon",
+      "Monarchy",
+      "Antiquity"
+    ],
+    "expectedImage": "/images/personalities/hadrian_portrait.jpg"
+  },
+  {
+    "name": "Nagarjuna",
+    "dates": "c. 150–c. 250 CE",
+    "birthYear": 150,
+    "summary": "Indian Buddhist philosopher regarded as the founder of the Madhyamaka (Middle Way) school, articulating the doctrine of emptiness (Shunyata) and two truths.",
+    "tags": [
+      "Buddhism",
+      "Madhyamaka",
+      "Indian Philosophy",
+      "Epistemology",
+      "Metaphysics"
+    ],
+    "expectedImage": "/images/personalities/nagarjuna_portrait.jpg"
+  },
+  {
+    "name": "Constantine the Great",
+    "dates": "c. 272–337",
+    "birthYear": 272,
+    "summary": "Roman Emperor who legalized Christianity with the Edict of Milan (313), convened the Council of Nicaea, and founded Constantinople (New Rome) as the imperial capital.",
+    "tags": [
+      "Rome",
+      "Byzantine Empire",
+      "Christianity",
+      "Monarchy",
+      "Late Antiquity"
+    ],
+    "expectedImage": "/images/personalities/constantine_the_great_portrait.jpg"
+  },
+  {
+    "name": "Augustine of Hippo",
+    "dates": "354–430",
+    "birthYear": 354,
+    "summary": "Early Christian theologian, philosopher, and bishop of Hippo Regius whose writings on grace, original sin, time, and the City of God shaped Western philosophy and theology.",
+    "tags": [
+      "Philosophy",
+      "Theology",
+      "Late Antiquity",
+      "Christianity",
+      "Ethics"
+    ],
+    "expectedImage": "/images/personalities/augustine_of_hippo_portrait.jpg"
+  },
+  {
+    "name": "Hypatia",
+    "dates": "c. 360–415",
+    "birthYear": 360,
+    "summary": "Hellenistic Neoplatonist philosopher, astronomer, and mathematician in Alexandria, revered for teaching geometry and astronomy to students across the Mediterranean.",
+    "tags": [
+      "Mathematics",
+      "Astronomy",
+      "Philosophy",
+      "Alexandria",
+      "Ancient Greece"
+    ],
+    "expectedImage": "/images/personalities/hypatia_portrait.jpg"
+  },
+  {
+    "name": "Kalidasa",
+    "dates": "c. 4th–5th century",
+    "birthYear": 375,
+    "summary": "Classical Sanskrit author widely regarded as ancient India's greatest poet and dramatist, whose works like Shakuntala capture sublime lyrical beauty and profound psychological depth.",
+    "tags": [
+      "Literature",
+      "Poetry",
+      "Sanskrit",
+      "Drama",
+      "Ancient India"
+    ],
+    "expectedImage": "/images/personalities/kalidasa_portrait.jpg"
+  },
+  {
+    "name": "Saint Patrick",
+    "dates": "c. 385–461",
+    "birthYear": 385,
+    "summary": "Romano-British Christian missionary and bishop who converted Ireland to Christianity, celebrated as the primary patron saint of Ireland and author of the Confessio.",
+    "tags": [
+      "Ireland",
+      "Christianity",
+      "Sainthood",
+      "Missionary",
+      "Late Antiquity"
+    ],
+    "expectedImage": "/images/personalities/saint_patrick_portrait.jpg"
+  },
+  {
+    "name": "Pope Leo I",
+    "dates": "c. 400–461",
+    "birthYear": 400,
+    "summary": "Leo the Great, Church Father and pope who persuaded Attila the Hun to turn back from invading Rome in 452, and whose Tome defined Christ's dual nature at the Council of Chalcedon.",
+    "tags": [
+      "Church Father",
+      "Papacy",
+      "Late Antiquity",
+      "Diplomacy",
+      "Christology"
+    ],
+    "expectedImage": "/images/personalities/pope_leo_i_portrait.jpg"
+  },
+  {
+    "name": "Attila the Hun",
+    "dates": "c. 406–453",
+    "birthYear": 406,
+    "summary": "Ruler of the Huns known to Rome as the 'Scourge of God' (Flagellum Dei), who forged a colossal barbarian empire stretching from Central Asia to the Rhine, challenging both Roman empires.",
+    "tags": [
+      "Huns",
+      "Late Antiquity",
+      "Warfare",
+      "Roman Empire",
+      "Conquest"
+    ],
+    "expectedImage": "/images/personalities/attila_the_hun_portrait.jpg"
+  },
+  {
+    "name": "Clovis I",
+    "dates": "c. 466–511",
+    "birthYear": 466,
+    "summary": "First King of the Franks to unite all Frankish tribes under Merovingian rule, conquering Gaul and converting to Nicene Catholic Christianity at Reims.",
+    "tags": [
+      "Franks",
+      "Merovingian",
+      "France",
+      "Medieval History",
+      "Monarchy"
+    ],
+    "expectedImage": "/images/personalities/clovis_i_portrait.jpg"
+  },
+  {
+    "name": "Bodhidharma",
+    "dates": "c. 5th–6th century",
+    "birthYear": 470,
+    "summary": "Semi-legendary Buddhist monk who transmitted Chan (Zen) Buddhism from India to China, renowned for sitting in meditation facing a wall at the Shaolin Monastery.",
+    "tags": [
+      "Buddhism",
+      "Zen",
+      "Meditation",
+      "Shaolin",
+      "China"
+    ],
+    "expectedImage": "/images/personalities/bodhidharma_portrait.jpg"
+  },
+  {
+    "name": "Aryabhata",
+    "dates": "476–550",
+    "birthYear": 476,
+    "summary": "Pioneering Indian mathematician and astronomer of the classical era who computed the approximation of pi, formulated trigonometry (sine tables), and proposed that Earth rotates daily on its axis.",
+    "tags": [
+      "Mathematics",
+      "Astronomy",
+      "India",
+      "Ancient Science",
+      "Trigonometry"
+    ],
+    "expectedImage": "/images/personalities/aryabhata_portrait.jpg"
+  },
+  {
+    "name": "Boethius",
+    "dates": "c. 477–524",
+    "birthYear": 477,
+    "summary": "Roman senator, philosopher, and statesman who wrote The Consolation of Philosophy while imprisoned on false treason charges, transmitting classical Greek philosophy to medieval Europe.",
+    "tags": [
+      "Philosophy",
+      "Scholasticism",
+      "Rome",
+      "Classics",
+      "Stoicism"
+    ],
+    "expectedImage": "/images/personalities/boethius_portrait.jpg"
+  },
+  {
+    "name": "Benedict of Nursia",
+    "dates": "c. 480–548",
+    "birthYear": 480,
+    "summary": "Christian monk regarded as the father of Western monasticism, who founded the monastery of Monte Cassino and wrote the Rule of Saint Benedict embodying balanced devotion.",
+    "tags": [
+      "Monasticism",
+      "Christianity",
+      "Monte Cassino",
+      "Spirituality",
+      "Middle Ages"
+    ],
+    "expectedImage": "/images/personalities/benedict_of_nursia_portrait.jpg"
+  },
+  {
+    "name": "Justinian I (the Great)",
+    "dates": "482–565",
+    "birthYear": 482,
+    "summary": "Eastern Roman Emperor who codified Roman law into the Corpus Juris Civilis, reconquered Italy and North Africa, and commissioned the architectural wonder Hagia Sophia in Constantinople.",
+    "tags": [
+      "Byzantine Empire",
+      "Rome",
+      "Law",
+      "Architecture",
+      "Monarchy"
+    ],
+    "expectedImage": "/images/personalities/justinian_i_the_great_portrait.jpg"
+  },
+  {
+    "name": "Empress Theodora",
+    "dates": "c. 500–548",
+    "birthYear": 500,
+    "summary": "Byzantine Empress and wife of Justinian I, one of the most influential sovereigns in Roman history, who championed women's legal rights and saved the throne during the Nika Riots.",
+    "tags": [
+      "Byzantine Empire",
+      "Women's Rights",
+      "Leadership",
+      "Empress",
+      "Late Antiquity"
+    ],
+    "expectedImage": "/images/personalities/empress_theodora_portrait.jpg"
+  },
+  {
+    "name": "Belisarius",
+    "dates": "c. 500–565",
+    "birthYear": 500,
+    "summary": "Legendary Byzantine general under Justinian I celebrated as the 'Last of the Romans', whose brilliant tactical genius reconquered Rome, Italy, and North Africa from Vandal and Ostrogoth kingdoms.",
+    "tags": [
+      "Military",
+      "Byzantine Empire",
+      "Tactics",
+      "Rome",
+      "General"
+    ],
+    "expectedImage": "/images/personalities/belisarius_portrait.jpg"
+  },
+  {
+    "name": "Pope Gregory I",
+    "dates": "c. 540–604",
+    "birthYear": 540,
+    "summary": "Gregory the Great, Church Father and pope who instituted liturgical reforms (inspiring Gregorian chant), organized famine relief in Italy, and sent Augustine to convert Anglo-Saxon England.",
+    "tags": [
+      "Church Father",
+      "Papacy",
+      "Early Medieval",
+      "Gregorian Chant",
+      "Theology"
+    ],
+    "expectedImage": "/images/personalities/pope_gregory_i_portrait.jpg"
+  },
+  {
+    "name": "Tang Taizong",
+    "dates": "598–649",
+    "birthYear": 598,
+    "summary": "Emperor Taizong of Tang (Li Shimin), co-founder and second emperor of China's Tang dynasty, whose enlightened Reign of Zhenguan ushered in a golden age of prosperity and cosmopolitan culture.",
+    "tags": [
+      "Tang Dynasty",
+      "Imperial China",
+      "Leadership",
+      "Monarchy",
+      "Golden Age"
+    ],
+    "expectedImage": "/images/personalities/tang_taizong_portrait.jpg"
+  },
+  {
+    "name": "Brahmagupta",
+    "dates": "c. 598–c. 668",
+    "birthYear": 598,
+    "summary": "Ancient Indian mathematician and astronomer who wrote the Brahmasphutasiddhanta, presenting the first systematic mathematical treatment of zero and negative numbers.",
+    "tags": [
+      "Mathematics",
+      "Zero",
+      "Astronomy",
+      "India",
+      "Algebra"
+    ],
+    "expectedImage": "/images/personalities/brahmagupta_portrait.jpg"
+  },
+  {
+    "name": "Ali ibn Abi Talib",
+    "dates": "c. 600–661",
+    "birthYear": 600,
+    "summary": "Cousin and son-in-law of Prophet Muhammad, fourth of the Rashidun caliphs in Sunni Islam, and the first Imam in Shia Islam, celebrated for chivalry, wisdom, and eloquent justice.",
+    "tags": [
+      "Islam",
+      "Philosophy",
+      "Justice",
+      "Caliphate",
+      "Ethics"
+    ],
+    "expectedImage": "/images/personalities/ali_ibn_abi_talib_portrait.jpg"
+  },
+  {
+    "name": "Xuanzang",
+    "dates": "602–664",
+    "birthYear": 602,
+    "summary": "Chinese Buddhist monk and scholar whose epic seventeen-year pilgrimage to India along the Silk Road brought hundreds of Sanskrit Buddhist texts back to China, inspiring Journey to the West.",
+    "tags": [
+      "Buddhism",
+      "Pilgrimage",
+      "Silk Road",
+      "Tang Dynasty",
+      "India"
+    ],
+    "expectedImage": "/images/personalities/xuanzang_portrait.jpg"
+  },
+  {
+    "name": "Wu Zetian",
+    "dates": "624–705",
+    "birthYear": 624,
+    "summary": "Sole female sovereign of Imperial China who established the Zhou dynasty, expanded the imperial examinations based on merit, promoted Buddhism, and stabilized the realm.",
+    "tags": [
+      "Imperial China",
+      "Monarchy",
+      "Leadership",
+      "Zhou Dynasty",
+      "Empress"
+    ],
+    "expectedImage": "/images/personalities/wu_zetian_portrait.jpg"
+  },
+  {
+    "name": "Tariq ibn Ziyad",
+    "dates": "c. 670–720",
+    "birthYear": 670,
+    "summary": "Berber general of the Umayyad Caliphate who launched the Islamic conquest of the Iberian Peninsula in 711, landing at the Rock of Gibraltar (Jabal Tariq, named after him).",
+    "tags": [
+      "Al-Andalus",
+      "Umayyad Caliphate",
+      "Military",
+      "Gibraltar",
+      "History"
+    ],
+    "expectedImage": "/images/personalities/tariq_ibn_ziyad_portrait.jpg"
+  },
+  {
+    "name": "Charles Martel",
+    "dates": "c. 688–741",
+    "birthYear": 688,
+    "summary": "Frankish statesman and military commander known as 'The Hammer' (Martel), who halted the Umayyad expansion into northwestern Europe at the pivotal Battle of Tours (Poitiers) in 732.",
+    "tags": [
+      "Medieval History",
+      "Franks",
+      "Battle of Tours",
+      "Military",
+      "Carolingian"
+    ],
+    "expectedImage": "/images/personalities/charles_martel_portrait.jpg"
+  },
+  {
+    "name": "Li Bai",
+    "dates": "701–762",
+    "birthYear": 701,
+    "summary": "Tang Dynasty Chinese poet hailed as the 'Poet Immortal' (Shixian), revered for his romantic spontaneity, cosmic imagination, and joyous devotion to moonlit wine and nature.",
+    "tags": [
+      "Poetry",
+      "Tang Dynasty",
+      "China",
+      "Classics",
+      "Daoism"
+    ],
+    "expectedImage": "/images/personalities/li_bai_portrait.jpg"
+  },
+  {
+    "name": "Du Fu",
+    "dates": "712–770",
+    "birthYear": 712,
+    "summary": "Tang Dynasty Chinese poet revered as the 'Poet Historian' and 'Poet Sage' (Shisheng), whose compassionate, masterfully crafted verses chronicled the devastation of the An Lushan Rebellion.",
+    "tags": [
+      "Poetry",
+      "Tang Dynasty",
+      "China",
+      "Realism",
+      "Compassion"
+    ],
+    "expectedImage": "/images/personalities/du_fu_portrait.jpg"
+  },
+  {
+    "name": "Jabir ibn Hayyan (Geber)",
+    "dates": "c. 721–c. 815",
+    "birthYear": 721,
+    "summary": "Polymath and alchemist in Kufa hailed as the 'Father of Chemistry', who pioneered systematic laboratory experimentation, distillation, crystallization, and discovered sulfuric and nitric acids.",
+    "tags": [
+      "Chemistry",
+      "Alchemy",
+      "Science",
+      "Islamic Golden Age",
+      "Experimentation"
+    ],
+    "expectedImage": "/images/personalities/jabir_ibn_hayyan_geber_portrait.jpg"
+  },
+  {
+    "name": "Charlemagne",
+    "dates": "742–814",
+    "birthYear": 742,
+    "summary": "King of the Franks and first Holy Roman Emperor (crowned by Pope Leo III on Christmas Day 800), who united Western and Central Europe and spearheaded the Carolingian Renaissance.",
+    "tags": [
+      "Holy Roman Empire",
+      "Franks",
+      "Medieval History",
+      "Education",
+      "Monarchy"
+    ],
+    "expectedImage": "/images/personalities/charlemagne_portrait.jpg"
+  },
+  {
+    "name": "Harun al-Rashid",
+    "dates": "763–809",
+    "birthYear": 763,
+    "summary": "Fifth Abbasid Caliph whose rule marked the scientific, cultural, and economic zenith of the Islamic Golden Age in Baghdad, immortalized in One Thousand and One Nights.",
+    "tags": [
+      "Abbasid Caliphate",
+      "Islamic Golden Age",
+      "Baghdad",
+      "House of Wisdom",
+      "Monarchy"
+    ],
+    "expectedImage": "/images/personalities/harun_al-rashid_portrait.jpg"
+  },
+  {
+    "name": "Al-Khwarizmi",
+    "dates": "c. 780–c. 850",
+    "birthYear": 780,
+    "summary": "Persian polymath in Baghdad's House of Wisdom whose foundational texts introduced systematic algebraic equation solving ('algebra') and Hindu-Arabic numerals ('algorithm').",
+    "tags": [
+      "Algebra",
+      "Mathematics",
+      "Algorithms",
+      "Islamic Golden Age",
+      "Astronomy"
+    ],
+    "expectedImage": "/images/personalities/al-khwarizmi_portrait.jpg"
+  },
+  {
+    "name": "Adi Shankara",
+    "dates": "c. 788–820",
+    "birthYear": 788,
+    "summary": "Indian philosopher and theologian who consolidated the doctrine of Advaita Vedanta (non-dualism), revitalizing Hindu thought through monumental commentaries and monastic institutions.",
+    "tags": [
+      "Philosophy",
+      "Vedanta",
+      "Hinduism",
+      "India",
+      "Non-Dualism"
+    ],
+    "expectedImage": "/images/personalities/adi_shankara_portrait.jpg"
+  },
+  {
+    "name": "Rurik",
+    "dates": "c. 830–879",
+    "birthYear": 830,
+    "summary": "Semi-legendary Varangian (Norse Viking) chieftain invited by East Slavic and Finnic tribes to rule Novgorod, founding the Rurik Dynasty that governed Kievan Rus' and Russia until 1598.",
+    "tags": [
+      "Vikings",
+      "Kievan Rus",
+      "Russia",
+      "Novgorod",
+      "Monarchy"
+    ],
+    "expectedImage": "/images/personalities/rurik_portrait.jpg"
+  },
+  {
+    "name": "Alfred the Great",
+    "dates": "849–899",
+    "birthYear": 849,
+    "summary": "King of Wessex who successfully defended England against Viking conquest at the Battle of Edington, established the burghal defensive system, and revived English education and law.",
+    "tags": [
+      "Anglo-Saxon",
+      "England",
+      "Monarchy",
+      "Medieval History",
+      "Education"
+    ],
+    "expectedImage": "/images/personalities/alfred_the_great_portrait.jpg"
+  },
+  {
+    "name": "Al-Farabi",
+    "dates": "c. 872–950",
+    "birthYear": 872,
+    "summary": "Early Islamic Golden Age philosopher and music theorist known as the 'Second Teacher' (after Aristotle), who integrated Platonic political philosophy with Aristotelian logic.",
+    "tags": [
+      "Philosophy",
+      "Islamic Golden Age",
+      "Political Science",
+      "Aristotle",
+      "Music Theory"
+    ],
+    "expectedImage": "/images/personalities/al-farabi_portrait.jpg"
+  },
+  {
+    "name": "Olga of Kiev",
+    "dates": "c. 890–969",
+    "birthYear": 890,
+    "summary": "Regent of Kievan Rus' who exacted legendary vengeance upon the Drevlians for her husband's murder, established the realm's first centralized taxation system, and converted to Christianity.",
+    "tags": [
+      "Kievan Rus",
+      "Leadership",
+      "Orthodoxy",
+      "Regency",
+      "Medieval History"
+    ],
+    "expectedImage": "/images/personalities/olga_of_kiev_portrait.jpg"
+  },
+  {
+    "name": "Vladimir the Great",
+    "dates": "c. 958–1015",
+    "birthYear": 958,
+    "summary": "Grand Prince of Kiev who unified Kievan Rus' and officially Christianized the realm in 988 through the mass baptism of Kiev in the Dnieper River, linking Russia to Byzantine civilization.",
+    "tags": [
+      "Kievan Rus",
+      "Christianity",
+      "Ukraine",
+      "Russia",
+      "Monarchy"
+    ],
+    "expectedImage": "/images/personalities/vladimir_the_great_portrait.jpg"
+  },
+  {
+    "name": "Leif Erikson",
+    "dates": "c. 970–c. 1020",
+    "birthYear": 970,
+    "summary": "Norse explorer from Iceland believed to be the first known European to set foot on continental North America ('Vinland', modern Newfoundland at L'Anse aux Meadows).",
+    "tags": [
+      "Exploration",
+      "Vikings",
+      "Norse",
+      "North America",
+      "Medieval History"
+    ],
+    "expectedImage": "/images/personalities/leif_erikson_portrait.jpg"
+  },
+  {
+    "name": "Murasaki Shikibu",
+    "dates": "c. 973–c. 1014",
+    "birthYear": 973,
+    "summary": "Heian-era Japanese noblewoman, poet, and court lady who wrote The Tale of Genji, widely recognized as the world's first complete psychological novel.",
+    "tags": [
+      "Literature",
+      "Japan",
+      "Heian Period",
+      "Classics",
+      "Novels"
+    ],
+    "expectedImage": "/images/personalities/murasaki_shikibu_portrait.jpg"
+  },
+  {
+    "name": "Al-Biruni",
+    "dates": "973–c. 1050",
+    "birthYear": 973,
+    "summary": "Persian polymath regarded as the 'Father of Indology' and 'Father of Geodesy', who calculated the Earth's radius with remarkable precision and authored monumental works on astronomy and cultures.",
+    "tags": [
+      "Science",
+      "Geodesy",
+      "Astronomy",
+      "Islamic Golden Age",
+      "Indology"
+    ],
+    "expectedImage": "/images/personalities/al-biruni_portrait.jpg"
+  },
+  {
+    "name": "Pope Gregory VII",
+    "dates": "1015–1085",
+    "birthYear": 1015,
+    "summary": "Hildebrand of Sovana, reformer pope who spearheaded the Gregorian Reforms, asserted papal primacy against secular monarchs, and clashed with Holy Roman Emperor Henry IV in the Investiture Controversy.",
+    "tags": [
+      "Medieval History",
+      "Papacy",
+      "Reform",
+      "Church and State",
+      "Canossa"
+    ],
+    "expectedImage": "/images/personalities/pope_gregory_vii_portrait.jpg"
+  },
+  {
+    "name": "William the Conqueror",
+    "dates": "c. 1028–1087",
+    "birthYear": 1028,
+    "summary": "Duke of Normandy who conquered England in 1066 at the Battle of Hastings, crowned King of England, and commissioned the monumental Domesday Book census.",
+    "tags": [
+      "Medieval History",
+      "Monarchy",
+      "England",
+      "Normandy",
+      "Conquest"
+    ],
+    "expectedImage": "/images/personalities/william_the_conqueror_portrait.jpg"
+  },
+  {
+    "name": "Shen Kuo",
+    "dates": "1031–1095",
+    "birthYear": 1031,
+    "summary": "Song Dynasty Chinese polymath, statesman, and scientist who first described the magnetic compass needle for navigation, movable type printing, and geological sedimentation.",
+    "tags": [
+      "Science",
+      "Invention",
+      "Song Dynasty",
+      "China",
+      "Compass"
+    ],
+    "expectedImage": "/images/personalities/shen_kuo_portrait.jpg"
+  },
+  {
+    "name": "Anselm of Canterbury",
+    "dates": "c. 1033–1109",
+    "birthYear": 1033,
+    "summary": "Italian-born Benedictine monk, philosopher, and Archbishop of Canterbury hailed as the founder of Scholasticism, renowned for the ontological argument for the existence of God.",
+    "tags": [
+      "Philosophy",
+      "Theology",
+      "Scholasticism",
+      "Medieval",
+      "Metaphysics"
+    ],
+    "expectedImage": "/images/personalities/anselm_of_canterbury_portrait.jpg"
+  },
+  {
+    "name": "Pope Urban II",
+    "dates": "1035–1099",
+    "birthYear": 1035,
+    "summary": "Head of the Catholic Church who launched the First Crusade with his electrifying sermon at the Council of Clermont in 1095, fundamentally reshaping medieval geopolitics.",
+    "tags": [
+      "Medieval History",
+      "Crusades",
+      "Papacy",
+      "Religion",
+      "Europe"
+    ],
+    "expectedImage": "/images/personalities/pope_urban_ii_portrait.jpg"
+  },
+  {
+    "name": "Su Shi (Su Dongpo)",
+    "dates": "1037–1101",
+    "birthYear": 1037,
+    "summary": "Towering Song Dynasty Chinese poet, essayist, calligrapher, and statesman celebrated for his profound optimism, culinary artistry (Dongpo pork), and sublime ci poetry.",
+    "tags": [
+      "Poetry",
+      "Literature",
+      "Song Dynasty",
+      "Calligraphy",
+      "China"
+    ],
+    "expectedImage": "/images/personalities/su_shi_su_dongpo_portrait.jpg"
+  },
+  {
+    "name": "Omar Khayyam",
+    "dates": "1048–1131",
+    "birthYear": 1048,
+    "summary": "Persian polymath, mathematician, astronomer, and poet who solved cubic equations geometrically, reformed the Persian Jalali calendar, and composed the timeless Rubaiyat.",
+    "tags": [
+      "Poetry",
+      "Mathematics",
+      "Astronomy",
+      "Persia",
+      "Philosophy"
+    ],
+    "expectedImage": "/images/personalities/omar_khayyam_portrait.jpg"
+  },
+  {
+    "name": "Al-Ghazali",
+    "dates": "c. 1058–1111",
+    "birthYear": 1058,
+    "summary": "Eminent Persian polymath, Islamic jurist, theologian, and mystic whose masterworks reconciled orthodox Sunni Islamic theology with the inner spiritual dimensions of Sufism.",
+    "tags": [
+      "Philosophy",
+      "Islam",
+      "Theology",
+      "Sufism",
+      "Persia"
+    ],
+    "expectedImage": "/images/personalities/al-ghazali_portrait.jpg"
+  },
+  {
+    "name": "Eleanor of Aquitaine",
+    "dates": "c. 1122–1204",
+    "birthYear": 1122,
+    "summary": "One of the wealthiest and most powerful women in Western European history, Queen consort of France (Louis VII) and England (Henry II), mother of King Richard the Lionheart and King John.",
+    "tags": [
+      "Medieval History",
+      "Monarchy",
+      "France",
+      "England",
+      "Courtly Love"
+    ],
+    "expectedImage": "/images/personalities/eleanor_of_aquitaine_portrait.jpg"
+  },
+  {
+    "name": "Frederick Barbarossa",
+    "dates": "1122–1190",
+    "birthYear": 1122,
+    "summary": "Holy Roman Emperor Frederick I of the Hohenstaufen dynasty, renowned for reasserting imperial Corpus Juris Civilis authority, subduing Italian city-states, and leading the Third Crusade.",
+    "tags": [
+      "Holy Roman Empire",
+      "Germany",
+      "Medieval History",
+      "Monarchy",
+      "Crusades"
+    ],
+    "expectedImage": "/images/personalities/frederick_barbarossa_portrait.jpg"
+  },
+  {
+    "name": "Averroes (Ibn Rushd)",
+    "dates": "1126–1198",
+    "birthYear": 1126,
+    "summary": "Andalusian polymath, jurist, and philosopher known as 'The Commentator' on Aristotle, whose defense of philosophical reason (Averroism) profoundly ignited the European Renaissance and Scholasticism.",
+    "tags": [
+      "Philosophy",
+      "Al-Andalus",
+      "Aristotle",
+      "Islamic Golden Age",
+      "Rationalism"
+    ],
+    "expectedImage": "/images/personalities/averroes_ibn_rushd_portrait.jpg"
+  },
+  {
+    "name": "Zhu Xi",
+    "dates": "1130–1200",
+    "birthYear": 1130,
+    "summary": "Song Dynasty Chinese philosopher who synthesized Neo-Confucianism, establishing the Four Books as the core imperial examination curriculum that governed China for centuries.",
+    "tags": [
+      "Neo-Confucianism",
+      "Philosophy",
+      "Song Dynasty",
+      "China",
+      "Ethics"
+    ],
+    "expectedImage": "/images/personalities/zhu_xi_portrait.jpg"
+  },
+  {
+    "name": "Saladin",
+    "dates": "1137–1193",
+    "birthYear": 1137,
+    "summary": "First Sultan of Egypt and Syria and founder of the Ayyubid dynasty, revered across both the Islamic and Western worlds for recapturing Jerusalem and displaying chivalric magnanimity.",
+    "tags": [
+      "Crusades",
+      "Islamic History",
+      "Chivalry",
+      "Sultan",
+      "Middle East"
+    ],
+    "expectedImage": "/images/personalities/saladin_portrait.jpg"
+  },
+  {
+    "name": "Maimonides",
+    "dates": "1138–1204",
+    "birthYear": 1138,
+    "summary": "Moses ben Maimon (Rambam), preeminent Sephardic Jewish philosopher, astronomer, and physician whose synthesis of Aristotelian philosophy and Jewish law remains foundational.",
+    "tags": [
+      "Philosophy",
+      "Judaism",
+      "Theology",
+      "Medicine",
+      "Middle Ages"
+    ],
+    "expectedImage": "/images/personalities/maimonides_portrait.jpg"
+  },
+  {
+    "name": "Minamoto no Yoritomo",
+    "dates": "1147–1199",
+    "birthYear": 1147,
+    "summary": "Founder and first shogun of the Kamakura shogunate of Japan, who defeated the Taira clan in the Genpei War and initiated seven centuries of samurai warrior rule (Bakufu).",
+    "tags": [
+      "Samurai",
+      "Japan",
+      "Shogunate",
+      "Kamakura",
+      "Feudalism"
+    ],
+    "expectedImage": "/images/personalities/minamoto_no_yoritomo_portrait.jpg"
+  },
+  {
+    "name": "Richard the Lionheart",
+    "dates": "1157–1199",
+    "birthYear": 1157,
+    "summary": "Richard I, King of England and chivalric hero who led the Third Crusade, winning renowned victories at Acre and Arsuf against Saladin while ruling the Angevin Empire.",
+    "tags": [
+      "Medieval History",
+      "Crusades",
+      "Monarchy",
+      "England",
+      "Chivalry"
+    ],
+    "expectedImage": "/images/personalities/richard_the_lionheart_portrait.jpg"
+  },
+  {
+    "name": "Pope Innocent III",
+    "dates": "1161–1216",
+    "birthYear": 1161,
+    "summary": "One of the most powerful and influential popes of the Middle Ages, who asserted supreme papal authority over secular monarchs and convened the Fourth Lateran Council.",
+    "tags": [
+      "Medieval History",
+      "Papacy",
+      "Catholicism",
+      "Law",
+      "Theocracy"
+    ],
+    "expectedImage": "/images/personalities/pope_innocent_iii_portrait.jpg"
+  },
+  {
+    "name": "Genghis Khan",
+    "dates": "c. 1162–1227",
+    "birthYear": 1162,
+    "summary": "Founder and first Great Khan of the Mongol Empire, who united the nomadic tribes of Northeast Asia to forge the largest contiguous land empire in human history.",
+    "tags": [
+      "Mongol Empire",
+      "Military Strategy",
+      "History",
+      "Empire",
+      "Nomads"
+    ],
+    "expectedImage": "/images/personalities/genghis_khan_portrait.jpg"
+  },
+  {
+    "name": "Francis of Assisi",
+    "dates": "1181/1182–1226",
+    "birthYear": 1181,
+    "summary": "Italian Catholic friar, mystic, and patron saint of ecology who founded the Franciscan Order, renouncing all wealth to practice radical poverty, peace, and brotherhood with nature.",
+    "tags": [
+      "Christianity",
+      "Saints",
+      "Franciscan",
+      "Ecology",
+      "Peace",
+      "Italy"
+    ],
+    "expectedImage": "/images/personalities/francis_of_assisi_portrait.jpg"
+  },
+  {
+    "name": "Frederick II (Holy Roman Emperor)",
+    "dates": "1194–1250",
+    "birthYear": 1194,
+    "summary": "Hohenstaufen King of Sicily and Holy Roman Emperor renowned as 'Stupor Mundi' (Wonder of the World) for his polyglot intellect, scientific treatises, and recovery of Jerusalem via diplomacy.",
+    "tags": [
+      "Holy Roman Empire",
+      "Sicily",
+      "Falconry",
+      "Medieval History",
+      "Scholarship"
+    ],
+    "expectedImage": "/images/personalities/frederick_ii_holy_roman_emperor_portrait.jpg"
+  },
+  {
+    "name": "Dōgen Zenji",
+    "dates": "1200–1253",
+    "birthYear": 1200,
+    "summary": "Japanese Buddhist monk, philosopher, and poet who founded the Sōtō school of Zen in Japan, emphasizing 'just sitting' (shikantaza) and the oneness of practice and enlightenment.",
+    "tags": [
+      "Zen",
+      "Buddhism",
+      "Japan",
+      "Philosophy",
+      "Meditation"
+    ],
+    "expectedImage": "/images/personalities/dōgen_zenji_portrait.jpg"
+  },
+  {
+    "name": "Nasir al-Din al-Tusi",
+    "dates": "1201–1274",
+    "birthYear": 1201,
+    "summary": "Persian polymath, architect, philosopher, and astronomer who founded the Maragheh Observatory and developed the 'Tusi couple', a geometric device that later influenced Copernicus.",
+    "tags": [
+      "Astronomy",
+      "Mathematics",
+      "Persia",
+      "Islamic Golden Age",
+      "Physics"
+    ],
+    "expectedImage": "/images/personalities/nasir_al-din_al-tusi_portrait.jpg"
+  },
+  {
+    "name": "Rumi (Jalal al-Din Rumi)",
+    "dates": "1207–1273",
+    "birthYear": 1207,
+    "summary": "13th-century Persian poet, Islamic scholar, and Sufi mystic whose ecstatic poetry on divine love, unity, and spiritual longing transcended national and religious borders.",
+    "tags": [
+      "Poetry",
+      "Sufism",
+      "Spirituality",
+      "Mysticism",
+      "Persia"
+    ],
+    "expectedImage": "/images/personalities/rumi_jalal_al-din_rumi_portrait.jpg"
+  },
+  {
+    "name": "Saadi Shirazi",
+    "dates": "c. 1210–1291",
+    "birthYear": 1210,
+    "summary": "Major Persian poet and prose writer celebrated for the lyrical elegance and profound moral humanism of his classics Gulistan (The Rose Garden) and Bustan (The Orchard).",
+    "tags": [
+      "Poetry",
+      "Literature",
+      "Persia",
+      "Ethics",
+      "Humanism"
+    ],
+    "expectedImage": "/images/personalities/saadi_shirazi_portrait.jpg"
+  },
+  {
+    "name": "Kublai Khan",
+    "dates": "1215–1294",
+    "birthYear": 1215,
+    "summary": "Grandson of Genghis Khan who founded the Yuan dynasty of China in 1271, ruled as first Mongol Emperor of China, and hosted Venetian traveler Marco Polo at his court in Khanbaliq.",
+    "tags": [
+      "Mongol Empire",
+      "Yuan Dynasty",
+      "Imperial China",
+      "Leadership",
+      "History"
+    ],
+    "expectedImage": "/images/personalities/kublai_khan_portrait.jpg"
+  },
+  {
+    "name": "Sundiata Keita",
+    "dates": "c. 1217–1255",
+    "birthYear": 1217,
+    "summary": "Legendary 'Lion King' who founded the Mali Empire in West Africa, defeating King Soumaoro Kanté at the Battle of Kirina and establishing the Kouroukan Fouga oral constitution.",
+    "tags": [
+      "Mali Empire",
+      "West Africa",
+      "Leadership",
+      "History",
+      "Human Rights"
+    ],
+    "expectedImage": "/images/personalities/sundiata_keita_portrait.jpg"
+  },
+  {
+    "name": "Roger Bacon",
+    "dates": "c. 1220–1292",
+    "birthYear": 1220,
+    "summary": "English Franciscan friar and philosopher known as 'Doctor Mirabilis', an early pioneer of the scientific method and empirical experimentation in optics and nature.",
+    "tags": [
+      "Philosophy",
+      "Scientific Method",
+      "Empiricism",
+      "Optics",
+      "Middle Ages"
+    ],
+    "expectedImage": "/images/personalities/roger_bacon_portrait.jpg"
+  },
+  {
+    "name": "Alexander Nevsky",
+    "dates": "1221–1263",
+    "birthYear": 1221,
+    "summary": "Prince of Novgorod and Grand Prince of Vladimir who repelled Swedish and German invasions at the Battle of the Neva and Battle on the Ice (Lake Peipus), canonized as a saint.",
+    "tags": [
+      "Russia",
+      "Medieval History",
+      "Novgorod",
+      "Military",
+      "Sainthood"
+    ],
+    "expectedImage": "/images/personalities/alexander_nevsky_portrait.jpg"
+  },
+  {
+    "name": "Marco Polo",
+    "dates": "1254–1324",
+    "birthYear": 1254,
+    "summary": "Venetian merchant, explorer, and author whose 24-year journey along the Silk Road to China and court of Kublai Khan introduced Europeans to the culture and technologies of East Asia.",
+    "tags": [
+      "Exploration",
+      "Silk Road",
+      "Venice",
+      "China",
+      "Travel"
+    ],
+    "expectedImage": "/images/personalities/marco_polo_portrait.jpg"
+  },
+  {
+    "name": "Giotto di Bondone",
+    "dates": "c. 1267–1337",
+    "birthYear": 1267,
+    "summary": "Italian painter and architect from Florence whose naturalistic human emotion and spatial depth initiated the decisive break from Byzantine art, heralding the Renaissance.",
+    "tags": [
+      "Art",
+      "Renaissance",
+      "Fresco",
+      "Painting",
+      "Florence"
+    ],
+    "expectedImage": "/images/personalities/giotto_di_bondone_portrait.jpg"
+  },
+  {
+    "name": "William Wallace",
+    "dates": "c. 1270–1305",
+    "birthYear": 1270,
+    "summary": "Scottish knight and national hero who led the Scottish resistance against English rule during the First War of Scottish Independence, triumphant at the Battle of Stirling Bridge.",
+    "tags": [
+      "Scotland",
+      "History",
+      "Freedom",
+      "Warfare",
+      "National Hero"
+    ],
+    "expectedImage": "/images/personalities/william_wallace_portrait.jpg"
+  },
+  {
+    "name": "Mansa Musa",
+    "dates": "c. 1280–1337",
+    "birthYear": 1280,
+    "summary": "Tenth Mansa of the Mali Empire, famed as one of the wealthiest individuals in human history, whose lavish 1324 pilgrimage to Mecca and patronage transformed Timbuktu into a world center of Islamic scholarship.",
+    "tags": [
+      "Mali Empire",
+      "West Africa",
+      "Gold",
+      "Islamic Golden Age",
+      "Timbuktu"
+    ],
+    "expectedImage": "/images/personalities/mansa_musa_portrait.jpg"
+  },
+  {
+    "name": "William of Ockham",
+    "dates": "c. 1287–1347",
+    "birthYear": 1287,
+    "summary": "English Franciscan friar, scholastic philosopher, and theologian whose methodological principle of parsimony ('Occam's Razor') laid foundational groundwork for modern scientific inquiry.",
+    "tags": [
+      "Philosophy",
+      "Scholasticism",
+      "Nominalism",
+      "Logic",
+      "Medieval"
+    ],
+    "expectedImage": "/images/personalities/william_of_ockham_portrait.jpg"
+  },
+  {
+    "name": "Ibn Battuta",
+    "dates": "1304–1369",
+    "birthYear": 1304,
+    "summary": "Moroccan Islamic scholar and traveler who logged over 73,000 miles across Africa, the Middle East, Central Asia, India, Southeast Asia, and China, documented in his 'Rihla'.",
+    "tags": [
+      "Exploration",
+      "Travel",
+      "Islamic Golden Age",
+      "Morocco",
+      "Geography"
+    ],
+    "expectedImage": "/images/personalities/ibn_battuta_portrait.jpg"
+  },
+  {
+    "name": "Petrarch",
+    "dates": "1304–1374",
+    "birthYear": 1304,
+    "summary": "Italian scholar and poet celebrated as the 'Father of Humanism', whose recovery of classical texts and sonnets to Laura in the Canzoniere sparked the European Renaissance.",
+    "tags": [
+      "Humanism",
+      "Renaissance",
+      "Poetry",
+      "Literature",
+      "Italy"
+    ],
+    "expectedImage": "/images/personalities/petrarch_portrait.jpg"
+  },
+  {
+    "name": "Giovanni Boccaccio",
+    "dates": "1313–1375",
+    "birthYear": 1313,
+    "summary": "Italian writer, poet, and humanist whose masterpiece The Decameron established the European prose novella and provided vivid, humorous insight into life during the Black Death.",
+    "tags": [
+      "Literature",
+      "Humanism",
+      "Renaissance",
+      "Decameron",
+      "Italy"
+    ],
+    "expectedImage": "/images/personalities/giovanni_boccaccio_portrait.jpg"
+  },
+  {
+    "name": "Hafez",
+    "dates": "c. 1315–1390",
+    "birthYear": 1315,
+    "summary": "Revered Persian lyric poet whose Divan of Hafez represents the pinnacle of Persian ghazal poetry, celebrated across Iran for sublime themes of divine love, ecstasy, and hypocrisy.",
+    "tags": [
+      "Poetry",
+      "Persia",
+      "Sufism",
+      "Literature",
+      "Mysticism"
+    ],
+    "expectedImage": "/images/personalities/hafez_portrait.jpg"
+  },
+  {
+    "name": "Zhu Yuanzhang (Hongwu Emperor)",
+    "dates": "1328–1398",
+    "birthYear": 1328,
+    "summary": "Founding emperor of China's Ming dynasty who rose from peasant poverty and monkhood to lead the Red Turban Rebellion that expelled the Mongol Yuan dynasty and restored Han rule.",
+    "tags": [
+      "Ming Dynasty",
+      "Imperial China",
+      "Leadership",
+      "Monarchy",
+      "History"
+    ],
+    "expectedImage": "/images/personalities/zhu_yuanzhang_hongwu_emperor_portrait.jpg"
+  },
+  {
+    "name": "John Wycliffe",
+    "dates": "c. 1328–1384",
+    "birthYear": 1328,
+    "summary": "English scholastic philosopher and theologian known as the 'Morning Star of the Reformation', who initiated the first complete translation of the Bible into Middle English.",
+    "tags": [
+      "Reformation",
+      "Theology",
+      "England",
+      "Bible Translation",
+      "Middle Ages"
+    ],
+    "expectedImage": "/images/personalities/john_wycliffe_portrait.jpg"
+  },
+  {
+    "name": "Timur (Tamerlane)",
+    "dates": "1336–1405",
+    "birthYear": 1336,
+    "summary": "Turco-Mongol conqueror who founded the Timurid Empire across Central Asia, Persia, and the Levant, remembered both as a devastating military conqueror and patron of the Timurid Renaissance in Samarkand.",
+    "tags": [
+      "Central Asia",
+      "Military Conqueror",
+      "Samarkand",
+      "Timurid Empire",
+      "Architecture"
+    ],
+    "expectedImage": "/images/personalities/timur_tamerlane_portrait.jpg"
+  },
+  {
+    "name": "Geoffrey Chaucer",
+    "dates": "c. 1340–1400",
+    "birthYear": 1340,
+    "summary": "Author, poet, and courtier acclaimed as the 'Father of English Literature', whose Canterbury Tales legitimized Middle English as a rich literary language equal to French and Latin.",
+    "tags": [
+      "Literature",
+      "English Classics",
+      "Poetry",
+      "Middle English",
+      "Canterbury Tales"
+    ],
+    "expectedImage": "/images/personalities/geoffrey_chaucer_portrait.jpg"
+  },
+  {
+    "name": "Christine de Pizan",
+    "dates": "1364–c. 1430",
+    "birthYear": 1364,
+    "summary": "Italian-French late medieval author acclaimed as Europe's first professional female writer, whose Book of the City of Ladies defended women against misogynistic slander.",
+    "tags": [
+      "Literature",
+      "Feminism",
+      "Middle Ages",
+      "France",
+      "Philosophy"
+    ],
+    "expectedImage": "/images/personalities/christine_de_pizan_portrait.jpg"
+  },
+  {
+    "name": "Jan Hus",
+    "dates": "c. 1369–1415",
+    "birthYear": 1369,
+    "summary": "Czech religious reformer and rector of Charles University in Prague whose fiery sermons against Church corruptions launched the Hussite movement; martyred at the Council of Constance.",
+    "tags": [
+      "Reformation",
+      "Bohemia",
+      "Czech History",
+      "Theology",
+      "Martyrdom"
+    ],
+    "expectedImage": "/images/personalities/jan_hus_portrait.jpg"
+  },
+  {
+    "name": "Zheng He",
+    "dates": "1371–1433",
+    "birthYear": 1371,
+    "summary": "Chinese mariner, explorer, and diplomat who commanded seven monumental treasure fleet voyages for the Ming Dynasty across Southeast Asia, India, the Persian Gulf, and East Africa.",
+    "tags": [
+      "Exploration",
+      "Ming Dynasty",
+      "Maritime History",
+      "Ancient China",
+      "Navigation"
+    ],
+    "expectedImage": "/images/personalities/zheng_he_portrait.jpg"
+  },
+  {
+    "name": "Johannes Gutenberg",
+    "dates": "c. 1400–1468",
+    "birthYear": 1400,
+    "summary": "German inventor and goldsmith who introduced movable type printing to Europe, printing the Gutenberg Bible (1455) and igniting the global Printing Revolution.",
+    "tags": [
+      "Invention",
+      "Printing Press",
+      "Renaissance",
+      "Germany",
+      "Communication"
+    ],
+    "expectedImage": "/images/personalities/johannes_gutenberg_portrait.jpg"
+  },
+  {
+    "name": "Vlad the Impaler",
+    "dates": "1431–1476",
+    "birthYear": 1431,
+    "summary": "Voivode of Wallachia three times whose ferocious defense against Ottoman expansion and notorious punishment of enemies by impalement inspired the Dracula legend.",
+    "tags": [
+      "Medieval History",
+      "Wallachia",
+      "Romania",
+      "Warfare",
+      "Dracula"
+    ],
+    "expectedImage": "/images/personalities/vlad_the_impaler_portrait.jpg"
+  },
+  {
+    "name": "Pope Alexander VI",
+    "dates": "1431–1503",
+    "birthYear": 1431,
+    "summary": "Rodrigo Borgia, Renaissance Pope infamous for dynastic ambition, diplomatic cunning, and patronizing Pinturicchio, while mediating the Spanish-Portuguese Treaty of Tordesillas.",
+    "tags": [
+      "Renaissance",
+      "Papacy",
+      "Borgia",
+      "Diplomacy",
+      "Italy"
+    ],
+    "expectedImage": "/images/personalities/pope_alexander_vi_portrait.jpg"
+  },
+  {
+    "name": "Kabir",
+    "dates": "c. 1440–1518",
+    "birthYear": 1440,
+    "summary": "15th-century Indian mystic poet and saint whose earthy, incisive couplets challenged sectarian dogma across Hinduism and Islam, emphasizing direct personal devotion.",
+    "tags": [
+      "Poetry",
+      "Mysticism",
+      "Bhakti",
+      "India",
+      "Spiritual Unity"
+    ],
+    "expectedImage": "/images/personalities/kabir_portrait.jpg"
+  },
+  {
+    "name": "Pope Julius II",
+    "dates": "1443–1513",
+    "birthYear": 1443,
+    "summary": "Giuliano della Rovere, the 'Warrior Pope', who consolidated Papal States sovereignty and served as one of the Renaissance's greatest patrons, commissioning Michelangelo and Raphael.",
+    "tags": [
+      "Renaissance",
+      "Papacy",
+      "Art Patronage",
+      "Vatican",
+      "Rome"
+    ],
+    "expectedImage": "/images/personalities/pope_julius_ii_portrait.jpg"
+  },
+  {
+    "name": "Guru Nanak",
+    "dates": "1469–1539",
+    "birthYear": 1469,
+    "summary": "Founder of Sikhism and first of the ten Sikh Gurus, whose spiritual journeys taught universal equality, oneness of God (Ik Onkar), and honest living.",
+    "tags": [
+      "Sikhism",
+      "Spirituality",
+      "Equality",
+      "India",
+      "Devotion"
+    ],
+    "expectedImage": "/images/personalities/guru_nanak_portrait.jpg"
+  },
+  {
+    "name": "Michelangelo",
+    "dates": "1475–1564",
+    "birthYear": 1475,
+    "summary": "Italian High Renaissance master sculptor, painter, architect, and poet whose works, including David and the Sistine Chapel ceiling, represent the zenith of Western art.",
+    "tags": [
+      "Art",
+      "Renaissance",
+      "Sculpture",
+      "Painting",
+      "Italy"
+    ],
+    "expectedImage": "/images/personalities/michelangelo_portrait.jpg"
+  },
+  {
+    "name": "Ferdinand Magellan",
+    "dates": "c. 1480–1521",
+    "birthYear": 1480,
+    "summary": "Portuguese explorer who organized the Spanish expedition of 1519 to the East Indies, navigating the Strait of Magellan and leading the first expedition to circumnavigate the Earth.",
+    "tags": [
+      "Exploration",
+      "Navigation",
+      "Age of Discovery",
+      "Circumnavigation",
+      "Portugal"
+    ],
+    "expectedImage": "/images/personalities/ferdinand_magellan_portrait.jpg"
+  },
+  {
+    "name": "Ignatius of Loyola",
+    "dates": "1491–1556",
+    "birthYear": 1491,
+    "summary": "Spanish Basque knight turned mystic and theologian who founded the Society of Jesus (Jesuits) and authored the transformative Spiritual Exercises.",
+    "tags": [
+      "Jesuits",
+      "Catholicism",
+      "Spirituality",
+      "Counter-Reformation",
+      "Spain"
+    ],
+    "expectedImage": "/images/personalities/ignatius_of_loyola_portrait.jpg"
+  },
+  {
+    "name": "Pope Gregory XIII",
+    "dates": "1502–1585",
+    "birthYear": 1502,
+    "summary": "Pope famous for introducing the Gregorian Calendar in 1582, correcting inaccuracies of the Julian calendar, and vigorously executing Counter-Reformation educational initiatives.",
+    "tags": [
+      "Science",
+      "Calendar Reform",
+      "Papacy",
+      "Astronomy",
+      "Counter-Reformation"
+    ],
+    "expectedImage": "/images/personalities/pope_gregory_xiii_portrait.jpg"
+  },
+  {
+    "name": "John Calvin",
+    "dates": "1509–1564",
+    "birthYear": 1509,
+    "summary": "French theologian, pastor, and reformer in Geneva whose systematic theology of Reformed Christianity (Calvinism) emphasized the absolute sovereignty of God and predestination.",
+    "tags": [
+      "Reformation",
+      "Theology",
+      "Calvinism",
+      "Christianity",
+      "Geneva"
+    ],
+    "expectedImage": "/images/personalities/john_calvin_portrait.jpg"
+  },
+  {
+    "name": "Andreas Vesalius",
+    "dates": "1514–1564",
+    "birthYear": 1514,
+    "summary": "Flemish anatomist and physician whose masterpiece De humani corporis fabrica overturned Galen's ancient dogmas through meticulous direct human dissection, founding modern human anatomy.",
+    "tags": [
+      "Medicine",
+      "Anatomy",
+      "Scientific Revolution",
+      "Renaissance",
+      "Biology"
+    ],
+    "expectedImage": "/images/personalities/andreas_vesalius_portrait.jpg"
+  },
+  {
+    "name": "Teresa of Ávila",
+    "dates": "1515–1582",
+    "birthYear": 1515,
+    "summary": "Spanish mystic, Carmelite nun, and Doctor of the Church who led the Discalced Carmelite reform and penned profound spiritual classics on contemplative prayer.",
+    "tags": [
+      "Mysticism",
+      "Doctor of the Church",
+      "Spain",
+      "Carmelite",
+      "Spirituality"
+    ],
+    "expectedImage": "/images/personalities/teresa_of_ávila_portrait.jpg"
+  },
+  {
+    "name": "Toyotomi Hideyoshi",
+    "dates": "1537–1598",
+    "birthYear": 1537,
+    "summary": "Japanese daimyo who rose from peasant foot soldier to succeed Oda Nobunaga as the second 'Great Unifier' of Japan, building Osaka Castle and ordering the nationwide sword hunt.",
+    "tags": [
+      "Japan",
+      "Samurai",
+      "Sengoku Period",
+      "Unification",
+      "Leadership"
+    ],
+    "expectedImage": "/images/personalities/toyotomi_hideyoshi_portrait.jpg"
+  },
+  {
+    "name": "Caravaggio",
+    "dates": "1571–1610",
+    "birthYear": 1571,
+    "summary": "Italian Baroque painter whose radical naturalism and revolutionary chiaroscuro (dramatic light and shadow) reshaped European painting.",
+    "tags": [
+      "Art",
+      "Baroque",
+      "Chiaroscuro",
+      "Painting",
+      "Italy"
+    ],
+    "expectedImage": "/images/personalities/caravaggio_portrait.jpg"
+  },
+  {
+    "name": "William Harvey",
+    "dates": "1578–1657",
+    "birthYear": 1578,
+    "summary": "English physician who was the first to describe completely and in systemic detail the circulation of blood pumped throughout the body by the heart in De Motu Cordis.",
+    "tags": [
+      "Medicine",
+      "Cardiology",
+      "Circulation",
+      "Science",
+      "England"
+    ],
+    "expectedImage": "/images/personalities/william_harvey_portrait.jpg"
+  },
+  {
+    "name": "Artemisia Gentileschi",
+    "dates": "1593–1656",
+    "birthYear": 1593,
+    "summary": "Italian Baroque painter, the first woman admitted to Florence's Accademia delle Arti del Disegno, celebrated for dramatic, visceral depictions of strong biblical and mythical women.",
+    "tags": [
+      "Baroque",
+      "Art",
+      "Painting",
+      "Italy",
+      "Feminism"
+    ],
+    "expectedImage": "/images/personalities/artemisia_gentileschi_portrait.jpg"
+  },
+  {
+    "name": "Pierre de Fermat",
+    "dates": "1607–1665",
+    "birthYear": 1607,
+    "summary": "French lawyer and amateur mathematician who laid foundations for analytic geometry, infinitesimal calculus, probability theory, and formulated Fermat's Last Theorem.",
+    "tags": [
+      "Mathematics",
+      "Number Theory",
+      "Calculus",
+      "Probability",
+      "France"
+    ],
+    "expectedImage": "/images/personalities/pierre_de_fermat_portrait.jpg"
+  },
+  {
+    "name": "Dandara dos Palmares",
+    "dates": "c. 1654–1694",
+    "birthYear": 1654,
+    "summary": "Afro-Brazilian warrior and military strategist of Quilombo dos Palmares who fought fiercely against Portuguese colonial forces to defend freedom and autonomy for escaped enslaved people.",
+    "tags": [
+      "Brazil",
+      "Quilombo dos Palmares",
+      "Afro-Brazilian History",
+      "Resistance",
+      "Freedom"
+    ],
+    "expectedImage": "/images/personalities/dandara_dos_palmares_portrait.jpg"
+  },
+  {
+    "name": "Guru Gobind Singh",
+    "dates": "1666–1708",
+    "birthYear": 1666,
+    "summary": "Tenth Sikh Guru, spiritual master, warrior, and poet who founded the Khalsa order, introduced the Five Ks, and declared the Guru Granth Sahib as the eternal Guru.",
+    "tags": [
+      "Sikhism",
+      "Warrior",
+      "Spirituality",
+      "Khalsa",
+      "India"
+    ],
+    "expectedImage": "/images/personalities/guru_gobind_singh_portrait.jpg"
+  },
+  {
+    "name": "Antonio Vivaldi",
+    "dates": "1678–1741",
+    "birthYear": 1678,
+    "summary": "Venetian Baroque composer and virtuoso violinist known as 'The Red Priest' (Il Prete Rosso), whose Four Seasons violin concertos remain among the most celebrated works in classical music.",
+    "tags": [
+      "Music",
+      "Baroque",
+      "Classical",
+      "Violin",
+      "Venice"
+    ],
+    "expectedImage": "/images/personalities/antonio_vivaldi_portrait.jpg"
+  },
+  {
+    "name": "Baal Shem Tov",
+    "dates": "c. 1698–1760",
+    "birthYear": 1698,
+    "summary": "Israel ben Eliezer, charismatic mystic and spiritual healer in Eastern Europe who founded Hasidic Judaism, emphasizing joyous prayer, love of fellow humans, and divine immanence.",
+    "tags": [
+      "Hasidism",
+      "Judaism",
+      "Mysticism",
+      "Spirituality",
+      "Eastern Europe"
+    ],
+    "expectedImage": "/images/personalities/baal_shem_tov_portrait.jpg"
+  },
+  {
+    "name": "Sepé Tiaraju",
+    "dates": "c. 1723–1756",
+    "birthYear": 1723,
+    "summary": "Guarani chief and military leader of the Jesuit Reductions who resisted Portuguese and Spanish territorial transfers in the Guaraní War, immortalized by the cry 'Esta terra tem dono!'.",
+    "tags": [
+      "Brazil",
+      "Guarani",
+      "Indigenous Resistance",
+      "History",
+      "South America"
+    ],
+    "expectedImage": "/images/personalities/sepé_tiaraju_portrait.jpg"
+  },
+  {
+    "name": "James Cook",
+    "dates": "1728–1779",
+    "birthYear": 1728,
+    "summary": "British navigator, cartographer, and captain in the Royal Navy who made three epic voyages of discovery to the Pacific Ocean, producing the first accurate European maps of New Zealand and eastern Australia.",
+    "tags": [
+      "Exploration",
+      "Cartography",
+      "Navigation",
+      "Pacific",
+      "Royal Navy"
+    ],
+    "expectedImage": "/images/personalities/james_cook_portrait.jpg"
+  },
+  {
+    "name": "James Watt",
+    "dates": "1736–1819",
+    "birthYear": 1736,
+    "summary": "Scottish inventor and mechanical engineer whose radical improvements to the Newcomen steam engine with a separate condenser powered the Industrial Revolution.",
+    "tags": [
+      "Engineering",
+      "Industrial Revolution",
+      "Invention",
+      "Steam Power",
+      "Scotland"
+    ],
+    "expectedImage": "/images/personalities/james_watt_portrait.jpg"
+  },
+  {
+    "name": "Túpac Amaru II",
+    "dates": "1738–1781",
+    "birthYear": 1738,
+    "summary": "Quechua kuraka who led the largest anti-colonial indigenous rebellion in 18th-century Spanish South America, declaring the abolition of slavery and indigenous forced labor.",
+    "tags": [
+      "Peru",
+      "Indigenous Rights",
+      "Anti-Colonialism",
+      "Revolution",
+      "Quechua"
+    ],
+    "expectedImage": "/images/personalities/túpac_amaru_ii_portrait.jpg"
+  },
+  {
+    "name": "Thomas Jefferson",
+    "dates": "1743–1826",
+    "birthYear": 1743,
+    "summary": "Third President of the United States, principal author of the Declaration of Independence, polymath, and founder of the University of Virginia, who championed liberty and religious freedom.",
+    "tags": [
+      "United States",
+      "Founding Father",
+      "Enlightenment",
+      "Democracy",
+      "President"
+    ],
+    "expectedImage": "/images/personalities/thomas_jefferson_portrait.jpg"
+  },
+  {
+    "name": "Wolfgang Amadeus Mozart",
+    "dates": "1756–1791",
+    "birthYear": 1756,
+    "summary": "Austrian composer of the Classical era, widely recognized as one of the greatest musical prodigies in history, composing over 800 works across every musical genre.",
+    "tags": [
+      "Music",
+      "Classical",
+      "Opera",
+      "Composition",
+      "Austria"
+    ],
+    "expectedImage": "/images/personalities/wolfgang_amadeus_mozart_portrait.jpg"
+  },
+  {
+    "name": "José Bonifácio de Andrada e Silva",
+    "dates": "1763–1838",
+    "birthYear": 1763,
+    "summary": "Polymath, mineralogist, and 'Patriarch of Independence' who steered Dom Pedro I toward Brazilian sovereignty in 1822 and championed the abolition of slavery.",
+    "tags": [
+      "Independência",
+      "Mineralogia",
+      "Abolicionismo",
+      "Império do Brasil"
+    ],
+    "expectedImage": "/images/personalities/jose_bonifacio_de_andrada_e_silva_portrait.jpg"
+  },
+  {
+    "name": "Jane Austen",
+    "dates": "1775–1817",
+    "birthYear": 1775,
+    "summary": "English novelist whose masterworks of romantic fiction, psychological realism, and brilliant social satire made her one of the most enduring writers in world literature.",
+    "tags": [
+      "Literature",
+      "Classics",
+      "Realism",
+      "Satire",
+      "England"
+    ],
+    "expectedImage": "/images/personalities/jane_austen_portrait.jpg"
+  },
+  {
+    "name": "Maria Quitéria",
+    "dates": "1792–1853",
+    "birthYear": 1792,
+    "summary": "Brazilian independence heroine who disguised herself as a man ('Soldado Medeiros') to fight in the War of Independence of Bahia (1822–1823), decorated by Emperor Dom Pedro I.",
+    "tags": [
+      "History",
+      "Brazil",
+      "Independence",
+      "Military",
+      "Heroism"
+    ],
+    "expectedImage": "/images/personalities/maria_quitéria_portrait.jpg"
+  },
+  {
+    "name": "Mary Shelley",
+    "dates": "1797–1851",
+    "birthYear": 1797,
+    "summary": "English novelist who created modern science fiction at age 18 with 'Frankenstein; or, The Modern Prometheus', an enduring inquiry into scientific ambition, creation, and hubris.",
+    "tags": [
+      "Literature",
+      "Science Fiction",
+      "Gothic Fiction",
+      "Romanticism",
+      "Classics"
+    ],
+    "expectedImage": "/images/personalities/mary_shelley_portrait.jpg"
+  },
+  {
+    "name": "Sojourner Truth",
+    "dates": "c. 1797–1883",
+    "birthYear": 1797,
+    "summary": "African American abolitionist, women's rights activist, and orator born into slavery who delivered the electrifying speech 'Ain't I a Woman?' at the 1851 Akron Convention.",
+    "tags": [
+      "Civil Rights",
+      "Abolitionism",
+      "Feminism",
+      "Oratory",
+      "United States"
+    ],
+    "expectedImage": "/images/personalities/sojourner_truth_portrait.jpg"
+  },
+  {
+    "name": "Duque de Caxias",
+    "dates": "1803–1880",
+    "birthYear": 1803,
+    "summary": "Luís Alves de Lima e Silva, Patron of the Brazilian Army, military strategist, and Prime Minister who stabilized the Empire and commanded allied forces in the Paraguayan War.",
+    "tags": [
+      "Exército Brasileiro",
+      "Guerra do Paraguai",
+      "Império",
+      "Militar"
+    ],
+    "expectedImage": "/images/personalities/duque_de_caxias_portrait.jpg"
+  },
+  {
+    "name": "Louis Braille",
+    "dates": "1809–1852",
+    "birthYear": 1809,
+    "summary": "French educator who, having lost his sight as a child, invented the six-dot embossed tactile reading and writing system (Braille) that revolutionized global literacy for the blind.",
+    "tags": [
+      "Invention",
+      "Education",
+      "Accessibility",
+      "France",
+      "Braille"
+    ],
+    "expectedImage": "/images/personalities/louis_braille_portrait.jpg"
+  },
+  {
+    "name": "Frédéric Chopin",
+    "dates": "1810–1849",
+    "birthYear": 1810,
+    "summary": "Polish composer and virtuoso pianist of the Romantic era, known as the 'poet of the piano' for his expressive nocturnes, ballades, polonaises, and études.",
+    "tags": [
+      "Music",
+      "Romanticism",
+      "Piano",
+      "Poland",
+      "Composition"
+    ],
+    "expectedImage": "/images/personalities/frédéric_chopin_portrait.jpg"
+  },
+  {
+    "name": "Pope Leo XIII",
+    "dates": "1810–1903",
+    "birthYear": 1810,
+    "summary": "Pope whose intellectual pontificate produced the landmark encyclical Rerum Novarum, establishing modern Catholic social teaching on workers' rights and economic justice.",
+    "tags": [
+      "Religion",
+      "Catholicism",
+      "Social Justice",
+      "Labor Rights",
+      "Philosophy"
+    ],
+    "expectedImage": "/images/personalities/pope_leo_xiii_portrait.jpg"
+  },
+  {
+    "name": "Herman Melville",
+    "dates": "1819–1891",
+    "birthYear": 1819,
+    "summary": "American novelist, short story writer, and poet of the American Renaissance whose masterpiece 'Moby-Dick' is one of the supreme achievements of world literature.",
+    "tags": [
+      "Literature",
+      "Classics",
+      "American Renaissance",
+      "Novels"
+    ],
+    "expectedImage": "/images/personalities/herman_melville_portrait.jpg"
+  },
+  {
+    "name": "Florence Nightingale",
+    "dates": "1820–1910",
+    "birthYear": 1820,
+    "summary": "English social reformer, statistician, and founder of modern nursing, acclaimed as 'The Lady with the Lamp' for caring for wounded soldiers during the Crimean War.",
+    "tags": [
+      "Medicine",
+      "Nursing",
+      "Statistics",
+      "Healthcare",
+      "Reformation"
+    ],
+    "expectedImage": "/images/personalities/florence_nightingale_portrait.jpg"
+  },
+  {
+    "name": "Anita Garibaldi",
+    "dates": "1821–1849",
+    "birthYear": 1821,
+    "summary": "Brazilian revolutionary known as the 'Heroine of the Two Worlds', who fought alongside Giuseppe Garibaldi in the Ragamuffin War in southern Brazil and the battles for Italian unification.",
+    "tags": [
+      "Brazil",
+      "Italy",
+      "Revolution",
+      "History",
+      "Women in War"
+    ],
+    "expectedImage": "/images/personalities/anita_garibaldi_portrait.jpg"
+  },
+  {
+    "name": "Harriet Tubman",
+    "dates": "c. 1822–1913",
+    "birthYear": 1822,
+    "summary": "American abolitionist, Underground Railroad conductor, Union scout, and suffragist who escaped slavery and courageously led dozens of enslaved people to freedom.",
+    "tags": [
+      "Abolitionism",
+      "Civil Rights",
+      "Underground Railroad",
+      "American History",
+      "Courage"
+    ],
+    "expectedImage": "/images/personalities/harriet_tubman_portrait.jpg"
+  },
+  {
+    "name": "Gregor Mendel",
+    "dates": "1822–1884",
+    "birthYear": 1822,
+    "summary": "Austrian Augustinian friar and scientist recognized as the father of modern genetics for his experimental breeding of pea plants, establishing the fundamental laws of genetic inheritance.",
+    "tags": [
+      "Genetics",
+      "Biology",
+      "Botany",
+      "Science History",
+      "Heredity"
+    ],
+    "expectedImage": "/images/personalities/gregor_mendel_portrait.jpg"
+  },
+  {
+    "name": "Geronimo",
+    "dates": "1829–1909",
+    "birthYear": 1829,
+    "summary": "Prominent Bedonkohe Apache warrior and medicine man who led fierce guerrilla resistance against Mexican and United States military expansion across the American Southwest.",
+    "tags": [
+      "Native American",
+      "Apache",
+      "Resistance",
+      "American History",
+      "Warfare"
+    ],
+    "expectedImage": "/images/personalities/geronimo_portrait.jpg"
+  },
+  {
+    "name": "Emily Dickinson",
+    "dates": "1830–1886",
+    "birthYear": 1830,
+    "summary": "Distinctive American poet of Amherst, Massachusetts, whose reclusive life yielded nearly 1,800 intensely compressed, slant-rhymed masterpieces on mortality, faith, and nature.",
+    "tags": [
+      "Literature",
+      "Poetry",
+      "United States",
+      "Romanticism",
+      "Metaphysics"
+    ],
+    "expectedImage": "/images/personalities/emily_dickinson_portrait.jpg"
+  },
+  {
+    "name": "Sitting Bull",
+    "dates": "c. 1831–1890",
+    "birthYear": 1831,
+    "summary": "Hunkpapa Lakota holy man and tribal chief who united the Sioux tribes of the Great Plains against US military encroachment, defeating Custer at the Battle of the Little Bighorn.",
+    "tags": [
+      "Native American",
+      "Lakota",
+      "Indigenous Rights",
+      "American History",
+      "Leadership"
+    ],
+    "expectedImage": "/images/personalities/sitting_bull_portrait.jpg"
+  },
+  {
+    "name": "Claude Monet",
+    "dates": "1840–1926",
+    "birthYear": 1840,
+    "summary": "French painter and foundational master of Impressionism, devoted to capturing the fleeting perceptions of light, weather, and color in the natural landscape.",
+    "tags": [
+      "Art",
+      "Impressionism",
+      "Painting",
+      "France",
+      "Landscape"
+    ],
+    "expectedImage": "/images/personalities/claude_monet_portrait.jpg"
+  },
+  {
+    "name": "Pyotr Ilyich Tchaikovsky",
+    "dates": "1840–1893",
+    "birthYear": 1840,
+    "summary": "Russian Romantic composer renowned for melodic genius and profound emotional resonance, who composed timeless ballet masterworks Swan Lake, The Nutcracker, and the 1812 Overture.",
+    "tags": [
+      "Music",
+      "Romanticism",
+      "Ballet",
+      "Russia",
+      "Classical"
+    ],
+    "expectedImage": "/images/personalities/pyotr_ilyich_tchaikovsky_portrait.jpg"
+  },
+  {
+    "name": "Prudente de Morais",
+    "dates": "1841–1902",
+    "birthYear": 1841,
+    "summary": "First civilian President of Brazil (1894–1898), who steered the nation from military dictatorship toward civilian constitutional governance through the War of Canudos.",
+    "tags": [
+      "Primeira República",
+      "Presidência",
+      "Direito Constitucional",
+      "Civilismo"
+    ],
+    "expectedImage": "/images/personalities/prudente_de_morais_portrait.jpg"
+  },
+  {
+    "name": "Alfred Marshall",
+    "dates": "1842–1924",
+    "birthYear": 1842,
+    "summary": "English economist who was one of the foremost founders of neoclassical economics, synthesizing supply and demand, marginal utility, and costs of production into a coherent framework.",
+    "tags": [
+      "Economics",
+      "Neoclassical Economics",
+      "Microeconomics",
+      "Supply & Demand"
+    ],
+    "expectedImage": "/images/personalities/alfred_marshall_portrait.jpg"
+  },
+  {
+    "name": "Barão do Rio Branco",
+    "dates": "1845–1912",
+    "birthYear": 1845,
+    "summary": "José Maria da Silva Paranhos Júnior, Patron of Brazilian Diplomacy, who peacefully defined and secured Brazil's definitive national borders including Acre.",
+    "tags": [
+      "Diplomacia",
+      "Itamaraty",
+      "Geopolítica",
+      "Fronteiras"
+    ],
+    "expectedImage": "/images/personalities/barao_do_rio_branco_portrait.jpg"
+  },
+  {
+    "name": "Castro Alves",
+    "dates": "1847–1871",
+    "birthYear": 1847,
+    "summary": "Brazilian poet known as the 'Poet of the Slaves' (O Poeta dos Escravos), whose impassioned Condorist Romantic verse campaigned ardently for the abolition of slavery and republican freedom.",
+    "tags": [
+      "Literature",
+      "Poetry",
+      "Abolitionism",
+      "Brazil",
+      "Romanticism"
+    ],
+    "expectedImage": "/images/personalities/castro_alves_portrait.jpg"
+  },
+  {
+    "name": "Vilfredo Pareto",
+    "dates": "1848–1923",
+    "birthYear": 1848,
+    "summary": "Italian polymath, engineer, sociologist, and economist who formulated the Pareto efficiency concept in economics and discovered the 80/20 power-law wealth distribution rule (Pareto principle).",
+    "tags": [
+      "Economics",
+      "Sociology",
+      "Pareto Principle",
+      "Optimization",
+      "Italy"
+    ],
+    "expectedImage": "/images/personalities/vilfredo_pareto_portrait.jpg"
+  },
+  {
+    "name": "Gottlob Frege",
+    "dates": "1848–1925",
+    "birthYear": 1848,
+    "summary": "German mathematician, logician, and philosopher considered one of the founding fathers of modern mathematical logic and analytic philosophy.",
+    "tags": [
+      "Logic",
+      "Analytic Philosophy",
+      "Mathematics",
+      "Philosophy of Language"
+    ],
+    "expectedImage": "/images/personalities/gottlob_frege_portrait.jpg"
+  },
+  {
+    "name": "Rodrigues Alves",
+    "dates": "1848–1919",
+    "birthYear": 1848,
+    "summary": "Fifth President of Brazil, celebrated for modernizing Rio de Janeiro, expanding port infrastructure, and backing Oswaldo Cruz in eradicating yellow fever and smallpox.",
+    "tags": [
+      "Primeira República",
+      "Urbanismo",
+      "Saúde Pública",
+      "Modernização"
+    ],
+    "expectedImage": "/images/personalities/rodrigues_alves_portrait.jpg"
+  },
+  {
+    "name": "Joaquim Nabuco",
+    "dates": "1849–1910",
+    "birthYear": 1849,
+    "summary": "Diplomat, historian, and preeminent parliamentary champion of Brazilian abolitionism, whose foundational writing exposed slavery as the nation's core moral wound.",
+    "tags": [
+      "Abolicionismo",
+      "Diplomacia",
+      "Literatura",
+      "História"
+    ],
+    "expectedImage": "/images/personalities/joaquim_nabuco_portrait.jpg"
+  },
+  {
+    "name": "Rui Barbosa",
+    "dates": "1849–1923",
+    "birthYear": 1849,
+    "summary": "Jurist, orator, writer, and 'Eagle of The Hague' who co-authored the 1891 Republican Constitution and defended the sovereign equality of nations at the 1907 Hague Conference.",
+    "tags": [
+      "Direito",
+      "Constitucionalismo",
+      "Oratória",
+      "República"
+    ],
+    "expectedImage": "/images/personalities/rui_barbosa_portrait.jpg"
+  },
+  {
+    "name": "Antoni Gaudí",
+    "dates": "1852–1926",
+    "birthYear": 1852,
+    "summary": "Catalan architect and supreme master of Modernisme, whose bio-morphic, organic architecture culminated in Barcelona's monumental Basílica de la Sagrada Família.",
+    "tags": [
+      "Architecture",
+      "Modernisme",
+      "Catalonia",
+      "Organic Design"
+    ],
+    "expectedImage": "/images/personalities/antoni_gaudi_portrait.jpg"
+  },
+  {
+    "name": "Vincent van Gogh",
+    "dates": "1853–1890",
+    "birthYear": 1853,
+    "summary": "Dutch Post-Impressionist painter whose emotionally expressive brushwork, vivid colors, and dramatic compositions laid the foundations of modern expressionism.",
+    "tags": [
+      "Art",
+      "Post-Impressionism",
+      "Painting",
+      "Netherlands",
+      "Expressionism"
+    ],
+    "expectedImage": "/images/personalities/vincent_van_gogh_portrait.jpg"
+  },
+  {
+    "name": "Henri Poincaré",
+    "dates": "1854–1912",
+    "birthYear": 1854,
+    "summary": "French mathematician, theoretical physicist, and philosopher of science hailed as the 'Last Universalist', who founded algebraic topology, chaos theory, and special relativity foundations.",
+    "tags": [
+      "Mathematics",
+      "Chaos Theory",
+      "Topology",
+      "Physics",
+      "Philosophy"
+    ],
+    "expectedImage": "/images/personalities/henri_poincaré_portrait.jpg"
+  },
+  {
+    "name": "Emmeline Pankhurst",
+    "dates": "1858–1928",
+    "birthYear": 1858,
+    "summary": "British political activist who founded and led the militant suffragette movement (Women's Social and Political Union), instrumental in winning women the right to vote in Britain.",
+    "tags": [
+      "Suffrage",
+      "Women's Rights",
+      "United Kingdom",
+      "Activism",
+      "Democracy"
+    ],
+    "expectedImage": "/images/personalities/emmeline_pankhurst_portrait.jpg"
+  },
+  {
+    "name": "Anton Chekhov",
+    "dates": "1860–1904",
+    "birthYear": 1860,
+    "summary": "Russian playwright and short-story master whose psychological realism, understated poignancy, and dramatic innovation revolutionised modern prose and theatre.",
+    "tags": [
+      "Literature",
+      "Theater",
+      "Realism",
+      "Short Stories",
+      "Russia"
+    ],
+    "expectedImage": "/images/personalities/anton_chekhov_portrait.jpg"
+  },
+  {
+    "name": "David Hilbert",
+    "dates": "1862–1943",
+    "birthYear": 1862,
+    "summary": "German mathematician recognized as one of the most influential figures of 19th and 20th-century mathematics, formulating Hilbert space, invariant theory, and 23 famous unsolved problems.",
+    "tags": [
+      "Mathematics",
+      "Functional Analysis",
+      "Axiomatics",
+      "Logic",
+      "Germany"
+    ],
+    "expectedImage": "/images/personalities/david_hilbert_portrait.jpg"
+  },
+  {
+    "name": "Henry Ford",
+    "dates": "1863–1947",
+    "birthYear": 1863,
+    "summary": "American industrialist and founder of Ford Motor Company who developed the moving assembly line for mass production, revolutionizing global manufacturing and the automobile industry.",
+    "tags": [
+      "Automobile",
+      "Manufacturing",
+      "Industry",
+      "Engineering",
+      "American History"
+    ],
+    "expectedImage": "/images/personalities/henry_ford_portrait.jpg"
+  },
+  {
+    "name": "Swami Vivekananda",
+    "dates": "1863–1902",
+    "birthYear": 1863,
+    "summary": "Indian Hindu monk and chief disciple of Ramakrishna who introduced Vedanta and Yoga to the Western world at the 1893 Chicago Parliament of the World's Religions.",
+    "tags": [
+      "Spirituality",
+      "Vedanta",
+      "Hinduism",
+      "India",
+      "Yoga"
+    ],
+    "expectedImage": "/images/personalities/swami_vivekananda_portrait.jpg"
+  },
+  {
+    "name": "Mahatma Gandhi",
+    "dates": "1869–1948",
+    "birthYear": 1869,
+    "summary": "Indian lawyer, anti-colonial nationalist, and political ethicist who led the nationwide campaign for Indian independence through nonviolent civil resistance (Satyagraha).",
+    "tags": [
+      "Nonviolence",
+      "Civil Rights",
+      "Decolonization",
+      "India",
+      "Peace"
+    ],
+    "expectedImage": "/images/personalities/mahatma_gandhi_portrait.jpg"
+  },
+  {
+    "name": "Guglielmo Marconi",
+    "dates": "1874–1937",
+    "birthYear": 1874,
+    "summary": "Italian inventor and electrical engineer who developed the first practical radio wireless telegraphy system, sending the first transatlantic radio signal in 1901; awarded the 1909 Nobel Prize in Physics.",
+    "tags": [
+      "Invention",
+      "Radio",
+      "Physics",
+      "Nobel Prize",
+      "Italy"
+    ],
+    "expectedImage": "/images/personalities/guglielmo_marconi_portrait.jpg"
+  },
+  {
+    "name": "Ernest Shackleton",
+    "dates": "1874–1922",
+    "birthYear": 1874,
+    "summary": "Anglo-Irish polar explorer who led three British expeditions to the Antarctic, legendary for his extraordinary leadership and survival triumph during the Imperial Trans-Antarctic Expedition (Endurance).",
+    "tags": [
+      "Exploration",
+      "Antarctica",
+      "Leadership",
+      "Endurance",
+      "Survival"
+    ],
+    "expectedImage": "/images/personalities/ernest_shackleton_portrait.jpg"
+  },
+  {
+    "name": "Lise Meitner",
+    "dates": "1878–1968",
+    "birthYear": 1878,
+    "summary": "Austrian-Swedish physicist who led the discovery and theoretical explanation of nuclear fission with Otto Hahn and Otto Frisch, unfairly excluded from the 1944 Nobel Prize.",
+    "tags": [
+      "Nuclear Physics",
+      "Fission",
+      "Women in STEM",
+      "Austria",
+      "Sweden"
+    ],
+    "expectedImage": "/images/personalities/lise_meitner_portrait.jpg"
+  },
+  {
+    "name": "Pablo Picasso",
+    "dates": "1881–1973",
+    "birthYear": 1881,
+    "summary": "Spanish painter and sculptor who co-founded the Cubist movement, invented constructed sculpture, and redefined 20th-century visual art with works like Guernica.",
+    "tags": [
+      "Art",
+      "Cubism",
+      "Painting",
+      "Modern Art",
+      "Spain"
+    ],
+    "expectedImage": "/images/personalities/pablo_picasso_portrait.jpg"
+  },
+  {
+    "name": "Alexander Fleming",
+    "dates": "1881–1955",
+    "birthYear": 1881,
+    "summary": "Scottish physician and microbiologist who discovered penicillin in 1928, inaugurating the era of modern antibiotics and saving hundreds of millions of lives worldwide.",
+    "tags": [
+      "Medicine",
+      "Microbiology",
+      "Antibiotics",
+      "Penicillin",
+      "Nobel Prize"
+    ],
+    "expectedImage": "/images/personalities/alexander_fleming_portrait.jpg"
+  },
+  {
+    "name": "Lima Barreto",
+    "dates": "1881–1922",
+    "birthYear": 1881,
+    "summary": "Brazilian novelist and journalist whose sharp, socially critical fiction challenged racism, class prejudice, and republican hypocrisy in early 20th-century Rio de Janeiro.",
+    "tags": [
+      "Literature",
+      "Brazil",
+      "Social Realism",
+      "Journalism",
+      "Anti-Racism"
+    ],
+    "expectedImage": "/images/personalities/lima_barreto_portrait.jpg"
+  },
+  {
+    "name": "Pope John XXIII",
+    "dates": "1881–1963",
+    "birthYear": 1881,
+    "summary": "Angelo Giuseppe Roncalli, beloved as 'Good Pope John', who convened the transformative Second Vatican Council (Vatican II) to modernize and open the Catholic Church.",
+    "tags": [
+      "Religion",
+      "Catholicism",
+      "Vatican II",
+      "Peace",
+      "Reform"
+    ],
+    "expectedImage": "/images/personalities/pope_john_xxiii_portrait.jpg"
+  },
+  {
+    "name": "Emmy Noether",
+    "dates": "1882–1935",
+    "birthYear": 1882,
+    "summary": "German mathematician described by Einstein as the most significant woman in mathematical history, whose theorem connects continuous symmetries to physical conservation laws.",
+    "tags": [
+      "Mathematics",
+      "Theoretical Physics",
+      "Abstract Algebra",
+      "Women in STEM",
+      "Symmetry"
+    ],
+    "expectedImage": "/images/personalities/emmy_noether_portrait.jpg"
+  },
+  {
+    "name": "Eleanor Roosevelt",
+    "dates": "1884–1962",
+    "birthYear": 1884,
+    "summary": "American political figure, diplomat, and activist who served as First Lady, chaired the UN Commission on Human Rights, and spearheaded the Universal Declaration of Human Rights.",
+    "tags": [
+      "Human Rights",
+      "United Nations",
+      "Civil Rights",
+      "First Lady",
+      "Diplomacy"
+    ],
+    "expectedImage": "/images/personalities/eleanor_roosevelt_portrait.jpg"
+  },
+  {
+    "name": "Srinivasa Ramanujan",
+    "dates": "1887–1920",
+    "birthYear": 1887,
+    "summary": "Self-taught Indian mathematical genius whose intuitive breakthroughs in mathematical analysis, infinite series, continued fractions, and partition theory stunned world mathematics.",
+    "tags": [
+      "Mathematics",
+      "Number Theory",
+      "Analysis",
+      "India",
+      "Genius"
+    ],
+    "expectedImage": "/images/personalities/srinivasa_ramanujan_portrait.jpg"
+  },
+  {
+    "name": "Charlie Chaplin",
+    "dates": "1889–1977",
+    "birthYear": 1889,
+    "summary": "English comic actor, filmmaker, and composer who became a worldwide icon through his screen persona 'The Tramp', creating timeless masterworks of silent comedy and social satire.",
+    "tags": [
+      "Cinema",
+      "Comedy",
+      "Silent Film",
+      "Satire",
+      "Acting"
+    ],
+    "expectedImage": "/images/personalities/charlie_chaplin_portrait.jpg"
+  },
+  {
+    "name": "Adolf Hitler",
+    "dates": "1889–1945",
+    "birthYear": 1889,
+    "summary": "Austrian-born dictator of Nazi Germany whose aggressive militarism ignited World War II in Europe and whose genocidal racial policies led to the Holocaust.",
+    "tags": [
+      "History",
+      "World War II",
+      "Totalitarianism",
+      "Dictator",
+      "Germany"
+    ],
+    "expectedImage": "/images/personalities/adolf_hitler_portrait.jpg"
+  },
+  {
+    "name": "Jawaharlal Nehru",
+    "dates": "1889–1964",
+    "birthYear": 1889,
+    "summary": "First Prime Minister of independent India, architect of modern Indian democracy, secularism, and public science, and co-founder of the global Non-Aligned Movement.",
+    "tags": [
+      "India",
+      "Non-Aligned Movement",
+      "Democracy",
+      "Post-Colonialism"
+    ],
+    "expectedImage": "/images/personalities/jawaharlal_nehru_portrait.jpg"
+  },
+  {
+    "name": "Agatha Christie",
+    "dates": "1890–1976",
+    "birthYear": 1890,
+    "summary": "English detective fiction author acclaimed as the 'Queen of Mystery', the best-selling fiction writer of all time, who created iconic sleuths Hercule Poirot and Miss Marple.",
+    "tags": [
+      "Literature",
+      "Mystery",
+      "Detective",
+      "United Kingdom",
+      "Fiction"
+    ],
+    "expectedImage": "/images/personalities/agatha_christie_portrait.jpg"
+  },
+  {
+    "name": "Vyacheslav Molotov",
+    "dates": "1890–1986",
+    "birthYear": 1890,
+    "summary": "Old Bolshevik and Stalin's premier diplomatic negotiator who signed the 1939 Molotov-Ribbentrop Pact and shaped Soviet post-WWII diplomacy, namesaked in the 'Molotov cocktail'.",
+    "tags": [
+      "Soviet Union",
+      "Diplomacy",
+      "World War II",
+      "Bolshevik"
+    ],
+    "expectedImage": "/images/personalities/vyacheslav_molotov_portrait.jpg"
+  },
+  {
+    "name": "Josip Broz Tito",
+    "dates": "1892–1980",
+    "birthYear": 1892,
+    "summary": "Yugoslav communist revolutionary, anti-Nazi Partisan leader, and President who preserved Yugoslav unity and pioneered the Non-Aligned Movement after breaking with Stalin in 1948.",
+    "tags": [
+      "Yugoslavia",
+      "Non-Aligned Movement",
+      "Partisans",
+      "Socialism"
+    ],
+    "expectedImage": "/images/personalities/josip_broz_tito_portrait.jpg"
+  },
+  {
+    "name": "Haile Selassie",
+    "dates": "1892–1975",
+    "birthYear": 1892,
+    "summary": "Emperor of Ethiopia who modernized his nation, defiantly appealed to the League of Nations against fascist Italian invasion, and became a revered figure in Rastafarianism and Pan-Africanism.",
+    "tags": [
+      "Ethiopia",
+      "Pan-Africanism",
+      "Anti-Fascism",
+      "Rastafari"
+    ],
+    "expectedImage": "/images/personalities/haile_selassie_portrait.jpg"
+  },
+  {
+    "name": "Bertha Lutz",
+    "dates": "1894–1976",
+    "birthYear": 1894,
+    "summary": "Brazilian zoologist, politician, and pioneer of the feminist movement in Latin America, who secured women's right to vote in Brazil and fought to enshrine gender equality in the UN Charter.",
+    "tags": [
+      "Feminism",
+      "Women's Suffrage",
+      "Brazil",
+      "United Nations",
+      "Biology"
+    ],
+    "expectedImage": "/images/personalities/bertha_lutz_portrait.jpg"
+  },
+  {
+    "name": "Nikita Khrushchev",
+    "dates": "1894–1971",
+    "birthYear": 1894,
+    "summary": "Soviet Premier who denounced Stalin's terror in the 'Secret Speech', initiated the cultural Thaw, backed the early Space Race triumphs, and resolved the Cuban Missile Crisis.",
+    "tags": [
+      "Soviet Union",
+      "Cold War",
+      "De-Stalinization",
+      "Space Race"
+    ],
+    "expectedImage": "/images/personalities/nikita_khrushchev_portrait.jpg"
+  },
+  {
+    "name": "Plínio Salgado",
+    "dates": "1895–1975",
+    "birthYear": 1895,
+    "summary": "Writer, journalist, and politician who founded Brazilian Integralism (AIB), leading the largest nationalist-corporatist movement in 1930s Latin America.",
+    "tags": [
+      "Integralismo",
+      "Nacionalismo",
+      "Política",
+      "Literatura"
+    ],
+    "expectedImage": "/images/personalities/plinio_salgado_portrait.jpg"
+  },
+  {
+    "name": "Jean Piaget",
+    "dates": "1896–1980",
+    "birthYear": 1896,
+    "summary": "Swiss psychologist renowned for his pioneering work in child development and cognitive developmental psychology, identifying the four stages of childhood mental growth.",
+    "tags": [
+      "Psychology",
+      "Education",
+      "Cognitive Science",
+      "Switzerland",
+      "Child Development"
+    ],
+    "expectedImage": "/images/personalities/jean_piaget_portrait.jpg"
+  },
+  {
+    "name": "Lucky Luciano",
+    "dates": "1897–1962",
+    "birthYear": 1897,
+    "summary": "Italian-American mobster considered the father of modern organized crime in the United States, who established the Five Families of New York and created The Commission.",
+    "tags": [
+      "True Crime",
+      "Mafia",
+      "Organized Crime",
+      "New York",
+      "History"
+    ],
+    "expectedImage": "/images/personalities/lucky_luciano_portrait.jpg"
+  },
+  {
+    "name": "Pixinguinha",
+    "dates": "1897–1973",
+    "birthYear": 1897,
+    "summary": "Brazilian composer, arranger, flutist, and saxophonist Alfredo da Rocha Viana Filho, considered a foundational pioneer of modern Brazilian popular music and the choro genre.",
+    "tags": [
+      "Music",
+      "Choro",
+      "Brazil",
+      "Flute",
+      "Arrangement"
+    ],
+    "expectedImage": "/images/personalities/pixinguinha_portrait.jpg"
+  },
+  {
+    "name": "Pope Paul VI",
+    "dates": "1897–1978",
+    "birthYear": 1897,
+    "summary": "Giovanni Battista Montini, Pope who successfully guided the conclusion and implementation of the Second Vatican Council, fostered ecumenism, and published the landmark encyclical Populorum Progressio.",
+    "tags": [
+      "Religion",
+      "Catholicism",
+      "Vatican II",
+      "Social Justice",
+      "Papacy"
+    ],
+    "expectedImage": "/images/personalities/pope_paul_vi_portrait.jpg"
+  },
+  {
+    "name": "Amelia Earhart",
+    "dates": "1897–1937",
+    "birthYear": 1897,
+    "summary": "Pioneering American aviation icon and author, the first female aviator to fly solo across the Atlantic Ocean, who set numerous records and championed women in aviation.",
+    "tags": [
+      "Aviation",
+      "Exploration",
+      "Feminism",
+      "Courage",
+      "United States"
+    ],
+    "expectedImage": "/images/personalities/amelia_earhart_portrait.jpg"
+  },
+  {
+    "name": "Lampião",
+    "dates": "1898–1938",
+    "birthYear": 1898,
+    "summary": "Virgulino Ferreira da Silva, the legendary 'Rei do Cangaço' (King of Cangaço), who commanded bandit outlaws across the Brazilian Northeast for nearly two decades.",
+    "tags": [
+      "Brazil",
+      "Cangaço",
+      "Northeast",
+      "Folk History",
+      "Banditry"
+    ],
+    "expectedImage": "/images/personalities/lampião_portrait.jpg"
+  },
+  {
+    "name": "Luís Carlos Prestes",
+    "dates": "1898–1990",
+    "birthYear": 1898,
+    "summary": "'The Knight of Hope', military rebel who led the 25,000-km march of the Prestes Column across Brazil, and longtime General Secretary of the Brazilian Communist Party (PCB).",
+    "tags": [
+      "Comunismo",
+      "Coluna Prestes",
+      "Tenentismo",
+      "Revolução"
+    ],
+    "expectedImage": "/images/personalities/luis_carlos_prestes_portrait.jpg"
+  },
+  {
+    "name": "Golda Meir",
+    "dates": "1898–1978",
+    "birthYear": 1898,
+    "summary": "Fourth Prime Minister of Israel ('Iron Lady of Israeli Politics') who co-signed Israel's Declaration of Independence and steered the nation through the 1973 Yom Kippur War.",
+    "tags": [
+      "Israel",
+      "Middle East",
+      "Diplomacy",
+      "Prime Minister"
+    ],
+    "expectedImage": "/images/personalities/golda_meir_portrait.jpg"
+  },
+  {
+    "name": "Michał Kalecki",
+    "dates": "1899–1970",
+    "birthYear": 1899,
+    "summary": "Polish Marxist and macroeconomist who independently developed the core foundations of the principle of effective demand and business cycles before John Maynard Keynes.",
+    "tags": [
+      "Economics",
+      "Macroeconomics",
+      "Political Economy",
+      "Poland",
+      "Keynesianism"
+    ],
+    "expectedImage": "/images/personalities/michał_kalecki_portrait.jpg"
+  },
+  {
+    "name": "Alfred Hitchcock",
+    "dates": "1899–1980",
+    "birthYear": 1899,
+    "summary": "English filmmaker known as the 'Master of Suspense' who pioneered psychological tension, subjective camera techniques, and cinematic editing in cinema history.",
+    "tags": [
+      "Cinema",
+      "Suspense",
+      "Psychological Thriller",
+      "Directing",
+      "Film"
+    ],
+    "expectedImage": "/images/personalities/alfred_hitchcock_portrait.jpg"
+  },
+  {
+    "name": "Al Capone",
+    "dates": "1899–1947",
+    "birthYear": 1899,
+    "summary": "American gangster and boss of the Chicago Outfit during the Prohibition era, whose criminal empire dominated bootlegging, gambling, and racketeering.",
+    "tags": [
+      "True Crime",
+      "Prohibition",
+      "Chicago",
+      "Organized Crime",
+      "American History"
+    ],
+    "expectedImage": "/images/personalities/al_capone_portrait.jpg"
+  },
+  {
+    "name": "Lavrentiy Beria",
+    "dates": "1899–1953",
+    "birthYear": 1899,
+    "summary": "Chief of the Soviet secret police (NKVD) under Stalin who administered the vast Gulag forced-labor system and ruthlessly directed the Soviet atomic bomb project to completion.",
+    "tags": [
+      "Soviet Union",
+      "NKVD",
+      "Atomic Program",
+      "Stalin Era"
+    ],
+    "expectedImage": "/images/personalities/lavrentiy_beria_portrait.jpg"
+  },
+  {
+    "name": "Jacques Lacan",
+    "dates": "1901–1981",
+    "birthYear": 1901,
+    "summary": "French psychoanalyst and psychiatrist who reinterpreted Freud through structural linguistics, famous for the mirror stage and the tripartite order of Real, Symbolic, and Imaginary.",
+    "tags": [
+      "Psychoanalysis",
+      "Philosophy",
+      "Structuralism",
+      "Psychology",
+      "France"
+    ],
+    "expectedImage": "/images/personalities/jacques_lacan_portrait.jpg"
+  },
+  {
+    "name": "Karl Popper",
+    "dates": "1902–1994",
+    "birthYear": 1902,
+    "summary": "Austrian-British philosopher of science and political philosopher who introduced empirical falsifiability as the criterion of scientific demarcation and defended liberal democracy.",
+    "tags": [
+      "Philosophy of Science",
+      "Epistemology",
+      "Political Philosophy",
+      "Open Society"
+    ],
+    "expectedImage": "/images/personalities/karl_popper_portrait.jpg"
+  },
+  {
+    "name": "Barbara McClintock",
+    "dates": "1902–1992",
+    "birthYear": 1902,
+    "summary": "American cytogeneticist awarded the 1983 Nobel Prize in Physiology or Medicine for her groundbreaking discovery of genetic transposition ('jumping genes') in maize.",
+    "tags": [
+      "Genetics",
+      "Nobel Prize",
+      "Biology",
+      "Science",
+      "United States"
+    ],
+    "expectedImage": "/images/personalities/barbara_mcclintock_portrait.jpg"
+  },
+  {
+    "name": "Paul Dirac",
+    "dates": "1902–1984",
+    "birthYear": 1902,
+    "summary": "English theoretical physicist and Nobel laureate who united quantum mechanics with special relativity through the Dirac Equation, predicting antimatter and the positron.",
+    "tags": [
+      "Quantum Mechanics",
+      "Physics",
+      "Antimatter",
+      "Mathematics"
+    ],
+    "expectedImage": "/images/personalities/paul_dirac_portrait.jpg"
+  },
+  {
+    "name": "Igor Kurchatov",
+    "dates": "1903–1960",
+    "birthYear": 1903,
+    "summary": "'Father of the Soviet atomic bomb', nuclear physicist who directed the Soviet nuclear weapons project (RDS-1) and built the world's first civilian nuclear power plant at Obninsk.",
+    "tags": [
+      "Nuclear Physics",
+      "Atomic Bomb",
+      "Soviet Union",
+      "Clean Energy"
+    ],
+    "expectedImage": "/images/personalities/igor_kurchatov_portrait.jpg"
+  },
+  {
+    "name": "Salvador Dalí",
+    "dates": "1904–1989",
+    "birthYear": 1904,
+    "summary": "Spanish Surrealist painter renowned for his technical virtuosity, dreamlike bizarre imagery, and iconic melting clocks in 'The Persistence of Memory'.",
+    "tags": [
+      "Art",
+      "Surrealism",
+      "Painting",
+      "Spain",
+      "Avant-Garde"
+    ],
+    "expectedImage": "/images/personalities/salvador_dalí_portrait.jpg"
+  },
+  {
+    "name": "B.F. Skinner",
+    "dates": "1904–1990",
+    "birthYear": 1904,
+    "summary": "American psychologist, behaviorist, and author who pioneered operant conditioning, the Skinner box, and schedules of reinforcement, fundamentally shaping modern behavioral science.",
+    "tags": [
+      "Psychology",
+      "Behaviorism",
+      "Science",
+      "United States",
+      "Conditioning"
+    ],
+    "expectedImage": "/images/personalities/bf_skinner_portrait.jpg"
+  },
+  {
+    "name": "Nise da Silveira",
+    "dates": "1905–1999",
+    "birthYear": 1905,
+    "summary": "Brazilian psychiatrist and Jungian pioneer who revolutionized psychiatric treatment by rejecting aggressive therapies like electroshock and lobotomy in favor of art therapy and humanization.",
+    "tags": [
+      "Psychiatry",
+      "Psychology",
+      "Art Therapy",
+      "Brazil",
+      "Mental Health"
+    ],
+    "expectedImage": "/images/personalities/nise_da_silveira_portrait.jpg"
+  },
+  {
+    "name": "Emmanuel Levinas",
+    "dates": "1906–1995",
+    "birthYear": 1906,
+    "summary": "Lithuanian-born French phenomenological philosopher who placed ethics as first philosophy, grounded in the immediate and asymmetrical encounter with the Face of the Other.",
+    "tags": [
+      "Ethics",
+      "Phenomenology",
+      "Philosophy",
+      "France"
+    ],
+    "expectedImage": "/images/personalities/emmanuel_levinas_portrait.jpg"
+  },
+  {
+    "name": "Dietrich Bonhoeffer",
+    "dates": "1906–1945",
+    "birthYear": 1906,
+    "summary": "German Lutheran pastor, theologian, and anti-Nazi dissident who resisted Hitler's totalitarian regime, wrote on 'costly grace', and was executed at Flossenbürg.",
+    "tags": [
+      "Theology",
+      "Resistance",
+      "Anti-Nazi",
+      "Ethics",
+      "Germany"
+    ],
+    "expectedImage": "/images/personalities/dietrich_bonhoeffer_portrait.jpg"
+  },
+  {
+    "name": "Leonid Brezhnev",
+    "dates": "1906–1982",
+    "birthYear": 1906,
+    "summary": "General Secretary who ruled the USSR for 18 years, presiding over military expansion, superpower nuclear parity, the Brezhnev Doctrine, and the era of political stability and economic stagnation.",
+    "tags": [
+      "Soviet Union",
+      "Cold War",
+      "Brezhnev Doctrine",
+      "Nuclear Strategy"
+    ],
+    "expectedImage": "/images/personalities/leonid_brezhnev_portrait.jpg"
+  },
+  {
+    "name": "Rachel Carson",
+    "dates": "1907–1964",
+    "birthYear": 1907,
+    "summary": "American marine biologist and conservationist whose landmark book 'Silent Spring' exposed the environmental hazards of pesticides, sparking the global environmental movement.",
+    "tags": [
+      "Ecology",
+      "Environmentalism",
+      "Marine Biology",
+      "Silent Spring",
+      "Literature"
+    ],
+    "expectedImage": "/images/personalities/rachel_carson_portrait.jpg"
+  },
+  {
+    "name": "Sergei Korolev",
+    "dates": "1907–1966",
+    "birthYear": 1907,
+    "summary": "The anonymous 'Chief Designer' and mastermind of the Soviet space program who launched Sputnik 1, sent Yuri Gagarin into orbit, and inaugurated the human Space Age.",
+    "tags": [
+      "Space Exploration",
+      "Rocketry",
+      "Sputnik",
+      "Space Age"
+    ],
+    "expectedImage": "/images/personalities/sergei_korolev_portrait.jpg"
+  },
+  {
+    "name": "Willard Van Orman Quine",
+    "dates": "1908–2000",
+    "birthYear": 1908,
+    "summary": "American analytic philosopher and logician who dismantled logical positivism with his critiques of the analytic-synthetic distinction and theory of indeterminacy of translation.",
+    "tags": [
+      "Analytic Philosophy",
+      "Logic",
+      "Epistemology",
+      "Ontology"
+    ],
+    "expectedImage": "/images/personalities/willard_van_orman_quine_portrait.jpg"
+  },
+  {
+    "name": "Cartola",
+    "dates": "1908–1980",
+    "birthYear": 1908,
+    "summary": "Brazilian singer, composer, and poet Angenor de Oliveira, revered as one of the quintessential figures of samba and co-founder of the legendary Estação Primeira de Mangueira samba school.",
+    "tags": [
+      "Music",
+      "Samba",
+      "Brazil",
+      "Mangueira",
+      "Poetry"
+    ],
+    "expectedImage": "/images/personalities/cartola_portrait.jpg"
+  },
+  {
+    "name": "Simone Weil",
+    "dates": "1909–1943",
+    "birthYear": 1909,
+    "summary": "French philosopher, mystic, and political activist who gave up academic privilege to work in factories, developing profound philosophies of attention, affliction, and decreation.",
+    "tags": [
+      "Philosophy",
+      "Mysticism",
+      "Ethics",
+      "Political Theory",
+      "France"
+    ],
+    "expectedImage": "/images/personalities/simone_weil_portrait.jpg"
+  },
+  {
+    "name": "Ronald Coase",
+    "dates": "1910–2013",
+    "birthYear": 1910,
+    "summary": "British economist and Nobel laureate who established the foundational theory of transaction costs and property rights, formulating the famous Coase Theorem.",
+    "tags": [
+      "Economics",
+      "Institutional Economics",
+      "Nobel Prize",
+      "Law and Economics"
+    ],
+    "expectedImage": "/images/personalities/ronald_coase_portrait.jpg"
+  },
+  {
+    "name": "Akira Kurosawa",
+    "dates": "1910–1998",
+    "birthYear": 1910,
+    "summary": "Master Japanese film director and screenwriter whose dynamic visual compositions, humanistic storytelling, and cinematic editing revolutionized world cinema.",
+    "tags": [
+      "Cinema",
+      "Japan",
+      "Filmmaking",
+      "Directing",
+      "Samurai"
+    ],
+    "expectedImage": "/images/personalities/akira_kurosawa_portrait.jpg"
+  },
+  {
+    "name": "Chico Xavier",
+    "dates": "1910–2002",
+    "birthYear": 1910,
+    "summary": "Brazilian spiritual medium, philanthropist, and author who psychographed over 450 books, donating all proceeds to charity and becoming a revered symbol of altruism and peace.",
+    "tags": [
+      "Spirituality",
+      "Altruism",
+      "Brazil",
+      "Philanthropy",
+      "Literature"
+    ],
+    "expectedImage": "/images/personalities/chico_xavier_portrait.jpg"
+  },
+  {
+    "name": "Tancredo Neves",
+    "dates": "1910–1985",
+    "birthYear": 1910,
+    "summary": "Conciliatory statesman and Prime Minister who united the democratic opposition to end 21 years of military rule, elected first civilian President in 1985 before dying on the eve of inauguration.",
+    "tags": [
+      "Redemocratização",
+      "Aliança Democrática",
+      "PMDB",
+      "Nova República"
+    ],
+    "expectedImage": "/images/personalities/tancredo_neves_portrait.jpg"
+  },
+  {
+    "name": "Maria Bonita",
+    "dates": "1911–1938",
+    "birthYear": 1911,
+    "summary": "Maria Gomes de Oliveira, the 'Rainha do Cangaço' (Queen of Cangaço), the first woman to join Lampião's outlaw band, becoming a legendary figure in Brazilian folklore.",
+    "tags": [
+      "Brazil",
+      "Cangaço",
+      "Northeast",
+      "Folk Culture",
+      "Women in History"
+    ],
+    "expectedImage": "/images/personalities/maria_bonita_portrait.jpg"
+  },
+  {
+    "name": "Carlos Marighella",
+    "dates": "1911–1969",
+    "birthYear": 1911,
+    "summary": "Revolutionary Marxist politician, writer, and guerrilla leader who founded the ALN to fight Brazil's military dictatorship and authored the 'Minimanual of the Urban Guerrilla'.",
+    "tags": [
+      "Guerrilha Urbana",
+      "Resistência",
+      "Marxismo",
+      "Ditadura Militar"
+    ],
+    "expectedImage": "/images/personalities/carlos_marighella_portrait.jpg"
+  },
+  {
+    "name": "Chien-Shiung Wu",
+    "dates": "1912–1997",
+    "birthYear": 1912,
+    "summary": "Chinese-American experimental physicist known as the 'First Lady of Physics', whose famous Wu Experiment proved that parity is violated in weak nuclear interactions.",
+    "tags": [
+      "Experimental Physics",
+      "Parity Violation",
+      "Nuclear Physics",
+      "Women in STEM"
+    ],
+    "expectedImage": "/images/personalities/chien-shiung_wu_portrait.jpg"
+  },
+  {
+    "name": "Luiz Gonzaga",
+    "dates": "1912–1989",
+    "birthYear": 1912,
+    "summary": "Brazilian singer, songwriter, and accordionist celebrated as the 'King of Baião' (Rei do Baião), who popularized northeastern Brazilian musical genres like baião, xote, and forró nationwide.",
+    "tags": [
+      "Music",
+      "Brazil",
+      "Forró",
+      "Baião",
+      "Northeastern Culture"
+    ],
+    "expectedImage": "/images/personalities/luiz_gonzaga_portrait.jpg"
+  },
+  {
+    "name": "Pope John Paul I",
+    "dates": "1912–1978",
+    "birthYear": 1912,
+    "summary": "Albino Luciani, the 'Smiling Pope', whose warm humility and reform-minded 33-day pontificate in 1978 left an indelible imprint on the global Catholic consciousness.",
+    "tags": [
+      "Religion",
+      "Catholicism",
+      "Papacy",
+      "Humility",
+      "20th Century"
+    ],
+    "expectedImage": "/images/personalities/pope_john_paul_i_portrait.jpg"
+  },
+  {
+    "name": "Wernher von Braun",
+    "dates": "1912–1977",
+    "birthYear": 1912,
+    "summary": "Aerospace engineer and architect of modern rocketry, developing the V-2 rocket in Germany and later designing NASA's Saturn V rocket that propelled humans to the Moon.",
+    "tags": [
+      "Aerospace",
+      "Apollo Program",
+      "Moon Landing",
+      "NASA"
+    ],
+    "expectedImage": "/images/personalities/wernher_von_braun_portrait.jpg"
+  },
+  {
+    "name": "Rosa Parks",
+    "dates": "1913–2005",
+    "birthYear": 1913,
+    "summary": "American civil rights activist whose courageous refusal to give up her bus seat in Montgomery, Alabama in 1955 ignited the Montgomery bus boycott and the modern civil rights movement.",
+    "tags": [
+      "Civil Rights",
+      "Equality",
+      "Activism",
+      "American History",
+      "Social Justice"
+    ],
+    "expectedImage": "/images/personalities/rosa_parks_portrait.jpg"
+  },
+  {
+    "name": "Jesse Owens",
+    "dates": "1913–1980",
+    "birthYear": 1913,
+    "summary": "American track and field athlete who won four gold medals at the 1936 Berlin Olympic Games, shattering Adolf Hitler's myth of Aryan racial supremacy on global television.",
+    "tags": [
+      "Sports",
+      "Olympics",
+      "Civil Rights",
+      "Athletics",
+      "American History"
+    ],
+    "expectedImage": "/images/personalities/jesse_owens_portrait.jpg"
+  },
+  {
+    "name": "Hedy Lamarr",
+    "dates": "1914–2000",
+    "birthYear": 1914,
+    "summary": "Austrian-American Hollywood film actress and brilliant inventor who co-invented frequency-hopping spread spectrum technology, the fundamental basis for Wi-Fi, Bluetooth, and GPS.",
+    "tags": [
+      "Invention",
+      "Wireless Technology",
+      "Wi-Fi",
+      "Cinema",
+      "Women in STEM"
+    ],
+    "expectedImage": "/images/personalities/hedy_lamarr_portrait.jpg"
+  },
+  {
+    "name": "Jonas Salk",
+    "dates": "1914–1995",
+    "birthYear": 1914,
+    "summary": "American virologist and medical researcher who developed the first successful inactivated polio vaccine, famously refusing to patent it so it could benefit all humanity.",
+    "tags": [
+      "Medicine",
+      "Vaccines",
+      "Virology",
+      "Polio",
+      "Humanitarianism"
+    ],
+    "expectedImage": "/images/personalities/jonas_salk_portrait.jpg"
+  },
+  {
+    "name": "Carlos Lacerda",
+    "dates": "1914–1977",
+    "birthYear": 1914,
+    "summary": "Journalist, orator, and Governor of Guanabara ('The Crow') whose fiery anti-communist rhetoric and UDN opposition precipitated Vargas's suicide and the 1964 coup.",
+    "tags": [
+      "UDN",
+      "Jornalismo",
+      "Oratória",
+      "Anticomunismo"
+    ],
+    "expectedImage": "/images/personalities/carlos_lacerda_portrait.jpg"
+  },
+  {
+    "name": "Miguel Arraes",
+    "dates": "1916–2005",
+    "birthYear": 1916,
+    "summary": "Governor of Pernambuco and leftist icon who empowered rural workers through literacy programs, minimum wage enforcement, and socialist agrarian organizing.",
+    "tags": [
+      "Socialismo",
+      "Nordeste",
+      "Trabalhadores Rurais",
+      "Resistência"
+    ],
+    "expectedImage": "/images/personalities/miguel_arraes_portrait.jpg"
+  },
+  {
+    "name": "Ulysses Guimarães",
+    "dates": "1916–1992",
+    "birthYear": 1916,
+    "summary": "'Senhor Diretas' and President of the 1988 Constituent Assembly who mobilized millions for democratic elections and promulgated Brazil's democratic 'Citizen Constitution'.",
+    "tags": [
+      "Constituição de 1988",
+      "Diretas Já",
+      "Democracia",
+      "Cidadania"
+    ],
+    "expectedImage": "/images/personalities/ulysses_guimaraes_portrait.jpg"
+  },
+  {
+    "name": "Franco Montoro",
+    "dates": "1916–1999",
+    "birthYear": 1916,
+    "summary": "Jurist, Governor of São Paulo, and founder of the PSDB who championed administrative decentralization, participatory democracy, and the Diretas Já campaign.",
+    "tags": [
+      "Descentralização",
+      "Democracia Participativa",
+      "Diretas Já",
+      "PSDB"
+    ],
+    "expectedImage": "/images/personalities/franco_montoro_portrait.jpg"
+  },
+  {
+    "name": "Indira Gandhi",
+    "dates": "1917–1984",
+    "birthYear": 1917,
+    "summary": "First and only female Prime Minister of India, a towering, decisive political leader who navigated the 1971 Bangladesh Liberation War and spearheaded the Green Revolution.",
+    "tags": [
+      "Politics",
+      "India",
+      "Leadership",
+      "Cold War",
+      "Democracy"
+    ],
+    "expectedImage": "/images/personalities/indira_gandhi_portrait.jpg"
+  },
+  {
+    "name": "Jânio Quadros",
+    "dates": "1917–1992",
+    "birthYear": 1917,
+    "summary": "Populist President of Brazil whose anti-corruption broom campaign, independent foreign policy, and dramatic resignation after seven months plunged the country into crisis.",
+    "tags": [
+      "Populismo",
+      "Presidência",
+      "Política Externa",
+      "Crise de 1961"
+    ],
+    "expectedImage": "/images/personalities/janio_quadros_portrait.jpg"
+  },
+  {
+    "name": "Louis Althusser",
+    "dates": "1918–1990",
+    "birthYear": 1918,
+    "summary": "French structural Marxist philosopher renowned for his theories of ideology, overdetermination, and Ideological State Apparatuses (ISAs).",
+    "tags": [
+      "Marxism",
+      "Structuralism",
+      "Philosophy",
+      "Political Theory",
+      "France"
+    ],
+    "expectedImage": "/images/personalities/louis_althusser_portrait.jpg"
+  },
+  {
+    "name": "Katherine Johnson",
+    "dates": "1918–2020",
+    "birthYear": 1918,
+    "summary": "Legendary American mathematician at NASA whose orbital mechanics calculations were critical to the success of John Glenn's orbit and the Apollo 11 moon landing.",
+    "tags": [
+      "Mathematics",
+      "NASA",
+      "Space Exploration",
+      "Civil Rights",
+      "Physics"
+    ],
+    "expectedImage": "/images/personalities/katherine_johnson_portrait.jpg"
+  },
+  {
+    "name": "Gamal Abdel Nasser",
+    "dates": "1918–1970",
+    "birthYear": 1918,
+    "summary": "Second President of Egypt, charismatic icon of Pan-Arab nationalism and anti-imperialism who nationalized the Suez Canal and built the Aswan High Dam.",
+    "tags": [
+      "Pan-Arabism",
+      "Egypt",
+      "Anti-Imperialism",
+      "Suez Crisis"
+    ],
+    "expectedImage": "/images/personalities/gamal_abdel_nasser_portrait.jpg"
+  },
+  {
+    "name": "João Goulart",
+    "dates": "1919–1976",
+    "birthYear": 1919,
+    "summary": "'Jango', reformist President of Brazil whose proposed 'Reformas de Base' (agrarian, educational, and tax reforms) triggered his overthrow in the 1964 military coup.",
+    "tags": [
+      "Trabalhismo",
+      "Reformas de Base",
+      "Golpe de 1964",
+      "PTB"
+    ],
+    "expectedImage": "/images/personalities/joao_goulart_portrait.jpg"
+  },
+  {
+    "name": "Mikhail Kalashnikov",
+    "dates": "1919–2013",
+    "birthYear": 1919,
+    "summary": "Legendary Russian small-arms designer who invented the AK-47 assault rifle, celebrated for its rugged mechanical simplicity, reliability, and worldwide military impact.",
+    "tags": [
+      "Military Engineering",
+      "Small Arms",
+      "AK-47",
+      "Soviet Union"
+    ],
+    "expectedImage": "/images/personalities/mikhail_kalashnikov_portrait.jpg"
+  },
+  {
+    "name": "Rosalind Franklin",
+    "dates": "1920–1958",
+    "birthYear": 1920,
+    "summary": "English chemist and X-ray crystallographer whose famous 'Photo 51' was critical to uncovering the double-helix structure of DNA, alongside pioneering work on viruses and coal.",
+    "tags": [
+      "Biochemistry",
+      "DNA",
+      "X-ray Crystallography",
+      "Women in STEM",
+      "Genetics"
+    ],
+    "expectedImage": "/images/personalities/rosalind_franklin_portrait.jpg"
+  },
+  {
+    "name": "Pope John Paul II",
+    "dates": "1920–2005",
+    "birthYear": 1920,
+    "summary": "Karol Wojtyła, charismatic Polish pope whose 26-year pontificate helped bring down European Communism, promoted global ecumenism, and traversed 129 countries.",
+    "tags": [
+      "Religion",
+      "Catholicism",
+      "Papacy",
+      "Poland",
+      "Human Rights"
+    ],
+    "expectedImage": "/images/personalities/pope_john_paul_ii_portrait.jpg"
+  },
+  {
+    "name": "Kenneth Arrow",
+    "dates": "1921–2017",
+    "birthYear": 1921,
+    "summary": "American economist and mathematician who shared the 1972 Nobel Prize, proving Arrow's Impossibility Theorem in social choice and developing General Equilibrium Theory.",
+    "tags": [
+      "Economics",
+      "Social Choice Theory",
+      "Game Theory",
+      "Nobel Prize",
+      "Mathematics"
+    ],
+    "expectedImage": "/images/personalities/kenneth_arrow_portrait.jpg"
+  },
+  {
+    "name": "Andrei Sakharov",
+    "dates": "1921–1989",
+    "birthYear": 1921,
+    "summary": "Brilliant theoretical physicist and designer of the Soviet thermonuclear bomb who transformed into an outspoken dissident, defender of human rights, and Nobel Peace laureate.",
+    "tags": [
+      "Nuclear Physics",
+      "Human Rights",
+      "Dissident",
+      "Nobel Peace Prize"
+    ],
+    "expectedImage": "/images/personalities/andrei_sakharov_portrait.jpg"
+  },
+  {
+    "name": "Thomas Kuhn",
+    "dates": "1922–1996",
+    "birthYear": 1922,
+    "summary": "American historian and philosopher of science who coined the terms 'paradigm shift' and 'normal science', arguing that scientific progress proceeds via revolutionary ruptures.",
+    "tags": [
+      "Philosophy of Science",
+      "History of Science",
+      "Epistemology",
+      "Paradigm Shift"
+    ],
+    "expectedImage": "/images/personalities/thomas_kuhn_portrait.jpg"
+  },
+  {
+    "name": "Leonel Brizola",
+    "dates": "1922–2004",
+    "birthYear": 1922,
+    "summary": "Brazilian nationalist politician and governor who launched the Legalidade campaign to defend constitutional democracy in 1961 and pioneered full-time public schools (CIEPs).",
+    "tags": [
+      "Politics",
+      "Brazil",
+      "Democracy",
+      "Public Education",
+      "Nationalism"
+    ],
+    "expectedImage": "/images/personalities/leonel_brizola_portrait.jpg"
+  },
+  {
+    "name": "Paul Feyerabend",
+    "dates": "1924–1994",
+    "birthYear": 1924,
+    "summary": "Austrian-born philosopher of science renowned for his 'epistemological anarchism', arguing that scientific breakthrough requires methodological freedom ('anything goes').",
+    "tags": [
+      "Philosophy of Science",
+      "Epistemology",
+      "Epistemological Anarchism"
+    ],
+    "expectedImage": "/images/personalities/paul_feyerabend_portrait.jpg"
+  },
+  {
+    "name": "Marlon Brando",
+    "dates": "1924–2004",
+    "birthYear": 1924,
+    "summary": "American actor widely regarded as the most influential screen actor of the 20th century, revolutionizing acting with raw Stanislavski method realism in 'A Streetcar Named Desire' and 'The Godfather'.",
+    "tags": [
+      "Cinema",
+      "Acting",
+      "Method Acting",
+      "The Godfather",
+      "Hollywood"
+    ],
+    "expectedImage": "/images/personalities/marlon_brando_portrait.jpg"
+  },
+  {
+    "name": "Patrice Lumumba",
+    "dates": "1925–1961",
+    "birthYear": 1925,
+    "summary": "Congolese anti-colonial hero and the first Prime Minister of the independent Democratic Republic of the Congo, whose vision of African self-determination inspired generations.",
+    "tags": [
+      "Decolonization",
+      "Pan-Africanism",
+      "Congo",
+      "Anti-Imperialism",
+      "Africa"
+    ],
+    "expectedImage": "/images/personalities/patrice_lumumba_portrait.jpg"
+  },
+  {
+    "name": "Margaret Thatcher",
+    "dates": "1925–2013",
+    "birthYear": 1925,
+    "summary": "British statesman known as the 'Iron Lady', Britain's first female prime minister (1979–1990) who reshaped British politics with deregulation, privatization, and decisive Cold War resolve.",
+    "tags": [
+      "Politics",
+      "United Kingdom",
+      "Conservatism",
+      "Cold War",
+      "Leadership"
+    ],
+    "expectedImage": "/images/personalities/margaret_thatcher_portrait.jpg"
+  },
+  {
+    "name": "Miles Davis",
+    "dates": "1926–1991",
+    "birthYear": 1926,
+    "summary": "American jazz trumpeter, bandleader, and composer who spearheaded nearly every major postwar jazz innovation, including cool jazz, hard bop, modal jazz, and jazz fusion.",
+    "tags": [
+      "Music",
+      "Jazz",
+      "Modal Jazz",
+      "Fusion",
+      "Trumpet"
+    ],
+    "expectedImage": "/images/personalities/miles_davis_portrait.jpg"
+  },
+  {
+    "name": "Marilyn Monroe",
+    "dates": "1926–1962",
+    "birthYear": 1926,
+    "summary": "American actress, singer, and model who became one of the most enduring cultural icons of the 20th century and a major symbol of Hollywood's golden age.",
+    "tags": [
+      "Cinema",
+      "Hollywood",
+      "Pop Culture",
+      "Acting",
+      "Icon"
+    ],
+    "expectedImage": "/images/personalities/marilyn_monroe_portrait.jpg"
+  },
+  {
+    "name": "Thich Nhat Hanh",
+    "dates": "1926–2022",
+    "birthYear": 1926,
+    "summary": "Vietnamese Buddhist monk, peace activist, and author who pioneered 'Engaged Buddhism', global mindfulness practices, and founded Plum Village Monastery in France.",
+    "tags": [
+      "Mindfulness",
+      "Buddhism",
+      "Peace",
+      "Vietnam",
+      "Spirituality"
+    ],
+    "expectedImage": "/images/personalities/thich_nhat_hanh_portrait.jpg"
+  },
+  {
+    "name": "Ariano Suassuna",
+    "dates": "1927–2014",
+    "birthYear": 1927,
+    "summary": "Brazilian playwright, novelist, poet, and philosopher who founded the Movimento Armorial, championing and defending the authentic popular culture of northeastern Brazil.",
+    "tags": [
+      "Literature",
+      "Theater",
+      "Brazil",
+      "Northeast",
+      "Movimento Armorial"
+    ],
+    "expectedImage": "/images/personalities/ariano_suassuna_portrait.jpg"
+  },
+  {
+    "name": "Pope Benedict XVI",
+    "dates": "1927–2022",
+    "birthYear": 1927,
+    "summary": "Joseph Ratzinger, eminent German theologian and scholar who served as Pope from 2005 until his historic resignation in 2013, championing orthodox doctrine and faith-reason harmony.",
+    "tags": [
+      "Religion",
+      "Theology",
+      "Catholicism",
+      "Philosophy",
+      "Scholarship"
+    ],
+    "expectedImage": "/images/personalities/pope_benedict_xvi_portrait.jpg"
+  },
+  {
+    "name": "Stanley Kubrick",
+    "dates": "1928–1999",
+    "birthYear": 1928,
+    "summary": "American cinematic auteur celebrated for his meticulous technical mastery, groundbreaking visual effects, dark satire, and philosophical inquiries into humanity.",
+    "tags": [
+      "Cinema",
+      "Directing",
+      "Sci-Fi",
+      "Filmmaking",
+      "Visual Arts"
+    ],
+    "expectedImage": "/images/personalities/stanley_kubrick_portrait.jpg"
+  },
+  {
+    "name": "Maya Angelou",
+    "dates": "1928–2014",
+    "birthYear": 1928,
+    "summary": "American memoirist, poet, and civil rights icon whose lyrical autobiographies and inspirational verse celebrate human resilience, dignity, and triumph over oppression.",
+    "tags": [
+      "Literature",
+      "Poetry",
+      "Civil Rights",
+      "Memoir",
+      "United States"
+    ],
+    "expectedImage": "/images/personalities/maya_angelou_portrait.jpg"
+  },
+  {
+    "name": "Jürgen Habermas",
+    "dates": "1929–present",
+    "birthYear": 1929,
+    "summary": "German Frankfurt School philosopher and sociologist celebrated for his theories of communicative rationality, discursive democracy, and the public sphere.",
+    "tags": [
+      "Critical Theory",
+      "Frankfurt School",
+      "Sociology",
+      "Democracy",
+      "Philosophy"
+    ],
+    "expectedImage": "/images/personalities/jürgen_habermas_portrait.jpg"
+  },
+  {
+    "name": "Audrey Hepburn",
+    "dates": "1929–1993",
+    "birthYear": 1929,
+    "summary": "British actress and humanitarian icon who won an Academy Award for 'Roman Holiday', starred in 'Breakfast at Tiffany's', and dedicated her later life as a UNICEF Goodwill Ambassador.",
+    "tags": [
+      "Cinema",
+      "Hollywood",
+      "Fashion",
+      "Humanitarianism",
+      "UNICEF"
+    ],
+    "expectedImage": "/images/personalities/audrey_hepburn_portrait.jpg"
+  },
+  {
+    "name": "Fernanda Montenegro",
+    "dates": "1929–present",
+    "birthYear": 1929,
+    "summary": "Acclaimed Brazilian actress widely revered as the 'First Lady of Brazilian Theater', the only Brazilian nominated for the Academy Award for Best Actress (Central Station).",
+    "tags": [
+      "Cinema",
+      "Theater",
+      "Acting",
+      "Brazil",
+      "Academy Awards"
+    ],
+    "expectedImage": "/images/personalities/fernanda_montenegro_portrait.jpg"
+  },
+  {
+    "name": "Neil Armstrong",
+    "dates": "1930–2012",
+    "birthYear": 1930,
+    "summary": "American astronaut and aeronautical engineer who became the first human to walk on the Moon as commander of Apollo 11 on July 20, 1969.",
+    "tags": [
+      "Space Exploration",
+      "NASA",
+      "Apollo 11",
+      "Astronaut",
+      "Moon Landing"
+    ],
+    "expectedImage": "/images/personalities/neil_armstrong_portrait.jpg"
+  },
+  {
+    "name": "Tu Youyou",
+    "dates": "1930–present",
+    "birthYear": 1930,
+    "summary": "Chinese pharmaceutical chemist and malariologist who discovered artemisinin and dihydroartemisinin from sweet wormwood, saving millions of lives and winning the 2015 Nobel Prize.",
+    "tags": [
+      "Medicine",
+      "Nobel Prize",
+      "Chemistry",
+      "Pharmacology",
+      "China"
+    ],
+    "expectedImage": "/images/personalities/tu_youyou_portrait.jpg"
+  },
+  {
+    "name": "Elza Soares",
+    "dates": "1930–2022",
+    "birthYear": 1930,
+    "summary": "Legendary Brazilian samba singer acclaimed as BBC's 'Singer of the Millennium', whose gravelly, electric voice became a defiant anthem against racism, poverty, and domestic violence.",
+    "tags": [
+      "Music",
+      "Samba",
+      "Brazil",
+      "Civil Rights",
+      "Vocalist"
+    ],
+    "expectedImage": "/images/personalities/elza_soares_portrait.jpg"
+  },
+  {
+    "name": "Mario Covas",
+    "dates": "1930–2001",
+    "birthYear": 1930,
+    "summary": "Civil engineer, Mayor and Governor of São Paulo, and stalwart of democratic redemocratization known for unwavering ethical integrity, fiscal rigor, and public investments.",
+    "tags": [
+      "Ética Pública",
+      "São Paulo",
+      "Constituinte",
+      "PSDB"
+    ],
+    "expectedImage": "/images/personalities/mario_covas_portrait.jpg"
+  },
+  {
+    "name": "Itamar Franco",
+    "dates": "1930–2011",
+    "birthYear": 1930,
+    "summary": "President of Brazil (1992–1995) who restored institutional stability following Collor's impeachment and appointed the economic team that designed and implemented the Plano Real.",
+    "tags": [
+      "Plano Real",
+      "Presidência",
+      "Estabilização",
+      "Nova República"
+    ],
+    "expectedImage": "/images/personalities/itamar_franco_portrait.jpg"
+  },
+  {
+    "name": "Thomas Sowell",
+    "dates": "1930–present",
+    "birthYear": 1930,
+    "summary": "Economist, social theorist, and Chicago School scholar renowned for empirical critiques of state economic planning, affirmative action, and social engineering.",
+    "tags": [
+      "Economics",
+      "Classical Liberalism",
+      "Social Theory",
+      "Chicago School"
+    ],
+    "expectedImage": "/images/personalities/thomas_sowell_portrait.jpg"
+  },
+  {
+    "name": "João Gilberto",
+    "dates": "1931–2019",
+    "birthYear": 1931,
+    "summary": "Brazilian singer, guitarist, and composer hailed as the 'Father of Bossa Nova', who invented the genre's defining syncopated guitar rhythm (violão gago) and whispery vocal delivery.",
+    "tags": [
+      "Music",
+      "Bossa Nova",
+      "Brazil",
+      "Acoustic Guitar",
+      "Jazz"
+    ],
+    "expectedImage": "/images/personalities/joão_gilberto_portrait.jpg"
+  },
+  {
+    "name": "Toni Morrison",
+    "dates": "1931–2019",
+    "birthYear": 1931,
+    "summary": "Celebrated American novelist, essayist, and editor awarded the 1993 Nobel Prize in Literature for powerful, poetic examinations of the Black American experience and identity.",
+    "tags": [
+      "Literature",
+      "Nobel Prize",
+      "Civil Rights",
+      "African American",
+      "United States"
+    ],
+    "expectedImage": "/images/personalities/toni_morrison_portrait.jpg"
+  },
+  {
+    "name": "Fernando Henrique Cardoso",
+    "dates": "1931–present",
+    "birthYear": 1931,
+    "summary": "'FHC', internationally renowned sociologist of Dependency Theory and two-term President of Brazil who ended hyperinflation with the Plano Real and modernized state institutions.",
+    "tags": [
+      "Sociologia",
+      "Plano Real",
+      "Presidência",
+      "Globalização"
+    ],
+    "expectedImage": "/images/personalities/fernando_henrique_cardoso_portrait.jpg"
+  },
+  {
+    "name": "Andrei Tarkovsky",
+    "dates": "1932–1986",
+    "birthYear": 1932,
+    "summary": "Russian Soviet filmmaker renowned for his poetic, metaphysical vision, long takes, spiritual inquiry, and philosophical approach to cinema as 'sculpting in time'.",
+    "tags": [
+      "Cinema",
+      "Soviet Union",
+      "Poetic Cinema",
+      "Philosophy",
+      "Art"
+    ],
+    "expectedImage": "/images/personalities/andrei_tarkovsky_portrait.jpg"
+  },
+  {
+    "name": "Raoni Metuktire",
+    "dates": "c. 1932–present",
+    "birthYear": 1932,
+    "summary": "Legendary Brazilian indigenous chief of the Kayapo people, internationally recognized environmental icon with his labret lip plate, and tireless defender of the Amazon.",
+    "tags": [
+      "Indigenous Rights",
+      "Kayapo",
+      "Amazon",
+      "Conservation",
+      "Brazil"
+    ],
+    "expectedImage": "/images/personalities/raoni_metuktire_portrait.jpg"
+  },
+  {
+    "name": "Garrincha",
+    "dates": "1933–1983",
+    "birthYear": 1933,
+    "summary": "Brazilian football winger renowned as 'A Alegria do Povo' (The Joy of the People), whose mesmerizing dribbling led Brazil to World Cup victories in 1958 and 1962.",
+    "tags": [
+      "Sports",
+      "Football",
+      "Brazil",
+      "World Cup",
+      "Botafogo"
+    ],
+    "expectedImage": "/images/personalities/garrincha_portrait.jpg"
+  },
+  {
+    "name": "Yuri Gagarin",
+    "dates": "1934–1968",
+    "birthYear": 1934,
+    "summary": "Soviet cosmonaut who became the first human in outer space and the first to orbit the Earth on April 12, 1961 aboard Vostok 1.",
+    "tags": [
+      "Space Exploration",
+      "Aviation",
+      "Cosmonaut",
+      "Soviet Union",
+      "History"
+    ],
+    "expectedImage": "/images/personalities/yuri_gagarin_portrait.jpg"
+  },
+  {
+    "name": "Alexei Leonov",
+    "dates": "1934–2019",
+    "birthYear": 1934,
+    "summary": "Soviet cosmonaut, Air Force general, and artist who conducted the first spacewalk (extravehicular activity) in human history during the Voskhod 2 mission in 1965.",
+    "tags": [
+      "Space Exploration",
+      "Spacewalk",
+      "Cosmonaut",
+      "Soviet Union",
+      "Aviation"
+    ],
+    "expectedImage": "/images/personalities/alexei_leonov_portrait.jpg"
+  },
+  {
+    "name": "Charles Manson",
+    "dates": "1934–2017",
+    "birthYear": 1934,
+    "summary": "American cult leader whose apocalyptic commune, the Manson Family, carried out a series of notorious murders in California in 1969 under his psychological manipulation.",
+    "tags": [
+      "True Crime",
+      "Cults",
+      "American History",
+      "Psychology"
+    ],
+    "expectedImage": "/images/personalities/charles_manson_portrait.jpg"
+  },
+  {
+    "name": "Jane Goodall",
+    "dates": "1934–present",
+    "birthYear": 1934,
+    "summary": "English primatologist and anthropologist renowned for her 60-year study of wild chimpanzees in Gombe Stream National Park, proving that chimpanzees make and use tools.",
+    "tags": [
+      "Primatology",
+      "Anthropology",
+      "Conservation",
+      "Ecology",
+      "Women in STEM"
+    ],
+    "expectedImage": "/images/personalities/jane_goodall_portrait.jpg"
+  },
+  {
+    "name": "Zilda Arns",
+    "dates": "1934–2010",
+    "birthYear": 1934,
+    "summary": "Brazilian pediatrician, public health expert, and humanitarian who founded Pastoral da Criança, drastically reducing child mortality across Brazil and Latin America through community health education.",
+    "tags": [
+      "Medicine",
+      "Humanitarian",
+      "Brazil",
+      "Public Health",
+      "Pediatrics"
+    ],
+    "expectedImage": "/images/personalities/zilda_arns_portrait.jpg"
+  },
+  {
+    "name": "Elvis Presley",
+    "dates": "1935–1977",
+    "birthYear": 1935,
+    "summary": "American singer and actor celebrated as the 'King of Rock and Roll', whose electrifying blend of rhythm & blues and country sparked a musical and youth cultural revolution.",
+    "tags": [
+      "Music",
+      "Rock and Roll",
+      "Rockabilly",
+      "Pop Culture",
+      "United States"
+    ],
+    "expectedImage": "/images/personalities/elvis_presley_portrait.jpg"
+  },
+  {
+    "name": "Dalai Lama (14th)",
+    "dates": "1935–present",
+    "birthYear": 1935,
+    "summary": "Tenzin Gyatso, the 14th Dalai Lama, spiritual leader of Tibetan Buddhism and 1989 Nobel Peace Prize laureate, revered worldwide for advocating compassion, nonviolence, and Tibetan autonomy.",
+    "tags": [
+      "Buddhism",
+      "Tibet",
+      "Nobel Peace Prize",
+      "Compassion",
+      "Spirituality"
+    ],
+    "expectedImage": "/images/personalities/dalai_lama_14th_portrait.jpg"
+  },
+  {
+    "name": "Valentina Tereshkova",
+    "dates": "1937–present",
+    "birthYear": 1937,
+    "summary": "Soviet cosmonaut and engineer who became the first woman to fly in space, piloting Vostok 6 on June 16, 1963 and completing 48 orbits of Earth.",
+    "tags": [
+      "Space Exploration",
+      "Cosmonaut",
+      "Women in STEM",
+      "Soviet Union"
+    ],
+    "expectedImage": "/images/personalities/valentina_tereshkova_portrait.jpg"
+  },
+  {
+    "name": "Bernie Madoff",
+    "dates": "1938–2021",
+    "birthYear": 1938,
+    "summary": "American financier and former chairman of NASDAQ who orchestrated the largest Ponzi scheme in history, defrauding thousands of investors out of an estimated $64.8 billion.",
+    "tags": [
+      "True Crime",
+      "Wall Street",
+      "Finance",
+      "Ponzi Scheme",
+      "Fraud"
+    ],
+    "expectedImage": "/images/personalities/bernie_madoff_portrait.jpg"
+  },
+  {
+    "name": "Enéas Carneiro",
+    "dates": "1938–2007",
+    "birthYear": 1938,
+    "summary": "Cardiologist, mathematician, and founder of PRONA, renowned for fiery 15-second television speeches defending national sovereignty, nuclear deterrence, and state-led industrialism.",
+    "tags": [
+      "Nacionalismo",
+      "Medicina",
+      "Soberania Nacional",
+      "PRONA"
+    ],
+    "expectedImage": "/images/personalities/eneas_carneiro_portrait.jpg"
+  },
+  {
+    "name": "Jorge Ben Jor",
+    "dates": "1939–present",
+    "birthYear": 1939,
+    "summary": "Musical visionary who fused samba, soul, funk, and bossa nova to invent samba-rock, composing foundational global anthems of Afro-Brazilian cultural pride.",
+    "tags": [
+      "Samba-Rock",
+      "Música Brasileira",
+      "Afro-Brasil",
+      "Violão"
+    ],
+    "expectedImage": "/images/personalities/jorge_ben_jor_portrait.jpg"
+  },
+  {
+    "name": "John Lennon",
+    "dates": "1940–1980",
+    "birthYear": 1940,
+    "summary": "English singer, songwriter, and peace activist who co-founded The Beatles, forming the most successful songwriting partnership in history with Paul McCartney, and penned 'Imagine'.",
+    "tags": [
+      "Music",
+      "The Beatles",
+      "Peace",
+      "Rock",
+      "Songwriting"
+    ],
+    "expectedImage": "/images/personalities/john_lennon_portrait.jpg"
+  },
+  {
+    "name": "Al Pacino",
+    "dates": "1940–present",
+    "birthYear": 1940,
+    "summary": "Legendary American actor known for explosive emotional intensity and method realism, starring as Michael Corleone in 'The Godfather' trilogy, 'Scarface', and 'Serpico'.",
+    "tags": [
+      "Cinema",
+      "Acting",
+      "The Godfather",
+      "Method Acting",
+      "Hollywood"
+    ],
+    "expectedImage": "/images/personalities/al_pacino_portrait.jpg"
+  },
+  {
+    "name": "Wangari Maathai",
+    "dates": "1940–2011",
+    "birthYear": 1940,
+    "summary": "Kenyan environmental and political activist who founded the Green Belt Movement and became the first African woman to receive the Nobel Peace Prize (2004).",
+    "tags": [
+      "Ecology",
+      "Nobel Peace Prize",
+      "Kenya",
+      "Activism",
+      "Human Rights"
+    ],
+    "expectedImage": "/images/personalities/wangari_maathai_portrait.jpg"
+  },
+  {
+    "name": "Bob Dylan",
+    "dates": "1941–present",
+    "birthYear": 1941,
+    "summary": "American singer-songwriter and poet who transformed popular music into high literature, receiving the 2016 Nobel Prize in Literature 'for having created new poetic expressions within the great American song tradition'.",
+    "tags": [
+      "Music",
+      "Poetry",
+      "Nobel Prize",
+      "Folk Rock",
+      "Songwriting"
+    ],
+    "expectedImage": "/images/personalities/bob_dylan_portrait.jpg"
+  },
+  {
+    "name": "Giorgio Agamben",
+    "dates": "1942–present",
+    "birthYear": 1942,
+    "summary": "Italian philosopher whose influential political philosophy investigates the state of exception, biopolitics, and sovereign power over 'bare life' (homo sacer).",
+    "tags": [
+      "Philosophy",
+      "Biopolitics",
+      "Political Philosophy",
+      "Italy"
+    ],
+    "expectedImage": "/images/personalities/giorgio_agamben_portrait.jpg"
+  },
+  {
+    "name": "Jimi Hendrix",
+    "dates": "1942–1970",
+    "birthYear": 1942,
+    "summary": "American electric guitarist, singer, and songwriter celebrated as the greatest instrumentalist in the history of rock music, revolutionizing guitar tone and sonic feedback.",
+    "tags": [
+      "Music",
+      "Electric Guitar",
+      "Psychedelic Rock",
+      "Rock",
+      "Blues"
+    ],
+    "expectedImage": "/images/personalities/jimi_hendrix_portrait.jpg"
+  },
+  {
+    "name": "Tim Maia",
+    "dates": "1942–1998",
+    "birthYear": 1942,
+    "summary": "Larger-than-life Brazilian singer, songwriter, and producer who pioneered soul, funk, and R&B music in Brazil, celebrated for his booming baritone and rebellious charisma.",
+    "tags": [
+      "Music",
+      "Soul",
+      "Funk",
+      "MPB",
+      "Brazil"
+    ],
+    "expectedImage": "/images/personalities/tim_maia_portrait.jpg"
+  },
+  {
+    "name": "Milton Nascimento",
+    "dates": "1942–present",
+    "birthYear": 1942,
+    "summary": "'Bituca', transcendent Brazilian vocalist and songwriter whose celestial falsetto and Clube da Esquina collective fused jazz, sacred folk, and Afro-Mineiro polyphony.",
+    "tags": [
+      "Clube da Esquina",
+      "MPB",
+      "Voz",
+      "Minas Gerais"
+    ],
+    "expectedImage": "/images/personalities/milton_nascimento_portrait.jpg"
+  },
+  {
+    "name": "Stephen Hawking",
+    "dates": "1942–2018",
+    "birthYear": 1942,
+    "summary": "Theoretical physicist and cosmologist who discovered black hole thermal radiation (Hawking Radiation) and popularized cosmological inquiry through 'A Brief History of Time'.",
+    "tags": [
+      "Cosmology",
+      "Black Holes",
+      "General Relativity",
+      "Quantum Gravity"
+    ],
+    "expectedImage": "/images/personalities/stephen_hawking_portrait.jpg"
+  },
+  {
+    "name": "Bobby Fischer",
+    "dates": "1943–2008",
+    "birthYear": 1943,
+    "summary": "American chess prodigy and 11th World Chess Champion who broke the Soviet monopoly on chess by defeating Boris Spassky in the legendary 1972 'Match of the Century'.",
+    "tags": [
+      "Chess",
+      "Grandmaster",
+      "Cold War",
+      "United States",
+      "Strategy"
+    ],
+    "expectedImage": "/images/personalities/bobby_fischer_portrait.jpg"
+  },
+  {
+    "name": "Robert De Niro",
+    "dates": "1943–present",
+    "birthYear": 1943,
+    "summary": "American actor and producer acclaimed for transformative psychological immersion in collaborations with Martin Scorsese, including 'Taxi Driver', 'Raging Bull', and 'Goodfellas'.",
+    "tags": [
+      "Cinema",
+      "Acting",
+      "Scorsese",
+      "Method Acting",
+      "Hollywood"
+    ],
+    "expectedImage": "/images/personalities/robert_de_niro_portrait.jpg"
+  },
+  {
+    "name": "Lech Wałęsa",
+    "dates": "1943–present",
+    "birthYear": 1943,
+    "summary": "Polish shipyard electrician and trade unionist who co-founded Solidarity (Solidarność), spearheading the peaceful collapse of Soviet-backed communism in Eastern Europe.",
+    "tags": [
+      "Solidarity",
+      "Poland",
+      "Labor Movement",
+      "Nobel Peace Prize"
+    ],
+    "expectedImage": "/images/personalities/lech_wa_sa_portrait.jpg"
+  },
+  {
+    "name": "Vint Cerf",
+    "dates": "1943–present",
+    "birthYear": 1943,
+    "summary": "'Father of the Internet', Turing Award laureate who co-designed the TCP/IP protocols and the basic fundamental architecture of the global Internet.",
+    "tags": [
+      "Networking",
+      "TCP/IP",
+      "Internet",
+      "Computer Science"
+    ],
+    "expectedImage": "/images/personalities/vint_cerf_portrait.jpg"
+  },
+  {
+    "name": "Maria da Penha",
+    "dates": "1945–present",
+    "birthYear": 1945,
+    "summary": "Brazilian biopharmacist and women's rights leader whose survival of domestic violence and landmark legal battle at the OAS resulted in Brazil's historic Maria da Penha Law.",
+    "tags": [
+      "Human Rights",
+      "Brazil",
+      "Women's Rights",
+      "Law",
+      "Social Justice"
+    ],
+    "expectedImage": "/images/personalities/maria_da_penha_portrait.jpg"
+  },
+  {
+    "name": "Elis Regina",
+    "dates": "1945–1982",
+    "birthYear": 1945,
+    "summary": "Legendary Brazilian singer widely celebrated as the greatest female vocalist in the history of MPB (Música Popular Brasileira), known for dramatic vocal mastery and emotional intensity.",
+    "tags": [
+      "Music",
+      "MPB",
+      "Brazil",
+      "Bossa Nova",
+      "Vocal Performance"
+    ],
+    "expectedImage": "/images/personalities/elis_regina_portrait.jpg"
+  },
+  {
+    "name": "Raul Seixas",
+    "dates": "1945–1989",
+    "birthYear": 1945,
+    "summary": "Iconic Brazilian singer-songwriter, mystic, and countercultural pioneer celebrated as the 'Father of Brazilian Rock', who blended American rock'n'roll with northeastern baião rhythms.",
+    "tags": [
+      "Music",
+      "Rock Brasileiro",
+      "Counterculture",
+      "Brazil",
+      "Mysticism"
+    ],
+    "expectedImage": "/images/personalities/raul_seixas_portrait.jpg"
+  },
+  {
+    "name": "Luiz Inácio Lula da Silva",
+    "dates": "1945–present",
+    "birthYear": 1945,
+    "summary": "Metallurgical labor leader during the ABC strikes, co-founder of the Workers' Party (PT), and three-time President of Brazil recognized for pioneering anti-poverty programs.",
+    "tags": [
+      "Sindicalismo",
+      "Programas Sociais",
+      "Presidência",
+      "Trabalhadores"
+    ],
+    "expectedImage": "/images/personalities/luiz_inacio_lula_da_silva_portrait.jpg"
+  },
+  {
+    "name": "Ted Bundy",
+    "dates": "1946–1989",
+    "birthYear": 1946,
+    "summary": "Infamous American serial killer, kidnapper, and necrophile who murdered at least 30 young women across multiple states during the 1970s while using charismatic deception.",
+    "tags": [
+      "True Crime",
+      "Forensics",
+      "Serial Killers",
+      "American History"
+    ],
+    "expectedImage": "/images/personalities/ted_bundy_portrait.jpg"
+  },
+  {
+    "name": "Freddie Mercury",
+    "dates": "1946–1991",
+    "birthYear": 1946,
+    "summary": "British singer, songwriter, and flamboyant frontman of rock band Queen, revered for his phenomenal four-octave vocal range, theatrical songwriting, and legendary Live Aid performance.",
+    "tags": [
+      "Music",
+      "Rock",
+      "Queen",
+      "Vocalist",
+      "Live Aid"
+    ],
+    "expectedImage": "/images/personalities/freddie_mercury_portrait.jpg"
+  },
+  {
+    "name": "David Bowie",
+    "dates": "1947–2016",
+    "birthYear": 1947,
+    "summary": "English singer-songwriter, actor, and musical chameleon whose theatrical reinventions (Ziggy Stardust, Thin White Duke) transformed rock, glam, electronic, and pop culture.",
+    "tags": [
+      "Music",
+      "Art Rock",
+      "Glam Rock",
+      "Innovation",
+      "Culture"
+    ],
+    "expectedImage": "/images/personalities/david_bowie_portrait.jpg"
+  },
+  {
+    "name": "Sally Ride",
+    "dates": "1951–2012",
+    "birthYear": 1951,
+    "summary": "American physicist and astronaut who became the first American woman and third woman in space aboard Space Shuttle Challenger (STS-7) in 1983.",
+    "tags": [
+      "Space Exploration",
+      "NASA",
+      "Physics",
+      "Women in STEM",
+      "Astronaut"
+    ],
+    "expectedImage": "/images/personalities/sally_ride_portrait.jpg"
+  },
+  {
+    "name": "Robin Williams",
+    "dates": "1951–2014",
+    "birthYear": 1951,
+    "summary": "Beloved American actor and comedian renowned for his rapid-fire improvisational genius, emotional range, and iconic roles across comedy and profound drama.",
+    "tags": [
+      "Cinema",
+      "Comedy",
+      "Acting",
+      "United States",
+      "Drama"
+    ],
+    "expectedImage": "/images/personalities/robin_williams_portrait.jpg"
+  },
+  {
+    "name": "Ailton Krenak",
+    "dates": "1953–present",
+    "birthYear": 1953,
+    "summary": "Brazilian indigenous leader, environmentalist, philosopher, and writer from the Krenak nation, and the first Indigenous person elected to the Brazilian Academy of Letters (ABL).",
+    "tags": [
+      "Indigenous Rights",
+      "Philosophy",
+      "Brazil",
+      "Ecology",
+      "Literature"
+    ],
+    "expectedImage": "/images/personalities/ailton_krenak_portrait.jpg"
+  },
+  {
+    "name": "Benazir Bhutto",
+    "dates": "1953–2007",
+    "birthYear": 1953,
+    "summary": "Pakistani democratic politician who became the first woman to head a democratic government in a Muslim-majority nation, serving twice as Prime Minister of Pakistan.",
+    "tags": [
+      "Politics",
+      "Pakistan",
+      "Democracy",
+      "Leadership",
+      "Human Rights"
+    ],
+    "expectedImage": "/images/personalities/benazir_bhutto_portrait.jpg"
+  },
+  {
+    "name": "Angela Merkel",
+    "dates": "1954–present",
+    "birthYear": 1954,
+    "summary": "German politician and quantum chemist who served as Chancellor of Germany from 2005 to 2021, widely regarded as the de facto leader of the European Union during critical crises.",
+    "tags": [
+      "Politics",
+      "Germany",
+      "European Union",
+      "Leadership",
+      "Diplomacy"
+    ],
+    "expectedImage": "/images/personalities/angela_merkel_portrait.jpg"
+  },
+  {
+    "name": "Davi Kopenawa",
+    "dates": "c. 1956–present",
+    "birthYear": 1956,
+    "summary": "Yanomami shaman, activist, and author celebrated for his international fight against illegal mining and deforestation in the Amazon, co-author of 'The Falling Sky'.",
+    "tags": [
+      "Indigenous Rights",
+      "Amazon Rainforest",
+      "Yanomami",
+      "Ecology",
+      "Shamanism"
+    ],
+    "expectedImage": "/images/personalities/davi_kopenawa_portrait.jpg"
+  },
+  {
+    "name": "El Chapo (Joaquín Guzmán)",
+    "dates": "1957–present",
+    "birthYear": 1957,
+    "summary": "Mexican drug lord who headed the Sinaloa Cartel, orchestrating transnational trafficking through elaborate border tunnels and staging two sensational prison escapes.",
+    "tags": [
+      "True Crime",
+      "Mexico",
+      "Sinaloa Cartel",
+      "Organized Crime"
+    ],
+    "expectedImage": "/images/personalities/el_chapo_joaquín_guzmán_portrait.jpg"
+  },
+  {
+    "name": "Michael Jackson",
+    "dates": "1958–2009",
+    "birthYear": 1958,
+    "summary": "American singer, songwriter, and dancer acclaimed as the 'King of Pop', whose monumental album 'Thriller' remains the best-selling album of all time, transforming modern popular culture.",
+    "tags": [
+      "Music",
+      "Pop",
+      "Dance",
+      "King of Pop",
+      "Thriller"
+    ],
+    "expectedImage": "/images/personalities/michael_jackson_portrait.jpg"
+  },
+  {
+    "name": "Diego Maradona",
+    "dates": "1960–2020",
+    "birthYear": 1960,
+    "summary": "Argentine professional footballer and cultural deity celebrated as one of the greatest players in the history of the sport, leading Argentina to World Cup victory in 1986.",
+    "tags": [
+      "Sports",
+      "Football",
+      "Argentina",
+      "World Cup",
+      "Napoli"
+    ],
+    "expectedImage": "/images/personalities/diego_maradona_portrait.jpg"
+  },
+  {
+    "name": "Jeffrey Dahmer",
+    "dates": "1960–1994",
+    "birthYear": 1960,
+    "summary": "American serial killer and sex offender known as the 'Milwaukee Cannibal', who murdered and dismembered 17 men and boys between 1978 and 1991.",
+    "tags": [
+      "True Crime",
+      "Forensics",
+      "Serial Killers",
+      "Psychiatry"
+    ],
+    "expectedImage": "/images/personalities/jeffrey_dahmer_portrait.jpg"
+  },
+  {
+    "name": "Yanis Varoufakis",
+    "dates": "1961–present",
+    "birthYear": 1961,
+    "summary": "Greek economist, author, game theorist, and former Minister of Finance who analyzes European debt crises, global capitalism, and the rise of cloud-based technofeudalism.",
+    "tags": [
+      "Economics",
+      "Political Economy",
+      "Technofeudalism",
+      "Greece",
+      "Game Theory"
+    ],
+    "expectedImage": "/images/personalities/yanis_varoufakis_portrait.jpg"
+  },
+  {
+    "name": "David Graeber",
+    "dates": "1961–2020",
+    "birthYear": 1961,
+    "summary": "American anthropologist, anarchist activist, and author who challenged conventional narratives of money, work, and social hierarchy with seminal anthropological studies.",
+    "tags": [
+      "Anthropology",
+      "Economics",
+      "Anarchism",
+      "Debt",
+      "Philosophy"
+    ],
+    "expectedImage": "/images/personalities/david_graeber_portrait.jpg"
+  },
+  {
+    "name": "Marcos Pontes",
+    "dates": "1963–present",
+    "birthYear": 1963,
+    "summary": "Brazilian Air Force pilot and astronaut who became the first Brazilian and first South American in space during the Missão Centenário aboard Soyuz TMA-8 in 2006.",
+    "tags": [
+      "Space Exploration",
+      "Astronaut",
+      "Brazil",
+      "Aviation",
+      "Engineering"
+    ],
+    "expectedImage": "/images/personalities/marcos_pontes_portrait.jpg"
+  },
+  {
+    "name": "Michael Jordan",
+    "dates": "1963–present",
+    "birthYear": 1963,
+    "summary": "American professional basketball player and entrepreneur widely acclaimed as the greatest basketball player of all time, winning six NBA championships with the Chicago Bulls.",
+    "tags": [
+      "Sports",
+      "Basketball",
+      "NBA",
+      "Chicago Bulls",
+      "Athletics"
+    ],
+    "expectedImage": "/images/personalities/michael_jordan_portrait.jpg"
+  },
+  {
+    "name": "Garry Kasparov",
+    "dates": "1963–present",
+    "birthYear": 1963,
+    "summary": "Russian-Croatian chess grandmaster and former World Chess Champion (1985–2000), widely considered the greatest chess player of all time and pioneer of human-computer chess.",
+    "tags": [
+      "Chess",
+      "Grandmaster",
+      "Strategy",
+      "Artificial Intelligence",
+      "World Champion"
+    ],
+    "expectedImage": "/images/personalities/garry_kasparov_portrait.jpg"
+  }
+]
