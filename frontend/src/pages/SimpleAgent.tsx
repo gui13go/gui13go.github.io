@@ -477,7 +477,7 @@ export const SimpleAgent: React.FC = () => {
             </form>
             <div className="agent-input-footer">
               <span>
-                Press <kbd>Enter</kbd> to send, <kbd>Shift + Enter</kbd> for new line. Powered by Neural Gateway & Gemma4.
+                Press <kbd>Enter</kbd> to send, <kbd>Shift + Enter</kbd> for new line.
               </span>
             </div>
           </div>
