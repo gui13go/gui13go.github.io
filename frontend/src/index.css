@@ -2695,3 +2695,75 @@ html[data-theme="light"] .fmt-filter-chip.active,
   content-visibility: auto;
   contain-intrinsic-size: 300px 420px;
 }
+
+/* ==========================================================================
+   Personality AI Chat Button (Blue Circled Cloud Dialogue)
+   ========================================================================== */
+
+.personality-name-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.personality-ai-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1.5px solid rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.personality-ai-btn:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+  border-color: #38bdf8;
+  color: #ffffff;
+  transform: translateY(-1.5px) scale(1.08);
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.5), 0 0 12px rgba(56, 189, 248, 0.45);
+}
+
+.personality-ai-btn:active {
+  transform: translateY(0) scale(0.95);
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.35);
+}
+
+.personality-ai-btn .personality-ai-icon {
+  width: 16px;
+  height: 16px;
+  display: block;
+  transition: transform 0.22s ease;
+}
+
+.personality-ai-btn:hover .personality-ai-icon {
+  transform: scale(1.05);
+}
+
+html[data-theme="light"] .personality-ai-btn,
+:root:not(.dark) .personality-ai-btn {
+  background: rgba(2, 132, 199, 0.1);
+  border-color: rgba(2, 132, 199, 0.35);
+  color: #0284c7;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.12);
+}
+
+html[data-theme="light"] .personality-ai-btn:hover,
+:root:not(.dark) .personality-ai-btn:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+  border-color: #0284c7;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+}
+

@@ -30,6 +30,10 @@ const ALIASES: Record<string, string> = {
   'turing-test': 'turing-eva-test',
   'eva-test': 'turing-eva-test',
   'turing-eva': 'turing-eva-test',
+  'sren-kierkegaard': 's-ren-kierkegaard',
+  'soren-kierkegaard': 's-ren-kierkegaard',
+  'lech-walesa': 'lech-wa-esa',
+  'lech-waesa': 'lech-wa-esa',
 }
 
 export const DynamicItemPage: React.FC<DynamicItemProps> = ({ section }) => {

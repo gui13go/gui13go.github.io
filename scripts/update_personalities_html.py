@@ -22,6 +22,7 @@ def get_thumbnail_src(img_url):
 
 def generate_card_html(p):
     name = html.escape(p.get('name') or '')
+    slug = html.escape(p.get('slug') or re.sub(r'[^a-zA-Z0-9]+', '-', p.get('name') or '').lower().strip('-'))
     dates = html.escape(p.get('dates') or '')
     birth_year = p.get('birthYear') if p.get('birthYear') is not None else 9999
     summary = html.escape(p.get('summary') or '')
@@ -90,7 +91,7 @@ def generate_card_html(p):
     thumb_src = html.escape(get_thumbnail_src(image))
 
     return f"""<article class="personality-card" data-birth-year="{birth_year}" data-dates="{data_dates}" data-keywords="{keywords}" data-name="{data_name}" data-quotes="{quotes_attr}" data-summary="{data_summary}" data-works="{works_attr}">
-<div class="personality-img-wrapper gallery-zoomable" data-zoom-caption="{zoom_caption}" data-zoom-src="{zoom_src}" data-zoom-title="{zoom_title}" title="Click to view full portrait">
+<div class="personality-img-wrapper gallery-zoomable" data-slug="{slug}" data-zoom-caption="{zoom_caption}" data-zoom-src="{zoom_src}" data-zoom-title="{zoom_title}" title="Click to view full portrait">
 <img alt="{name}" loading="lazy" onerror="this.onerror=null;this.src='/images/personalities_thumbs/placeholder-avatar.webp';" src="{thumb_src}"/>
 <div class="personality-img-overlay">
 <svg class="zoom-indicator-icon" fill="none" height="22" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="22">
@@ -103,7 +104,17 @@ def generate_card_html(p):
 </div>
 <div class="personality-content">
 <div class="personality-top-row">
+<div class="personality-name-wrap">
 <h2 class="personality-name">{name}</h2>
+<a class="personality-ai-btn" href="/gallery/personalities/{slug}/" title="Talk with {name} (AI)" aria-label="Talk with {name} (AI)">
+<svg class="personality-ai-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+<path d="M18 10h-.01c-.1-3.3-2.7-6-6-6-2.6 0-4.8 1.7-5.6 4.1C4.1 8.5 2 10.5 2 13c0 2.8 2.2 5 5 5h1v3l3.5-3H18c2.8 0 5-2.2 5-5s-2.2-5-5-5z"></path>
+<circle cx="8" cy="13" r="1" fill="currentColor" stroke="none"></circle>
+<circle cx="12" cy="13" r="1" fill="currentColor" stroke="none"></circle>
+<circle cx="16" cy="13" r="1" fill="currentColor" stroke="none"></circle>
+</svg>
+</a>
+</div>
 <span class="personality-dates">{dates}</span>
 </div>
 <p class="personality-summary">{summary}</p>
@@ -126,10 +137,95 @@ def main():
     new_badge = f'<div class="gallery-count-badge">\n      Showing <span id="visibleCount">{len(personalities)}</span> of <span id="totalCount">{len(personalities)}</span> personalities\n    </div>'
     html_content = re.sub(old_badge_regex, new_badge, html_content)
 
-    # 2. Generate cards HTML
+    # 2. Ensure embedded CSS has personality-ai-btn styles
+    css_to_add = """
+    .personality-name-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .personality-ai-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      min-width: 30px;
+      min-height: 30px;
+      border-radius: 50%;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1.5px solid rgba(56, 189, 248, 0.4);
+      color: #38bdf8;
+      text-decoration: none;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+      flex-shrink: 0;
+    }
+    .personality-ai-btn:hover {
+      background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+      border-color: #38bdf8;
+      color: #ffffff;
+      transform: translateY(-1.5px) scale(1.08);
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.5), 0 0 12px rgba(56, 189, 248, 0.45);
+    }
+    .personality-ai-btn:active {
+      transform: translateY(0) scale(0.95);
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.35);
+    }
+    .personality-ai-btn .personality-ai-icon {
+      width: 16px;
+      height: 16px;
+      display: block;
+      transition: transform 0.22s ease;
+    }
+    .personality-ai-btn:hover .personality-ai-icon {
+      transform: scale(1.05);
+    }
+    html[data-theme="light"] .personality-ai-btn,
+    :root:not(.dark) .personality-ai-btn {
+      background: rgba(2, 132, 199, 0.1);
+      border-color: rgba(2, 132, 199, 0.35);
+      color: #0284c7;
+      box-shadow: 0 2px 6px rgba(2, 132, 199, 0.12);
+    }
+    html[data-theme="light"] .personality-ai-btn:hover,
+    :root:not(.dark) .personality-ai-btn:hover {
+      background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+      border-color: #0284c7;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+    }"""
+    if '.personality-ai-btn' not in html_content:
+        html_content = html_content.replace('</style>', css_to_add + '\n  </style>', 1)
+
+    # 3. Update createCardElement in embedded JS
+    old_top_row_js = """<div class="personality-top-row">
+            <h2 class="personality-name">${escapeHtml(p.name)}</h2>
+            <span class="personality-dates">${escapeHtml(p.dates)}</span>
+          </div>"""
+    new_top_row_js = """<div class="personality-top-row">
+            <div class="personality-name-wrap">
+              <h2 class="personality-name">${escapeHtml(p.name)}</h2>
+              <a href="/gallery/personalities/${p.slug || slugify(p.name)}/" class="personality-ai-btn" title="Talk with ${escapeHtml(p.name)} (AI)" aria-label="Talk with ${escapeHtml(p.name)} (AI)">
+                <svg class="personality-ai-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 10h-.01c-.1-3.3-2.7-6-6-6-2.6 0-4.8 1.7-5.6 4.1C4.1 8.5 2 10.5 2 13c0 2.8 2.2 5 5 5h1v3l3.5-3H18c2.8 0 5-2.2 5-5s-2.2-5-5-5z"></path>
+                  <circle cx="8" cy="13" r="1" fill="currentColor" stroke="none"></circle>
+                  <circle cx="12" cy="13" r="1" fill="currentColor" stroke="none"></circle>
+                  <circle cx="16" cy="13" r="1" fill="currentColor" stroke="none"></circle>
+                </svg>
+              </a>
+            </div>
+            <span class="personality-dates">${escapeHtml(p.dates)}</span>
+          </div>"""
+    html_content = html_content.replace(old_top_row_js, new_top_row_js)
+
+    # 4. Generate cards HTML
     cards_html = "\n".join([generate_card_html(p) for p in personalities])
 
-    # 3. Replace content inside personalitiesGrid
+    # 5. Replace content inside personalitiesGrid
     grid_start_tag = '<div class="personalities-container" id="personalitiesGrid">'
     grid_start_idx = html_content.find(grid_start_tag)
     if grid_start_idx == -1:

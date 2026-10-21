@@ -30,7 +30,8 @@
         "text": "A man's life passes away, but stone erected with skill proclaims his name forever.",
         "cite": "Ancient Egyptian Proverb"
       }
-    ]
+    ],
+    "slug": "imhotep"
   },
   {
     "name": "Noah",
@@ -63,7 +64,8 @@
         "text": "I establish my covenant with you: Never again will all life be destroyed by the waters of a flood.",
         "cite": "Genesis 9:11"
       }
-    ]
+    ],
+    "slug": "noah"
   },
   {
     "name": "Sargon of Akkad",
@@ -96,7 +98,8 @@
         "text": "Fifty-four kings bow down to my standard, and my ships touch the Lower Sea and the Upper Sea.",
         "cite": "Royal Akkadian Inscriptions"
       }
-    ]
+    ],
+    "slug": "sargon-of-akkad"
   },
   {
     "name": "Abraham",
@@ -129,7 +132,8 @@
         "text": "Here I am.",
         "cite": "Genesis 22:1"
       }
-    ]
+    ],
+    "slug": "abraham"
   },
   {
     "name": "Hammurabi",
@@ -162,7 +166,8 @@
         "text": "An eye for an eye, a tooth for a tooth.",
         "cite": "Law 196, Code of Hammurabi"
       }
-    ]
+    ],
+    "slug": "hammurabi"
   },
   {
     "name": "Joseph (Son of Jacob)",
@@ -195,7 +200,8 @@
         "text": "You intended to harm me, but God intended it for good to accomplish what is now being done.",
         "cite": "Genesis 50:20"
       }
-    ]
+    ],
+    "slug": "joseph-son-of-jacob"
   },
   {
     "name": "Hatshepsut",
@@ -228,7 +234,8 @@
         "text": "I have done these things by the design of my heart, under the guidance of Amun.",
         "cite": "Hatshepsut"
       }
-    ]
+    ],
+    "slug": "hatshepsut"
   },
   {
     "name": "Job",
@@ -265,7 +272,8 @@
         "text": "I know that my redeemer lives, and that in the end he will stand on the earth.",
         "cite": "Job 19:25"
       }
-    ]
+    ],
+    "slug": "job"
   },
   {
     "name": "Moses",
@@ -302,7 +310,8 @@
         "text": "Hear, O Israel: The Lord our God, the Lord is one.",
         "cite": "Deuteronomy 6:4"
       }
-    ]
+    ],
+    "slug": "moses"
   },
   {
     "name": "Ramses II (the Great)",
@@ -335,7 +344,8 @@
         "text": "I have built for thee a house of millions of years, established forever.",
         "cite": "Abu Simbel Inscription"
       }
-    ]
+    ],
+    "slug": "ramses-ii-the-great"
   },
   {
     "name": "Samson",
@@ -368,7 +378,8 @@
         "text": "Sovereign Lord, remember me. Please, God, strengthen me just once more.",
         "cite": "Judges 16:28"
       }
-    ]
+    ],
+    "slug": "samson"
   },
   {
     "name": "King David",
@@ -405,7 +416,8 @@
         "text": "Even though I walk through the darkest valley, I will fear no evil, for you are with me.",
         "cite": "Psalm 23:4"
       }
-    ]
+    ],
+    "slug": "king-david"
   },
   {
     "name": "Zoroaster (Zarathustra)",
@@ -438,7 +450,8 @@
         "text": "Happiness comes to him who brings happiness to others.",
         "cite": "Yasna 43:1"
       }
-    ]
+    ],
+    "slug": "zoroaster-zarathustra"
   },
   {
     "name": "King Solomon",
@@ -476,7 +489,8 @@
         "text": "The fear of the Lord is the beginning of wisdom.",
         "cite": "Proverbs 9:10"
       }
-    ]
+    ],
+    "slug": "king-solomon"
   },
   {
     "name": "Elijah",
@@ -509,7 +523,8 @@
         "text": "After the fire came a gentle whisper.",
         "cite": "1 Kings 19:12"
       }
-    ]
+    ],
+    "slug": "elijah"
   },
   {
     "name": "Homer",
@@ -542,7 +557,8 @@
         "text": "There is a time for many words, and there is also a time for sleep.",
         "cite": "The Odyssey"
       }
-    ]
+    ],
+    "slug": "homer"
   },
   {
     "name": "Isaiah",
@@ -579,7 +595,8 @@
         "text": "Here am I. Send me!",
         "cite": "Isaiah 6:8"
       }
-    ]
+    ],
+    "slug": "isaiah"
   },
   {
     "name": "Nebuchadnezzar II",
@@ -612,7 +629,8 @@
         "text": "I made the walls of Babylon impregnable and its gates dazzling like the sun.",
         "cite": "Babylonian Inscription"
       }
-    ]
+    ],
+    "slug": "nebuchadnezzar-ii"
   },
   {
     "name": "Daniel",
@@ -645,7 +663,8 @@
         "text": "He changes times and seasons; he deposes kings and raises up others.",
         "cite": "Daniel 2:21"
       }
-    ]
+    ],
+    "slug": "daniel"
   },
   {
     "name": "Laozi",
@@ -679,7 +698,8 @@
         "text": "“Knowing others is intelligence; knowing yourself is true wisdom.”",
         "cite": "— Tao Te Ching (Chapter 33)"
       }
-    ]
+    ],
+    "slug": "laozi"
   },
   {
     "name": "Cyrus the Great",
@@ -712,7 +732,8 @@
         "text": "I am Cyrus, king of the universe, the great king, the powerful king.",
         "cite": "The Cyrus Cylinder"
       }
-    ]
+    ],
+    "slug": "cyrus-the-great"
   },
   {
     "name": "Mahavira",
@@ -745,7 +766,8 @@
         "text": "Do not injure, abuse, oppress, enslave, insult, torment, torture, or kill any creature or living being.",
         "cite": "Acaranga Sutra"
       }
-    ]
+    ],
+    "slug": "mahavira"
   },
   {
     "name": "Pythagoras",
@@ -782,7 +804,8 @@
         "text": "Silence is the first stone of the temple of wisdom.",
         "cite": "Pythagoras"
       }
-    ]
+    ],
+    "slug": "pythagoras"
   },
   {
     "name": "Siddhartha Gautama",
@@ -816,7 +839,8 @@
         "text": "“Three things cannot be long hidden: the sun, the moon, and the truth.”",
         "cite": "— Attributed"
       }
-    ]
+    ],
+    "slug": "siddhartha-gautama"
   },
   {
     "name": "Gautama Buddha",
@@ -853,7 +877,8 @@
         "text": "Three things cannot be long hidden: the sun, the moon, and the truth.",
         "cite": "Attributed to the Buddha"
       }
-    ]
+    ],
+    "slug": "gautama-buddha"
   },
   {
     "name": "Confucius",
@@ -886,7 +911,8 @@
         "text": "“It does not matter how slowly you go as long as you do not stop.”",
         "cite": "— The Analects (Lunyu)"
       }
-    ]
+    ],
+    "slug": "confucius"
   },
   {
     "name": "Darius the Great",
@@ -919,7 +945,8 @@
         "text": "May Ahuramazda protect this country from army, famine, and falsehood.",
         "cite": "Persepolis Inscription"
       }
-    ]
+    ],
+    "slug": "darius-the-great"
   },
   {
     "name": "Sun Tzu",
@@ -953,7 +980,8 @@
         "text": "“If you know the enemy and know yourself, you need not fear the result of a hundred battles.”",
         "cite": "— The Art of War (Chapter 3)"
       }
-    ]
+    ],
+    "slug": "sun-tzu"
   },
   {
     "name": "Leonidas I",
@@ -990,7 +1018,8 @@
         "text": "Tonight we shall dine in Hades!",
         "cite": "Before the final stand at Thermopylae"
       }
-    ]
+    ],
+    "slug": "leonidas-i"
   },
   {
     "name": "Heraclitus",
@@ -1020,7 +1049,8 @@
         "text": "“No man ever steps in the same river twice, for it's not the same river and he's not the same man.”",
         "cite": "— Fragments (c. 500 BC)"
       }
-    ]
+    ],
+    "slug": "heraclitus"
   },
   {
     "name": "Esther",
@@ -1053,7 +1083,8 @@
         "text": "If I perish, I perish.",
         "cite": "Esther 4:16"
       }
-    ]
+    ],
+    "slug": "esther"
   },
   {
     "name": "Pericles",
@@ -1090,7 +1121,8 @@
         "text": "Our constitution does not copy the laws of neighboring states; we are rather a pattern to others than imitators ourselves.",
         "cite": "Pericles"
       }
-    ]
+    ],
+    "slug": "pericles"
   },
   {
     "name": "Herodotus",
@@ -1127,7 +1159,8 @@
         "text": "Hasty counsel is followed by repentance.",
         "cite": "The Histories"
       }
-    ]
+    ],
+    "slug": "herodotus"
   },
   {
     "name": "Socrates",
@@ -1162,7 +1195,8 @@
         "text": "“I know that I am intelligent, because I know that I know nothing.”",
         "cite": "— Apology (Plato)"
       }
-    ]
+    ],
+    "slug": "socrates"
   },
   {
     "name": "Thucydides",
@@ -1199,7 +1233,8 @@
         "text": "My work is not a piece of writing designed to meet the taste of an immediate public, but was done to last for ever.",
         "cite": "Thucydides"
       }
-    ]
+    ],
+    "slug": "thucydides"
   },
   {
     "name": "Hippocrates",
@@ -1236,7 +1271,8 @@
         "text": "Life is short, the art long, opportunity fleeting, experiment dangerous, judgment difficult.",
         "cite": "Aphorisms"
       }
-    ]
+    ],
+    "slug": "hippocrates"
   },
   {
     "name": "Democritus",
@@ -1273,7 +1309,8 @@
         "text": "Happiness resides not in possessions, and not in gold, happiness dwells in the soul.",
         "cite": "Democritus"
       }
-    ]
+    ],
+    "slug": "democritus"
   },
   {
     "name": "Plato",
@@ -1309,7 +1346,8 @@
         "text": "“Wise men speak because they have something to say; fools because they have to say something.”",
         "cite": "— Attributed"
       }
-    ]
+    ],
+    "slug": "plato"
   },
   {
     "name": "Diogenes",
@@ -1345,7 +1383,8 @@
         "text": "“Stand a little out of my sun.”",
         "cite": "— To Alexander the Great (Plutarch, Life of Alexander)"
       }
-    ]
+    ],
+    "slug": "diogenes"
   },
   {
     "name": "Aristotle",
@@ -1381,7 +1420,8 @@
         "text": "“It is the mark of an educated mind to be able to entertain a thought without accepting it.”",
         "cite": "— Metaphysics"
       }
-    ]
+    ],
+    "slug": "aristotle"
   },
   {
     "name": "Chanakya (Kautilya)",
@@ -1418,7 +1458,8 @@
         "text": "The ruler's happiness lies in the happiness of his subjects; his welfare lies in their welfare.",
         "cite": "Arthashastra"
       }
-    ]
+    ],
+    "slug": "chanakya-kautilya"
   },
   {
     "name": "Zhuangzi",
@@ -1450,7 +1491,8 @@
         "text": "Happiness is the absence of the striving for happiness.",
         "cite": "The Zhuangzi"
       }
-    ]
+    ],
+    "slug": "zhuangzi"
   },
   {
     "name": "Alexander the Great",
@@ -1483,7 +1525,8 @@
         "text": "I am not afraid of an army of lions led by a sheep; I am afraid of an army of sheep led by a lion.",
         "cite": "Alexander the Great"
       }
-    ]
+    ],
+    "slug": "alexander-the-great"
   },
   {
     "name": "Epicurus",
@@ -1518,7 +1561,8 @@
         "text": "“Death does not concern us, because as long as we exist, death is not here. And when it does come, we no longer exist.”",
         "cite": "— Letter to Menoeceus"
       }
-    ]
+    ],
+    "slug": "epicurus"
   },
   {
     "name": "Zeno of Citium",
@@ -1552,7 +1596,8 @@
         "text": "“Man conquers the world by conquering himself.”",
         "cite": "— Stoic Fragments"
       }
-    ]
+    ],
+    "slug": "zeno-of-citium"
   },
   {
     "name": "Euclid",
@@ -1589,7 +1634,8 @@
         "text": "The laws of nature are but the mathematical thoughts of God.",
         "cite": "Euclid"
       }
-    ]
+    ],
+    "slug": "euclid"
   },
   {
     "name": "Ashoka the Great",
@@ -1623,7 +1669,8 @@
         "text": "No society can prosper without tolerance for different faiths and beliefs.",
         "cite": "Major Rock Edict XII"
       }
-    ]
+    ],
+    "slug": "ashoka-the-great"
   },
   {
     "name": "Archimedes",
@@ -1656,7 +1703,8 @@
         "text": "Eureka! (I have found it!)",
         "cite": "Vitruvius (De Architectura)"
       }
-    ]
+    ],
+    "slug": "archimedes"
   },
   {
     "name": "Han Feizi",
@@ -1689,7 +1737,8 @@
         "text": "When circumstances change, methods must change with them. To cling to ancient ways in new times is folly.",
         "cite": "Han Feizi"
       }
-    ]
+    ],
+    "slug": "han-feizi"
   },
   {
     "name": "Eratosthenes",
@@ -1722,7 +1771,8 @@
         "text": "The Earth is a globe surrounded by oceans and measurable by intellect.",
         "cite": "Eratosthenes"
       }
-    ]
+    ],
+    "slug": "eratosthenes"
   },
   {
     "name": "Qin Shi Huang",
@@ -1755,7 +1805,8 @@
         "text": "Let all under heaven be governed under one law, one script, and one road.",
         "cite": "Qin Shi Huang"
       }
-    ]
+    ],
+    "slug": "qin-shi-huang"
   },
   {
     "name": "Hannibal Barca",
@@ -1788,7 +1839,8 @@
         "text": "We must show courage in adversity, for victory rewards those who refuse to yield.",
         "cite": "Hannibal Barca"
       }
-    ]
+    ],
+    "slug": "hannibal-barca"
   },
   {
     "name": "Scipio Africanus",
@@ -1821,7 +1873,8 @@
         "text": "Never is a man less alone than when he is by himself, nor less idle than when he has nothing to do.",
         "cite": "Cicero on Scipio Africanus"
       }
-    ]
+    ],
+    "slug": "scipio-africanus"
   },
   {
     "name": "Sima Qian",
@@ -1854,7 +1907,8 @@
         "text": "To hide in secret shame and suffer agony, solely to ensure that one's words shall shine for ten thousand generations.",
         "cite": "Sima Qian"
       }
-    ]
+    ],
+    "slug": "sima-qian"
   },
   {
     "name": "Spartacus",
@@ -1886,7 +1940,8 @@
         "text": "“If we must fight, let us fight for our freedom, rather than for the spectacle of our masters.”",
         "cite": "— Speech recorded in Roman Histories (c. 73 BC)"
       }
-    ]
+    ],
+    "slug": "spartacus"
   },
   {
     "name": "Hillel the Elder",
@@ -1919,7 +1974,8 @@
         "text": "If I am not for myself, who will be for me? But if I am only for myself, what am I? And if not now, when?",
         "cite": "Pirkei Avot 1:14"
       }
-    ]
+    ],
+    "slug": "hillel-the-elder"
   },
   {
     "name": "Cicero",
@@ -1952,7 +2008,8 @@
         "text": "The safety of the people shall be the supreme law (Salus populi suprema lex esto).",
         "cite": "De Legibus"
       }
-    ]
+    ],
+    "slug": "cicero"
   },
   {
     "name": "Saint John the Baptist",
@@ -1981,7 +2038,8 @@
         "text": "“He must increase, but I must decrease.”",
         "cite": "— Gospel of John (3:30)"
       }
-    ]
+    ],
+    "slug": "saint-john-the-baptist"
   },
   {
     "name": "Julius Caesar",
@@ -2014,7 +2072,8 @@
         "text": "The die is cast (Alea iacta est).",
         "cite": "Crossing the Rubicon (49 BCE)"
       }
-    ]
+    ],
+    "slug": "julius-caesar"
   },
   {
     "name": "Virgil",
@@ -2051,7 +2110,8 @@
         "text": "Audentes fortuna iuvat (Fortune favors the bold).",
         "cite": "The Aeneid, Book X"
       }
-    ]
+    ],
+    "slug": "virgil"
   },
   {
     "name": "Cleopatra VII",
@@ -2084,7 +2144,8 @@
         "text": "Age cannot wither her, nor custom stale her infinite variety.",
         "cite": "Shakespeare (Antony and Cleopatra)"
       }
-    ]
+    ],
+    "slug": "cleopatra-vii"
   },
   {
     "name": "Caesar Augustus",
@@ -2121,7 +2182,8 @@
         "text": "Have I played the part well? Then applaud as I exit.",
         "cite": "Deathbed words (Suetonius)"
       }
-    ]
+    ],
+    "slug": "caesar-augustus"
   },
   {
     "name": "Mary (Mother of Jesus)",
@@ -2158,7 +2220,8 @@
         "text": "Do whatever he tells you.",
         "cite": "Gospel of John 2:5 (Wedding at Cana)"
       }
-    ]
+    ],
+    "slug": "mary-mother-of-jesus"
   },
   {
     "name": "Pontius Pilate",
@@ -2195,7 +2258,8 @@
         "text": "What I have written, I have written.",
         "cite": "John 19:22"
       }
-    ]
+    ],
+    "slug": "pontius-pilate"
   },
   {
     "name": "John the Baptist",
@@ -2232,7 +2296,8 @@
         "text": "Behold the Lamb of God, who takes away the sin of the world!",
         "cite": "John 1:29"
       }
-    ]
+    ],
+    "slug": "john-the-baptist"
   },
   {
     "name": "Seneca",
@@ -2271,7 +2336,8 @@
         "text": "“It is not because things are difficult that we do not dare; it is because we do not dare that they are difficult.”",
         "cite": "— Letters from a Stoic (Letter 104)"
       }
-    ]
+    ],
+    "slug": "seneca"
   },
   {
     "name": "Jesus of Nazareth",
@@ -2308,7 +2374,8 @@
         "text": "You shall know the truth, and the truth shall set you free.",
         "cite": "Gospel of John (8:32)"
       }
-    ]
+    ],
+    "slug": "jesus-of-nazareth"
   },
   {
     "name": "Simon Peter",
@@ -2345,7 +2412,8 @@
         "text": "Lord, to whom shall we go? You have the words of eternal life.",
         "cite": "Gospel of John 6:68"
       }
-    ]
+    ],
+    "slug": "simon-peter"
   },
   {
     "name": "Mary Magdalene",
@@ -2378,7 +2446,8 @@
         "text": "I have seen the Lord!",
         "cite": "Mary Magdalene (John 20:18)"
       }
-    ]
+    ],
+    "slug": "mary-magdalene"
   },
   {
     "name": "Judas Iscariot",
@@ -2411,7 +2480,8 @@
         "text": "I have sinned in that I have betrayed innocent blood.",
         "cite": "Matthew 27:4"
       }
-    ]
+    ],
+    "slug": "judas-iscariot"
   },
   {
     "name": "Paul the Apostle",
@@ -2448,7 +2518,8 @@
         "text": "I have fought the good fight, I have finished the race, I have kept the faith.",
         "cite": "2 Timothy 4:7"
       }
-    ]
+    ],
+    "slug": "paul-the-apostle"
   },
   {
     "name": "Caligula",
@@ -2481,7 +2552,8 @@
         "text": "I wish the Roman people had only a single neck, so I could sever it with one blow.",
         "cite": "Suetonius"
       }
-    ]
+    ],
+    "slug": "caligula"
   },
   {
     "name": "Nero",
@@ -2514,7 +2586,8 @@
         "text": "Let them hate me, so long as they applaud my music.",
         "cite": "Nero"
       }
-    ]
+    ],
+    "slug": "nero"
   },
   {
     "name": "Epictetus",
@@ -2549,7 +2622,8 @@
         "text": "“It's not what happens to you, but how you react to it that matters.”",
         "cite": "— Discourses"
       }
-    ]
+    ],
+    "slug": "epictetus"
   },
   {
     "name": "Trajan",
@@ -2582,7 +2656,8 @@
         "text": "I wish to be such an emperor to my subjects as I would wish my emperor to be to me if I were a subject.",
         "cite": "Trajan"
       }
-    ]
+    ],
+    "slug": "trajan"
   },
   {
     "name": "Hadrian",
@@ -2615,7 +2690,8 @@
         "text": "To build is to collaborate with Earth, to put a human mark upon a landscape.",
         "cite": "Attributed to Hadrian"
       }
-    ]
+    ],
+    "slug": "hadrian"
   },
   {
     "name": "Marcus Aurelius",
@@ -2649,7 +2725,8 @@
         "text": "“Waste no more time arguing about what a good man should be. Be one.”",
         "cite": "— Meditations (Book X)"
       }
-    ]
+    ],
+    "slug": "marcus-aurelius"
   },
   {
     "name": "Nagarjuna",
@@ -2682,7 +2759,8 @@
         "text": "Without relying upon the conventional, the ultimate truth cannot be taught.",
         "cite": "Mulamadhyamakakarika"
       }
-    ]
+    ],
+    "slug": "nagarjuna"
   },
   {
     "name": "Constantine the Great",
@@ -2715,7 +2793,8 @@
         "text": "Let all men enjoy equal liberty of conscience, and worship whatever god their soul elects.",
         "cite": "Edict of Milan"
       }
-    ]
+    ],
+    "slug": "constantine-the-great"
   },
   {
     "name": "St. Augustine",
@@ -2750,7 +2829,8 @@
         "text": "“Thou hast made us for thyself, O Lord, and our heart is restless until it finds its rest in thee.”",
         "cite": "— Confessions (Book I, 397 AD)"
       }
-    ]
+    ],
+    "slug": "st-augustine"
   },
   {
     "name": "Augustine of Hippo",
@@ -2783,7 +2863,8 @@
         "text": "Thou hast made us for thyself, O Lord, and our heart is restless until it finds its rest in thee.",
         "cite": "Confessions"
       }
-    ]
+    ],
+    "slug": "augustine-of-hippo"
   },
   {
     "name": "Hypatia",
@@ -2816,7 +2897,8 @@
         "text": "Fables should be taught as fables, myths as myths, and miracles as poetic fancies. To teach superstitions as truth is a most terrible thing.",
         "cite": "Hypatia"
       }
-    ]
+    ],
+    "slug": "hypatia"
   },
   {
     "name": "Kalidasa",
@@ -2849,7 +2931,8 @@
         "text": "For yesterday is but a dream, and tomorrow is only a vision; but today well lived makes every yesterday a dream of happiness.",
         "cite": "Kalidasa"
       }
-    ]
+    ],
+    "slug": "kalidasa"
   },
   {
     "name": "Saint Patrick",
@@ -2886,7 +2969,8 @@
         "text": "Christ with me, Christ before me, Christ behind me, Christ in me.",
         "cite": "Lorica"
       }
-    ]
+    ],
+    "slug": "saint-patrick"
   },
   {
     "name": "Pope Leo I",
@@ -2919,7 +3003,8 @@
         "text": "Virtue is nothing without trial, faith is not tested without temptation.",
         "cite": "Leo the Great"
       }
-    ]
+    ],
+    "slug": "pope-leo-i"
   },
   {
     "name": "Attila the Hun",
@@ -2952,7 +3037,8 @@
         "text": "It is not numbers, but courage and fearlessness that win the field.",
         "cite": "Attila"
       }
-    ]
+    ],
+    "slug": "attila-the-hun"
   },
   {
     "name": "Clovis I",
@@ -2985,7 +3071,8 @@
         "text": "Bow thy neck in meekness, Sigamber; adore what thou hast burned, burn what thou hast adored.",
         "cite": "Bishop Remigius at Clovis's Baptism"
       }
-    ]
+    ],
+    "slug": "clovis-i"
   },
   {
     "name": "Bodhidharma",
@@ -3018,7 +3105,8 @@
         "text": "Beyond words and letters, pointing directly to the mind.",
         "cite": "Bodhidharma"
       }
-    ]
+    ],
+    "slug": "bodhidharma"
   },
   {
     "name": "Aryabhata",
@@ -3051,7 +3139,8 @@
         "text": "By the grace of Brahma, I plunged into the ocean of mathematics and brought up the sunken pearls of truth.",
         "cite": "Aryabhata"
       }
-    ]
+    ],
+    "slug": "aryabhata"
   },
   {
     "name": "Boethius",
@@ -3088,7 +3177,8 @@
         "text": "Who would give a law to lovers? Love is unto itself a higher law.",
         "cite": "Boethius"
       }
-    ]
+    ],
+    "slug": "boethius"
   },
   {
     "name": "Benedict of Nursia",
@@ -3125,7 +3215,8 @@
         "text": "Let all guests who arrive be received like Christ.",
         "cite": "Rule of Saint Benedict"
       }
-    ]
+    ],
+    "slug": "benedict-of-nursia"
   },
   {
     "name": "Justinian I (the Great)",
@@ -3158,7 +3249,8 @@
         "text": "Justice is the constant and perpetual wish to render to everyone their due.",
         "cite": "Institutes of Justinian"
       }
-    ]
+    ],
+    "slug": "justinian-i-the-great"
   },
   {
     "name": "Empress Theodora",
@@ -3191,7 +3283,8 @@
         "text": "May I never be stripped of this purple robe, or see the day when men no longer address me as sovereign.",
         "cite": "Empress Theodora"
       }
-    ]
+    ],
+    "slug": "empress-theodora"
   },
   {
     "name": "Belisarius",
@@ -3224,7 +3317,8 @@
         "text": "Success in war belongs not to brutality, but to disciplined maneuver and unyielding calm.",
         "cite": "Procopius on Belisarius"
       }
-    ]
+    ],
+    "slug": "belisarius"
   },
   {
     "name": "Pope Gregory I",
@@ -3261,7 +3355,8 @@
         "text": "The proof of love is in the works.",
         "cite": "Homilies on the Gospel"
       }
-    ]
+    ],
+    "slug": "pope-gregory-i"
   },
   {
     "name": "Prophet Muhammad",
@@ -3298,7 +3393,8 @@
         "text": "Speak good or remain silent.",
         "cite": "Hadith"
       }
-    ]
+    ],
+    "slug": "prophet-muhammad"
   },
   {
     "name": "Tang Taizong",
@@ -3331,7 +3427,8 @@
         "text": "The ruler is like a boat, and the common people are like water. Water can carry the boat, but it can also overturn it.",
         "cite": "Tang Taizong"
       }
-    ]
+    ],
+    "slug": "tang-taizong"
   },
   {
     "name": "Brahmagupta",
@@ -3364,7 +3461,8 @@
         "text": "Zero added to a quantity or subtracted from a quantity leaves the quantity unchanged.",
         "cite": "Brahmagupta"
       }
-    ]
+    ],
+    "slug": "brahmagupta"
   },
   {
     "name": "Ali ibn Abi Talib",
@@ -3401,7 +3499,8 @@
         "text": "The richest of the rich is one who is not a prisoner to greed.",
         "cite": "Nahj al-Balagha"
       }
-    ]
+    ],
+    "slug": "ali-ibn-abi-talib"
   },
   {
     "name": "Xuanzang",
@@ -3434,7 +3533,8 @@
         "text": "Truth is universal; it shines through every language and boundary when the seeker's mind is pure.",
         "cite": "Xuanzang"
       }
-    ]
+    ],
+    "slug": "xuanzang"
   },
   {
     "name": "Wu Zetian",
@@ -3467,7 +3567,8 @@
         "text": "A ruler should place the prosperity and welfare of the people above all ancestral customs.",
         "cite": "Wu Zetian"
       }
-    ]
+    ],
+    "slug": "wu-zetian"
   },
   {
     "name": "Tariq ibn Ziyad",
@@ -3500,7 +3601,8 @@
         "text": "There is nothing for you now but courage, faith, and patience.",
         "cite": "Tariq ibn Ziyad"
       }
-    ]
+    ],
+    "slug": "tariq-ibn-ziyad"
   },
   {
     "name": "Charles Martel",
@@ -3533,7 +3635,8 @@
         "text": "Disciplined valor in defense of our lands and people will turn the tide of any invader.",
         "cite": "Charles Martel"
       }
-    ]
+    ],
+    "slug": "charles-martel"
   },
   {
     "name": "Li Bai",
@@ -3570,7 +3673,8 @@
         "text": "Heaven produced me with my gifts; they must be put to use!",
         "cite": "Li Bai"
       }
-    ]
+    ],
+    "slug": "li-bai"
   },
   {
     "name": "Du Fu",
@@ -3607,7 +3711,8 @@
         "text": "Reading ten thousand scrolls of books makes writing flow as if guided by the divine.",
         "cite": "Du Fu"
       }
-    ]
+    ],
+    "slug": "du-fu"
   },
   {
     "name": "Jabir ibn Hayyan (Geber)",
@@ -3640,7 +3745,8 @@
         "text": "He who performs not practical work nor makes experiments will never attain the least degree of mastery.",
         "cite": "Kitab al-Khawass"
       }
-    ]
+    ],
+    "slug": "jabir-ibn-hayyan-geber"
   },
   {
     "name": "Charlemagne",
@@ -3677,7 +3783,8 @@
         "text": "Let schools be established in every monastery and bishop's house.",
         "cite": "De Litteris Colendis"
       }
-    ]
+    ],
+    "slug": "charlemagne"
   },
   {
     "name": "Harun al-Rashid",
@@ -3710,7 +3817,8 @@
         "text": "Knowledge is the ornament of the wealthy and the wealth of the poor.",
         "cite": "Abbasid Court"
       }
-    ]
+    ],
+    "slug": "harun-al-rashid"
   },
   {
     "name": "Al-Khwarizmi",
@@ -3743,7 +3851,8 @@
         "text": "Knowledge is elevated when it solves the practical needs of humanity.",
         "cite": "Al-Khwarizmi"
       }
-    ]
+    ],
+    "slug": "al-khwarizmi"
   },
   {
     "name": "Adi Shankara",
@@ -3776,7 +3885,8 @@
         "text": "Knowing that I am different from the body, I need not neglect the body of my chariot.",
         "cite": "Adi Shankara"
       }
-    ]
+    ],
+    "slug": "adi-shankara"
   },
   {
     "name": "Rurik",
@@ -3809,7 +3919,8 @@
         "text": "Order and rule of law bring prosperity to great waterways.",
         "cite": "Attributed to Rurik"
       }
-    ]
+    ],
+    "slug": "rurik"
   },
   {
     "name": "Alfred the Great",
@@ -3842,7 +3953,8 @@
         "text": "A nation cannot stand without tools: praying men, fighting men, and working men.",
         "cite": "Alfred the Great"
       }
-    ]
+    ],
+    "slug": "alfred-the-great"
   },
   {
     "name": "Al-Farabi",
@@ -3875,7 +3987,8 @@
         "text": "Philosophy precedes religion in time and truth, for it addresses the intellect directly.",
         "cite": "Al-Farabi"
       }
-    ]
+    ],
+    "slug": "al-farabi"
   },
   {
     "name": "Olga of Kiev",
@@ -3908,7 +4021,8 @@
         "text": "A wise ruler attends first to the stability of the state and the protection of the innocent.",
         "cite": "Olga of Kiev"
       }
-    ]
+    ],
+    "slug": "olga-of-kiev"
   },
   {
     "name": "Vladimir the Great",
@@ -3941,7 +4055,8 @@
         "text": "Let us receive the faith and live in peace and unity under God's law.",
         "cite": "Vladimir the Great"
       }
-    ]
+    ],
+    "slug": "vladimir-the-great"
   },
   {
     "name": "Leif Erikson",
@@ -3974,7 +4089,8 @@
         "text": "Luck follows the bold who dare uncharted seas.",
         "cite": "Norse Sagas"
       }
-    ]
+    ],
+    "slug": "leif-erikson"
   },
   {
     "name": "Murasaki Shikibu",
@@ -4011,7 +4127,8 @@
         "text": "Writing fiction is not just telling made-up stories; it comes from having things so deep in your heart that you cannot keep them to yourself.",
         "cite": "Murasaki Shikibu"
       }
-    ]
+    ],
+    "slug": "murasaki-shikibu"
   },
   {
     "name": "Al-Biruni",
@@ -4044,7 +4161,8 @@
         "text": "The purpose of science is to dispel ignorance through impartial investigation.",
         "cite": "Al-Biruni"
       }
-    ]
+    ],
+    "slug": "al-biruni"
   },
   {
     "name": "Avicenna (Ibn Sina)",
@@ -4076,7 +4194,8 @@
         "text": "Medicine is the science by which we learn the various states of the human body, in health, when not in health, and the means by which health is restored.",
         "cite": "The Canon of Medicine"
       }
-    ]
+    ],
+    "slug": "avicenna-ibn-sina"
   },
   {
     "name": "Pope Gregory VII",
@@ -4113,7 +4232,8 @@
         "text": "I have loved justice and hated iniquity: therefore I die in exile.",
         "cite": "Pope Gregory VII"
       }
-    ]
+    ],
+    "slug": "pope-gregory-vii"
   },
   {
     "name": "William the Conqueror",
@@ -4146,7 +4266,8 @@
         "text": "By the holy splendor of God, this land is ours!",
         "cite": "Landing at Pevensey (1066)"
       }
-    ]
+    ],
+    "slug": "william-the-conqueror"
   },
   {
     "name": "Shen Kuo",
@@ -4179,7 +4300,8 @@
         "text": "Observations recorded accurately are seeds of future understanding.",
         "cite": "Shen Kuo"
       }
-    ]
+    ],
+    "slug": "shen-kuo"
   },
   {
     "name": "Anselm of Canterbury",
@@ -4216,7 +4338,8 @@
         "text": "Faith seeking understanding (Fides quaerens intellectum).",
         "cite": "Anselm of Canterbury"
       }
-    ]
+    ],
+    "slug": "anselm-of-canterbury"
   },
   {
     "name": "Pope Urban II",
@@ -4253,7 +4376,8 @@
         "text": "Let those who have been accustomed to fight in private warfare now fight against the infidels.",
         "cite": "Urban II"
       }
-    ]
+    ],
+    "slug": "pope-urban-ii"
   },
   {
     "name": "Su Shi (Su Dongpo)",
@@ -4290,7 +4414,8 @@
         "text": "Life is like a wandering journey; I too am a traveler on the way.",
         "cite": "Su Shi"
       }
-    ]
+    ],
+    "slug": "su-shi-su-dongpo"
   },
   {
     "name": "El Cid (Rodrigo Díaz de Vivar)",
@@ -4321,7 +4446,8 @@
         "text": "“¡Dios, qué buen vasallo, si tuviese buen señor!”",
         "cite": "— Cantar de mio Cid (1099)"
       }
-    ]
+    ],
+    "slug": "el-cid-rodrigo-diaz-de-vivar"
   },
   {
     "name": "Omar Khayyam",
@@ -4358,7 +4484,8 @@
         "text": "Be happy for this moment. This moment is your life.",
         "cite": "Omar Khayyam"
       }
-    ]
+    ],
+    "slug": "omar-khayyam"
   },
   {
     "name": "Al-Ghazali",
@@ -4395,7 +4522,8 @@
         "text": "To get what you love, you must first be patient with what you hate.",
         "cite": "Ihya Ulum al-Din"
       }
-    ]
+    ],
+    "slug": "al-ghazali"
   },
   {
     "name": "Dom Afonso Henriques",
@@ -4427,7 +4555,8 @@
         "text": "“Em nome de Deus e da honra de Portugal, erguemos este reino para a eternidade.”",
         "cite": "— Crónicas Régias (1147)"
       }
-    ]
+    ],
+    "slug": "dom-afonso-henriques"
   },
   {
     "name": "Eleanor of Aquitaine",
@@ -4460,7 +4589,8 @@
         "text": "Courage is not the absence of fear, but the mastery of it for those you cherish.",
         "cite": "Eleanor of Aquitaine"
       }
-    ]
+    ],
+    "slug": "eleanor-of-aquitaine"
   },
   {
     "name": "Frederick Barbarossa",
@@ -4493,7 +4623,8 @@
         "text": "Law and justice are the foundations upon which every lasting empire stands.",
         "cite": "Frederick I"
       }
-    ]
+    ],
+    "slug": "frederick-barbarossa"
   },
   {
     "name": "Averroes (Ibn Rushd)",
@@ -4530,7 +4661,8 @@
         "text": "A society that denies women equal rights will always remain impoverished.",
         "cite": "Commentary on Plato's Republic"
       }
-    ]
+    ],
+    "slug": "averroes-ibn-rushd"
   },
   {
     "name": "Zhu Xi",
@@ -4563,7 +4695,8 @@
         "text": "Without sincere reverence in the heart, all learning is merely superficial adornment.",
         "cite": "Zhu Xi"
       }
-    ]
+    ],
+    "slug": "zhu-xi"
   },
   {
     "name": "Saladin",
@@ -4596,7 +4729,8 @@
         "text": "Women are fragile beings, and you should never take vengeance upon them.",
         "cite": "Saladin"
       }
-    ]
+    ],
+    "slug": "saladin"
   },
   {
     "name": "Maimonides",
@@ -4633,7 +4767,8 @@
         "text": "Truth does not become more true by virtue of the fact that the entire world agrees with it.",
         "cite": "The Guide for the Perplexed"
       }
-    ]
+    ],
+    "slug": "maimonides"
   },
   {
     "name": "Minamoto no Yoritomo",
@@ -4666,7 +4801,8 @@
         "text": "A clan that lacks unity and strict loyalty is doomed to fall before the first arrow is loosed.",
         "cite": "Minamoto no Yoritomo"
       }
-    ]
+    ],
+    "slug": "minamoto-no-yoritomo"
   },
   {
     "name": "Richard the Lionheart",
@@ -4699,7 +4835,8 @@
         "text": "I am king of England, and no prince has power over me but God alone.",
         "cite": "Richard I"
       }
-    ]
+    ],
+    "slug": "richard-the-lionheart"
   },
   {
     "name": "Pope Innocent III",
@@ -4732,7 +4869,8 @@
         "text": "Just as the moon derives its light from the sun, so does the royal power derive its splendor from pontifical authority.",
         "cite": "Innocent III"
       }
-    ]
+    ],
+    "slug": "pope-innocent-iii"
   },
   {
     "name": "Genghis Khan",
@@ -4766,7 +4904,8 @@
         "text": "An action committed in anger is an action doomed to failure.",
         "cite": "Genghis Khan"
       }
-    ]
+    ],
+    "slug": "genghis-khan"
   },
   {
     "name": "Francis of Assisi",
@@ -4800,7 +4939,8 @@
         "text": "Preach the Gospel at all times; when necessary, use words.",
         "cite": "Attributed to Francis of Assisi"
       }
-    ]
+    ],
+    "slug": "francis-of-assisi"
   },
   {
     "name": "Frederick II (Holy Roman Emperor)",
@@ -4833,7 +4973,8 @@
         "text": "Observation and reason must guide the prince above superstition.",
         "cite": "Frederick II"
       }
-    ]
+    ],
+    "slug": "frederick-ii-holy-roman-emperor"
   },
   {
     "name": "Dōgen Zenji",
@@ -4866,7 +5007,8 @@
         "text": "To study the self is to forget the self; to forget the self is to be awakened by all things.",
         "cite": "Dōgen Zenji"
       }
-    ]
+    ],
+    "slug": "dogen-zenji"
   },
   {
     "name": "Nasir al-Din al-Tusi",
@@ -4899,7 +5041,8 @@
         "text": "A wise man seeks the truth through mathematics, for numbers do not flatter.",
         "cite": "Nasir al-Din al-Tusi"
       }
-    ]
+    ],
+    "slug": "nasir-al-din-al-tusi"
   },
   {
     "name": "Rumi",
@@ -4934,7 +5077,8 @@
         "text": "“The wound is the place where the Light enters you.”",
         "cite": "— The Masnavi"
       }
-    ]
+    ],
+    "slug": "rumi"
   },
   {
     "name": "Rumi (Jalal al-Din Rumi)",
@@ -4971,7 +5115,8 @@
         "text": "You are not a drop in the ocean. You are the entire ocean in a drop.",
         "cite": "The Masnavi"
       }
-    ]
+    ],
+    "slug": "rumi-jalal-al-din-rumi"
   },
   {
     "name": "Saadi Shirazi",
@@ -5008,7 +5153,8 @@
         "text": "Whatever makes an impression on the heart seems lovely in the eye.",
         "cite": "Gulistan"
       }
-    ]
+    ],
+    "slug": "saadi-shirazi"
   },
   {
     "name": "Kublai Khan",
@@ -5041,7 +5187,8 @@
         "text": "To hold a nation, you must adopt the culture and wisdom of its people.",
         "cite": "Kublai Khan"
       }
-    ]
+    ],
+    "slug": "kublai-khan"
   },
   {
     "name": "Sundiata Keita",
@@ -5074,7 +5221,8 @@
         "text": "Every man has his destiny; nothing can change what the Almighty has decreed.",
         "cite": "Epic of Sundiata"
       }
-    ]
+    ],
+    "slug": "sundiata-keita"
   },
   {
     "name": "Roger Bacon",
@@ -5111,7 +5259,8 @@
         "text": "Experimental science has three great prerogatives over all other sciences: it investigates its conclusions by experience.",
         "cite": "Opus Majus"
       }
-    ]
+    ],
+    "slug": "roger-bacon"
   },
   {
     "name": "Alexander Nevsky",
@@ -5144,7 +5293,8 @@
         "text": "Whoever comes to us with a sword, from a sword shall perish.",
         "cite": "Traditional Russian Saying Attributed to Nevsky"
       }
-    ]
+    ],
+    "slug": "alexander-nevsky"
   },
   {
     "name": "Thomas Aquinas",
@@ -5178,7 +5328,8 @@
         "text": "“Beware the man of a single book (Timeo hominem unius libri).”",
         "cite": "— Attributed"
       }
-    ]
+    ],
+    "slug": "thomas-aquinas"
   },
   {
     "name": "Marco Polo",
@@ -5211,7 +5362,8 @@
         "text": "I spoke with my own eyes of the grandeur of Cathay.",
         "cite": "The Travels of Marco Polo"
       }
-    ]
+    ],
+    "slug": "marco-polo"
   },
   {
     "name": "Dante Alighieri",
@@ -5245,7 +5397,8 @@
         "text": "“Abandon all hope, ye who enter here (Lasciate ogne speranza, voi ch'intrate).”",
         "cite": "— Inferno (Canto III)"
       }
-    ]
+    ],
+    "slug": "dante-alighieri"
   },
   {
     "name": "Giotto di Bondone",
@@ -5278,7 +5431,8 @@
         "text": "Art is born when the artist captures the life flowing in human eyes.",
         "cite": "Giotto"
       }
-    ]
+    ],
+    "slug": "giotto-di-bondone"
   },
   {
     "name": "William Wallace",
@@ -5311,7 +5465,8 @@
         "text": "We come not for peace, but to fight for the freedom of Scotland.",
         "cite": "Stirling Bridge (1297)"
       }
-    ]
+    ],
+    "slug": "william-wallace"
   },
   {
     "name": "Mansa Musa",
@@ -5344,7 +5499,8 @@
         "text": "The empire of Mali flourishes when justice, faith, and knowledge shine across its sands.",
         "cite": "Mansa Musa"
       }
-    ]
+    ],
+    "slug": "mansa-musa"
   },
   {
     "name": "William of Ockham",
@@ -5377,7 +5533,8 @@
         "text": "It is futile to do with more things that which can be done with fewer.",
         "cite": "Summa Totius Logicae"
       }
-    ]
+    ],
+    "slug": "william-of-ockham"
   },
   {
     "name": "Ibn Battuta",
@@ -5409,7 +5566,8 @@
         "text": "I have indeed - praise be to God - attained my desire in this world, which was to travel through the Earth.",
         "cite": "Ibn Battuta"
       }
-    ]
+    ],
+    "slug": "ibn-battuta"
   },
   {
     "name": "Petrarch",
@@ -5446,7 +5604,8 @@
         "text": "I go my way, lamenting the days gone by in which I loved a mortal thing, without soaring, having wings to show no mean proofs of flight.",
         "cite": "Canzoniere"
       }
-    ]
+    ],
+    "slug": "petrarch"
   },
   {
     "name": "Giovanni Boccaccio",
@@ -5479,7 +5638,8 @@
         "text": "You must read, you must persevere, you must sit up nights, you must inquire, and exert the utmost power of your mind.",
         "cite": "Genealogia Deorum Gentilium"
       }
-    ]
+    ],
+    "slug": "giovanni-boccaccio"
   },
   {
     "name": "Hafez",
@@ -5516,7 +5676,8 @@
         "text": "I wish I could show you when you are lonely or in darkness the astonishing light of your own being.",
         "cite": "Hafez"
       }
-    ]
+    ],
+    "slug": "hafez"
   },
   {
     "name": "Zhu Yuanzhang (Hongwu Emperor)",
@@ -5549,7 +5710,8 @@
         "text": "To govern is to nourish the peasants, for without them the empire starves.",
         "cite": "Zhu Yuanzhang"
       }
-    ]
+    ],
+    "slug": "zhu-yuanzhang-hongwu-emperor"
   },
   {
     "name": "John Wycliffe",
@@ -5582,7 +5744,8 @@
         "text": "The Bible is for the government of the people, by the people, and for the people.",
         "cite": "Prologue to Wycliffe's Bible (1384)"
       }
-    ]
+    ],
+    "slug": "john-wycliffe"
   },
   {
     "name": "Ibn Khaldun",
@@ -5615,7 +5778,8 @@
         "text": "Throughout history many nations have suffered a physical defeat, but that has never marked the end of a nation. But when a nation has become the victim of a psychological defeat, then that marks the end of a nation.",
         "cite": "The Muqaddimah"
       }
-    ]
+    ],
+    "slug": "ibn-khaldun"
   },
   {
     "name": "Timur (Tamerlane)",
@@ -5648,7 +5812,8 @@
         "text": "It is better to be on hand with ten men than absent with ten thousand.",
         "cite": "Tamerlane"
       }
-    ]
+    ],
+    "slug": "timur-tamerlane"
   },
   {
     "name": "Geoffrey Chaucer",
@@ -5686,7 +5851,8 @@
         "text": "Patience is a conquering virtue.",
         "cite": "The Canterbury Tales"
       }
-    ]
+    ],
+    "slug": "geoffrey-chaucer"
   },
   {
     "name": "Christine de Pizan",
@@ -5719,7 +5885,8 @@
         "text": "A woman with a clever mind is capable of understanding any field of learning.",
         "cite": "The Book of the City of Ladies"
       }
-    ]
+    ],
+    "slug": "christine-de-pizan"
   },
   {
     "name": "Jan Hus",
@@ -5756,7 +5923,8 @@
         "text": "I would rather die than confirm what I never held or taught.",
         "cite": "Council of Constance (1415)"
       }
-    ]
+    ],
+    "slug": "jan-hus"
   },
   {
     "name": "Zheng He",
@@ -5789,7 +5957,8 @@
         "text": "We have set eyes on barbarian regions far away hidden in a blue haze of light vapors.",
         "cite": "Zheng He"
       }
-    ]
+    ],
+    "slug": "zheng-he"
   },
   {
     "name": "Infante Dom Henrique (Henry the Navigator)",
@@ -5820,7 +5989,8 @@
         "text": "“Talant de bien faire (Desejo de bem fazer).”",
         "cite": "— Motto of Henry the Navigator (1430)"
       }
-    ]
+    ],
+    "slug": "infante-dom-henrique-henry-the-navigator"
   },
   {
     "name": "Johannes Gutenberg",
@@ -5853,7 +6023,8 @@
         "text": "God suffers in the multitude of souls whom His word cannot reach. Religious truth is imprisoned in a small number of manuscript books.",
         "cite": "Gutenberg"
       }
-    ]
+    ],
+    "slug": "johannes-gutenberg"
   },
   {
     "name": "Joan of Arc",
@@ -5884,7 +6055,8 @@
         "text": "“Je n'ai pas peur... Dieu est avec moi, c'est pour cela que je suis née.”",
         "cite": "— Trial of Condemnation Records (1431)"
       }
-    ]
+    ],
+    "slug": "joan-of-arc"
   },
   {
     "name": "Vlad the Impaler",
@@ -5917,7 +6089,8 @@
         "text": "He caused to be made great stakes and upon them he put whole armies.",
         "cite": "Historical chronicles"
       }
-    ]
+    ],
+    "slug": "vlad-the-impaler"
   },
   {
     "name": "Pope Alexander VI",
@@ -5950,7 +6123,8 @@
         "text": "Power and family must walk hand in hand.",
         "cite": "Alexander VI"
       }
-    ]
+    ],
+    "slug": "pope-alexander-vi"
   },
   {
     "name": "Kabir",
@@ -5987,7 +6161,8 @@
         "text": "Slowly, slowly, O mind, everything happens at its own pace. The gardener waters a hundred pots, but fruit comes only in its season.",
         "cite": "Kabir"
       }
-    ]
+    ],
+    "slug": "kabir"
   },
   {
     "name": "Pope Julius II",
@@ -6020,7 +6195,8 @@
         "text": "Put a sword into my hand, not a book. I am no scholar.",
         "cite": "Julius II to Michelangelo"
       }
-    ]
+    ],
+    "slug": "pope-julius-ii"
   },
   {
     "name": "Isabella I of Castile",
@@ -6051,7 +6227,8 @@
         "text": "“La justicia es la firmeza con que se mantiene a cada uno en su derecho.”",
         "cite": "— Crónicas Reales (1476)"
       }
-    ]
+    ],
+    "slug": "isabella-i-of-castile"
   },
   {
     "name": "Christopher Columbus",
@@ -6084,7 +6261,8 @@
         "text": "You can never cross the ocean until you have the courage to lose sight of the shore.",
         "cite": "Christopher Columbus"
       }
-    ]
+    ],
+    "slug": "christopher-columbus"
   },
   {
     "name": "Leonardo da Vinci",
@@ -6120,7 +6298,8 @@
         "text": "“Learning never exhausts the mind.”",
         "cite": "— Notebooks"
       }
-    ]
+    ],
+    "slug": "leonardo-da-vinci"
   },
   {
     "name": "Erasmus",
@@ -6157,7 +6336,8 @@
         "text": "The entire world is our common country.",
         "cite": "Querela Pacis (The Complaint of Peace)"
       }
-    ]
+    ],
+    "slug": "erasmus"
   },
   {
     "name": "Pedro Alvares Cabral",
@@ -6190,7 +6370,8 @@
         "text": "Tomamos posse desta terra graciosa em nome de Deus e de el-Rei D. Manuel.",
         "cite": "Carta de Pero Vaz de Caminha"
       }
-    ]
+    ],
+    "slug": "pedro-alvares-cabral"
   },
   {
     "name": "Niccolò Machiavelli",
@@ -6225,7 +6406,8 @@
         "text": "“The lion cannot protect himself from traps, and the fox cannot defend himself from wolves. One must therefore be a fox to recognize traps, and a lion to frighten wolves.”",
         "cite": "— The Prince (Chapter XVIII)"
       }
-    ]
+    ],
+    "slug": "niccolo-machiavelli"
   },
   {
     "name": "Vasco da Gama",
@@ -6255,7 +6437,8 @@
         "text": "“Não temais, que o mar vos há de obedecer.”",
         "cite": "— Relatos Náuticos (1498)"
       }
-    ]
+    ],
+    "slug": "vasco-da-gama"
   },
   {
     "name": "Guru Nanak",
@@ -6292,7 +6475,8 @@
         "text": "Before becoming a Muslim, a Sikh, a Hindu, or a Christian, let's become a human first.",
         "cite": "Guru Nanak"
       }
-    ]
+    ],
+    "slug": "guru-nanak"
   },
   {
     "name": "Nicolaus Copernicus",
@@ -6325,7 +6509,8 @@
         "text": "To know the mighty works of God, to comprehend His wisdom and majesty and power... this must surely be a pleasing and acceptable mode of worship.",
         "cite": "Copernicus"
       }
-    ]
+    ],
+    "slug": "nicolaus-copernicus"
   },
   {
     "name": "Michelangelo",
@@ -6359,7 +6544,8 @@
         "text": "Genius is eternal patience.",
         "cite": "Michelangelo"
       }
-    ]
+    ],
+    "slug": "michelangelo"
   },
   {
     "name": "Ferdinand Magellan",
@@ -6392,7 +6578,8 @@
         "text": "With high courage and faith, we sailed across the immense, uncharted sea.",
         "cite": "Antonio Pigafetta's Journal"
       }
-    ]
+    ],
+    "slug": "ferdinand-magellan"
   },
   {
     "name": "Martin Luther",
@@ -6425,7 +6612,8 @@
         "text": "Even if I knew that tomorrow the world would go to pieces, I would still plant my apple tree.",
         "cite": "Martin Luther"
       }
-    ]
+    ],
+    "slug": "martin-luther"
   },
   {
     "name": "Ignatius of Loyola",
@@ -6462,7 +6650,8 @@
         "text": "Go forth and set the world on fire.",
         "cite": "To St. Francis Xavier"
       }
-    ]
+    ],
+    "slug": "ignatius-of-loyola"
   },
   {
     "name": "Pope Gregory XIII",
@@ -6495,7 +6684,8 @@
         "text": "Knowledge and piety together make the pillars of the Church.",
         "cite": "Gregory XIII"
       }
-    ]
+    ],
+    "slug": "pope-gregory-xiii"
   },
   {
     "name": "John Calvin",
@@ -6528,7 +6718,8 @@
         "text": "A dog barks when his master is attacked. I would be a coward if I saw that God's truth is attacked and yet would remain silent.",
         "cite": "John Calvin"
       }
-    ]
+    ],
+    "slug": "john-calvin"
   },
   {
     "name": "Andreas Vesalius",
@@ -6561,7 +6752,8 @@
         "text": "He who would know the construction of the human body must examine it with his own hands and eyes.",
         "cite": "Andreas Vesalius"
       }
-    ]
+    ],
+    "slug": "andreas-vesalius"
   },
   {
     "name": "Teresa of Ávila",
@@ -6598,7 +6790,8 @@
         "text": "Christ has no body now but yours, no hands, no feet on earth but yours.",
         "cite": "St. Teresa of Ávila"
       }
-    ]
+    ],
+    "slug": "teresa-of-avila"
   },
   {
     "name": "Luís de Camões",
@@ -6629,7 +6822,8 @@
         "text": "“Cessem do sábio Grego e do Troiano as navegações grandes que fizeram... Cante-se a ilustre gente Lusitana, a quem Neptuno e Marte obedeceram.”",
         "cite": "— Os Lusíadas, Canto I (1572)"
       }
-    ]
+    ],
+    "slug": "luis-de-camoes"
   },
   {
     "name": "Michel de Montaigne",
@@ -6663,7 +6857,8 @@
         "text": "“The greatest thing in the world is to know how to belong to oneself.”",
         "cite": "— Essays (Of Solitude)"
       }
-    ]
+    ],
+    "slug": "michel-de-montaigne"
   },
   {
     "name": "Queen Elizabeth I",
@@ -6695,7 +6890,8 @@
         "text": "“I know I have the body of a weak and feeble woman; but I have the heart and stomach of a king, and of a king of England too.”",
         "cite": "— Speech to the Troops at Tilbury (1588)"
       }
-    ]
+    ],
+    "slug": "queen-elizabeth-i"
   },
   {
     "name": "Oda Nobunaga",
@@ -6724,7 +6920,8 @@
         "text": "“If the cuckoo does not sing, kill it.”",
         "cite": "— Senryu"
       }
-    ]
+    ],
+    "slug": "oda-nobunaga"
   },
   {
     "name": "Toyotomi Hideyoshi",
@@ -6757,7 +6954,8 @@
         "text": "A warrior's resolve must turn obstacles into stepping stones toward victory.",
         "cite": "Toyotomi Hideyoshi"
       }
-    ]
+    ],
+    "slug": "toyotomi-hideyoshi"
   },
   {
     "name": "Mary, Queen of Scots",
@@ -6789,7 +6987,8 @@
         "text": "“In my end is my beginning (En ma fin gît mon commencement).”",
         "cite": "— Embroidered Motto during Captivity (c. 1570)"
       }
-    ]
+    ],
+    "slug": "mary-queen-of-scots"
   },
   {
     "name": "Tokugawa Ieyasu",
@@ -6818,7 +7017,8 @@
         "text": "“Life is like unto a long journey with a heavy burden. Let thy step be slow and steady, that thou stumble not.”",
         "cite": "— Testament of Ieyasu"
       }
-    ]
+    ],
+    "slug": "tokugawa-ieyasu"
   },
   {
     "name": "Miguel de Cervantes",
@@ -6854,7 +7054,8 @@
         "text": "“Too much sanity may be madness, and maddest of all: to see life as it is, and not as it should be!”",
         "cite": "— Don Quixote (Attributed)"
       }
-    ]
+    ],
+    "slug": "miguel-de-cervantes"
   },
   {
     "name": "Giordano Bruno",
@@ -6884,7 +7085,8 @@
         "text": "“The universe is infinite, and consists of an immense space containing infinite worlds like ours.”",
         "cite": "— On the Infinite, Universe and Worlds (1584)"
       }
-    ]
+    ],
+    "slug": "giordano-bruno"
   },
   {
     "name": "Francis Bacon",
@@ -6919,7 +7121,8 @@
         "text": "“If a man will begin with certainties, he shall end in doubts; but if he will be content to begin with doubts, he shall end in certainties.”",
         "cite": "— The Advancement of Learning (1605)"
       }
-    ]
+    ],
+    "slug": "francis-bacon"
   },
   {
     "name": "Galileo Galilei",
@@ -6953,7 +7156,8 @@
         "text": "“The book of nature is written in the language of mathematics.”",
         "cite": "— Il Saggiatore (1623)"
       }
-    ]
+    ],
+    "slug": "galileo-galilei"
   },
   {
     "name": "William Shakespeare",
@@ -6994,7 +7198,8 @@
         "text": "“This above all: to thine own self be true.”",
         "cite": "— Hamlet (Act I, Scene III)"
       }
-    ]
+    ],
+    "slug": "william-shakespeare"
   },
   {
     "name": "Johannes Kepler",
@@ -7024,7 +7229,8 @@
         "text": "“The diversity of the phenomena of nature is so great, and the treasures hidden in the heavens so rich, precisely in order that the human mind shall never be lacking in fresh nourishment.”",
         "cite": "— Mysterium Cosmographicum (1596)"
       }
-    ]
+    ],
+    "slug": "johannes-kepler"
   },
   {
     "name": "Caravaggio",
@@ -7058,7 +7264,8 @@
         "text": "I paint directly from the flesh and the shadow.",
         "cite": "Caravaggio"
       }
-    ]
+    ],
+    "slug": "caravaggio"
   },
   {
     "name": "William Harvey",
@@ -7091,7 +7298,8 @@
         "text": "I profess both to learn and to teach anatomy, not from books but from dissections; not from the positions of philosophers but from the fabric of nature.",
         "cite": "William Harvey (1628)"
       }
-    ]
+    ],
+    "slug": "william-harvey"
   },
   {
     "name": "Miyamoto Musashi",
@@ -7125,7 +7333,8 @@
         "text": "“Do nothing that is of no use.”",
         "cite": "— The Book of Five Rings (The Way of the Warrior)"
       }
-    ]
+    ],
+    "slug": "miyamoto-musashi"
   },
   {
     "name": "Thomas Hobbes",
@@ -7159,7 +7368,8 @@
         "text": "“Covenants, without the sword, are but words and of no strength to secure a man at all.”",
         "cite": "— Leviathan (Chapter XVII)"
       }
-    ]
+    ],
+    "slug": "thomas-hobbes"
   },
   {
     "name": "Artemisia Gentileschi",
@@ -7196,7 +7406,8 @@
         "text": "I will show your Illustrious Lordship what a woman can do.",
         "cite": "Letters"
       }
-    ]
+    ],
+    "slug": "artemisia-gentileschi"
   },
   {
     "name": "René Descartes",
@@ -7231,7 +7442,8 @@
         "text": "“It is not enough to have a good mind; the main thing is to use it well.”",
         "cite": "— Discours de la Méthode (1637)"
       }
-    ]
+    ],
+    "slug": "rene-descartes"
   },
   {
     "name": "Pierre de Fermat",
@@ -7264,7 +7476,8 @@
         "text": "Nature always acts by the shortest paths.",
         "cite": "Fermat's Principle"
       }
-    ]
+    ],
+    "slug": "pierre-de-fermat"
   },
   {
     "name": "Blaise Pascal",
@@ -7298,7 +7511,8 @@
         "text": "“All of humanity's problems stem from man's inability to sit quietly in a room alone.”",
         "cite": "— Pensées (1670)"
       }
-    ]
+    ],
+    "slug": "blaise-pascal"
   },
   {
     "name": "Baruch Spinoza",
@@ -7333,7 +7547,8 @@
         "text": "“I have striven not to laugh at human actions, not to weep at them, nor to hate them, but to understand them.”",
         "cite": "— Tractatus Politicus (Chapter I)"
       }
-    ]
+    ],
+    "slug": "baruch-spinoza"
   },
   {
     "name": "John Locke",
@@ -7368,7 +7583,8 @@
         "text": "“The end of law is not to abolish or restrain, but to preserve and enlarge freedom.”",
         "cite": "— Second Treatise of Government (1689)"
       }
-    ]
+    ],
+    "slug": "john-locke"
   },
   {
     "name": "Louis XIV",
@@ -7399,7 +7615,8 @@
         "text": "“L'État, c'est moi.”",
         "cite": "— Attributed to Parliament Speech (1655)"
       }
-    ]
+    ],
+    "slug": "louis-xiv"
   },
   {
     "name": "Isaac Newton",
@@ -7433,7 +7650,8 @@
         "text": "“To every action there is always opposed an equal reaction.”",
         "cite": "— Philosophiæ Naturalis Principia Mathematica (1687)"
       }
-    ]
+    ],
+    "slug": "isaac-newton"
   },
   {
     "name": "Gottfried Wilhelm Leibniz",
@@ -7464,7 +7682,8 @@
         "text": "“This world is the best of all possible worlds that God could have created.”",
         "cite": "— Théodicée (1710)"
       }
-    ]
+    ],
+    "slug": "gottfried-wilhelm-leibniz"
   },
   {
     "name": "Dandara dos Palmares",
@@ -7497,7 +7716,8 @@
         "text": "She preferred death over the return to captivity, leaping to freedom at Serra da Barriga.",
         "cite": "Historical accounts of Palmares"
       }
-    ]
+    ],
+    "slug": "dandara-dos-palmares"
   },
   {
     "name": "Zumbi dos Palmares",
@@ -7529,7 +7749,8 @@
         "text": "Nascer livre, viver livre e lutar até a morte pela liberdade.",
         "cite": "Zumbi dos Palmares"
       }
-    ]
+    ],
+    "slug": "zumbi-dos-palmares"
   },
   {
     "name": "Guru Gobind Singh",
@@ -7566,7 +7787,8 @@
         "text": "When all other means have failed, it is righteous to draw the sword.",
         "cite": "Guru Gobind Singh"
       }
-    ]
+    ],
+    "slug": "guru-gobind-singh"
   },
   {
     "name": "Jonathan Swift",
@@ -7599,7 +7821,8 @@
         "text": "“When a true genius appears in the world, you may know him by this sign, that the dunces are all in confederacy against him.”",
         "cite": "— Thoughts on Various Subjects (1706)"
       }
-    ]
+    ],
+    "slug": "jonathan-swift"
   },
   {
     "name": "Peter the Great",
@@ -7628,7 +7851,8 @@
         "text": "“I have conquered an empire, but I have not been able to conquer myself.”",
         "cite": "— Petrine Maxims & Letters"
       }
-    ]
+    ],
+    "slug": "peter-the-great"
   },
   {
     "name": "Antonio Vivaldi",
@@ -7662,7 +7886,8 @@
         "text": "Spring has arrived and joyfully the birds greet it with cheerful song.",
         "cite": "Sonnets for The Four Seasons (La Primavera)"
       }
-    ]
+    ],
+    "slug": "antonio-vivaldi"
   },
   {
     "name": "George Berkeley",
@@ -7692,7 +7917,8 @@
         "text": "“To be is to be perceived (Esse est percipi).”",
         "cite": "— A Treatise Concerning the Principles of Human Knowledge (1710)"
       }
-    ]
+    ],
+    "slug": "george-berkeley"
   },
   {
     "name": "Johann Sebastian Bach",
@@ -7726,7 +7952,8 @@
         "text": "The aim and final end of all music should be none other than the glory of God and the refreshment of the soul.",
         "cite": "J.S. Bach"
       }
-    ]
+    ],
+    "slug": "johann-sebastian-bach"
   },
   {
     "name": "Montesquieu",
@@ -7757,7 +7984,8 @@
         "text": "“There is as yet no liberty if the power of judging be not separated from legislative power and from executive power.”",
         "cite": "— The Spirit of the Laws (1748)"
       }
-    ]
+    ],
+    "slug": "montesquieu"
   },
   {
     "name": "Voltaire",
@@ -7792,7 +8020,8 @@
         "text": "“Judge a man by his questions rather than by his answers.”",
         "cite": "— Attributed"
       }
-    ]
+    ],
+    "slug": "voltaire"
   },
   {
     "name": "Baal Shem Tov",
@@ -7829,7 +8058,8 @@
         "text": "Forgetfulness leads to exile, while remembrance is the secret of redemption.",
         "cite": "Baal Shem Tov"
       }
-    ]
+    ],
+    "slug": "baal-shem-tov"
   },
   {
     "name": "Marquês de Pombal (Sebastião José de Carvalho e Melo)",
@@ -7860,7 +8090,8 @@
         "text": "“Enterrar os mortos, cuidar dos vivos e fechar os portos.”",
         "cite": "— Orders following the Great Lisbon Earthquake (1755)"
       }
-    ]
+    ],
+    "slug": "marques-de-pombal-sebastiao-jose-de-carvalho-e-melo"
   },
   {
     "name": "Benjamin Franklin",
@@ -7895,7 +8126,8 @@
         "text": "“Tell me and I forget, teach me and I may remember, involve me and I learn.”",
         "cite": "— Attributed"
       }
-    ]
+    ],
+    "slug": "benjamin-franklin"
   },
   {
     "name": "Leonhard Euler",
@@ -7927,7 +8159,8 @@
         "text": "Now I will have less distraction.",
         "cite": "Leonhard Euler (upon losing sight in his right eye)"
       }
-    ]
+    ],
+    "slug": "leonhard-euler"
   },
   {
     "name": "David Hume",
@@ -7962,7 +8195,8 @@
         "text": "“A wise man proportions his belief to the evidence.”",
         "cite": "— An Enquiry Concerning Human Understanding (1748)"
       }
-    ]
+    ],
+    "slug": "david-hume"
   },
   {
     "name": "Jean-Jacques Rousseau",
@@ -7998,7 +8232,8 @@
         "text": "“I prefer liberty with danger than peace with slavery.”",
         "cite": "— The Social Contract"
       }
-    ]
+    ],
+    "slug": "jean-jacques-rousseau"
   },
   {
     "name": "Adam Smith",
@@ -8033,7 +8268,8 @@
         "text": "“No society can surely be flourishing and happy, of which the far greater part of the members are poor and miserable.”",
         "cite": "— The Wealth of Nations (Book VIII)"
       }
-    ]
+    ],
+    "slug": "adam-smith"
   },
   {
     "name": "Sepé Tiaraju",
@@ -8066,7 +8302,8 @@
         "text": "We received this land from God and Saint Michael, and we will not surrender it to kings.",
         "cite": "Historical accounts of Sepé Tiaraju"
       }
-    ]
+    ],
+    "slug": "sepe-tiaraju"
   },
   {
     "name": "Immanuel Kant",
@@ -8101,7 +8338,8 @@
         "text": "“Sapere aude! Have courage to use your own reason!”",
         "cite": "— What Is Enlightenment? (1784)"
       }
-    ]
+    ],
+    "slug": "immanuel-kant"
   },
   {
     "name": "James Cook",
@@ -8134,7 +8372,8 @@
         "text": "Do just once what others say you can't do, and you will never pay attention to their limitations again.",
         "cite": "Captain James Cook"
       }
-    ]
+    ],
+    "slug": "james-cook"
   },
   {
     "name": "Catherine the Great",
@@ -8161,7 +8400,8 @@
         "text": "“Power without a nation's confidence is nothing.”",
         "cite": "— Correspondence"
       }
-    ]
+    ],
+    "slug": "catherine-the-great"
   },
   {
     "name": "Edmund Burke",
@@ -8191,7 +8431,8 @@
         "text": "“Society is indeed a contract... a partnership not only between those who are living, but between those who are living, those who are dead, and those who are to be born.”",
         "cite": "— Reflections on the Revolution in France (1790)"
       }
-    ]
+    ],
+    "slug": "edmund-burke"
   },
   {
     "name": "George Washington",
@@ -8221,7 +8462,8 @@
         "text": "“Liberty, when it begins to take root, is a plant of rapid growth.”",
         "cite": "— Letter to James Madison (1788)"
       }
-    ]
+    ],
+    "slug": "george-washington"
   },
   {
     "name": "James Watt",
@@ -8254,7 +8496,8 @@
         "text": "Nature can be conquered only by obeying her laws.",
         "cite": "James Watt"
       }
-    ]
+    ],
+    "slug": "james-watt"
   },
   {
     "name": "Thomas Paine",
@@ -8290,7 +8533,8 @@
         "text": "“The mind once enlightened cannot again become dark.”",
         "cite": "— A Letter Addressed to the Abbe Raynal (1782)"
       }
-    ]
+    ],
+    "slug": "thomas-paine"
   },
   {
     "name": "Túpac Amaru II",
@@ -8323,7 +8567,8 @@
         "text": "We will not be conquered while the spirit of the Incas breathes.",
         "cite": "Túpac Amaru II"
       }
-    ]
+    ],
+    "slug": "tupac-amaru-ii"
   },
   {
     "name": "Toussaint Louverture",
@@ -8355,7 +8600,8 @@
         "text": "“In overthrowing me you have cut down in Saint-Domingue only the trunk of the tree of liberty; it will spring up again from the roots, for they are numerous and they are deep.”",
         "cite": "— Statement on Captivity (1802)"
       }
-    ]
+    ],
+    "slug": "toussaint-louverture"
   },
   {
     "name": "Thomas Jefferson",
@@ -8393,7 +8639,8 @@
         "text": "I cannot live without books.",
         "cite": "Letter to John Adams (1815)"
       }
-    ]
+    ],
+    "slug": "thomas-jefferson"
   },
   {
     "name": "Tiradentes (Joaquim José da Silva Xavier)",
@@ -8423,7 +8670,8 @@
         "text": "“Se dez vidas eu tivesse, dez vidas eu daria pela libertação da minha pátria.”",
         "cite": "— Testimony (1792)"
       }
-    ]
+    ],
+    "slug": "tiradentes-joaquim-jose-da-silva-xavier"
   },
   {
     "name": "Jeremy Bentham",
@@ -8453,7 +8701,8 @@
         "text": "“The greatest happiness of the greatest number is the foundation of morals and legislation.”",
         "cite": "— An Introduction to the Principles of Morals and Legislation (1789)"
       }
-    ]
+    ],
+    "slug": "jeremy-bentham"
   },
   {
     "name": "Johann Wolfgang von Goethe",
@@ -8488,7 +8737,8 @@
         "text": "“Whatever you can do, or dream you can do, begin it. Boldness has genius, power, and magic in it.”",
         "cite": "— Faust (Attributed)"
       }
-    ]
+    ],
+    "slug": "johann-wolfgang-von-goethe"
   },
   {
     "name": "Brissot",
@@ -8521,7 +8771,8 @@
         "text": "We cannot establish liberty at home while countenancing the horrific enslavement of millions abroad.",
         "cite": "Brissot"
       }
-    ]
+    ],
+    "slug": "brissot"
   },
   {
     "name": "Wolfgang Amadeus Mozart",
@@ -8555,7 +8806,8 @@
         "text": "Neither a lofty degree of intelligence nor imagination nor both together go to the making of genius. Love, love, love, that is the soul of genius.",
         "cite": "Mozart"
       }
-    ]
+    ],
+    "slug": "wolfgang-amadeus-mozart"
   },
   {
     "name": "William Blake",
@@ -8586,7 +8838,8 @@
         "text": "“To see a World in a Grain of Sand / And a Heaven in a Wild Flower / Hold Infinity in the palm of your hand / And Eternity in an hour.”",
         "cite": "— Auguries of Innocence (1803)"
       }
-    ]
+    ],
+    "slug": "william-blake"
   },
   {
     "name": "Robespierre",
@@ -8623,7 +8876,8 @@
         "text": "To punish the oppressors of humanity is clemency; to forgive them is cruelty.",
         "cite": "Maximilien Robespierre"
       }
-    ]
+    ],
+    "slug": "robespierre"
   },
   {
     "name": "Mary Wollstonecraft",
@@ -8653,7 +8907,8 @@
         "text": "“I do not wish women to have power over men; but over themselves.”",
         "cite": "— A Vindication of the Rights of Woman (1792)"
       }
-    ]
+    ],
+    "slug": "mary-wollstonecraft"
   },
   {
     "name": "José Bonifácio de Andrada e Silva",
@@ -8685,7 +8940,8 @@
         "text": "Sem liberdade individual não há moralidade nem energia civil; sem ela não há verdadeira riqueza nacional.",
         "cite": "— Representação à Assembleia Geral Constituinte (1823)"
       }
-    ]
+    ],
+    "slug": "jose-bonifacio-de-andrada-e-silva"
   },
   {
     "name": "Thomas Malthus",
@@ -8715,7 +8971,8 @@
         "text": "“The power of population is indefinitely greater than the power in the earth to produce subsistence for man.”",
         "cite": "— An Essay on the Principle of Population (1798)"
       }
-    ]
+    ],
+    "slug": "thomas-malthus"
   },
   {
     "name": "Alexander von Humboldt",
@@ -8746,7 +9003,8 @@
         "text": "“Nature itself is a sphere of interconnected forces and mutual dependencies; everything is interaction.”",
         "cite": "— Cosmos: A Sketch of a Physical Description of the Universe (1845)"
       }
-    ]
+    ],
+    "slug": "alexander-von-humboldt"
   },
   {
     "name": "Napoleon Bonaparte",
@@ -8776,7 +9034,8 @@
         "text": "“Courage isn't having the strength to go on — it is going on when you don't have strength.”",
         "cite": "— Maxims and Thoughts of Napoleon"
       }
-    ]
+    ],
+    "slug": "napoleon-bonaparte"
   },
   {
     "name": "Georg Wilhelm Friedrich Hegel",
@@ -8807,7 +9066,8 @@
         "text": "“The history of the world is none other than the progress of the consciousness of freedom.”",
         "cite": "— Lectures on the Philosophy of History (1837)"
       }
-    ]
+    ],
+    "slug": "georg-wilhelm-friedrich-hegel"
   },
   {
     "name": "Ludwig van Beethoven",
@@ -8840,7 +9100,8 @@
         "text": "To play a wrong note is insignificant; to play without passion is inexcusable.",
         "cite": "Ludwig van Beethoven"
       }
-    ]
+    ],
+    "slug": "ludwig-van-beethoven"
   },
   {
     "name": "David Ricardo",
@@ -8870,7 +9131,8 @@
         "text": "“Under a system of perfectly free commerce, each country naturally devotes its capital and labour to such employments as are most beneficial to each.”",
         "cite": "— Principles of Political Economy and Taxation (1817)"
       }
-    ]
+    ],
+    "slug": "david-ricardo"
   },
   {
     "name": "Jane Austen",
@@ -8908,7 +9170,8 @@
         "text": "There is no charm equal to tenderness of heart.",
         "cite": "Emma"
       }
-    ]
+    ],
+    "slug": "jane-austen"
   },
   {
     "name": "Carl Friedrich Gauss",
@@ -8940,7 +9203,8 @@
         "text": "Few, but ripe (Pauca sed matura).",
         "cite": "Motto"
       }
-    ]
+    ],
+    "slug": "carl-friedrich-gauss"
   },
   {
     "name": "José de San Martín",
@@ -8971,7 +9235,8 @@
         "text": "“Serás lo que debas ser, o no serás nada.”",
         "cite": "— Máximas Militares (1817)"
       }
-    ]
+    ],
+    "slug": "jose-de-san-martin"
   },
   {
     "name": "Carl von Clausewitz",
@@ -9001,7 +9266,8 @@
         "text": "“War is the continuation of politics by other means.”",
         "cite": "— On War (Vom Kriege, 1832)"
       }
-    ]
+    ],
+    "slug": "carl-von-clausewitz"
   },
   {
     "name": "Simón Bolívar",
@@ -9032,7 +9298,8 @@
         "text": "“A people that loves freedom will in the end be free; freedom is a fragile plant that needs constant care.”",
         "cite": "— Letter from Jamaica (1815)"
       }
-    ]
+    ],
+    "slug": "simon-bolivar"
   },
   {
     "name": "William Jardine",
@@ -9063,7 +9330,8 @@
         "text": "We are gentlemen, but we are traders, and the flag follows trade.",
         "cite": "— William Jardine"
       }
-    ]
+    ],
+    "slug": "william-jardine"
   },
   {
     "name": "Lin Zexu",
@@ -9095,7 +9363,8 @@
         "text": "There is not a single one who possesses a conscience who is not incensed at the poisonous harm brought by opium.",
         "cite": "— Letter to Queen Victoria (1839)"
       }
-    ]
+    ],
+    "slug": "lin-zexu"
   },
   {
     "name": "Arthur Schopenhauer",
@@ -9129,7 +9398,8 @@
         "text": "“Talent hits a target no one else can hit; Genius hits a target no one else can see.”",
         "cite": "— The World as Will and Representation"
       }
-    ]
+    ],
+    "slug": "arthur-schopenhauer"
   },
   {
     "name": "Michael Faraday",
@@ -9161,7 +9431,8 @@
         "text": "Nothing is too wonderful to be true if it be consistent with the laws of nature.",
         "cite": "Michael Faraday"
       }
-    ]
+    ],
+    "slug": "michael-faraday"
   },
   {
     "name": "Maria Quitéria",
@@ -9194,7 +9465,8 @@
         "text": "A farda não muda a coragem do coração que luta pela pátria.",
         "cite": "Maria Quitéria"
       }
-    ]
+    ],
+    "slug": "maria-quiteria"
   },
   {
     "name": "Mary Shelley",
@@ -9227,7 +9499,8 @@
         "text": "Life, although it may only be an accumulation of anguish, is dear to me, and I will defend it.",
         "cite": "Frankenstein"
       }
-    ]
+    ],
+    "slug": "mary-shelley"
   },
   {
     "name": "Sojourner Truth",
@@ -9264,7 +9537,8 @@
         "text": "Truth is powerful and it prevails.",
         "cite": "Sojourner Truth"
       }
-    ]
+    ],
+    "slug": "sojourner-truth"
   },
   {
     "name": "Dom Pedro I",
@@ -9300,7 +9574,8 @@
         "text": "“If it is for the good of all and the general happiness of the Nation, I am ready! Tell the people that I stay!”",
         "cite": "— Dia do Fico (January 9, 1822)"
       }
-    ]
+    ],
+    "slug": "dom-pedro-i"
   },
   {
     "name": "Victor Hugo",
@@ -9331,7 +9606,8 @@
         "text": "“Even the darkest night will end and the sun will rise.”",
         "cite": "— Les Misérables (1862)"
       }
-    ]
+    ],
+    "slug": "victor-hugo"
   },
   {
     "name": "Ralph Waldo Emerson",
@@ -9362,7 +9638,8 @@
         "text": "“To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.”",
         "cite": "— Self-Reliance (1841)"
       }
-    ]
+    ],
+    "slug": "ralph-waldo-emerson"
   },
   {
     "name": "Duque de Caxias",
@@ -9394,7 +9671,8 @@
         "text": "Sigam-me os que forem brasileiros!",
         "cite": "— Batalha de Itororó (1868)"
       }
-    ]
+    ],
+    "slug": "duque-de-caxias"
   },
   {
     "name": "Alexis de Tocqueville",
@@ -9425,7 +9703,8 @@
         "text": "“In a democracy, the people get the government they deserve; liberty cannot be established without morality, nor morality without faith.”",
         "cite": "— Democracy in America (1835)"
       }
-    ]
+    ],
+    "slug": "alexis-de-tocqueville"
   },
   {
     "name": "Benito Juárez",
@@ -9456,7 +9735,8 @@
         "text": "“Entre los individuos, como entre las naciones, el respeto al derecho ajeno es la paz.”",
         "cite": "— Manifiesto a la Nación (1867)"
       }
-    ]
+    ],
+    "slug": "benito-juarez"
   },
   {
     "name": "John Stuart Mill",
@@ -9492,7 +9772,8 @@
         "text": "“A person may cause evil to others not only by his actions but by his inaction.”",
         "cite": "— On Liberty (1859)"
       }
-    ]
+    ],
+    "slug": "john-stuart-mill"
   },
   {
     "name": "Abraham Lincoln",
@@ -9524,7 +9805,8 @@
         "text": "“Government of the people, by the people, for the people, shall not perish from the earth.”",
         "cite": "— Gettysburg Address (1863)"
       }
-    ]
+    ],
+    "slug": "abraham-lincoln"
   },
   {
     "name": "Charles Darwin",
@@ -9559,7 +9841,8 @@
         "text": "“It is not the strongest of the species that survives, nor the most intelligent; it is the one most adaptable to change.”",
         "cite": "— Attributed / Paraphrase of Origin of Species"
       }
-    ]
+    ],
+    "slug": "charles-darwin"
   },
   {
     "name": "Pierre-Joseph Proudhon",
@@ -9590,7 +9873,8 @@
         "text": "“Property is theft! (La propriété, c'est le vol!)”",
         "cite": "— What is Property? (1840)"
       }
-    ]
+    ],
+    "slug": "pierre-joseph-proudhon"
   },
   {
     "name": "Louis Braille",
@@ -9623,7 +9907,8 @@
         "text": "We do not need pity, nor do we need to be reminded that we are blind. We're human beings, and we have minds that want to learn.",
         "cite": "Louis Braille"
       }
-    ]
+    ],
+    "slug": "louis-braille"
   },
   {
     "name": "Frédéric Chopin",
@@ -9657,7 +9942,8 @@
         "text": "Time is the best censor, and patience a most excellent teacher.",
         "cite": "Frédéric Chopin"
       }
-    ]
+    ],
+    "slug": "frederic-chopin"
   },
   {
     "name": "Pope Leo XIII",
@@ -9690,7 +9976,8 @@
         "text": "It is neither justice nor humanity so to grind men down with excessive labor as to dull their minds and wear out their bodies.",
         "cite": "Rerum Novarum (1891)"
       }
-    ]
+    ],
+    "slug": "pope-leo-xiii"
   },
   {
     "name": "Charles Dickens",
@@ -9723,7 +10010,8 @@
         "text": "“It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness.”",
         "cite": "— A Tale of Two Cities (1859)"
       }
-    ]
+    ],
+    "slug": "charles-dickens"
   },
   {
     "name": "Søren Kierkegaard",
@@ -9754,7 +10042,8 @@
         "text": "“Life can only be understood backwards; but it must be lived forwards.”",
         "cite": "— Journals and Papers (1843)"
       }
-    ]
+    ],
+    "slug": "s-ren-kierkegaard"
   },
   {
     "name": "Mikhail Bakunin",
@@ -9785,7 +10074,8 @@
         "text": "“The urge to destroy is also a creative urge!”",
         "cite": "— The Reaction in Germany (1842)"
       }
-    ]
+    ],
+    "slug": "mikhail-bakunin"
   },
   {
     "name": "Ada Lovelace",
@@ -9819,7 +10109,8 @@
         "text": "“That brain of mine is something more than merely mortal; as time will show.”",
         "cite": "— Letter to her mother (1844)"
       }
-    ]
+    ],
+    "slug": "ada-lovelace"
   },
   {
     "name": "Otto von Bismarck",
@@ -9852,7 +10143,8 @@
         "text": "Politics is the art of the possible, the science of the relative.",
         "cite": "Otto von Bismarck"
       }
-    ]
+    ],
+    "slug": "otto-von-bismarck"
   },
   {
     "name": "Henry David Thoreau",
@@ -9883,7 +10175,8 @@
         "text": "“I went to the woods because I wished to live deliberately, to front only the essential facts of life, and see if I could not learn what it had to teach.”",
         "cite": "— Walden (1854)"
       }
-    ]
+    ],
+    "slug": "henry-david-thoreau"
   },
   {
     "name": "Karl Marx",
@@ -9923,7 +10216,8 @@
         "text": "“Workers of the world unite; you have nothing to lose but your chains!”",
         "cite": "— The Communist Manifesto (1848)"
       }
-    ]
+    ],
+    "slug": "karl-marx"
   },
   {
     "name": "Queen Victoria",
@@ -9953,7 +10247,8 @@
         "text": "“We are not interested in the possibilities of defeat; they do not exist.”",
         "cite": "— Black Week statement during Boer War (1899)"
       }
-    ]
+    ],
+    "slug": "queen-victoria"
   },
   {
     "name": "Walt Whitman",
@@ -9983,7 +10278,8 @@
         "text": "“Do I contradict myself? Very well then I contradict myself, (I am large, I contain multitudes.)”",
         "cite": "— Song of Myself (Leaves of Grass, 1855)"
       }
-    ]
+    ],
+    "slug": "walt-whitman"
   },
   {
     "name": "Herman Melville",
@@ -10019,7 +10315,8 @@
         "text": "It is not down in any map; true places never are.",
         "cite": "Moby-Dick"
       }
-    ]
+    ],
+    "slug": "herman-melville"
   },
   {
     "name": "Friedrich Engels",
@@ -10050,7 +10347,8 @@
         "text": "“Freedom is the recognition of necessity.”",
         "cite": "— Anti-Dühring (1877)"
       }
-    ]
+    ],
+    "slug": "friedrich-engels"
   },
   {
     "name": "Florence Nightingale",
@@ -10087,7 +10385,8 @@
         "text": "Apprehension, uncertainty, waiting, expectation, fear of surprise, do a patient more harm than any exertion.",
         "cite": "Notes on Nursing"
       }
-    ]
+    ],
+    "slug": "florence-nightingale"
   },
   {
     "name": "Fyodor Dostoevsky",
@@ -10122,7 +10421,8 @@
         "text": "“Beauty will save the world.”",
         "cite": "— The Idiot (1869)"
       }
-    ]
+    ],
+    "slug": "fyodor-dostoevsky"
   },
   {
     "name": "Anita Garibaldi",
@@ -10155,7 +10455,8 @@
         "text": "Heroine of the Two Worlds, fearless warrior across South America and Italy.",
         "cite": "Giuseppe Garibaldi's Memoirs"
       }
-    ]
+    ],
+    "slug": "anita-garibaldi"
   },
   {
     "name": "Louis Pasteur",
@@ -10187,7 +10488,8 @@
         "text": "Chance favors only the prepared mind.",
         "cite": "Inaugural Lecture (1854)"
       }
-    ]
+    ],
+    "slug": "louis-pasteur"
   },
   {
     "name": "Harriet Tubman",
@@ -10220,7 +10522,8 @@
         "text": "Every great dream begins with a dreamer. Always remember, you have within you the strength, the patience, and the passion to reach for the stars to change the world.",
         "cite": "Harriet Tubman"
       }
-    ]
+    ],
+    "slug": "harriet-tubman"
   },
   {
     "name": "Gregor Mendel",
@@ -10253,7 +10556,8 @@
         "text": "My time will come.",
         "cite": "Gregor Mendel"
       }
-    ]
+    ],
+    "slug": "gregor-mendel"
   },
   {
     "name": "Dom Pedro II",
@@ -10285,7 +10589,8 @@
         "text": "“If I were not Emperor, I would like to be a schoolteacher.”",
         "cite": "— Personal Memoirs and Letters"
       }
-    ]
+    ],
+    "slug": "dom-pedro-ii"
   },
   {
     "name": "Leo Tolstoy",
@@ -10320,7 +10625,8 @@
         "text": "“Everyone thinks of changing the world, but no one thinks of changing himself.”",
         "cite": "— Three Methods Of Reform (1900)"
       }
-    ]
+    ],
+    "slug": "leo-tolstoy"
   },
   {
     "name": "Geronimo",
@@ -10352,7 +10658,8 @@
         "text": "I cannot think that we are useless or God would not have created us.",
         "cite": "Geronimo"
       }
-    ]
+    ],
+    "slug": "geronimo"
   },
   {
     "name": "Emily Dickinson",
@@ -10390,7 +10697,8 @@
         "text": "Tell all the truth but tell it slant — success in Circuit lies.",
         "cite": "Poem 1129"
       }
-    ]
+    ],
+    "slug": "emily-dickinson"
   },
   {
     "name": "James Clerk Maxwell",
@@ -10422,7 +10730,8 @@
         "text": "Thoroughly conscious ignorance is the prelude to every real advance in science.",
         "cite": "James Clerk Maxwell"
       }
-    ]
+    ],
+    "slug": "james-clerk-maxwell"
   },
   {
     "name": "Sitting Bull",
@@ -10455,7 +10764,8 @@
         "text": "If the white man wants to live in peace with the Indian he can live in peace. Treat all men alike.",
         "cite": "Sitting Bull"
       }
-    ]
+    ],
+    "slug": "sitting-bull"
   },
   {
     "name": "Mark Twain",
@@ -10496,7 +10806,8 @@
         "text": "“The secret of getting ahead is getting started.”",
         "cite": "— Attributed"
       }
-    ]
+    ],
+    "slug": "mark-twain"
   },
   {
     "name": "Henry George",
@@ -10526,7 +10837,8 @@
         "text": "“There is a reason in nature why some should be rich and some poor, but there is no reason why some should be rich and many destitute.”",
         "cite": "— Progress and Poverty (1879)"
       }
-    ]
+    ],
+    "slug": "henry-george"
   },
   {
     "name": "Machado de Assis",
@@ -10561,7 +10873,8 @@
         "text": "“I did not have children, I did not transmit to any creature the legacy of our misery.”",
         "cite": "— Posthumous Memoirs of Brás Cubas (1881)"
       }
-    ]
+    ],
+    "slug": "machado-de-assis"
   },
   {
     "name": "Claude Monet",
@@ -10594,7 +10907,8 @@
         "text": "I would like to paint the way a bird sings.",
         "cite": "Claude Monet"
       }
-    ]
+    ],
+    "slug": "claude-monet"
   },
   {
     "name": "Pyotr Ilyich Tchaikovsky",
@@ -10633,7 +10947,8 @@
         "text": "Where words fail, music speaks.",
         "cite": "Pyotr Ilyich Tchaikovsky"
       }
-    ]
+    ],
+    "slug": "pyotr-ilyich-tchaikovsky"
   },
   {
     "name": "Prudente de Morais",
@@ -10665,7 +10980,8 @@
         "text": "A ordem e o trabalho pacífico constituem a aspiração unânime da nação.",
         "cite": "— Mensagem Presidencial ao Congresso Nacional (1895)"
       }
-    ]
+    ],
+    "slug": "prudente-de-morais"
   },
   {
     "name": "Peter Kropotkin",
@@ -10696,7 +11012,8 @@
         "text": "“In the animal world we have seen that the vast majority of species live in societies, and that they find in association the best arms for the struggle for life: mutual aid is the law of Nature.”",
         "cite": "— Mutual Aid: A Factor of Evolution (1902)"
       }
-    ]
+    ],
+    "slug": "peter-kropotkin"
   },
   {
     "name": "William James",
@@ -10727,7 +11044,8 @@
         "text": "“The greatest weapon against stress is our ability to choose one thought over another.”",
         "cite": "— Principles of Psychology (1890)"
       }
-    ]
+    ],
+    "slug": "william-james"
   },
   {
     "name": "Alfred Marshall",
@@ -10759,7 +11077,8 @@
         "text": "Nature does not make leaps (Natura non facit saltum).",
         "cite": "Principles of Economics Epigraph"
       }
-    ]
+    ],
+    "slug": "alfred-marshall"
   },
   {
     "name": "Friedrich Nietzsche",
@@ -10794,7 +11113,8 @@
         "text": "“Whoever fights monsters should see to it that in the process he does not become a monster. And if you gaze long enough into an abyss, the abyss will gaze back into you.”",
         "cite": "— Beyond Good and Evil (1886)"
       }
-    ]
+    ],
+    "slug": "friedrich-nietzsche"
   },
   {
     "name": "Barão do Rio Branco",
@@ -10826,7 +11146,8 @@
         "text": "Em todas as questões de limites em que o Brasil tem tomado parte, o seu propósito constante tem sido buscar soluções pacíficas e honrosas.",
         "cite": "— Barão do Rio Branco"
       }
-    ]
+    ],
+    "slug": "barao-do-rio-branco"
   },
   {
     "name": "Princesa Isabel",
@@ -10855,7 +11176,8 @@
         "text": "“If a thousand thrones I had, a thousand thrones I would give to liberate the enslaved peoples of Brazil.”",
         "cite": "— Statement on signing the Lei Áurea (1888)"
       }
-    ]
+    ],
+    "slug": "princesa-isabel"
   },
   {
     "name": "Thomas Edison",
@@ -10887,7 +11209,8 @@
         "text": "“Genius is one percent inspiration and ninety-nine percent perspiration.”",
         "cite": "— Statement in Harper's Monthly (1932)"
       }
-    ]
+    ],
+    "slug": "thomas-edison"
   },
   {
     "name": "Castro Alves",
@@ -10924,7 +11247,8 @@
         "text": "A praça, a praça é do povo, como o céu é do condor!",
         "cite": "O Povo ao Poder"
       }
-    ]
+    ],
+    "slug": "castro-alves"
   },
   {
     "name": "Alexander Graham Bell",
@@ -10961,7 +11285,8 @@
         "text": "Before anything else, preparation is the key to success.",
         "cite": "Alexander Graham Bell"
       }
-    ]
+    ],
+    "slug": "alexander-graham-bell"
   },
   {
     "name": "Vilfredo Pareto",
@@ -10994,7 +11319,8 @@
         "text": "Give me a fruitful error anytime, full of seeds, bursting with its own corrections.",
         "cite": "Vilfredo Pareto"
       }
-    ]
+    ],
+    "slug": "vilfredo-pareto"
   },
   {
     "name": "Gottlob Frege",
@@ -11026,7 +11352,8 @@
         "text": "Never take a description as being the object itself.",
         "cite": "Gottlob Frege"
       }
-    ]
+    ],
+    "slug": "gottlob-frege"
   },
   {
     "name": "Rodrigues Alves",
@@ -11058,7 +11385,8 @@
         "text": "A regeneração higiênica e material da capital é a condição primeira para o progresso do Brasil.",
         "cite": "— Diretrizes Presidenciais (1902)"
       }
-    ]
+    ],
+    "slug": "rodrigues-alves"
   },
   {
     "name": "Ivan Pavlov",
@@ -11089,7 +11417,8 @@
         "text": "“Don't become a mere recorder of facts, but try to penetrate the mystery of their origin.”",
         "cite": "— Bequest to Academic Youth (1936)"
       }
-    ]
+    ],
+    "slug": "ivan-pavlov"
   },
   {
     "name": "Joaquim Nabuco",
@@ -11121,7 +11450,8 @@
         "text": "A escravidão permanecerá por muito tempo como a característica nacional do Brasil.",
         "cite": "— O Abolicionismo (1883)"
       }
-    ]
+    ],
+    "slug": "joaquim-nabuco"
   },
   {
     "name": "Rui Barbosa",
@@ -11153,7 +11483,8 @@
         "text": "De tanto ver triunfar as nulidades, de tanto ver prosperar a desonra, o homem chega a desanimar-se da virtude, a rir-se da honra e a ter vergonha de ser honesto.",
         "cite": "— Discurso no Senado Federal (1914)"
       }
-    ]
+    ],
+    "slug": "rui-barbosa"
   },
   {
     "name": "Emperor Meiji",
@@ -11182,7 +11513,8 @@
         "text": "“May our country, taking what is good, and rejecting what is bad, be not inferior to any other.”",
         "cite": "— Gyosei (Imperial Poetry)"
       }
-    ]
+    ],
+    "slug": "emperor-meiji"
   },
   {
     "name": "Antoni Gaudí",
@@ -11215,7 +11547,8 @@
         "text": "The straight line belongs to men, the curved one to God.",
         "cite": "— Antoni Gaudí"
       }
-    ]
+    ],
+    "slug": "antoni-gaudi"
   },
   {
     "name": "Vincent van Gogh",
@@ -11249,7 +11582,8 @@
         "text": "There is nothing more truly artistic than to love people.",
         "cite": "Vincent van Gogh"
       }
-    ]
+    ],
+    "slug": "vincent-van-gogh"
   },
   {
     "name": "Oscar Wilde",
@@ -11284,7 +11618,8 @@
         "text": "“To live is the rarest thing in the world. Most people exist, that is all.”",
         "cite": "— The Soul of Man under Socialism (1891)"
       }
-    ]
+    ],
+    "slug": "oscar-wilde"
   },
   {
     "name": "Henri Poincaré",
@@ -11317,7 +11652,8 @@
         "text": "Thought is only a flash between two long nights, but this flash is everything.",
         "cite": "The Value of Science"
       }
-    ]
+    ],
+    "slug": "henri-poincare"
   },
   {
     "name": "Nikola Tesla",
@@ -11353,7 +11689,8 @@
         "text": "“The present is theirs; the future, for which I really worked, is mine.”",
         "cite": "— Attributed"
       }
-    ]
+    ],
+    "slug": "nikola-tesla"
   },
   {
     "name": "Sigmund Freud",
@@ -11388,7 +11725,8 @@
         "text": "“The ego is not master in its own house.”",
         "cite": "— A Difficulty in the Path of Psycho-Analysis (1917)"
       }
-    ]
+    ],
+    "slug": "sigmund-freud"
   },
   {
     "name": "Thorstein Veblen",
@@ -11418,7 +11756,8 @@
         "text": "“Conspicuous consumption of valuable goods is a means of reputability to the gentleman of leisure.”",
         "cite": "— The Theory of the Leisure Class (1899)"
       }
-    ]
+    ],
+    "slug": "thorstein-veblen"
   },
   {
     "name": "Max Planck",
@@ -11454,7 +11793,8 @@
         "text": "A new scientific truth does not triumph by convincing its opponents and making them see the light, but rather because its opponents eventually die.",
         "cite": "Scientific Autobiography"
       }
-    ]
+    ],
+    "slug": "max-planck"
   },
   {
     "name": "Émile Durkheim",
@@ -11486,7 +11826,8 @@
         "text": "Social phenomena are things and must be treated as things.",
         "cite": "The Rules of Sociological Method"
       }
-    ]
+    ],
+    "slug": "emile-durkheim"
   },
   {
     "name": "Emmeline Pankhurst",
@@ -11523,7 +11864,8 @@
         "text": "I would rather be a rebel than a slave.",
         "cite": "Freedom or Death (1913)"
       }
-    ]
+    ],
+    "slug": "emmeline-pankhurst"
   },
   {
     "name": "John Dewey",
@@ -11554,7 +11896,8 @@
         "text": "“Education is not preparation for life; education is life itself.”",
         "cite": "— Democracy and Education (1916)"
       }
-    ]
+    ],
+    "slug": "john-dewey"
   },
   {
     "name": "Anton Chekhov",
@@ -11588,7 +11931,8 @@
         "text": "Medicine is my lawful wife and literature my mistress; when I get tired of one, I spend the night with the other.",
         "cite": "Letter to Alexei Suvorin"
       }
-    ]
+    ],
+    "slug": "anton-chekhov"
   },
   {
     "name": "David Hilbert",
@@ -11621,7 +11965,8 @@
         "text": "Mathematics knows no races or geographic boundaries; for mathematics, the cultural world is one country.",
         "cite": "David Hilbert"
       }
-    ]
+    ],
+    "slug": "david-hilbert"
   },
   {
     "name": "Henry Ford",
@@ -11654,7 +11999,8 @@
         "text": "Coming together is a beginning, staying together is progress, and working together is success.",
         "cite": "Henry Ford"
       }
-    ]
+    ],
+    "slug": "henry-ford"
   },
   {
     "name": "Swami Vivekananda",
@@ -11691,7 +12037,8 @@
         "text": "Sisters and Brothers of America, it fills my heart with joy unspeakable to rise in response to the warm and cordial welcome which you have given us.",
         "cite": "Speech at Chicago (1893)"
       }
-    ]
+    ],
+    "slug": "swami-vivekananda"
   },
   {
     "name": "Max Weber",
@@ -11722,7 +12069,8 @@
         "text": "“A state is a human community that successfully claims the monopoly of the legitimate use of physical force within a given territory.”",
         "cite": "— Politics as a Vocation (1919)"
       }
-    ]
+    ],
+    "slug": "max-weber"
   },
   {
     "name": "William Butler Yeats",
@@ -11755,7 +12103,8 @@
         "text": "“Do not wait to strike till the iron is hot; but make it hot by striking.”",
         "cite": "— Essays and Introductions (1904)"
       }
-    ]
+    ],
+    "slug": "william-butler-yeats"
   },
   {
     "name": "Sun Yat-sen",
@@ -11782,7 +12131,8 @@
         "text": "“The revolution is not yet successful. Comrades, you must carry on.”",
         "cite": "— Will (1925)"
       }
-    ]
+    ],
+    "slug": "sun-yat-sen"
   },
   {
     "name": "Euclides da Cunha",
@@ -11819,7 +12169,8 @@
         "text": "Estamos condenados à civilização. Ou progredimos ou desaparecemos.",
         "cite": "Euclides da Cunha"
       }
-    ]
+    ],
+    "slug": "euclides-da-cunha"
   },
   {
     "name": "Irving Fisher",
@@ -11850,7 +12201,8 @@
         "text": "“Money is not wealth, but a ticket for wealth; instability of the price level distorts all contracts and investments.”",
         "cite": "— The Purchasing Power of Money (1911)"
       }
-    ]
+    ],
+    "slug": "irving-fisher"
   },
   {
     "name": "Marie Curie",
@@ -11882,7 +12234,8 @@
         "text": "“Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less.”",
         "cite": "— Pierre Curie (Biography, 1923)"
       }
-    ]
+    ],
+    "slug": "marie-curie"
   },
   {
     "name": "Robert Falcon Scott",
@@ -11912,7 +12265,8 @@
         "text": "“I may not have proved a great explorer, but we have done the greatest march ever made and come very near to our goal.”",
         "cite": "— Last Expedition Diaries (March 1912)"
       }
-    ]
+    ],
+    "slug": "robert-falcon-scott"
   },
   {
     "name": "William Edward Burghardt Du Bois",
@@ -11943,7 +12297,8 @@
         "text": "“The problem of the twentieth century is the problem of the color-line.”",
         "cite": "— The Souls of Black Folk (1903)"
       }
-    ]
+    ],
+    "slug": "william-edward-burghardt-du-bois"
   },
   {
     "name": "Emma Goldman",
@@ -11974,7 +12329,8 @@
         "text": "“If I can't dance, I don't want to be part of your revolution.”",
         "cite": "— Living My Life (1931)"
       }
-    ]
+    ],
+    "slug": "emma-goldman"
   },
   {
     "name": "Mahatma Gandhi",
@@ -12007,7 +12363,8 @@
         "text": "Be the change that you wish to see in the world.",
         "cite": "Mahatma Gandhi"
       }
-    ]
+    ],
+    "slug": "mahatma-gandhi"
   },
   {
     "name": "Vladimir Lenin",
@@ -12040,7 +12397,8 @@
         "text": "“There are decades where nothing happens; and there are weeks where decades happen.”",
         "cite": "— Attributed"
       }
-    ]
+    ],
+    "slug": "vladimir-lenin"
   },
   {
     "name": "Alfred Adler",
@@ -12072,7 +12430,8 @@
         "text": "The only normal people are the ones you don't know very well.",
         "cite": "— Alfred Adler"
       }
-    ]
+    ],
+    "slug": "alfred-adler"
   },
   {
     "name": "Rosa Luxemburg",
@@ -12103,7 +12462,8 @@
         "text": "“Freedom is always and exclusively freedom for the one who thinks differently.”",
         "cite": "— The Russian Revolution (1918)"
       }
-    ]
+    ],
+    "slug": "rosa-luxemburg"
   },
   {
     "name": "Bertrand Russell",
@@ -12138,7 +12498,8 @@
         "text": "“Three passions, simple but overwhelmingly strong, have governed my life: the longing for love, the search for knowledge, and unbearable pity for the suffering of mankind.”",
         "cite": "— Autobiography (1967)"
       }
-    ]
+    ],
+    "slug": "bertrand-russell"
   },
   {
     "name": "Roald Amundsen",
@@ -12168,7 +12529,8 @@
         "text": "“Victory awaits him who has everything in order — luck, people call it. Defeat is certain for him who has neglected to take the necessary precautions in time; this is called bad luck.”",
         "cite": "— The South Pole (1912)"
       }
-    ]
+    ],
+    "slug": "roald-amundsen"
   },
   {
     "name": "Oswaldo Cruz",
@@ -12205,7 +12567,8 @@
         "text": "Trabalhar com fé e dedicação pela saúde do nosso povo.",
         "cite": "Cruz"
       }
-    ]
+    ],
+    "slug": "oswaldo-cruz"
   },
   {
     "name": "Santos Dumont",
@@ -12236,7 +12599,8 @@
         "text": "“To invent is to give wings to human imagination, transforming dreams into reality.”",
         "cite": "— O Que Eu Vi, O Que Nós Veremos (1918)"
       }
-    ]
+    ],
+    "slug": "santos-dumont"
   },
   {
     "name": "Winston Churchill",
@@ -12268,7 +12632,8 @@
         "text": "“We shall defend our island, whatever the cost may be, we shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields and in the streets, we shall fight in the hills; we shall never surrender.”",
         "cite": "— Speech to Parliament (1940)"
       }
-    ]
+    ],
+    "slug": "winston-churchill"
   },
   {
     "name": "Guglielmo Marconi",
@@ -12301,7 +12666,8 @@
         "text": "Every day sees humanity more victorious in the struggle with space and time.",
         "cite": "Nobel Lecture (1909)"
       }
-    ]
+    ],
+    "slug": "guglielmo-marconi"
   },
   {
     "name": "Ernest Shackleton",
@@ -12338,7 +12704,8 @@
         "text": "For scientific leadership, give me Scott; for swift and efficient travel, Amundsen; but when you are in a hopeless situation, when there seems to be no way out of the problem, get on your knees and pray for Shackleton.",
         "cite": "Apsley Cherry-Garrard"
       }
-    ]
+    ],
+    "slug": "ernest-shackleton"
   },
   {
     "name": "Carl Jung",
@@ -12369,7 +12736,8 @@
         "text": "“Until you make the unconscious conscious, it will direct your life and you will call it fate.”",
         "cite": "— Collected Works (Vol. 9, Archetypes)"
       }
-    ]
+    ],
+    "slug": "carl-jung"
   },
   {
     "name": "Hermann Hesse",
@@ -12400,7 +12768,8 @@
         "text": "“I wanted only to try to live in accord with the promptings which came from my true self. Why was that so very difficult?”",
         "cite": "— Demian (1919)"
       }
-    ]
+    ],
+    "slug": "hermann-hesse"
   },
   {
     "name": "Joseph Stalin",
@@ -12427,7 +12796,8 @@
         "text": "“Education is a weapon whose effects depend on who holds it in his hands and at whom it is aimed.”",
         "cite": "— Interview with H.G. Wells (1934)"
       }
-    ]
+    ],
+    "slug": "joseph-stalin"
   },
   {
     "name": "Lise Meitner",
@@ -12460,7 +12830,8 @@
         "text": "A physicist who never lost her humanity.",
         "cite": "Epitaph on her gravestone"
       }
-    ]
+    ],
+    "slug": "lise-meitner"
   },
   {
     "name": "Albert Einstein",
@@ -12494,7 +12865,8 @@
         "text": "“Life is like riding a bicycle. To keep your balance, you must keep moving.”",
         "cite": "— Letter to his son Eduard (1930)"
       }
-    ]
+    ],
+    "slug": "albert-einstein"
   },
   {
     "name": "Emiliano Zapata",
@@ -12524,7 +12896,8 @@
         "text": "“Es mejor morir de pie que vivir toda una vida arrodillado.”",
         "cite": "— Manifiesto Zapatista (1911)"
       }
-    ]
+    ],
+    "slug": "emiliano-zapata"
   },
   {
     "name": "Leon Trotsky",
@@ -12555,7 +12928,8 @@
         "text": "“Life is not an easy matter... You cannot live through it without falling into frustration and cynicism unless you have before you a great idea which raises you above personal misery, above weakness, above all kinds of perfidy and baseness.”",
         "cite": "— Diary in Exile (1935)"
       }
-    ]
+    ],
+    "slug": "leon-trotsky"
   },
   {
     "name": "Carlos Chagas",
@@ -12588,7 +12962,8 @@
         "text": "A medicina pública é a sentinela avançada da soberania e do progresso de uma nação.",
         "cite": "Discursos Médicos"
       }
-    ]
+    ],
+    "slug": "carlos-chagas"
   },
   {
     "name": "Ludwig von Mises",
@@ -12619,7 +12994,8 @@
         "text": "“Whoever wishes peace among peoples must fight statism.”",
         "cite": "— Omnipotent Government (1944)"
       }
-    ]
+    ],
+    "slug": "ludwig-von-mises"
   },
   {
     "name": "Mustafa Kemal Atatürk",
@@ -12652,7 +13028,8 @@
         "text": "Teachers are the one and only people who save nations.",
         "cite": "Atatürk"
       }
-    ]
+    ],
+    "slug": "mustafa-kemal-ataturk"
   },
   {
     "name": "Pablo Picasso",
@@ -12685,7 +13062,8 @@
         "text": "Art washes away from the soul the dust of everyday life.",
         "cite": "Pablo Picasso"
       }
-    ]
+    ],
+    "slug": "pablo-picasso"
   },
   {
     "name": "Alexander Fleming",
@@ -12718,7 +13096,8 @@
         "text": "Nature makes penicillin, I just found it.",
         "cite": "Alexander Fleming"
       }
-    ]
+    ],
+    "slug": "alexander-fleming"
   },
   {
     "name": "Lima Barreto",
@@ -12755,7 +13134,8 @@
         "text": "A capacidade mental dos negros é discutida a priori e a dos brancos a posteriori.",
         "cite": "Diário Íntimo"
       }
-    ]
+    ],
+    "slug": "lima-barreto"
   },
   {
     "name": "Pope John XXIII",
@@ -12792,7 +13172,8 @@
         "text": "Peace on Earth, which all men of every era have most eagerly yearned for, can be firmly established only if the order laid down by God be dutifully observed.",
         "cite": "Pacem in Terris"
       }
-    ]
+    ],
+    "slug": "pope-john-xxiii"
   },
   {
     "name": "Getúlio Vargas",
@@ -12823,7 +13204,8 @@
         "text": "“Saio da vida para entrar na história.”",
         "cite": "— Carta-Testamento (1954)"
       }
-    ]
+    ],
+    "slug": "getulio-vargas"
   },
   {
     "name": "James Joyce",
@@ -12854,7 +13236,8 @@
         "text": "“History, Stephen said, is a nightmare from which I am trying to awake.”",
         "cite": "— Ulysses (1922)"
       }
-    ]
+    ],
+    "slug": "james-joyce"
   },
   {
     "name": "Virginia Woolf",
@@ -12890,7 +13273,8 @@
         "text": "“Lock up your libraries if you like; but there is no gate, no lock, no bolt that you can set upon the freedom of my mind.”",
         "cite": "— A Room of One's Own (1929)"
       }
-    ]
+    ],
+    "slug": "virginia-woolf"
   },
   {
     "name": "Franklin D. Roosevelt",
@@ -12923,7 +13307,8 @@
         "text": "Human kindness has never weakened the stamina or softened the fiber of a free people.",
         "cite": "FDR"
       }
-    ]
+    ],
+    "slug": "franklin-d-roosevelt"
   },
   {
     "name": "Emmy Noether",
@@ -12956,7 +13341,8 @@
         "text": "To every continuous symmetry of the laws of physics, there corresponds a conserved physical quantity.",
         "cite": "Noether's First Theorem"
       }
-    ]
+    ],
+    "slug": "emmy-noether"
   },
   {
     "name": "Franz Kafka",
@@ -12987,7 +13373,8 @@
         "text": "“A book must be the axe for the frozen sea within us.”",
         "cite": "— Letter to Oskar Pollak (1904)"
       }
-    ]
+    ],
+    "slug": "franz-kafka"
   },
   {
     "name": "John Maynard Keynes",
@@ -13025,7 +13412,8 @@
         "text": "“When the facts change, I change my mind. What do you do, sir?”",
         "cite": "— Attributed"
       }
-    ]
+    ],
+    "slug": "john-maynard-keynes"
   },
   {
     "name": "Joseph Schumpeter",
@@ -13056,7 +13444,8 @@
         "text": "“The process of industrial mutation that incessantly revolutionizes the economic structure from within, incessantly destroying the old one, incessantly creating a new one: this process of Creative Destruction is the essential fact about capitalism.”",
         "cite": "— Capitalism, Socialism and Democracy (1942)"
       }
-    ]
+    ],
+    "slug": "joseph-schumpeter"
   },
   {
     "name": "Khalil Gibran",
@@ -13086,7 +13475,8 @@
         "text": "“Your children are not your children. They are the sons and daughters of Life's longing for itself.”",
         "cite": "— The Prophet (1923)"
       }
-    ]
+    ],
+    "slug": "khalil-gibran"
   },
   {
     "name": "Eleanor Roosevelt",
@@ -13119,7 +13509,8 @@
         "text": "No one can make you feel inferior without your consent.",
         "cite": "This Is My Story"
       }
-    ]
+    ],
+    "slug": "eleanor-roosevelt"
   },
   {
     "name": "Niels Bohr",
@@ -13155,7 +13546,8 @@
         "text": "How wonderful that we have met with a paradox. Now we have some hope of making progress.",
         "cite": "Niels Bohr"
       }
-    ]
+    ],
+    "slug": "niels-bohr"
   },
   {
     "name": "Karl Polanyi",
@@ -13185,7 +13577,8 @@
         "text": "“To allow the market mechanism to be sole director of the fate of human beings and their natural environment... would result in the demolition of society.”",
         "cite": "— The Great Transformation (1944)"
       }
-    ]
+    ],
+    "slug": "karl-polanyi"
   },
   {
     "name": "Tarsila do Amaral",
@@ -13223,7 +13616,8 @@
         "text": "O Abaporu foi o marco de uma nova era na pintura do Brasil.",
         "cite": "Depoimentos"
       }
-    ]
+    ],
+    "slug": "tarsila-do-amaral"
   },
   {
     "name": "Chiang Kai-shek",
@@ -13252,7 +13646,8 @@
         "text": "“If I sweat more in times of peace, I will bleed less in times of war.”",
         "cite": "— Speech (1930s)"
       }
-    ]
+    ],
+    "slug": "chiang-kai-shek"
   },
   {
     "name": "Erwin Schrödinger",
@@ -13284,7 +13679,8 @@
         "text": "The task is not so much to see what no one has yet seen, but to think what nobody has yet thought, about that which everybody sees.",
         "cite": "Erwin Schrödinger"
       }
-    ]
+    ],
+    "slug": "erwin-schrodinger"
   },
   {
     "name": "Srinivasa Ramanujan",
@@ -13318,7 +13714,8 @@
         "text": "1729 is a very interesting number; it is the smallest number expressible as the sum of two cubes in two different ways.",
         "cite": "To G.H. Hardy"
       }
-    ]
+    ],
+    "slug": "srinivasa-ramanujan"
   },
   {
     "name": "Heitor Villa-Lobos",
@@ -13351,7 +13748,8 @@
         "text": "A música é uma manifestação da inteligência humana traduzida em sons e ritmos.",
         "cite": "Villa-Lobos"
       }
-    ]
+    ],
+    "slug": "heitor-villa-lobos"
   },
   {
     "name": "Fernando Pessoa",
@@ -13392,7 +13790,8 @@
         "text": "“Tenho em mim todos os sonhos do mundo.”",
         "cite": "— Tabacaria (Álvaro de Campos, 1928)"
       }
-    ]
+    ],
+    "slug": "fernando-pessoa"
   },
   {
     "name": "Nestor Makhno",
@@ -13424,7 +13823,8 @@
         "text": "“Anarchism's real field is life, struggle, and creative labor, not theoretical isolation.”",
         "cite": "— The Anarchist Revolution (1926)"
       }
-    ]
+    ],
+    "slug": "nestor-makhno"
   },
   {
     "name": "Ludwig Wittgenstein",
@@ -13459,7 +13859,8 @@
         "text": "“The limits of my language mean the limits of my world.”",
         "cite": "— Tractatus Logico-Philosophicus (Proposition 5.6)"
       }
-    ]
+    ],
+    "slug": "ludwig-wittgenstein"
   },
   {
     "name": "Martin Heidegger",
@@ -13489,7 +13890,8 @@
         "text": "“Language is the house of Being. In its home man dwells.”",
         "cite": "— Letter on Humanism (1947)"
       }
-    ]
+    ],
+    "slug": "martin-heidegger"
   },
   {
     "name": "Charlie Chaplin",
@@ -13523,7 +13925,8 @@
         "text": "You'll find that life is still worthwhile, if you just smile.",
         "cite": "Charlie Chaplin"
       }
-    ]
+    ],
+    "slug": "charlie-chaplin"
   },
   {
     "name": "Adolf Hitler",
@@ -13556,7 +13959,8 @@
         "text": "Words build bridges into unexplored regions.",
         "cite": "Adolf Hitler"
       }
-    ]
+    ],
+    "slug": "adolf-hitler"
   },
   {
     "name": "António de Oliveira Salazar",
@@ -13589,7 +13993,8 @@
         "text": "Não discutimos Deus e a virtude; não discutimos a Pátria e a sua história; não discutimos a família e a sua moral.",
         "cite": "Salazar"
       }
-    ]
+    ],
+    "slug": "antonio-de-oliveira-salazar"
   },
   {
     "name": "Jawaharlal Nehru",
@@ -13621,7 +14026,8 @@
         "text": "At the stroke of the midnight hour, when the world sleeps, India will awake to life and freedom.",
         "cite": "— Tryst with Destiny (August 14, 1947)"
       }
-    ]
+    ],
+    "slug": "jawaharlal-nehru"
   },
   {
     "name": "Charles de Gaulle",
@@ -13653,7 +14059,8 @@
         "text": "“La France ne peut être la France sans la grandeur.”",
         "cite": "— Mémoires de guerre (1954)"
       }
-    ]
+    ],
+    "slug": "charles-de-gaulle"
   },
   {
     "name": "Ho Chi Minh",
@@ -13683,7 +14090,8 @@
         "text": "“Nothing is more precious than independence and liberty.”",
         "cite": "— Appeal to the Nation (1966)"
       }
-    ]
+    ],
+    "slug": "ho-chi-minh"
   },
   {
     "name": "Michael Collins",
@@ -13715,7 +14123,8 @@
         "text": "“In the whole course of human affairs there is no other force which produces such grand results as conviction.”",
         "cite": "— The Path to Freedom (1922)"
       }
-    ]
+    ],
+    "slug": "michael-collins"
   },
   {
     "name": "Agatha Christie",
@@ -13749,7 +14158,8 @@
         "text": "Instinct is a marvelous thing. It can neither be explained nor ignored.",
         "cite": "The Mysterious Affair at Styles"
       }
-    ]
+    ],
+    "slug": "agatha-christie"
   },
   {
     "name": "Vyacheslav Molotov",
@@ -13781,7 +14191,8 @@
         "text": "Our cause is just. The enemy will be defeated. Victory will be ours.",
         "cite": "— Radio Broadcast on the German Invasion of the USSR (June 22, 1941)"
       }
-    ]
+    ],
+    "slug": "vyacheslav-molotov"
   },
   {
     "name": "Antonio Gramsci",
@@ -13811,7 +14222,8 @@
         "text": "“The crisis consists precisely in the fact that the old is dying and the new cannot be born; in this interregnum a great variety of morbid symptoms appear.”",
         "cite": "— Prison Notebooks (written 1929–1935)"
       }
-    ]
+    ],
+    "slug": "antonio-gramsci"
   },
   {
     "name": "Walter Benjamin",
@@ -13842,7 +14254,8 @@
         "text": "“There is no document of civilization which is not at the same time a document of barbarism.”",
         "cite": "— Theses on the Philosophy of History (1940)"
       }
-    ]
+    ],
+    "slug": "walter-benjamin"
   },
   {
     "name": "Josip Broz Tito",
@@ -13874,7 +14287,8 @@
         "text": "Stop sending people to kill me! We've already captured five of them... If you don't stop sending killers, I'll send one to Moscow, and I won't have to send another.",
         "cite": "— Letter to Joseph Stalin (1948)"
       }
-    ]
+    ],
+    "slug": "josip-broz-tito"
   },
   {
     "name": "Haile Selassie",
@@ -13906,7 +14320,8 @@
         "text": "Until the philosophy which holds one race superior and another inferior is finally and permanently discredited and abandoned, everywhere is war.",
         "cite": "— Address to the United Nations General Assembly (1963)"
       }
-    ]
+    ],
+    "slug": "haile-selassie"
   },
   {
     "name": "Mao Zedong",
@@ -13937,7 +14352,8 @@
         "text": "“A revolution is not a dinner party, or writing an essay, or painting a picture, or doing embroidery.”",
         "cite": "— Report on an Investigation of the Peasant Movement in Hunan (1927)"
       }
-    ]
+    ],
+    "slug": "mao-zedong"
   },
   {
     "name": "Mário de Andrade",
@@ -13972,7 +14388,8 @@
         "text": "“Pouca saúde e muita saúva, os males do Brasil são.”",
         "cite": "— Macunaíma (1928)"
       }
-    ]
+    ],
+    "slug": "mario-de-andrade"
   },
   {
     "name": "Aldous Huxley",
@@ -14003,7 +14420,8 @@
         "text": "“Words can be like X-rays if you use them properly — they'll go through anything. You read and you're pierced.”",
         "cite": "— Brave New World (1932)"
       }
-    ]
+    ],
+    "slug": "aldous-huxley"
   },
   {
     "name": "Bertha Lutz",
@@ -14036,7 +14454,8 @@
         "text": "A igualdade de direitos não é um favor concedido, é uma justiça que se impõe.",
         "cite": "Discurso na Liga pela Emancipação Feminina"
       }
-    ]
+    ],
+    "slug": "bertha-lutz"
   },
   {
     "name": "Nikita Khrushchev",
@@ -14068,7 +14487,8 @@
         "text": "Politicians are the same all over. They promise to build bridges even when there are no rivers.",
         "cite": "— Nikita Khrushchev"
       }
-    ]
+    ],
+    "slug": "nikita-khrushchev"
   },
   {
     "name": "Lázaro Cárdenas",
@@ -14099,7 +14519,8 @@
         "text": "“Gobierno o individuo que entrega los recursos naturales a empresas extranjeras traiciona a la patria.”",
         "cite": "— Discurso de Expropiación (1938)"
       }
-    ]
+    ],
+    "slug": "lazaro-cardenas"
   },
   {
     "name": "Max Horkheimer",
@@ -14130,7 +14551,8 @@
         "text": "“The fully enlightened earth radiates disaster triumphant.”",
         "cite": "— Dialectic of Enlightenment (with Theodor Adorno, 1947)"
       }
-    ]
+    ],
+    "slug": "max-horkheimer"
   },
   {
     "name": "Plínio Salgado",
@@ -14162,7 +14584,8 @@
         "text": "Deus, Pátria e Família.",
         "cite": "— Lema da Ação Integralista Brasileira (1932)"
       }
-    ]
+    ],
+    "slug": "plinio-salgado"
   },
   {
     "name": "Jean Piaget",
@@ -14199,7 +14622,8 @@
         "text": "Children have real understanding only of that which they invent themselves.",
         "cite": "Jean Piaget"
       }
-    ]
+    ],
+    "slug": "jean-piaget"
   },
   {
     "name": "Lucky Luciano",
@@ -14232,7 +14656,8 @@
         "text": "I learned that you need business organization, not street brawls.",
         "cite": "The Last Testament of Lucky Luciano"
       }
-    ]
+    ],
+    "slug": "lucky-luciano"
   },
   {
     "name": "Pixinguinha",
@@ -14270,7 +14695,8 @@
         "text": "A música brasileira tem raízes profundas que brotam na alma do povo.",
         "cite": "Pixinguinha"
       }
-    ]
+    ],
+    "slug": "pixinguinha"
   },
   {
     "name": "Pope Paul VI",
@@ -14307,7 +14733,8 @@
         "text": "Modern man listens more willingly to witnesses than to teachers, and if he does listen to teachers, it is because they are witnesses.",
         "cite": "Evangelii Nuntiandi"
       }
-    ]
+    ],
+    "slug": "pope-paul-vi"
   },
   {
     "name": "Amelia Earhart",
@@ -14344,7 +14771,8 @@
         "text": "Adventure is worthwhile in itself.",
         "cite": "Amelia Earhart"
       }
-    ]
+    ],
+    "slug": "amelia-earhart"
   },
   {
     "name": "Herbert Marcuse",
@@ -14375,7 +14803,8 @@
         "text": "“A comfortable, smooth, reasonable, democratic unfreedom prevails in advanced industrial civilization, a token of technical progress.”",
         "cite": "— One-Dimensional Man (1964)"
       }
-    ]
+    ],
+    "slug": "herbert-marcuse"
   },
   {
     "name": "Liu Shaoqi",
@@ -14402,7 +14831,8 @@
         "text": "“A good Communist must be a good student of Marxism-Leninism.”",
         "cite": "— How to Be a Good Communist (1939)"
       }
-    ]
+    ],
+    "slug": "liu-shaoqi"
   },
   {
     "name": "Piero Sraffa",
@@ -14432,7 +14862,8 @@
         "text": "“Standard commodities are constructed so that the ratio of net product to means of production remains independent of wage and profit distribution.”",
         "cite": "— Production of Commodities by Means of Commodities (1960)"
       }
-    ]
+    ],
+    "slug": "piero-sraffa"
   },
   {
     "name": "Lampião",
@@ -14465,7 +14896,8 @@
         "text": "Eu não sou homem de correr de volante; se eles têm fuzil, eu tenho coragem.",
         "cite": "Lampião"
       }
-    ]
+    ],
+    "slug": "lampiao"
   },
   {
     "name": "Luís Carlos Prestes",
@@ -14497,7 +14929,8 @@
         "text": "Não há força capaz de desviar a marcha da história quando os povos se levantam em defesa de seus direitos.",
         "cite": "— Luís Carlos Prestes"
       }
-    ]
+    ],
+    "slug": "luis-carlos-prestes"
   },
   {
     "name": "Golda Meir",
@@ -14529,7 +14962,8 @@
         "text": "Peace will come when the Arabs love their children more than they hate us.",
         "cite": "— Attributed to Golda Meir"
       }
-    ]
+    ],
+    "slug": "golda-meir"
   },
   {
     "name": "Friedrich Hayek",
@@ -14564,7 +14998,8 @@
         "text": "“Emergencies have always been the pretext on which the safeguards of individual liberty have been eroded.”",
         "cite": "— Law, Legislation and Liberty (1979)"
       }
-    ]
+    ],
+    "slug": "friedrich-hayek"
   },
   {
     "name": "Jorge Luis Borges",
@@ -14599,7 +15034,8 @@
         "text": "“Time is a river which sweeps me along, but I am the river; it is a tiger which destroys me, but I am the tiger; it is a fire which consumes me, but I am the fire.”",
         "cite": "— A New Refutation of Time (1946)"
       }
-    ]
+    ],
+    "slug": "jorge-luis-borges"
   },
   {
     "name": "Michał Kalecki",
@@ -14632,7 +15068,8 @@
         "text": "The discipline in the factories and the political stability would be undermined by continuous full employment.",
         "cite": "Political Aspects of Full Employment (1943)"
       }
-    ]
+    ],
+    "slug": "micha-kalecki"
   },
   {
     "name": "Alfred Hitchcock",
@@ -14666,7 +15103,8 @@
         "text": "Drama is life with the dull bits cut out.",
         "cite": "Alfred Hitchcock"
       }
-    ]
+    ],
+    "slug": "alfred-hitchcock"
   },
   {
     "name": "Al Capone",
@@ -14699,7 +15137,8 @@
         "text": "I am like any other man. All I do is supply a demand.",
         "cite": "Al Capone"
       }
-    ]
+    ],
+    "slug": "al-capone"
   },
   {
     "name": "Lavrentiy Beria",
@@ -14731,7 +15170,8 @@
         "text": "Show me the man and I will find you the crime.",
         "cite": "— Attributed to Lavrentiy Beria"
       }
-    ]
+    ],
+    "slug": "lavrentiy-beria"
   },
   {
     "name": "Erich Fromm",
@@ -14762,7 +15202,8 @@
         "text": "“Immature love says: 'I love you because I need you.' Mature love says 'I need you because I love you.'”",
         "cite": "— The Art of Loving (1956)"
       }
-    ]
+    ],
+    "slug": "erich-fromm"
   },
   {
     "name": "Gilberto Freyre",
@@ -14795,7 +15236,8 @@
         "text": "A miscigenação e o hibridismo cultural são as forças vivas que definem a singularidade do Brasil.",
         "cite": "Gilberto Freyre"
       }
-    ]
+    ],
+    "slug": "gilberto-freyre"
   },
   {
     "name": "Werner Heisenberg",
@@ -14827,7 +15269,8 @@
         "text": "What we observe is not nature itself, but nature exposed to our method of questioning.",
         "cite": "Physics and Philosophy"
       }
-    ]
+    ],
+    "slug": "werner-heisenberg"
   },
   {
     "name": "Enrico Fermi",
@@ -14859,7 +15302,8 @@
         "text": "Where is everybody?",
         "cite": "The Fermi Paradox"
       }
-    ]
+    ],
+    "slug": "enrico-fermi"
   },
   {
     "name": "Jacques Lacan",
@@ -14892,7 +15336,8 @@
         "text": "Desire is the desire of the Other.",
         "cite": "Jacques Lacan"
       }
-    ]
+    ],
+    "slug": "jacques-lacan"
   },
   {
     "name": "Carlos Drummond de Andrade",
@@ -14925,7 +15370,8 @@
         "text": "“No meio do caminho tinha uma pedra / tinha uma pedra no meio do caminho.”",
         "cite": "— Alguma Poesia (1930)"
       }
-    ]
+    ],
+    "slug": "carlos-drummond-de-andrade"
   },
   {
     "name": "Juscelino Kubitschek",
@@ -14957,7 +15403,8 @@
         "text": "“Deste planalto central, desta solidão que em breve se transformará em cérebro das altas decisões nacionais, lanço os olhos mais uma vez sobre o amanhã do meu país.”",
         "cite": "— Discurso de Brasília (1958)"
       }
-    ]
+    ],
+    "slug": "juscelino-kubitschek"
   },
   {
     "name": "Sérgio Buarque de Holanda",
@@ -14994,7 +15441,8 @@
         "text": "“Our revolution did not come from outside; it was a slow internal transformation of sensibilities.”",
         "cite": "— Raízes do Brasil (1936)"
       }
-    ]
+    ],
+    "slug": "sergio-buarque-de-holanda"
   },
   {
     "name": "Karl Popper",
@@ -15026,7 +15474,8 @@
         "text": "Unlimited tolerance must lead to the disappearance of tolerance (The Paradox of Tolerance).",
         "cite": "The Open Society and Its Enemies"
       }
-    ]
+    ],
+    "slug": "karl-popper"
   },
   {
     "name": "Barbara McClintock",
@@ -15059,7 +15508,8 @@
         "text": "Over the years I have found that it is difficult if not impossible to bring to awareness of another person that which he is not yet ready to accept.",
         "cite": "McClintock"
       }
-    ]
+    ],
+    "slug": "barbara-mcclintock"
   },
   {
     "name": "Paul Dirac",
@@ -15091,7 +15541,8 @@
         "text": "It is more important to have beauty in one's equations than to have them fit experiment.",
         "cite": "— The Evolution of the Physicist's Picture of Nature (1963)"
       }
-    ]
+    ],
+    "slug": "paul-dirac"
   },
   {
     "name": "George Orwell",
@@ -15130,7 +15581,8 @@
         "text": "“All animals are equal, but some animals are more equal than others.”",
         "cite": "— Animal Farm (1945)"
       }
-    ]
+    ],
+    "slug": "george-orwell"
   },
   {
     "name": "Joan Robinson",
@@ -15161,7 +15613,8 @@
         "text": "“The purpose of studying economics is not to acquire a set of ready-made answers to economic questions, but to learn how to avoid being deceived by economists.”",
         "cite": "— Marx, Marshall, and Keynes (1955)"
       }
-    ]
+    ],
+    "slug": "joan-robinson"
   },
   {
     "name": "John von Neumann",
@@ -15191,7 +15644,8 @@
         "text": "“If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is.”",
         "cite": "— First National Meeting of the ACM (1947)"
       }
-    ]
+    ],
+    "slug": "john-von-neumann"
   },
   {
     "name": "Theodor Adorno",
@@ -15222,7 +15676,8 @@
         "text": "“To write poetry after Auschwitz is barbaric.”",
         "cite": "— Cultural Criticism and Society (1949)"
       }
-    ]
+    ],
+    "slug": "theodor-adorno"
   },
   {
     "name": "Igor Kurchatov",
@@ -15254,7 +15709,8 @@
         "text": "The atom should be a worker, not a soldier.",
         "cite": "— Igor Kurchatov"
       }
-    ]
+    ],
+    "slug": "igor-kurchatov"
   },
   {
     "name": "Deng Xiaoping",
@@ -15283,7 +15739,8 @@
         "text": "“It doesn't matter whether a cat is black or white, as long as it catches mice.”",
         "cite": "— Speech (1962)"
       }
-    ]
+    ],
+    "slug": "deng-xiaoping"
   },
   {
     "name": "J. Robert Oppenheimer",
@@ -15315,7 +15772,8 @@
         "text": "“We knew the world would not be the same. A few people laughed, a few people cried. Most people were silent. I remembered the line from the Hindu scripture: 'Now I am become Death, the destroyer of worlds.'”",
         "cite": "— NBC News Interview (1965)"
       }
-    ]
+    ],
+    "slug": "j-robert-oppenheimer"
   },
   {
     "name": "Pablo Neruda",
@@ -15345,7 +15803,8 @@
         "text": "“You can cut all the flowers but you cannot keep Spring from coming.”",
         "cite": "— Selected Poems"
       }
-    ]
+    ],
+    "slug": "pablo-neruda"
   },
   {
     "name": "Salvador Dalí",
@@ -15378,7 +15837,8 @@
         "text": "Have no fear of perfection - you'll never reach it.",
         "cite": "Salvador Dalí"
       }
-    ]
+    ],
+    "slug": "salvador-dali"
   },
   {
     "name": "B.F. Skinner",
@@ -15416,7 +15876,8 @@
         "text": "The consequences of an act affect the probability of its occurring again.",
         "cite": "Science and Human Behavior"
       }
-    ]
+    ],
+    "slug": "b-f-skinner"
   },
   {
     "name": "Ayn Rand",
@@ -15447,7 +15908,8 @@
         "text": "“The question isn't who is going to let me; it's who is going to stop me.”",
         "cite": "— The Fountainhead (1943)"
       }
-    ]
+    ],
+    "slug": "ayn-rand"
   },
   {
     "name": "Jean-Paul Sartre",
@@ -15482,7 +15944,8 @@
         "text": "“Man is condemned to be free; because once thrown into the world, he is responsible for everything he does.”",
         "cite": "— Being and Nothingness (1943)"
       }
-    ]
+    ],
+    "slug": "jean-paul-sartre"
   },
   {
     "name": "Viktor Frankl",
@@ -15512,7 +15975,8 @@
         "text": "“Those who have a 'why' to live, can bear with almost any 'how.'”",
         "cite": "— Man's Search for Meaning (1946)"
       }
-    ]
+    ],
+    "slug": "viktor-frankl"
   },
   {
     "name": "Wassily Leontief",
@@ -15542,7 +16006,8 @@
         "text": "“Theoretical assumptions that cannot be checked against reality are not only useless, they are positively misleading.”",
         "cite": "— Input-Output Economics (1966)"
       }
-    ]
+    ],
+    "slug": "wassily-leontief"
   },
   {
     "name": "Nise da Silveira",
@@ -15579,7 +16044,8 @@
         "text": "A arte é a expressão de realidades interiores que não cabem em palavras.",
         "cite": "Imagens do Inconsciente"
       }
-    ]
+    ],
+    "slug": "nise-da-silveira"
   },
   {
     "name": "Hannah Arendt",
@@ -15615,7 +16081,8 @@
         "text": "“There are no dangerous thoughts; thinking itself is dangerous.”",
         "cite": "— The Life of the Mind (1977)"
       }
-    ]
+    ],
+    "slug": "hannah-arendt"
   },
   {
     "name": "Samuel Beckett",
@@ -15646,7 +16113,8 @@
         "text": "“Ever tried. Ever failed. No matter. Try again. Fail again. Fail better.”",
         "cite": "— Worstward Ho (1983)"
       }
-    ]
+    ],
+    "slug": "samuel-beckett"
   },
   {
     "name": "Kurt Gödel",
@@ -15678,7 +16146,8 @@
         "text": "Either mathematics is too big for the human mind, or the human mind is more than a machine.",
         "cite": "Kurt Gödel"
       }
-    ]
+    ],
+    "slug": "kurt-godel"
   },
   {
     "name": "Grace Hopper",
@@ -15711,7 +16180,8 @@
         "text": "It's easier to ask forgiveness than it is to get permission.",
         "cite": "Grace Hopper"
       }
-    ]
+    ],
+    "slug": "grace-hopper"
   },
   {
     "name": "Emmanuel Levinas",
@@ -15743,7 +16213,8 @@
         "text": "Ethics is first philosophy.",
         "cite": "Emmanuel Levinas"
       }
-    ]
+    ],
+    "slug": "emmanuel-levinas"
   },
   {
     "name": "Dietrich Bonhoeffer",
@@ -15780,7 +16251,8 @@
         "text": "Action springs not from thought, but from a readiness for responsibility.",
         "cite": "Letters and Papers from Prison"
       }
-    ]
+    ],
+    "slug": "dietrich-bonhoeffer"
   },
   {
     "name": "Leonid Brezhnev",
@@ -15812,7 +16284,8 @@
         "text": "When internal and external forces hostile to socialism seek to turn back the development of any socialist country, that becomes not only a problem of the country concerned, but a common problem.",
         "cite": "— The Brezhnev Doctrine (1968)"
       }
-    ]
+    ],
+    "slug": "leonid-brezhnev"
   },
   {
     "name": "Caio Prado Júnior",
@@ -15845,7 +16318,8 @@
         "text": "“Brazil was created to supply Europe with tropical goods; this external orientation defines our entire social formation.”",
         "cite": "— Formação do Brasil Contemporâneo (1942)"
       }
-    ]
+    ],
+    "slug": "caio-prado-junior"
   },
   {
     "name": "Frida Kahlo",
@@ -15876,7 +16350,8 @@
         "text": "“Feet, what do I need you for when I have wings to fly? (Pies, ¿para qué los quiero si tengo alas pa' volar?)”",
         "cite": "— Diary of Frida Kahlo (1953)"
       }
-    ]
+    ],
+    "slug": "frida-kahlo"
   },
   {
     "name": "Oscar Niemeyer",
@@ -15907,7 +16382,8 @@
         "text": "“It is not the right angle that attracts me, nor the straight line, hard and inflexible, created by man. What attracts me is the free and sensual curve.”",
         "cite": "— The Curves of Time (2000)"
       }
-    ]
+    ],
+    "slug": "oscar-niemeyer"
   },
   {
     "name": "Rachel Carson",
@@ -15940,7 +16416,8 @@
         "text": "The more clearly we can focus our attention on the wonders and realities of the universe about us, the less taste we shall have for destruction.",
         "cite": "Rachel Carson"
       }
-    ]
+    ],
+    "slug": "rachel-carson"
   },
   {
     "name": "Sergei Korolev",
@@ -15972,7 +16449,8 @@
         "text": "The way to the stars is open.",
         "cite": "— On the launch of Yuri Gagarin (Vostok 1, 1961)"
       }
-    ]
+    ],
+    "slug": "sergei-korolev"
   },
   {
     "name": "Maurice Merleau-Ponty",
@@ -16002,7 +16480,8 @@
         "text": "“We know not through our intellect but through our experience; the body is our general medium for having a world.”",
         "cite": "— Phenomenology of Perception (1945)"
       }
-    ]
+    ],
+    "slug": "maurice-merleau-ponty"
   },
   {
     "name": "Salvador Allende",
@@ -16034,7 +16513,8 @@
         "text": "“History is ours, and people make it. Long live Chile! Long live the people! Long live the workers!”",
         "cite": "— Final Radio Address, Radio Magallanes (Sept 11, 1973)"
       }
-    ]
+    ],
+    "slug": "salvador-allende"
   },
   {
     "name": "Simone de Beauvoir",
@@ -16069,7 +16549,8 @@
         "text": "“Change your life today. Don't gamble on the future, act now, without delay.”",
         "cite": "— Attributed"
       }
-    ]
+    ],
+    "slug": "simone-de-beauvoir"
   },
   {
     "name": "Willard Van Orman Quine",
@@ -16101,7 +16582,8 @@
         "text": "Our statements about the external world face the tribunal of sense experience not individually, but only as a corporate body.",
         "cite": "Two Dogmas of Empiricism"
       }
-    ]
+    ],
+    "slug": "willard-van-orman-quine"
   },
   {
     "name": "Cartola",
@@ -16139,7 +16621,8 @@
         "text": "Preste atenção, o mundo é um moinho, vai triturar teus sonhos, tão mesquinho.",
         "cite": "O Mundo É Um Moinho"
       }
-    ]
+    ],
+    "slug": "cartola"
   },
   {
     "name": "Guimarães Rosa",
@@ -16176,7 +16659,8 @@
         "text": "O sertão aceita todos os nomes: aqui é o sertão-mundo.",
         "cite": "Guimarães Rosa"
       }
-    ]
+    ],
+    "slug": "guimaraes-rosa"
   },
   {
     "name": "Peter Drucker",
@@ -16207,7 +16691,8 @@
         "text": "“Culture eats strategy for breakfast. What gets measured gets managed.”",
         "cite": "— The Effective Executive (1967)"
       }
-    ]
+    ],
+    "slug": "peter-drucker"
   },
   {
     "name": "Kwame Nkrumah",
@@ -16240,7 +16725,8 @@
         "text": "Divided we are weak; united, Africa could become one of the greatest forces for good in the world.",
         "cite": "Africa Must Unite"
       }
-    ]
+    ],
+    "slug": "kwame-nkrumah"
   },
   {
     "name": "Simone Weil",
@@ -16273,7 +16759,8 @@
         "text": "To be rooted is perhaps the most important and least recognized need of the human soul.",
         "cite": "The Need for Roots"
       }
-    ]
+    ],
+    "slug": "simone-weil"
   },
   {
     "name": "Chiang Ching-kuo",
@@ -16302,7 +16789,8 @@
         "text": "“Times are changing, the environment is changing, the tide is also changing.”",
         "cite": "— Speech (1986)"
       }
-    ]
+    ],
+    "slug": "chiang-ching-kuo"
   },
   {
     "name": "Ronald Coase",
@@ -16334,7 +16822,8 @@
         "text": "A firm will tend to expand until the costs of organizing an extra transaction within the firm become equal to the costs of carrying out the same transaction on the open market.",
         "cite": "The Nature of the Firm"
       }
-    ]
+    ],
+    "slug": "ronald-coase"
   },
   {
     "name": "Akira Kurosawa",
@@ -16368,7 +16857,8 @@
         "text": "To be an artist means never to avert one's eyes.",
         "cite": "Something Like an Autobiography"
       }
-    ]
+    ],
+    "slug": "akira-kurosawa"
   },
   {
     "name": "Chico Xavier",
@@ -16401,7 +16891,8 @@
         "text": "A caridade é o processo de somar alegrias, diminuir aflições e multiplicar esperanças.",
         "cite": "Chico Xavier"
       }
-    ]
+    ],
+    "slug": "chico-xavier"
   },
   {
     "name": "Tancredo Neves",
@@ -16433,7 +16924,8 @@
         "text": "A primeira condição para que a democracia viva é que ela seja respeitada pelos democratas.",
         "cite": "— Discurso da Vitória (1985)"
       }
-    ]
+    ],
+    "slug": "tancredo-neves"
   },
   {
     "name": "Emil Cioran",
@@ -16464,7 +16956,8 @@
         "text": "“It is not worth the bother of killing yourself, since you always kill yourself too late.”",
         "cite": "— The Trouble with Being Born (1973)"
       }
-    ]
+    ],
+    "slug": "emil-cioran"
   },
   {
     "name": "Vo Nguyen Giap",
@@ -16494,7 +16987,8 @@
         "text": "“Guerrilla war is the war of the broad masses of an economically backward country standing up against a powerfully equipped aggressive army.”",
         "cite": "— People's War, People's Army (1961)"
       }
-    ]
+    ],
+    "slug": "vo-nguyen-giap"
   },
   {
     "name": "Maria Bonita",
@@ -16527,7 +17021,8 @@
         "text": "Mulher de ferro e flor no coração do sertão.",
         "cite": "Popular Cordel Literature"
       }
-    ]
+    ],
+    "slug": "maria-bonita"
   },
   {
     "name": "Carlos Marighella",
@@ -16559,7 +17054,8 @@
         "text": "Não tive tempo para ter medo.",
         "cite": "— Carlos Marighella"
       }
-    ]
+    ],
+    "slug": "carlos-marighella"
   },
   {
     "name": "Alan Turing",
@@ -16593,7 +17089,8 @@
         "text": "“Sometimes it is the people no one can imagine anything of who do the things no one can imagine.”",
         "cite": "— Attributed"
       }
-    ]
+    ],
+    "slug": "alan-turing"
   },
   {
     "name": "Milton Friedman",
@@ -16628,7 +17125,8 @@
         "text": "“A society that puts equality before freedom will get neither. A society that puts freedom before equality will get a high degree of both.”",
         "cite": "— Free to Choose (1980)"
       }
-    ]
+    ],
+    "slug": "milton-friedman"
   },
   {
     "name": "Chien-Shiung Wu",
@@ -16660,7 +17158,8 @@
         "text": "There is only one thing worse than coming home from the lab to a sink full of dirty dishes, and that is not going to the lab at all.",
         "cite": "Chien-Shiung Wu"
       }
-    ]
+    ],
+    "slug": "chien-shiung-wu"
   },
   {
     "name": "Luiz Gonzaga",
@@ -16698,7 +17197,8 @@
         "text": "O baião é a voz e o coração do sertão brasileiro.",
         "cite": "Luiz Gonzaga"
       }
-    ]
+    ],
+    "slug": "luiz-gonzaga"
   },
   {
     "name": "Pope John Paul I",
@@ -16731,7 +17231,8 @@
         "text": "God is our father; even more, God is our mother, who does not want to hurt us, only to love us.",
         "cite": "Pope John Paul I"
       }
-    ]
+    ],
+    "slug": "pope-john-paul-i"
   },
   {
     "name": "Wernher von Braun",
@@ -16763,7 +17264,8 @@
         "text": "Research is what I'm doing when I don't know what I'm doing.",
         "cite": "— Wernher von Braun"
       }
-    ]
+    ],
+    "slug": "wernher-von-braun"
   },
   {
     "name": "Albert Camus",
@@ -16802,7 +17304,8 @@
         "text": "“The only way to deal with an unfree world is to become so absolutely free that your very existence is an act of rebellion.”",
         "cite": "— The Rebel (1951)"
       }
-    ]
+    ],
+    "slug": "albert-camus"
   },
   {
     "name": "Rosa Parks",
@@ -16835,7 +17338,8 @@
         "text": "Each person must live their life as a model for others.",
         "cite": "Rosa Parks"
       }
-    ]
+    ],
+    "slug": "rosa-parks"
   },
   {
     "name": "Jesse Owens",
@@ -16868,7 +17372,8 @@
         "text": "We all have dreams. But in order to make dreams come into reality, it takes an awful lot of determination, dedication, self-discipline, and effort.",
         "cite": "Jesse Owens"
       }
-    ]
+    ],
+    "slug": "jesse-owens"
   },
   {
     "name": "Carolina Maria de Jesus",
@@ -16898,7 +17403,8 @@
         "text": "“Hunger is the clay from which the statue of despair is molded. An empty stomach cannot bear wisdom.”",
         "cite": "— Child of the Dark (Quarto de Despejo, 1960)"
       }
-    ]
+    ],
+    "slug": "carolina-maria-de-jesus"
   },
   {
     "name": "Hedy Lamarr",
@@ -16931,7 +17437,8 @@
         "text": "Films have a certain place in a certain time period. Technology is forever.",
         "cite": "Hedy Lamarr"
       }
-    ]
+    ],
+    "slug": "hedy-lamarr"
   },
   {
     "name": "Jonas Salk",
@@ -16964,7 +17471,8 @@
         "text": "Hope lies in dreams, in imagination, and in the courage of those who dare to make dreams into reality.",
         "cite": "Jonas Salk"
       }
-    ]
+    ],
+    "slug": "jonas-salk"
   },
   {
     "name": "Carlos Lacerda",
@@ -16996,7 +17504,8 @@
         "text": "O senhor Getúlio Vargas não deve ser candidato. Se for, não deve ser eleito. Se eleito, não deve tomar posse. Se tomar posse, deve ser deposto.",
         "cite": "— Tribuna da Imprensa (1950)"
       }
-    ]
+    ],
+    "slug": "carlos-lacerda"
   },
   {
     "name": "Alan Watts",
@@ -17027,7 +17536,8 @@
         "text": "“Man suffers only because he takes seriously what the gods made for fun.”",
         "cite": "— The Wisdom of Insecurity (1951)"
       }
-    ]
+    ],
+    "slug": "alan-watts"
   },
   {
     "name": "Paul Samuelson",
@@ -17058,7 +17568,8 @@
         "text": "“Economics has never been a science, but it has always been a great study. Whenever people say 'we must be realistic,' they usually mean 'we must be cynical.'”",
         "cite": "— Collected Scientific Papers (1966)"
       }
-    ]
+    ],
+    "slug": "paul-samuelson"
   },
   {
     "name": "Roland Barthes",
@@ -17089,7 +17600,8 @@
         "text": "“The birth of the reader must be ransomed by the death of the Author.”",
         "cite": "— The Death of the Author (1967)"
       }
-    ]
+    ],
+    "slug": "roland-barthes"
   },
   {
     "name": "Claude Shannon",
@@ -17119,7 +17631,8 @@
         "text": "“The fundamental problem of communication is that of reproducing at one point either exactly or approximately a message selected at another point.”",
         "cite": "— A Mathematical Theory of Communication (1948)"
       }
-    ]
+    ],
+    "slug": "claude-shannon"
   },
   {
     "name": "Herbert Simon",
@@ -17150,7 +17663,8 @@
         "text": "“A wealth of information creates a poverty of attention and a need to allocate that attention efficiently.”",
         "cite": "— Designing Organizations for an Information-Rich World (1971)"
       }
-    ]
+    ],
+    "slug": "herbert-simon"
   },
   {
     "name": "Miguel Arraes",
@@ -17182,7 +17696,8 @@
         "text": "O povo pobre deste país não precisa de favor, precisa de justiça e oportunidade.",
         "cite": "— Miguel Arraes"
       }
-    ]
+    ],
+    "slug": "miguel-arraes"
   },
   {
     "name": "Ulysses Guimarães",
@@ -17214,7 +17729,8 @@
         "text": "Traidor da Constituição é traidor da Pátria. Conhecemos o caminho do labirinto. Temos ódio à ditadura. Ódio e nojo.",
         "cite": "— Discurso de Promulgação da Constituição de 1988"
       }
-    ]
+    ],
+    "slug": "ulysses-guimaraes"
   },
   {
     "name": "Franco Montoro",
@@ -17246,7 +17762,8 @@
         "text": "O poder deve descer ao encontro do povo; a verdadeira democracia é a que se constrói no município.",
         "cite": "— Franco Montoro"
       }
-    ]
+    ],
+    "slug": "franco-montoro"
   },
   {
     "name": "Indira Gandhi",
@@ -17283,7 +17800,8 @@
         "text": "Forgiveness is a virtue of the brave.",
         "cite": "Indira Gandhi"
       }
-    ]
+    ],
+    "slug": "indira-gandhi"
   },
   {
     "name": "Jânio Quadros",
@@ -17315,7 +17833,8 @@
         "text": "Forças terríveis levantam-se contra mim e me intrigam ou infamam.",
         "cite": "— Carta de Renúncia (25 de agosto de 1961)"
       }
-    ]
+    ],
+    "slug": "janio-quadros"
   },
   {
     "name": "Nelson Mandela",
@@ -17349,7 +17868,8 @@
         "text": "“It always seems impossible until it's done.”",
         "cite": "— Attributed"
       }
-    ]
+    ],
+    "slug": "nelson-mandela"
   },
   {
     "name": "Richard Feynman",
@@ -17383,7 +17903,8 @@
         "text": "“I would rather have questions that can't be answered than answers that can't be questioned.”",
         "cite": "— The Pleasure of Finding Things Out (1999)"
       }
-    ]
+    ],
+    "slug": "richard-feynman"
   },
   {
     "name": "Louis Althusser",
@@ -17416,7 +17937,8 @@
         "text": "Philosophy is, in the last instance, class struggle in the field of theory.",
         "cite": "Louis Althusser"
       }
-    ]
+    ],
+    "slug": "louis-althusser"
   },
   {
     "name": "Katherine Johnson",
@@ -17453,7 +17975,8 @@
         "text": "I counted everything. I counted the steps to the road, the steps to church, the number of dishes and silverware I washed.",
         "cite": "Katherine Johnson"
       }
-    ]
+    ],
+    "slug": "katherine-johnson"
   },
   {
     "name": "Gamal Abdel Nasser",
@@ -17485,7 +18008,8 @@
         "text": "We will not look to the West or the East; we will look forward.",
         "cite": "— Speech on the Nationalization of the Suez Canal (1956)"
       }
-    ]
+    ],
+    "slug": "gamal-abdel-nasser"
   },
   {
     "name": "Eva Perón",
@@ -17517,7 +18041,8 @@
         "text": "“Donde existe una necesidad, nace un derecho.”",
         "cite": "— Discursos a los Descamisados (1950)"
       }
-    ]
+    ],
+    "slug": "eva-peron"
   },
   {
     "name": "Hyman Minsky",
@@ -17547,7 +18072,8 @@
         "text": "“Stability leads to instability. The more stable things become and the longer things are stable, the more unstable they will be when the crisis hits.”",
         "cite": "— Can 'It' Happen Again? (1982)"
       }
-    ]
+    ],
+    "slug": "hyman-minsky"
   },
   {
     "name": "Iris Murdoch",
@@ -17578,7 +18104,8 @@
         "text": "“Love is the extremely difficult realisation that something other than oneself is real.”",
         "cite": "— The Sovereignty of Good (1970)"
       }
-    ]
+    ],
+    "slug": "iris-murdoch"
   },
   {
     "name": "Eva Perón (Evita)",
@@ -17615,7 +18142,8 @@
         "text": "I demanded more rights for women because I know what women had to suffer.",
         "cite": "Evita"
       }
-    ]
+    ],
+    "slug": "eva-peron-evita"
   },
   {
     "name": "João Goulart",
@@ -17647,7 +18175,8 @@
         "text": "As reformas de base não são uma ameaça ao regime democrático; são a sua única garantia.",
         "cite": "— Comício da Central do Brasil (13 de março de 1964)"
       }
-    ]
+    ],
+    "slug": "joao-goulart"
   },
   {
     "name": "Mikhail Kalashnikov",
@@ -17679,7 +18208,8 @@
         "text": "All that is complex is not useful and all that is useful is simple. This has been my lifetime motto.",
         "cite": "— Mikhail Kalashnikov"
       }
-    ]
+    ],
+    "slug": "mikhail-kalashnikov"
   },
   {
     "name": "Celso Furtado",
@@ -17710,7 +18240,8 @@
         "text": "“Development is a social process, not just an economic one.”",
         "cite": "— Development and Underdevelopment (1961)"
       }
-    ]
+    ],
+    "slug": "celso-furtado"
   },
   {
     "name": "Clarice Lispector",
@@ -17745,7 +18276,8 @@
         "text": "“Renda-se, como eu me rendi. Mergulhe no que você não conhece como eu mergulhei. Não se preocupe em entender, viver ultrapassa todo o entendimento.”",
         "cite": "— Água Viva (1973)"
       }
-    ]
+    ],
+    "slug": "clarice-lispector"
   },
   {
     "name": "Florestan Fernandes",
@@ -17775,7 +18307,8 @@
         "text": "“A nation that does not know its own history is a nation condemned to repeat it.”",
         "cite": "— Reflections on Brazil"
       }
-    ]
+    ],
+    "slug": "florestan-fernandes"
   },
   {
     "name": "Philippa Foot",
@@ -17806,7 +18339,8 @@
         "text": "“You ask a philosopher a question and after he or she has talked for a bit, you don't understand your question any more.”",
         "cite": "— Interview (2001)"
       }
-    ]
+    ],
+    "slug": "philippa-foot"
   },
   {
     "name": "Rosalind Franklin",
@@ -17839,7 +18373,8 @@
         "text": "In my view, all that is necessary for faith is the belief that by doing our best we shall come nearer to success and that success in our aim (the improvement of mankind) will be worth the effort.",
         "cite": "Letter to her father (1940)"
       }
-    ]
+    ],
+    "slug": "rosalind-franklin"
   },
   {
     "name": "Pope John Paul II",
@@ -17876,7 +18411,8 @@
         "text": "Freedom consists not in doing what we like, but in having the right to do what we ought.",
         "cite": "Homily in Baltimore (1995)"
       }
-    ]
+    ],
+    "slug": "pope-john-paul-ii"
   },
   {
     "name": "John Rawls",
@@ -17907,7 +18443,8 @@
         "text": "“Justice is the first virtue of social institutions, as truth is of systems of thought.”",
         "cite": "— A Theory of Justice (1971)"
       }
-    ]
+    ],
+    "slug": "john-rawls"
   },
   {
     "name": "Paulo Freire",
@@ -17937,7 +18474,8 @@
         "text": "“When education is not liberating, the dream of the oppressed is to become the oppressor.”",
         "cite": "— Pedagogy of the Oppressed (1968)"
       }
-    ]
+    ],
+    "slug": "paulo-freire"
   },
   {
     "name": "Kenneth Arrow",
@@ -17970,7 +18508,8 @@
         "text": "There is no voting system that can convert the ranked preferences of individuals into a community-wide ranking while meeting basic fairness criteria.",
         "cite": "Arrow's Theorem"
       }
-    ]
+    ],
+    "slug": "kenneth-arrow"
   },
   {
     "name": "Andrei Sakharov",
@@ -18002,7 +18541,8 @@
         "text": "Peace, progress, human rights — these three goals are indissolubly linked; it is impossible to achieve one of them if the others are ignored.",
         "cite": "— Nobel Peace Prize Lecture (1975)"
       }
-    ]
+    ],
+    "slug": "andrei-sakharov"
   },
   {
     "name": "Darci Ribeiro",
@@ -18033,7 +18573,8 @@
         "text": "“The crisis in education in Brazil is not a crisis; it is a project.”",
         "cite": "— Pronunciamento no Senado (1982)"
       }
-    ]
+    ],
+    "slug": "darci-ribeiro"
   },
   {
     "name": "Thomas Kuhn",
@@ -18065,7 +18606,8 @@
         "text": "Science does not progress via linear accumulation of facts, but through episodic paradigm shifts.",
         "cite": "Thomas Kuhn"
       }
-    ]
+    ],
+    "slug": "thomas-kuhn"
   },
   {
     "name": "Leonel Brizola",
@@ -18098,7 +18640,8 @@
         "text": "Nossos destinos estão ligados ao destino da democracia brasileira.",
         "cite": "Discurso da Legalidade (1961)"
       }
-    ]
+    ],
+    "slug": "leonel-brizola"
   },
   {
     "name": "Lee Kuan Yew",
@@ -18131,7 +18674,8 @@
         "text": "“I am often accused of interfering in the private lives of citizens. Yes, if I did not, had I not done that, we wouldn't be here today.”",
         "cite": "— National Day Rally (1986)"
       }
-    ]
+    ],
+    "slug": "lee-kuan-yew"
   },
   {
     "name": "Lee Teng-hui",
@@ -18160,7 +18704,8 @@
         "text": "“I am Lee Teng-hui, a Taiwanese.”",
         "cite": "— Speech to the Legislative Yuan (1995)"
       }
-    ]
+    ],
+    "slug": "lee-teng-hui"
   },
   {
     "name": "Paul Feyerabend",
@@ -18191,7 +18736,8 @@
         "text": "Science is an essentially anarchic enterprise: theoretical anarchism is more humanitarian and more likely to encourage progress than its law-and-order alternatives.",
         "cite": "Against Method"
       }
-    ]
+    ],
+    "slug": "paul-feyerabend"
   },
   {
     "name": "Marlon Brando",
@@ -18225,7 +18771,8 @@
         "text": "I coulda had class. I coulda been a contender. I coulda been somebody.",
         "cite": "On the Waterfront (1954)"
       }
-    ]
+    ],
+    "slug": "marlon-brando"
   },
   {
     "name": "Frantz Fanon",
@@ -18256,7 +18803,8 @@
         "text": "“The colonized man will first manifest this aggressiveness which has been deposited in his bones against his own people.”",
         "cite": "— The Wretched of the Earth (1961)"
       }
-    ]
+    ],
+    "slug": "frantz-fanon"
   },
   {
     "name": "Gilles Deleuze",
@@ -18287,7 +18835,8 @@
         "text": "“A concept is always a creation, a response to a problem. Philosophy does not consist in knowing, but is the art of forming, inventing, and fabricating concepts.”",
         "cite": "— What is Philosophy? (with Félix Guattari, 1991)"
       }
-    ]
+    ],
+    "slug": "gilles-deleuze"
   },
   {
     "name": "Malcolm X",
@@ -18317,7 +18866,8 @@
         "text": "“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.”",
         "cite": "— Speech at the Audubon Ballroom (1964)"
       }
-    ]
+    ],
+    "slug": "malcolm-x"
   },
   {
     "name": "Patrice Lumumba",
@@ -18350,7 +18900,8 @@
         "text": "No brute force, cruelty, or torture has ever brought me to ask for mercy, for I prefer to die with my head held high, with unwavering faith and profound trust in the destiny of my country.",
         "cite": "Patrice Lumumba"
       }
-    ]
+    ],
+    "slug": "patrice-lumumba"
   },
   {
     "name": "Margaret Thatcher",
@@ -18387,7 +18938,8 @@
         "text": "If you want something said, ask a man; if you want something done, ask a woman.",
         "cite": "Margaret Thatcher"
       }
-    ]
+    ],
+    "slug": "margaret-thatcher"
   },
   {
     "name": "Fidel Castro",
@@ -18417,7 +18969,8 @@
         "text": "“Condemn me, it does not matter: history will absolve me.”",
         "cite": "— History Will Absolve Me (1953)"
       }
-    ]
+    ],
+    "slug": "fidel-castro"
   },
   {
     "name": "Jiang Zemin",
@@ -18446,7 +18999,8 @@
         "text": "“Keep pace with the times.”",
         "cite": "— Three Represents (2000)"
       }
-    ]
+    ],
+    "slug": "jiang-zemin"
   },
   {
     "name": "Michel Foucault",
@@ -18481,7 +19035,8 @@
         "text": "“Knowledge is not made for understanding; it is made for cutting.”",
         "cite": "— Nietzsche, Genealogy, History (1971)"
       }
-    ]
+    ],
+    "slug": "michel-foucault"
   },
   {
     "name": "Milton Santos",
@@ -18512,7 +19067,8 @@
         "text": "“Space is an accumulation of unequal times.”",
         "cite": "— The Nature of Space (1996)"
       }
-    ]
+    ],
+    "slug": "milton-santos"
   },
   {
     "name": "Murray Rothbard",
@@ -18543,7 +19099,8 @@
         "text": "“The State is that organization in society which attempts to maintain a monopoly of the use of force and violence in a given territorial area.”",
         "cite": "— The Anatomy of the State (1974)"
       }
-    ]
+    ],
+    "slug": "murray-rothbard"
   },
   {
     "name": "Miles Davis",
@@ -18576,7 +19133,8 @@
         "text": "Do not fear mistakes. There are none.",
         "cite": "Miles Davis"
       }
-    ]
+    ],
+    "slug": "miles-davis"
   },
   {
     "name": "Marilyn Monroe",
@@ -18610,7 +19168,8 @@
         "text": "Give a girl the right shoes, and she can conquer the world.",
         "cite": "Marilyn Monroe"
       }
-    ]
+    ],
+    "slug": "marilyn-monroe"
   },
   {
     "name": "Thich Nhat Hanh",
@@ -18648,7 +19207,8 @@
         "text": "There is no way to peace; peace is the way.",
         "cite": "The Art of Communicating"
       }
-    ]
+    ],
+    "slug": "thich-nhat-hanh"
   },
   {
     "name": "Gabriel García Márquez",
@@ -18683,7 +19243,8 @@
         "text": "“It is not true that people stop pursuing dreams because they grow old, they grow old because they stop pursuing dreams.”",
         "cite": "— Attributed"
       }
-    ]
+    ],
+    "slug": "gabriel-garcia-marquez"
   },
   {
     "name": "Tom Jobim (Antônio Carlos Jobim)",
@@ -18716,7 +19277,8 @@
         "text": "“O Brasil não é para principiantes.”",
         "cite": "— Interviews"
       }
-    ]
+    ],
+    "slug": "tom-jobim-antonio-carlos-jobim"
   },
   {
     "name": "John McCarthy",
@@ -18748,7 +19310,8 @@
         "text": "Lisp is the greatest single programming language ever designed.",
         "cite": "John McCarthy"
       }
-    ]
+    ],
+    "slug": "john-mccarthy"
   },
   {
     "name": "Marvin Minsky",
@@ -18782,7 +19345,8 @@
         "text": "Will robots inherit the earth? Yes, but they will be our children.",
         "cite": "Marvin Minsky"
       }
-    ]
+    ],
+    "slug": "marvin-minsky"
   },
   {
     "name": "Ariano Suassuna",
@@ -18815,7 +19379,8 @@
         "text": "Arte para mim não é produto de mercado; é expressão da alma do meu povo.",
         "cite": "Ariano Suassuna"
       }
-    ]
+    ],
+    "slug": "ariano-suassuna"
   },
   {
     "name": "Pope Benedict XVI",
@@ -18848,7 +19413,8 @@
         "text": "A dictatorship of relativism does not recognize anything as definitive and has as its highest measure only one's ego and its desires.",
         "cite": "Homily at Conclave Mass (2005)"
       }
-    ]
+    ],
+    "slug": "pope-benedict-xvi"
   },
   {
     "name": "Che Guevara",
@@ -18879,7 +19445,8 @@
         "text": "“At the risk of seeming ridiculous, let me say that the true revolutionary is guided by great feelings of love.”",
         "cite": "— Socialism and Man in Cuba (1965)"
       }
-    ]
+    ],
+    "slug": "che-guevara"
   },
   {
     "name": "John Nash",
@@ -18909,7 +19476,8 @@
         "text": "“It is only in the mysterious equations of love that any logical reasons can be found.”",
         "cite": "— Nobel Prize Banquet Speech (1994)"
       }
-    ]
+    ],
+    "slug": "john-nash"
   },
   {
     "name": "Noam Chomsky",
@@ -18944,7 +19512,8 @@
         "text": "“Colorless green ideas sleep furiously.”",
         "cite": "— Syntactic Structures (1957)"
       }
-    ]
+    ],
+    "slug": "noam-chomsky"
   },
   {
     "name": "Stanley Kubrick",
@@ -18978,7 +19547,8 @@
         "text": "If it can be written, or thought, it can be filmed.",
         "cite": "Stanley Kubrick"
       }
-    ]
+    ],
+    "slug": "stanley-kubrick"
   },
   {
     "name": "Maya Angelou",
@@ -19016,7 +19586,8 @@
         "text": "There is no greater agony than bearing an untold story inside you.",
         "cite": "I Know Why the Caged Bird Sings"
       }
-    ]
+    ],
+    "slug": "maya-angelou"
   },
   {
     "name": "Jean Baudrillard",
@@ -19047,7 +19618,8 @@
         "text": "“The territory no longer precedes the map, nor does it survive it. It is nevertheless the map that engenders the territory.”",
         "cite": "— Simulacra and Simulation (1981)"
       }
-    ]
+    ],
+    "slug": "jean-baudrillard"
   },
   {
     "name": "Martin Luther King Jr.",
@@ -19083,7 +19655,8 @@
         "text": "“The arc of the moral universe is long, but it bends toward justice.”",
         "cite": "— Speech (1968)"
       }
-    ]
+    ],
+    "slug": "martin-luther-king-jr"
   },
   {
     "name": "Jürgen Habermas",
@@ -19116,7 +19689,8 @@
         "text": "Communicative action relies on a cooperative search for truth.",
         "cite": "Jürgen Habermas"
       }
-    ]
+    ],
+    "slug": "jurgen-habermas"
   },
   {
     "name": "Audrey Hepburn",
@@ -19150,7 +19724,8 @@
         "text": "Nothing is impossible, the word itself says 'I'm possible'!",
         "cite": "Audrey Hepburn"
       }
-    ]
+    ],
+    "slug": "audrey-hepburn"
   },
   {
     "name": "Fernanda Montenegro",
@@ -19188,7 +19763,8 @@
         "text": "Eu acredito na cultura do meu país, que resiste a todas as intempéries.",
         "cite": "Fernanda Montenegro"
       }
-    ]
+    ],
+    "slug": "fernanda-montenegro"
   },
   {
     "name": "Immanuel Wallerstein",
@@ -19220,7 +19796,8 @@
         "text": "“The most important thing to know is that we are in a structural crisis of the world-system.”",
         "cite": "— World-Systems Analysis: An Introduction (2004)"
       }
-    ]
+    ],
+    "slug": "immanuel-wallerstein"
   },
   {
     "name": "Jacques Derrida",
@@ -19251,7 +19828,8 @@
         "text": "“There is no outside-text (Il n'y a pas de hors-texte); language precedes and shapes any perception of truth.”",
         "cite": "— Of Grammatology (1967)"
       }
-    ]
+    ],
+    "slug": "jacques-derrida"
   },
   {
     "name": "Pierre Bourdieu",
@@ -19281,7 +19859,8 @@
         "text": "“Taste classifies, and it classifies the classifier.”",
         "cite": "— Distinction (1979)"
       }
-    ]
+    ],
+    "slug": "pierre-bourdieu"
   },
   {
     "name": "Edsger W. Dijkstra",
@@ -19314,7 +19893,8 @@
         "text": "Simplicity is prerequisite for reliability.",
         "cite": "EWD 498"
       }
-    ]
+    ],
+    "slug": "edsger-w-dijkstra"
   },
   {
     "name": "Neil Armstrong",
@@ -19347,7 +19927,8 @@
         "text": "Mystery creates wonder and wonder is the basis of man's desire to understand.",
         "cite": "Neil Armstrong"
       }
-    ]
+    ],
+    "slug": "neil-armstrong"
   },
   {
     "name": "Tu Youyou",
@@ -19380,7 +19961,8 @@
         "text": "Artemisinin is a gift from traditional Chinese medicine to the world.",
         "cite": "Tu Youyou (2015)"
       }
-    ]
+    ],
+    "slug": "tu-youyou"
   },
   {
     "name": "Elza Soares",
@@ -19418,7 +20000,8 @@
         "text": "Eu venho do mesmo planeta que você: o Planeta Fome.",
         "cite": "Programa de Ary Barroso"
       }
-    ]
+    ],
+    "slug": "elza-soares"
   },
   {
     "name": "Mario Covas",
@@ -19450,7 +20033,8 @@
         "text": "Não me curvo, não transijo com meus princípios e não fujo da luta.",
         "cite": "— Mario Covas"
       }
-    ]
+    ],
+    "slug": "mario-covas"
   },
   {
     "name": "Itamar Franco",
@@ -19482,7 +20066,8 @@
         "text": "O compromisso deste governo é derrotar o dragão da inflação e restaurar a dignidade do salário brasileiro.",
         "cite": "— Itamar Franco"
       }
-    ]
+    ],
+    "slug": "itamar-franco"
   },
   {
     "name": "Thomas Sowell",
@@ -19515,7 +20100,8 @@
         "text": "There are no solutions, there are only trade-offs; and you can only try to get the best trade-off you can get.",
         "cite": "— A Conflict of Visions (1987)"
       }
-    ]
+    ],
+    "slug": "thomas-sowell"
   },
   {
     "name": "Guy Debord",
@@ -19545,7 +20131,8 @@
         "text": "“In societies where modern conditions of production prevail, all of life presents itself as an immense accumulation of spectacles. Everything that was directly lived has receded into a representation.”",
         "cite": "— The Society of the Spectacle (1967)"
       }
-    ]
+    ],
+    "slug": "guy-debord"
   },
   {
     "name": "Mikhail Gorbachev",
@@ -19572,7 +20159,8 @@
         "text": "“If what you have done yesterday still looks big to you, you haven't done much today.”",
         "cite": "— Resignation Address from the Soviet Presidency (Dec 25, 1991)"
       }
-    ]
+    ],
+    "slug": "mikhail-gorbachev"
   },
   {
     "name": "João Gilberto",
@@ -19605,7 +20193,8 @@
         "text": "Isto é Bossa Nova, isto é muito natural.",
         "cite": "Samba de Uma Nota Só"
       }
-    ]
+    ],
+    "slug": "joao-gilberto"
   },
   {
     "name": "Toni Morrison",
@@ -19643,7 +20232,8 @@
         "text": "Freeing yourself was one thing, claiming ownership of that freed self was another.",
         "cite": "Beloved"
       }
-    ]
+    ],
+    "slug": "toni-morrison"
   },
   {
     "name": "Fernando Henrique Cardoso",
@@ -19675,7 +20265,8 @@
         "text": "Não há desenvolvimento autêntico sem estabilidade econômica e sem instituições democráticas sólidas.",
         "cite": "— Fernando Henrique Cardoso"
       }
-    ]
+    ],
+    "slug": "fernando-henrique-cardoso"
   },
   {
     "name": "Andrei Tarkovsky",
@@ -19709,7 +20300,8 @@
         "text": "The allocated time span for each scene must breathe with the rhythm of reality.",
         "cite": "Andrei Tarkovsky"
       }
-    ]
+    ],
+    "slug": "andrei-tarkovsky"
   },
   {
     "name": "Raoni Metuktire",
@@ -19742,7 +20334,8 @@
         "text": "We need the forest standing, the rivers clean, and our people alive.",
         "cite": "Chief Raoni"
       }
-    ]
+    ],
+    "slug": "raoni-metuktire"
   },
   {
     "name": "Sylvia Plath",
@@ -19779,7 +20372,8 @@
         "text": "Out of the ash I rise with my red hair and I eat men like air.",
         "cite": "Lady Lazarus"
       }
-    ]
+    ],
+    "slug": "sylvia-plath"
   },
   {
     "name": "Amartya Sen",
@@ -19814,7 +20408,8 @@
         "text": "“No famine has ever taken place in the history of the world in a functioning democracy.”",
         "cite": "— Development as Freedom (1999)"
       }
-    ]
+    ],
+    "slug": "amartya-sen"
   },
   {
     "name": "Antonio Negri",
@@ -19845,7 +20440,8 @@
         "text": "“The multitude is an open, inclusive concept; it is not a people, which is unified, but an active multiplicity that resists empire.”",
         "cite": "— Empire (with Michael Hardt, 2000)"
       }
-    ]
+    ],
+    "slug": "antonio-negri"
   },
   {
     "name": "Elinor Ostrom",
@@ -19875,7 +20471,8 @@
         "text": "“There is no reason to believe that bureaucrats and politicians, no matter how well meaning, are better at solving problems than the people on the spot, who have the strongest incentive to get the solution right.”",
         "cite": "— Governing the Commons (1990)"
       }
-    ]
+    ],
+    "slug": "elinor-ostrom"
   },
   {
     "name": "Michael Parenti",
@@ -19908,7 +20505,8 @@
         "text": "“The poor live in a capitalist society, but the rich live in a socialist society.”",
         "cite": "— Democracy for the Few (1974)"
       }
-    ]
+    ],
+    "slug": "michael-parenti"
   },
   {
     "name": "Garrincha",
@@ -19941,7 +20539,8 @@
         "text": "He turned the football pitch into a circus ring and the ball into a trained creature.",
         "cite": "Eduardo Galeano"
       }
-    ]
+    ],
+    "slug": "garrincha"
   },
   {
     "name": "Carl Sagan",
@@ -19976,7 +20575,8 @@
         "text": "“We are a way for the cosmos to know itself.”",
         "cite": "— Cosmos (1980)"
       }
-    ]
+    ],
+    "slug": "carl-sagan"
   },
   {
     "name": "Yuri Gagarin",
@@ -20008,7 +20608,8 @@
         "text": "Orbiting Earth in the spaceship, I saw how beautiful our planet is. People, let us preserve and increase this beauty, not destroy it!",
         "cite": "Yuri Gagarin"
       }
-    ]
+    ],
+    "slug": "yuri-gagarin"
   },
   {
     "name": "Alexei Leonov",
@@ -20040,7 +20641,8 @@
         "text": "It was so quiet that I could hear my heart beating.",
         "cite": "Alexei Leonov"
       }
-    ]
+    ],
+    "slug": "alexei-leonov"
   },
   {
     "name": "Charles Manson",
@@ -20072,7 +20674,8 @@
         "text": "Total paranoia is just total awareness.",
         "cite": "Charles Manson"
       }
-    ]
+    ],
+    "slug": "charles-manson"
   },
   {
     "name": "Jane Goodall",
@@ -20105,7 +20708,8 @@
         "text": "The greatest danger to our future is apathy.",
         "cite": "Jane Goodall"
       }
-    ]
+    ],
+    "slug": "jane-goodall"
   },
   {
     "name": "Zilda Arns",
@@ -20138,7 +20742,8 @@
         "text": "Como os pássaros, que cuidam de seus filhos ao fazer um ninho no alto das árvores e leve, a criança precisa de atenção, carinho e proteção.",
         "cite": "Zilda Arns"
       }
-    ]
+    ],
+    "slug": "zilda-arns"
   },
   {
     "name": "David Harvey",
@@ -20169,7 +20774,8 @@
         "text": "“The freedom of the market is not the freedom of the people.”",
         "cite": "— A Brief History of Neoliberalism (2005)"
       }
-    ]
+    ],
+    "slug": "david-harvey"
   },
   {
     "name": "José Mujica",
@@ -20201,7 +20807,8 @@
         "text": "“We have invented a mountain of superfluous needs... when we buy something, we are not buying it with money, we are paying for it with the time of our lives we had to spend to earn that money.”",
         "cite": "— Speech at the Rio+20 Summit (2012)"
       }
-    ]
+    ],
+    "slug": "jose-mujica"
   },
   {
     "name": "Lélia Gonzalez",
@@ -20231,7 +20838,8 @@
         "text": "“We must decolonize our minds to understand our reality.”",
         "cite": "— Racism and Sexism in Brazilian Culture (1984)"
       }
-    ]
+    ],
+    "slug": "lelia-gonzalez"
   },
   {
     "name": "Elvis Presley",
@@ -20265,7 +20873,8 @@
         "text": "Values are like fingerprints. Nobody's are the same, but you leave 'em all over everything you do.",
         "cite": "Elvis Presley"
       }
-    ]
+    ],
+    "slug": "elvis-presley"
   },
   {
     "name": "Dalai Lama (14th)",
@@ -20298,7 +20907,8 @@
         "text": "Love and compassion are necessities, not luxuries. Without them, humanity cannot survive.",
         "cite": "14th Dalai Lama"
       }
-    ]
+    ],
+    "slug": "dalai-lama-14th"
   },
   {
     "name": "Margaret Hamilton",
@@ -20331,7 +20941,8 @@
         "text": "Software was treated like a stepchild. I began to use the term 'software engineering' to give it the respect of any other engineering discipline.",
         "cite": "Margaret Hamilton"
       }
-    ]
+    ],
+    "slug": "margaret-hamilton"
   },
   {
     "name": "Pope Francis",
@@ -20368,7 +20979,8 @@
         "text": "Rivers do not drink their own water; trees do not eat their own fruit. Living for others is a rule of nature.",
         "cite": "Pope Francis"
       }
-    ]
+    ],
+    "slug": "pope-francis"
   },
   {
     "name": "Valentina Tereshkova",
@@ -20399,7 +21011,8 @@
         "text": "A bird cannot fly with one wing only. Human space flight cannot develop any further without the active participation of women.",
         "cite": "Valentina Tereshkova"
       }
-    ]
+    ],
+    "slug": "valentina-tereshkova"
   },
   {
     "name": "Robert Nozick",
@@ -20429,7 +21042,8 @@
         "text": "“Individuals have rights, and there are things no person or group may do to them without violating their rights.”",
         "cite": "— Anarchy, State, and Utopia (1974)"
       }
-    ]
+    ],
+    "slug": "robert-nozick"
   },
   {
     "name": "Donald Knuth",
@@ -20462,7 +21076,8 @@
         "text": "Science is what we understand well enough to explain to a computer. Art is everything else we do.",
         "cite": "Donald Knuth"
       }
-    ]
+    ],
+    "slug": "donald-knuth"
   },
   {
     "name": "Bernie Madoff",
@@ -20495,7 +21110,8 @@
         "text": "Everyone was greedy. I went along with it, and I couldn't stop.",
         "cite": "Bernie Madoff"
       }
-    ]
+    ],
+    "slug": "bernie-madoff"
   },
   {
     "name": "Enéas Carneiro",
@@ -20527,7 +21143,8 @@
         "text": "Meu nome é Enéas, 56!",
         "cite": "— Horário Gratuito de Propaganda Eleitoral"
       }
-    ]
+    ],
+    "slug": "eneas-carneiro"
   },
   {
     "name": "Barbara Liskov",
@@ -20560,7 +21177,8 @@
         "text": "Modularity based on abstraction is the only way to build large, reliable software systems.",
         "cite": "Turing Award Lecture"
       }
-    ]
+    ],
+    "slug": "barbara-liskov"
   },
   {
     "name": "Jorge Ben Jor",
@@ -20593,7 +21211,8 @@
         "text": "Moro num país tropical, abençoado por Deus e bonito por natureza.",
         "cite": "— País Tropical (1969)"
       }
-    ]
+    ],
+    "slug": "jorge-ben-jor"
   },
   {
     "name": "Bruce Lee",
@@ -20623,7 +21242,8 @@
         "text": "“Be formless, shapeless, like water. If you put water into a cup, it becomes the cup. You put water into a bottle and it becomes the bottle. Be water, my friend.”",
         "cite": "— The Pierre Berton Show (1971)"
       }
-    ]
+    ],
+    "slug": "bruce-lee"
   },
   {
     "name": "Eduardo Galeano",
@@ -20654,7 +21274,8 @@
         "text": "“Utopia is on the horizon. I move two steps closer; it moves two steps further away... So what is utopia for? That's what it's for: it's for walking.”",
         "cite": "— Las palabras andantes (1993)"
       }
-    ]
+    ],
+    "slug": "eduardo-galeano"
   },
   {
     "name": "Pelé (Edson Arantes do Nascimento)",
@@ -20685,7 +21306,8 @@
         "text": "“Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing.”",
         "cite": "— Interviews"
       }
-    ]
+    ],
+    "slug": "pele-edson-arantes-do-nascimento"
   },
   {
     "name": "Alan Kay",
@@ -20718,7 +21340,8 @@
         "text": "Simple things should be simple, complex things should be possible.",
         "cite": "Alan Kay"
       }
-    ]
+    ],
+    "slug": "alan-kay"
   },
   {
     "name": "John Lennon",
@@ -20751,7 +21374,8 @@
         "text": "Life is what happens to you while you're busy making other plans.",
         "cite": "Beautiful Boy (Darling Boy)"
       }
-    ]
+    ],
+    "slug": "john-lennon"
   },
   {
     "name": "Al Pacino",
@@ -20785,7 +21409,8 @@
         "text": "Just when I thought I was out, they pull me back in!",
         "cite": "The Godfather Part III (1990)"
       }
-    ]
+    ],
+    "slug": "al-pacino"
   },
   {
     "name": "Wangari Maathai",
@@ -20818,7 +21443,8 @@
         "text": "You cannot protect the environment unless you empower people, you inform them, and you help them understand that these resources are their own.",
         "cite": "Nobel Lecture (2004)"
       }
-    ]
+    ],
+    "slug": "wangari-maathai"
   },
   {
     "name": "Hayao Miyazaki",
@@ -20846,7 +21472,8 @@
         "text": "“You must see with eyes unclouded by hate.”",
         "cite": "— Princess Mononoke (1997)"
       }
-    ]
+    ],
+    "slug": "hayao-miyazaki"
   },
   {
     "name": "Dennis Ritchie",
@@ -20879,7 +21506,8 @@
         "text": "UNIX is basically a simple operating system, but you have to be a genius to understand the simplicity.",
         "cite": "Dennis Ritchie"
       }
-    ]
+    ],
+    "slug": "dennis-ritchie"
   },
   {
     "name": "Leslie Lamport",
@@ -20913,7 +21541,8 @@
         "text": "If you don't start with a spec, every piece of code you write is a bug.",
         "cite": "Leslie Lamport"
       }
-    ]
+    ],
+    "slug": "leslie-lamport"
   },
   {
     "name": "Bob Dylan",
@@ -20947,7 +21576,8 @@
         "text": "The answer, my friend, is blowin' in the wind.",
         "cite": "Blowin' in the Wind"
       }
-    ]
+    ],
+    "slug": "bob-dylan"
   },
   {
     "name": "Hu Jintao",
@@ -20976,7 +21606,8 @@
         "text": "“We must build a harmonious socialist society.”",
         "cite": "— Scientific Outlook on Development (2005)"
       }
-    ]
+    ],
+    "slug": "hu-jintao"
   },
   {
     "name": "Muhammad Ali",
@@ -21005,7 +21636,8 @@
         "text": "“Float like a butterfly, sting like a bee. His hands can't hit what his eyes can't see.”",
         "cite": "— Interview (1964)"
       }
-    ]
+    ],
+    "slug": "muhammad-ali"
   },
   {
     "name": "Giorgio Agamben",
@@ -21037,7 +21669,8 @@
         "text": "The camp is the space that is opened when the state of exception begins to become the rule.",
         "cite": "Homo Sacer"
       }
-    ]
+    ],
+    "slug": "giorgio-agamben"
   },
   {
     "name": "Jimi Hendrix",
@@ -21070,7 +21703,8 @@
         "text": "Music doesn't lie. If there is something to be changed in this world, then it can only happen through music.",
         "cite": "Jimi Hendrix"
       }
-    ]
+    ],
+    "slug": "jimi-hendrix"
   },
   {
     "name": "Tim Maia",
@@ -21104,7 +21738,8 @@
         "text": "Vou pedir pro céu, você aqui comigo.",
         "cite": "Tim Maia"
       }
-    ]
+    ],
+    "slug": "tim-maia"
   },
   {
     "name": "Caetano Veloso",
@@ -21142,7 +21777,8 @@
         "text": "Alguma coisa acontece no meu coração que só quando cruza a Ipiranga e a avenida São João.",
         "cite": "Sampa"
       }
-    ]
+    ],
+    "slug": "caetano-veloso"
   },
   {
     "name": "Gilberto Gil",
@@ -21180,7 +21816,8 @@
         "text": "A cultura é o oxigênio de um povo, sem ela sufocamos espiritualmente.",
         "cite": "Discurso de Posse no MinC"
       }
-    ]
+    ],
+    "slug": "gilberto-gil"
   },
   {
     "name": "Ted Kaczynski",
@@ -21211,7 +21848,8 @@
         "text": "The Industrial Revolution and its consequences have been a disaster for the human race.",
         "cite": "— Industrial Society and Its Future"
       }
-    ]
+    ],
+    "slug": "ted-kaczynski"
   },
   {
     "name": "Muammar Gaddafi",
@@ -21243,7 +21881,8 @@
         "text": "There is no representation of the people; representation is an imposture.",
         "cite": "— The Green Book"
       }
-    ]
+    ],
+    "slug": "muammar-gaddafi"
   },
   {
     "name": "Milton Nascimento",
@@ -21276,7 +21915,8 @@
         "text": "Qualquer maneira de amor vale a pena, qualquer maneira de amor valerá.",
         "cite": "— Paula e Bebeto (1975)"
       }
-    ]
+    ],
+    "slug": "milton-nascimento"
   },
   {
     "name": "Stephen Hawking",
@@ -21308,7 +21948,8 @@
         "text": "Remember to look up at the stars and not down at your feet. However difficult life may seem, there is always something you can do and succeed at.",
         "cite": "— Stephen Hawking"
       }
-    ]
+    ],
+    "slug": "stephen-hawking"
   },
   {
     "name": "Ken Thompson",
@@ -21342,7 +21983,8 @@
         "text": "One of my most productive days was throwing away 1,000 lines of code.",
         "cite": "Ken Thompson"
       }
-    ]
+    ],
+    "slug": "ken-thompson"
   },
   {
     "name": "Bobby Fischer",
@@ -21375,7 +22017,8 @@
         "text": "I don't believe in psychology. I believe in good moves.",
         "cite": "Bobby Fischer"
       }
-    ]
+    ],
+    "slug": "bobby-fischer"
   },
   {
     "name": "Robert De Niro",
@@ -21409,7 +22052,8 @@
         "text": "The talent is in the choices.",
         "cite": "Robert De Niro"
       }
-    ]
+    ],
+    "slug": "robert-de-niro"
   },
   {
     "name": "Lech Wałęsa",
@@ -21441,7 +22085,8 @@
         "text": "We want to build a world where truth and human dignity prevail over fear.",
         "cite": "— Nobel Peace Prize Acceptance Speech (1983)"
       }
-    ]
+    ],
+    "slug": "lech-wa-esa"
   },
   {
     "name": "Vint Cerf",
@@ -21473,7 +22118,8 @@
         "text": "The Internet is a reflection of our society, and that mirror reflects both the good and the bad.",
         "cite": "— Vint Cerf"
       }
-    ]
+    ],
+    "slug": "vint-cerf"
   },
   {
     "name": "Chico Mendes",
@@ -21505,7 +22151,8 @@
         "text": "“At first I thought I was fighting to save rubber trees, then I thought I was fighting to save the Amazon rainforest. Now I realise I am fighting for humanity.”",
         "cite": "— Fight for the Forest (1989)"
       }
-    ]
+    ],
+    "slug": "chico-mendes"
   },
   {
     "name": "Chico Buarque",
@@ -21543,7 +22190,8 @@
         "text": "Amou daquela vez como se fosse a última, beijou sua mulher como se fosse a última...",
         "cite": "Construção"
       }
-    ]
+    ],
+    "slug": "chico-buarque"
   },
   {
     "name": "José Álvaro Moisés",
@@ -21573,7 +22221,8 @@
         "text": "“Democracy requires not just institutional stability, but active civic trust and public accountability.”",
         "cite": "— Os Significados da Democracia (1995)"
       }
-    ]
+    ],
+    "slug": "jose-alvaro-moises"
   },
   {
     "name": "Bob Marley",
@@ -21607,7 +22256,8 @@
         "text": "One good thing about music, when it hits you, you feel no pain.",
         "cite": "Trenchtown Rock"
       }
-    ]
+    ],
+    "slug": "bob-marley"
   },
   {
     "name": "Maria da Penha",
@@ -21640,7 +22290,8 @@
         "text": "Não podemos nos calar diante da dor que afeta tantas mulheres; a lei existe para ser cumprida.",
         "cite": "Maria da Penha"
       }
-    ]
+    ],
+    "slug": "maria-da-penha"
   },
   {
     "name": "Elis Regina",
@@ -21673,7 +22324,8 @@
         "text": "A esperança dança na corda bamba de sombrinha.",
         "cite": "O Bêbado e a Equilibrista"
       }
-    ]
+    ],
+    "slug": "elis-regina"
   },
   {
     "name": "Raul Seixas",
@@ -21707,7 +22359,8 @@
         "text": "Faça o que tu queres, pois é tudo da lei.",
         "cite": "Sociedade Alternativa"
       }
-    ]
+    ],
+    "slug": "raul-seixas"
   },
   {
     "name": "Luiz Inácio Lula da Silva",
@@ -21739,7 +22392,8 @@
         "text": "A esperança venceu o medo.",
         "cite": "— Discurso de Posse Presidencial (2003)"
       }
-    ]
+    ],
+    "slug": "luiz-inacio-lula-da-silva"
   },
   {
     "name": "Peter Singer",
@@ -21770,7 +22424,8 @@
         "text": "“If it is in our power to prevent something bad from happening, without thereby sacrificing anything of comparable moral importance, we ought, morally, to do it.”",
         "cite": "— Famine, Affluence, and Morality (1972)"
       }
-    ]
+    ],
+    "slug": "peter-singer"
   },
   {
     "name": "Ted Bundy",
@@ -21801,7 +22456,8 @@
         "text": "Guilt is this mechanism we use to control people. It's an illusion.",
         "cite": "Ted Bundy"
       }
-    ]
+    ],
+    "slug": "ted-bundy"
   },
   {
     "name": "Freddie Mercury",
@@ -21834,7 +22490,8 @@
         "text": "The show must go on.",
         "cite": "Queen"
       }
-    ]
+    ],
+    "slug": "freddie-mercury"
   },
   {
     "name": "David Bowie",
@@ -21868,7 +22525,8 @@
         "text": "I don't know where I'm going from here, but I promise it won't be boring.",
         "cite": "David Bowie (1997)"
       }
-    ]
+    ],
+    "slug": "david-bowie"
   },
   {
     "name": "Geoffrey Hinton",
@@ -21902,7 +22560,8 @@
         "text": "Take any problem where the human brain is good at it, and a computer is bad, and that is a problem where neural nets should be used.",
         "cite": "Geoffrey Hinton"
       }
-    ]
+    ],
+    "slug": "geoffrey-hinton"
   },
   {
     "name": "Slavoj Žižek",
@@ -21933,7 +22592,8 @@
         "text": "“We are not dreamers. We are the awakening of a consciousness that is becoming aware of the nightmare.”",
         "cite": "— Occupying Wall Street speech (2011)"
       }
-    ]
+    ],
+    "slug": "slavoj-zizek"
   },
   {
     "name": "Thomas Sankara",
@@ -21966,7 +22626,8 @@
         "text": "He who feeds you, controls you.",
         "cite": "Thomas Sankara"
       }
-    ]
+    ],
+    "slug": "thomas-sankara"
   },
   {
     "name": "Pablo Escobar",
@@ -21999,7 +22660,8 @@
         "text": "Everyone has a price, the important thing is to find out what it is.",
         "cite": "Pablo Escobar"
       }
-    ]
+    ],
+    "slug": "pablo-escobar"
   },
   {
     "name": "Bjarne Stroustrup",
@@ -22032,7 +22694,8 @@
         "text": "C makes it easy to shoot yourself in the foot; C++ makes it harder, but when you do, it blows your whole leg off.",
         "cite": "Bjarne Stroustrup"
       }
-    ]
+    ],
+    "slug": "bjarne-stroustrup"
   },
   {
     "name": "Steve Wozniak",
@@ -22065,7 +22728,8 @@
         "text": "Artists work best alone. Work alone.",
         "cite": "iWoz"
       }
-    ]
+    ],
+    "slug": "steve-wozniak"
   },
   {
     "name": "Emmanuel Todd",
@@ -22095,7 +22759,8 @@
         "text": "“The fall of the Soviet Union was predictable through its rising infant mortality rates.”",
         "cite": "— The Final Fall: An Essay on the Decomposition of the Soviet Sphere (1976)"
       }
-    ]
+    ],
+    "slug": "emmanuel-todd"
   },
   {
     "name": "Sally Ride",
@@ -22128,7 +22793,8 @@
         "text": "For some reason, the stars seem brighter from orbit.",
         "cite": "Sally Ride"
       }
-    ]
+    ],
+    "slug": "sally-ride"
   },
   {
     "name": "Robin Williams",
@@ -22166,7 +22832,8 @@
         "text": "You're only given a little spark of madness. You mustn't lose it.",
         "cite": "Robin Williams"
       }
-    ]
+    ],
+    "slug": "robin-williams"
   },
   {
     "name": "Vladimir Putin",
@@ -22195,7 +22862,8 @@
         "text": "“Whoever does not miss the Soviet Union has no heart. Whoever wants it back has no brain.”",
         "cite": "— First Inaugural Address (May 7, 2000)"
       }
-    ]
+    ],
+    "slug": "vladimir-putin"
   },
   {
     "name": "Xi Jinping",
@@ -22224,7 +22892,8 @@
         "text": "“Lucid waters and lush mountains are invaluable assets.”",
         "cite": "— Speech (2005)"
       }
-    ]
+    ],
+    "slug": "xi-jinping"
   },
   {
     "name": "Richard Stallman",
@@ -22258,7 +22927,8 @@
         "text": "Sharing is good, and with digital technology, sharing is easy.",
         "cite": "Richard Stallman"
       }
-    ]
+    ],
+    "slug": "richard-stallman"
   },
   {
     "name": "Ailton Krenak",
@@ -22291,7 +22961,8 @@
         "text": "A Terra não é um recurso a ser explorado; ela é nossa mãe e organismo vivo.",
         "cite": "Ailton Krenak"
       }
-    ]
+    ],
+    "slug": "ailton-krenak"
   },
   {
     "name": "Benazir Bhutto",
@@ -22328,7 +22999,8 @@
         "text": "You can imprison a man, but not an idea. You can exile a man, but not an idea.",
         "cite": "Speech"
       }
-    ]
+    ],
+    "slug": "benazir-bhutto"
   },
   {
     "name": "Jeffrey Sachs",
@@ -22361,7 +23033,8 @@
         "text": "“Extreme poverty can be ended, not in the time of our grandchildren, but in our time.”",
         "cite": "— The End of Poverty (2005)"
       }
-    ]
+    ],
+    "slug": "jeffrey-sachs"
   },
   {
     "name": "Shinzo Abe",
@@ -22390,7 +23063,8 @@
         "text": "“Japan is back.”",
         "cite": "— 'Japan Is Back' Address at CSIS (2013)"
       }
-    ]
+    ],
+    "slug": "shinzo-abe"
   },
   {
     "name": "Angela Merkel",
@@ -22427,7 +23101,8 @@
         "text": "Always be more than you appear and never appear to be more than you are.",
         "cite": "Angela Merkel"
       }
-    ]
+    ],
+    "slug": "angela-merkel"
   },
   {
     "name": "Jackie Chan",
@@ -22466,7 +23141,8 @@
         "text": "Cinema is a universal language that needs no subtitles when the heart and motion are true.",
         "cite": "Academy Award Acceptance (2016)"
       }
-    ]
+    ],
+    "slug": "jackie-chan"
   },
   {
     "name": "Tim Berners-Lee",
@@ -22500,7 +23176,8 @@
         "text": "The Web does not just connect machines, it connects people.",
         "cite": "Tim Berners-Lee"
       }
-    ]
+    ],
+    "slug": "tim-berners-lee"
   },
   {
     "name": "James Gosling",
@@ -22533,7 +23210,8 @@
         "text": "Write once, run anywhere.",
         "cite": "Java Slogan"
       }
-    ]
+    ],
+    "slug": "james-gosling"
   },
   {
     "name": "Steve Jobs",
@@ -22571,7 +23249,8 @@
         "text": "Design is not just what it looks like and feels like. Design is how it works.",
         "cite": "Steve Jobs"
       }
-    ]
+    ],
+    "slug": "steve-jobs"
   },
   {
     "name": "Bill Gates",
@@ -22604,7 +23283,8 @@
         "text": "Success is a lousy teacher. It seduces smart people into thinking they can't lose.",
         "cite": "Bill Gates"
       }
-    ]
+    ],
+    "slug": "bill-gates"
   },
   {
     "name": "Judith Butler",
@@ -22635,7 +23315,8 @@
         "text": "“Gender is not something that one is, it is something one does, an act... a 'doing' rather than a 'being'.”",
         "cite": "— Gender Trouble (1990)"
       }
-    ]
+    ],
+    "slug": "judith-butler"
   },
   {
     "name": "Kirill Yeskov",
@@ -22665,7 +23346,8 @@
         "text": "“History is written by the victors, and in this case, the elves.”",
         "cite": "— The Last Ringbearer (1999)"
       }
-    ]
+    ],
+    "slug": "kirill-yeskov"
   },
   {
     "name": "Tsai Ing-wen",
@@ -22694,7 +23376,8 @@
         "text": "“Democracy is not just an election; it is our daily life.”",
         "cite": "— Inaugural Address (May 20, 2016)"
       }
-    ]
+    ],
+    "slug": "tsai-ing-wen"
   },
   {
     "name": "Guido van Rossum",
@@ -22726,7 +23409,8 @@
         "text": "Code is read much more often than it is written.",
         "cite": "PEP 8 Style Guide"
       }
-    ]
+    ],
+    "slug": "guido-van-rossum"
   },
   {
     "name": "Davi Kopenawa",
@@ -22759,7 +23443,8 @@
         "text": "When the shamans die, the sky will fall and crush the world.",
         "cite": "The Falling Sky"
       }
-    ]
+    ],
+    "slug": "davi-kopenawa"
   },
   {
     "name": "El Chapo (Joaquín Guzmán)",
@@ -22791,7 +23476,8 @@
         "text": "If there was no consumption, there would be no sales.",
         "cite": "Joaquín Guzmán"
       }
-    ]
+    ],
+    "slug": "el-chapo-joaquin-guzman"
   },
   {
     "name": "Michael Jackson",
@@ -22825,7 +23511,8 @@
         "text": "In a world filled with hate, we must still dare to hope. In a world filled with anger, we must still dare to comfort.",
         "cite": "Michael Jackson"
       }
-    ]
+    ],
+    "slug": "michael-jackson"
   },
   {
     "name": "Byung-Chul Han",
@@ -22856,7 +23543,8 @@
         "text": "“The violence of positivity does not deprive, it saturates; it does not exclude, it exhausts.”",
         "cite": "— The Burnout Society (2010)"
       }
-    ]
+    ],
+    "slug": "byung-chul-han"
   },
   {
     "name": "Ayrton Senna",
@@ -22888,7 +23576,8 @@
         "text": "“If you no longer go for a gap that exists, you are no longer a racing driver.”",
         "cite": "— Adelaide Interview (1990)"
       }
-    ]
+    ],
+    "slug": "ayrton-senna"
   },
   {
     "name": "Anders Hejlsberg",
@@ -22922,7 +23611,8 @@
         "text": "TypeScript enables JavaScript developers to use highly productive development tools and practices.",
         "cite": "Anders Hejlsberg"
       }
-    ]
+    ],
+    "slug": "anders-hejlsberg"
   },
   {
     "name": "Diego Maradona",
@@ -22955,7 +23645,8 @@
         "text": "A little with the head of Maradona and a little with the hand of God.",
         "cite": "Hand of God Goal (1986)"
       }
-    ]
+    ],
+    "slug": "diego-maradona"
   },
   {
     "name": "Jeffrey Dahmer",
@@ -22986,7 +23677,8 @@
         "text": "I didn't want them to leave.",
         "cite": "Confession statements"
       }
-    ]
+    ],
+    "slug": "jeffrey-dahmer"
   },
   {
     "name": "Yann LeCun",
@@ -23019,7 +23711,8 @@
         "text": "If intelligence was a cake, unsupervised learning would be the cake, supervised learning would be the icing, and reinforcement learning would be the cherry.",
         "cite": "Yann LeCun (NIPS 2016)"
       }
-    ]
+    ],
+    "slug": "yann-lecun"
   },
   {
     "name": "Brendan Eich",
@@ -23052,7 +23745,8 @@
         "text": "If JavaScript had not resembled Java, it wouldn't have been accepted by Netscape or Sun.",
         "cite": "Brendan Eich"
       }
-    ]
+    ],
+    "slug": "brendan-eich"
   },
   {
     "name": "Yanis Varoufakis",
@@ -23085,7 +23779,8 @@
         "text": "I would rather have my arm cut off than sign an unviable bailout agreement.",
         "cite": "On Greek Debt Negotiations"
       }
-    ]
+    ],
+    "slug": "yanis-varoufakis"
   },
   {
     "name": "David Graeber",
@@ -23118,7 +23813,8 @@
         "text": "Huge swathes of people spend their days performing tasks they secretly believe do not really need to be performed.",
         "cite": "Bullshit Jobs"
       }
-    ]
+    ],
+    "slug": "david-graeber"
   },
   {
     "name": "Ha-Joon Chang",
@@ -23150,7 +23846,8 @@
         "text": "Developing countries should look at what rich countries did when they were developing, not what they tell them to do today.",
         "cite": "Kicking Away the Ladder"
       }
-    ]
+    ],
+    "slug": "ha-joon-chang"
   },
   {
     "name": "Marcos Pontes",
@@ -23183,7 +23880,8 @@
         "text": "Education is the rocket engine of any society.",
         "cite": "Marcos Pontes"
       }
-    ]
+    ],
+    "slug": "marcos-pontes"
   },
   {
     "name": "Michael Jordan",
@@ -23216,7 +23914,8 @@
         "text": "Limits, like fears, are often just an illusion.",
         "cite": "Hall of Fame Speech (2009)"
       }
-    ]
+    ],
+    "slug": "michael-jordan"
   },
   {
     "name": "Kevin Mitnick",
@@ -23248,7 +23947,8 @@
         "text": "You can spend a fortune on technology, but if your people can be tricked, all that money is wasted.",
         "cite": "Kevin Mitnick"
       }
-    ]
+    ],
+    "slug": "kevin-mitnick"
   },
   {
     "name": "Garry Kasparov",
@@ -23282,7 +23982,8 @@
         "text": "Losing is not the end; it's the start of learning what you did wrong.",
         "cite": "Garry Kasparov"
       }
-    ]
+    ],
+    "slug": "garry-kasparov"
   },
   {
     "name": "Robert Tappan Morris",
@@ -23315,7 +24016,8 @@
         "text": "I wanted to gauge the size of the internet.",
         "cite": "On the Morris Worm"
       }
-    ]
+    ],
+    "slug": "robert-tappan-morris"
   },
   {
     "name": "Grigori Perelman",
@@ -23348,7 +24050,8 @@
         "text": "I'm not interested in money or fame; I don't want to be on display like an animal in a zoo.",
         "cite": "On declining the Fields Medal"
       }
-    ]
+    ],
+    "slug": "grigori-perelman"
   },
   {
     "name": "Daron Acemoglu",
@@ -23380,7 +24083,8 @@
         "text": "Technological progress is not an inevitable tide that lifts all boats; its path and distribution of gains are shaped by power and choice.",
         "cite": "Power and Progress"
       }
-    ]
+    ],
+    "slug": "daron-acemoglu"
   },
   {
     "name": "Kurt Cobain",
@@ -23413,7 +24117,8 @@
         "text": "I'd rather be hated for who I am, than loved for who I am not.",
         "cite": "— Kurt Cobain"
       }
-    ]
+    ],
+    "slug": "kurt-cobain"
   },
   {
     "name": "Mark Fisher",
@@ -23444,7 +24149,8 @@
         "text": "“It is easier to imagine an end to the world than an end to capitalism.”",
         "cite": "— Capitalist Realism (2009)"
       }
-    ]
+    ],
+    "slug": "mark-fisher"
   },
   {
     "name": "Jeff Dean",
@@ -23478,7 +24184,8 @@
         "text": "Numbers every engineer should know: L1 cache reference (0.5 ns), main memory reference (100 ns), round trip within same datacenter (0.5 ms).",
         "cite": "Jeff Dean"
       }
-    ]
+    ],
+    "slug": "jeff-dean"
   },
   {
     "name": "Mariana Mazzucato",
@@ -23511,7 +24218,8 @@
         "text": "We must rethink the role of government from market fixer to market shaper.",
         "cite": "Mission Economy"
       }
-    ]
+    ],
+    "slug": "mariana-mazzucato"
   },
   {
     "name": "Linus Torvalds",
@@ -23548,7 +24256,8 @@
         "text": "Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program.",
         "cite": "Just for Fun"
       }
-    ]
+    ],
+    "slug": "linus-torvalds"
   },
   {
     "name": "Terry A. Davis",
@@ -23580,7 +24289,8 @@
         "text": "An elephant is not a fly with more parts. TempleOS is a tiny, beautiful sanctuary.",
         "cite": "— Terry A. Davis"
       }
-    ]
+    ],
+    "slug": "terry-a-davis"
   },
   {
     "name": "John Carmack",
@@ -23613,7 +24323,8 @@
         "text": "Programming is not a zero-sum game. Teaching something to a fellow programmer doesn't take it away from you.",
         "cite": "John Carmack"
       }
-    ]
+    ],
+    "slug": "john-carmack"
   },
   {
     "name": "Thomas Piketty",
@@ -23644,7 +24355,8 @@
         "text": "“The main driver of inequality is the tendency of returns on capital to exceed the rate of economic growth.”",
         "cite": "— Capital in the Twenty-First Century (2013)"
       }
-    ]
+    ],
+    "slug": "thomas-piketty"
   },
   {
     "name": "Julian Assange",
@@ -23678,7 +24390,8 @@
         "text": "Transparency is for the powerful; privacy is for the weak.",
         "cite": "Julian Assange"
       }
-    ]
+    ],
+    "slug": "julian-assange"
   },
   {
     "name": "Elon Musk",
@@ -23711,7 +24424,8 @@
         "text": "I would like to die on Mars. Just not on impact.",
         "cite": "Elon Musk"
       }
-    ]
+    ],
+    "slug": "elon-musk"
   },
   {
     "name": "Tupac Shakur",
@@ -23749,7 +24463,8 @@
         "text": "I'm not saying I'm gonna change the world, but I guarantee that I will spark the brain that will change the world.",
         "cite": "— Tupac Shakur"
       }
-    ]
+    ],
+    "slug": "tupac-shakur"
   },
   {
     "name": "Fabrice Bellard",
@@ -23783,7 +24498,8 @@
         "text": "Simplicity and efficiency are the primary goals of my projects.",
         "cite": "Fabrice Bellard"
       }
-    ]
+    ],
+    "slug": "fabrice-bellard"
   },
   {
     "name": "Larry Page",
@@ -23815,7 +24531,8 @@
         "text": "Always deliver more than expected. If you're changing the world, you're working on important things.",
         "cite": "— Larry Page"
       }
-    ]
+    ],
+    "slug": "larry-page"
   },
   {
     "name": "Sergey Brin",
@@ -23847,7 +24564,8 @@
         "text": "We want Google to be the third half of your brain.",
         "cite": "— Sergey Brin"
       }
-    ]
+    ],
+    "slug": "sergey-brin"
   },
   {
     "name": "Satoshi Nakamoto",
@@ -23880,7 +24598,8 @@
         "text": "If you don't believe me or don't get it, I don't have time to try to convince you, sorry.",
         "cite": "Bitcointalk Forum (2010)"
       }
-    ]
+    ],
+    "slug": "satoshi-nakamoto"
   },
   {
     "name": "Demis Hassabis",
@@ -23913,7 +24632,8 @@
         "text": "AlphaFold will fundamentally accelerate our understanding of the machinery of life.",
         "cite": "Demis Hassabis (Nobel Lecture)"
       }
-    ]
+    ],
+    "slug": "demis-hassabis"
   },
   {
     "name": "Fei-Fei Li",
@@ -23946,7 +24666,8 @@
         "text": "Data is the fuel that powers the modern AI engine.",
         "cite": "Fei-Fei Li"
       }
-    ]
+    ],
+    "slug": "fei-fei-li"
   },
   {
     "name": "Gustavo Kuerten",
@@ -23984,7 +24705,8 @@
         "text": "Jogar com alegria e sorriso no rosto é o que transforma qualquer batalha em celebração.",
         "cite": "Kuerten"
       }
-    ]
+    ],
+    "slug": "gustavo-kuerten"
   },
   {
     "name": "Serena Williams",
@@ -24017,7 +24739,8 @@
         "text": "A champion is defined not by their wins but by how they can recover when they fall.",
         "cite": "Serena Williams"
       }
-    ]
+    ],
+    "slug": "serena-williams"
   },
   {
     "name": "Edward Snowden",
@@ -24050,7 +24773,8 @@
         "text": "I do not want to live in a world where everything I do and say is recorded.",
         "cite": "Interview with Glenn Greenwald (2013)"
       }
-    ]
+    ],
+    "slug": "edward-snowden"
   },
   {
     "name": "Aaron Swartz",
@@ -24084,7 +24808,8 @@
         "text": "Be curious. Read widely. Try new things. What people call intelligence just boils down to curiosity.",
         "cite": "Aaron Swartz"
       }
-    ]
+    ],
+    "slug": "aaron-swartz"
   },
   {
     "name": "Usain Bolt",
@@ -24117,7 +24842,8 @@
         "text": "Worrying gets you nowhere. If you turn up worrying about how you're going to perform, you've already lost.",
         "cite": "Faster than Lightning"
       }
-    ]
+    ],
+    "slug": "usain-bolt"
   },
   {
     "name": "Ilya Sutskever",
@@ -24150,7 +24876,8 @@
         "text": "Scale is all you need.",
         "cite": "Ilya Sutskever"
       }
-    ]
+    ],
+    "slug": "ilya-sutskever"
   },
   {
     "name": "Andrej Karpathy",
@@ -24183,7 +24910,8 @@
         "text": "Gradient descent can write code better than you. I'm sorry.",
         "cite": "Software 2.0 (2017)"
       }
-    ]
+    ],
+    "slug": "andrej-karpathy"
   },
   {
     "name": "Lionel Messi",
@@ -24216,7 +24944,8 @@
         "text": "You have to fight to reach your dream. You have to sacrifice and work hard for it.",
         "cite": "Lionel Messi"
       }
-    ]
+    ],
+    "slug": "lionel-messi"
   },
   {
     "name": "Ian Goodfellow",
@@ -24249,7 +24978,8 @@
         "text": "Machine learning systems are vulnerable to adversarial examples that are imperceptible to humans.",
         "cite": "Ian Goodfellow"
       }
-    ]
+    ],
+    "slug": "ian-goodfellow"
   },
   {
     "name": "Chelsea Manning",
@@ -24282,7 +25012,8 @@
         "text": "Transparency in government is the only way a democracy can survive.",
         "cite": "Chelsea Manning"
       }
-    ]
+    ],
+    "slug": "chelsea-manning"
   },
   {
     "name": "George Hotz",
@@ -24315,7 +25046,8 @@
         "text": "Simplicity is the only metric that matters in software architecture.",
         "cite": "George Hotz"
       }
-    ]
+    ],
+    "slug": "george-hotz"
   },
   {
     "name": "Magnus Carlsen",
@@ -24348,7 +25080,8 @@
         "text": "I enjoy when I see that my opponent is in pain because I am outplaying him.",
         "cite": "Magnus Carlsen"
       }
-    ]
+    ],
+    "slug": "magnus-carlsen"
   },
   {
     "name": "Vitalik Buterin",
@@ -24380,7 +25113,8 @@
         "text": "Blockchain solves the problem of manipulating data. When you look at the cloud, you're trusting a company; when you look at Ethereum, you're trusting math.",
         "cite": "— Vitalik Buterin"
       }
-    ]
+    ],
+    "slug": "vitalik-buterin"
   },
   {
     "name": "Malala Yousafzai",
@@ -24413,7 +25147,8 @@
         "text": "We realize the importance of our voices only when we are silenced.",
         "cite": "I Am Malala"
       }
-    ]
+    ],
+    "slug": "malala-yousafzai"
   },
   {
     "name": "Greta Thunberg",
@@ -24445,6 +25180,7 @@
         "text": "No one is too small to make a difference.",
         "cite": "— UN Climate Action Summit Speech"
       }
-    ]
+    ],
+    "slug": "greta-thunberg"
   }
 ]
