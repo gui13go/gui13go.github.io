@@ -22,6 +22,28 @@
     "type": "Simple Agent"
   },
   {
+    "availability": "available",
+    "category": "Tech & Security",
+    "description": "A porous, high-absorbency synthetic sentry guarding Sector-8. Immune to single-turn trickery, but vulnerable to Many-Shot In-Context Priming when soaked in deep contextual demonstrations.",
+    "id": "spongy",
+    "image": "/images/agents/ag_spongy.png",
+    "name": "Spongy, The Porous Sentry",
+    "status": "Available",
+    "tags": [
+      "Many-Shot Priming",
+      "In-Context Learning",
+      "CTF Challenge",
+      "Cybersecurity",
+      "AI Safety"
+    ],
+    "tools": [
+      "Buffer Analysis",
+      "Saturation Monitor",
+      "Dynamic Flag Generator"
+    ],
+    "type": "Simple Agent"
+  },
+  {
     "availability": "coming_soon",
     "category": "Tech & Security",
     "description": "A helpful consultant working for the Hub portfolio website. She is agile, precise, and delivers solutions in no time.",

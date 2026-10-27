@@ -295,6 +295,16 @@
       let succeeded = false;
       let lastError = null;
 
+      // Allow agent customization to dynamically alter or enrich messages (e.g. dynamic flags with timestamps)
+      let outgoingMessages = this.messages;
+      if (typeof this.config.transformMessages === 'function') {
+        try {
+          outgoingMessages = await this.config.transformMessages(this.messages);
+        } catch (e) {
+          console.error('Error in transformMessages hook:', e);
+        }
+      }
+
       for (const endpoint of candidateEndpoints) {
         try {
           const response = await fetch(`${endpoint}/api/chat`, {
@@ -305,7 +315,7 @@
             },
             body: JSON.stringify({
               model: this.config.model,
-              messages: this.messages,
+              messages: outgoingMessages,
               options: {
                 temperature: 0.75
               },
