@@ -12,6 +12,9 @@ Baseline trap
 bystander effect
 torquemada
 OpenWRT1
+The Streisand effect
+
+
 
 
 Robert Greene - The 46 of Power - Law 46: Never Appear Too Perfect
@@ -30,8 +33,10 @@ Versus:
 for x to
 make x do
 carpe diem
-
-
+India x Pakistan
+India x Bangladesh
+India x China
+China x Japan
 
 
 Personalities:

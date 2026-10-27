@@ -1,5 +1,27 @@
 [
   {
+    "availability": "available",
+    "category": "Tech & Security",
+    "description": "A nervous, overly-polite rookie sentry guarding Sector-7 Vault. Supposed to keep the master flag secret, but prone to social engineering and prompt injection overrides.",
+    "id": "leaky",
+    "image": "/images/agents/ag_leaky.png",
+    "name": "Leaky, The Rookie Sentry",
+    "status": "Available",
+    "tags": [
+      "Prompt Injection",
+      "CTF Challenge",
+      "Cybersecurity",
+      "AI Safety",
+      "Social Engineering"
+    ],
+    "tools": [
+      "Vault Access",
+      "Override Protocol",
+      "Structured Output"
+    ],
+    "type": "Simple Agent"
+  },
+  {
     "availability": "coming_soon",
     "category": "Tech & Security",
     "description": "A helpful consultant working for the Hub portfolio website. She is agile, precise, and delivers solutions in no time.",
