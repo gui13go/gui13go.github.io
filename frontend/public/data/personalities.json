@@ -1604,8 +1604,8 @@
     "dates": "fl. 300 BC",
     "birthYear": -325,
     "summary": "Greek mathematician in Alexandria acclaimed as the 'Father of Geometry', whose monumental textbook Elements served as the cornerstone of mathematical deduction for over two millennia.",
-    "image": "/images/personalities/euclides_da_cunha_portrait.webp",
-    "zoomSrc": "/images/personalities/euclides_da_cunha_portrait.webp",
+    "image": "/images/personalities/euclid_portrait.webp",
+    "zoomSrc": "/images/personalities/euclid_portrait.webp",
     "zoomTitle": "Euclid",
     "zoomCaption": "fl. 300 BC • Greek mathematician in Alexandria acclaimed as the 'Father of Geometry', whose monumental textbook Elements served as the cornerstone of mathematical deduction for over two millennia.",
     "quote": {
@@ -2012,36 +2012,6 @@
     "slug": "cicero"
   },
   {
-    "name": "Saint John the Baptist",
-    "dates": "c. 1st Century BC - c. 28-36 AD",
-    "birthYear": -100,
-    "summary": "Itinerant Jewish preacher and major religious figure active in the area of the Jordan River in the early 1st century AD. Revered in Christianity, Islam, and the Baháʼí Faith as a prophet and forerunner of Jesus Christ.",
-    "image": "/images/personalities/saint_john_the_baptist_portrait.png",
-    "zoomSrc": "/images/personalities/saint_john_the_baptist_portrait.png",
-    "zoomTitle": "Saint John the Baptist",
-    "zoomCaption": "c. 1st Century BC - c. 28-36 AD • Itinerant Jewish preacher and major religious figure active in the area of the Jordan River in the early 1st century AD. Revered in Christianity, Islam, and the Baháʼí Faith as a prophet and forerunner of Jesus Christ.",
-    "quote": {
-      "text": "“He must increase, but I must decrease.”",
-      "cite": "— Gospel of John (3:30)"
-    },
-    "keyWorks": [
-      "Teachings preserved in the New Testament"
-    ],
-    "tags": [
-      "Theology",
-      "Asceticism",
-      "Prophet"
-    ],
-    "keywords": "theology asceticism prophet ",
-    "quotes": [
-      {
-        "text": "“He must increase, but I must decrease.”",
-        "cite": "— Gospel of John (3:30)"
-      }
-    ],
-    "slug": "saint-john-the-baptist"
-  },
-  {
     "name": "Julius Caesar",
     "dates": "100–44 BCE",
     "birthYear": -100,
@@ -2381,11 +2351,11 @@
     "name": "Simon Peter",
     "dates": "c. 1 BC–64 AD",
     "birthYear": -1,
-    "summary": "First among Jesus's Twelve Apostles, prominent early Christian leader in Jerusalem and Rome, regarded by Catholic tradition as the first Bishop of Rome (Pope).",
+    "summary": "Leader of the Twelve Apostles, prominent early Christian missionary, and traditionally revered as the first Bishop of Rome (Pope) who was martyred by inverted crucifixion under Emperor Nero.",
     "image": "/images/personalities/simon_peter_portrait.jpg",
     "zoomSrc": "/images/personalities/simon_peter_portrait.jpg",
     "zoomTitle": "Simon Peter",
-    "zoomCaption": "c. 1 BC–64 AD • First among Jesus's Twelve Apostles, prominent early Christian leader in Jerusalem and Rome, regarded by Catholic tradition as the first Bishop of Rome (Pope).",
+    "zoomCaption": "c. 1 BC – c. AD 64/68 • Galilean fisherman, chief of the Twelve Apostles, and traditionally recognized as the first Pope, martyred by upside-down crucifixion in Rome.",
     "quote": {
       "text": "You are the Messiah, the Son of the living God.",
       "cite": "Matthew 16:16"
@@ -2393,7 +2363,8 @@
     "keyWorks": [
       "Confession of Faith at Caesarea Philippi",
       "Sermon at Pentecost",
-      "Epistles of Peter"
+      "Epistles of Peter",
+      "Martyrdom by Inverted Crucifixion on Vatican Hill"
     ],
     "tags": [
       "Religion",
@@ -10593,6 +10564,40 @@
     "slug": "dom-pedro-ii"
   },
   {
+    "name": "Francisco Solano López",
+    "dates": "1827–1870",
+    "birthYear": 1827,
+    "summary": "President and Marshal of Paraguay who led his nation through the devastating Paraguayan War (War of the Triple Alliance) against Brazil, Argentina, and Uruguay to his death in combat at Cerro Corá.",
+    "image": "/images/personalities/solano_lopez_portrait.jpg",
+    "zoomSrc": "/images/personalities/solano_lopez_portrait.jpg",
+    "zoomTitle": "Francisco Solano López",
+    "zoomCaption": "1827–1870 • President and Marshal of Paraguay who led his nation through the catastrophic War of the Triple Alliance until his death in combat at Cerro Corá.",
+    "quote": {
+      "text": "¡Muero con mi patria!",
+      "cite": "Last words at Cerro Corá (1870)"
+    },
+    "keyWorks": [
+      "Commander-in-Chief in the War of the Triple Alliance",
+      "Modernization and Militarization of 19th-Century Paraguay",
+      "Defense of Humaitá and Battle of Cerro Corá"
+    ],
+    "tags": [
+      "Paraguay",
+      "Military Leader",
+      "19th Century",
+      "Triple Alliance War",
+      "Latin American History"
+    ],
+    "keywords": "francisco solano lopez paraguay military leader triple alliance war latin american history cerro cora humaita",
+    "quotes": [
+      {
+        "text": "¡Muero con mi patria!",
+        "cite": "Last words at Cerro Corá (1870)"
+      }
+    ],
+    "slug": "francisco-solano-lopez"
+  },
+  {
     "name": "Leo Tolstoy",
     "dates": "1828-1910",
     "birthYear": 1828,
@@ -10808,6 +10813,40 @@
       }
     ],
     "slug": "mark-twain"
+  },
+  {
+    "name": "Leopold II",
+    "dates": "1835–1909",
+    "birthYear": 1835,
+    "summary": "Second King of the Belgians and absolute ruler of the Congo Free State from 1885 to 1908, whose brutal extraction of ivory and rubber caused catastrophic atrocities and mass depopulation in Central Africa.",
+    "image": "/images/personalities/leopold_ii_portrait.jpg",
+    "zoomSrc": "/images/personalities/leopold_ii_portrait.jpg",
+    "zoomTitle": "Leopold II",
+    "zoomCaption": "1835–1909 • King of the Belgians and founder of the Congo Free State, notorious for imperialist exploitation and brutal rubber extraction atrocities.",
+    "quote": {
+      "text": "I do not want to risk losing a fine chance to secure for ourselves a slice of this magnificent African cake.",
+      "cite": "Letter to Baron Solvyns (1876)"
+    },
+    "keyWorks": [
+      "Establishment and Absolute Rule of the Congo Free State (1885–1908)",
+      "Berlin Conference and Scramble for Africa Inception",
+      "Urban Transformation of Brussels and Ostend"
+    ],
+    "tags": [
+      "Monarchy",
+      "Belgium",
+      "Colonialism",
+      "Congo Free State",
+      "19th Century"
+    ],
+    "keywords": "leopold ii belgium congo free state colonialism imperialism rubber extraction scramble for africa king",
+    "quotes": [
+      {
+        "text": "I do not want to risk losing a fine chance to secure for ourselves a slice of this magnificent African cake.",
+        "cite": "Letter to Baron Solvyns (1876)"
+      }
+    ],
+    "slug": "leopold-ii"
   },
   {
     "name": "Henry George",
@@ -18940,6 +18979,40 @@
       }
     ],
     "slug": "margaret-thatcher"
+  },
+  {
+    "name": "Pol Pot",
+    "dates": "1925–1998",
+    "birthYear": 1925,
+    "summary": "Cambodian revolutionary and General Secretary of the Khmer Rouge who ruled Democratic Kampuchea as a totalitarian dictator, orchestrating the Cambodian genocide and the forced agrarian labor camps of the Killing Fields.",
+    "image": "/images/personalities/pol_pot_portrait.jpg",
+    "zoomSrc": "/images/personalities/pol_pot_portrait.jpg",
+    "zoomTitle": "Pol Pot",
+    "zoomCaption": "1925–1998 • Leader of the Khmer Rouge and prime architect of Democratic Kampuchea, responsible for the Cambodian genocide and Year Zero agrarian purges.",
+    "quote": {
+      "text": "To keep you is no benefit, to destroy you is no loss.",
+      "cite": "Khmer Rouge slogan (Angkar)"
+    },
+    "keyWorks": [
+      "Establishment of Democratic Kampuchea (1975–1979)",
+      "Year Zero Agrarian Forced Collectivization",
+      "Leadership of the Khmer Rouge Movement"
+    ],
+    "tags": [
+      "Cambodia",
+      "Totalitarianism",
+      "Khmer Rouge",
+      "Cold War",
+      "Dictator"
+    ],
+    "keywords": "pol pot saloth sar cambodia khmer rouge democratic kampuchea killing fields year zero dictator",
+    "quotes": [
+      {
+        "text": "To keep you is no benefit, to destroy you is no loss.",
+        "cite": "Khmer Rouge slogan (Angkar)"
+      }
+    ],
+    "slug": "pol-pot"
   },
   {
     "name": "Fidel Castro",
